@@ -24,7 +24,7 @@
           "name": "Armazenamento"
         },
         "csd1-2017/Apps and Problem Solving": {
-          "name": "Aplicativos e solução de problemas"
+          "name": "Aplicativos e Resolução de Problemas"
         },
         "csd1-2017/Project - Propose an App": {
           "name": "Projeto - Propor um Aplicativo"
@@ -2688,31 +2688,76 @@
           "name": "Um Battle Royal com eventos"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Introdução a Resolução de problemas"
+          "name": "Introdução a Resolução de problemas",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2021/lessons/9/)\n-   [Ponte de Espaguete](/s/csd1-2021/lessons/10/)\n-   [Torre de Papel](/s/csd1-2021/lessons/11/)"
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "O Processo de Resolução de Problemas"
+          "name": "O Processo de Resolução de Problemas",
+          "assessment_opportunities": "1.  **Em caso de problema, identifique que ações individuais se enquadrariam em cada etapa do processo de resolução de problemas**\n\n    Na página 2 do guia de atividades, verifique se os alunos anotaram ações razoáveis para cada uma das quatro etapas do problema que estão tentando resolver.\n\n2.  **Identifique estratégias úteis em cada etapa do processo de resolução de problemas**\n\n    Ao final, verifique se os alunos estão criando estratégias eficazes para cada etapa do processo."
         },
         "csd1-2021/Exploring Problem Solving": {
-          "name": "Explorando a solução de problemas"
+          "name": "Explorando a solução de problemas",
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver."
         },
         "csd1-2021/What is a Computer?": {
-          "name": "O que é um computador?"
+          "name": "O que é um computador?",
+          "assessment_opportunities": "1.  **Identifique um computador como sendo uma máquina que trabalha com informações.**\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n2.  \\*\\*Analise se objetos específicos são ou não computadores. \\*\\*\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n3.  **Escolha problemas que possam ser resolvidos com a computação e justifique essas escolhas.**\n\n    Na atividade de fechamento, verifique se os alunos escolheram problemas de informação e explicaram como um computador obtém e usa as informações necessárias para resolver o problema.",
+          "overview": "Nesta lição, os alunos desenvolvem uma definição preliminar de um computador. Para iniciar a lição, a turma fará um brainstorming de definições possíveis para um computador e registrará os resultados desse brainstorming no quadro. Em seguida, os alunos trabalharão em grupos para classificar as imagens em \"é um computador\" ou \"não é um computador\" em papel para a elaboração de cartazes. Os grupos fixam seus cartazes pela sala e explicam brevemente suas motivações para escolher algumas de suas categorizações mais difíceis. O professor apresentará uma definição de computador e permitirá que os alunos revisem seus cartazes de acordo com a nova definição.",
+          "purpose": "Esta lição se baseia no tema de resolução de problemas das lições anteriores e se concentra nas especificidades de como a computação é usada na resolução de problemas. Nesta lição, os alunos considerarão diferentes tipos de computadores e descobrirão que esses computadores usam informações como parte do processo de resolução de problemas. As próximas aulas abordarão muito mais em como é um problema de informação e como os computadores resolvem esses problemas."
         },
         "csd1-2021/Input and Output": {
-          "name": "Entrada e saída"
+          "name": "Entrada e saída",
+          "assessment_opportunities": "1.  **Selecione as entradas e saídas usadas para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de tarefas que envolvam entrada e saída e que estejam criando vários tipos de entradas e saídas específicas para a tarefa em questão. Você também pode coletar respostas individuais para essa pergunta, como num bilhete de saída, por exemplo.\n\n2.  **Explique a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação.**\n\n    No guia de atividades, verifique se o “aplicativo do aluno” tem entradas e saídas apropriadas listadas, com uma explicação razoável de por que cada uma é necessária. As respostas dos alunos podem variar, mas você pode usar o exemplo vinculado no primeiro nível da progressão do Code Studio como guia.",
+          "overview": "\\*\\*Pergunta do Dia: Como os computadores usam a entrada e a saída de dados para obter e fornecer as informações de que precisam para resolver problemas? \\*\\*\n\nNesta lição, os alunos consideram como os computadores obtêm e fornecem informações ao usuário por meio de entradas e saídas. Os alunos primeiro consideram quais informações precisariam para resolver um “problema de pensamento” e, em seguida, usam essas informações para produzir uma sugestão. Em seguida, eles identificam as entradas e saídas desse processo. Depois, os alunos consideram um aplicativo que se envolve no mesmo processo e determinam como esse aplicativo insere e envia informações. Por fim, eles consideram outros tipos de entradas e saídas que os computadores podem usar para ajudar a resolver problemas.",
+          "purpose": "Na lição anterior, os alunos começaram a pensar em recursos que podem ajudar a classificar dispositivos como computadores. Esta lição apresenta a entrada e a saída como um desses recursos e faz com que os alunos identifiquem diferentes métodos de entrada ou saída em aplicativos comuns. "
         },
         "csd1-2021/Processing": {
-          "name": "Processando"
+          "name": "Processando",
+          "assessment_opportunities": "1.  **Identifique o processamento possivelmente usado para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de processamento e que sejam capazes de explicar como esse processamento transforma entrada em saída. Você também pode coletar respostas individuais para essa pergunta como um bilhete de saída, por exemplo.",
+          "overview": "\\*\\*Pergunta do Dia: Quais são os diferentes modos pelos quais os computadores podem processar informações? \\*\\*\n\nEsta lição apresenta aos alunos quatro tipos comuns de processamento: se/então (condicionais if/then), encontrar uma correspondência (pesquisar), contar e comparar. Os alunos são apresentados pela primeira vez aos tipos de processamento por meio de vários aplicativos de amostra. Em seguida, eles investigam mais aplicativos para determinar que tipo de processamento cada um usa. Em seguida, eles pensam em seu próprio aplicativo e decidem quais tipos de processamento ele exigiria para funcionar. Finalmente, eles discutem outros tipos de processamento que podem ser úteis, mas não foram incluídos na lição principal.",
+          "purpose": "Esta lição apresenta o conceito de processamento na resolução de problemas computacionais. A definição de processamento apresentada nesta lição é intencionalmente acessível. Os alunos devem entender que processamento é tudo o que um computador faz para transformar entradas em saídas e que existem muitas maneiras diferentes de os computadores fazerem esse trabalho. O objetivo desta lição não é que os alunos escrevam algoritmos específicos para os aplicativos de exemplo."
         },
         "csd1-2021/Storage": {
-          "name": "Armazenamento"
+          "name": "Armazenamento",
+          "assessment_opportunities": "1.  **Decida se alguma entrada deve ser armazenada ou não.**\n\n    Entrada No guia de atividades, verifique as respostas dos alunos e o raciocínio deles sobre quais informações devem ser armazenadas.\n\n2.  **Identifique diretrizes sobre quais tipos de entrada devem ou não ser armazenados.**\n\n    Verifique as diretrizes que cada grupo escreveu em conjunto.\n\n3.  **Use o modelo IOSP para identificar algumas das entradas, saídas, armazenamento e processamento usados em um determinado computador.**\n\n    As duas solicitações do diário após o vídeo do IOSP solicitam que os alunos identifiquem as diferentes partes do IOSP em um aplicativo que eles normalmente usam e em um smartphone. ",
+          "overview": "**Pergunta do Dia: Por que o armazenamento é uma parte importante do processo de computação?**\n\nEsta lição apresenta o componente final do modelo de computação da unidade: armazenamento. Depois de experimentar um aplicativo de “seleção de roupas”, os alunos discutem quais informações devem ser armazenadas no aplicativo e quais informações devem ser inseridas toda vez que o aplicativo é executado. Em seguida, eles analisam uma série de aplicativos e usam suas decisões sobre o que deve ser armazenado para criar diretrizes para decidir quais informações armazenar. Em seguida, eles analisam os quatro componentes do modelo de computação deste capítulo: entrada, saída, armazenamento e processamento. Depois, eles têm uma última oportunidade de revisar suas decisões sobre quais itens devem ser classificados como um “computador” do início do capítulo. A aula termina com uma reflexão sobre suas próprias ideias de aplicativos e como o armazenamento pode ser usado.",
+          "purpose": "Na Lição 1 desta unidade, os alunos aprenderam o processo de resolução de problemas. Na Lição 2, os alunos aprenderam como os computadores resolvem problemas. Nesse ponto, os alunos sabem que os computadores são máquinas de processamento de informações que podem fazer quatro coisas com informações: entrada, saída, armazenamento e processamento. Nesta lição final antes do projeto da unidade, os alunos analisam os tipos de entrada que podem ser necessários para resolver um problema específico e descrevem o processamento e o armazenamento que um computador faria para produzir a saída desejada. Isso deve prepará-los para, eventualmente, criar seu próprio aplicativo para resolver um problema e explicar como esse aplicativo funcionaria."
         },
         "csd1-2021/Project - Propose an App": {
-          "name": "Projeto - Propor um Aplicativo"
+          "name": "Projeto - Propor um Aplicativo",
+          "overview": "\\*\\*Pergunta do Dia: Como o modelo IOSP pode nos ajudar a criar um aplicativo que resolva um problema? \\*\\*\n\nPara concluir o estudo do processo de resolução de problemas e do modelo de entrada/saída/armazenamento/processamento de um computador, os alunos proporão um aplicativo projetado para resolver um problema do mundo real. Este projeto será realizado ao longo de vários dias e resultará na criação de um cartaz feito pelos alunos destacando os recursos do aplicativo que eles apresentarão aos colegas. Um guia do projeto fornece instruções passo a passo para os alunos e os ajuda a organizar suas ideias. O projeto foi pensado para ser concluído em pares, embora possa ser concluído individualmente.",
+          "purpose": "Este projeto combina os dois temas principais da Unidade 1, resolução de problemas e o modelo de entrada-saída-armazenamento-processamento de um computador. Este projeto vincula os dois temas a um objetivo mais amplo de identificar problemas do mundo real e encontrar maneiras de usar a tecnologia para ajudar a resolvê-los. Os alunos colaboram na criação do aplicativo e também participam de um processo estruturado de revisão por pares, que eles verão muitas vezes durante o curso. Este projeto também deve ser uma experiência divertida e criativa, e oferece aos alunos a chance de vincular o campo da Ciência da Computação aos seus próprios interesses e ambições."
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem barcos de papel alumínio, que devem sustentar o maior número possível de moedas. As equipes terão duas rodadas para desenvolverem seus barcos, com o objetivo de tentar acondicionar mais moedas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2021/lessons/1/)\n-   [Ponte de Espaguete][1]\n-   [Torre de Papel][2]",
+          "purpose": "Esta lição é uma introdução divertida à resolução de problemas, colaborativa, criativa e aberta que os alunos usarão ao longo desta unidade e curso. O problema da mesa de jornal pode ser facilmente substituído por vários outros problemas que exigem que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, em seguida, aperfeiçoem o projeto iterativamente a partir daí. O fato de o problema escolhido ser “não computacional” é intencional. A ciência da computação é fundamentalmente uma disciplina de resolução de problemas e ficar longe dos problemas tradicionais da área neste momento ajuda a enquadrar essa aula como uma aula sobre resolução de problemas de forma mais ampla, com a ciência da computação sendo uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. "
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem barcos de papel alumínio, que devem sustentar o maior número possível de moedas. As equipes terão duas rodadas para desenvolverem seus barcos, com o objetivo de tentar acondicionar mais moedas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2021/lessons/1/)\n-   [Ponte de Espaguete][1]\n-   [Torre de Papel][2]",
+          "preparation": "**Para cada grupo**\n\n-   500 g de massa tipo espaguete (um pacote)\n-   1 pistola de cola\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   de 10 a 20 livros de tamanho e peso semelhantes\n-   Visite o fórum na [\"Sala dos Professores\"][0] para os professores autorizados para acessar estratégias e recursos adicionais compartilhados por outros professores.\n-   Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais][1]",
+          "purpose": "Esta lição é uma introdução divertida para a resolução aberta, colaborativa e criativa de problemas, que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem seus resultados e, a partir deles continuem iterativamente melhorando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas, e afastar-se dos problemas tradicionais da Ciência da Computação, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual essa ciência se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas."
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem torres de papel que sejam o mais altas possível. As equipes terão duas rodadas para desenvolverem suas torres, com o objetivo de tentar torná-las ainda mais altas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Esta atividade é uma alternativa à [Introdução à Resolução de Problemas - Barcos de Alumínio](/s/csd1-2021/lessons/1/)**",
+          "purpose": "Esta lição é uma introdução divertida à resolução de problemas, colaborativa, criativa e aberta que os alunos usarão ao longo desta unidade e curso. O problema das torres de jornal pode ser facilmente substituído por vários outros problemas que exigem que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, em seguida, aperfeiçoem o projeto repetidamente a partir daí. O fato de o problema escolhido ser “não computacional” é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas e manter disância dos problemas tradicionais da área neste momento ajuda a enquadrar essa aula como uma aula sobre resolução de problemas de forma mais ampla, em que a Ciência da Computação se apresenta como uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. "
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "overview": "\\*\\*Pergunta do dia: Como podemos aplicar o processo de solução de problemas a muitos tipos diferentes de problemas? \\*\\*\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão tangrams, escolherão pets para várias pessoas e planejarão um evento de adoção de pets. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas não-resolvidos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para o segundo dia.\n\n**Esta é uma atividade alternativa para a [Exploração da resolução de problemas](/s/csd1-2021/lessons/3/)**",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver."
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver."
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Explorando páginas da Web"
+          "name": "Explorando páginas da Web",
+          "assessment_opportunities": "1.  **Identifique os motivos pelos quais alguém pode visitar um determinado site**\n\n    No guia de atividades, verifique se os alunos têm motivos pelos quais um usuário pode visitar cada site, tais como aprender mais sobre um tópico ou se divertir.\n2.  **Identifique os motivos pelos quais alguém pode criar um determinado site**\n\n    No guia de atividades, confira os motivos pelos quais os alunos criaram seus respectivos sites. As explicações dos alunos podem incluir motivos pragmáticos, como obter feedback e conselhos de outras pessoas, ou motivos de caráter mais social, como expressão pessoal."
         },
         "csd2-2021/Intro to HTML": {
           "name": "Introdução a HTML"
@@ -2755,10 +2800,12 @@
         },
         "csd3-2021/Programming for Entertainment": {
           "name": "Programação para entretenimento",
-          "student_overview": "Aluno\n**Pergunta do dia: Como a ciência da computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
+          "assessment_opportunities": "1.  **Identifique como a Ciência da Computação é usada em um campo de entretenimento**\n\n    No guia de atividades, consulte a seção “Fatos ou usos interessantes” da segunda página e verifique se os alunos identificaram algum uso da CC nas áreas escolhidas.",
+          "student_overview": "Aluno\n**Pergunta do Dia: Como a Ciência da Computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Formas de plotagem",
+          "purpose": "O objetivo principal desta lição é apresentar aos alunos o sistema de coordenadas que eles usarão no Game Lab. Os alunos podem ter pouca experiência com o uso de uma grade de coordenadas ou ter dificuldades com o eixo y “invertido” no Game Lab. A ferramenta de desenho também força os alunos a pensar em outros recursos do Game Lab, as quais verão quando começarem a programar na próxima lição. Isso inclui a necessidade de considerar a ordem ao desenhar, de especificar a cor e o fato de os círculos serem posicionados pelo centro e os quadrados pelo canto superior esquerdo. Ao final desta atividade, os alunos devem estar prontos para transferir o que aprenderam sobre a comunicação da posição para a programação que farão na próxima lição.",
           "student_overview": "**Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela?**\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
         },
         "csd3-2021/Drawing in Game Lab": {
@@ -2779,11 +2826,11 @@
         },
         "csd3-2021/Sprites": {
           "name": "Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só lhe mostrarão uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
+          "student_overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só irão lhe mostrar uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2021/Sprite Properties": {
           "name": "Propriedades do Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
+          "student_overview": "**Pergunta do Dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2021/Text": {
           "name": "Texto",
@@ -2799,7 +2846,7 @@
         },
         "csd3-2021/Sprite Movement": {
           "name": "Movimento de Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos controlar o movimento dos sprites no Laboratório de Jogos?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
+          "student_overview": "**Pergunta do Dia: Como podemos controlar o movimento dos sprites no Game Lab?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
         },
         "csd3-2021/Mini-Project: Animation": {
           "name": "Mini-projeto - Animação",
@@ -2858,6 +2905,7 @@
         },
         "csd3-2021/Project - Design a Game": {
           "name": "Projeto - Projetar um Jogo",
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
           "student_overview": "**Pergunta do dia: Como às cinco práticas de CS (resolução de problemas, persistência, comunicação, colaboração e criatividade) podem ajudar os programadores a concluir grandes projetos?**\n\nNesta lição, você usará o processo de resolução de problemas para planejar e criar um jogo original!"
         },
         "csd3-2021/lesson-1": {
@@ -2935,6 +2983,9 @@
         "csd5-2021/Problem Solving with Big Data": {
           "name": "Solução de Problemas com Big Data"
         },
+        "csd5-2021/Project - Make a Recommendation": {
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
+        },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
@@ -3007,6 +3058,9 @@
         },
         "csd7-2021/Importing Models in App Lab": {
           "name": "Importando modelos no App Lab"
+        },
+        "csd7-2021/Similarity Models": {
+          "student_overview": "Zumbis invadiram sua cidade e você precisa usar dados para prever quais partes da cidade têm a menor quantidade de zumbis para você poder levar as pessoas à segurança."
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Dados numéricos no AI Lab"
@@ -3936,207 +3990,327 @@
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introdução à Resolução de Problemas",
-          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Newspaper Table](/s/csd1-2022/lessons/9/)\n-   [Spaghetti Bridge](/s/csd1-2022/lessons/10/)\n-   [Paper Tower](/s/csd1-2022/lessons/11/)",
-          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum do [\"Teacher's Lounge\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Virtual Lessons Modifications\"]",
-          "purpose": "Esta lição é uma introdução divertida para a resolução de problemas criativa, colaborativa, e múltipla que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem os resultados e, a partir deles, continuem se aperfeiçoando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A ciência computacional é uma disciplina relacionada à resolução de problemas, e afastar-se da ciência computacional tradicional, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual a ciência computacional se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas.",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2022/lessons/9/)\n-   [Ponte de Espaguete](/s/csd1-2022/lessons/10/)\n-   [Torre de Papel](/s/csd1-2022/lessons/11/)",
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]",
+          "purpose": "Esta lição é uma introdução divertida para a resolução aberta, colaborativa e criativa de problemas, que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem seus resultados e, a partir deles continuem iterativamente melhorando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas, e afastar-se dos problemas tradicionais da Ciência da Computação, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual a Ciência da Computação se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe?**\n\nVocê vai trabalhar em equipes para desenvolver e testar um barco de papel alumínio que carregue o maior número possível de moedinhas."
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas",
+          "assessment_opportunities": "1.  **Em caso de problema, identifique que ações individuais se enquadrariam em cada etapa do processo de resolução de problemas**\n\n    Na página 2 do guia de atividades, verifique se os alunos anotaram ações razoáveis para cada uma das quatro etapas do problema que estão tentando resolver.\n\n2.  **Identifique estratégias úteis em cada etapa do processo de resolução de problemas**\n\n    Ao final, verifique se os alunos estão criando estratégias eficazes para cada etapa do processo.",
+          "preparation": "Para cada aluno \n\n-   Imprima uma cópia do Guia de Atividades\n\nPara a turma\n\n-   Papel de pôster\n-   Marcadores/lápis de cor\n\nPara o professor\n\n-   Consulte o fórum na [\"Sala do Professor\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere verificar nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
           "student_overview": "**Pergunta do Dia: Quais são alguns dos passos mais comuns para a resolução de diferentes tipos de problemas?**\n\nVocê vai aprender sobre o Processo de Resolução de Problemas utilizados na Ciência da Computação e mergulhar em algumas estratégias para colocar cada passo em prática."
         },
         "csd1-2022/Exploring Problem Solving": {
           "name": "Explorando a Resolução de Problemas",
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes, a fim de entender melhor o valor de cada etapa. Eles resolverão uma pesquisa por palavras, organizarão assentos para uma festa de aniversário e planejarão uma viagem. Os problemas se tornarão cada vez mais complexos e mal definidos para destacar como o processo de solução de problemas é particularmente útil ao lidar com esses tipos de problemas. A lição termina com os alunos refletindo sobre sua experiência com o processo de solução de problemas. Eles justificarão a inclusão de cada etapa e debaterão questões ou estratégias que poderão ajudá-los a definir melhor os problemas em aberto, pois essa é geralmente a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para o segundo dia.",
+          "preparation": "-   Imprima o guia de atividades para cada aluno\n-   Disponibilize papéis para rascunhar o problema da festa de aniversário \n-   Distribua cartolinas para registrar as estratégias para a definição de problemas na discussão de encerramento\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil ao abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem fazer para definir melhor os problemas sozinhos, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver.",
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diversos tipos de problemas?**\n\nHoje, você vai aplicar o Processo de Resolução de Problemas a três problemas diferentes, que ficarão progressivamente mais complexos!"
         },
         "csd1-2022/What is a Computer?": {
           "name": "O que é um computador?",
+          "assessment_opportunities": "1.  **Identifique um computador como sendo uma máquina que trabalha com informações.**\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n2.  \\*\\*Analise se objetos específicos são ou não computadores. \\*\\*\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n3.  **Escolha problemas que possam ser resolvidos com a computação e justifique essas escolhas.**\n\n    Na atividade de fechamento, verifique se os alunos escolheram problemas de informação e explicaram como um computador obtém e usa as informações necessárias para resolver o problema.",
+          "overview": "Nesta lição, os alunos desenvolvem uma definição preliminar de um computador. Para iniciar a lição, a turma fará um brainstorming de definições possíveis para um computador e registrará os resultados desse brainstorming no quadro. Em seguida, os alunos trabalharão em grupos para classificar as imagens em \"é um computador\" ou \"não é um computador\" em papel para a elaboração de cartazes. Os grupos fixam seus cartazes pela sala e explicam brevemente suas motivações para escolher algumas de suas categorizações mais difíceis. O professor apresentará uma definição de computador e permitirá que os alunos revisem seus cartazes de acordo com a nova definição.",
+          "preparation": "**Para cada grupo** \n\n-   Imprima cópias do guia de atividades. Observe que há dois conjuntos de imagens, mas cada grupo necessitará de apenas um.\n-   Tesoura (caso não consiga recortar as imagens antes da aula) \n-   Cartolinas ou papel pardo\n-   Canetas hidrográficas ou lápis de cor \n-   Cola ou fita para fixas as imagens \n\n**Para o professor**\n\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) disponível aos professores autorizados para encontrar estratégias ou recursos extras compartilhados por outros professores.\n-   Se você estiver dando aulas online, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição se baseia no tema de resolução de problemas das lições anteriores e se concentra nas especificidades de como a computação é usada na resolução de problemas. Nesta lição, os alunos considerarão diferentes tipos de computadores e descobrirão que esses computadores usam informações como parte do processo de resolução de problemas. As próximas aulas abordarão muito mais em como é um problema de informação e como os computadores resolvem esses problemas.",
           "student_overview": "**Pergunta do Dia: O que é um Computador?**\n\nNesta lição, você vai trabalhar em equipe para descobrir o que faz de um computador um computador!"
         },
         "csd1-2022/Input and Output": {
           "name": "Entrada e saída",
+          "assessment_opportunities": "1.  **Selecione as entradas e saídas usadas para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de tarefas que envolvam entrada e saída e que estejam criando vários tipos de entradas e saídas específicas para a tarefa em questão. Você também pode coletar respostas individuais para essa pergunta, como num bilhete de saída, por exemplo.\n\n2.  **Explique a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação.**\n\n    No guia de atividades, verifique se o “aplicativo do aluno” tem entradas e saídas apropriadas listadas, com uma explicação razoável de por que cada uma é necessária. As respostas dos alunos podem variar, mas você pode usar o exemplo vinculado no primeiro nível da progressão do Code Studio como guia.",
+          "overview": "\\*\\*Pergunta do Dia: Como os computadores usam a entrada e a saída de dados para obter e fornecer as informações de que precisam para resolver problemas? \\*\\*\n\nNesta lição, os alunos consideram como os computadores obtêm e fornecem informações ao usuário por meio de entradas e saídas. Os alunos primeiro consideram quais informações precisariam para resolver um “problema de pensamento” e, em seguida, usam essas informações para produzir uma sugestão. Em seguida, eles identificam as entradas e saídas desse processo. Depois, os alunos consideram um aplicativo que se envolve no mesmo processo e determinam como esse aplicativo insere e envia informações. Por fim, eles consideram outros tipos de entradas e saídas que os computadores podem usar para ajudar a resolver problemas.",
+          "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Na lição anterior, os alunos começaram a pensar em recursos que podem ajudar a classificar dispositivos como computadores. Esta lição apresenta a entrada e a saída como um desses recursos e faz com que os alunos identifiquem diferentes métodos de entrada ou saída em aplicativos comuns. ",
           "student_overview": "**Pergunta do Dia: Como os computadores utilizam os dados de entrada e de saída e oferecem as informações de que precisam para resolver problemas?**\n\nNesta lição, você vai aprender sobre como os computadores recebem e dão informações ao usuário por meio de várias entradas e saídas."
         },
         "csd1-2022/Processing": {
           "name": "Processamento",
+          "assessment_opportunities": "1.  **Identifique o processamento possivelmente usado para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de processamento e que sejam capazes de explicar como esse processamento transforma entrada em saída. Você também pode coletar respostas individuais para essa pergunta como um bilhete de saída, por exemplo.",
+          "overview": "\\*\\*Pergunta do Dia: Quais são os diferentes modos pelos quais os computadores podem processar informações? \\*\\*\n\nEsta lição apresenta aos alunos quatro tipos comuns de processamento: se/então (condicionais if/then), encontrar uma correspondência (pesquisar), contar e comparar. Os alunos são apresentados pela primeira vez aos tipos de processamento por meio de vários aplicativos de amostra. Em seguida, eles investigam mais aplicativos para determinar que tipo de processamento cada um usa. Em seguida, eles pensam em seu próprio aplicativo e decidem quais tipos de processamento ele exigiria para funcionar. Finalmente, eles discutem outros tipos de processamento que podem ser úteis, mas não foram incluídos na lição principal.",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição apresenta o conceito de processamento na resolução de problemas computacionais. A definição de processamento apresentada nesta lição é intencionalmente acessível. Os alunos devem entender que processamento é tudo o que um computador faz para transformar entradas em saídas e que existem muitas maneiras diferentes de os computadores fazerem esse trabalho. O objetivo desta lição não é que os alunos escrevam algoritmos específicos para os aplicativos de exemplo.",
           "student_overview": "**Pergunta do Dia: Quais são as diferentes formas pelas quais os computadores conseguem processar informações?**\n\nNesta lição, você vai aprender sobre os quatro tipos de processamento que os computadores podem utilizar para transformar dados de entrada em dados de saída."
         },
         "csd1-2022/Storage": {
           "name": "Armazenamento",
+          "assessment_opportunities": "1.  **Decida se alguma entrada deve ser armazenada ou não.**\n\n    Entrada No guia de atividades, verifique as respostas dos alunos e o raciocínio deles sobre quais informações devem ser armazenadas.\n\n2.  **Identifique diretrizes sobre quais tipos de entrada devem ou não ser armazenados.**\n\n    Verifique as diretrizes que cada grupo escreveu em conjunto.\n\n3.  **Use o modelo IOSP para identificar algumas das entradas, saídas, armazenamento e processamento usados em um determinado computador.**\n\n    As duas solicitações do diário após o vídeo do IOSP solicitam que os alunos identifiquem as diferentes partes do IOSP em um aplicativo que eles normalmente usam e em um smartphone. ",
+          "overview": "**Pergunta do Dia: Por que o armazenamento é uma parte importante do processo de computação?**\n\nEsta lição apresenta o componente final do modelo de computação da unidade: armazenamento. Depois de experimentar um aplicativo de “seleção de roupas”, os alunos discutem quais informações devem ser armazenadas no aplicativo e quais informações devem ser inseridas toda vez que o aplicativo é executado. Em seguida, eles analisam uma série de aplicativos e usam suas decisões sobre o que deve ser armazenado para criar diretrizes para decidir quais informações armazenar. Em seguida, eles analisam os quatro componentes do modelo de computação deste capítulo: entrada, saída, armazenamento e processamento. Depois, eles têm uma última oportunidade de revisar suas decisões sobre quais itens devem ser classificados como um “computador” do início do capítulo. A aula termina com uma reflexão sobre suas próprias ideias de aplicativos e como o armazenamento pode ser usado.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Alterações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Na Lição 1 desta unidade, os alunos aprenderam o processo de resolução de problemas. Na Lição 2, os alunos aprenderam como os computadores resolvem problemas. Nesse ponto, os alunos sabem que os computadores são máquinas de processamento de informações que podem fazer quatro coisas com informações: entrada, saída, armazenamento e processamento. Nesta lição final antes do projeto da unidade, os alunos analisam os tipos de entrada que podem ser necessários para resolver um problema específico e descrevem o processamento e o armazenamento que um computador faria para produzir a saída desejada. Isso deve prepará-los para, eventualmente, criar seu próprio aplicativo para resolver um problema e explicar como esse aplicativo funcionaria.",
           "student_overview": "\\*Pergunta do Dia: Por que o armazenamento é uma parte importante do processo de computação?\\*\\*\n\nNesta lição, você vai aprender sobre os últimos critérios que tornam um computador um computador - o armazenamento!"
         },
         "csd1-2022/Project - Propose an App": {
           "name": "Projeto - Propor um Aplicativo",
+          "overview": "\\*\\*Pergunta do Dia: Como o modelo IOSP pode nos ajudar a criar um aplicativo que resolva um problema? \\*\\*\n\nPara concluir o estudo do processo de resolução de problemas e do modelo de entrada/saída/armazenamento/processamento de um computador, os alunos proporão um aplicativo projetado para resolver um problema do mundo real. Este projeto será realizado ao longo de vários dias e resultará na criação de um cartaz feito pelos alunos destacando os recursos do aplicativo que eles apresentarão aos colegas. Um guia do projeto fornece instruções passo a passo para os alunos e os ajuda a organizar suas ideias. O projeto foi pensado para ser concluído em pares, embora possa ser concluído individualmente.",
+          "preparation": "-   Imprima uma cópia dos [r apps_and_problem_solving/csd/2022] para cada dupla de alunos\n-   Papel para cartaz (cartolina ou papel pardo), canetas, canetas hidrográficas, e outros materiais para a confecção de cartazes\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores\n-   Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Este projeto combina os dois temas principais da Unidade 1, resolução de problemas e o modelo de entrada-saída-armazenamento-processamento de um computador. Este projeto vincula os dois temas a um objetivo mais amplo de identificar problemas do mundo real e encontrar maneiras de usar a tecnologia para ajudar a resolvê-los. Os alunos colaboram na criação do aplicativo e também participam de um processo estruturado de revisão por pares, que eles verão muitas vezes durante o curso. Este projeto também deve ser uma experiência divertida e criativa, e oferece aos alunos a chance de vincular o campo da Ciência da Computação aos seus próprios interesses e ambições.",
           "student_overview": "**Pergunta do Dia: Como o modelo IOSP pode nos ajudar a desenvolver um app que resolva um problema?**\n\nPara esta lição, você passar alguns dias desenvolvendo uma ideia para um app que resolva um problema do mundo real, usando entrada, saída, armazenamento e processamento."
         },
         "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Mesa de Jornal (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem barcos de papel alumínio, que devem sustentar o maior número possível de moedas. As equipes terão duas rodadas para desenvolverem seus barcos, com o objetivo de tentar acondicionar mais moedas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2022/lessons/1/)\n-   [Ponte de Espaguete][1]\n-   [Torre de Papel][2]",
+          "preparation": "**Para cada grupo**\n\n-   2 jornais completos por grupo de alunos\n-   1 rolo de fita adesiva para cada grupo\n-   uma cópia do guia de atividades\n\n**Para o Professor**\n\n-   de 10 a 20 livros de tamanho e peso semelhantes\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores - Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição é uma introdução divertida à resolução de problemas, colaborativa, criativa e aberta que os alunos usarão ao longo desta unidade e curso. O problema da mesa de jornal pode ser facilmente substituído por vários outros problemas que exigem que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, em seguida, aperfeiçoem o projeto iterativamente a partir daí. O fato de o problema escolhido ser “não computacional” é intencional. A ciência da computação é fundamentalmente uma disciplina de resolução de problemas e ficar longe dos problemas tradicionais da área neste momento ajuda a enquadrar essa aula como uma aula sobre resolução de problemas de forma mais ampla, com a ciência da computação sendo uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. ",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma mesa feita de jornal que deverá sustentar o maior número possível de livros."
         },
         "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Ponte de Espaguete (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem barcos de papel alumínio, que devem sustentar o maior número possível de moedas. As equipes terão duas rodadas para desenvolverem seus barcos, com o objetivo de tentar acondicionar mais moedas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2022/lessons/1/)\n-   [Ponte de Espaguete][1]\n-   [Torre de Papel][2]",
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]",
+          "purpose": "Esta lição é uma introdução divertida para a resolução aberta, colaborativa e criativa de problemas, que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem seus resultados e, a partir deles continuem iterativamente melhorando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas, e afastar-se dos problemas tradicionais da Ciência da Computação, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual essa ciência se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma ponte de espaguete que deverá sustentar o maior número possível de livros."
         },
         "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Torre de Papel (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em equipes para criarem torres de papel que sejam o mais altas possível. As equipes terão duas rodadas para desenvolverem suas torres, com o objetivo de tentar torná-las ainda mais altas do que na rodada anterior. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Esta atividade é uma alternativa à [Introdução à Resolução de Problemas - Barcos de Alumínio](/s/csd1-2022/lessons/1/)**",
+          "preparation": "**Para cada grupo**\n\n-   20 folhas de papel, 22 x 28 cm\n-   Espaço para construir a torre\n-   Uma cópia do guia de atividades\n\n**Para o Professor**\n\n-   Folhas extras de papel\n\n-   cronômetro\n\n-   regra\n\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores \n\n-   Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição é uma introdução divertida à resolução de problemas, colaborativa, criativa e aberta que os alunos usarão ao longo desta unidade e curso. O problema das torres de jornal pode ser facilmente substituído por vários outros problemas que exigem que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, em seguida, aperfeiçoem o projeto repetidamente a partir daí. O fato de o problema escolhido ser “não computacional” é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas e manter disância dos problemas tradicionais da área neste momento ajuda a enquadrar essa aula como uma aula sobre resolução de problemas de forma mais ampla, em que a Ciência da Computação se apresenta como uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. ",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma torre de papel que você tentará fazer ser a mais alta possível."
         },
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
           "name": "Explorando a Resolução de Problemas - Temática de Animais (Lição Extra 3)",
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "overview": "\\*\\*Pergunta do dia: Como podemos aplicar o processo de solução de problemas a muitos tipos diferentes de problemas? \\*\\*\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão tangrams, escolherão pets para várias pessoas e planejarão um evento de adoção de pets. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas não-resolvidos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para o segundo dia.\n\n**Esta é uma atividade alternativa para a [Exploração da resolução de problemas](/s/csd1-2022/lessons/3/)**",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno\n-   Prepare tangrams para os alunos, ou imprima uma tabela tangram e dê uma tesoura a cada grupo.\n-   Cartaz para registrar as estratégias para a definição de problemas na discussão do fechamento \n-   Visite o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para acessar estratégias e recursos adicionais compartilhados por outros professores\n-   Se você estiver dando aulas online, consulte nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver.",
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
         },
         "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "name": "Explorando a Resolução de Problemas - Temática de Jogos (Lição Extra 3)",
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver.",
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
         },
         "csd2-2022/Exploring Web Pages": {
-          "name": "Explorando páginas da Web"
+          "name": "Explorando páginas da Web",
+          "assessment_opportunities": "1.  **Identifique os motivos pelos quais alguém pode visitar um determinado site**\n\n    No guia de atividades, verifique se os alunos têm motivos pelos quais um usuário pode visitar cada site, tais como aprender mais sobre um tópico ou se divertir.\n2.  **Identifique os motivos pelos quais alguém pode criar um determinado site**\n\n    No guia de atividades, confira os motivos pelos quais os alunos criaram seus respectivos sites. As explicações dos alunos podem incluir motivos pragmáticos, como obter feedback e conselhos de outras pessoas, ou motivos de caráter mais social, como expressão pessoal.",
+          "overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*  \n\nTodos os sites têm um propósito, uma razão pela qual alguém o criou e outros o usam. Nesta lição, os alunos começarão a avaliar os propósitos a que um site pode servir, tanto para os usuários quanto para os seus criadores. Os alunos explorarão alguns exemplos de sites e discutirão o propósito a que eles servem para seus criadores. Em seguida, eles são convidados a refletir sobre os motivos pelos quais alguém pode querer criar sites.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno.\n-   Consulte o fórum [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores verificados a fim de encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "purpose": "Esta unidade trata da World Wide Web, com foco na criação de sites para autoexpressão. Para que os alunos pensem por que eles podem querer criar um site, eles devem começar a compreender como e por que os sites são ferramentas úteis para usuários e criadores. A aula começa com sites populares, porque os alunos estão familiarizados com eles, mas aos poucos eles deverão focar em sites mais simples e que estejam dentro do escopo do que eles terão condições de criar neste curso.",
+          "student_overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*\n\nNesta lição, você explorará os vários propósitos a que se prestam as páginas da web aos seus usuários e criadores. "
         },
         "csd2-2022/Intro to HTML": {
-          "name": "Introdução a HTML"
+          "name": "Introdução a HTML",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizá-la? \\*\\*\n\nVocê verá uma página HTML no Web Lab e usará HTML para escrever sua primeira página da unidade."
         },
         "csd2-2022/Headings": {
-          "name": "Cabeçalhos"
+          "name": "Cabeçalhos",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos trabalhar juntos para resolver problemas nos nossos sites? \\*\\*\n\nNesta lição, você aprenderá sobre cabeçalhos HTML e sobre como usá-los para criar títulos de páginas e seções para páginas da web. "
+        },
+        "csd2-2022/Mini-Project: HTML Web Page": {
+          "name": "Mini-projeto: página da Web em HTML",
+          "student_overview": "\\*\\*Pergunta do Dia: Como posso usar HTML para expressar um valor pessoal? \\*\\*\n\nNesta lição, você criará uma página pessoal simples sobre um tópico de sua escolha. "
         },
         "csd2-2022/Digital Footprint": {
-          "name": "Pegada Digital"
+          "name": "Pegada Digital",
+          "student_overview": "\\*\\*Pergunta do dia: Como você pode garantir que suas informações privadas permanecerão privadas? \\*\\*\n\nNesta lição, você pensará nas informações pessoais que optou por compartilhar digitalmente em vários sites, aplicativos e mídias sociais. "
         },
         "csd2-2022/Styling Text with CSS": {
-          "name": "Estilo de texto com CSS"
+          "name": "Estilo de texto com CSS",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos mudar o estilo do texto em uma página da web? \\*\\*\n\nNesta lição, você aprenderá a usar CSS para estilizar os elementos HTML em sua página da web. "
+        },
+        "csd2-2022/Mini-Project: Your Personal Style": {
+          "name": "Mini-projeto: Seu Estilo Pessoal",
+          "student_overview": "\\*\\*Pergunta do Dia: Como você pode expressar seu estilo pessoal em uma página da web? \\*\\*\n\nNesta lição, você criará sua própria página web estilizada!"
         },
         "csd2-2022/Intellectual Property": {
-          "name": "Propriedade intelectual"
+          "name": "Propriedade intelectual",
+          "student_overview": "\\*\\*Pergunta do Dia: Que tipo de regras protegem os direitos de todos quando usamos o conteúdo uns dos outros? \\*\\*\n\nNesta lição, você explorará as várias licenças Creative Commons. "
+        },
+        "csd2-2022/Using Images": {
+          "name": "Usando imagens",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos adicionar imagens em nossos sites e, ao mesmo tempo, garantir que os direitos de todos estão sendo respeitados? \\*\\*\n\nNesta lição, você aprenderá como adicionar imagens às suas páginas da web, certificando-se de manter os direitos autorais e as licenças Creative Commons em mente. "
+        },
+        "csd2-2022/Websites for Expression": {
+          "name": "Sites para expressão",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar sites para nos expressarmos? \\*\\*\n\nNesta lição, você explorará e discutirá diferentes interesses e ideias que as pessoas podem expressar e compartilhar usando sites. "
         },
         "csd2-2022/Styling Elements with CSS": {
-          "name": "Estilizando elementos com CSS"
+          "name": "Estilizando elementos com CSS",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos estilizar as imagens e os layouts de nossas páginas? \\*\\*\n\nNesta lição, você aprenderá mais propriedades de estilo CSS, desta vez focando em elementos não textuais."
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "name": "Sua Página da Web - Prepare-se",
+          "student_overview": "\\*\\*Pergunta do Dia: O que precisamos fazer como preparação para criarmos nossas páginas da web? \\*\\*\n\nNesta lição, você trabalhará na fase de “preparação” do processo de resolução de problemas para decidir quais elementos e estilos sua página da web terá. "
+        },
+        "csd2-2022/Project - Personal Web Page": {
+          "name": "Projeto - Página Pessoal da Web",
+          "student_overview": "\\*\\*Pergunta do Dia: Quais habilidades e práticas ajudam quando codificamos páginas da web? \\*\\*\n\nNesta lição, você trabalhará na criação das páginas da web que planejou nas aulas anteriores. "
+        },
+        "csd2-2022/Websites for a Purpose": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do dia: Quais são os diferentes motivos pelos quais as pessoas criam sites? \\*\\*\n\nNesta lição, você explorará os diferentes motivos pelos quais as pessoas criam sites e os problemas que podem ser resolvidos com seu próprio site.  "
         },
         "csd2-2022/Team Problem Solving": {
-          "name": "Solução de problemas da equipe"
+          "name": "Resolução de Problemas em Equipe",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos trabalhar juntos para formar uma ótima equipe? \\*\\*\n\nVocê trabalhará em conjunto com uma equipe para debater possíveis recursos que gostaria que seus sites tivessem e discutir como você interagirá com sua equipe para ter sucesso. "
         },
         "csd2-2022/Sources and Research": {
-          "name": "Fontes e Pesquisa"
+          "name": "Fontes e Pesquisa",
+          "student_overview": "\\*\\*Pergunta do Dia: Como encontramos informações relevantes e confiáveis na Internet? \\*\\*\n\nNesta lição, você descobrirá como encontrar informações relevantes e confiáveis online!"
         },
         "csd2-2022/CSS Classes": {
-          "name": "Classes CSS"
+          "name": "Aulas de CSS",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos criar estilos diferentes para o mesmo tipo de elemento? \\*\\*\n\nVocê aprenderá sobre classes CSS nesta lição, o que lhe permitirá estilizar grupos de elementos de forma diferente de outros elementos do mesmo tipo. "
+        },
+        "csd2-2022/Planning a Multi-Page Site": {
+          "name": "Planejando um Site de Várias Páginas",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Como planejamos uma página da web em equipe? \\*\\*\n\nVocê trabalhará em equipes hoje para planejar seus sites finais e decidir como o trabalho será distribuído entre vocês.  "
         },
         "csd2-2022/Linking Pages": {
-          "name": "Vinculando páginas"
+          "name": "Vinculando Páginas",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos combinar várias páginas da web diferentes em um site? \\*\\*\n\nNesta lição, você aprenderá a usar hiperlinks em uma página da web. "
         },
         "csd2-2022/Project - Website for a Purpose": {
-          "name": "Projeto - Site para uma finalidade"
+          "name": "Projeto - Site para uma Finalidade",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "\\*\\*Pergunta do Dia: Quais habilidades e práticas nos ajudarão a trabalhar juntos para que criemos um ótimo site? \\*\\*\n\nNesta lição, sua equipe finalmente codificará as páginas que você está planejando!"
         },
         "csd2-2022/Peer Review and Final Touches": {
-          "name": "Revisão por pares e retoques finais"
+          "name": "Revisão por pares e retoques finais",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o feedback para melhorar nossos sites? \\*\\*\n\nNesta lição, você fornecerá e receberá feedback sobre seu site finalizado."
         },
         "csd2-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd3-2022/Programming for Entertainment": {
           "name": "Programação para entretenimento",
-          "student_overview": "Aluno\n**Pergunta do dia: Como a ciência da computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
+          "assessment_opportunities": "1.  **Identifique como a Ciência da Computação é usada em um campo de entretenimento**\n\n    No guia de atividades, consulte a seção “Fatos ou usos interessantes” da segunda página e verifique se os alunos identificaram algum uso da CC nas áreas escolhidas.",
+          "overview": "**Pergunta do Dia: Como a Ciência da Computação é usada para o entretenimento?**\n\nPede-se aos alunos que considerem os “problemas” do tédio e da autoexpressão e que reflitam sobre como abordam esses problemas em suas próprias vidas. A partir daí, os alunos explorarão como a ciência da computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão.",
+          "preparation": "-   Revise os recursos de pesquisa vinculados no Code Studio\n-   Imprima uma cópia do guia de atividades para cada grupo de três alunos\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores verificados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, confira nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "Aluno\n**Pergunta do Dia: Como a Ciência da Computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2022/Plotting Shapes": {
           "name": "Formas de plotagem",
-          "student_overview": "**Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela?**\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
+          "overview": "\\*\\*Pergunta do Dia: Como podemos explicar claramente como desenhar algo em uma tela? \\*\\*\n\nOs alunos exploram os desafios de explicar como desenhar com formas e usam uma ferramenta que apresenta como esse problema é abordado no Game Lab. A atividade de aquecimento demonstra rapidamente os desafios de comunicar a posição sem um ponto de referência comum. Na atividade principal, os alunos exploram uma ferramenta do Game Lab que permite que os alunos coloquem formas interativamente na grade de 400 por 400 do Game Lab. Em seguida, eles se revezam instruindo um parceiro a desenhar uma imagem oculta usando essa ferramenta, o que explica muitos desafios que os alunos encontrarão ao programar no Game Lab. Opcionalmente, os alunos criam sua própria imagem para se comunicarem antes de uma breve discussão.",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "O objetivo principal desta lição é apresentar aos alunos o sistema de coordenadas que eles usarão no Game Lab. Os alunos podem ter pouca experiência com o uso de uma grade de coordenadas ou ter dificuldades com o eixo y “invertido” no Game Lab. A ferramenta de desenho também força os alunos a pensar em outros recursos do Game Lab, as quais verão quando começarem a programar na próxima lição. Isso inclui a necessidade de considerar a ordem ao desenhar, de especificar a cor e o fato de os círculos serem posicionados pelo centro e os quadrados pelo canto superior esquerdo. Ao final desta atividade, os alunos devem estar prontos para transferir o que aprenderam sobre a comunicação da posição para a programação que farão na próxima lição.",
+          "student_overview": "**Pergunta do Dia: Como podemos explicar de forma clara como desenhar algo em uma tela?**\n\nNesta lição, você explorará os desafios de dar instruções claras usando uma ferramenta do Game Lab para desenhar formas em grade!"
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos",
-          "student_overview": "**Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela?**\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos explicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Game Lab para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2022/Shapes and Parameters": {
           "name": "Formas e Parâmetros",
-          "student_overview": "**Pergunta do dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Laboratório de Jogos e aumentando sua familiaridade com o desenho de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
+          "student_overview": "**Pergunta do Dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Game lab e aumentando sua familiaridade com os desenhos de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
         },
         "csd3-2022/Variables": {
           "name": "Variáveis",
-          "student_overview": "**Pergunta do dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
+          "student_overview": "**Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
         },
         "csd3-2022/Random Numbers": {
           "name": "Números Aleatórios",
-          "student_overview": "**Pergunta do dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
+          "student_overview": "**Pergunta do Dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
         },
         "csd3-2022/Sprites": {
           "name": "Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só lhe mostrarão uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
+          "student_overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só irão lhe mostrar uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2022/Sprite Properties": {
           "name": "Propriedades do Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2022/Text": {
           "name": "Texto",
-          "student_overview": "**Pergunta do dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Laboratório de Jogos para adicionar legendas às suas cenas. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Game Lab para adicionar legendas às suas cenas. "
         },
         "csd3-2022/Mini-Project - Captioned Scenes": {
           "name": "Mini-projeto - Cenas legendadas",
-          "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2022/The Draw Loop": {
           "name": "O laço de desenho",
-          "student_overview": "**Pergunta do dia: Como podemos animar nossas imagens no laboratório de Games?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
+          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
         },
         "csd3-2022/Sprite Movement": {
           "name": "Movimento de Sprite",
-          "student_overview": "**Pergunta do dia: Como podemos controlar o movimento dos sprites no Laboratório de Jogos?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos controlar o movimento dos sprites no Game Lab?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
         },
         "csd3-2022/Mini-Project - Animation": {
           "name": "Mini-projeto - Animação",
-          "student_overview": "**Pergunta do dia: Como podemos combinar diferentes padrões de programação para criar uma animação completa?**\n\nNesta lição, você combinará todos os conceitos que aprendeu nas lições anteriores para criar sua primeira cena animada com seu próprio projeto!"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-animation-interactive-animations-and-games-lesson-13/36207) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos combinar diferentes padrões de programação para criar uma animação completa?**\n\nNesta lição, você combinará todos os conceitos que aprendeu nas lições anteriores para criar sua primeira cena animada com seu próprio projeto!"
         },
         "csd3-2022/Conditionals": {
           "name": "Condições",
-          "student_overview": "**Pergunta do dia: Como os programas podem reagir às mudanças durante a execução?**\n\nNesta lição, você aprenderá sobre booleanos e condicionais, o que permitirá criar programas executados de forma diferente dependendo se uma condição é verdadeira. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como os programas podem reagir às mudanças durante a execução?**\n\nNesta lição, você aprenderá sobre booleanos e condicionais, o que permitirá criar programas executados de forma diferente dependendo da veracidade de uma condição. "
         },
         "csd3-2022/Keyboard Input": {
           "name": "Entrada de Teclado",
-          "student_overview": "**Pergunta do dia: Como nossos programas podem reagir às informações do usuário?**\n\nNesta lição, você aprenderá a usar o bloco keyDown(), que permitirá que seus programas respondam à entrada do usuário. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como nossos programas podem reagir às informações do usuário?**\n\nNesta lição, você aprenderá a usar o bloco keyDown(), que permitirá que seus programas respondam à entrada do usuário. "
         },
         "csd3-2022/Mouse Input": {
           "name": "Entrada de Mouse",
-          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações Se e explorará as declarações Senão, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais."
         },
         "csd3-2022/Project - Interactive Card": {
           "name": "Projeto - Cartão Interativo",
-          "student_overview": "**Pergunta do dia: Quais habilidades e práticas são importantes ao criar um programa interativo?**\n\nNesta lição, você planejará e desenvolverá um cartão comemorativo interativo usando todos os conceitos e técnicas de programação que você aprendeu até agora!"
+          "student_overview": "**Pergunta do Dia: Quais habilidades e práticas são importantes ao criar um programa interativo?**\n\nNesta lição, você planejará e desenvolverá um cartão comemorativo interativo usando todos os conceitos e técnicas de programação que você aprendeu até agora!"
         },
         "csd3-2022/Velocity": {
           "name": "Velocidade",
-          "student_overview": "**Pergunta do dia: Como as linguagens de programação podem ocultar padrões complicados para facilitar a programação?**\n\nNesta lição, você aprenderá como definir a velocidade de um sprite que usa o padrão do contador para mover seus sprites. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como as linguagens de programação podem ocultar padrões complicados para facilitar a programação?**\n\nNesta lição, você aprenderá como definir a velocidade de um sprite que usa o padrão do contador para mover seus sprites. "
         },
         "csd3-2022/Collision Detection": {
           "name": "Detecção de Colisão",
-          "student_overview": "**Pergunta do dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões explorando como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
+          "student_overview": "**Pergunta do Dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões que exploram como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
         },
         "csd3-2022/Mini-Project - Side Scroller": {
-          "student_overview": "**Pergunta do dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
         },
         "csd3-2022/Complex Sprite Movement": {
           "name": "Movimento complexo de Sprite",
-          "student_overview": "**Pergunta do dia: Como os blocos anteriores podem ser combinados em novos padrões para criar movimentos interessantes?**\n\nNesta lição, você aprenderá a combinar as propriedades de velocidade dos sprites com o padrão do contador para criar movimentos mais complexos. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como os blocos anteriores podem ser combinados em novos padrões para criar movimentos interessantes?**\n\nNesta lição, você aprenderá a combinar as propriedades de velocidade dos sprites com o padrão do contador para criar movimentos mais complexos. "
         },
         "csd3-2022/Collisions": {
           "name": "Colisões",
-          "student_overview": "**Pergunta do dia: Como os programadores podem usar abstrações para criar mais abstrações?**\n\nNesta lição, você aprenderá a usar os novos blocos de colisão (colidir, deslocar, saltar e rebater) para fazer seu sprite interagir de novas maneiras. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como os programadores podem usar abstrações para criar mais abstrações?**\n\nNesta lição, você aprenderá a usar os novos blocos de colisão (colidir, deslocar, saltar e rebater) para fazer seu sprite interagir de novas maneiras. "
         },
         "csd3-2022/Mini-Project - Flyer Game": {
           "name": "Mini-Projeto - Jogo de Folhetos",
-          "student_overview": "**Pergunta do dia: Como as novas categorias de colisões e movimentos de modelagem podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre simular a gravidade e as diferentes categorias de colisões para criar um jogo de folhetos simples!"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-flyer-game-interactive-animations-and-games-lesson-23/36210) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como as novas categorias de colisões e movimentos de modelagem podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre simular a gravidade e as diferentes categorias de colisões para criar um jogo de folhetos simples!"
         },
         "csd3-2022/Functions": {
           "name": "funções",
-          "student_overview": "**Pergunta do dia: Como os programadores podem usar funções para criar suas próprias abstrações?**\n\nNesta lição, você aprenderá como organizar melhor seu código usando funções para tornar o programa legível e remover blocos de código repetidos. "
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "student_overview": "**Pergunta do Dia: Como os programadores podem usar funções para criar suas próprias abstrações?**\n\nNesta lição, você aprenderá como organizar melhor seu código usando funções para tornar o programa legível e remover blocos de código repetidos. "
         },
         "csd3-2022/The Game Design Process": {
           "name": "O processo de design de jogos",
-          "student_overview": "**Pergunta do dia: Como ter um plano ajuda a facilitar um grande projeto?**\n\nNesta lição, você explorará o processo que usará no restante da unidade ao criar jogos. "
+          "student_overview": "**Pergunta do Dia: Como ter um plano ajuda a facilitar um grande projeto?**\n\nNesta lição, você explorará o processo que usará no restante da unidade ao criar jogos. "
         },
         "csd3-2022/Using the Game Design Process": {
           "name": "Usando o processo de design de jogos",
-          "student_overview": "**Pergunta do dia: Como o processo de solução de problemas pode ajudar os programadores a gerenciar grandes projetos?**\n\nNesta aula de vários dias, você usará o processo de resolução de problemas para criar um jogo de salto de plataforma!"
+          "student_overview": "**Pergunta do Dia: Como o processo de solução de problemas pode ajudar os programadores a gerenciar grandes projetos?**\n\nNesta aula de vários dias, você usará o processo de resolução de problemas para criar um jogo de salto de plataforma!"
         },
         "csd3-2022/Project - Design a Game": {
           "name": "Projeto - Projetar um Jogo",
-          "student_overview": "**Pergunta do dia: Como às cinco práticas de CS (resolução de problemas, persistência, comunicação, colaboração e criatividade) podem ajudar os programadores a concluir grandes projetos?**\n\nNesta lição, você usará o processo de resolução de problemas para planejar e criar um jogo original!"
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
+          "student_overview": "**Pergunta do Dia: Como as cinco práticas de CC (resolução de problemas, persistência, comunicação, colaboração e criatividade) podem ajudar os programadores a concluir grandes projetos?**\n\nNesta lição, você usará o processo de resolução de problemas para planejar e criar um jogo original!"
         },
         "csd3-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
@@ -4165,6 +4339,12 @@
         "csd4-2022/Prototype Testing": {
           "name": "Protótipo de Teste"
         },
+        "csd4-2022/Events in AppLab": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2022/Linking Prototype Screens": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
         "csd4-2022/Testing the App": {
           "name": "Testando o aplicativo"
         },
@@ -4192,34 +4372,44 @@
         },
         "csd5-2022/Representing Numbers": {
           "name": "Representando Números",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
           "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar números?**\n\nNesta lição, você aprenderá sobre o sistema de números binário utilizado pelos computadores!"
         },
         "csd5-2022/Combining Representations": {
           "name": "Combinando Representações"
         },
         "csd5-2022/Keeping Data Secret": {
-          "name": "Mantendo o segredo dos dados"
+          "name": "Mantendo o segredo dos dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Create a Representation": {
-          "name": "Projeto - Criando uma Representação"
+          "name": "Projeto - Criando uma Representação",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Problem Solving and Data": {
-          "name": "Resolução de Problemas com Dados"
+          "name": "Resolução de Problemas com Dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Structuring Data": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Interpreting Data": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Making Decisions with Data": {
           "name": "Tomando Decisões com Dados"
         },
         "csd5-2022/Automating Data Decisions": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Problem Solving with Big Data": {
           "name": "Solução de Problemas com Big Data"
+        },
+        "csd5-2022/Project - Make a Recommendation": {
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
         },
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
@@ -4256,25 +4446,82 @@
           "student_overview": "Aprenda os conceitos básicos do aprendizado de máquina ajudando o AI Bot a reconhecer peixes para limpar o oceano"
         },
         "csd7-2022/Types of Machine Learning": {
-          "name": "Tipos de Aprendizado de Máquina"
+          "name": "Tipos de Aprendizado de Máquina",
+          "student_overview": "Aprenda dois tipos diferentes de aprendizado de máquina: aprendizado supervisionado e não supervisionado. Em seguida, compare como o aprendizado de máquina pode ser semelhante ou diferente ao modo como os humanos aprendem."
+        },
+        "csd7-2022/Innovations in AI": {
+          "name": "Inovações em IA",
+          "student_overview": "Pesquise diferentes exemplos de como a Inteligência Artificial está sendo usada para resolver problemas no mundo."
+        },
+        "csd7-2022/Patterns in Data": {
+          "name": "Padrões em dados",
+          "student_overview": "Explore três maneiras diferentes pelas quais os computadores podem fazer recomendações e a importância dos dados para tomar decisões precisas."
+        },
+        "csd7-2022/Classification Models": {
+          "name": "Modelos de classificação",
+          "student_overview": "Aprenda a criar um modelo de aprendizado de máquina ajudando um computador a classificar alimentos como frutas ou vegetais"
         },
         "csd7-2022/Introduction to AI Lab": {
-          "name": "Introdução ao AI Lab"
+          "name": "Introdução ao IA Lab",
+          "student_overview": "Aprenda como usar o IA Lab para treinar modelos de aprendizado de máquina, por exemplo, como reconhecer formas ou como fazer recomendações de alimentos para um restaurante."
         },
         "csd7-2022/Importing Models in App Lab": {
-          "name": "Importando modelos no App Lab"
+          "name": "Importando modelos no App Lab",
+          "student_overview": "Aprenda como importar um modelo para o App Lab para ajudar a criar um aplicativo de recomendação de livros para uma sala de aula do ensino médio."
+        },
+        "csd7-2022/Model Cards": {
+          "student_overview": "Ajude a decidir qual modelo um hospital deve usar para seu sistema de triagem do pronto-atendimento e determine quais modelos incluem vieses não intencionais. Você também aprenderá como os Model Cards podem ajudar a avaliar e analisar modelos de aprendizado de máquina."
+        },
+        "csd7-2022/Saving Models in AI Lab": {
+          "name": "Salvando os modelos no IA Lab",
+          "student_overview": "Ajude a treinar vários modelos para ajudar um zoológico a criar aplicativos educacionais para seus clientes. Você criará model cards para cada um dos seus modelos e importará um deles para o App Lab para criar um aplicativo."
+        },
+        "csd7-2022/Model Cards in App Lab": {
+          "name": "Cartões modelo no App Lab",
+          "student_overview": "Aprenda como usar cartões modelo para melhorar um aplicativo de aprendizado de máquina e como atualizar a tela final com base na previsão do modelo."
+        },
+        "csd7-2022/Numerical Models": {
+          "name": "Modelos Numéricos",
+          "student_overview": "Zumbis invadiram sua cidade e você precisa usar dados para prever quais partes da cidade têm a menor quantidade de zumbis para você poder levar as pessoas à segurança."
         },
         "csd7-2022/Numerical Data in AI Lab": {
-          "name": "Dados numéricos no AI Lab"
+          "name": "Dados numéricos no IA Lab",
+          "student_overview": "Use o AI Lab e dados numéricos para fazer previsões sobre cenários do mundo real"
+        },
+        "csd7-2022/Customizing Apps": {
+          "name": "Personalizando aplicativos",
+          "student_overview": "Aprenda como editar o código de um aplicativo de aprendizado de máquina ajudando a criar um sistema de alerta ao motorista, em que cada sensor está em uma tela diferente do aplicativo."
+        },
+        "csd7-2022/AI Code of Ethics": {
+          "name": "Código de Ética da IA",
+          "student_overview": "Qual o significado da Inteligência Artificial ser usada de forma ética? Nesta lição, você ajudará a criar um Código de Ética de IA e a pesquisar exemplos de inteligência artificial que estão ou não seguindo seu código de ética."
         },
         "csd7-2022/Mini-Project: Make a Machine Learning App": {
-          "name": "Projeto: Crie um aplicativo de Aprendizado de Máquina"
+          "name": "Projeto: Crie um aplicativo de Aprendizado de Máquina",
+          "student_overview": "Escolha entre vários conjuntos de dados do mundo real para treinar um modelo e criar um aplicativo que usa aprendizado de máquina"
+        },
+        "csd7-2022/Issue Statements": {
+          "student_overview": "Trabalhando com um grupo de estudantes de outra escola, desenvolva ideias de como o aprendizado de máquina pode ser usado para resolver um problema em sua comunidade."
         },
         "csd7-2022/Survey Planning": {
-          "name": "Projetando a coleta de dados"
+          "name": "Projetando a coleta de dados",
+          "student_overview": "Ajude a outra equipe de estudantes a desenvolver perguntas que seriam úteis para criar um aplicativo de aprendizado de máquina e, em seguida, aprenda a usar o Google Forms para criar uma pesquisa para coletar dados."
+        },
+        "csd7-2022/Survey Data in AI Lab": {
+          "name": "Dados de pesquisa no IA Lab",
+          "student_overview": "Aprenda como baixar os dados da pesquisa e usá-los no Laboratório de IA para treinar um modelo. As habilidades desta lição são importantes para concluir a lição final desta unidade."
+        },
+        "csd7-2022/Troubleshooting Models": {
+          "name": "Analisando os Modelos",
+          "student_overview": "Ajude os alunos da outra equipe a analisar os dados da pesquisa e determinar por que eles não conseguem obter modelos precisos ou não conseguem criar modelos utilizáveis quando testados."
+        },
+        "csd7-2022/Creating an App": {
+          "name": "Criando um aplicativo",
+          "student_overview": "O modelo finalmente está pronto! Agora é hora de importar o modelo para o App Lab e criar o aplicativo final do Recomendador de Clubes!"
         },
         "csd7-2022/Design an AI App": {
-          "name": "Projeto - Crie um aplicativo de Inteligência Artificial"
+          "name": "Projeto - Crie um aplicativo de Inteligência Artificial",
+          "student_overview": "Crie um aplicativo que usa aprendizado de máquina para resolver um problema em sua comunidade"
         },
         "csd7-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"

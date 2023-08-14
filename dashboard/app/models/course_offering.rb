@@ -19,10 +19,10 @@
 #  school_subject                   :string(255)
 #  device_compatibility             :string(255)
 #  description                      :string(255)
-#  self_paced_professional_learning :string(255)
 #  professional_learning_program    :string(255)
 #  video                            :string(255)
 #  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
@@ -33,10 +33,11 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
-  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -52,7 +53,7 @@ class CourseOffering < ApplicationRecord
     'K5 Workshops': 'code.org/professional-development-workshops',
     '6-12 Workshops': 'code.org/apply',
   }
-  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -198,13 +199,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings(locale_code = 'en-us')
+  def self.professional_learning_and_self_paced_course_offerings
     all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
       {
         id: co.id,
         key: co.key,
         display_name: co.display_name,
-        course_version_path: co.path_to_latest_published_version(locale_code)
       }
     end
   end
@@ -294,10 +294,10 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
@@ -338,10 +338,10 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 

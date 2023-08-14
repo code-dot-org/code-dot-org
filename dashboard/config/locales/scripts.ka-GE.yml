@@ -2193,6 +2193,8 @@ ka:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
             lessonGroup-3:
               display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+            lessonGroup-5:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6474,6 +6476,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6510,6 +6514,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6546,6 +6552,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6579,6 +6587,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6617,6 +6627,8 @@ ka:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
             lessonGroup-3:
               display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+            lessonGroup-5:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6649,6 +6661,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
             და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
             ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
@@ -6953,6 +6967,93 @@ ka:
           description_short: შეიტყვეთ, თუ როგორ მუშაობს ინტერნეტი.
           student_description: შეიტყვეთ, თუ როგორ მუშაობს ინტერნეტი.
           title: ინტერნეტ-სიმულატორი
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'ასაკი: 9-13'
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები
+            და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: სპრაიტები
+            lessonGroup-3:
+              display_name: პირობითი ბრძანებები
+            lessonGroup-5:
+              display_name: ცვლადები
+            lessonGroup-6:
+              display_name: გამოთვლის ზემოქმედება
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'ასაკი: 9-13'
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები
+            და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: სპრაიტები
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'ასაკი: 5-8'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში წინასწარი მკითხველებისთვის.
+            A კურსის მსგავსი, მაგრამ დამატებული კონცეფციის სიღრმით.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: მოვლენები
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'ასაკი: 8-12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ჩასმული ციკლები
+            lessonGroup-4:
+              display_name: ფუნქციები
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'ასაკი: 4-7'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
+            არ იცის.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: მონაცემები
+          lessons:
+            lesson-1:
+              name: მონაცემები
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: მოვლენები
+            lessonGroup-6:
+              display_name: მონაცემები
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'ასაკი: 7-11'
+          description_short: შეიტყვეთ პირობითი განცხადებების შესახებ. შექმენით თქვენი
+            საკუთარი ხელოვნება, თამაშები და კიდევ საცეკვაო წვეულება.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: ციკლები
+            lessonGroup-7:
+              display_name: მონაცემები
         new-d:
           title: ახალი კურსის D სკრიპტი
         new-e:
@@ -7369,6 +7470,17 @@ ka:
           student_description: ჩვენ ამას გამოვიყენებთ TeacherCon— ის დროს, რათა მივაწოდოთ
             მხარდაჭერა და მასალები სესიებისთვის
           title: TeacherCon მხარს უჭერს
+        test-nv-coursea-2023:
+          description_audience: 'ასაკი: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

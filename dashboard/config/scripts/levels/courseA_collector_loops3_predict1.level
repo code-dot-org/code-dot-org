@@ -36,10 +36,15 @@
     ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "video_key": "C1_zuck_repeat_loop"
+    "video_key": "C1_zuck_repeat_loop",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-31 20:34:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 20:36:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:46:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:47:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:49:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:49:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:50:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 22:02:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -48,8 +53,8 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">5</title>
+            <block type="controls_repeat_dropdown">
+              <field name="TIMES" config="2-10">5</field>
               <statement name="DO">
                 <block type="maze_moveEast">
                   <next>
@@ -62,17 +67,5 @@
         </block>
       </xml>
     </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="maze_moveEast" limit="1" id="callMe"/>
-        <block type="maze_moveWest"/>
-        <block type="maze_moveNorth"/>
-        <block type="maze_moveSouth"/>
-        <block type="collector_collect"/>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">5</title>
-        </block>
-      </xml>
-    </toolbox_blocks>
   </blocks>
 </Karel>

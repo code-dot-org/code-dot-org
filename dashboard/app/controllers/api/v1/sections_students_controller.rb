@@ -126,6 +126,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   def student_params
     params.require(:student).permit(
       :age,
+      :family_name,
       :gender,
       :gender_teacher_input,
       :name,

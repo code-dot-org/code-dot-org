@@ -1,0 +1,22 @@
+name 'VPL - CSD - Module 1 Summer Review Overview_2023'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Review of Concepts from the Summer Workshop
+
+### Overview
+
+During the summer we started to dig into Interactive Animations and Games. Already we have:
+
+* Engaged in Lessons 2, 3, and 4
+* Explored Game Lab 
+* Learned about plotting shapes using a grid
+* Used parameters to change the size of our shapes. 
+
+
+In Module 1, we will continue our exploration of Interactive Animations and Games content as we build on the skills we learned over the summer. 
+
+![image](https://images.code.org/dd91721eca86ae0935480cfd61bc0679-image-1655319751841.png)
+MARKDOWN

@@ -2,8 +2,6 @@
   "fr-FR": {
     "data": {
       "behavior_descriptions": {
-        "AllTheThings sprite lab with video": {
-        },
         "CourseE_Project_SpriteLab": {
           "change the size of a sprite": "modifier la taille d'un sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "déplace un sprite sur l'écran, en inversant la direction s'il touche les bords",
@@ -405,62 +403,6 @@
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "déplacer un sprite horizontalement, en inversant la direction s'il touche les bords de l'écran",
           "rotate a sprite to its left": "faire pivoter un sprite vers la gauche"
         },
-        "Dance Party 6": {
-        },
-        "Dance Party 6_2019": {
-        },
-        "Dance Party 6_2020": {
-        },
-        "Dance Party 6_2021": {
-        },
-        "Dance Party 7_2019": {
-        },
-        "Dance Party 7_2020": {
-        },
-        "Dance Party 7_2021": {
-        },
-        "Dance Party Freeplay": {
-        },
-        "Fish Tank 2-validated2022": {
-        },
-        "Fish Tank 2-validated_2019": {
-        },
-        "Fish Tank 2-validated_2020": {
-        },
-        "Fish Tank 2-validated_2021": {
-        },
-        "Fish Tank 3-validated2022": {
-        },
-        "Fish Tank 3-validated_2019": {
-        },
-        "Fish Tank 3-validated_2020": {
-        },
-        "Fish Tank 3-validated_2021": {
-        },
-        "Fish Tank 4-validated2022": {
-        },
-        "Fish Tank 4-validated_2019": {
-        },
-        "Fish Tank 4-validated_2020": {
-        },
-        "Fish Tank 4-validated_2021": {
-        },
-        "Fish Tank 5-validated2022": {
-        },
-        "Fish Tank 5-validated_2019": {
-        },
-        "Fish Tank 5-validated_2020": {
-        },
-        "Fish Tank 5-validated_2021": {
-        },
-        "Fish Tank 6-validated2022": {
-        },
-        "Fish Tank 6-validated_2019": {
-        },
-        "Fish Tank 6-validated_2020": {
-        },
-        "Fish Tank 6-validated_2021": {
-        },
         "Virtual Pet 1_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Déplaces un sprite vers la gauche sur l'écran. Lorsqu'il sort du côté gauche de l'écran, replaces-le sur le côté droit de l'écran.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Déplaces un sprite vers la droite sur l'écran. Lorsqu'il sort du côté droit de l'écran, replaces-le sur le côté gauche de l'écran.",
@@ -631,8 +573,6 @@
           "rotate a sprite to its left": "faire pivoter un sprite vers la gauche",
           "rotate a sprite to its right": "faire pivoter un sprite vers la droite"
         },
-        "Virtual Pet 4": {
-        },
         "Virtual Pet 4_2019": {
           "change the size of a sprite": "modifier la taille d'un sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "déplace un sprite sur l'écran, en inversant la direction s'il touche les bords",
@@ -658,14 +598,6 @@
           "randomly change the size of a sprite": "modifier aléatoirement la taille d'un sprite",
           "rotate a sprite to its left": "faire pivoter un sprite vers la gauche",
           "rotate a sprite to its right": "faire pivoter un sprite vers la droite"
-        },
-        "Virtual Pet 5": {
-        },
-        "Virtual Pet 6": {
-        },
-        "Virtual Pet Freeplay": {
-        },
-        "allthethings_fish_tank": {
         },
         "behaviors 1": {
           "change the size of a sprite": "modifier la taille d'un sprite",

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-06-28 15:17:32 UTC",
+    "serialized_at": "2023-08-08 17:50:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10086,7 +10086,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursed-2022/resources",
+      "url": "/s/coursed-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -10097,7 +10097,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursed-2022/standards",
+      "url": "/s/coursed-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -10108,7 +10108,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursed-2022/vocab",
+      "url": "/s/coursed-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -10241,6 +10241,18 @@
       },
       "seeding_key": {
         "resource.key": "csf_course_d_end_of_course_project_planning_guide"
+      }
+    },
+    {
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus"
       }
     },
     {
@@ -10666,6 +10678,18 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "unplugged_blocks_courses_c-f_",
@@ -10675,6 +10699,18 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "values_and_philosophy"
       }
     }
   ],
@@ -11073,6 +11109,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_course_syllabus",
+        "script.name": "coursed-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide",
         "script.name": "coursed-2023"
       }
@@ -11098,6 +11140,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "coursed-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursed-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy",
         "script.name": "coursed-2023"
       }
     }
@@ -12185,5 +12239,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

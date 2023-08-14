@@ -6030,6 +6030,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         csd2-2023:
           lesson_groups:
@@ -6477,6 +6479,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6504,6 +6508,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6522,6 +6528,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-data2:
           lesson_groups:
@@ -6564,6 +6572,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -6589,6 +6599,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-coding2-2023:
           lesson_groups:
@@ -6614,6 +6626,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -7030,3 +7044,117 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Sınıflar
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+          description_audience: 'Yaş: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Veri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Veri
+          description_audience: 'Yaş: 4-7'
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu kursta yer alan dersler ayrıca öğrencilere başkalarıyla anlamlı bir şekilde işbirliği yapmayı, farklı problem çözme tekniklerini araştırmayı, zorlu görevler karşısında ısrar etmeyi ve internet güvenliği hakkında bilgi edinmeyi öğretir.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Olaylar
+            lessonGroup-7:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 5-8'
+          description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş. Kurs A ile benzer ancak ilave kavram derinliği vardır.
+          description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik. Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde çalışır. Öğrenciler programlamanın temellerini, işbirliği tekniklerini, araştırma ve eleştirel düşünme becerilerini, zorluklar karşısında direnmeyi ve internet güvenliğini öğreneceklerdir. Bu dersin sonunda öğrenciler Play Lab programlama ortamında oyunlar oluştururlar.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Olaylar
+            lessonGroup-6:
+              display_name: Veri
+          description: Kurs C'yi ikinci sınıftaki öğrenciler için geliştirdik. Öğrenciler sıralama, döngüler ve olaylar içeren programlar oluşturacaktır. Problem çözme tekniklerini araştıracaklar ve hem çevrimiçi hem de çevrimdışı pozitif topluluklar oluşturmak için stratejiler geliştirecekler. Kursun sonunda öğrenciler paylaşabilecekleri etkileşimli oyunlar oluşturacaklar.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Döngüler
+            lessonGroup-7:
+              display_name: Veri
+            lessonGroup-8:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 7-11'
+          description_short: Koşullu ifadeleri öğrenin. Kendi sanatını, oyunlarını ve hatta bir dans partisi oluştur.
+          description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs, döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların gözden geçirilmesiyle başlar. Daha sonra, öğrenciler algoritmalar, iç içe döngüler, while döngüleri, koşullu ifadeler ve daha fazlası hakkındaki anlayışlarını geliştireceklerdir.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: İç İçe Döngüler
+            lessonGroup-4:
+              display_name: Fonksiyonlar
+            lessonGroup-5:
+              display_name: Veri ve simülasyonlar
+            lessonGroup-6:
+              display_name: Ders Projesinin Sonu
+          description_audience: 8-12 yaş grubu
+          description_short: Hareketli nesne, iç içe döngüler, ve fonksiyonların temellerini öğrenin.
+          description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs, Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi güvenlik hakkında öğreneceklerini pekiştiren eğlenceli, etkileşimli projeler yapmayı öğrenecekler. Bu derslerin ardından, öğrenciler daha karmaşık kodlama ile meşgul olacaklar. Öğrenciler iç içe döngüler, işlevler ve koşullu ifadeler hakkında bilgi edinecekler. Kursun sonunda öğrenciler zorlu bulmacaları çözmek için bu kavramları birleştirecekler. Kurs, öğrencilerin bir oyun veya çizim yaptıkları açık uçlu bir proje ile sona erer.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hareketli Nesneler
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
+          student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hareketli Nesneler
+            lessonGroup-3:
+              display_name: Koşullar
+            lessonGroup-4:
+              display_name: Veri ve simülasyonlar
+            lessonGroup-5:
+              display_name: Değişkenler
+            lessonGroup-6:
+              display_name: Bilişimin Etkileri
+            lessonGroup-7:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.

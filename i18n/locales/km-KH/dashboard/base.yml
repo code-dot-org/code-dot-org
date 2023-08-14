@@ -87,7 +87,7 @@ km:
     submit: 'ដាក់តម្រុយសម្រាបសម្កាល់'
   appname: "Code.org"
   stage: "ដំណាក់​កាល"
-  stage_number: "មេរៀនទី %{number}\n"
+  stage_number: "មេរៀនទី %{number}"
   puzzle: "បញ្ហា"
   trophies: "ពាន​រង្វាន់"
   courses: 'វគ្គ​សិក្សា'
@@ -96,7 +96,7 @@ km:
     title_teacher: "បង្រៀនជាមួយកម្មវិធីសរសេរកូដ"
   unplugged_activity: 'Unplugged Activity'
   of: "នៃ"
-  more: "បង្ហាញ​ច្រើន"
+  more: "​ច្រើនទៀត"
   less: "បង្ហាញ​តិច"
   try_hoc: "សាក​ល្បង \"ពេល​វេលា​នៃ​កូដ\" ដោយ​ចុច​ទីនេះ >> "
   try_k8intro: "សាកល្បងជាមួយការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
@@ -350,7 +350,7 @@ km:
       artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
-      dance: 'Dance Party'
+      dance: 'កម្មវិធីរាំ'
       gamelab: 'មន្ទីរពិសោធន៍ហ្គេម'
       gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
       gumball: 'The Amazing World of Gumball'
@@ -464,6 +464,7 @@ km:
     thank_you: '<a href="https://code.org/about/partners">'
     help_from_html: 'យើងចង់ទទួលស្គាល់ជាពិសេសវិស្វករ មកពី Amazon, Google និង Microsoft ដែលបានជួយបង្កើតអ្វីទាំងនេះ។'
     help_from_html_old: 'វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។'
+    art_from_html: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
     art_from_html_old: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
     powered_by_aws: 'Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។'
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
@@ -522,9 +523,9 @@ km:
     aquatic:
       title: "ម៉ាញក្រាស់"
     dance-2019:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     dance:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     flappy:
       title: 'Flappy កូដ'
       body: 'តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!'
@@ -648,4 +649,6 @@ km:
   page_not_found_description: "ទំព័រដែលអ្នកកំពុងរកមិនមាននៅក្នុងអាសយដ្ឋាននេះទេ។ សូមពិនិត្យអាសយដ្ឋានគេហទំព័រ ហើយដាក់ស្នើម្ដងទៀត ឬត្រឡប់ទៅទំព័រដើមរបស់យើងវិញ។"
   page_not_found_button: "ត្រឡប់ទៅទំព័រដើម"
   copy: 'ចម្លង'
+  behaviors:
+    this_sprite: "Sprite មួយនេះ"
   code_org_logo_alt: "ទំព័រដើម Code.org​"

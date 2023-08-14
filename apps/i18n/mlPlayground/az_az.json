@@ -990,8 +990,6 @@
       }
     },
     "thanksgiving": {
-      "card": {
-      },
       "fields": {
         "Apple pie": {
           "id": "Alma piroqu"
@@ -1041,13 +1039,7 @@
       }
     },
     "zoo": {
-      "card": {
-        "context": {
-        }
-      },
       "fields": {
-        "Airborne": {
-        },
         "Animal Name": {
           "description": "Heyvanın adı",
           "id": "Heyvan adı"
@@ -1055,28 +1047,14 @@
         "Aquatic": {
           "id": "Suda yaşayan"
         },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
         "Class": {
           "id": "Sinif"
-        },
-        "Domestic": {
         },
         "Eggs": {
           "id": "Yumurtalar"
         },
         "Feathers": {
           "id": "Lələklər"
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
         },
         "Milk": {
           "id": "Süd"
@@ -1086,10 +1064,6 @@
         },
         "Tail": {
           "id": "Quyruq"
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       },
       "name": "Zoopark"

@@ -615,17 +615,6 @@ id-ID:
           "#Gambar Binary
 
           Komunikasikan cara membuat ulang gambar hanya menggunakan dua nilai sederhana.
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -648,22 +637,10 @@ id-ID:
         display_name: Properti Sprite
       CSD Games Properties practice_2022:
         display_name: Properti Sprite
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Latih Variable
       CSD Games variables practice_2022:
         display_name: Latih Variable
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -694,13 +671,6 @@ id-ID:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -734,12 +704,6 @@ id-ID:
         - {}
         - text: Penyimpanan
         - text: Sedang memproses
-      CSD U1 Lesson 5 Overview: {}
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -824,10 +788,6 @@ id-ID:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Membuat Gaya Teks dengan CSS
       CSD U2 CSS practice_pilot_2022:
@@ -838,11 +798,6 @@ id-ID:
         content1: deskripsi di sini
       CSD U2 Design Project_2018_2019:
         content1: deskripsi di sini
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Menambahkan Gambar
       CSD U2 Image challenge_pilot_2022:
@@ -865,7 +820,6 @@ id-ID:
 
           *[Tujuan Situs Web - Panduan Aktifitas]
           (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: deskripsi di sini
       CSD U2 L3 Overview:
@@ -876,19 +830,8 @@ id-ID:
         content1: deskripsi di sini
       CSD U2 L6 Overview:
         content1: deskripsi di sini
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: deskripsi di sini
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1066,11 +1009,6 @@ id-ID:
         - correct: true
         - {}
         - {}
-      CSD U2 Top Websites: {}
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: deskripsi di sini
       CSD U2 expand project_2018:
@@ -1116,12 +1054,6 @@ id-ID:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1171,8 +1103,6 @@ id-ID:
         content1: deskripsi di sini
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: deskripsi di sini
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1238,11 +1168,6 @@ id-ID:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1311,9 +1236,6 @@ id-ID:
           * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1385,14 +1307,6 @@ id-ID:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |-
           # Gambaran Umum
@@ -1425,13 +1339,6 @@ id-ID:
           ## Sumber Daya
 
           * [Pengantar tentang Variabel](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1664,7 +1571,6 @@ id-ID:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: deskripsi di sini
       CSD U3 combining rep_2018:
@@ -1715,8 +1621,6 @@ id-ID:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Praktik
       CSD U3 drawing practice choice_2022:
@@ -1886,22 +1790,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: deskripsi di sini
       CSD U5 Encryption 1_2018:
@@ -1934,7 +1822,6 @@ id-ID:
         content1: deskripsi di sini
       CSD U5 student record_2018_2019:
         content1: deskripsi di sini
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2076,43 +1963,30 @@ id-ID:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Level Tantangan
       CSD U6 - Music - Chal_2222:
         display_name: Level Tantangan
       CSD U6 - Physical Input - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Level Tantangan
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: deskripsi di sini
       CSD U6 LED create intro_2018:
@@ -2153,10 +2027,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: deskripsi di sini
       CSD U6 final intro_2018:
@@ -2165,10 +2035,6 @@ id-ID:
         content1: deskripsi di sini
       CSD U6 final intro_2021:
         content1: deskripsi di sini
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2340,112 +2206,34 @@ id-ID:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Tantangan
       CSD games cake challenge choice_2022:
         display_name: Tantangan
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Praktik Function
       CSD games functions practice choice_2022:
         display_name: Praktik Function
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Tantangan
       CSD games platform challenge choice_2022:
         display_name: Tantangan
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: Praktik Conditional
       CSD web conditionals practice choice_2022:
         display_name: Praktik Conditional
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Praktik
       CSD web draw loop practice choice_2022:
         display_name: Praktik
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Praktik
       CSD web movement practice choice_2022:
         display_name: Praktik
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Praktik
       CSD web text practice choice_2022:
         display_name: Praktik
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2458,7 +2246,6 @@ id-ID:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2467,7 +2254,6 @@ id-ID:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Kondisional Dengan Kartu
@@ -2891,10 +2677,6 @@ id-ID:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # Merancang untuk Aksesibilitas
@@ -2965,8 +2747,6 @@ id-ID:
           #Berbagi Digital
 
           Dalam pelajaran ini, Anda akan mempertimbangkan tantangan dan keuntungan menghargai kepemilikan dan hak cipta, khususnya dalam lingkungan digital.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           #Variabel sampul
@@ -2988,8 +2768,6 @@ id-ID:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |-
           # Serunya For Loop
@@ -3475,12 +3253,6 @@ id-ID:
           Belajar memprogram dengan menulis kode untuk teman Anda!
       New Challenge Introduction:
         content1: deskripsi di sini
-      OPD-K5 About: {}
-      OPD-K5 About_copy: {}
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
-      OPD-K5 Assessment_copy: {}
-      OPD-K5 Assessment_dani: {}
       OPD-K5 CS Courses:
         markdown: |-
           # Perencanaan > Memulai di Code.org
@@ -3500,22 +3272,6 @@ id-ID:
           ***
           ## Langkah 4: Mulailah mengajar!
           Hanya butuh satu pelajaran untuk membawa konsep ilmu komputer ke dalam kelas Anda. Setelah melihat antusiasme siswa Anda terhadap ilmu komputer, lanjutkan dengan rencana pelajaran harian untuk memandu siswa Anda, kegiatan yang dapat Anda lakukan tanpa komputer, dan forum untuk terhubung dengan guru-guru lainnya.
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
-      OPD-K5 CS Tips_copy: {}
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
-      OPD-K5 Connect_copy: {}
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
       OPD-K5 Outline:
         markdown: |-
           # Memulai > Uraian Kursus
@@ -3609,7 +3365,6 @@ id-ID:
 
           > **Catatan**: Waktu yang disarankan di atas diberikan untuk membantu merencanakan pembelajaran Anda.
           Harap dicatat bahwa Anda mungkin ingin butuh lebih banyak atau lebih sedikit waktu pada tahap tertentu, tergantung pada pengetahuan Anda sebelumnya, minat, dan juga kapasitas Anda. Harap diingat bahwa kursus ini sepenuhnya bersifat mandiri; Anda selalu dapat keluar dari kursus dan kembali atau membuka kembali tahap atau level mana pun kapan saja.
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: |-
           # Memulai > Uraian Kursus
@@ -3703,75 +3458,14 @@ id-ID:
 
           > **Catatan**: Waktu yang disarankan di atas diberikan untuk membantu merencanakan pembelajaran Anda.
           Harap dicatat bahwa Anda mungkin ingin butuh lebih banyak atau lebih sedikit waktu pada tahap tertentu, tergantung pada pengetahuan Anda sebelumnya, minat, dan juga kapasitas Anda. Harap diingat bahwa kursus ini sepenuhnya bersifat mandiri; Anda selalu dapat keluar dari kursus dan kembali atau membuka kembali tahap atau level mana pun kapan saja.
-      OPD-K5 Pair: {}
-      OPD-K5 Pair_copy: {}
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
-      OPD-K5 Participation_copy: {}
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: deskripsi di sini
-      OPD-K5 Stage10Start: {}
-      OPD-K5 Stage10Start_copy: {}
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
-      OPD-K5 Stage2Go_copy: {}
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
-      OPD-K5 Stage3Start_copy: {}
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: deskripsi di sini
       OPD-K5 Stage3aGo_copy:
         content1: deskripsi di sini
       OPD-K5 Stage3aGo_dani:
         content1: deskripsi di sini
-      OPD-K5 Stage4Go: {}
-      OPD-K5 Stage4Go_copy: {}
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
-      OPD-K5 Stage4Start_copy: {}
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
-      OPD-K5 Stage5Start_copy: {}
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
-      OPD-K5 Stage6Go_copy: {}
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
-      OPD-K5 Stage6Start_copy: {}
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
-      OPD-K5 Stage7Go_copy: {}
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
-      OPD-K5 Stage7Start_copy: {}
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
       OPD-K5 Stage9Go:
         markdown: |-
           # Perencanaan > Peninjauan
@@ -3847,24 +3541,6 @@ id-ID:
           akun guru Code.org untuk melihatnya– setelah log in, Anda akan melihat layar
           default-nya di situs web Code.org. Jika Anda belum memiliki akun guru, Anda
           dapat, **[buat akun di sini](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
-      OPD-K5 Welcome 2_copy: {}
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
-      OPD-K5 What is Mastery_copy: {}
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
-      OPD-K5 Why teach CS_copy: {}
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
-      OPD-K5 Your Plan_copy: {}
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: deskripsi di sini
       OPD-K5 debugging:
@@ -3919,16 +3595,6 @@ id-ID:
         content1: deskripsi di sini
       OPD-K5-projects-1:
         content1: deskripsi di sini
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -4075,8 +3741,6 @@ id-ID:
           "#Pemrograman Relay
 
           Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Singkirkan Yang Kejam
@@ -4095,7 +3759,6 @@ id-ID:
       SimonSays-Unplugged_2021:
         markdown: "# Ikuti AlgorithmMainkan game dan pikirkan perintah apa saja yang
           dibutuhkan untuk mendapatkan hasil yang benar."
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           # Menulis lagu
@@ -4116,12 +3779,6 @@ id-ID:
           # Menulis lagu
 
           Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -4142,12 +3799,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: biru
@@ -4231,19 +3882,11 @@ id-ID:
           * Penting bagi pemrogram untuk memahami kebutuhan orang lain dan merancang aplikasi dengan mempertimbangkannya!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
-      Unit 1 Lesson 1 Overview: {}
-      Unit 1 Lesson 2 Overview: {}
       Unit 1 Lesson 3 Overview:
         markdown: "## gambaran\nDalam pelajaran ini anda akan menerapkan proses pemecahan
           masalah untuk berbagai permasalahan \nGuna mengeksplor bagaimana setiap
           langkah anda membangun dan mening\nkatkan solusi untuk masalah tersebut\n\n##sumber\n*[Solving
           Problem - Activity Guide]\n(https://docs.google.com/document/d/1cym51Muy41CbvXYe7F57N2Xf16Afp0hjsHovhR0GD2M/export?format=pdf)"
-      Unit 1 Lesson 4 Overview: {}
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4354,8 +3997,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4450,9 +4091,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -4508,8 +4146,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: deskripsi di sini
       allthethings_external_not_displayed_as_unplugged:
@@ -5261,10 +4897,6 @@ id-ID:
         description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
           waktu untuk mencermati proyek-proyek contoh.
         display_name: Contoh-Contoh Proyek
-      courseD_external_binary1: {}
-      courseD_external_binary1_2018: {}
-      courseD_external_binary1_2018_2019: {}
-      courseD_external_binary1_2018_2019_2020: {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - feedback: Salah.
@@ -7075,8 +6707,6 @@ id-ID:
           program Anda tanpa mengubahnya setelah Anda mengklik \"Run\".\n </h3>\n<br/><hr/>\n<h3>Di
           bagian seri selanjutnya, Anda akan menulis kode dengan variabel yang *melakukan*
           perubahan di dalam program.</h3>\n\n"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -8117,12 +7747,6 @@ id-ID:
           text: Artis akan menggambar empat persegi empat saling bertumpuk.
         questions:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8653,11 +8277,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -8809,60 +8428,6 @@ id-ID:
         content1: deskripsi di sini
       csd-post-survey-unit6-preamble:
         content1: deskripsi di sini
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -11338,15 +10903,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: deskripsi di sini
         markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
@@ -11419,8 +10975,6 @@ id-ID:
       csf_safety_in_my_online_neighborhood_2021:
         markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
           tempat-tempat online secara aman?"
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -11835,7 +11389,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: deskripsi di sini
       csp-post-survey-2018-unit-feedback-preamble:
@@ -11864,30 +11417,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -12639,8 +12168,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -13285,34 +12812,10 @@ id-ID:
         display_name: Sesuaikan Apl. Anda
       ml-club app-choice parent_2022:
         display_name: Sesuaikan Apl. Anda
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Sesuaikan Apl. Anda
       ml-intro app lab-book recommender 5_2022:
         display_name: Sesuaikan Apl. Anda
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -13482,9 +12985,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -13839,8 +13339,6 @@ id-ID:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

@@ -20,8 +20,6 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Você está agora no modo de Design."
         },
-        "Big Game Vars 1": {
-        },
         "CSD U3 - conditionals - transition": {
           "CSD_U3_L8_S6_C1": "Coloque a declaração de log do console aqui"
         },
@@ -51,18 +49,6 @@
         },
         "CSD U3 Boolean Predict_2022": {
           "": "Este programa irá imprimir um resultado aqui"
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
         },
         "CSD U3 Sprites anitab 1": {
           "": "Clique aqui para abrir a aba Animação"
@@ -762,48 +748,8 @@
           "CSD_U3_rect_c1": "Aqui estão o código",
           "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
@@ -903,10 +849,6 @@
         },
         "CSDU4 - Design Mode - 3": {
           "": "Use o bloco definirTexto para alterar o texto do etiquetaTitulo"
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Insira o número de vezes que o zumbi deve se mover para fazer um círculo completo"
@@ -1113,14 +1055,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Olhe aqui para blocos \"todos os patos\""
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Use este bloco para deixar anotações, para você mesmo ou para seu professor, de como seu código funciona."
         },
@@ -1172,8 +1106,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Tente usar o bloco de `comentário` sob este título para deixar notas pra você mesmo(a) dentro de seu programa!"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Quando estiveres pronto, carrega em \"Executar\" para experimentares o teu programa."
@@ -1252,8 +1184,6 @@
         },
         "NEW Course 4 Artist Params 10": {
           "create_function": "Clique aqui para abrir o submenu \"Funções\", e então clique no botão \"Criar uma função\"."
-        },
-        "NEW Course 4 Artist Params 2": {
         },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Escreva o nome do seu parâmetro aqui, clique em adicionar e, em seguida, arraste-o para sua definição de função",
@@ -2808,10 +2738,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Você pode encontrar suas variáveis aqui!"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
         },
@@ -2865,8 +2791,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "Clique aqui para abrir a categoria Eventos."
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "Observe atentamente o código abaixo desse ponto."
@@ -3155,8 +3079,6 @@
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Clique aqui para executar o código."
         },
-        "helloworld_food_click_space-2022": {
-        },
         "helloworld_food_costumes": {
           "hello_world_new": "Novo bloco!"
         },
@@ -3269,74 +3191,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Novo bloco!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Novo bloco!"

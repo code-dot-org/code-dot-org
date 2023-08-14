@@ -165,14 +165,6 @@
             "name": "zeichne eine Schneeflocke"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
             "name": "sammle 2 Nektar"
@@ -623,10 +615,6 @@
               "counter": "Zähler",
               "dir": "dir"
             }
-          }
-        },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
           }
         },
         "Course 4 SCF 2": {
@@ -1329,42 +1317,42 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_Ali": {
@@ -3075,7 +3063,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -3089,7 +3077,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -3103,7 +3091,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -3117,7 +3105,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2021": {
@@ -3131,7 +3119,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8a2022": {
@@ -3240,7 +3228,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -3254,7 +3242,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -3268,7 +3256,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -3282,7 +3270,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -3296,7 +3284,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions9": {
@@ -3379,7 +3367,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -3396,7 +3384,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -3413,7 +3401,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -3430,7 +3418,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -3447,7 +3435,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -3839,7 +3827,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3940,7 +3928,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -4013,7 +4001,7 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           }
         },
         "courseE_farmer_functions1a2022": {
@@ -4168,7 +4156,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           }
         },
         "courseE_farmer_functions3c2022": {

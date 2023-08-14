@@ -1130,6 +1130,52 @@ da:
             udgave af Minecraft.
         netsim:
           title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+            lessonGroup-3:
+              display_name: Betingelser
+            lessonGroup-5:
+              display_name: Variabler
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Hændelser
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Indlejret Løkker
+            lessonGroup-4:
+              display_name: Funktioner
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-5:
+              display_name: Hændelser
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-6:
+              display_name: Løkker
         outbreak:
           description: 'Brug Sprite Lab til at programmere en simulation ud af et
             virusudbrud. '
@@ -1224,6 +1270,12 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

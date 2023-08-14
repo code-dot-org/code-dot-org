@@ -4255,6 +4255,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4610,6 +4612,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4635,6 +4639,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4652,6 +4658,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4678,6 +4686,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4701,6 +4711,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4724,6 +4736,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4934,3 +4948,115 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: 클래스
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 시퀸싱
+            lessonGroup-4:
+              display_name: 반복
+            lessonGroup-5:
+              display_name: 컴퓨팅의 영향
+          description_audience: '나이: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: 데이터
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 시퀸싱
+            lessonGroup-4:
+              display_name: 반복
+            lessonGroup-5:
+              display_name: 컴퓨팅의 영향
+            lessonGroup-6:
+              display_name: 데이터
+          description_audience: '나이: 4-7'
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+          description: 코스 A는 유치원 학생을 포함한 초보 독자를 위한 컴퓨터 공학 커리큘럼을 제공합니다.학생들은 루프 및 이벤트와 같은 명령을 사용하여 프로그래밍하는 방법을 배웁니다.이 과정에서 제공되는 수업은 또한 학생들이 다른 사람들과 의미 있게 협업하고, 다양한 문제 해결 기술을 연구하고, 어려운 과제에 직면하여 끈질기게 대처하고, 인터넷 안전에 대해 배우도록 가르칩니다.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 시퀸싱
+            lessonGroup-4:
+              display_name: 반복
+            lessonGroup-5:
+              display_name: 컴퓨팅의 영향
+            lessonGroup-6:
+              display_name: 이벤트
+            lessonGroup-7:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 5-8'
+          description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
+          description: 우리는 1학년생을 염두에 두고 코스 B를 개발했습니다.코스 B의 개념은 코스 A의 개념과 유사하지만, 학생들은 보다 정교한 언플러그드 활동을 배우고 더 다양한 퍼즐을 풀게 됩니다.학생들은 프로그래밍, 협업 기술, 조사 및 비판적 사고 기술, 어려움에 직면한 끈기, 인터넷 안전의 기초를 배우게 됩니다.이 강좌를 마치면 학생들은 Play Lab 프로그래밍 환경에서 게임을 제작하게 됩니다.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 시퀸싱
+            lessonGroup-4:
+              display_name: 반복
+            lessonGroup-5:
+              display_name: 이벤트
+            lessonGroup-6:
+              display_name: 데이터
+          description: 우리는 2학년 학생들을 위해 코스 C를 개발했습니다.학생들은 시퀀싱, 루프 및 이벤트가 포함된 프로그램을 만들 것입니다.문제 해결 기법을 연구하고 온라인과 오프라인 모두에서 긍정적인 커뮤니티를 구축하기 위한 전략을 개발할 것입니다.강좌를 마치면 학생들은 공유할 수 있는 인터랙티브 게임을 만들게 됩니다.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 디지털 시민의식
+            lessonGroup-3:
+              display_name: 시퀸싱
+            lessonGroup-4:
+              display_name: 컴퓨팅의 영향
+            lessonGroup-6:
+              display_name: 반복
+            lessonGroup-7:
+              display_name: 데이터
+            lessonGroup-8:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 7-11'
+          description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
+          description: 3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 중첩 반복
+            lessonGroup-4:
+              display_name: 함수
+            lessonGroup-5:
+              display_name: 데이터 및 시뮬레이션
+            lessonGroup-6:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 8-12'
+          description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로 시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이 수업을 마친 후 학생들은 더 복잡한 코딩에 참여하게 됩니다.학생들은 중첩 루프, 함수 및 조건문에 대해 배우게 됩니다.강좌를 마치면 학생들은 이러한 개념을 결합하여 어려운 퍼즐을 풀게 됩니다.이 과정은 학생들이 게임이나 그림을 만드는 개방형 프로젝트로 끝납니다.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 스프라이트
+          description_audience: '나이: 9-13'
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+          description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 스프라이트
+            lessonGroup-3:
+              display_name: 조건
+            lessonGroup-4:
+              display_name: 데이터 및 시뮬레이션
+            lessonGroup-5:
+              display_name: 변수
+            lessonGroup-6:
+              display_name: 컴퓨팅의 영향
+            lessonGroup-7:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 9-13'
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+          description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.

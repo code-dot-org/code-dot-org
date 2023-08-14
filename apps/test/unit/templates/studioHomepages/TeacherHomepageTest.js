@@ -52,14 +52,10 @@ describe('TeacherHomepage', () => {
     sessionStorage.getItem.restore();
   });
 
-  it('shows a non-extended Header Banner that says My Dashboard', () => {
+  it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
-    const headerBanner = wrapper.find('Connect(HeaderBanner)');
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-      short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg',
-    });
+    const headerBanner = wrapper.find('HeaderBanner');
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {

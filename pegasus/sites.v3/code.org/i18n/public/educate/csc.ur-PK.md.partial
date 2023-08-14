@@ -1,17 +1,5 @@
 ---
 title: کمپیوٹر سائنس (CS) کنکشنز
-theme: responsive
-set_dir: true
-social:
-  og:title: CS Connections
-  twitter:title: CS Connections
-  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
-  og:image:width: 1200
-  og:image:height: 630
-  twitter:card: summary_large_image
-  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
 ---
 
 <style>

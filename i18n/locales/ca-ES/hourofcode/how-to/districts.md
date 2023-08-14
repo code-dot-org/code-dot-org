@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Hora del codi How-To per districtes
 ---
 
 {{ signup_button }}

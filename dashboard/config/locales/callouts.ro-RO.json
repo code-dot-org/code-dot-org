@@ -8,8 +8,6 @@
         "2-3 Bee Conditionals 5": {
           "Bee_Cond_5_1a": "Florile mov pot avea 1 sau 0 nectar...dar nu vei şti până când nu rulezi programul!"
         },
-        "4-5 Artist Patterns Free Play": {
-        },
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
         },
@@ -18,28 +16,6 @@
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Acum ești în Modul Design."
-        },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
           "": "[șir gol]"
@@ -52,536 +28,6 @@
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
           "": "[șir gol]"
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
-        "CSD U3 Variables Predict Where X": {
-        },
-        "CSD U3 Variables Predict Where XY": {
-        },
-        "CSD U3 Variables Predict Where XY_2018": {
-        },
-        "CSD U3 Variables Predict Where XY_2019": {
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
-        },
-        "CSD U3 Variables Predict Where X_2018": {
-        },
-        "CSD U3 Variables Predict Where X_2019": {
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
-        },
-        "CSD U3 debug": {
-        },
-        "CSD U3 debug_2018": {
-        },
-        "CSD U3 debug_2019": {
-        },
-        "CSD U3 debug_2021": {
-        },
-        "CSD U3 debug_2022": {
-        },
-        "CSD U3 drawing challenge 2_2021": {
-        },
-        "CSD U3 drawing challenge 2_2022": {
-        },
-        "CSD U3 drawing challenge 3_2021": {
-        },
-        "CSD U3 drawing challenge 3_2022": {
-        },
-        "CSD U3 drawing practice 1_2021": {
-        },
-        "CSD U3 drawing practice 1_2022": {
-        },
-        "CSD U3 drawing practice 2_2021": {
-        },
-        "CSD U3 drawing practice 2_2022": {
-        },
-        "CSD U3 drawing practice 3_2021": {
-        },
-        "CSD U3 drawing practice 3_2022": {
-        },
-        "CSD U3 ellipse": {
-        },
-        "CSD U3 ellipse_2018": {
-        },
-        "CSD U3 ellipse_2019": {
-        },
-        "CSD U3 ellipse_2021": {
-        },
-        "CSD U3 ellipse_2022": {
-        },
-        "CSD U3 fill": {
-        },
-        "CSD U3 fill_2018": {
-        },
-        "CSD U3 fill_2019": {
-        },
-        "CSD U3 fill_2021": {
-        },
-        "CSD U3 fill_2022": {
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
-        },
-        "CSD U3 properties depth_2021": {
-        },
-        "CSD U3 properties depth_2022": {
-        },
-        "CSD U3 properties tint_2021": {
-        },
-        "CSD U3 properties tint_2022": {
-        },
-        "CSD U3 rect": {
-        },
-        "CSD U3 rect_2018": {
-        },
-        "CSD U3 rect_2019": {
-        },
-        "CSD U3 rect_2021": {
-        },
-        "CSD U3 rect_2022": {
-        },
-        "CSD U3 sequence": {
-        },
-        "CSD U3 sequence_2018": {
-        },
-        "CSD U3 sequence_2019": {
-        },
-        "CSD U3 sequence_2021": {
-        },
-        "CSD U3 sequence_2022": {
-        },
-        "CSD U3 shapes arc_2021": {
-        },
-        "CSD U3 shapes arc_2022": {
-        },
-        "CSD U3 shapes behind_2021": {
-        },
-        "CSD U3 shapes behind_2022": {
-        },
-        "CSD U3 shapes line_2021": {
-        },
-        "CSD U3 shapes line_2022": {
-        },
-        "CSD U3 shapes missing_2021": {
-        },
-        "CSD U3 shapes missing_2022": {
-        },
-        "CSD U3 shapes polygon_2021": {
-        },
-        "CSD U3 shapes polygon_2022": {
-        },
-        "CSD U3 shapes scene_2021": {
-        },
-        "CSD U3 shapes scene_2022": {
-        },
-        "CSD U3 shapes_2021": {
-        },
-        "CSD U3 shapes_2022": {
-        },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
-        "CSD U6 colorLeds intensity": {
-        },
-        "CSD U6 colorLeds intensity_2018": {
-        },
-        "CSD U6 colorLeds intensity_2019": {
-        },
-        "CSD U6 colorLeds intensity_2021": {
-        },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
-        },
-        "CSD U6 light show": {
-        },
-        "CSD U6 light show_2018": {
-        },
-        "CSD U6 light show_2019": {
-        },
-        "CSD U6 light show_2021": {
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
-        },
-        "CSD U6 tugowar variables 3": {
-        },
-        "CSD U6 tugowar variables 3_2018": {
-        },
-        "CSD U6 tugowar variables 3_2019": {
-        },
-        "CSD U6 tugowar variables 3_2021": {
-        },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
-        },
-        "CSD web text explore_2021": {
-        },
-        "CSD web text explore_2022": {
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Introdu numărul necesar de mișcări ale zombie-ului astfel încât acesta să facă un cerc complet"
@@ -788,14 +234,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Caută aici blocurile „toate rațele”"
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Folosiți acest bloc pentru a vă lăsa vouă sau profesorului note despre cum funcționează codul vostru."
         },
@@ -823,10 +261,6 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Această mică instrucțiune spune computerului să ruleze MAREA bucată de cod cu același nume în spațiul de lucru."
         },
-        "Geometric Sun": {
-        },
-        "Geometric Sun_2018": {
-        },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "Emite un sunet când se produce acest eveniment."
         },
@@ -839,12 +273,6 @@
         },
         "Infinity_repeat": {
           "Infinity_repeat_callout": "Plasează blocuri de mutare în interior aici"
-        },
-        "InspirationalArtwork": {
-        },
-        "InspirationalArtwork_2018": {
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Când ești gata, apasă „Rulează” pentru a testa programul."
@@ -924,8 +352,6 @@
         "NEW Course 4 Artist Params 10": {
           "create_function": "Click aici pentru a deschide bara de instrumente \"Funcţii\", apoi faceţi clic pe butonul \"Creează o funcţie\"."
         },
-        "NEW Course 4 Artist Params 2": {
-        },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Scrie numele parametrului tău aici, fă click pe \"adaugă\", iar apoi trage-l în definiția funcției tale",
           "edit_add_parameter": "Clic editare pentru a adăuga un parametru în funcția ta"
@@ -962,10 +388,6 @@
         },
         "OPD-K5-spritelab-3": {
           "spritelab_comment": "Folosiți acest bloc pentru a vă lăsa vouă sau profesorului note despre cum funcționează codul vostru."
-        },
-        "OPD-K5-variables-1": {
-        },
-        "OPD-K5-variables-5": {
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
@@ -1032,10 +454,6 @@
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
         },
-        "Robot Doodle": {
-        },
-        "Robot Doodle_2018": {
-        },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
         },
@@ -1090,25 +508,11 @@
         "behaviors 1_2020": {
           "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
         },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
         "behaviors 4": {
           "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
         },
         "behaviors 4_2020": {
           "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
-        "course2_bee_conditionals_challenge2": {
         },
         "course3_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
@@ -1118,18 +522,12 @@
           "courseE_artist_functions_challenge2_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
           "courseE_artist_functions_challenge2_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
-        "course3_bee_debugging_challenge1": {
-        },
-        "course3_bee_functions_challenge3": {
-        },
         "course3_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
         },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
           "courseE_artist_functions_challenge2_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
-        },
-        "course4_bee_fwp_challenge2": {
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1148,16 +546,6 @@
         },
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
-        },
-        "courseA_artist_loops4": {
-        },
-        "courseA_artist_loops42022": {
-        },
-        "courseA_artist_loops4_2018": {
-        },
-        "courseA_artist_loops4_2019": {
-        },
-        "courseA_artist_loops4_2020": {
         },
         "courseA_artist_loops4_2021": {
           "courseA_artist_loops4_1": "Acest număr vă spune câte dintre aceste blocuri puteți utiliza în acest puzzle."
@@ -1198,42 +586,14 @@
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_1": "Știați că desena peste o linie deja desenată ori de câte ori aveți nevoie să faceți aceasta?"
         },
-        "courseA_collector_loops1": {
-        },
-        "courseA_collector_loops12022": {
-        },
-        "courseA_collector_loops1_2019": {
-        },
-        "courseA_collector_loops1_2020": {
-        },
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Utilizați acest bloc pentru a colecta comoara."
-        },
-        "courseA_collector_loops3": {
-        },
-        "courseA_collector_loops32022": {
-        },
-        "courseA_collector_loops3_2018": {
-        },
-        "courseA_collector_loops3_2019": {
-        },
-        "courseA_collector_loops3_2020": {
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Acest număr vă spune câte dintre aceste blocuri puteți utiliza în acest puzzle."
         },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "Apasă aici pentru a vedea acest cod rulând!"
-        },
-        "courseA_collector_preLoops2": {
-        },
-        "courseA_collector_preLoops3": {
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
@@ -1250,22 +610,8 @@
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
-        "courseA_maze_seq1": {
-        },
-        "courseA_maze_seq12022": {
-        },
-        "courseA_maze_seq1_2018": {
-        },
-        "courseA_maze_seq1_2019": {
-        },
-        "courseA_maze_seq1_2020": {
-        },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Faceți clic pe bec atunci când aveți nevoie de un indiciu!"
-        },
-        "courseA_maze_seq2": {
-        },
-        "courseA_maze_seq4": {
         },
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Aceasta este o explicație"
@@ -1321,14 +667,6 @@
         "courseA_playLab_events6_2021": {
           "courseA_playLab_events6_1": "Cu acesta puteți alege un sunet „aleatoriu”, ceea ce înseamnă că nu știți despre ce sunet este vorba până când îl veți auzi!"
         },
-        "courseB_Scrat_ramp12022": {
-        },
-        "courseB_Scrat_ramp1_2018": {
-        },
-        "courseB_Scrat_ramp1_2019": {
-        },
-        "courseB_Scrat_ramp1_2020": {
-        },
         "courseB_Scrat_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
         },
@@ -1362,37 +700,11 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Există doar un singur bloc de acest fel în cutia de instrumente. Cum îl veți folosi?"
         },
-        "courseB_artist_loops5": {
-        },
-        "courseB_collector_loops1": {
-        },
-        "courseB_collector_loops12022": {
-        },
-        "courseB_collector_loops1_2018": {
-        },
-        "courseB_collector_loops1_2019": {
-        },
-        "courseB_collector_loops1_2020": {
-        },
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "Utilizați acest bloc pentru a colecta comoara."
         },
-        "courseB_maze_seq1": {
-        },
-        "courseB_maze_seq12022": {
-        },
-        "courseB_maze_seq1_2018": {
-        },
-        "courseB_maze_seq1_2019": {
-        },
-        "courseB_maze_seq1_2020": {
-        },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Faceți clic pe bec atunci când aveți nevoie de un indiciu!"
-        },
-        "courseB_maze_seq2": {
-        },
-        "courseB_maze_seq3": {
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Folosiți săgeata verde pentru a schimba direcția."
@@ -1487,21 +799,11 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Adăugați-l în mijlocul programului vostru."
         },
-        "courseC_artist_loopsPrePre1a": {
-        },
-        "courseC_artist_loopsPrePre1a_2018": {
-        },
-        "courseC_artist_loopsPrePre1a_2019": {
-        },
-        "courseC_artist_loopsPrePre1a_2020": {
-        },
         "courseC_artist_prog22022": {
           "slider": "Puteți încetini programul aici."
         },
         "courseC_artist_prog2_2021": {
           "slider": "Puteți încetini programul aici."
-        },
-        "courseC_collector_prog1": {
         },
         "courseC_collector_prog12022": {
           "courseC_collector_prog1_1": "Vedeți blocuri noi în cutia de instrumente? Nu vă faceți griji, vă vom arăta cum să le folosiți într-o altă lecție."
@@ -1536,25 +838,11 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Puteți lua mai multe blocuri din cutia de instrumente dacă aveți nevoie de ele!"
         },
-        "courseC_harvester_loops1": {
-        },
-        "courseC_harvester_loops12022": {
-        },
-        "courseC_harvester_loops1_2018": {
-        },
-        "courseC_harvester_loops1_2019": {
-        },
-        "courseC_harvester_loops1_2020": {
-        },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Numărul patru de pe dovleac vă spune că există patru dovleci disponibile pentru a alege."
         },
-        "courseC_maze_debugging5": {
-        },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Aceste blocuri sunt blocate și nu pot fi șterse!"
-        },
-        "courseC_maze_debugging5_2018": {
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "Aceste blocuri sunt blocate și nu pot fi șterse!"
@@ -1579,16 +867,6 @@
         },
         "courseC_maze_debugging9_copy_2020": {
           "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
-        },
-        "courseC_maze_programming1": {
-        },
-        "courseC_maze_programming12022": {
-        },
-        "courseC_maze_programming1_2018": {
-        },
-        "courseC_maze_programming1_2019": {
-        },
-        "courseC_maze_programming1_2020": {
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
@@ -1719,8 +997,6 @@
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
         },
-        "courseC_video_angles": {
-        },
         "courseD_artist_nestedLoops1a": {
           "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
         },
@@ -1738,8 +1014,6 @@
         },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
-        },
-        "courseD_artist_ramp11": {
         },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
@@ -1765,30 +1039,14 @@
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
         },
-        "courseD_bee_conditionals_challenge2": {
-        },
-        "courseD_bee_conditionals_challenge22022": {
-        },
-        "courseD_bee_conditionals_challenge2_2018": {
-        },
-        "courseD_bee_conditionals_challenge2_2019": {
-        },
-        "courseD_bee_conditionals_challenge2_2020": {
-        },
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Utilizați această buclă pentru a colecta toate nectar (sau miere) de la o floare (sau fagure de miere)."
-        },
-        "courseD_bee_debugging_challenge1": {
-        },
-        "courseD_bee_debugging_challenge1a": {
         },
         "courseD_bee_nestedLoops1a2022": {
           "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
-        },
-        "courseD_collector_ramp8": {
         },
         "courseD_farmer_while72022": {
           "courseD_farmer_while7_2018_PathAhead": "Va trebui să folosiți blocul `while path ahead` pentru a rezolva acest puzzle."
@@ -1828,16 +1086,6 @@
         },
         "courseD_maze_intro5a_2021": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
-        },
-        "courseD_maze_ramp1": {
-        },
-        "courseD_maze_ramp12022": {
-        },
-        "courseD_maze_ramp1_2018": {
-        },
-        "courseD_maze_ramp1_2019": {
-        },
-        "courseD_maze_ramp1_2020": {
         },
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
@@ -1924,14 +1172,6 @@
         "courseD_maze_ramp5a_2020": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
-        "courseD_maze_ramp6": {
-        },
-        "courseD_playLab_condFP": {
-        },
-        "courseD_playLab_condFP_2018": {
-        },
-        "courseD_scrat_ramp1": {
-        },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
@@ -1944,14 +1184,8 @@
         "courseD_scrat_ramp5": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
-        "courseD_scrat_ramp6": {
-        },
-        "courseD_scrat_ramp7": {
-        },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Acesta este primul vostru puzzle de tip provocare! Acestea sunt dificile, este posibil să fie nevoie de mai multe încercări pentru a-l rezolva."
-        },
-        "courseD_video_nestedLoopsArtist": {
         },
         "courseE_aboutme_2": {
           "": "Faceți clic aici!"
@@ -1964,12 +1198,6 @@
         },
         "courseE_aboutme_2_2021": {
           "": "Faceți clic aici!"
-        },
-        "courseE_artist_functions1": {
-        },
-        "courseE_artist_functions1_copy": {
-        },
-        "courseE_artist_functions1_dani": {
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Când blocul de culoare verde este rulat, tot codul din funcție va fi rulat. Ce ar trebui să facă artistul după ce a desenat primul pătrat?"
@@ -2060,10 +1288,6 @@
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout1": "Continuați acest program adăugând mai multe coduri în partea de jos.",
           "courseE_artist_functions_challenge2_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
-        },
-        "courseE_artist_ramp8": {
-        },
-        "courseE_artist_ramp8_2": {
         },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
@@ -2236,40 +1460,6 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Cutia de instrumente este în modul „categorie” pentru a face mai mult loc pentru codul vosru. Buclele `for` se află aici."
         },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp4": {
-        },
-        "courseF_artist_fwp5": {
-        },
-        "courseF_artist_variables3": {
-        },
-        "courseF_artist_variables3_2018": {
-        },
-        "courseF_artist_variables3_2019": {
-        },
-        "courseF_artist_variables3_2020": {
-        },
-        "courseF_artist_variables6": {
-        },
-        "courseF_artist_variables6_2018": {
-        },
-        "courseF_artist_variables6_2019": {
-        },
-        "courseF_artist_variables6_2020": {
-        },
-        "courseF_artist_variables6a": {
-        },
-        "courseF_artist_variables6a_2018": {
-        },
-        "courseF_artist_variables6a_2019": {
-        },
-        "courseF_artist_variables6a_2020": {
-        },
-        "courseF_bee_conditionals2": {
-        },
-        "courseF_bee_conditionals5": {
-        },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Veți găsi bucla `for` aici!"
         },
@@ -2306,22 +1496,6 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Veți găsi bucla `math` aici."
         },
-        "courseF_bee_functions2": {
-        },
-        "courseF_bee_functions6": {
-        },
-        "courseF_bee_functions_challenge1": {
-        },
-        "courseF_bee_fwp1": {
-        },
-        "courseF_bee_fwp2": {
-        },
-        "courseF_bee_fwp3": {
-        },
-        "courseF_bee_fwp4": {
-        },
-        "courseF_bee_fwp_challenge2": {
-        },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Puteți găsi toate variabilele aici!"
         },
@@ -2336,10 +1510,6 @@
         },
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Puteți găsi toate variabilele aici!"
-        },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
         },
         "courseF_editable_card": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
@@ -2395,21 +1565,11 @@
         "courseF_events_time_-2022-2": {
           "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
         },
-        "courseF_groups_size_-2022-2": {
-        },
         "courseF_label_predict": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
-        },
-        "courseF_playlab_variables1a": {
-        },
-        "courseF_playlab_variables5c": {
-        },
-        "courseF_playlab_variables6c": {
-        },
-        "courseF_playlab_variables7c": {
         },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
@@ -2496,14 +1656,6 @@
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         },
-        "coursea_maze_ramp12022": {
-        },
-        "coursea_maze_ramp1_2018": {
-        },
-        "coursea_maze_ramp1_2019": {
-        },
-        "coursea_maze_ramp1_2020": {
-        },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "După ce ați rupt toate blocurile împreună, apăsați „Alerga” pentru a porni programul."
         },
@@ -2569,14 +1721,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
-        },
-        "grade5_artist_variables_triangles1": {
-        },
-        "grade5_artist_variables_triangles1_2018": {
-        },
-        "grade5_artist_variables_triangles1_2019": {
-        },
-        "grade5_artist_variables_triangles1_2020": {
         },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
@@ -2787,74 +1931,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Bloc nou!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "Apasă aici pentru a expanda blocul.",

@@ -12,9 +12,9 @@
   "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
+  "description": "Explore how computers learn from data to make decisions, then develop projects around real-world data and design an app to solve a personally relevant problem.",
+  "professional_learning_program": "code.org/apply",
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": 460
 }

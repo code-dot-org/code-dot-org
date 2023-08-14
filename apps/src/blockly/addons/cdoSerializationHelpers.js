@@ -57,14 +57,9 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
 /**
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {function} [positionBlock] - moves a single block using the current cursor coordinates
- * @param {Array<block>} [blocks] - an array of block objects
+ * @param {Map} [blockOrderMap] - specifies an original order of blocks from XML
  */
-export function positionBlocksOnWorkspace(
-  workspace,
-  positionBlock = positionBlockWithCursor,
-  blocks = workspace.getTopBlocks(SORT_BY_POSITION)
-) {
+export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   if (!workspace.rendered) {
     return;
   }
@@ -81,8 +76,12 @@ export function positionBlocksOnWorkspace(
   // If the workspace is RTL, horizontally mirror the starting position.
   cursor.x = workspace.RTL ? width - cursor.x : cursor.x;
 
-  blocks.forEach(block => {
-    positionBlock(block, cursor);
+  const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
+
+  const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
+
+  orderedBlocks.forEach(block => {
+    positionBlockWithCursor(block, cursor);
   });
 }
 
@@ -161,4 +160,24 @@ function addUnusedFrame(block) {
     block.unusedSvg_ = new BlockSvgUnused(block);
     block.unusedSvg_.render(block.svgGroup_, block.RTL);
   }
+}
+
+/**
+ * Reorders an array of blocks based on the given blockOrderMap.
+ * If the blockOrderMap is invalid (null or size mismatch), returns the original array.
+ *
+ * @param {Array} blocks - The array of blocks to be reordered.
+ * @param {Map} blockOrderMap - A map with block index as key and the desired order index as value.
+ * @returns {Array} The reordered array of blocks or the original array if blockOrderMap is invalid.
+ */
+function reorderBlocks(blocks, blockOrderMap) {
+  if (!blockOrderMap || blockOrderMap.size !== blocks.length) {
+    return blocks;
+  }
+  const orderedBlocks = new Array(blocks.length);
+  blocks.forEach((block, index) => {
+    orderedBlocks[blockOrderMap.get(index)] = block;
+  });
+
+  return orderedBlocks;
 }

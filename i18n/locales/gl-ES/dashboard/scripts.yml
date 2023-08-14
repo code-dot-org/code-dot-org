@@ -1060,3 +1060,49 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-4:
               display_name: Variables
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Eventos
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Eventos
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Bucles
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Bucles aniñados
+            lessonGroup-4:
+              display_name: Funcións
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Condicionais
+            lessonGroup-5:
+              display_name: Variables

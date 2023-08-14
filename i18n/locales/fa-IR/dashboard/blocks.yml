@@ -47,7 +47,7 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -59,7 +59,7 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -102,7 +102,7 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -120,7 +120,7 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -181,7 +181,7 @@ fa:
             MOVES.Dab: داب (رقص)
             MOVES.XFever: دیسکو
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -209,7 +209,7 @@ fa:
             MOVES.Dab: داب (رقص)
             MOVES.XFever: دیسکو
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -269,7 +269,7 @@ fa:
             MOVES.Clown: گنگام (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
@@ -1136,7 +1136,6 @@ fa:
         text: "[VALUE][0]"
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1838,7 +1837,7 @@ fa:
             MOVES.Clown: گنگام (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
@@ -2308,8 +2307,8 @@ fa:
         text: وقتی خط [N][0] نمایش داده شد
         options:
           'N':
-            '0': "???"
-            '1': '1'
+            '0': ""
+            '1': ''
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2596,8 +2595,8 @@ fa:
         text: "[VALUE][0]"
         options:
           VALUE:
-            '0': '0'
-            '1': '1'
+            '0': ''
+            '1': ''
             '2': '2'
             '3': '3'
             '4': '4'

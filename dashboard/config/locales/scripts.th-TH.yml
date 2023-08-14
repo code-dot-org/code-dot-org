@@ -1270,6 +1270,10 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         csd1-dlp:
           lesson_groups:
             required:
@@ -2286,18 +2290,30 @@ th:
           student_description: อยากจะลองเขียนเกมในแบบของคุณโดยใช้เวลาไม่ถึง 10 นาทีรึเปล่า
             แนะนำให้อ่านบทช่วยสอน "แฟลปปี้โค้ด" ดูนะ
           title: แฟลปปี้โค้ด
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2306,6 +2322,18 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-4:
               display_name: ตอนที่ 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2428,6 +2456,94 @@ th:
           title: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+          lesson_groups:
+            lessonGroup-3:
+              display_name: เงื่อนไข
+            lessonGroup-5:
+              display_name: ตัวแปร
+            lessonGroup-6:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'อายุ: 5-8 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+            จะมีความคล้ายคลึงกับหลักสูตร A แต่จะมีการเพิ่มเติมแนวคิดที่ลงลึกยิ่งขึ้น
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: เหตุการณ์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'อายุ: 8-12 ปี'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ลูปซ้อนลูป
+            lessonGroup-4:
+              display_name: ฟังก์ชัน
+            lessonGroup-6:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'อายุ: 4-7 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ข้อมูล
+          lessons:
+            lesson-1:
+              name: ข้อมูล
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: เหตุการณ์
+            lessonGroup-6:
+              display_name: ข้อมูล
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'อายุ: 7-11 ปี'
+          description_short: เรียนรู้คำสั่งแบบมีเงื่อนไข ก่อนคิดงานศิลปะ เกม และแม้แต่ปาร์ตี้เต้นรำของคุณเอง
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ลูป
+            lessonGroup-7:
+              display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
         new-e:
           lesson_groups:
             csf_e_1:
@@ -2917,6 +3033,17 @@ th:
           name: tessplayground
         tesstest921:
           name: testest921
+        test-nv-coursea-2023:
+          description_audience: 'อายุ: 4-7 ปี'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

@@ -77,6 +77,9 @@
         "coursea-2018/Programming: Happy Maps": {
           "name": "Hartat e Gëzuara"
         },
+        "coursea-2018/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "coursea-2018/Going Places Safely": {
           "name": "Të shkuarit nëpër Vende në mënyrë të Sigurtë"
         },
@@ -89,8 +92,14 @@
         "coursec-2018/Building a Foundation": {
           "name": "Krijimi i një fondacioni"
         },
+        "coursec-2018/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "coursec-2018/Debugging in Maze": {
           "name": "Korrigjimi në labirint"
+        },
+        "coursec-2018/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
@@ -154,6 +163,9 @@
         },
         "express-2018/Relay Programming": {
           "name": "Programimi i Besuar"
+        },
+        "express-2018/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "express-2018/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
@@ -221,17 +233,29 @@
         "courseb-2019/Move It, Move It": {
           "name": "Lëvize atë, lëvize atë"
         },
+        "courseb-2019/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
         },
+        "coursec-2019/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "coursec-2019/Debugging in Maze": {
           "name": "Korrigjimi në labirint"
+        },
+        "coursec-2019/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "coursec-2019/Binary Bracelets": {
           "name": "Byzylykët Binarë"
         },
         "coursec-2019/Events: The Big Event": {
           "name": "Eventi i Madh"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "Përfundimi i projektit të kursit"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Programimi Grafik me Letër"
@@ -251,6 +275,9 @@
         "coursee-2019/Functions: Songwriting": {
           "name": "Të shkruarit e Këngëve"
         },
+        "coursee-2019/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Variablat Zarf"
         },
@@ -262,6 +289,21 @@
         },
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
+        },
+        "coursef-2019/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "express-2019/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
+        "express-2019/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin"
+        },
+        "express-2019/Build A Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "pre-express-2019/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Bleta Gërmëzuese"
@@ -275,17 +317,29 @@
         "courseb-2020/Move It, Move It": {
           "name": "Lëvize atë, lëvize atë"
         },
+        "courseb-2020/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "courseb-2020/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
         },
+        "coursec-2020/Programming in Maze": {
+          "name": "Programimi me Angry Birds"
+        },
         "coursec-2020/Debugging in Maze": {
           "name": "Korrigjimi në labirint"
+        },
+        "coursec-2020/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "coursec-2020/Binary Bracelets": {
           "name": "Byzylykët Binarë"
         },
         "coursec-2020/Events: The Big Event": {
           "name": "Eventi i Madh"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Përfundimi i projektit të kursit"
         },
         "coursed-2020/Algorithms: Graph Paper Programming": {
           "name": "Programimi Grafik me Letër"
@@ -299,8 +353,14 @@
         "coursed-2020/Unplugged: Binary": {
           "name": "Imazhet Binare"
         },
+        "coursed-2020/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
         "coursee-2020/Functions: Songwriting": {
           "name": "Të shkruarit e Këngëve"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
         },
         "coursef-2020/Envelope Variables": {
           "name": "Variablat Zarf"
@@ -310,6 +370,18 @@
         },
         "coursef-2020/For Loop Fun": {
           "name": "Qef me Ciklet For"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "express-2020/Programming with Angry Birds": {
+          "name": "Programimi me Angry Birds"
+        },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "Mbledhja e thesarit me Laurelin"
+        },
+        "express-2020/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
         },
         "csd3-2021/Variables": {
           "name": "variabla"
@@ -328,28 +400,134 @@
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "name": "Siguria në Lagjen Time Online",
-          "overview": "[![edukimi me kuptim të përgjithshëm](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi me Kuptim të Përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nFuqia e internetit i lejon studentët të përjetojnë dhe vizitojnë vende që mund të mos jenë në gjendje t'i shohin personalisht. Por, ashtu si të udhëtoni në botën reale, është e rëndësishme të jeni të sigurt kur udhëtoni online. Në këtë udhëtim virtual në terren, fëmijët mund të praktikojnë qëndrimin e sigurt në aventurat online."
+          "overview": "[![edukimi me kuptim të përgjithshëm](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi me Kuptim të Përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nFuqia e internetit i lejon studentët të përjetojnë dhe vizitojnë vende që mund të mos jenë në gjendje t'i shohin personalisht. Por, ashtu si të udhëtoni në botën reale, është e rëndësishme të jeni të sigurt kur udhëtoni online. Në këtë udhëtim virtual në terren, fëmijët mund të praktikojnë qëndrimin e sigurt në aventurat online.",
+          "preparation": "-   Rishiko materialeve mësimore.\n-   Printo fletëushkat për secilin nxënës.\n-   (Opsionale) Printo posterin e poezisë për ta shfaqur në klasë.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët.",
+          "student_overview": "Mësoni si të shkoni në vende të sigurta online.\n."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "overview": "Ky mësim \\*\\*ndërtimi i shkathtësive \\*\\* do t'u japë nxënësve një ide se çfarë të presin kur të shkojnë në laboratorin e kompjuterëve. Fillon me një diskutim të shkurtër duke i prezantuar ata me sjelljet në laboratorit kompjuterik,pastaj ata do të zhvillohen duke përdorur një kompjuter për të plotësuar puzzle online.",
+          "preparation": "-   Shiko **\\*Si të bëni një sesion klase** në Code.org - Video për mësimëdhënësit. Krijo sesionin tuaj të klasës në Code.org dhe sigurohu që çdo student të ketë një kartë me kodin e tyre hyrës.\n-   Sigurohu që nxënësit do të jenë në gjendje të hyjnë në mësimin 2 nga pajisjet e tyre. Merr parasysh nëse dëshironi të fshehni mësimet e ardhshme për të parandaluar që nxënësit të ecin përpara shumë shpejt.\n-   Kërko nga personi i IT-së së shkollës tuaj që të shtojë një link të shpejtë për sesionin e klasës tuaj në desktopin e kompjuterit.\n-   Rishikoni webfaqet e Edukimit me Kuptim të Përgjithshëmn për më shumë përmbajtje të sigurisë në internet.",
+          "purpose": "Qëllimi kryesor i këtij mësimi është të ndërtojë përvojën e nxënësve me kompjuterin.Duke trajtuar funksionet më të thjeshta të kompjuterit, siç janë klikimi, tërheqja dhe lëshimi, po krijojmë një fushë të barabartë loje në klasë për puzzle të ardhshme.Ky mësim ofron gjithashtu një mundësi të shkëlqyer për të prezantuar terminologjinë bazë të harduerit kompjuterik, duke përfshirë potencialisht \"mouse\", \"trackpad\" ose \"touchscreen\", në varësi të pajisjeve tuaja."
         },
         "coursea-2021/Programming: Happy Maps": {
-          "name": "Hartat e Gëzuara"
+          "name": "Hartat e Gëzuara",
+          "overview": "Ky mësim **përcaktimi i kontekstit** bashkon ekipet me një detyrë të thjeshtë: të sjellin “flurb” tek fruti. Nxënësit do të praktikojnë shkrimin e udhëzimeve të saktë ndërsa punojnë për të përkthyer udhëzimet në simbolet e ofruara.",
+          "preparation": "-   Printo një**\\\\ \\*Fletë pune** dhe një set **\\\\ \\*Manipulativ** për një grup prej 2-3.\n-   Sigurohu që secili nxënës të ketë një Ditar Reflektimi.",
+          "purpose": "Kalimi nga algortitmet në programim mund të jetë i shkurtë, nëse nxënësit kuptojnë dallimin mes planifikimit të një sekuence dhe kodifikimit të kësaj sekuenca në gjuhën e duhur. Ky aktivitet do t'i ndihmojë nxënësit të fitojnë përvojë në lexim dhe shkrim në kodin stenografik."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive** , nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare.",
+          "preparation": "-   Pritini blloqet e drejtimit nga **\\\\ \\*Manipuluesit** për t'u lidhur me aktivitetet e tejkalimit të Hartave të Lumtura.\n-   Sigurohu që secili nxënës të ketë një Ditar Reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjidh disa enigma për t'i bërë në grup me klasën tuaj.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "purpose": "Me transferimin e njohurive në mendje, ky mësim u jep nxënësve një mjedis të ri për të praktikuar shkathtësit që ata kanë kultivuar. Tifozët e _Star Wars_ do të kërcejnë nga gëzimi kur të shohin këto enigma. Çdo enigmë në këtë seri është shtuar për të ofruar një kuptim më të thellë të koncepteve bazë që ata do të përdorin gjatë pjesës tjetër të këtij kursi."
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "overview": "Ky mësim **përcaktimi i kontekstit** rishikon Hartat e lumtura. Këtë herë,  nxënësit do të përdorin loops për të zgjidhur enigma më të mëdha dhe më të gjata me kodin e tyre."
+        },
+        "coursea-2021/Events: The Big Event": {
+          "overview": "Në këtë mësim **përcaktimi të kontekstit**, klasa do të përjetojë konceptin e eventeve nëpërmjet një loje ku ata lëvizin ose bërtasin kur shtypni butonat në një telekomandë gjigante.",
+          "purpose": "Sot, nxënësit do të mësojnë të dallojnë eventet nga veprimet. Nxënësit do të shohin aktivitete të ndërprera duke shtypur një \"buton\" në një telekomandë letre. Kur shohin këtë event, klasa do të reagojë me një veprim unik. Eventet përdoren gjerësisht në programim dhe duhet të jenë lehtësisht të njofthshme pas këtij mësimi."
+        },
+        "coursea-2021/Events in Play Lab": {
+          "overview": "Në këtë **mini-projekt**, nxënësit do të përdorin eventin në Play Lab dhe do t'i aplikojnë të gjitha shkathtësit e kodimit që i kan mësuar për të krijuar një lojë të animuar. Është kohsa që të bëhemi kreativ dhe të krijojmë një histori në Play Lab! ",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjidh disa enigma për t'i bërë në grup me klasën tuaj.\n-   Rishiko\\*_\\\\_ Rekomandimet e Mësimit CSF \\*\\*.\n-   Sigurohu që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Sot nxënësit do të zhvillojnë më tej kuptimin e eventeve duke përdorur Play Lab! Eventet janë shumë të zakonshme në shumicën e programeve koompjuterike. Në këtë aktivitet nxënësit do të përdorin eventet për të lëvizur personazhin rreth ekranit, për të bërë zhurmë dhe për të ndryshuar prapavijën duke u bazuar në eventet e inciuara nga përdoruesi."
+        },
+        "coursea-2021/lesson-1": {
+          "name": "Përfundimi i projektit të kursit",
+          "preparation": "-   Shkruajë dhe kodo historinë tuaj për Artistin paraprakisht për të frymëzuar nxënësit!",
+          "purpose": "Ky mësim u jep nxënësve një mundësi të fundit për të përdorur në mënyrë kreative shkathtësitë e tyre të reja të shkencave kompjuterike"
         },
         "courseb-2021/Move It, Move It": {
-          "name": "Lëvize atë, lëvize atë"
+          "name": "Lëvize atë, lëvize atë",
+          "preparation": "-   Shikoni **\\* Videon e Mësuesit**\n-   Printoni (ose në të kundërtën përgatituni për të shfaqur) një **\\*Fletë punuese me çelësin e përgjigjeve**\n-   Printoni një **\\*Aktivitetin e Hartës** dhe një **\\*Fletë punuese** për një grup prej 2-3 nxënës\n-   Përgatitni letra të bardha për të plotësuar pjesën tjetër të rrjetës së ecjes (nevojiten 4-7 për grup)"
+        },
+        "courseb-2021/Sequencing in Maze": {
+          "preparation": "-   Nëse nxënësit tuaj janë krejtësisht fillestar në tërheqje dhe lëshim, merrni parasysh t'u caktoni **\\*Praktikimin e tërheqjes dhe lëshimit** përpara se të filloni këtë mësim.\n-   Shikoni **\\*Si të bëni një sesion klase në Code.org** - Video për mësimdhënësin, krijoni sesionin tuaj të klasës në Code.org dhe sigurohuni që çdo nxënës të ketë një kartë me fjalëkalimin e tij në të.\n-   Lëreni personin përgjegjës të IT-së në shkollë të shtojë një lidhje të shpejtë për sesionin tuaj të klasës në desktopin e kompjuterit.\n-   Sigurohuni që secili student të ketë një ditar.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "courseb-2021/Programming in Maze": {
+          "name": "Programimi me Angry Birds",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale."
         },
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
         },
+        "courseb-2021/Loops in Harvester": {
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*Këshillat e Aktivitetit Kryesor Bazat e Shkencave Kompjuterike - Rekomandime për mësimin**.\n-   Sigurohuni që secili student të ketë një ditar reflektimi.\n-   (Opsionale) Zgjidhni disa enigma për t'i bërë në grup me klasën tuaj.\n-   (Opsionale) Nëse nuk e keni bërë tashmë, printoni dhe prisni blloqe nga**\\*Manipulativ** për t'u përgatitur për një nga aktivitetet ndërlidhëse në këtë mësim.",
+          "purpose": "Në këtë mësim, nxënësit do të mësojnë rreth loop dhe si t'i implementojnë ato në kodin Blocky. Përdorimi i loops është një shkathtësi e rëndësishme në programim sepse përsëritja manuale e komandave është e lodhshme dhe joefikase. Me enigmat e Code.org, nxënësit do të msojnë të shtojnë udhëzime në loops ekzistuese, të mbledhin kodet në loops dhe të njohin modelet që duhet të përsëriten (looped)"
+        },
+        "courseb-2021/Loops in Collector": {
+          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë zonë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë si grup me klasën tuaj. \n-   Rishiko**\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n    \\-- Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim u jep më shumë praktikë nxënësve me loops dhe i inkurajon ata që të vendosin më shumë blloqe brenja një strukture \"përsëritjeje\" ndërsa përpiqen të mbledhin sa më shumë thesar të jetë e mundur."
+        },
+        "courseb-2021/Loops in Artist": {
+          "overview": "Në këtë mësim **ndërtimi i shkathtësive**, nxënësit mësojnë të vizatojnë imazhe duke bashkuar udhëzimesh të thjeshta të loops. Këtu, nxënësit përdorin loops për të krijuar modele.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim jep një këndvështrim të ndryshëm se si \"loops\" mund të krijojnë gjëra në programim. Nxënësit do të testojnë shkathtësitë e tyre të mendimit kritik duke vlerësuar kodin e dhënë dhe duke përcaktuar se çfarë duhet të shtohet për të zgjidhur enigmën. Nxënësit gjithashtu mund të reflektojnë mbi joefikasitetin e programimit pa \"loops\", përshkak numrit të madh të blloqeve programi do të kërkonte ndihmën e strukutrës \"përsëritje\" të loops"
+        },
+        "courseb-2021/The Right App": {
+          "overview": "Në këtë mësim **eksplorues**, nxënësit ndjejnë empati me disa përdorues imagjinarë të smartfonëve për t'i ndihmuar ata të gjejnë “aplikacionin e duhur” që adreson nevojat e tyre.",
+          "preparation": "-   Lexo shënimet e folësit në **\\*slide deck**. \n-   Përgatit materiale të mjaftueshme për skicim/vizatim për të gjithë nxënësit.\n-   Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Sot kompjuteri është më i qasshëm se kurrë më parë. Njerëzit nga të gjitha sferat e jetës përdorin softuer në shumë pajisje të ndryshme, veçanërisht smartfonëve, për informacion, komunikim dhe argëtim. Për shkak se njerëzit kanë përvoja dhe nevoja të ndryshme, është e rëndësishme që shkencëtarët e kompjuterave të kenë empati me njerëzit dhe të identifikojnë zgjidhje duke pasur parasysh ata."
+        },
+        "courseb-2021/Events: The Big Event": {
+          "overview": "Në këtë mësim **përcaktimi të kontekstit**, klasa do të përjetojë konceptin e eventeve nëpërmjet një loje ku ata lëvizin ose bërtasin kur shtypni butonat në një telekomandë gjigante.",
+          "preparation": "-   Përgatitu për të projektuar \\*_\\\\_Imazhi kontrollues \\*\\*\n-   Shtyp një **\\*Vlerësim** për nxënësit.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Sot, nxënësit do të mësojnë të dallojnë eventet nga veprimet. Nxënësit do të shohin aktivitete të ndërprera duke shtypur një \"buton\" në një telekomandë letre. Kur shohin këtë event, klasa do të reagojë me një veprim unik. Eventet përdoren gjerësisht në programim dhe duhet të jenë lehtësisht të njofthshme pas këtij mësimi."
+        },
+        "courseb-2021/lesson-1": {
+          "name": "Përfundimi i projektit të kursit",
+          "purpose": "Ky mësim u jep nxënësve një mundësi të fundit për të përdorur në mënyrë kreative shkathtësitë e tyre të reja të shkencave kompjuterike"
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": " [![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) \n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum) \n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
+        },
+        "coursec-2021/Programming in Maze": {
+          "name": "Programimi me Angry Birds",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës.",
+          "student_overview": "Mësoni rreth sekuencave dhe algoritmeve me _Angry Birds_."
+        },
         "coursec-2021/Debugging in Maze": {
-          "name": "Korrigjimi në labirint"
+          "name": "Korrigjimi në labirint",
+          "student_overview": "Gjeni probleme në enigma dhe praktikoni shkathtësitë tuaja të korrigjimit të gabimeve."
+        },
+        "coursec-2021/Programming in Collector": {
+          "name": "Mbledhja e thesarit me Laurelin",
+          "student_overview": "Shkruani algoritmet për të ndihmuar Laurel avanturierin të mbledhë shumë shumë gurë të çmuar!"
         },
         "coursec-2021/Programming in Artist": {
           "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
         },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "overview": "Ky mësim **ndërtimi i shkathtësive** bën nxënësit të përdorin loops për të ndihmuar BB-8 të kalojë në mënyrë efikase një labirint."
+        },
+        "coursec-2021/Sticker Art with Loops": {
+          "overview": "Ky mësim **mini-projekt** bazohet në të kuptuarit e loops nga mësimet e mëparshme. Nxënësit do të krijojnë vepra arti unike me Artistin."
+        },
         "coursec-2021/Events: The Big Event": {
           "name": "Eventi i Madh"
         },
+        "coursec-2021/Build a Flappy Game": {
+          "overview": "Ky mësim kombinon **ndërtimin e shkathtësive** rreth eventeve me një **mini-projekt** ku e marrin nxënësit për të ndërtuar lojën e tyre Flappy Bird. Në fund të mësimit, nxënësit do të jenë në gjendje të personalizojnë lojën e tyre duke ndryshuar pamjet ose rregullat."
+        },
         "coursec-2021/Binary Bracelets": {
           "name": "Byzylykët Binarë"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "coursed-2021/lesson-5": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Programimi Grafik me Letër"
@@ -366,8 +544,24 @@
         "coursed-2021/Conditionals with Cards": {
           "name": "Kushtoret me Karta"
         },
+        "coursed-2021/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "coursee-2021/lesson-4": {
+          "overview": " [![Edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nMjetet në internet janë fuqizues për fëmijët, dhe ato gjithashtu vijnë me përgjegjësi të mëdha. Por a  dinë fëmijët gjithmonë se çfarë të bëjnë kur hasin në ngacmime kibernetike? Tregojuni nxënësve tuaj mënyrat e duhura për të ndërmarrë veprime dhe për të zgjidhur konfliktet, nga të qenit kryengritës e deri te ndihma e të tjerëve në nevojë.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
+        },
         "coursee-2021/Functions: Songwriting": {
           "name": "Të shkruarit e Këngëve"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "coursef-2021/lesson-2": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
         },
         "coursef-2021/For Loop Fun": {
           "name": "Qef me Ciklet For"
@@ -378,14 +572,50 @@
         "coursef-2021/Internet": {
           "name": "Interneti"
         },
+        "coursef-2021/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "express-2021/Programming with Angry Birds": {
+          "name": "Programimi me Angry Birds",
+          "student_overview": "Mësoni rreth sekuencave dhe algoritmeve me _Angry Birds_."
+        },
         "express-2021/Debugging with Scrat": {
-          "name": "Korrigjimi në labirint"
+          "name": "Korrigjimi në labirint",
+          "student_overview": "Gjeni probleme në enigma dhe praktikoni shkathtësitë tuaja të korrigjimit të gabimeve."
+        },
+        "express-2021/Collecting Treasure with Laurel": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "express-2021/Creating Art with Code": {
           "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
         },
         "express-2021/lesson-1": {
           "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "express-2021/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "overview": "Ky mësim \\*\\*ndërtimi i shkathtësive \\*\\* do t'u japë nxënësve një ide se çfarë të presin kur të shkojnë në laboratorin e kompjuterëve. Fillon me një diskutim të shkurtër duke i prezantuar ata me sjelljet në laboratorit kompjuterik,pastaj ata do të zhvillohen duke përdorur një kompjuter për të plotësuar puzzle online.",
+          "purpose": "Qëllimi kryesor i këtij mësimi është të ndërtojë përvojën e nxënësve me kompjuterin.Duke trajtuar funksionet më të thjeshta të kompjuterit, siç janë klikimi, tërheqja dhe lëshimi, po krijojmë një fushë të barabartë loje në klasë për puzzle të ardhshme.Ky mësim ofron gjithashtu një mundësi të shkëlqyer për të prezantuar terminologjinë bazë të harduerit kompjuterik, duke përfshirë potencialisht \"mouse\", \"trackpad\" ose \"touchscreen\", në varësi të pajisjeve tuaja."
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive** , nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "name": "Programimi me Angry Birds",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "pre-express-2021/Loops with Laurel": {
+          "purpose": "Ky mësim u jep më shumë praktikë nxënësve me loops dhe i inkurajon ata që të vendosin më shumë blloqe brenja një strukture \"përsëritjeje\" ndërsa përpiqen të mbledhin sa më shumë thesar të jetë e mundur."
+        },
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "purpose": "Ky mësim jep një këndvështrim të ndryshëm se si \"loops\" mund të krijojnë gjëra në programim. Nxënësit do të testojnë shkathtësitë e tyre të mendimit kritik duke vlerësuar kodin e dhënë dhe duke përcaktuar se çfarë duhet të shtohet për të zgjidhur enigmën. Nxënësit gjithashtu mund të reflektojnë mbi joefikasitetin e programimit pa \"loops\", përshkak numrit të madh të blloqeve programi do të kërkonte ndihmën e strukutrës \"përsëritje\" të loops"
+        },
+        "pre-express-2021/On the Move with Events": {
+          "purpose": "Sot nxënësit do të zhvillojnë më tej kuptimin e eventeve duke përdorur Play Lab! Eventet janë shumë të zakonshme në shumicën e programeve koompjuterike. Në këtë aktivitet nxënësit do të përdorin eventet për të lëvizur personazhin rreth ekranit, për të bërë zhurmë dhe për të ndryshuar prapavijën duke u bazuar në eventet e inciuara nga përdoruesi."
         },
         "csd3-2022/Variables": {
           "name": "variabla"
@@ -404,94 +634,319 @@
         },
         "coursea-2022/Safety in My Online Neighborhood": {
           "name": "Siguria në Lagjen Time Online",
-          "overview": "[![edukimi me sens të përgjithshëm](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi me Sens të Përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nFuqia e internetit i lejon studentët të përjetojnë dhe vizitojnë vende që mund të mos jenë në gjendje t'i shohin personalisht. Por, ashtu si të udhëtoni në botën reale, është e rëndësishme të jeni të sigurt kur udhëtoni online. Në këtë udhëtim virtual në terren, fëmijët mund të praktikojnë qëndrimin e sigurt në aventurat online.",
+          "overview": "[![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nFuqia e internetit i lejon nxënësit të përjetojnë dhe vizitojnë vende që mund të mos jenë në gjendje t'i shohin personalisht. Por, ashtu si të udhëtoni në botën reale, është e rëndësishme të jeni të sigurt kur udhëtoni online. Në këtë udhëtim virtual në terren, fëmijët mund të praktikojnë qëndrimin e sigurt në aventurat online.",
           "preparation": "-   Rishiko materialeve mësimore.\n-   Printo fletëushkat për secilin nxënës.\n-   (Opsionale) Printo posterin e poezisë për ta shfaqur në klasë.",
-          "purpose": "Kurrikula e Qytetarisë Digjitale e Edukimit me Kuptim trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informacionin personal dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë për veten dhe të tjerët."
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët.",
+          "student_overview": "Mësoni si të shkoni në vende të sigurta online.\n."
         },
         "coursea-2022/Learn to Drag and Drop": {
-          "name": "Mësoni të tërhiqni dhe lëshoni"
+          "name": "Mësoni të tërhiqni dhe lëshoni",
+          "overview": "Ky mësim \\*\\*ndërtimi i shkathtësive \\*\\* do t'u japë nxënësve një ide se çfarë të presin kur të shkojnë në laboratorin e kompjuterëve. Fillon me një diskutim të shkurtër duke i prezantuar ata me sjelljet në laboratorit kompjuterik,pastaj ata do të zhvillohen duke përdorur një kompjuter për të plotësuar puzzle online.",
+          "preparation": "-   Shiko **\\*Si të bëni një sesion klase** në Code.org - Video për mësimëdhënësit. Krijo sesionin tuaj të klasës në Code.org dhe sigurohu që çdo nxënës të ketë një kartë me kodin e tyre hyrës.\n-   Sigurohu që nxënësit do të jenë në gjendje të hyjnë në mësimin 2 nga pajisjet e tyre. Merr parasysh nëse dëshironi të fshehni mësimet e ardhshme për të parandaluar që nxënësit të ecin përpara shumë shpejt.\n-   Kërko nga personi i IT-së së shkollës tuaj që të shtojë një link të shpejtë për sesionin e klasës tuaj në desktopin e kompjuterit.\n-   Rishikoni webfaqet e Edukimit me Kuptim të Përgjithshëmn për më shumë përmbajtje të sigurisë në internet.",
+          "purpose": "Qëllimi kryesor i këtij mësimi është të ndërtojë përvojën e nxënësve me kompjuterin.Duke trajtuar funksionet më të thjeshta të kompjuterit, siç janë klikimi, tërheqja dhe lëshimi, po krijojmë një fushë të barabartë loje në klasë për puzzle të ardhshme.Ky mësim ofron gjithashtu një mundësi të shkëlqyer për të prezantuar terminologjinë bazë të harduerit kompjuterik, duke përfshirë potencialisht \"mouse\", \"trackpad\" ose \"touchscreen\", në varësi të pajisjeve tuaja.",
+          "student_overview": "Klikoni dhe tërhiqni për të përfunduar enigmat."
         },
         "coursea-2022/Happy Maps": {
-          "name": "Hartat e Gëzuara"
+          "name": "Hartat e Lumtura",
+          "overview": "Ky mësim **përcaktimi i kontekstit** bashkon ekipet me një detyrë të thjeshtë: të sjellin “flurb” tek fruti. Nxënësit do të praktikojnë shkrimin e udhëzimeve të saktë ndërsa punojnë për të përkthyer udhëzimet në simbolet e ofruara.",
+          "preparation": "-   Printo një**\\\\ \\*Fletë pune** dhe një set **\\\\ \\*Manipulativ** për një grup prej 2-3.\n-   Sigurohu që secili nxënës të ketë një Ditar Reflektimi.",
+          "purpose": "Kalimi nga algortitmet në programim mund të jetë i shkurtë, nëse nxënësit kuptojnë dallimin mes planifikimit të një sekuence dhe kodifikimit të kësaj sekuenca në gjuhën e duhur. Ky aktivitet do t'i ndihmojë nxënësit të fitojnë përvojë në lexim dhe shkrim në kodin stenografik.",
+          "student_overview": "Shkruani udhëzime për të dërguar Flurbin tek fruti."
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "Sekuencimi me Scrat",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive** , nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare.",
+          "preparation": "-   Pritini blloqet e drejtimit nga **\\\\ \\*Manipuluesit** për t'u lidhur me aktivitetet e tejkalimit të Hartave të Lumtura.\n-   Sigurohu që secili nxënës të ketë një Ditar Reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës.",
+          "student_overview": "Programi Scrat për të arritur tek lajthija."
+        },
+        "coursea-2022/Programming with Scrat": {
+          "name": "Programimi me Scrat",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjidh disa enigma për t'i bërë në grup me klasën tuaj.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës.",
+          "student_overview": "Shkruani programe për të ndihmuar Scrat të arrijë tek lajthija."
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "Programimi me Rey dhe BB-8",
+          "overview": "Në këtë mësim **zhvillimi i shkathtësive** nxënësit do të përdorin aftësitë e tyre të reja të programimit në mënyra më të komplikuara për të naviguar një rrugë të vështirë me BB-8.",
+          "preparation": "-   Luaj nëpër enigmat që korrespondojnë me këtë mësim për të gjetur ndonjë fushë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*CS Fundamentals Këshillat Aktivitetit Kryesor -Rekomandime për mësimin**.\n-   Sigurohu që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Me transferimin e njohurive në mendje, ky mësim u jep nxënësve një mjedis të ri për të praktikuar aftësitë që ata kanë kultivuar. \\_Star Wars \\_ Tifozët do të hidhen nga gëzimi kur të shohin këto enigma. Çdo mister në këtë seri është shtuar për të siguruar një kuptim më të thellë të koncepteve themelore që ata do të përdorin gjatë gjithë pjesës tjetër të këtij kursi.",
+          "student_overview": "Ndihmo BB-8 të mbledhë skrap metalike."
+        },
+        "coursea-2022/Happy Loops": {
+          "name": "Loops të lumtura",
+          "overview": "Ky mësim **përcaktimi i kontekstit** rishikon Hartat e lumtura. Këtë herë,  nxënësit do të përdorin loops për të zgjidhur enigma më të mëdha dhe më të gjata me kodin e tyre.",
+          "preparation": "-   Shtyp një **\\*Fletë pune** për t'u shfaqur në klasë\n-   Për secilin grup prej 2-3, printo një për secilin: **\\*Pjesë lojërash, \\*Fletë pune XL dhe \\*Manipulues të paketës së bonusit**.\n-   Sigurohu që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim shërben si një hyrje në loops. Loops lejojnë që nxënësit të thjeshtojnë kodin e tyre duke grupuar komandat që duhet të përsëriten. Nxënësit do të zhvillojnë shkathtësi të të menduarit kritik duke vënë re përsëritjen në lëvizjet e shokëve të klasës dhe duke përcaktuar se sa herë do të përsërisin komandat. Duke parë përsëri \"Hartat e lumtura\", nxënësit do të kenë mundësinë të lidhin konceptet e vjetra si renditja e renditjes me konceptin e ri të ciklit të përsëritur.",
+          "student_overview": "Ndihmo Flurbin të zgjidhë probleme më të mëdha duke përdorur loops."
+        },
+        "coursea-2022/Loops with Scrat": {
+          "name": "Loops me Scrat",
+          "overview": "Në këtë mësim \\*_ndërtimi i shktathtësive_, nxënësit do të praktikojnë loops në programimin e enigmave ku qëllimi është të ndihmohet ketri të arrijë tek lajthija",
+          "preparation": "-   Rishiko mësimin e mëparshëm të shkëputur nga priza dhe zhvillo pyetje për t'u kujtuar nxënësve pse përdoren loops.\n-   (Opsionale) Zgjidhni disa enigma për t'i bërë në grup me klasën tuaj.\n-   Mblidh furnizime nga Hartat e Lumtura të mëparshme për t'i ripërdorur për parapërgatitje.\n-   Sigurohu që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të mësojnë më shumë për loops dhe se si t'i zbatoni ato në kodin e Blockly. Përdorimi i loops është një shkathtësi e rëndësishme në programim, pasi përsëritja manuale e komandave është e lodhshme dhe joefikase. Me këto enigma të Code.org, nxënësit do të mësojnë të shtojnë udhëzime te loops ekzistues, të mbledhin kodin e përsëritur në loop dhe të njohin modelet që duhet të përsëriten.",
+          "student_overview": "Ndihmo Scrat të mbulojë më shumë tokën duke përdorur loops."
+        },
+        "coursea-2022/Loops with Laurel": {
+          "name": "Loops me Laurel",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive** nxënësit vazhdojnë të mësojnë konceptin e loops. Këtu nxënësit përdorin loops për të mbledhur thesar në hapësirat e hapura të shpellave.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjidhni disa enigma për t'i bërë në grup me klasën tuaj.\n-   Rishiko**\\*Rekomandimet e mësimit CSF**\n-   Sigurohu që secili student të ketë një ditar reflektimi",
+          "purpose": "Ky mësim u jep nxënësve më shumë praktikë me loops dhe prezanton një bllok të ri, \"merr thesar\". Blloku funksionon njësoj si \"mbledh misër\" në Harvester. Këto enigma janë më të hapura, duke u dhënë nxënësve më shumë fleksibilitet për zgjidhjet e tyre përfundimtare.",
+          "student_overview": "Ndihmo Laurel aventurierin të mbledhë thesarin nëntokësore."
+        },
+        "coursea-2022/Ocean Scene with Loops": {
+          "name": "Skena e Oqeanit me Loops",
+          "overview": "Në këtë mësim **ndërtimi i shkathtësive**, nxënësit mësojnë të vizatojnë imazhe duke lëvizur sekuenca të thjeshta udhëzimesh. Këtu, loops po krijojnë modele. Në fund të këtij mësimi, nxënësit do të krijojnë imazhet e tyre.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*Rekomandimet e Mësimit CSF**.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim jep një këndvështrim të ndryshëm se si loops mund të krijojnë gjëra në programim. Nxënësit gjithashtu mund të reflektojnë mbi joefikasitetin e programimit pa loops këtu për shkak të numrit të blloqeve që do të kërkonte programi pa ndihmën e loops \"përsëritje\".",
+          "student_overview": "Përdorni loops dhe modele për të përfunduar imazhet."
+        },
+        "coursea-2022/The Big Event Jr": {
+          "name": "Eventi i Madhe Jr.",
+          "overview": "Në këtë mësim **përcaktimi i kontekstit**, klasa do të përjetojë konceptin e eventeve përmes një loje ku ata lëvizin ose bërtasin kur shtypni butonat në një telekomandë gjigante.",
+          "preparation": "-   Përgatitu për të projektuar **\\*Imazhi i Kontrolluesit**.\n-   Shtyp një **\\*Vlerësim** për nxënës.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Sot, nxënësit do të mësojnë të dallojnë eventet nga veprimet. Nxënësit do të shohin aktivitetet që ndërpriten duke shtypur një \"buton\" në një telekomandë letre. Kur shikon këtë ngjarje, klasa do të reagojë me një veprim unik. Eventet përdoren gjerësisht në programim dhe duhet të jenë lehtësisht të dallueshme pas këtij mësimi.",
+          "student_overview": "Lëvizni dhe bërtisni kur mësimëdhënësit tuaj shtypin butonat në një telekomandë gjigante."
+        },
+        "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-Projekti: Në lëvizje me Play Lab",
+          "overview": "Në këtë **mini-projekt**, nxënësit do të përdorin eventin në Play Lab dhe do t'i aplikojnë të gjitha shkathtësit e kodimit që i kan mësuar për të krijuar një lojë të animuar. Është kohsa që të bëhemi kreativ dhe të krijojmë një histori në Play Lab! ",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjidh disa enigma për t'i bërë në grup me klasën tuaj.\n-   Rishiko\\*_\\\\_ Rekomandimet e Mësimit CSF \\*\\*.\n-   Sigurohu që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Sot nxënësit do të zhvillojnë më tej kuptimin e eventeve duke përdorur Play Lab! Eventet janë shumë të zakonshme në shumicën e programeve koompjuterike. Në këtë aktivitet nxënësit do të përdorin eventet për të lëvizur personazhin rreth ekranit, për të bërë zhurmë dhe për të ndryshuar prapavijën duke u bazuar në eventet e inciuara nga përdoruesi.",
+          "student_overview": "Krijo lojën ose historinë tënde."
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit",
+          "overview": "Në këtë mësim **projekt**, studentët aplikojnë atë që kanë mësuar rreth sekuencimit dhe loops me Artistin.",
+          "preparation": "-   Shkruaj dhe kodo historinë tuaj për Artistin paraprakisht për të frymëzuar nxënësit!",
+          "purpose": "Ky mësim u jep nxënësve një mundësi të fundit për të përdorur në mënyrë kreative shkathtësitë e tyre të reja të shkencave kompjuterike",
+          "student_overview": "Trego një histori me Artistin!"
         },
         "courseb-2022/Digital Trails": {
           "name": "Shtigjet Digjitale",
-          "overview": " [![edukimi me kuptim të përgjithshëm](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga edukimi me kuptim të përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nA qëndron gjithmonë online ajo që bëni në internet? Nxënësit mësojnë se informacioni që ata ndajnë në internet lë një gjurmë digjitale. Varësisht, se si ata e menaxhojnë atë, kjo gjurmë mund të jetë e madhe ose e vogël dhe e dëmshme ose e dobishme. Nxënësit krahasojnë shtigje të ndryshme dhe mendojnë në mënyrë kritike se çfarë lloj informacioni duan të lënë pas.",
+          "overview": " [![edukim i logjikës së përgjitshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga edukimi me kuptim të përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nA qëndron gjithmonë online ajo që bëni në internet? Nxënësit mësojnë se informacioni që ata ndajnë në internet lë një gjurmë digjitale. Varësisht, se si ata e menaxhojnë atë, kjo gjurmë mund të jetë e madhe ose e vogël dhe e dëmshme ose e dobishme. Nxënësit krahasojnë shtigje të ndryshme dhe mendojnë në mënyrë kritike se çfarë lloj informacioni duan të lënë pas.",
           "preparation": "-   Rishikimi i materialeve mësimore.\n-   Printo fletushkat për secilin nxënës.",
-          "purpose": "Kurrikula e Qytetarisë Digjitale në kuptimin e përgjithshëm trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, media dhe teknologjinë. Ky mësim fokusohet në Gjurmët Digjitale dhe Identitetin. Studentët marrin parasysh përfitimet dhe rreziqet e ndarjes së gjërave në internet dhe eksplorojnë se si një person digjital mund të ndikojë në ndjenjën e vetes, reputacionit dhe marrëdhënieve të dikujt."
+          "purpose": "Kurrikula e Qytetarisë Digjitale në kuptimin e përgjithshëm trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, media dhe teknologjinë. Ky mësim fokusohet në Gjurmët Digjitale dhe Identitetin. Studentët marrin parasysh përfitimet dhe rreziqet e ndarjes së gjërave në internet dhe eksplorojnë se si një person digjital mund të ndikojë në ndjenjën e vetes, reputacionit dhe marrëdhënieve të dikujt.",
+          "student_overview": "Mëso rreth gjurmës suaj digjiitale dhe si të qëndroni të sigurt kur vizitoni webfaqet. "
         },
         "courseb-2022/Move It, Move It": {
-          "name": "Move it, move it",
-          "overview": "Nxënësit do t'i programojnë shokët e klasës që të kalojnë me kujdes rreth një rrjeti të madh në dysheme në këtë **context-setting** mësim."
+          "name": "Lëviz, lëviz",
+          "overview": "Nxënësit do t'i programojnë shokët e klasës që të kalojnë me kujdes rreth një rrjeti të madh në dysheme në këtë **context-setting** mësim.",
+          "preparation": "-   Shikoni **\\* Video e Mësimdhënësit**\n-   Printoni (ose në të kundërtën përgatituni për të shfaqur) një **\\*Fletë punuese me çelësin e përgjigjeve**\n-   Printoni një **\\*Aktivitetin e Hartës** dhe një **\\*Fletë punuese** për një grup prej 2-3 nxënës\n-   Përgatitni letra të bardha për të plotësuar pjesën tjetër të rrjetës së ecjes (nevojiten 4-7 për grup)",
+          "purpose": "Duke përdorur lëvizjen fizike për të programuar shokët e tyre të klasës, studentët do të hasin probleme dhe emocione të ngjashme me ato që do të ndjejnë kur të fillojnë të kodojnë në një kompjuter. Përballja e këtyre streseve në një mjedis lozonjar dhe të hapur do të ndihmojë në zbutjen e intensitetit dhe do t'i lejojë nxënësit të praktikojnë shkathtësitë e nevojshme përpara se të hasin në probleme vetë."
         },
         "courseb-2022/Sequencing with Angry Birds": {
           "name": "Sekuenca me Zogj të zemëruar",
-          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare."
+          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare.",
+          "preparation": "-   Nëse nxënësit tuaj janë krejtësisht fillestar në tërheqje dhe lëshim, merrni parasysh t'u caktoni **\\*Praktikimin e tërheqjes dhe lëshimit** përpara se të filloni këtë mësim.\n-   Shikoni **\\*Si të bëni një sesion klase në Code.org** - Video për mësimdhënësin, krijoni sesionin tuaj të klasës në Code.org dhe sigurohuni që çdo nxënës të ketë një kartë me fjalëkalimin e tij në të.\n-   Lëreni personin përgjegjës të IT-së në shkollë të shtojë një lidhje të shpejtë për sesionin tuaj të klasës në desktopin e kompjuterit.\n-   Sigurohuni që secili nxënës të ketë një ditar.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programimi me Zogj të Zemëruar",
-          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale."
+          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale.",
+          "preparation": "-   Luaj nëpër enigma për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Gjeni ose riprintoni furnizimet për **\\*Happy Maps**.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.\n-   Pritini mjaft **\\*Manipulues** të çdo drejtimi (V, J, L, P) për t'i dhënë dy grupe çdo çifti nxënësish (nëse zgjidhni Opsionin Bridging #1).",
+          "purpose": "Në këtë orë, nxënësit do të zhvillojnë shkathtësitë e programimit në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës.",
+          "student_overview": "Krijo programe për të ndihmuar _Zogun nevrik_ të lëvizë nëpër labirint."
         },
         "courseb-2022/Programming with Harvester": {
           "name": "Programimi me Harvester",
-          "overview": "Nxënësit do të zbatojnë konceptet e programimit që kanë mësuar në mjedisin Harvester në këtë **ndërtim-të-shkathtësive** mësim. Nxënësit do të vazhdojnë të zhvillojnë shkathtësi të algoritmit sekuencial dhe do të fillojnë të përdorin procesin e korrigjimit."
+          "overview": "Nxënësit do të zbatojnë konceptet e programimit që kanë mësuar në mjedisin Harvester në këtë **ndërtim-të-shkathtësive** mësim. Nxënësit do të vazhdojnë të zhvillojnë shkathtësi të algoritmit sekuencial dhe do të fillojnë të përdorin procesin e korrigjimit.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Sigurohuni që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësitë e korrigjimit dhe do të vazhdojnë të zhvillojnë shkathtësitë e tyre programuese."
         },
         "courseb-2022/Getting Loopy": {
-          "name": "Duke u Çmëndur",
-          "overview": "Në këtë **vendosja-e-kontekstit** mësim, nxënësit do të mësojnë të përdorin loops për të zbatuar më lehtë udhëzimet duke parë modelet e përsëritura të një kërcimi."
+          "name": "Çfarë është Loopy?",
+          "overview": "Në këtë mësim **vendosja-e-kontekstit**, nxënësit do të mësojnë të përdorin loops për të zbatuar më lehtë udhëzimet duke parë modelet e përsëritura të një kërcimi.",
+          "preparation": "-   Përgatituni për të shfaqur **\\*Fletën e punës** nxënësve.\n-   Printoni një **\\*Vlerësim** për nxënës.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
+          "purpose": "Në këtë pikë të kursit, nxënësit duhet të kenë zhvilluar rehati me programimin e një grupi udhëzimesh lineare. Shpesh grupi linear i udhëzimeve përfshin modele që përsëriten disa herë dhe ndërsa nxënës duan të shkruajnë programe më komplekse dhe interesante, dublikimi manual i atij kodi bëhet i rëndë dhe joefikas. Për t'i mundësuar nxënësit të shkruajnë programe më të fuqishme, do të na duhet të mbështetemi në strukturat që dalin nga ajo listë e vetme lineare. Loops u lejojnë nxënësve të strukturojnë kodin e tyre në një mënyrë që përsëritet. Në këtë mësim, ne do të fokusohemi në identifikimin e modeleve në lëvizjen fizike përpara se të kthehemi në kompjuter për të kërkuar modele në kodin tonë."
         },
         "courseb-2022/Loops with Harvester": {
           "name": "Loops me Harvester",
-          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të ndihmojnë korrësin të mbledhë të korrat duke përdorur Loop."
+          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit do të ndihmojnë korrësin të mbledhë të korrat duke përdorur Loop.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*Këshillat e Aktivitetit Kryesor Bazat e Shkencave Kompjuterike - Rekomandime për mësimin**.\n-   Sigurohuni që secili student të ketë një ditar reflektimi.\n-   (Opsionale) Zgjidhni disa enigma për t'i bërë në grup me klasën tuaj.\n-   (Opsionale) Nëse nuk e keni bërë tashmë, printoni dhe prisni blloqe nga**\\*Manipulativ** për t'u përgatitur për një nga aktivitetet ndërlidhëse në këtë mësim.",
+          "purpose": "Në këtë mësim, nxënësit do të mësojnë rreth loop dhe si t'i implementojnë ato në kodin Blocky. Përdorimi i loops është një shkathtësi e rëndësishme në programim sepse përsëritja manuale e komandave është e lodhshme dhe joefikase. Me enigmat e Code.org, nxënësit do të msojnë të shtojnë udhëzime në loops ekzistuese, të mbledhin kodet në loops dhe të njohin modelet që duhet të përsëriten (looped).",
+          "student_overview": "Ndihmo Harvesterin të mbledhë edhe më shumë, duke përdorur loops!"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Loops me Laurel",
-          "overview": "Në këtë **ndërtim-të-shkathtësive** mësim, nxënësit vazhdojnë të mësojnë konceptin e loops. Këtu, Aventurieri Laurel përdor loops për të mbledhur thesar në hapësirat e hapura të shpellave."
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit vazhdojnë të mësojnë konceptin e loops. Këtu, Aventurieri Laurel përdor loops për të mbledhur thesar në hapësirat e hapura të shpellave.",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë zonë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë si grup me klasën tuaj. \n-   Rishiko**\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n    \\-- Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim u jep më shumë praktikë nxënësve me loops dhe i inkurajon ata që të vendosin më shumë blloqe brenja një strukture \"përsëritjeje\" ndërsa përpiqen të mbledhin sa më shumë thesar të jetë e mundur.",
+          "student_overview": "Programo Laurel aventurier për të mbledhur thesar në një shpellë të hapur."
         },
         "courseb-2022/Drawing Gardens with Loops": {
-          "name": "Vizatimi i kopshteve me Loops"
+          "name": "Vizatimi i kopshteve me Loops",
+          "overview": "Në këtë mësim **ndërtimi i shkathtësive**, nxënësit mësojnë të vizatojnë imazhe duke bashkuar udhëzimesh të thjeshta të loops. Këtu, nxënësit përdorin loops për të krijuar modele.",
+          "preparation": "-   Luaj nëpër enigmat për të gjetur ndonjë zonë problematike të mundshme për klasën tuaj.\n-   Rishiko **\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Ky mësim jep një këndvështrim të ndryshëm se si \"loops\" mund të krijojnë gjëra në programim. Nxënësit do të testojnë shkathtësitë e tyre të mendimit kritik duke vlerësuar kodin e dhënë dhe duke përcaktuar se çfarë duhet të shtohet për të zgjidhur enigmën. Nxënësit gjithashtu mund të reflektojnë mbi joefikasitetin e programimit pa \"loops\", përshkak numrit të madh të blloqeve programi do të kërkonte ndihmën e strukutrës \"përsëritje\" të loops"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Aplikacioni i duhur",
+          "overview": "Në këtë mësim **eksplorues**, nxënësit simpatizojnë disa përdorues imagjinarë të smartfonëve për t'i ndihmuar ata të gjejnë “aplikacionin e duhur” që adreson nevojat e tyre.",
+          "preparation": "-   Lexo shënimet e folësit në **\\*slide deck**. \n-   Përgatit materiale të mjaftueshme për skicim/vizatim për të gjithë nxënësit.\n-   Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Sot kompjuteri është më i qasshëm se kurrë më parë. Njerëzit nga të gjitha sferat e jetës përdorin softuer në shumë pajisje të ndryshme, veçanërisht smartfonëve, për informacion, komunikim dhe argëtim. Për shkak se njerëzit kanë përvoja dhe nevoja të ndryshme, është e rëndësishme që shkencëtarët e kompjuterave të kenë empati me njerëzit dhe të identifikojnë zgjidhje duke pasur parasysh ata."
+        },
+        "courseb-2022/The Big Event Jr": {
+          "name": "Eventi i Madhe Jr.",
+          "overview": "Në këtë mësim **përcaktimi të kontekstit**, klasa do të përjetojë konceptin e eventeve nëpërmjet një loje ku ata lëvizin ose bërtasin kur shtypni butonat në një telekomandë gjigante.",
+          "preparation": "-   Përgatitu për të projektuar \\*_\\\\_Imazhi kontrollues \\*\\*\n-   Shtyp një **\\*Vlerësim** për nxënësit.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
+          "purpose": "Sot, nxënësit do të mësojnë të dallojnë eventet nga veprimet. Nxënësit do të shohin aktivitete të ndërprera duke shtypur një \"buton\" në një telekomandë letre. Kur shohin këtë event, klasa do të reagojë me një veprim unik. Eventet përdoren gjerësisht në programim dhe duhet të jenë lehtësisht të njofthshme pas këtij mësimi."
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit",
+          "purpose": "Ky mësim u jep nxënësve një mundësi të fundit për të përdorur në mënyrë kreative shkathtësitë e tyre të reja të shkencave kompjuterike"
+        },
+        "coursec-2022/Putting a STOP to Online Meanness": {
+          "name": "Vendosja e një STOP për padrejtësitë në internet",
+          "overview": "[![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Cyberbullying, Drama Digjitale dhe Gjuhën e Urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të mbështetësve për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë në internet."
         },
         "coursec-2022/My Robotic Friends Jr": {
+          "name": "Shokët e mi robotik",
           "overview": "Në këtë mësim **përcaktimi i kontekstit**, nxënësit do të përdorin një sërë simbolesh për të udhëzuar një “robot” për të grumbulluar gota në modele të ndryshme. Nxënësit do të marrin pjesë me radhë si robot, duke iu përgjigjur vetëm algoritmit të përcaktuar nga kolegët e tyre.",
-          "preparation": "-   Përgatitni një raft prej 20 gota letre (ose trapezoide letre) për secilin grup prej 2-3 nxënësish.\n-   Shfaqni simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtypni një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish."
+          "preparation": "-   Përgatitni nga një model me 20 gota letre (ose trapezoide prej letrës) për secilin grup prej 2-3 nxënësish.\n-   Shfaqni simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtypni një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish."
         },
         "coursec-2022/Programming with Angry Birds": {
-          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë fushë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë grupe me klasën tuaj. "
+          "name": "Programimi me Angry Birds",
+          "overview": "Në këtë mësim të ndërtimit të shkathtësive, nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti tek derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare, duke i bërë ato të lëvizin drejt, të kthehen majtas ose djathtas.",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë fushë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë grupe me klasën tuaj. ",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës.",
+          "student_overview": "Mësoni rreth sekuencave dhe algoritmeve me _Angry Birds_."
         },
         "coursec-2022/Debugging in Maze": {
           "name": "Korrigjimi në labirint",
-          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë fushë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë si grup me klasën tuaj. \n-   Rishikimi**\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n-   Rishikoni **\\*Udhëzuesin e korrigjimeve të gabimeve** nga faqja e përmbledhjes së kurrikulës së këtij kursi me klasën."
+          "overview": "Në këtë mësim **ndërtimi i shkathtësive**, nxënësit do të hasin kodin e para-shkruar që përmban gabime. Ata do të duhet të hapin kodin ekzistues për të identifikuar gabimet.",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur ndonjë fushë të mundshme problematike për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për të bërë si grup me klasën tuaj. \n-   Rishikimi**\\*Këshilla për aktivitetin kryesor në Bazat e Shkencave Kompjuterike - Rekomandime për mësim**.\n-   Rishikoni **\\*Udhëzuesin e korrigjimeve të gabimeve** nga faqja e përmbledhjes së kurrikulës së këtij kursi me klasën.",
+          "student_overview": "Gjeni probleme në enigma dhe praktikoni shkathtësitë tuaja të korrigjimit të gabimeve."
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Mbledhja e thesarit me Laurelin",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur fusha të mundshme problematike për klasën tuaj.",
+          "purpose": "Në këtë mësim, nxënësit do të praktikojnë aftësitë e tyre programuese duke përdorur një karakter të ri, Laurel avanturieri. Kur dikush fillon programimin, ata bashkojnë udhëzimet në një mënyrë specifike duke përdorur diçka që një makinë mund të lexojë. Nëpërmjet përdorimit të programimit, nxënësit do të zhvillojnë një kuptim se si një kompjuter navigon udhëzimet dhe rendin. Përdorimi i një karakteri të ri me një objektiv tjetër mister do të ndihmojë nxënësit të zgjerojnë fushën e tyre të përvojës me sekuenca dhe algoritme në programim.",
+          "student_overview": "Shkruani algoritmet për të ndihmuar Laurel avanturierin të mbledhë shumë shumë gurë të çmuar!"
         },
         "coursec-2022/Creating Art with Code": {
           "name": "Krijimi i artit me kod",
+          "overview": "Në këtë mësim **ndërtimi i shkathtësive**, nxënësit do të marrin kontrollin e Artistit për të përfunduar vizatimet në ekran.",
           "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "Shokët e mi robotik Loopy",
           "preparation": "-   Përgatitni një raft prej 20 gota letre (ose **\\\\ \\*trapezoidë letre**) për secilin grup prej 4 nxënësish.\n-   Shfaqni **\\*simbolet** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtypni një **\\*ide për grumbullimin e kupave** për grupin prej 4 nxënësish."
         },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Loops me Rey dhe BB-8",
+          "overview": "Ky mësim **ndërtimi i shkathtësive** bën nxënësit të përdorin loops për të ndihmuar BB-8 të kalojë në mënyrë efikase një labirint."
+        },
+        "coursec-2022/Harvesting Crops with Loops": {
+          "name": "Harvesting Crops me Loops",
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj.",
+          "purpose": "Në këtë mësim, nxënësit do të përdorin loops për të përsëritur veprimet si korrja e kungujve. Modele të reja do të shfaqen dhe nxënësit do të përdorin kreativitetin dhe të menduarit logjik për të përcaktuar se çfarë kodi duhet të përsëritet dhe sa herë.",
+          "student_overview": "Le të përdorim loops për të ndihmuar korrësin të mbledhë disa perime!"
+        },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Mini-Projekt: Arti i ngjitjes",
+          "overview": "Ky mësim **mini-projekt** bazohet në të kuptuarit e loops nga mësimet e mëparshme. Nxënësit do të krijojnë vepra arti unike me Artistin.",
+          "preparation": "-   Praktikoni krijimin e dizajnit tuaj. Vini re se si këto nivele janë të ndryshme nga gjithçka që u shfaq më parë."
+        },
         "coursec-2022/The Big Event": {
-          "name": "Eventi i Madh"
+          "name": "Eventi i Madh",
+          "preparation": "-   Printo ose shfaq **\\\\ \\*Kontrolluesi i Eventeve**.\n-   Printo një **\\*vlerësim** për secilin nxënës."
+        },
+        "coursec-2022/Build a Flappy Game": {
+          "name": "Ndërtoni një lojë Flappy",
+          "overview": "Ky mësim kombinon **ndërtimin e shkathtësive** rreth eventeve me një **mini-projekt** ku e marrin nxënësit për të ndërtuar lojën e tyre Flappy Bird. Në fund të mësimit, nxënësit do të jenë në gjendje të personalizojnë lojën e tyre duke ndryshuar pamjet ose rregullat.",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Mini-Projekt: Loja Chase",
+          "overview": "Ky mësim kombinon **ndërtimin e shkathtësive** rreth eventeve me një **mini-projekt** ku e marrin nxënësit për të ndërtuar lojën e tyre të animuar.",
+          "preparation": "-   Luaj nëpër enigmë për të gjetur fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Të dhënat e imazhit"
         },
         "coursec-2022/Binary Bracelets": {
-          "name": "Byzylykët Binarë"
+          "name": "Byzylykët Binarë",
+          "preparation": "-   (Opsionale) Shikoni videon **\\\\ \\*Mësimi në Veprim**.\n-   Mbledhni markera për byzylykë. Dekorime të tjera si rruaza dhe pastrus gypash janë opsionale.\n-   Printoni një **\\\\ \\*fletë pune** dhe një vlerësim \\*\\*\\\\ \\*për nxënës.\n-   (Opsionale) Shkruani një mesazh të shkurtër në tabelë në formë binare."
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit",
+          "overview": "Ky **projekt** mësimor i ndihmon studentët në hartimin, zhvillimin dhe shfaqjen e projekteve të reja të Play Lab."
+        },
+        "coursed-2022/Password Power-Up": {
+          "name": "Fuqia e fjalëkalimit",
+          "overview": " [![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga [Edukimi i logjikës së përgjithshme](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nFjalëkalimet më të forta dhe më të sigurta në internet janë një ide e mirë për të gjithë. Por si mund t'i ndihmojmë fëmijët të krijojnë fjalëkalime më të mira dhe t'i mbajnë mend ato më lehtë? Përdorni këshillat në këtë mësim për t'i ndihmuar fëmijët të krijojnë fjalëkalime që janë të sigurta dhe që mbahen lehtë në mend.[0]",
+          "preparation": "-   Rishiko materialet udhëzuese.\n-   Printo fletushka për secilin nxënës.\n-   Përgatit letër shkrimi ose fletore për nxënësit.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
         },
         "coursed-2022/Graph Paper Programming": {
-          "name": "Programimi Grafik me Letër"
+          "name": "Programimi Grafik me Letër",
+          "overview": "Në këtë mësim të **vendosjes së kontekstit**,nxënësit përdorin simbole që të udhëzojnë njëri-tjetrin për të ngjyrosur katrorët në letër grafike. Duke “programuar” njëri-tjetrin për të vizatuar piktura,nxënësit marrin një mundësi për të përjetuar disa nga konceptet thelbësore të programimit në një mënyrë argëtuese dhe të arritshme. ",
+          "preparation": "-   (Opsionale) Shikoni videon **\\\\ \\*Mësimi në veprim**.\n-   Shtypni një **\\\\ \\*fletushkë** dhe **\\\\ \\*fletë vlerësimi** për secilin nxënës.",
+          "purpose": "Qëllimi i këtij aktiviteti është ndërtimi i shkathtësive të të menduarit kritik dhe ngazëllimit për kursin, duke prezantuar disa nga konceptet themelore të programimit që do të përdoren gjatë gjithë kursit. Duke ia prezantuar konceptet themelore si sekuencimi dhe algoritmet klasës në një aktivitet të shkëputur, nxënësit që frikësohen nga kompjuterët ende mund të ndërtojnë një bazë të të kuptuarit mbi këto tema. Në këtë mësim, nxënësit do të mësojnë se si të zhvillojnë një algoritëm dhe ta kodojnë atë në një program. "
+        },
+        "coursed-2022/Introduction to Online Puzzles": {
+          "name": "Hyrje në Enigmat Online",
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
         },
         "coursed-2022/Relay Programming": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "preparation": "-   Shiko **\\*Video e mësuesit**.\n-   Gjej një hapësirë të gjerë dhe të hapur për këtë aktivitet, siç është palestra ose fushat jashtë.\n-   Printo nga një **\\*Paketë të Aktivitetit** për secilin grup.\n-   Furnizo secilin grup me letra të mjaftueshme dhe me lapsa/kimika.\n-   Printoni nga një **\\*Fletushkë** për secilin nxënës."
+        },
+        "coursed-2022/Debugging with Laurel": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
         },
         "coursed-2022/Events in Bounce": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj.",
           "student_overview": "Keni dashur ndonjëherë të luani video lojëra në shkollë? Në këtë mësim, do të keni mundësi të bëni vetë!"
         },
+        "coursed-2022/Build a Star Wars Game": {
+          "preparation": "-   Luaj nëpër enigmë dhe gjej çfarëdo fushe të mundshme problematike."
+        },
         "coursed-2022/Dance Party": {
+          "preparation": "-   Luaj nëpër enigma që të gjeni ndonjë zonë të mundshme problematike për klasën tuaj.\n-   Merr në konsideratë nevojën për kufje. Ky aktivitet bazohet në tinguj.",
           "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "coursed-2022/Drawing Shapes with Loops": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
         },
         "coursed-2022/Conditionals with Cards": {
           "name": "Kushtoret me Karta"
         },
+        "coursed-2022/If/Else with Bee": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursed-2022/While Loops in Farmer": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "preparation": "-   Luaj nëpër enigmë që të gjeni fusha të mundshme problematike për klasën tuaj."
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "coursee-2022/Be A Super Digital Citizen": {
+          "name": "Bëhuni Qytetar Super Digjital",
+          "overview": " [![Edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nMjetet në internet janë fuqizues për fëmijët, dhe ato gjithashtu vijnë me përgjegjësi të mëdha. Por a  dinë fëmijët gjithmonë se çfarë të bëjnë kur hasin në ngacmime kibernetike? Tregojuni nxënësve tuaj mënyrat e duhura për të ndërmarrë veprime dhe për të zgjidhur konfliktet, nga të qenit mbështetës e deri te ndihma e të tjerëve në nevojë.",
+          "preparation": "-   Rishikoni materialet udhëzuese.\n-   Printoni fletushkat për secilin nxënës.\n-   Përgatitni lapsa ose markera me ngjyra për nxënësit.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve mbështetës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
+        },
+        "coursee-2022/Private and Personal Information": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
+        },
         "coursee-2022/Songwriting": {
           "name": "Të shkruarit e Këngëve"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "coursef-2022/The Power of Words": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
         },
         "coursef-2022/AI For Oceans": {
           "name": "AI Për oqeanet"
@@ -499,14 +954,50 @@
         "coursef-2022/The Internet": {
           "name": "Interneti"
         },
+        "coursef-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "Programimi me Angry Birds",
+          "student_overview": "Mësoni rreth sekuencave dhe algoritmeve me _Angry Birds_."
+        },
         "express-2022/Debugging in Maze": {
-          "name": "Korrigjimi në labirint"
+          "name": "Korrigjimi në labirint",
+          "student_overview": "Gjeni probleme në enigma dhe praktikoni shkathtësitë tuaja të korrigjimit të gabimeve."
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "Mbledhja e thesarit me Laurelin"
         },
         "express-2022/Creating Art with Code": {
           "student_overview": "Krijo imazhe të bukura duke programuar Artistin."
         },
         "express-2022/Dance Party": {
           "purpose": "Ky mësim prezanton konceptet thelbësore CS të kodimit dhe programimit të ngjarjeve (duke përdorur blloqe)."
+        },
+        "express-2022/End of Course Project": {
+          "name": "Përfundimi i projektit të kursit"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "overview": "Ky mësim \\*\\*ndërtimi i shkathtësive \\*\\* do t'u japë nxënësve një ide se çfarë të presin kur të shkojnë në laboratorin e kompjuterëve. Fillon me një diskutim të shkurtër duke i prezantuar ata me sjelljet në laboratorit kompjuterik,pastaj ata do të zhvillohen duke përdorur një kompjuter për të plotësuar puzzle online.",
+          "purpose": "Qëllimi kryesor i këtij mësimi është të ndërtojë përvojën e nxënësve me kompjuterin.Duke trajtuar funksionet më të thjeshta të kompjuterit, siç janë klikimi, tërheqja dhe lëshimi, po krijojmë një fushë të barabartë loje në klasë për puzzle të ardhshme.Ky mësim ofron gjithashtu një mundësi të shkëlqyer për të prezantuar terminologjinë bazë të harduerit kompjuterik, duke përfshirë potencialisht \"mouse\", \"trackpad\" ose \"touchscreen\", në varësi të pajisjeve tuaja."
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive** , nxënësit do të zhvillojnë algoritme sekuenciale për të lëvizur një zog nga njëra anë e një labirinti te derri në anën tjetër. Për ta bërë këtë, ata do të grumbullojnë blloqet e kodit së bashku në një sekuencë lineare.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "Programimi me Angry Birds",
+          "overview": "Në këtë mësim **ndërtim-të-shkathtësive**, nxënësit do të vazhdojnë të zhvillojnë algoritme sekuenciale.",
+          "purpose": "Në këtë mësim, nxënësit do të zhvillojnë shkathtësi programimi dhe korrigjimi në një platformë kompjuterike. Formati i bazuar në blloqe i këtyre enigmave i ndihmon nxënësit të mësojnë rreth sekuencës dhe koncepteve, pa pasur nevojë të shqetësohen për përsosjen e sintaksës."
+        },
+        "pre-express-2022/Loops with Laurel": {
+          "purpose": "Ky mësim u jep më shumë praktikë nxënësve me loops dhe i inkurajon ata që të vendosin më shumë blloqe brenja një strukture \"përsëritjeje\" ndërsa përpiqen të mbledhin sa më shumë thesar të jetë e mundur."
+        },
+        "pre-express-2022/Drawing Gardens with Loops": {
+          "purpose": "Ky mësim jep një këndvështrim të ndryshëm se si \"loops\" mund të krijojnë gjëra në programim. Nxënësit do të testojnë shkathtësitë e tyre të mendimit kritik duke vlerësuar kodin e dhënë dhe duke përcaktuar se çfarë duhet të shtohet për të zgjidhur enigmën. Nxënësit gjithashtu mund të reflektojnë mbi joefikasitetin e programimit pa \"loops\", përshkak numrit të madh të blloqeve programi do të kërkonte ndihmën e strukutrës \"përsëritje\" të loops"
+        },
+        "pre-express-2022/On the Move with Events": {
+          "purpose": "Sot nxënësit do të zhvillojnë më tej kuptimin e eventeve duke përdorur Play Lab! Eventet janë shumë të zakonshme në shumicën e programeve koompjuterike. Në këtë aktivitet nxënësit do të përdorin eventet për të lëvizur personazhin rreth ekranit, për të bërë zhurmë dhe për të ndryshuar prapavijën duke u bazuar në eventet e inciuara nga përdoruesi."
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Ora e Kodit 2013"

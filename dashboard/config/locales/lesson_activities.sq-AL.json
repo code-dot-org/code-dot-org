@@ -2787,7 +2787,7 @@
           "name": "Mbyll"
         },
         "75941c07-de18-45db-b260-4cd48e0f1bf0": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
           "name": "Parapërgatitje"
@@ -2844,7 +2844,7 @@
           "name": "Mbyll"
         },
         "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
           "name": "Parapërgatitje"
@@ -3932,11 +3932,20 @@
         "b03f2c86-6df7-483a-838c-6a729b695cfe": {
           "name": "Mbyll"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Shiko: Lagja ime Online"
+        },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
           "name": "Lexo: Siguria, Udhëheq!"
         },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Eksploro: Udhëtim në Internet"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Ndalo dhe Mendo Momentin"
+        },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Parapërgatitje"
@@ -3948,7 +3957,7 @@
           "name": "Mbyll"
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Parapërgatitje"
@@ -3960,7 +3969,7 @@
           "name": "Mbyll"
         },
         "0915a618-f1c1-47be-b8fb-80664fa62e50": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Parapërgatitje"
@@ -3972,7 +3981,7 @@
           "name": "Mbyll"
         },
         "519099ff-6a78-427c-91d6-4ef9a2cba286": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
           "name": "Parapërgatitje"
@@ -3984,7 +3993,7 @@
           "name": "Mbyll"
         },
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Parapërgatitje"
@@ -4002,7 +4011,7 @@
           "name": "Mbyll"
         },
         "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Parapërgatitje"
@@ -4011,7 +4020,7 @@
           "name": "Aktiviteti kryesor"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Parapërgatitje"
@@ -4041,7 +4050,7 @@
           "name": "Mbyll"
         },
         "32810ead-80cc-47b1-863f-ea8d023aaa94": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Parapërgatitje"
@@ -4053,7 +4062,7 @@
           "name": "Mbyll"
         },
         "98f951f7-63b2-4d62-82c9-d472b3505b68": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
           "name": "Parapërgatitje"
@@ -4065,7 +4074,7 @@
           "name": "Mbyll"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
           "name": "Parapërgatitje"
@@ -4077,7 +4086,7 @@
           "name": "Mbështjell"
         },
         "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Parapërgatitje"
@@ -4089,10 +4098,13 @@
           "name": "Mbyll"
         },
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Parapërgatitje"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Aktiviteti kryesor"
@@ -4101,7 +4113,7 @@
           "name": "Mbyll"
         },
         "25e921a3-616c-4b8d-accb-c360ef37c266": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
           "name": "Parapërgatitje"
@@ -4122,7 +4134,7 @@
           "name": "Mbyll"
         },
         "4a617b6e-9d56-472c-8a50-31052d127232": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Parapërgatitje"
@@ -4134,7 +4146,7 @@
           "name": "Mbyll"
         },
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Parapërgatitje"
@@ -4170,7 +4182,7 @@
           "name": "Mbyll"
         },
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Parapërgatitje"
@@ -4182,7 +4194,7 @@
           "name": "Mbyll"
         },
         "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
           "name": "Parapërgatitje"
@@ -4194,7 +4206,7 @@
           "name": "Mbyll"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Nivelet"
@@ -4211,6 +4223,9 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Parapërgatitje"
         },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
+        },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Aktiviteti kryesor"
         },
@@ -4218,7 +4233,7 @@
           "name": "Mbyll"
         },
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Parapërgatitje"
@@ -4230,7 +4245,7 @@
           "name": "Mbyll"
         },
         "756542f6-213e-4c07-9442-d1cf97e1ff26": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Parapërgatitje"
@@ -4251,7 +4266,7 @@
           "name": "Mbyll"
         },
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Parapërgatitje"
@@ -4263,7 +4278,7 @@
           "name": "Mbyll"
         },
         "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Parapërgatitje"
@@ -4275,7 +4290,7 @@
           "name": "Mbyll"
         },
         "d905457a-3a72-4927-a3a6-910b2fba3a53": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
           "name": "Parapërgatitje"
@@ -4287,7 +4302,7 @@
           "name": "Mbyll"
         },
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Parapërgatitje"
@@ -4308,7 +4323,7 @@
           "name": "Mbyll"
         },
         "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Parapërgatitje"
@@ -4320,7 +4335,7 @@
           "name": "Mbyll"
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Parapërgatitje"
@@ -4332,7 +4347,7 @@
           "name": "Mbyll"
         },
         "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
           "name": "Parapërgatitje"
@@ -4350,7 +4365,7 @@
           "name": "Mbyll"
         },
         "af629d31-87ab-476d-a2d3-6da008802f3c": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
           "name": "Parapërgatitje"
@@ -4362,7 +4377,7 @@
           "name": "Mbyll"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Nivelet"
@@ -4377,7 +4392,7 @@
           "name": "Mbyll"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Parapërgatitje"
@@ -4398,7 +4413,7 @@
           "name": "Mbyll"
         },
         "da433c13-5e0a-48fe-a697-d2288e831912": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Parapërgatitje"
@@ -4419,7 +4434,7 @@
           "name": "Mbyll"
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Parapërgatitje"
@@ -4443,7 +4458,7 @@
           "name": "Aktiviteti kryesor"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "46464e07-b5ac-4ca4-84b2-3b43873360da": {
           "name": "Parapërgatitje"
@@ -4470,7 +4485,7 @@
           "name": "Mbyll"
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Parapërgatitje"
@@ -4482,7 +4497,7 @@
           "name": "Mbyll"
         },
         "f72b0518-8373-4e23-9798-b4973072e86e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
           "name": "Parapërgatitje"
@@ -4494,7 +4509,7 @@
           "name": "Mbyll"
         },
         "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
           "name": "Parapërgatitje"
@@ -4551,10 +4566,10 @@
           "name": "Mbyll"
         },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Nivelet"
@@ -4575,7 +4590,7 @@
           "name": "Mbyll"
         },
         "27b493bd-61be-4305-b021-8b40d59ee55a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "1014e6a8-473d-46e2-a448-ca92a6697405": {
           "name": "Parapërgatitje"
@@ -4596,7 +4611,7 @@
           "name": "Mbyll"
         },
         "6354e763-cca6-4b98-b56e-16609de67f85": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
           "name": "Parapërgatitje"
@@ -4617,7 +4632,7 @@
           "name": "Mbyll"
         },
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Parapërgatitje"
@@ -4638,7 +4653,7 @@
           "name": "Mbyll"
         },
         "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "da87c8ba-9486-43e4-9dde-e6eac223396e": {
           "name": "Parapërgatitje"
@@ -4650,7 +4665,7 @@
           "name": "Mbyll"
         },
         "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "82c8173b-040e-41ec-b6ca-f1369b308268": {
           "name": "Parapërgatitje"
@@ -4662,7 +4677,7 @@
           "name": "Mbyll"
         },
         "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
           "name": "Parapërgatitje"
@@ -4682,8 +4697,11 @@
         "b2227118-727d-4eff-be1c-fafe331297fd": {
           "name": "Mbyll"
         },
+        "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
+          "name": "Përfundimi i projektit të kursit"
+        },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Parapërgatitje"
@@ -4722,7 +4740,7 @@
           "name": "Mbyll"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
           "name": "Parapërgatitje"
@@ -4797,7 +4815,7 @@
           "name": "Mbyll"
         },
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Parapërgatitje"
@@ -4827,7 +4845,7 @@
           "name": "Mbyll"
         },
         "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9fc4791f-a664-44db-9185-6162b40db705": {
           "name": "Parapërgatitje"
@@ -4848,7 +4866,7 @@
           "name": "Mbyll"
         },
         "5e959966-cfc9-4300-a563-9427222987c8": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
           "name": "Parapërgatitje"
@@ -4860,7 +4878,7 @@
           "name": "Mbyll"
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "171c9649-255a-4357-b532-6e6dc632285a": {
           "name": "Parapërgatitje"
@@ -4872,7 +4890,7 @@
           "name": "Mbyll"
         },
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Parapërgatitje"
@@ -4884,7 +4902,7 @@
           "name": "Mbyll"
         },
         "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
           "name": "Parapërgatitje"
@@ -4905,7 +4923,7 @@
           "name": "Mbyll"
         },
         "1d75c580-140f-4796-9e75-5863162c676b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Parapërgatitje"
@@ -4962,7 +4980,7 @@
           "name": "Mbyll"
         },
         "3392a940-9b70-4634-bfa5-a197b8d2941e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e1b92a7f-657f-4825-aa00-576f89e67200": {
           "name": "Parapërgatitje"
@@ -5001,7 +5019,7 @@
           "name": "Mbyll"
         },
         "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
           "name": "Parapërgatitje"
@@ -5013,7 +5031,7 @@
           "name": "Mbyll"
         },
         "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
           "name": "Parapërgatitje"
@@ -5034,7 +5052,7 @@
           "name": "Mbyll"
         },
         "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "4b6c37da-c087-41f8-94bd-6eddba55804d": {
           "name": "Parapërgatitje"
@@ -5073,7 +5091,7 @@
           "name": "Mbyll"
         },
         "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
           "name": "Parapërgatitje"
@@ -5148,10 +5166,13 @@
           "name": "Mbyll"
         },
         "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Parapërgatitje"
+        },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
         },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Aktiviteti kryesor"
@@ -5160,7 +5181,7 @@
           "name": "Mbyll"
         },
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Aktiviteti kryesor"
@@ -5169,7 +5190,7 @@
           "name": "Mbyll"
         },
         "3aaee60c-904c-4592-8092-b7abf66d9fac": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
           "name": "Parapërgatitje"
@@ -5196,7 +5217,7 @@
           "name": "Aktiviteti kryesor"
         },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Parapërgatitje"
@@ -5232,7 +5253,7 @@
           "name": "Mbyll"
         },
         "9209915b-655f-4e9e-b106-3843617f4034": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
           "name": "Parapërgatitje"
@@ -5244,7 +5265,7 @@
           "name": "Mbyll"
         },
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Parapërgatitje"
@@ -5307,7 +5328,7 @@
           "name": "Mbyll"
         },
         "1a4b72ab-a188-46f5-ba3f-2aa0aecb9e37": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "3c85f039-d3a0-4661-9469-4e067ccb6087": {
           "name": "Parapërgatitje"
@@ -5364,7 +5385,7 @@
           "name": "Mbyll"
         },
         "7098db4e-836b-453e-8429-69229359a98d": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "4891ceab-a23e-43af-a690-d4fd35b61d51": {
           "name": "Parapërgatitje"
@@ -6477,7 +6498,7 @@
           "name": "Ndalo dhe Mendo një Moment"
         },
         "217dee7e-80c0-40a2-b56e-e4df0c5805c6": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e624bae9-e201-4036-92dc-003b8468256a": {
           "name": "Parapërgatitje"
@@ -6486,10 +6507,13 @@
           "name": "Aktiviteti kryesor"
         },
         "26c33530-3624-48d0-aa4a-d31d88d60dd5": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "29d2b8d1-5816-492c-bb32-ac81f88230c0": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "e3543673-fbb0-4ed4-b245-b87e03dac5c5": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "26024df9-6e4f-4347-a9e6-2d28952f5729": {
           "name": "Parapërgatitje"
@@ -6498,22 +6522,25 @@
           "name": "Aktiviteti kryesor"
         },
         "05c730d2-8b63-47f0-ba9d-d664b50fa08c": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "7544ca1c-bed3-4846-82dd-1e4efeb05aa6": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
           "name": "Parapërgatitje"
+        },
+        "f824456e-fbbf-4107-a086-86cb2c66cdd2": {
+          "name": "Aktiviteti Lidhës- Zgjjidhni një"
         },
         "64398eb7-46ab-4f42-97ad-3e90882fe3cd": {
           "name": "Aktiviteti kryesor"
         },
         "a45c8d34-b743-42f8-b032-0145f8a7acb3": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "3535fb70-eb20-42aa-a261-909b8fe4800b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "26a6d7b6-4e7f-45eb-9f06-0aac920cadf6": {
           "name": "Parapërgatitje"
@@ -6522,10 +6549,13 @@
           "name": "Aktiviteti kryesor"
         },
         "b6f19eca-1d41-47cd-afd5-8a5b50316cb0": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "f4c545ed-2b8d-43da-b04e-326dbb97f16e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "d352a834-02b6-493b-82a9-31c11a819dc8": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
           "name": "Parapërgatitje"
@@ -6534,25 +6564,37 @@
           "name": "Aktiviteti kryesor"
         },
         "3752f66b-8440-41f6-bb77-df9a8a3c7fd8": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
+        },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "Parapërgatitje"
         },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Aktiviteti kryesor"
         },
         "f54be5e4-3e84-4033-8a75-00c7bcb0af1c": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "f5cd9462-7ba7-46fe-b356-bea3f8efcff4": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "29a3b6da-7fae-4611-910a-ba1103473edf": {
           "name": "Parapërgatitje"
         },
+        "5a68d945-c634-46b9-878b-6ad9516dad0f": {
+          "name": " Aktiviteti lidhës - Zgjidhni një"
+        },
         "eee4561a-d0b0-4086-a939-1424502c37ea": {
           "name": "Aktiviteti kryesor"
         },
+        "e7b93415-adc1-4947-a3b5-74de897f6560": {
+          "name": " Përmbledhje"
+        },
         "e3877751-093b-4fb5-a7ed-9de944d000ed": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "a7d18041-fd52-4f8c-a6ee-de62ca0bbf82": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
           "name": "Parapërgatitje"
@@ -6561,7 +6603,7 @@
           "name": "Aktiviteti kryesor"
         },
         "155fb25f-e0ea-468c-bdeb-0b97eec8b19e": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "fc7902ec-363b-4c18-b1b6-841de04061b5": {
           "name": "Parapërgatitje"
@@ -6570,7 +6612,10 @@
           "name": "Aktiviteti kryesor"
         },
         "70d17a47-00c8-41f8-aed2-f5aa76a2b9fb": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
+        },
+        "51e205c0-25de-4ff0-8333-32f10f0f6215": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "e68d3049-5654-4527-9c7b-8dc1426e138d": {
           "name": "Parapërgatitje"
@@ -6579,22 +6624,25 @@
           "name": "Aktiviteti kryesor"
         },
         "c146bd03-a9f6-417b-a954-161f2e3e0872": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "636ae3fe-7476-4fdc-a8f2-b97bdf300491": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "23f581d0-c75d-456e-97cc-28bddf192f50": {
           "name": "Parapërgatitje"
+        },
+        "a6221538-4aea-417b-ad64-76ff327faf9e": {
+          "name": "Aktiviteti Lidhës - Eventet - Zgjjidhni një"
         },
         "445fc613-92a9-4e73-b905-c0de8f745a0d": {
           "name": "Aktiviteti kryesor"
         },
         "6ed9706c-5358-4a22-875c-fee2a88376ff": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "2c8578d4-3bc6-42ac-8fff-2f460daedff3": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7ae3d9c5-3492-44e0-be39-bc00114371c0": {
           "name": "Parapërgatitje"
@@ -6603,10 +6651,10 @@
           "name": "Aktiviteti kryesor"
         },
         "3b74dca1-328c-42e5-9360-af59a9eede29": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
-          "name": "Shiko: Ndiqni gjurmët digjitale"
+          "name": "Shiko: Ndiq gjurmët digjitale"
         },
         "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
           "name": "Luaj: Gjurmët e Kafshëve"
@@ -6618,7 +6666,7 @@
           "name": "Përmbledhje: Ndalo & Mendo një moment"
         },
         "15846b35-8b6d-4970-87a4-cc861b66e9cb": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "2d902c04-594b-4595-a677-3c45978e14d8": {
           "name": "Parapërgatitje"
@@ -6627,34 +6675,46 @@
           "name": "Aktiviteti kryesor"
         },
         "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
-          "name": "Mbështjell"
+          "name": "Përmbledhje"
         },
         "7d5ce6e6-0282-4347-bbe7-f2c0ad21afb9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "3dd03748-95a1-4a80-921c-79ca88f9c0d8": {
           "name": "Parapërgatitje"
+        },
+        "3c623aad-d037-437e-b74d-9c8a5824950a": {
+          "name": "Aktiviteti Lidhës- Zgjjidhni një"
         },
         "89f19370-c3ba-4212-b017-433e7c2e946f": {
           "name": "Aktiviteti kryesor"
         },
         "448bef23-e935-4088-8cc4-0fe9ff173780": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "02613861-ab47-4a89-a8c5-12dbace2f54e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "c396e3fc-d4aa-4cb3-9b13-472b50b660fd": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
           "name": "Parapërgatitje"
+        },
+        "a5197817-cd21-44f5-8078-169590fa1ffb": {
+          "name": "Aktiviteti lidhës - Zgjidhni një"
+        },
+        "78ca7ff6-3168-4f13-9a9f-8e45e426afd8": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
         },
         "4f076f68-7fc3-4cec-994c-1d177f20d51d": {
           "name": "Aktiviteti kryesor"
         },
         "33d41e28-2af0-43b4-b3d5-7f496f8dba4f": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "60db2674-475d-4539-965e-bb62a58b76fe": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "af4312be-c462-4833-8519-b405d96f2b2c": {
           "name": "Parapërgatitje"
@@ -6663,7 +6723,7 @@
           "name": "Aktiviteti kryesor"
         },
         "a9abfe69-ccf5-4d60-aadd-ab925aab2a8b": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "b0af1c83-5e0a-4858-bb9b-3a90c6974933": {
           "name": "Parapërgatitje"
@@ -6671,29 +6731,41 @@
         "7ef43cd7-431a-4ff1-bcd8-708b7755e84f": {
           "name": "Aktiviteti kryesor"
         },
+        "ea581e79-d9a4-41f0-a762-14f3f3c29bba": {
+          "name": "Vlerësimi"
+        },
         "27fcf5f0-a9af-4634-a3f5-6ee183c9bce8": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "8d9c16a1-9644-4621-aa16-e9c869725074": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "148289f4-4345-49b1-bb7d-d96e9c999fb9": {
           "name": "Parapërgatitje"
+        },
+        "978e434e-eb39-4bff-b6bf-508becfb8ad6": {
+          "name": "Aktiviteti Lidhës- Zgjjidhni një"
         },
         "3e6caa8c-0fa4-475b-96bb-99c5a9f6d3de": {
           "name": "Aktiviteti kryesor"
         },
         "a4fb28a6-1049-42c7-a63c-f51688554220": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "fa7408d8-1dd3-4d8b-a611-f412c92361bd": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "eb3ac5b0-7f9f-4ab5-bc88-cc7d5748b97a": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "7e002958-d294-4986-bfdb-8d5cad5312e5": {
           "name": "Parapërgatitje"
         },
         "2992021b-4ada-4b71-a3c7-fbf40d3acca2": {
           "name": "Aktiviteti kryesor"
+        },
+        "4b9fe477-9a99-4cf7-b390-6cfaf046f61d": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "81967def-358e-4733-aedd-9aa01a30d8e8": {
           "name": "Parapërgatitje"
@@ -6702,7 +6774,10 @@
           "name": "Aktiviteti kryesor"
         },
         "fb19c014-becb-4f19-9669-5591aec2bd2a": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
+        },
+        "380aca01-c1a9-44eb-978e-f896d033b45c": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
           "name": "Parapërgatitje"
@@ -6711,7 +6786,7 @@
           "name": "Aktiviteti"
         },
         "1a849e73-72e4-4780-bd58-6ea6c8cad8fb": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "737e13d1-e7a2-4f63-be94-b9f2e7db97ee": {
           "name": "Parapërgatitje"
@@ -6720,10 +6795,16 @@
           "name": "Aktiviteti kryesor"
         },
         "48d609f4-d565-47d0-aa71-f3c6cbae2571": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
+        },
+        "de886c32-4827-44b6-a34d-ed3e07ef767d": {
+          "name": "Vlerësim"
         },
         "2cba77e6-e43d-4690-949f-f0fed16b6528": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "bc267268-7861-46d8-876a-4272d51fa63a": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
           "name": "Parapërgatitje"
@@ -6735,7 +6816,7 @@
           "name": "Mbyll"
         },
         "812dcf18-f1e3-46dc-9cf6-45c63cd5dd0e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "acde8fd8-754e-47b9-bd4e-a4fcf27b878b": {
           "name": "Parapërgatitje"
@@ -6746,8 +6827,20 @@
         "5f075543-8ff0-4898-a88c-b77a1cb0afbb": {
           "name": "Mbyll"
         },
+        "6496f3a3-d253-44df-9139-7b3870eee21f": {
+          "name": "Mëso: Çfarë është padrejtësia?"
+        },
+        "fd9e26a9-0627-4359-8a36-25bd9dc888c1": {
+          "name": "Performo: Online kundrejtë Ballë për ballë (F2F)"
+        },
+        "5bcbf42e-64db-4405-a738-1d5ade6478dc": {
+          "name": "Eksploro: STOP padrejtësitë në internet"
+        },
+        "e5ba459e-982e-4b0f-a102-e300300f9d8a": {
+          "name": "Përmbledhje: Ndalo & Mendo një moment"
+        },
         "f32ea3e2-2c77-4d9e-81f2-f062dcc62831": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësime shtesë"
         },
         "8c544c95-64d5-4c31-8e0a-99f9c63478ba": {
           "name": "Nivelet"
@@ -6764,6 +6857,12 @@
         "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
           "name": "Parapërgatitje"
         },
+        "b274f4c7-f500-40b8-be45-9514daa5fd33": {
+          "name": "Bridging Activity - Programimi"
+        },
+        "21f339fc-a078-41b5-a2c0-bb95b7668103": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
+        },
         "084cb6b1-28d4-4352-a2f9-5d58c9702bca": {
           "name": "Aktiviteti kryesor"
         },
@@ -6771,7 +6870,10 @@
           "name": "Mbyll"
         },
         "162606b4-d220-420b-9703-a3fde0f875bd": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "3a72607b-f645-4ec9-8c22-1d06333363d7": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "69b9baec-7332-406c-837a-fb64ae1fe34d": {
           "name": "Parapërgatitje"
@@ -6783,10 +6885,13 @@
           "name": "Mbyll"
         },
         "ad5f23ed-1a14-49b9-b7d5-f0739393e1f9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d3e694da-2437-407e-9478-53c69d99ba8d": {
           "name": "Parapërgatitje"
+        },
+        "ab929c69-85b7-485d-a8a9-2df1b53af578": {
+          "name": "Bridging Activity "
         },
         "d79fb8ee-956d-4630-b5bb-12a17ac01703": {
           "name": "Aktiviteti kryesor"
@@ -6804,7 +6909,10 @@
           "name": "Mbyll"
         },
         "fe040a1c-988d-4d15-a3bc-a4482aee15ad": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "1b5e65d2-6913-4ffa-99c8-c24b9f66c884": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "85aac025-b9a7-410d-aa32-833228487252": {
           "name": "Parapërgatitje"
@@ -6816,7 +6924,7 @@
           "name": "Mbyll"
         },
         "e45b301d-d9e3-4217-a048-dc3bd80bbb09": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
           "name": "Parapërgatitje"
@@ -6828,7 +6936,7 @@
           "name": "Mbyll"
         },
         "0b553378-ac34-4727-9d20-6e2418b91d92": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "45ac5681-de1e-49f9-8135-957e7c79e3d7": {
           "name": "Parapërgatitje"
@@ -6840,7 +6948,10 @@
           "name": "Mbyll"
         },
         "94065f57-a74c-4669-aba3-4545afc1ac99": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "94a6f332-0114-4c5f-a50a-8ca867c388af": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
           "name": "Parapërgatitje"
@@ -6850,6 +6961,9 @@
         },
         "ce2af74c-6ea2-4be2-b451-660bca33f7c9": {
           "name": "Mbyll"
+        },
+        "80232621-bdde-444c-a5a0-3b34841a7204": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "c8520741-98b8-4caf-a698-966ba8b01e4e": {
           "name": "Parapërgatitje"
@@ -6861,7 +6975,7 @@
           "name": "Mbyll"
         },
         "07fa3f05-8e3a-4bb1-aaca-5d35b3ec01a4": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "b1fb0e94-332b-43de-b96f-70188d1852ef": {
           "name": "Parapërgatitje"
@@ -6873,7 +6987,7 @@
           "name": "Mbyll"
         },
         "320641ce-d300-442c-9c02-25d01b79c703": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7124ed35-c669-491b-8481-6406fa13bd93": {
           "name": "Parapërgatitje"
@@ -6885,7 +6999,7 @@
           "name": "Mbyll"
         },
         "f73ce05b-cbd9-4cf0-b94d-5544bcaf3347": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "88aa1b29-4bee-44d8-80ec-1e533e712cc2": {
           "name": "Parapërgatitje"
@@ -6906,7 +7020,7 @@
           "name": "Mbyll"
         },
         "a8c890ea-45f3-47bb-9276-e165a83ecb48": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0dc09009-c0c3-4970-ba5f-1afc56c122be": {
           "name": "Parapërgatitje"
@@ -6918,10 +7032,22 @@
           "name": "Mbyll"
         },
         "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
+          "name": "Parapërgatitje: Pssst... Çfarë është një fjalëkalim?"
+        },
+        "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
+          "name": "Vlerësoni: Uh-Oh! Nëse... Pastaj..."
+        },
+        "56a66744-0946-4350-9942-07e1ed1e0d85": {
+          "name": "Krijoni: Fuqizoni fjalëkalimin tuaj"
+        },
+        "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
+          "name": "Përfundoni: Shënime të këshillave për fjalëkalim "
         },
         "dd936731-be2e-45f8-ba99-0dff9935b299": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "def8fa0a-2a44-4633-b219-592a1c026814": {
           "name": "Nivelet"
@@ -6930,13 +7056,13 @@
           "name": "Parapërgatitje"
         },
         "ee83fda1-8d73-48f5-a6ee-d2dda27a2287": {
-          "name": "Aktiviteti kryesor"
+          "name": "Aktivitet kryesor"
         },
         "8bc2a962-0eac-4bae-85ff-c1ae50a085f6": {
-          "name": "Mbyll"
+          "name": "Mbyllje"
         },
         "f83a0af4-2b5c-4400-8f8b-7bc64de25f5b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
           "name": "Parapërgatitje"
@@ -6957,7 +7083,7 @@
           "name": "Mbyll"
         },
         "5e5b27a3-0f8e-4360-877c-f490abbf065e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e982d792-ed3f-403f-8782-58d0e74eb342": {
           "name": "Parapërgatitje"
@@ -6978,7 +7104,7 @@
           "name": "Mbyll"
         },
         "c96ae163-bdf7-40b1-9b39-aa7047d30c2f": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
           "name": "Parapërgatitje"
@@ -7002,7 +7128,7 @@
           "name": "Aktiviteti kryesor"
         },
         "db740abd-f7bc-4a40-a31f-d8694109f2f9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "c5b3762a-7ec7-45ad-8562-eed33738a7ad": {
           "name": "Parapërgatitje"
@@ -7029,7 +7155,7 @@
           "name": "Mbyll"
         },
         "a340f15a-7b7f-4105-803c-f7e1759cced5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
           "name": "Parapërgatitje"
@@ -7041,7 +7167,7 @@
           "name": "Mbyll"
         },
         "ee4d7816-6a07-4203-985a-e3a6cdfafacd": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "1253667e-4b6d-4ef3-9274-070f711e4b3d": {
           "name": "Parapërgatitje"
@@ -7053,7 +7179,7 @@
           "name": "Mbyll"
         },
         "ebfaecfc-4c5b-486a-898a-122acc54d24c": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "c44d899c-3a93-40bf-b986-05f28dd6c8d6": {
           "name": "Parapërgatitje"
@@ -7083,13 +7209,22 @@
           "name": "Mbyll"
         },
         "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
+        },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Parapërgatitje: Superheroi sekret"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "Meso: Si të bëheni një mbështetës "
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Krijo: Superheroi juaj i qytetarit digjital"
         },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "522e566a-4230-4479-b810-bdac5c37634e": {
           "name": "Nivelet"
@@ -7113,7 +7248,7 @@
           "name": "Mbyll"
         },
         "5b8fa378-7c92-4dfd-aa8b-170836cd31b6": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "124a474b-26b3-42dc-bb84-af0a9be14cc5": {
           "name": "Parapërgatitje"
@@ -7143,7 +7278,7 @@
           "name": "Mbyll"
         },
         "614ef93f-db3a-408f-87a4-17e43a7d4309": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ddea6cb3-a9cd-4715-9026-d36bf966b753": {
           "name": "Parapërgatitje"
@@ -7164,7 +7299,7 @@
           "name": "Mbyll"
         },
         "79e1e2e9-dce6-4f3d-b5c8-3d762a776b10": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "29e0563f-459b-4d33-8100-3677a52b69d0": {
           "name": "Parapërgatitje"
@@ -7185,7 +7320,7 @@
           "name": "Mbyll"
         },
         "e9dcdf4e-0780-4b98-8447-787eced9f567": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "f60e6276-8f62-4f08-a89d-f237f44e58bc": {
           "name": "Parapërgatitje"
@@ -7197,7 +7332,7 @@
           "name": "Mbyll"
         },
         "3f8f4c7b-1812-49d0-8c02-62d35bb9711d": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9b886d19-0e05-49b1-ba50-07065b389704": {
           "name": "Parapërgatitje"
@@ -7209,7 +7344,7 @@
           "name": "Mbyll"
         },
         "0dba24b6-b0da-4493-976f-d281bfc2f5ad": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "8587af1b-82c6-44bb-aee2-1500f125d768": {
           "name": "Parapërgatitje"
@@ -7236,13 +7371,13 @@
           "name": "Mbyll"
         },
         "36227e91-065d-4acc-8155-f954f1fe1ffc": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "41c25d95-9f6c-432e-89f8-223a863b2f87": {
           "name": "Parapërgatitje"
@@ -7344,7 +7479,7 @@
           "name": "Mbyll"
         },
         "240d09ee-89ca-4a20-8fa1-317d47f2c6c5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "e0464ee7-4360-4686-8654-b8f858f536c2": {
           "name": "Parapërgatitje"
@@ -7365,7 +7500,7 @@
           "name": "Mbyll"
         },
         "5b427eff-5df0-4627-be4e-b448a69a998a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9cad9c6c-1877-4c63-beae-56fe65aa9194": {
           "name": "Parapërgatitje"
@@ -7377,7 +7512,7 @@
           "name": "Mbyll"
         },
         "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "6b9e69c5-cb90-40e3-9130-f40a91e1e3ac": {
           "name": "Parapërgatitje"
@@ -7389,7 +7524,7 @@
           "name": "Mbyll"
         },
         "f7d39471-7d15-4b89-bde4-6d4846004ccd": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "1cd41560-d425-4c55-b269-ced0b1d8d561": {
           "name": "Parapërgatitje"
@@ -7401,7 +7536,7 @@
           "name": "Mbyll"
         },
         "a0ab4c72-fd17-4c92-9627-206ff2d7f56a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "90198481-f560-4b5b-9229-5e51f18c29ac": {
           "name": "Parapërgatitje"
@@ -7422,7 +7557,7 @@
           "name": "Mbyll"
         },
         "e231dcbb-0fb2-4c6b-9daa-3457e16e0f80": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
           "name": "Parapërgatitje"
@@ -7479,7 +7614,7 @@
           "name": "Mbyll"
         },
         "a4fa8c72-b9c4-44cd-9ea4-af03b1e8500c": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "70b4e0eb-e7bc-4317-a1d9-18fe9ce48353": {
           "name": "Parapërgatitje"
@@ -7518,7 +7653,7 @@
           "name": "Mbyll"
         },
         "464c4e54-c910-492d-a5bd-e0a7ca6957ea": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ed28a98c-cc1e-4e7d-9e0c-d38e4856fafa": {
           "name": "Parapërgatitje"
@@ -7530,7 +7665,7 @@
           "name": "Mbyll"
         },
         "289fcfe5-3db1-48bb-9b3c-6b02a976000b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "b938281e-0cd0-459e-a65e-6d90e9d38cd8": {
           "name": "Parapërgatitje"
@@ -7551,7 +7686,7 @@
           "name": "Mbyll"
         },
         "4e7e48aa-6b90-439e-bc74-10b307d947a5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "c963266f-b222-4601-bc31-c985c0b01904": {
           "name": "Parapërgatitje"
@@ -7599,7 +7734,7 @@
           "name": "Mbyll"
         },
         "38ea9ff5-2d6b-4e51-a245-751cabce4b8b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "05222c29-d06f-4f0d-9c57-fb756176712c": {
           "name": "Parapërgatitje"
@@ -7674,10 +7809,13 @@
           "name": "Mbyll"
         },
         "a96fa837-7cf7-445a-8f2f-d0219c2d18c1": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "32f8d56f-0681-4253-8457-7347e55de868": {
           "name": "Parapërgatitje"
+        },
+        "3f0b9eb5-63df-4e80-a632-1995ece4e2f0": {
+          "name": "Pamje paraprake të Enigmave Online si klasë"
         },
         "89f9d2cf-385c-445f-947d-1b68bf96eb5e": {
           "name": "Aktiviteti kryesor"
@@ -7686,7 +7824,7 @@
           "name": "Mbyll"
         },
         "a5b16543-dea5-453c-992f-b1f906a2db44": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0fa4c5d1-4c0e-42c4-8f6d-bf50eae78b70": {
           "name": "Aktiviteti kryesor"
@@ -7695,7 +7833,7 @@
           "name": "Mbyll"
         },
         "936ae155-dd03-4aa8-89c1-a79fb77e94b5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "476f0a7e-0f8c-48fb-855e-ed6245e473b1": {
           "name": "Parapërgatitje"
@@ -7722,7 +7860,7 @@
           "name": "Aktiviteti kryesor"
         },
         "708bdcc2-b0bc-406e-b6f6-e0b13d9db0ab": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "31cead7b-04b5-4f08-ad69-d024f371debc": {
           "name": "Parapërgatitje"
@@ -7758,7 +7896,7 @@
           "name": "Mbyll"
         },
         "b3279383-3532-469b-a76f-13ebc612e377": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7fa61201-c4ac-49d0-855a-853fca164cf6": {
           "name": "Parapërgatitje"
@@ -7770,7 +7908,7 @@
           "name": "Mbyll"
         },
         "5cbc2dad-35be-4542-8614-57c082dc0299": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Nivelet"
@@ -7794,7 +7932,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "c53a1348-2816-4c38-9417-92561d0bca19": {
           "name": "Parapërgatitje"
@@ -7806,7 +7944,7 @@
           "name": "Mbyll"
         },
         "777be184-c917-4732-ad47-bb1fad0a30e4": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
           "name": "Parapërgatitje"
@@ -7818,7 +7956,7 @@
           "name": "Mbyll"
         },
         "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0f7585ce-d117-4b61-aee9-d54444cd83b0": {
           "name": "Fillo"
@@ -7851,7 +7989,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
           "name": "Fillimi (5 minuta)"
@@ -7869,7 +8007,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "ab15beb1-d005-41c6-a156-e4c110c423b8": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Nivelet"
@@ -7899,7 +8037,7 @@
           "name": "Vlerësim"
         },
         "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "5cb4e862-56b7-445e-a99a-22cc738504a1": {
           "name": "Fillimi (5 minuta)"
@@ -7914,7 +8052,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "f49ce667-e4b7-4a66-88a4-16848365e63a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d31e813b-9457-415f-8632-009132bb5e48": {
           "name": "Aktiviteti (30-45 minuta)"
@@ -7923,7 +8061,7 @@
           "name": "Mbyll"
         },
         "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
           "name": "Parapërgatitje"
@@ -7992,7 +8130,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "ce329650-3549-4f96-8da9-8bc77c162411": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Aktiviteti"
@@ -8001,7 +8139,7 @@
           "name": "Mbështjell"
         },
         "10b66543-86a4-459e-bc67-a31d688547ce": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
           "name": "Aktiviteti (30-45 minuta)"
@@ -8010,7 +8148,7 @@
           "name": "Mbyll"
         },
         "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "7f4844a0-3455-4cf0-932b-ba3eba761758": {
           "name": "Sugjerime për diferencim"
@@ -8022,7 +8160,7 @@
           "name": "Mbyll"
         },
         "d091559f-3ec9-46c5-9e79-a245aadfb146": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
           "name": "Fillimi (5 minuta)"
@@ -8037,7 +8175,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "301e5420-a6e3-46c3-a76f-c2e042652974": {
           "name": "Aktiviteti (30-45 minuta)"
@@ -8049,7 +8187,7 @@
           "name": "Përfundoni (5 minuta)"
         },
         "4e2ce993-660e-4574-9264-448e234c4bac": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
           "name": "Aktiviteti (30-45 minuta)"
@@ -8061,7 +8199,7 @@
           "name": "Vlerësimi (2 minuta)"
         },
         "e4041676-353d-409e-a7aa-bcfcc62bab09": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Parapërgatitje"
@@ -8073,7 +8211,7 @@
           "name": "Celebrate and Keep Going!"
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
           "name": "Gërmimi në Pamjen e Informacionit"
@@ -8094,7 +8232,7 @@
           "name": "Mbyll"
         },
         "aad5bc18-7988-4acf-be28-9e125e9d930e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
           "name": "Parapërgatitje"
@@ -8115,7 +8253,7 @@
           "name": "Mbyll"
         },
         "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
           "name": "Fillimi (5 minuta)"
@@ -8127,7 +8265,7 @@
           "name": "Mbyll"
         },
         "262ad475-1b09-4834-8401-0cf39d3955c5": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
           "name": "Vlerësimi (2 minuta)"
@@ -8142,7 +8280,7 @@
           "name": "Përfundoni (5 minuta)"
         },
         "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "894da896-c653-4f74-a0f9-b02dca7ebcad": {
           "name": "Vlerësimi (2 minuta)"
@@ -8154,7 +8292,7 @@
           "name": "Mbështjell"
         },
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
           "name": "Nivelet"
@@ -8670,7 +8808,7 @@
           "name": "Mbyll"
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
-          "name": "Mësimi i zgjeruar"
+          "name": "Mësim shtesë"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Nivelet"

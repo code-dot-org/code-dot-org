@@ -12,9 +12,9 @@
   "cs_topic": "programming",
   "school_subject": "science",
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
+  "description": "Use coding to simulate a marine ecosystem, exploring the interdependencies between different organisms and their environment.",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "video": "https://www.youtube-nocookie.com/embed/Nrk0kDJr1ks/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Nrk0kDJr1ks&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 421
 }

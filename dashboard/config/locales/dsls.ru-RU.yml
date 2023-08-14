@@ -669,20 +669,11 @@ ru-RU:
           <hr>
 
           **Теперь попробуем!**
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
         teacher_markdown: |
           **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
 
           ## [Нажмите Здесь, чтобы начать Заполнять Опрос для Преподавателей](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -705,20 +696,6 @@ ru-RU:
         display_name: Свойства спрайтов
       CSD Games Properties practice_2022:
         display_name: Свойства спрайтов
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
-      CSD Games variables practice_2021: {}
-      CSD Games variables practice_2022: {}
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -789,12 +766,6 @@ ru-RU:
         content1: Посмотрите на код внизу и попробуйте предсказать как будут отображаться
           заголовки. Выберите один из вариантов справа.
         title: Быстрая проверка заголовков
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
       CSD Student End of Unit Survey - Unit 1_2022:
         title: Опрос в Конце учебного Блока на CS Discoveries!
       CSD U1 IOSP match:
@@ -904,7 +875,6 @@ ru-RU:
           * [Приложения и Решение Проблемы](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Образец Экспертной Оценки ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
 
 
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -989,23 +959,12 @@ ru-RU:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
-      CSD U2 CSS practice_pilot_2021: {}
-      CSD U2 CSS practice_pilot_2022: {}
       CSD U2 Design Project:
         content1: пояснение
       CSD U2 Design Project_2018:
         content1: пояснение
       CSD U2 Design Project_2018_2019:
         content1: пояснение
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Добавление изображений
       CSD U2 Image challenge_pilot_2022:
@@ -1191,15 +1150,6 @@ ru-RU:
 
 
 
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1390,10 +1340,6 @@ ru-RU:
           4. Amazon.com - Интернет-магазин для всех видов товаров
           5. Yahoo.com - Поисковая система, провайдер электронной почты и новостная страница
           6. Wikipedia.org - Бесплатная энциклопедия с контентом, созданным пользователями
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: пояснение
       CSD U2 expand project_2018:
@@ -1439,12 +1385,6 @@ ru-RU:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1494,8 +1434,6 @@ ru-RU:
         content1: пояснение
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: пояснение
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1561,11 +1499,6 @@ ru-RU:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -2345,8 +2278,6 @@ ru-RU:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Практика
       CSD U3 drawing practice choice_2022:
@@ -2908,39 +2839,28 @@ ru-RU:
         title: Постпроектное Тестирование Данных и Общества
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Уровни задания
       CSD U6 - Music - Chal_2222:
         display_name: Уровни задания
       CSD U6 - Physical Input - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Уровни задания
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: пояснение
       CSD U6 LED create intro_2018:
@@ -2981,10 +2901,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: пояснение
       CSD U6 final intro_2018:
@@ -2993,10 +2909,6 @@ ru-RU:
         content1: пояснение
       CSD U6 final intro_2021:
         content1: пояснение
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -3178,87 +3090,28 @@ ru-RU:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
       CSD User Centered Design Post-Project Test:
         title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
       CSD User Centered Design Post-Project Test_2021:
         title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
       CSD User Centered Design Post-Project Test_2022:
         title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Задания
       CSD games cake challenge choice_2022:
         display_name: Задания
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
-      CSD games functions practice choice_2021: {}
-      CSD games functions practice choice_2022: {}
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Задания
       CSD games platform challenge choice_2022:
         display_name: Задания
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
-      CSD web conditionals practice choice_2021: {}
-      CSD web conditionals practice choice_2022: {}
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Практика
       CSD web draw loop practice choice_2022:
         display_name: Практика
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Практика
       CSD web movement practice choice_2022:
         display_name: Практика
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Практика
       CSD web text practice choice_2022:
@@ -3440,11 +3293,6 @@ ru-RU:
         teacher_markdown: |
           * Создание Рекомендации - Экземпляр Проектного Руководства ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
           * Создание Рекомендации - Экземпляр Взаимной Оценки ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
       CSDU6 Innovation_2021:
         markdown: |
           # Инновационные Исследования
@@ -3528,7 +3376,6 @@ ru-RU:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -3537,7 +3384,6 @@ ru-RU:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Условные операторы с картами
@@ -3962,10 +3808,6 @@ ru-RU:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # Разработка с обеспечением доступности
@@ -4036,8 +3878,6 @@ ru-RU:
           # Распространение цифровой информации
 
            На этом уроке вы рассмотрите проблемы и преимущества, связанные с соблюдением прав собственности и авторских прав, в особенности в цифровой среде.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           # "Переменные-конверты"
@@ -4061,8 +3901,6 @@ ru-RU:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |
           # Игры с циклами со счетчиками
@@ -4894,7 +4732,6 @@ ru-RU:
           дальше, используя ежедневные планы уроков, которые помогут вашим ученикам,
           а также занятия, которые можно проводить без компьютера, и форумы для общения
           с другими учителями.\n\n\n"
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |+
           # Начало > Ознакомление с этим онлайн-курсом
@@ -6360,7 +6197,6 @@ ru-RU:
           \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\"
           rel=\"noopener noreferrer\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           Pm.png)</a>\n"
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |-
           # Условные операторы > Анализ
@@ -6878,7 +6714,6 @@ ru-RU:
           увлечены информатикой, двигайтесь дальше, используя ежедневные планы уроков,
           которые помогут вашим ученикам, а также занятия, которые можно проводить
           без компьютера, и форумы для общения с другими учителями.\n\n"
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |
           # Основы информатики > Основная лексика
@@ -7812,7 +7647,6 @@ ru-RU:
           <hr>
 
           **Итак, попробуем!**
-      'Overview: If Statements': {}
       'Overview: Images':
         markdown: |+
           # Картинки
@@ -7846,11 +7680,6 @@ ru-RU:
           ### Click Continue to try it!
 
 
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -8009,8 +7838,6 @@ ru-RU:
           # Эстафета программирования
 
            Разбейтесь на команды и работайте совместно над написанием программ, которые чертят фигуры.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Защита от хулиганства
@@ -8031,7 +7858,6 @@ ru-RU:
           # Следуй алгоритму
 
            Сыграй в игру и подумай, какие команды нужны, чтобы получить нужный результат.
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |
           # Написание песни
@@ -8052,8 +7878,6 @@ ru-RU:
           # Написание песни
 
            Используй понятие хорового пения, чтобы разобраться с определением и вызовом функций.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
       Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
         teacher_markdown: |
           **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
@@ -8064,8 +7888,6 @@ ru-RU:
           **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
 
           ## [Нажмите Здесь, чтобы начать Заполнять Опрос для Преподавателей](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -8086,12 +7908,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: синий
@@ -8315,7 +8131,6 @@ ru-RU:
           *  **[Ширина Границы (border width) ](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
           *  **[Цвет Границы (border color) ](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
 
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8426,8 +8241,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8522,9 +8335,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -8580,8 +8390,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: пояснение
       allthethings_external_not_displayed_as_unplugged:
@@ -12604,8 +12412,6 @@ ru-RU:
           нажатия кнопки \"Выполнить\". </h3> \n<br/><hr/>\n <h3>В следующей части
           этого курса ты напишешь код с переменными, которые, напротив, *меняются*
           внутри программы.</h3>\n\n"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -14023,12 +13829,6 @@ ru-RU:
         - text: 'Что произойдет, когда ты нажмешь на кнопку «Выполнить»?
 
             '
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -14595,11 +14395,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -14768,55 +14563,6 @@ ru-RU:
         title: Опрос студентов перед курсом Открытия в Информатике
       csd-pre-survey-levelgroup_21_22_2022:
         title: Опрос студентов перед курсом Открытия в Информатике
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -17292,15 +17038,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: пояснение
         markdown: |
@@ -17430,8 +17167,6 @@ ru-RU:
           # Мое интернет-окружение
 
           ## Как обеспечить свою безопасность в Интернете?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -17851,7 +17586,6 @@ ru-RU:
         - correct: true
         questions:
         - text: Я действительно могу быть в школе самим собой.
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: пояснение
       csp-post-survey-2018-unit-feedback-preamble:
@@ -17924,9 +17658,6 @@ ru-RU:
 
 
           * Пожалуйста, помогите нам, попросив ваших студентов передать нам важные сведения. Их мнения имеют значение!
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 2 cs in general_2018:
         markdown: |
           # Информатика в целом
@@ -17934,22 +17665,15 @@ ru-RU:
           ### *Далее мы спросим вас о ваших мыслях и чувствах по поводу информатики в целом.*
 
           ***
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
       csp-pre-survey-2017 preamble 3 this class:
         markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
           свое мнение об информатике и вашем будущем.* \n\n***\n"
       csp-pre-survey-2017 preamble 3 this class_2018:
         markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
           свое мнение об информатике и вашем будущем.* \n\n***\n"
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
       csp-pre-survey-2017 preamble 3 this class_2019:
         markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
           свое мнение об информатике и вашем будущем.* \n\n***\n"
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
       csp-pre-survey-2017 preamble 4 the future:
         markdown: |
           ### Часть 4: Ваше будущее и прочее
@@ -17964,8 +17688,6 @@ ru-RU:
           #### *Далее мы попросим вас поделиться своими мыслями и чувствами о будущем и о прочих начинаниях в информатике*
 
           ***
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
       csp-pre-survey-2017 preamble 5 demographics:
         markdown: |
           ### Часть 5: Подведение итогов
@@ -17980,8 +17702,6 @@ ru-RU:
           #### *В заключение, у нас есть несколько кратких вопросов о вашем опыте работы в информатике*
 
           ***
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -19450,34 +19170,10 @@ ru-RU:
         display_name: Настроить Свое Приложение
       ml-club app-choice parent_2022:
         display_name: Настроить Свое Приложение
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Настроить Свое Приложение
       ml-intro app lab-book recommender 5_2022:
         display_name: Настроить Свое Приложение
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -19645,9 +19341,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -20011,8 +19704,6 @@ ru-RU:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

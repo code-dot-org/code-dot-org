@@ -94,7 +94,7 @@ class CreateStandardsReportStep2 extends Component {
             __useDeprecatedTag
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>

@@ -2,54 +2,14 @@
   "km-KH": {
     "data": {
       "callouts": {
-        "2-3 Artist Debugging 1": {
-        },
-        "2-3 Bee Conditionals 5": {
-        },
         "4-5 Artist Patterns Free Play": {
           "4-5_Artist_Patterns_Free_Play_1": "ប្លុកដែលអ្នកចូលចិត្តទាំងអស់ឥឡូវនេះត្រូវបានរៀបចំជាប្រភេទ។ ចុចលើពាក្យទាំងនេះដើម្បីដឹងពីកន្លែងដែលអ្វីៗបានទៅ!"
-        },
-        "4-5 Bee Conditionals 2": {
         },
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "តើអេក្រង់អ្នកបានប្ដូរពណ៌ទៅជាពណ៌បៃតងហើយឬនៅ? បើបានប្ដូរហើយចូរចុចលើប៊ូតុង 'បញ្ចប់'។ បើមិនទាន់ប្ដូរពណ៌ទេនោះអ្នកអាចចុចលើប៊ូតុង 'កំណត់ឡើងវិញ' រូចធ្វើកំណែលើកូដរបស់អ្នកមុននឹងចុចលើប៊ូតុង 'រុត' ម្ដងទៀត។"
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "ឥឡូវនេះអ្នកកំពុងតែនៅក្នុងផ្នែកឌីហ្សាញ"
-        },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
         },
         "CSD U3 Sprites anitab 1": {
           "": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
@@ -95,16 +55,6 @@
         },
         "CSD U3 Sprites text_2022": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
@@ -363,16 +313,6 @@
           "CSD_U3_L12_S8_C1": "ប្លុកទាំងនេះបង្ហាញពីពិន្ទុ។",
           "CSD_U3_L12_S8_C2": "បណ្តុំប្លុកដែលកំណត់ថាតើទន្សាយបានចាប់យកការ៉ុតទៅទីនេះ។"
         },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
@@ -506,16 +446,6 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
         "CSD U3 game variables": {
           "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
         },
@@ -531,36 +461,6 @@
         "CSD U3 game variables_2022": {
           "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
         },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
         "CSD U3 platform scoreboard": {
           "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
         },
@@ -575,16 +475,6 @@
         },
         "CSD U3 platform scoreboard_2022": {
           "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
@@ -694,56 +584,6 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
-        "CSD U6 colorLeds intensity": {
-        },
-        "CSD U6 colorLeds intensity_2018": {
-        },
-        "CSD U6 colorLeds intensity_2019": {
-        },
-        "CSD U6 colorLeds intensity_2021": {
-        },
         "CSD U6 getProperty input": {
           "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
@@ -755,38 +595,6 @@
         },
         "CSD U6 getProperty input_2021": {
           "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
-        },
-        "CSD U6 light show": {
-        },
-        "CSD U6 light show_2018": {
-        },
-        "CSD U6 light show_2019": {
-        },
-        "CSD U6 light show_2021": {
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
-        },
-        "CSD U6 tugowar variables 3": {
-        },
-        "CSD U6 tugowar variables 3_2018": {
-        },
-        "CSD U6 tugowar variables 3_2019": {
-        },
-        "CSD U6 tugowar variables 3_2021": {
         },
         "CSD games sidescroll background_2021": {
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
@@ -812,52 +620,6 @@
         "CSD web text size_2022": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
-        },
-        "Course 4 Artist 4": {
-        },
-        "Course 4 Artist 7": {
-        },
-        "Course 4 Artist For Loops 4": {
-        },
-        "Course 4 Artist Functions challenge": {
-        },
-        "Course 4 Artist Vars 1": {
-        },
-        "Course 4 Artist Vars 12": {
-        },
-        "Course 4 Artist Vars 2": {
-        },
-        "Course 4 Artist Vars 6": {
-        },
-        "Course 4 Artist Vars 8": {
-        },
-        "Course 4 Bee 1": {
-        },
-        "Course 4 Bee 3": {
-        },
-        "Course 4 Bee Params 2": {
-        },
-        "Course 4 Maze 4": {
-        },
-        "Course 4 Play Lab Params 2": {
-        },
-        "Course 4 Play Lab Params 3": {
-        },
-        "Course 4 Play Lab Params 6": {
-        },
-        "Course 4 Play Lab Vars 1": {
-        },
-        "Course 4 Play Lab Vars 9": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 SCV 6": {
-        },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "ចូរជ្រើសរើសប្រភេទអ្នករបាំនៅទីនេះ។"
         },
@@ -872,18 +634,12 @@
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
         },
         "CourseD_Dance_2020_022022": {
-          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
+          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញ ដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
         },
         "CourseD_Dance_2020_02_2021": {
           "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
-        },
-        "CourseD_Dance_2020_04": {
-        },
-        "CourseD_Dance_2020_042022": {
-        },
-        "CourseD_Dance_2020_04_2021": {
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
@@ -894,44 +650,6 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
         },
-        "CourseD_Dance_2020_06": {
-        },
-        "CourseD_Dance_2020_062022": {
-        },
-        "CourseD_Dance_2020_06_2021": {
-        },
-        "CourseD_Dance_2020_07": {
-        },
-        "CourseD_Dance_2020_072022": {
-        },
-        "CourseD_Dance_2020_07_2021": {
-        },
-        "CourseD_Dance_2020_09": {
-        },
-        "CourseD_Dance_2020_092022": {
-        },
-        "CourseD_Dance_2020_09_2021": {
-        },
-        "CourseD_Dance_Party_01": {
-        },
-        "CourseD_Dance_Party_02": {
-        },
-        "CourseD_Dance_Party_04": {
-        },
-        "CourseD_Dance_Party_06": {
-        },
-        "CourseD_Dance_Party_11": {
-        },
-        "CourseD_Dance_Party_11_5": {
-        },
-        "CourseF_outbreak2": {
-        },
-        "CourseF_outbreak2_-2022-2": {
-        },
-        "CourseF_outbreak7": {
-        },
-        "CourseF_outbreak7_-2022-2": {
-        },
         "Dance_2019_01": {
           "dance_callout_01": "ចូរជ្រើសរើសប្រភេទអ្នករបាំនៅទីនេះ។"
         },
@@ -939,44 +657,20 @@
           "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
         },
-        "Dance_2019_04": {
-        },
         "Dance_2019_05": {
           "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
         },
-        "Dance_2019_06": {
-        },
-        "Dance_2019_07": {
-        },
-        "Dance_2019_09": {
-        },
-        "Dance_Party_01": {
-        },
-        "Dance_Party_02": {
-        },
-        "Dance_Party_04": {
-        },
-        "Dance_Party_06": {
-        },
-        "Dance_Party_11": {
-        },
-        "Dance_Party_11_5": {
-        },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "ពាក្យបញ្ជាបន្តិចបន្តួចនេះប្រាប់កុំព្យូទ័រឲដំណើរការកូដដ៏ច្រើនដែលមានឈ្មោះដូចគ្នានៅក្នុងកន្លែងសរសេរកូដ។"
@@ -999,20 +693,8 @@
         "Geometric Sun_2018": {
           "4-5_Artist_Patterns_Free_Play_1": "ប្លុកដែលអ្នកចូលចិត្តទាំងអស់ឥឡូវនេះត្រូវបានរៀបចំជាប្រភេទ។ ចុចលើពាក្យទាំងនេះដើម្បីដឹងពីកន្លែងដែលអ្វីៗបានទៅ!"
         },
-        "Infinity_move_collide": {
-        },
-        "Infinity_move_directions": {
-        },
-        "Infinity_move_right": {
-        },
-        "Infinity_repeat": {
-        },
         "InspirationalArtwork": {
           "InspirationalArtwork_1": "ព្យាយាមប្រើប្លុក `អត្ថាធិប្បាយ‍ថ្មី` នៅក្រោមស្លាកនេះដើម្បីទុកកំណត់ចំណាំនៅក្នុងកម្មវិធីរបស់អ្នក!"
-        },
-        "InspirationalArtwork_2018": {
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "នៅពេលដែលអ្នករៀបរយរួចហើយ ចុច «រត់» ដើម្បីសាកប្រ៉ូក្រាមរបស់អ្នក។"
@@ -1080,82 +762,26 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "ជំនួយការអាចដើរឆ្លងកាត់កំអែភ្នំភ្លើងបាន តែ Steve និង Alex មិនអាចទេ!  "
         },
-        "NEW Course 4 Artist Functions 3": {
-        },
-        "NEW Course 4 Artist Functions 7": {
-        },
-        "NEW Course 4 Artist Functions 8": {
-        },
-        "NEW Course 4 Artist Params 10": {
-        },
-        "NEW Course 4 Artist Params 2": {
-        },
-        "NEW Course 4 Artist Params 9": {
-        },
-        "NEW Course 4 Artist Vars 6": {
-        },
-        "NEW Course 4 Bee For Loops 4": {
-        },
-        "NEW Course 4 Bee For Loops 5": {
-        },
-        "New Artist Project": {
-        },
-        "New Frozen Project": {
-        },
-        "New Play Lab Project": {
-        },
-        "New Sprite Lab Project": {
-        },
-        "OPD-K5-forloops-5": {
-        },
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
         "OPD-K5-spritelab-3": {
-        },
-        "OPD-K5-variables-1": {
-        },
-        "OPD-K5-variables-5": {
-        },
-        "Overworld Chop Trees": {
-        },
-        "Overworld Chop Trees2022": {
-        },
-        "Overworld Chop Trees_2019": {
-        },
-        "Overworld Chop Trees_2020": {
-        },
-        "Overworld Chop Trees_2021": {
-        },
-        "Overworld House Frame Chosen": {
-        },
-        "Overworld House Frame Chosen2022": {
-        },
-        "Overworld House Frame Chosen_2019": {
-        },
-        "Overworld House Frame Chosen_2020": {
-        },
-        "Overworld House Frame Chosen_2021": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
         },
         "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
         },
         "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
         },
         "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
         },
         "Overworld Move to Sheep_2021": {
-        },
-        "Overworld Place Wall": {
-        },
-        "Overworld Place Wall2022": {
-        },
-        "Overworld Place Wall_2019": {
-        },
-        "Overworld Place Wall_2020": {
-        },
-        "Overworld Place Wall_2021": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
         },
         "Robot Doodle": {
           "4-5_Artist_Patterns_Free_Play_2": "ព្យាយាមប្រើប្លុក `អត្ថាធិប្បាយ‍ថ្មី` នៅក្រោមស្លាកនេះដើម្បីទុកកំណត់ចំណាំនៅក្នុងកម្មវិធីរបស់អ្នក!"
@@ -1163,59 +789,17 @@
         "Robot Doodle_2018": {
           "4-5_Artist_Patterns_Free_Play_2": "ព្យាយាមប្រើប្លុក `អត្ថាធិប្បាយ‍ថ្មី` នៅក្រោមស្លាកនេះដើម្បីទុកកំណត់ចំណាំនៅក្នុងកម្មវិធីរបស់អ្នក!"
         },
-        "Underground Avoiding Lava": {
-        },
-        "Underground Avoiding Lava2022": {
-        },
-        "Underground Avoiding Lava_2019": {
-        },
-        "Underground Avoiding Lava_2020": {
-        },
-        "Underground Avoiding Lava_2021": {
-        },
-        "Underground Iron": {
-        },
-        "Underground Iron2022": {
-        },
-        "Underground Iron_2019": {
-        },
-        "Underground Iron_2020": {
-        },
-        "Underground Iron_2021": {
-        },
         "Virtual Pet 2_-2022-2": {
-        },
-        "Virtual Pet 2_2019": {
-        },
-        "Virtual Pet 2_2020": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
         },
         "Virtual Pet 2_2021": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
         },
         "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
         },
         "Virtual Pet 6_2021": {
-        },
-        "behaviors 1": {
-        },
-        "behaviors 1_2020": {
-        },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
-        "behaviors 4": {
-        },
-        "behaviors 4_2020": {
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
-        "course2_bee_conditionals_challenge2": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
         },
         "course3_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។",
@@ -1228,28 +812,12 @@
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
         },
-        "course3_bee_functions_challenge3": {
-        },
-        "course3_playLab_challenge1": {
-        },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។",
           "courseE_artist_functions_challenge2_callout2": "\nប្រសិនបើអ្នកមិនចូលចិត្តការរចនានេះទេ, ប្តូរវាទៅជាអ្វីដែលអ្នកចង់បាន!"
         },
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "មុខងារនេះនឹងធ្វើការបានល្អជាមួយពោត, ប៉ុន្តែចុះធ្វើយ៉ាងណាចំពោះបន្លែផ្សេងទៀត?"
-        },
-        "courseA_EOC_playlab_animals": {
-        },
-        "courseA_EOC_playlab_animals2022": {
-        },
-        "courseA_EOC_playlab_fantasy": {
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-        },
-        "courseA_EOC_playlab_people": {
-        },
-        "courseA_EOC_playlab_people2022": {
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "លេខនេះប្រាប់អ្នកអំពីចំនួនប្លុកនេះដែលអ្នកអាចប្រើក្នុងបញ្ហានេះ។"
@@ -1287,28 +855,8 @@
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_1": "លេខដែលបង្ហាញមានន័យថា អ្នកអាចប្រើប្លុកនេះបានតែចំនួនដងដែលបានកំណត់ប៉ុណ្ណោះ។"
         },
-        "courseA_artist_loops8": {
-        },
-        "courseA_artist_loops82022": {
-        },
-        "courseA_artist_loops8_2018": {
-        },
-        "courseA_artist_loops8_2019": {
-        },
-        "courseA_artist_loops8_2020": {
-        },
-        "courseA_artist_loops8_2021": {
-        },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "តើអ្នកឃើញប្លុកថ្មីក្នុងប្រអប់ឧបករណ៍ដែរឬទេ? កំុបារម្ភអី យើងនឹងបង្ហាញអ្នករបៀបប្រើវានៅដំណាក់កាលក្រោយ។"
-        },
-        "courseA_collector_loops12022": {
-        },
-        "courseA_collector_loops1_2019": {
-        },
-        "courseA_collector_loops1_2020": {
-        },
-        "courseA_collector_loops1_2021": {
         },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "លេខនេះប្រាប់អ្នកអំពីចំនួនប្លុកនេះដែលអ្នកអាចប្រើក្នុងបញ្ហានេះ។"
@@ -1327,8 +875,6 @@
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "លេខនេះប្រាប់អ្នកអំពីចំនួនប្លុកនេះដែលអ្នកអាចប្រើក្នុងបញ្ហានេះ។"
-        },
-        "courseA_collector_preLoops1": {
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "តើអ្នកឃើញប្លុកថ្មីក្នុងប្រអប់ឧបករណ៍ដែរឬទេ? កំុបារម្ភអី យើងនឹងបង្ហាញអ្នករបៀបប្រើវានៅដំណាក់កាលក្រោយ។"
@@ -1384,18 +930,6 @@
         "courseA_maze_seq4": {
           "made_of_stone": "ប្លុកទាំងនេះត្រូវបានធ្វើឡើងពីដុំថ្ម។ អ្នកអាចផ្លាស់ទីវា ប៉ុន្តែអ្នកមិនអាចលុបវាបានទេ"
         },
-        "courseA_playLab_events4": {
-        },
-        "courseA_playLab_events42022": {
-        },
-        "courseA_playLab_events4_2018": {
-        },
-        "courseA_playLab_events4_2019": {
-        },
-        "courseA_playLab_events4_2020": {
-        },
-        "courseA_playLab_events4_2021": {
-        },
         "courseA_playLab_events5": {
           "courseA_playLab_events5_1": "ចុចទីនេះដើម្បីផ្លាស់ប្តូរទិសដៅព្រួញនៃព្រឹត្តិការណ៍។"
         },
@@ -1413,18 +947,6 @@
         },
         "courseA_playLab_events5_2021": {
           "courseA_playLab_events5_1": "ចុចទីនេះដើម្បីផ្លាស់ប្តូរទិសដៅព្រួញនៃព្រឹត្តិការណ៍។"
-        },
-        "courseA_playLab_events6": {
-        },
-        "courseA_playLab_events62022": {
-        },
-        "courseA_playLab_events6_2018": {
-        },
-        "courseA_playLab_events6_2019": {
-        },
-        "courseA_playLab_events6_2020": {
-        },
-        "courseA_playLab_events6_2021": {
         },
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច ▶ ប៊ូតុង \"ដំណើរការ\" ដើម្បីដំណើរការកម្មវិធីរបស់អ្នក។"
@@ -1480,14 +1002,6 @@
         "courseB_collector_loops12022": {
           "courseB_collector_loops1_1": "ប្រើប្លុកនេះដើម្បីប្រមូលកំណប់។"
         },
-        "courseB_collector_loops1_2018": {
-        },
-        "courseB_collector_loops1_2019": {
-        },
-        "courseB_collector_loops1_2020": {
-        },
-        "courseB_collector_loops1_2021": {
-        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "ចុចលើរូបសញ្ញាអំពូលនៅពេលដែលអ្នកត្រូវការជំនួយ!"
         },
@@ -1542,72 +1056,20 @@
         "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
-        "courseC_PlayLab_events8": {
-        },
-        "courseC_PlayLab_events82022": {
-        },
-        "courseC_PlayLab_events8_2018": {
-        },
-        "courseC_PlayLab_events8_2019": {
-        },
-        "courseC_PlayLab_events8_2020": {
-        },
-        "courseC_PlayLab_events8_2021": {
-        },
-        "courseC_PlayLab_events_challenge1": {
-        },
-        "courseC_PlayLab_events_challenge12022": {
-        },
-        "courseC_PlayLab_events_challenge1_2018": {
-        },
-        "courseC_PlayLab_events_challenge1_2019": {
-        },
-        "courseC_PlayLab_events_challenge1_2020": {
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-        },
         "courseC_artist_loops1a2022": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
         },
         "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
         },
         "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
         },
         "courseC_artist_loops1a_2021": {
-        },
-        "courseC_artist_loops1b2022": {
-        },
-        "courseC_artist_loops1b_2019": {
-        },
-        "courseC_artist_loops1b_2020": {
-        },
-        "courseC_artist_loops1b_2021": {
-        },
-        "courseC_artist_loopsPrePre1a": {
-        },
-        "courseC_artist_loopsPrePre1a_2018": {
-        },
-        "courseC_artist_loopsPrePre1a_2019": {
-        },
-        "courseC_artist_loopsPrePre1a_2020": {
-        },
-        "courseC_artist_prog22022": {
-        },
-        "courseC_artist_prog2_2021": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
         },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "តើអ្នកឃើញប្លុកថ្មីក្នុងប្រអប់ឧបករណ៍ដែរឬទេ? កំុបារម្ភអី យើងនឹងបង្ហាញអ្នករបៀបប្រើវានៅដំណាក់កាលក្រោយ។"
-        },
-        "courseC_collector_prog12022": {
-        },
-        "courseC_collector_prog1_2018": {
-        },
-        "courseC_collector_prog1_2019": {
-        },
-        "courseC_collector_prog1_2020": {
-        },
-        "courseC_collector_prog1_2021": {
         },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "ប្រសិនបើអ្នកត្រូវការ ប្លុកច្រើន អ្នកអាចទាញយកពីប្រអប់កូដប្លុក។​"
@@ -1627,40 +1089,8 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "ប្រសិនបើអ្នកត្រូវការ ប្លុកច្រើន អ្នកអាចទាញយកពីប្រអប់កូដប្លុក។​"
         },
-        "courseC_harvester_loops1": {
-        },
-        "courseC_harvester_loops12022": {
-        },
-        "courseC_harvester_loops1_2018": {
-        },
-        "courseC_harvester_loops1_2019": {
-        },
-        "courseC_harvester_loops1_2020": {
-        },
-        "courseC_harvester_loops1_2021": {
-        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "ប្លក់ពណ័ប្រផេះមិនអាចលុបចោលបានទេ!"
-        },
-        "courseC_maze_debugging52022": {
-        },
-        "courseC_maze_debugging5_2018": {
-        },
-        "courseC_maze_debugging5_2019": {
-        },
-        "courseC_maze_debugging5_2020": {
-        },
-        "courseC_maze_debugging5_2021": {
-        },
-        "courseC_maze_debugging92022": {
-        },
-        "courseC_maze_debugging9_2019": {
-        },
-        "courseC_maze_debugging9_2020": {
-        },
-        "courseC_maze_debugging9_2021": {
-        },
-        "courseC_maze_debugging9_copy_2020": {
         },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច \"ដំណើរការ\" ដើម្បីចាប់ផ្តើមកម្មវិធីរបស់អ្នក។"
@@ -1782,22 +1212,6 @@
           "courseC_maze_programming7_1": "នេះគឺជាហ្គេមសាកល្បងទីមួយរបស់អ្នក។ វាគឺពិបាក ហើយនឹងអាចតម្រូវឲ្យព្យាយាមជាច្រើនសារ។",
           "courseC_maze_programming7_2": "ប្លុកទាំងអស់នេះធ្វេីពីថ្ម ហេីយមិនអាចបោះវាចោលបានទេ។"
         },
-        "courseC_starWars_loops2": {
-        },
-        "courseC_starWars_loops22022": {
-        },
-        "courseC_starWars_loops2_2018": {
-        },
-        "courseC_starWars_loops2_2019": {
-        },
-        "courseC_starWars_loops2_2020": {
-        },
-        "courseC_starWars_loops2_2021": {
-        },
-        "courseC_starWars_loops2_copy": {
-        },
-        "courseC_starWars_loops2_dani": {
-        },
         "courseC_video_angles": {
           "courseD_maze_ramp6_1": "កូដអ្វីក៏ដោយដែលអ្នកបានដាក់នៅទីនេះនឹងធ្វើម្តងទៀតច្រើនដងដូចដែលអ្នកបានប្រាប់ពួកវា បន្ទាប់មកបន្តដំណើរការកម្មវិធីដែលនៅសល់។"
         },
@@ -1823,34 +1237,6 @@
           "courseD_artist_ramp11_1": "អ្នកអាចកែលេខនេះបាន។",
           "courseD_artist_ramp11_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
         },
-        "courseD_bee_conditionals2": {
-        },
-        "courseD_bee_conditionals22022": {
-        },
-        "courseD_bee_conditionals2_2018": {
-        },
-        "courseD_bee_conditionals2_2019": {
-        },
-        "courseD_bee_conditionals2_2020": {
-        },
-        "courseD_bee_conditionals2_2021": {
-        },
-        "courseD_bee_conditionals2_copy": {
-        },
-        "courseD_bee_conditionals2_dani": {
-        },
-        "courseD_bee_conditionals_challenge2": {
-        },
-        "courseD_bee_conditionals_challenge22022": {
-        },
-        "courseD_bee_conditionals_challenge2_2018": {
-        },
-        "courseD_bee_conditionals_challenge2_2019": {
-        },
-        "courseD_bee_conditionals_challenge2_2020": {
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
         },
@@ -1858,21 +1244,13 @@
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
         },
         "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "ព្យាយាម ពិនិត្យមើលដំណើរការកូដរបស់អ្នកម្តងមួយប្លុកៗ"
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "ព្យាយាម ពិនិត្យមើលដំណើរការកូដរបស់អ្នកម្តងមួយប្លុកៗ"
         },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "ប្រើប្លុកនេះដើម្បីជីកយកកំណប់មួយដុំ។"
-        },
-        "courseD_farmer_while72022": {
-        },
-        "courseD_farmer_while7_2018": {
-        },
-        "courseD_farmer_while7_2019": {
-        },
-        "courseD_farmer_while7_2020": {
-        },
-        "courseD_farmer_while7_2021": {
         },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "នេះគឺជាដែនកំណត់នៃប្លុករបស់អ្នក។ វាប្រាប់អ្នកពីចំនួនប្លុកដែលអ្នកនៅសល់សម្រាប់ទុកប្រើ។"
@@ -1999,10 +1377,6 @@
         "courseD_maze_ramp6": {
           "courseD_maze_ramp6_1": "កូដអ្វីក៏ដោយដែលអ្នកបានដាក់នៅទីនេះនឹងធ្វើម្តងទៀតច្រើនដងដូចដែលអ្នកបានប្រាប់ពួកវា បន្ទាប់មកបន្តដំណើរការកម្មវិធីដែលនៅសល់។"
         },
-        "courseD_playLab_condFP": {
-        },
-        "courseD_playLab_condFP_2018": {
-        },
         "courseD_scrat_ramp1": {
           "grade2_CaringForNewPet_0_1": "បន្ទាប់ពីភ្ជាប់ប្លុកទាំងអស់រួចហើយ ចុច ▶ ប៊ូតុង \"ដំណើរការ\" ដើម្បីដំណើរការកម្មវិធីរបស់អ្នក។"
         },
@@ -2030,14 +1404,6 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "អ្នកអាចកែលេខនេះបាន។",
           "courseE_artist_ramp8_2": "ចុចទីនេះដើម្បីវាយបញ្ចូលចំនួនដែលអ្នកចង់អោយកូដរបស់អ្នកធ្វើឡើងវិញ។"
-        },
-        "courseE_aboutme_2": {
-        },
-        "courseE_aboutme_22022": {
-        },
-        "courseE_aboutme_2_2020": {
-        },
-        "courseE_aboutme_2_2021": {
         },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "\nចាប់ផ្តើមប្រើប្លុកនេះ ដើម្បីជួយបង្កើតជារាងការ៉េដំបូង។"
@@ -2215,66 +1581,86 @@
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "បន្លែនេះមិនត្រូវបានគេដឹងទេ។ វាផ្លាស់ប្តូររាល់ពេលដែលអ្នកដំណើរការកម្មវិធី។"
         },
-        "courseE_playLab_challenge1": {
-        },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
         "courseF_apps_aquarium": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_aquarium2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_aquarium_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_card": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_card2022": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_madlib": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_artist_for1": {
           "courseF_artist_for1_1": "ប្លុកត្រូវបានចែកជាផ្នែកៗ ហើយដាក់ជា \"ក្រុម\" ដើម្បីមានកន្លែងទូលាយសម្រាប់ការសរសេរកូដ។ អ្នកអាចរកប្លុក \"for loops\" នៅទីនេះ។"
@@ -2293,20 +1679,6 @@
         },
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "ប្លុកត្រូវបានចែកជាផ្នែកៗ ហើយដាក់ជា \"ក្រុម\" ដើម្បីមានកន្លែងទូលាយសម្រាប់ការសរសេរកូដ។ អ្នកអាចរកប្លុក \"for loops\" នៅទីនេះ។"
-        },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp4": {
-        },
-        "courseF_artist_fwp5": {
-        },
-        "courseF_artist_variables3": {
-        },
-        "courseF_artist_variables3_2018": {
-        },
-        "courseF_artist_variables3_2019": {
-        },
-        "courseF_artist_variables3_2020": {
         },
         "courseF_artist_variables6": {
           "courseF_artist_variables6_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
@@ -2332,322 +1704,50 @@
         "courseF_artist_variables6a_2020": {
           "courseF_artist_variables6a_1": "អថេរអាចមានប្រយោជន៍នៅពេលអ្នកត្រូវផ្លាស់ប្តូរលេខដូចៗគ្នាជាច្រើន។"
         },
-        "courseF_bee_conditionals2": {
-        },
-        "courseF_bee_conditionals5": {
-        },
-        "courseF_bee_for4": {
-        },
-        "courseF_bee_for42022": {
-        },
-        "courseF_bee_for4_2018": {
-        },
-        "courseF_bee_for4_2019": {
-        },
-        "courseF_bee_for4_2020": {
-        },
-        "courseF_bee_for4_2021": {
-        },
-        "courseF_bee_for9": {
-        },
-        "courseF_bee_for92022": {
-        },
-        "courseF_bee_for9_2018": {
-        },
-        "courseF_bee_for9_2019": {
-        },
-        "courseF_bee_for9_2020": {
-        },
-        "courseF_bee_for9_2021": {
-        },
-        "courseF_bee_functions2": {
-        },
-        "courseF_bee_functions6": {
-        },
-        "courseF_bee_functions_challenge1": {
-        },
-        "courseF_bee_fwp1": {
-        },
-        "courseF_bee_fwp2": {
-        },
-        "courseF_bee_fwp3": {
-        },
-        "courseF_bee_fwp4": {
-        },
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "មុខងារនេះនឹងធ្វើការបានល្អជាមួយពោត, ប៉ុន្តែចុះធ្វើយ៉ាងណាចំពោះបន្លែផ្សេងទៀត?"
         },
-        "courseF_bee_variables_1_2018": {
-        },
-        "courseF_bee_variables_1_2019": {
-        },
-        "courseF_bee_variables_1_2020": {
-        },
-        "courseF_bee_variables_1a2022": {
-        },
-        "courseF_bee_variables_1a_2021": {
-        },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_editable_chatbot": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_editable_madlib": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_editable_madlib_-2022-2": {
-        },
-        "courseF_events_choice_penguin": {
-        },
-        "courseF_events_choice_penguin_-2022-2": {
-        },
-        "courseF_events_conflict": {
-        },
-        "courseF_events_conflict_-2022-2": {
-        },
-        "courseF_events_key": {
-        },
-        "courseF_events_key_-2022-2": {
-        },
-        "courseF_events_practice_reorder": {
-        },
-        "courseF_events_practice_reorder_-2022-2": {
-        },
-        "courseF_events_predict": {
-        },
-        "courseF_events_predict_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_events_time": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
         },
         "courseF_events_time_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_label_predict": {
-        },
-        "courseF_label_predict_-2022-2": {
-        },
-        "courseF_playlab_variables1a": {
-        },
-        "courseF_playlab_variables5c": {
-        },
-        "courseF_playlab_variables6c": {
-        },
-        "courseF_playlab_variables7c": {
-        },
-        "courseF_sprites_behaviors": {
-        },
-        "courseF_sprites_behaviors_-2022-2": {
-        },
-        "courseF_sprites_make": {
-        },
-        "courseF_sprites_make_-2022-2": {
-        },
-        "courseF_sprites_positioning": {
-        },
-        "courseF_sprites_positioning_-2022-2": {
-        },
-        "courseF_sprites_properties": {
-        },
-        "courseF_sprites_properties_-2022-2": {
-        },
-        "courseF_text_answer": {
-        },
-        "courseF_text_answer_-2022-2": {
-        },
-        "courseF_text_choice_color": {
-        },
-        "courseF_text_choice_color_-2022-2": {
-        },
-        "courseF_text_choice_conversation": {
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-        },
-        "courseF_text_choice_title": {
-        },
-        "courseF_text_choice_title_-2022-2": {
-        },
-        "courseF_text_concat": {
-        },
-        "courseF_text_concat_-2022-2": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
         },
         "courseF_text_events": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
         },
         "courseF_text_events_-2022-2": {
-        },
-        "courseF_text_print": {
-        },
-        "courseF_text_print_-2022-2": {
-        },
-        "courseF_text_prompts": {
-        },
-        "courseF_text_prompts_-2022-2": {
-        },
-        "courseF_variables2_predict_-2022-2": {
-        },
-        "courseF_variables_predict": {
-        },
-        "courseF_variables_predict_-2022-2": {
-        },
-        "coursea_maze_ramp12022": {
-        },
-        "coursea_maze_ramp1_2018": {
-        },
-        "coursea_maze_ramp1_2019": {
-        },
-        "coursea_maze_ramp1_2020": {
-        },
-        "coursea_maze_ramp1_2021": {
-        },
-        "coursee_helloworld_events": {
-        },
-        "coursee_helloworld_freeplay": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
         },
         "coursee_helloworld_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
         },
-        "express_maze_debugging92022": {
-        },
-        "express_maze_debugging9_2019": {
-        },
-        "express_maze_debugging9_2020": {
-        },
-        "express_maze_debugging9_2021": {
-        },
-        "frozen circle function with parameter": {
-        },
-        "frozen cross": {
-        },
-        "frozen cross rotate": {
-        },
-        "frozen diamond": {
-        },
-        "frozen diamond snowflake": {
-        },
-        "frozen freeplay": {
-        },
         "frozen line": {
           "run": "អ្នកអាចចុចលើពាក្យ «រត់» ដើម្បីសកល្បងមើលថាកម្មវិធីអ្នកដំណើរការយ៉ាងម៉េច។"
-        },
-        "frozen perpendicular": {
-        },
-        "frozen snowflake branch": {
-        },
-        "frozen square iterative": {
-        },
-        "frozen square loop": {
-        },
-        "frozen square loop 3x": {
-        },
-        "frozen square snowflake": {
-        },
-        "grade5_artist_variables_triangles1": {
-        },
-        "grade5_artist_variables_triangles1_2018": {
-        },
-        "grade5_artist_variables_triangles1_2019": {
-        },
-        "grade5_artist_variables_triangles1_2020": {
-        },
-        "helloworld_animals_backgrounds": {
-        },
-        "helloworld_animals_behaviors": {
-        },
-        "helloworld_animals_click": {
-        },
-        "helloworld_animals_costumes": {
-        },
-        "helloworld_animals_events": {
-        },
-        "helloworld_animals_freeplay": {
-        },
-        "helloworld_animals_location": {
-        },
-        "helloworld_animals_multi": {
         },
         "helloworld_animals_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
         },
-        "helloworld_animals_sizes": {
-        },
-        "helloworld_animals_sounds": {
-        },
-        "helloworld_emoji_backgrounds": {
-        },
-        "helloworld_emoji_behaviors": {
-        },
-        "helloworld_emoji_click": {
-        },
-        "helloworld_emoji_costumes": {
-        },
-        "helloworld_emoji_events": {
-        },
-        "helloworld_emoji_freeplay": {
-        },
-        "helloworld_emoji_location": {
-        },
-        "helloworld_emoji_multi": {
-        },
         "helloworld_emoji_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
-        },
-        "helloworld_emoji_sizes": {
-        },
-        "helloworld_emoji_sounds": {
-        },
-        "helloworld_food_backgrounds": {
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-        },
-        "helloworld_food_backgrounds_space-2022": {
-        },
-        "helloworld_food_behaviors": {
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-        },
-        "helloworld_food_behaviors_space-2022": {
-        },
-        "helloworld_food_click": {
-        },
-        "helloworld_food_click_soccer-2022": {
-        },
-        "helloworld_food_click_space-2022": {
-        },
-        "helloworld_food_costumes": {
-        },
-        "helloworld_food_costumes_soccer-2022": {
-        },
-        "helloworld_food_costumes_space-2022": {
-        },
-        "helloworld_food_events": {
-        },
-        "helloworld_food_events_soccer-2022": {
-        },
-        "helloworld_food_events_space-2022": {
-        },
-        "helloworld_food_freeplay": {
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-        },
-        "helloworld_food_freeplay_space-2022": {
-        },
-        "helloworld_food_location": {
-        },
-        "helloworld_food_location_soccer-2022": {
-        },
-        "helloworld_food_location_space-2022": {
-        },
-        "helloworld_food_multi": {
-        },
-        "helloworld_food_multi_soccer-2022": {
-        },
-        "helloworld_food_multi_space-2022": {
         },
         "helloworld_food_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
@@ -2658,122 +1758,8 @@
         "helloworld_food_say_space-2022": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
         },
-        "helloworld_food_sizes": {
-        },
-        "helloworld_food_sizes_soccer-2022": {
-        },
-        "helloworld_food_sizes_space-2022": {
-        },
-        "helloworld_food_sounds": {
-        },
-        "helloworld_food_sounds_soccer-2022": {
-        },
-        "helloworld_food_sounds_space-2022": {
-        },
-        "helloworld_retro_backgrounds": {
-        },
-        "helloworld_retro_behaviors": {
-        },
-        "helloworld_retro_click": {
-        },
-        "helloworld_retro_costumes": {
-        },
-        "helloworld_retro_events": {
-        },
-        "helloworld_retro_freeplay": {
-        },
-        "helloworld_retro_location": {
-        },
-        "helloworld_retro_multi": {
-        },
         "helloworld_retro_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."
-        },
-        "helloworld_retro_sizes": {
-        },
-        "helloworld_retro_sounds": {
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
-        },
-        "poetry_hoc_addSprites": {
-        },
-        "poetry_hoc_backgroundEffects": {
-        },
-        "poetry_hoc_events1": {
-        },
-        "poetry_hoc_freeplay": {
-        },
-        "poetry_hoc_sounds": {
-        },
-        "poetry_hoc_spriteBehaviors": {
-        },
-        "poetry_hoc_spriteSizes": {
         }
       }
     }

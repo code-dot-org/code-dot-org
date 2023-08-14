@@ -670,7 +670,6 @@ sk-SK:
           ### Najprv dizajn
 
           Niektorí študenti môžu byť v pokušení začať sa hrať v programovacom režime príliš skoro, ale v tejto lekcii sa zameriame výlučne na simuláciu používateľského rozhrania. Dajte študentom vedieť, že sa ku kódu čoskoro dostanú. Týchto prvých pár úrovní umožní študentom zostaviť obrazovku ich vlastného dizajnu pomocou všetkých prvkov dostupných v App Lab bez obáv o skutočnú aplikáciu, ktorú vytvárajú.
-      CSD - Getters and Setters: {}
       CSD CSS project RGB_2021:
         description: Zisti, ako môžeš používať ešte viac farieb pomocou RGB kódov.
         display_name: RGB farby
@@ -687,7 +686,6 @@ sk-SK:
           lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké štýly použiješ
           na svojej webovej stránke.
         display_name: Opakovanie CSS
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
       CSD Games Parameters challenge_2021:
         description: Vyskúšaj si jeden alebo viacero z týchto ďalších blokov, ktoré
           môžeš použiť na spestrenie svojich obrázkov.
@@ -897,7 +895,6 @@ sk-SK:
         title: 'Programovanie s hardvérom: Záverečný test'
       CSD Physical Computing Post-Project Test_2022:
         title: 'Programovanie s hardvérom: Záverečný test'
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - text: Stiahne z internetu predpoveď počasia
@@ -1161,9 +1158,6 @@ sk-SK:
         content1: Sem pridať popis
       CSD U2 Design Project_2018_2019:
         content1: Sem pridať popis
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
       CSD U2 Expression Exemplars_2018_2019_pilot_2021:
         markdown: |
           # Príklady osobných webov
@@ -1213,7 +1207,6 @@ sk-SK:
           - Sprievodca aktivitami](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)\n"
         teacher_markdown: "* [Účel webovej stránky - Príklad](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: Sem pridať popis
         markdown: "# Prehľad\n\nTáto lekcia predstavuje webstránky ako spôsob osobného
@@ -1283,13 +1276,8 @@ sk-SK:
           - `<ul></ul>`\n*  **[Zoznam položiek](//studio.code.org/docs/weblab/li/)**
           - `<li></li>`\n*  **[Usporiadaný zoznam](//studio.code.org/docs/weblab/ol/)**
           - `<ol></ol>`"
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: Sem pridať popis
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
       CSD U2 Sample CSS layout_2021:
         markdown: |+
           # Ukážkové weby
@@ -1677,8 +1665,6 @@ sk-SK:
           na online nákup rôznych tovarov \n4. Yahoo.com - vyhľadávač, poskytovateľ
           účtu (email) , spravodajský zdroj \n5. Wikipedia.org - voľná encyklopédia
           vytvorená užívateľmi \n"
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
       CSD U2 Top Websites_2018_2019_pilot_2021:
         markdown: |
           # Weby na riešenie problémov
@@ -1950,8 +1936,6 @@ sk-SK:
           # Kontrolný bod pri plánovaní:
 
           Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -2539,9 +2523,6 @@ sk-SK:
           * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
           * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
 
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
       CSD U3 Project Build a Game SFLP:
         markdown: "# Prehľad\n\nV tejto lekcii si pomocou Sprievodcu projektom a postupu
           z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
@@ -3158,22 +3139,6 @@ sk-SK:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: Sem pridať popis
       CSD U5 Encryption 1_2018:
@@ -3355,39 +3320,28 @@ sk-SK:
         title: 'Záverečný test: Údaje a spoločnosť'
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Úrovne výzvy
       CSD U6 - Music - Chal_2222:
         display_name: Úrovne výzvy
       CSD U6 - Physical Input - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Úrovne výzvy
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: Sem pridať popis
       CSD U6 LED create intro_2018:
@@ -3428,10 +3382,6 @@ sk-SK:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: Sem pridať popis
       CSD U6 final intro_2018:
@@ -3889,26 +3839,6 @@ sk-SK:
       CSD web text practice choice_2022:
         description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
         display_name: Cvičenie
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -3921,7 +3851,6 @@ sk-SK:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -4281,10 +4210,6 @@ sk-SK:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |-
           # Dizajn, ktorý je dostupný
@@ -4354,8 +4279,6 @@ sk-SK:
           # Digitálne zdieľanie
 
           V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# Premenné v obálkach \n\nPremenné v informatike umožňujú voľnosť.
           V tejto lekcii sa dozviete, čo sú premenné a akými rozličnými spôsobmi ich
@@ -4379,8 +4302,6 @@ sk-SK:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |-
           # Zábava s cyklami "for"
@@ -4794,124 +4715,38 @@ sk-SK:
           spoločne\n Po určitom čase hrania sa porozprávaj s niekým, či už partnerom,
           malou skupinou alebo celou triedou, o tom, čo ste zistili. Overte si, že
           viete, čo sa deje, a poznáte rôzne spôsoby, ako môžete tento nástroj použiť.\n"
-      OPD-K5 About: {}
-      OPD-K5 About_copy: {}
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
-      OPD-K5 Assessment_copy: {}
-      OPD-K5 Assessment_dani: {}
-      OPD-K5 CS Courses: {}
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
-      OPD-K5 CS Tips_copy: {}
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
-      OPD-K5 Connect_copy: {}
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
-      OPD-K5 Outline: {}
-      OPD-K5 Outline_copy: {}
-      OPD-K5 Outline_dani: {}
-      OPD-K5 Pair: {}
-      OPD-K5 Pair_copy: {}
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
-      OPD-K5 Participation_copy: {}
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
+      OPD-K5 CS Courses:
+        markdown: "# Plánovanie > Začíname s Code.org\n\n\n## 1. krok: Vyberte si
+          kurz\nVšetky naše kurzy - od predškolských až po stredoškolské - sú uvedené
+          v našom **[katalógu kurzov](https://studio.code.org/courses)**. Ak chcete
+          nájsť lekcie Základy informatiky, ktoré ste precvičovali, prejdite na našu
+          **[stránku pre základné školy](https://code.org/educate/curriculum/elementary-school)**
+          a posuňte sa nadol do časti „Kurzy“. Všetky naše kurzy sú k dispozícii zadarmo.
+          Porozprávajte sa s kolegami vo vašej škole a zistite, ako sa dá učivo kurzu
+          integrovať do rôznych predmetov.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          2. krok: Nastavte si sekciu triedy\nNastavte si sekciu triedy, v ktorej
+          si môžete prezerať pokrok svojich žiakov, tlačiť prihlasovacie karty pre
+          svojich žiakov, spravovať ich účty a tlačiť certifikáty, ktoré si môžu zobrať
+          domov po ukončení kurzu. Kliknite na tento odkaz a **[pozrite si krátke
+          video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**,
+          ktoré ukazuje, ako nastaviť svoju prvú triedu informatiky na Code.org. Postup
+          nájdete aj v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          3. krok: Priraďte kurz k sekcii\nKliknite na kurz, ktorý vyučujete – mala
+          by sa vám zobraziť obrazovka, ktorá vyzerá ako tá nižšie. Potom môžete kliknúť
+          na „Priradiť kurz“ a priradiť tento kurz k jednej zo svojich sekcií. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          4. krok: Začnite učiť! \nStačí jedna vyučovacia hodina, aby ste do svojej
+          triedy zaviedli koncepty informatiky. Keď zbadáte nadšenie svojich žiakov
+          pre informatiku, pokračujte ďalej pomocou denných učebných plánov, ktoré
+          usmernia vašich žiakov, aktivít, ktoré môžete robiť bez počítača, a diskusných
+          fór, na ktorých sa môžete spojiť s ostatnými učiteľmi.\n\n"
       OPD-K5 Reviewing Reflections:
         content1: Sem pridať popis
-      OPD-K5 Stage10Start: {}
-      OPD-K5 Stage10Start_copy: {}
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
-      OPD-K5 Stage2Go_copy: {}
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
-      OPD-K5 Stage3Start_copy: {}
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: Sem pridať popis
       OPD-K5 Stage3aGo_copy:
         content1: Sem pridať popis
       OPD-K5 Stage3aGo_dani:
         content1: Sem pridať popis
-      OPD-K5 Stage4Go: {}
-      OPD-K5 Stage4Go_copy: {}
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
-      OPD-K5 Stage4Start_copy: {}
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
-      OPD-K5 Stage5Start_copy: {}
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
-      OPD-K5 Stage6Go_copy: {}
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
-      OPD-K5 Stage6Start_copy: {}
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
-      OPD-K5 Stage7Go_copy: {}
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
-      OPD-K5 Stage7Start_copy: {}
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
-      OPD-K5 Stage9Go: {}
-      OPD-K5 Stage9Go_dani: {}
-      OPD-K5 Stage9Start: {}
-      OPD-K5 Stage9Start_copy: {}
-      OPD-K5 Stage9Start_dani: {}
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
-      OPD-K5 Welcome 2_copy: {}
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
-      OPD-K5 What is Mastery_copy: {}
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
-      OPD-K5 Why teach CS_copy: {}
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
-      OPD-K5 Your Plan_copy: {}
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: Sem pridať popis
       OPD-K5 debugging:
@@ -4976,8 +4811,6 @@ sk-SK:
           |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
           | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
 
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
       'Overview: Design Mode':
         markdown: |-
           # Vitajte v dizajnovom režime App Labu
@@ -5115,9 +4948,6 @@ sk-SK:
           súradnice x,y ktoréhokoľvek bodu.\n\n<div style=\"width: 100%; text-align:
           center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
           src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>"
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -5351,7 +5181,6 @@ sk-SK:
           si všimni, že ak odovzdávame funkciu `urobNieco` funkcii `onEvent`, _neuvádzame_
           na konci zátvorky. Je to preto, že v skutočnosti odovzdávame celú funkciu
           ako objekt.\n"
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Neakceptuj zákernosti
@@ -5436,12 +5265,6 @@ sk-SK:
       Songwriting-Unplugged_2021:
         markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
           naučia definovanie a vyvolanie funkcií. "
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -5469,12 +5292,6 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: modrá
@@ -5618,11 +5435,6 @@ sk-SK:
         teacher_markdown: "[Čo je počítač - Príklad](https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/)
           - Sprievodca aktivitou ([PDF](https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/export?format=pdf)
           | [DOCX]((https://docs.google.com/document/d/1kL9sY0P_qDcTzeNFMvHI6vXr9XLVRkW7osWI1QQxak8/export?format=doc))"
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6046,7 +5858,6 @@ sk-SK:
           <small>
           <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
           </small>
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: Sem pridať popis
       allthethings_external_not_displayed_as_unplugged:
@@ -8564,7 +8375,6 @@ sk-SK:
           text: Postava sa bude najprv točiť a potom posúvať.
         questions:
         - text: Prezri si kód a odhadni, čo sa bude diať.
-      courseF_external_variableConstant: {}
       courseF_external_variableConstant_2018:
         markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
@@ -8589,8 +8399,6 @@ sk-SK:
           opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
           ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
           v rámci programu.</h3>"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -9457,9 +9265,6 @@ sk-SK:
           text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
       csd-post-survey-2017-levelgroup:
         title: Objavujeme informatiku - Študentský dotazník na konci semestra
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
@@ -10094,7 +9899,7 @@ sk-SK:
           text: Nie
         - correct: true
         questions:
-        - {}
+        - text: Vývoj webových stránok
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -14728,8 +14533,6 @@ sk-SK:
       csf_safety_in_my_online_neighborhood_2021:
         markdown: "# Moja online štvrť\n\n##  Ako sa bezpečne presúvať na miesta v
           online svete? "
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -15403,7 +15206,6 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Môžem byť v škole sám/sama sebou.
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: Sem pridať popis
       csp-post-survey-2018-unit-feedback-preamble:
@@ -15439,8 +15241,6 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
       csp-pre-survey-2017 preamble 1_2021:
         markdown: "### **Tento dotazník je anonymný**\n\n* Vyplnenie tohto krátkeho
           dotazníka by malo trvať **maximálne 10 minút**.\n* Code.org kladie veľký
@@ -15483,30 +15283,18 @@ sk-SK:
 
 
           * Prosím, pomôžte nám tým, že aj vaši žiaci prispejú k týmto dôležitým údajom. Aj ich hlas môže prispieť k zmene!
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: "## Informatika vo všeobecnosti"
       csp-pre-survey-2017 preamble 2 cs in general_2022:
         markdown: "## Informatika vo všeobecnosti"
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
       csp-pre-survey-2017 preamble 3 this class_2021:
         markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 3 this class_2022:
         markdown: "### Informatika v tvojej budúcnosti"
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
       csp-pre-survey-2017 preamble 4 the future_2021:
         markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 4 the future_2022:
         markdown: "### Informatika v tvojej budúcnosti"
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
       csp-pre-survey-2017 preamble 5 demographics_2021:
         markdown: "### Tvoje informatické pozadie\n"
       csp-pre-survey-2017 preamble 5 demographics_2022:
@@ -16735,8 +16523,6 @@ sk-SK:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -17345,7 +17131,6 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
             programu?
-      gradek1_activity_beNice: {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
@@ -17807,9 +17592,6 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -18336,8 +18118,6 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
