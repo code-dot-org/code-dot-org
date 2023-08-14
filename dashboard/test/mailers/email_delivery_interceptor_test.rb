@@ -5,6 +5,10 @@ class EmailDeliveryInterceptorTest < ActiveSupport::TestCase
     ActionMailer::Base.register_interceptor EmailDeliveryInterceptor
   end
 
+  teardown do
+    ActionMailer::Base.unregister_interceptor EmailDeliveryInterceptor
+  end
+
   test 'push a metric when an email is going to be sent' do
     expected_metric = [
       {
