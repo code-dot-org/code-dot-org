@@ -1129,6 +1129,7 @@ export class WorkshopForm extends React.Component {
           )}
           {this.props.permission.has(WorkshopAdmin) && this.props.workshop && (
             <OrganizerFormPart
+              id="organizer-selector"
               workshopId={this.props.workshop.id}
               organizerId={this.state.organizer.id}
               organizerName={this.state.organizer.name}
