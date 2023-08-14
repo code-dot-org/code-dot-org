@@ -356,6 +356,7 @@ sq-AL:
   courseb-2019_gradelevel: Moshat 5-8
   courseb-2020_gradelevel: Moshat 5-8
   courseb-2021_gradelevel: Moshat 5-8
+  courseb-2021_name: Kursi B (2021)
   courseb-2022_gradelevel: Moshat 5-8
   courseb-2022_name: Kursi B (2022)
   courseb_gradelevel: Moshat 5-8
@@ -389,6 +390,7 @@ sq-AL:
   coursef-2020_gradelevel: Moshat 9-13
   coursef-2021_gradelevel: Moshat 9-13
   coursef-2022_gradelevel: Moshat 9-13
+  coursef-2022_name: Kursi F (2022)
   coursef_gradelevel: Moshat 9-13
   coursera_beyond_gradelevel: Universiteti
   coursera_beyond_longdescription: 'Klasa CS 101 e Stanford i shpjeguar nga Nick Parlante
@@ -417,7 +419,7 @@ sq-AL:
   csedweek_map_legend_event: Ngjarje e Orës së Kodimit
   csedweek_map_legend_title: Legjend
   csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
-  csedweek_map_search_reset: Rivendosn
+  csedweek_map_search_reset: Rifillo
   csedweek_map_search_search: Kërko
   csedweek_map_signup: Regjistro ngjarjen tënde
   csedweek_og_description: 'Ora e Kodimit është një lëvizje globale që i përfshin
@@ -1353,7 +1355,7 @@ sq-AL:
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_blocks_title: Blloqe
+  starwars_blocks_title: Blloqet
   starwars_gradelevel: Moshat 4-104
   starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
   starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+
