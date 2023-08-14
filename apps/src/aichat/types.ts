@@ -1,3 +1,4 @@
+import {Role, Status} from './constants';
 // TODO: Ideally this type would only contain keys present in
 // translated string JSON files (ex. apps/i18n/aichat/en_us.json).
 // However, this requires depending on files outside of apps/src,
@@ -11,7 +12,7 @@ export type AichatLocale = {
 export type ChatCompletionMessage = {
   id: number;
   name: string;
-  role: 'user' | 'assistant' | 'system';
+  role: Role;
   chatMessageText: string;
-  status: 'ok' | 'inappropriate' | 'personal' | 'unknown';
+  status: Status;
 };
