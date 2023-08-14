@@ -83,4 +83,4 @@
   = render partial: 'levels/teacher_panel'
 
 - if @rubric.present? && current_user&.teacher? && can?(:read, @rubric)
-  %div#fab-mount-point
+  %div#rubric-fab-mount-point
