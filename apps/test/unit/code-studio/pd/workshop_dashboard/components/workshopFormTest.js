@@ -158,7 +158,7 @@ describe('WorkshopForm test', () => {
     expect(addIcon).to.equal('fa fa-plus');
   });
 
-  it('selecting CSF, CSD, CSP, CSA, and Facilitator courses show standard workshop type options', () => {
+  it('CSF, CSD, CSP, CSA, and Facilitator courses show standard workshop type options', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
@@ -191,7 +191,7 @@ describe('WorkshopForm test', () => {
     });
   });
 
-  it('selecting CSF course shows help link that displays help text', () => {
+  it('CSF course shows help link that displays help text', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
@@ -254,7 +254,7 @@ describe('WorkshopForm test', () => {
     );
   });
 
-  it('selecting CSF course and Intro, Deep Dive, or Facilitator Weekend subject shows fee and map questions', () => {
+  it('CSF course and Intro, Deep Dive, or Facilitator Weekend subject shows fee and map questions', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
@@ -287,7 +287,7 @@ describe('WorkshopForm test', () => {
     );
   });
 
-  it('selecting CSF course and District subject shows virtual and reminder fields', () => {
+  it('CSF course and District subject shows virtual and reminder fields', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
@@ -314,6 +314,100 @@ describe('WorkshopForm test', () => {
 
     assert(wrapper.find('#virtual').exists());
     assert(wrapper.find('#suppress_email').exists());
+  });
+
+  it('CSD, CSP, or CSA course with virtual subject locks virtual field to true', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+
+    ['CS Principles', 'CS Discoveries', 'Computer Science A'].forEach(
+      courseName => {
+        courseField.simulate('change', {
+          target: {name: 'course', value: courseName},
+        });
+
+        const subjectField = wrapper.find('#subject').first();
+
+        // Selecting 'Virtual Workshop Kickoff' should make virtual field set to 'regional'
+        // (a.k.a. 'Yes, this is a regional virtual workshop.') and be disabled.
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: 'Virtual Workshop Kickoff'},
+        });
+        expect(wrapper.find('#virtual').first().props().value).to.equal(
+          'regional'
+        );
+        assert(wrapper.find('#virtual').first().props().disabled);
+
+        // Changing subject from 'Virtual Workshop Kickoff' should make virtual field enabled again.
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: 'Academic Year Workshop 1'},
+        });
+        assert(!wrapper.find('#virtual').first().props().disabled);
+      }
+    );
+  });
+
+  it('CSD, CSP, or CSA course with Teacher Con or Facilitator Weekend subject locks reminder field to false, otherwise unlocked and true', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+
+    ['CS Principles', 'CS Discoveries', 'Computer Science A'].forEach(
+      courseName => {
+        courseField.simulate('change', {
+          target: {name: 'course', value: courseName},
+        });
+
+        const subjectField = wrapper.find('#subject').first();
+
+        // Selecting 'Teacher Con' or 'Facilitator Weekend' should make reminder field true and be disabled,
+        // otherwise make false and not disabled.
+        // For this field, false = 'No, I will remind enrollees myself.' and true = 'Yes, send reminders on my behalf.'
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: 'Code.org TeacherCon'},
+        });
+        assert(wrapper.find('#suppress_email').first().props().value);
+        assert(wrapper.find('#suppress_email').first().props().disabled);
+
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: 'Code.org Facilitator Weekend'},
+        });
+        assert(wrapper.find('#suppress_email').first().props().value);
+        assert(wrapper.find('#suppress_email').first().props().disabled);
+
+        // Changing subject from 'Virtual Workshop Kickoff' should make 'virtual' field enabled again
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: 'Academic Year Workshop 1'},
+        });
+        assert(!wrapper.find('#suppress_email').first().props().value);
+        assert(!wrapper.find('#suppress_email').first().props().disabled);
+      }
+    );
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
