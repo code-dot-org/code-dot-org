@@ -52,7 +52,7 @@
   csedweek_map_signup: "Regjistro ngjarjen tënde"
   csedweek_map_search_placeholder: "Kërko ngjarjet Hour of Code"
   csedweek_map_search_search: "Kërko"
-  csedweek_map_search_reset: "Rivendosn"
+  csedweek_map_search_reset: "Rifillo"
   csedweek_map_legend_title: "Legjend"
   csedweek_map_legend_event: "Ngjarje e Orës së Kodimit"
   csedweek_map_legend_cs_tech_jam: "Ngjarje speciale"
@@ -399,7 +399,7 @@
   starwars_javascript_title: "JavaScript"
   starwars_javascript_description: "Përdor blloqe me tërheqje-lëshim dhe JavaScript."
   starwars_javascript_specs: "Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+"
-  starwars_blocks_title: "Blloqe"
+  starwars_blocks_title: "Blloqet"
   starwars_blocks_description: "Përdor blloqet me tërheqje-lëshim."
   starwars_blocks_specs: "Shumë gjuhë | Browserët modern, telefonat e mençur, tableta | Moshat 6-106"
   starwars_platform_text: "Browserat e kohës, smartphones, tableta"
@@ -755,11 +755,13 @@
   course2_name: "Kursi 2"
   course3_name: "Kursi 3"
   course4_name: "Kursi 4"
+  courseb-2021_name: Kursi B (2021)
   coursea-2022_name: Kursi A (2022)
   courseb-2022_name: Kursi B (2022)
   coursec-2022_name: Kursi C (2022)
   coursed-2022_name: Kursi D (2022)
   coursee-2022_name: Kursi E (2022)
+  coursef-2022_name: Kursi F (2022)
   accelerated_name: "Kurs i Avancuar"
   20-hour_name: Kurs i Avancuar
   gumball_name: "Bota Mahnitëse e Gumball"
