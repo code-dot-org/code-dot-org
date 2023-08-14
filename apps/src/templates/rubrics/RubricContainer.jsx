@@ -3,7 +3,7 @@ import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {rubricShape} from './rubricShapes';
-import {understandingLevelName} from './utils';
+import LearningGoal from './LearningGoal';
 
 export default function RubricContainer({rubric}) {
   return (
@@ -13,18 +13,12 @@ export default function RubricContainer({rubric}) {
       </div>
       <div className={style.rubricContent}>
         {rubric.learningGoals.map(lg => (
-          <div key={lg.key}>
-            <p>{lg.learningGoal}</p>
-            <ul>
-              {lg.evidenceLevels.map(el => (
-                <li
-                  key={el.understanding}
-                >{`Understanding level ${understandingLevelName(
-                  el.understanding
-                )}: ${el.teacherDescription}`}</li>
-              ))}
-            </ul>
-          </div>
+          <LearningGoal
+            key={lg.learningGoal.key}
+            learningGoal={lg}
+            teacherHasEnabledAi
+            canProvideFeedback={false}
+          />
         ))}
       </div>
     </div>

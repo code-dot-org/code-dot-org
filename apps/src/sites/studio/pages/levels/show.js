@@ -58,7 +58,7 @@ function initPage() {
   if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
     const rubricData = getScriptData('rubric');
     ReactDOM.render(
-      <RubricFloatingActionButton rubricData={rubricData} />,
+      <RubricFloatingActionButton rubric={rubricData} />,
       rubricFabMountPoint
     );
   }
