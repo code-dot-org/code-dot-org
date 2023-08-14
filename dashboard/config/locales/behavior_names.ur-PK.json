@@ -107,47 +107,75 @@
           "wobbling": "جھڑکنا"
         },
         "CourseF_outbreak1": {
-          "recovering": "ریکور کرتے ہوئے"
+          "recovering": "ریکور کرتے ہوئے",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak2": {
-          "recovering": "ریکور کرتے ہوئے"
+          "recovering": "ریکور کرتے ہوئے",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak3": {
-          "recovering": "ریکور کرتے ہوئے"
+          "recovering": "ریکور کرتے ہوئے",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak3_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak4": {
+          "growing": "بڑھتی ہوئی",
+          "jittering": "جڑنا",
+          "moving east": "مشرق کی طرف منتقل",
+          "moving north": "شمال کی جانب بڑھنا",
+          "moving south": "جنوب کی طرف بڑھ رہا ہے",
+          "moving west": "مغرب کی طرف منتقل",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
-          "recovering": "ریکور کرتے ہوئے"
+          "patrolling": "گشت کرنا",
+          "recovering": "ریکور کرتے ہوئے",
+          "shrinking": "سکڑنا",
+          "spinning left": "کتائی بائیں",
+          "spinning right": "کتائی حق",
+          "swimming left and right": "سوئمنگ بائیں اور دائیں",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak4_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak5": {
-          "recovering": "ریکور کرتے ہوئے"
+          "recovering": "ریکور کرتے ہوئے",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak6": {
-          "recovering": "ریکور کرتے ہوئے"
+          "recovering": "ریکور کرتے ہوئے",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak6_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak7": {
+          "growing": "بڑھتی ہوئی",
+          "jittering": "جڑنا",
+          "moving east": "مشرق کی طرف منتقل",
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving north": "شمال کی جانب بڑھنا",
+          "moving south": "جنوب کی طرف بڑھ رہا ہے",
+          "moving west": "مغرب کی طرف منتقل",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
-          "recovering": "ریکور کرتے ہوئے"
+          "patrolling": "گشت کرنا",
+          "recovering": "ریکور کرتے ہوئے",
+          "shrinking": "سکڑنا",
+          "spinning left": "کتائی بائیں",
+          "spinning right": "کتائی حق",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak7_-2022-2": {
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
@@ -155,9 +183,20 @@
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak8": {
+          "growing": "بڑھتی ہوئی",
+          "jittering": "جڑنا",
+          "moving east": "مشرق کی طرف منتقل",
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving north": "شمال کی جانب بڑھنا",
+          "moving south": "جنوب کی طرف بڑھ رہا ہے",
+          "moving west": "مغرب کی طرف منتقل",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
-          "recovering": "ریکور کرتے ہوئے"
+          "patrolling": "گشت کرنا",
+          "recovering": "ریکور کرتے ہوئے",
+          "shrinking": "سکڑنا",
+          "spinning left": "کتائی بائیں",
+          "spinning right": "کتائی حق",
+          "wandering": "آوارہ"
         },
         "CourseF_outbreak8_-2022-2": {
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
