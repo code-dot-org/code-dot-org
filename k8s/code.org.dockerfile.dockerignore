@@ -8,7 +8,7 @@ k8s
 dashboard/app/assets
 dashboard/public
 apps/static
-shared
+shared/images
 
 apps/i18n
 i18n/locales
