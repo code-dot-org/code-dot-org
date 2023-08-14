@@ -1428,10 +1428,6 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2774,8 +2770,6 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "lumalaki",

@@ -59,14 +59,28 @@ pt:
           description_teacher: Descobertas da Ciência da Computação (Descobertas CC) é um curso introdutório de ciência da computação que capacita alunos a criarem artefatos autênticos e envolverem-se com ciência da computação como um meio de criatividade, comunicação, resolução de problemas e diversão.
         csp-2021:
           description_short: Aprenda os conceitos fundamentais de ciência da computação.
+        csd-2021:
+          description_student: |-
+            O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
+
+            \*\*Interessado em ensinar Descobertas da CC? \*\* O desenvolvimento profissional está disponível para ajudá-lo a começar a ensinar Descobertas da CC. [Clique aqui](https://code.org/educate/professional-learning/middle-high) para saber mais sobre as oportunidades de aprendizado profissional em sua região ou [clique aqui](https://code.org/educate/professional-development-online) para saber mais sobre uma opção on-line personalizada.
         mike-test:
           title: Fundamentos de Ciência da Computação
         csp-2022:
           description_short: Aprenda os conceitos fundamentais de ciência da computação.
+        csd-2022:
+          description_student: |-
+            O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
+
+            \*\*Interessado em ensinar Descobertas da CC? \*\* O desenvolvimento profissional está disponível para ajudá-lo a começar a ensinar Descobertas da CC. [Clique aqui](https://code.org/educate/professional-learning/middle-high) para saber mais sobre as oportunidades de aprendizado profissional em sua região ou [clique aqui](https://code.org/educate/professional-development-online) para saber mais sobre uma opção on-line personalizada.
         csp-2023:
           description_short: Aprenda os conceitos fundamentais de ciência da computação.
         csd-2023:
           title: Descobertas da Ciência da Computação
+          description_student: |-
+            O Curso Descobertas da Ciência da Computação (Descobertas da CC) é um curso introdutório à ciência da computação que capacita os alunos a criar artefatos autênticos e a interagir com a ciência da computação como meio de criatividade, comunicação, resolução de problemas e diversão.
+
+            \*\*Interessado em ensinar Descobertas da CC? \*\* O desenvolvimento profissional está disponível para ajudá-lo a começar a ensinar Descobertas da CC. [Clique aqui](https://code.org/educate/professional-learning/middle-high) para saber mais sobre as oportunidades de aprendizado profissional em sua região ou [clique aqui](https://code.org/educate/professional-development-online) para saber mais sobre uma opção on-line personalizada.
     resources:
       curriculum/csd/2017:
         name: Currículo

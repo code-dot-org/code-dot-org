@@ -1066,6 +1066,52 @@ hr:
           title: Minecraft Sat Kodiranja
         netsim:
           title: Internetski Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježđene petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Petlje
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -1143,6 +1189,12 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

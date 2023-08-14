@@ -2,11 +2,11 @@
   "addFeatureButton": "Aggiungi caratteristica",
   "aiBotAltText": "Bot IA",
   "aiBotBeamAltText": "Raggio di scansione bot IA",
-  "aiBotBodyAltText": "Corpo Bot IA",
-  "aiBotHeadAltText": "Testa Bot IA",
+  "aiBotBodyAltText": "Bot IA: corpo",
+  "aiBotHeadAltText": "Bot IA: testa ",
   "animationDescriptionsHeader": "Descrizione dell'Animazione ",
-  "animationDescriptionsTesting": "Il bot IA scansiona le righe in arrivo di dati non etichettati dalla serie di dati di prova. Mentre ogni riga si muove sotto il raggion del bot IA, l'IA effettua previsioni, aggiungendo un valore all colonna dell'etichetta.",
-  "animationDescriptionsTraining": "Le righe etichettate dalla serie di dati di addestramento, vanno alla testa aperta del bot IA.",
+  "animationDescriptionsTesting": "Il bot IA scansiona le righe in arrivo di dati non etichettati dalla serie di dati di prova. Mentre ogni riga si muove sotto il raggio del bot IA, l'IA effettua previsioni, aggiungendo un valore all colonna dell'etichetta.",
+  "animationDescriptionsTraining": "Le righe etichettate dalla serie di dati di addestramento, vengono direttamente acquisite da Bot IA.",
   "columnDetailsInformation": "Informazioni sulla colonna",
   "columnDetailsMaximumValue": "max",
   "columnDetailsMinimumValue": "min",
@@ -15,7 +15,7 @@
   "columnDetailsValueRange": "intervallo",
   "columnInspectorDataType": "Tipo di Dati",
   "columnInspectorDescription": "Descrizione",
-  "columnType_categorical": "categorica",
+  "columnType_categorical": "categoriale",
   "columnType_numerical": "numerica",
   "correctAnswer": "Corretta",
   "crossTabRelationshipHeader": "Informazioni sulla relazione",
@@ -153,7 +153,7 @@
         },
         "Made or miss": {
           "description": "Se il tiro da 3 punti è stato realizzato o sbagliato.",
-          "id": "Canestro o Mancato"
+          "id": "Canestro o Fuori"
         },
         "Time in seconds": {
           "description": "Tempo trascorso sull'orologio della partita, in secondi.",
@@ -199,12 +199,12 @@
           "id": "Mese"
         },
         "Number of Casual Users": {
-          "description": "Numero di utenti senza un profilo",
-          "id": "Numero di Utenti Casuali"
+          "description": "Numero di utenti senza account.",
+          "id": "Numero di utenti occasionali"
         },
         "Number of Registered Users": {
-          "description": "Numero di utenti con un profilo.",
-          "id": "Numero di Utenti Registrati"
+          "description": "Numero di utenti con un account.",
+          "id": "Numero di utenti registrati"
         },
         "Season": {
           "description": "Stagione: primavera, estate, inverno o autunno.",
@@ -212,15 +212,15 @@
         },
         "Total Users": {
           "description": "Numero totale di utenti.",
-          "id": "Utenti Totali"
+          "id": "Numero totale di utenti"
         },
         "Weather Description": {
           "description": "Una descrizione del meteo del giorno, da poco nuvoloso a neve leggera o pioggia.",
-          "id": "Descrizion Meteo"
+          "id": "Descrizione Meteo"
         },
         "Wind Speed": {
           "description": "Velocità del vento.",
-          "id": "Velocità del Vento"
+          "id": "Velocità del vento"
         },
         "Workday": {
           "description": "Se il giorno era feriale o no.",
@@ -240,31 +240,31 @@
     "billionaires": {
       "card": {
         "context": {
-          "potentialMisuses": "Ad esempio, determinare se gli uomini sono 'migliori' a diventare miliardari, rispeetto alle donne. Le donne sono sottorappresentate, tra i miliardari, ma ci sono molti motivi per cui i dati non riflettono.",
+          "potentialMisuses": "Ad esempio, determinare se gli uomini sono 'migliori' a diventare miliardari, rispeetto alle donne. Le donne sono sottorappresentate, tra i miliardari, ma ci sono molti motivi per cui i dati non riflettono la realtà.",
           "potentialUses": "Prevedi il tipo di patrimonio di un miliardario, a seconda delle altre caratteristiche."
         },
         "description": "Dati pluridecennali sui singoli miliardari, classificati per ogni anno, con caratteristiche quali età, settore, patrimonio familiare e tipo di ricchezza (es. fondatore dell'azienda nel settore finanziario)."
       },
       "fields": {
         "Age": {
-          "description": "L'età.",
+          "description": "La loro età.",
           "id": "Età"
         },
         "Citizenship": {
-          "description": "Il paese di cui sono cittadini ufficiali.",
+          "description": "Paese in cui hanno ufficialmente la cittadinanza.",
           "id": "Cittadinanza"
         },
         "Company Founding Year": {
-          "description": "L'anno di fonazione dell'azienda.",
-          "id": "Anno di Fondazione dell'Azienda"
+          "description": "L'anno in cui è stata fondata la loro azienda.",
+          "id": "Anno di fondazione dell'azienda"
         },
         "Company Name": {
-          "description": "Il nome dell'azienda.",
-          "id": "Nome Azienda"
+          "description": "Il nome della loro azienda.",
+          "id": "Nome dell'azienda"
         },
         "Company Relationship": {
           "description": "Il loro rapporto con l'azienda: es. \"fondatore\", \"CEO\", \"presidente\").",
-          "id": "Relazione Aziendale"
+          "id": "Relazione con l'azienda"
         },
         "Company Sector": {
           "description": "Il settore della loro azienda, es. \"Finanza\" o \"Software\".",
@@ -275,43 +275,43 @@
           "id": "Tipo di Azienda"
         },
         "Country of Residence": {
-          "description": "Il paese di residenza",
+          "description": "Il paese in cui risiedono.",
           "id": "Paese di Residenza"
         },
         "Gender": {
-          "description": "Il sesso",
+          "description": "Il loro genere",
           "id": "Sesso"
         },
         "Net Worth In Billions": {
           "description": "Il loro patrimonio netto in miliardi di dollari.",
-          "id": "Patrimonio Netto in Miliardi"
+          "id": "Patrimonio netto in miliardi"
         },
         "Rank": {
-          "description": "Il loro collocamento per l'anno di questo registro.",
+          "description": "La loro ricchezza nell'anno si posiziona in questo record.",
           "id": "Rango"
         },
         "Region": {
-          "description": "La regione in cui è sito il loro paese di residenza, es. \"America del Nord\" o \"Asia Orientale\"",
-          "id": "Regione"
+          "description": "La'area geografica in cui si trova il loro paese di residenza, es. \"America del Nord\" o \"Asia Orientale\"",
+          "id": "Area geografica"
         },
         "Type Of Wealth": {
           "description": "Il tipo di ricchezza, es.: \"fondatore non finanziario\", \"ereditata\", \"finanza autoprodotta\"",
           "id": "Tipo di Ricchezza"
         },
         "Wealth Category": {
-          "description": "La loro categoria di ricchezza, es. \"Finanziaria\", \"Non Negoziata\" o \"Settori Negoziati\"",
-          "id": "Categoria di Ricchezza"
+          "description": "La loro tipologia di ricchezza, es. \"Finanziaria\", \"Non Negoziata\" o \"Settori Negoziati\"",
+          "id": "Tipologia di ricchezza"
         },
         "Wealth Industry": {
-          "description": "L'industria in cui risiede il loro patrimonio.",
-          "id": "Industria del Patrimonio"
+          "description": "Il settore in cui si esplicita il loro patrimonio.",
+          "id": "Settore di origine del patrimonio"
         },
         "Wealth Inherited": {
-          "description": "Se il patrimonio è stato ereditato e da dove, es. \"non ereditato\", \"padre\", \"terza generazione\".",
-          "id": "Patrimonio Ereditato"
+          "description": "Se la loro ricchezza è stata ereditata e da dove proviene, ad esempio «non ereditato», «padre», «terza generazione».",
+          "id": "Ricchezza ereditata"
         },
         "Year": {
-          "description": "L'anno delle classifiche (1996, 2001 o 2014).",
+          "description": "L'anno della classifica (1996, 2001 o 2014).",
           "id": "Anno"
         }
       },
@@ -373,9 +373,9 @@
       "card": {
         "context": {
           "potentialMisuses": "Potresti avere criteri dell'auto differenti rispetto a questo sistema di valutazione; questo, non può prendere una decisione migliore della tua sull'acquisto di un auto! Tuttavia, potrebbe aiutarti nella ricerca.",
-          "potentialUses": "Determinare la valutazione d'accettabilità di un'auto secondo certe caratteristiche."
+          "potentialUses": "Determinare la valutazione di rivendibilità di un'auto secondo certe caratteristiche."
         },
-        "description": "Una serie di dati su auto classificate sulla base della 'accettabilità', a seconda di caratteristiche quali prezzo, sicurezza e numero di passeggeri. Le valutazioni provengono da un modello decisionale progettato da Marko Bohanec."
+        "description": "Una serie di dati su auto classificate sulla base della 'rivendibilità', a seconda di caratteristiche quali prezzo, sicurezza e numero di passeggeri. Le valutazioni provengono da un modello decisionale progettato da Marko Bohanec."
       },
       "fields": {
         "Boot Size": {
@@ -387,8 +387,8 @@
           "id": "Prezzo d'Acquisto"
         },
         "Car Acceptability": {
-          "description": "La valutazione d'accettabilità dell'auto: inaccettabile, accettabile, buona o molto buona.",
-          "id": "Accettabilità dell'Auto"
+          "description": "La valutazione di rivendibilità dell'auto: non rivendibile, rivendibile, buona o molto buona.",
+          "id": "Rivendibilità dell'Auto"
         },
         "Maintenance Cost": {
           "description": "I costi di manutenzione dell'auto, da molto elevati a bassi.",
@@ -451,11 +451,11 @@
           "id": "reddito"
         },
         "marital status": {
-          "description": "Stato maritale (sposato, celibe/nubile, divorziato)",
-          "id": "stato maritale"
+          "description": "Stato coniugale (sposato, celibe/nubile, divorziato)",
+          "id": "stato coniugale"
         },
         "native-country": {
-          "description": "Il paes d'origine.",
+          "description": "Il paese d'origine.",
           "id": "paese nativo"
         },
         "occupation": {
@@ -614,7 +614,8 @@
           "description": "Quali di questi animali domestici possiedi?",
           "id": "animali che possiedi"
         }
-      }
+      },
+      "name": "Il sondaggio di Kim"
     },
     "cookies_toy": {
       "card": {
@@ -796,7 +797,7 @@
           "id": "Angina Indotta da Esercizio"
         },
         "Fasting Blood Sugar > 120mg/dl": {
-          "description": "Se il colesterolo nel sangue a digiuno è elevato (superiore a 120).",
+          "description": "Se il colesterolo nel sangue a digiuno è elevato oppure no (superiore a 120).",
           "id": "Glicemia a digiuno > 120mg/dl"
         },
         "Maximum Heart Rate Achieved": {
@@ -834,7 +835,7 @@
       "card": {
         "context": {
           "potentialMisuses": "Questa è una serie di dati obsoleta, quindi, è improbabile che rifletta i valori domestici contemporanei. Inoltre, questa serie di dati riflette pregiudizi razziali ed economici: è giusto o equo che i valori domestici tendessero ad aumentare nelle aree in cui la popolazione era più benestante, o meno \"di colore\"?",
-          "potentialUses": "Prevedi il valore domestico medio, secondo la popolazione di colore e il rapporto tra genitori e insegnanti."
+          "potentialUses": "Prevedi il Reddito familiare medio, secondo la popolazione di colore e il rapporto tra genitori e insegnanti."
         },
         "description": "Una piccola serie di dati, ampiamnte utilizzata, sugli alloggi nell'area di Boston, Massachussetts."
       },
@@ -849,7 +850,7 @@
         },
         "Bounds Charles River?": {
           "description": "1 se il terreno è vicino al fiume Charles, altrimenti 0. Alcune città hanno un 'NA', quando la risposta è incerta.",
-          "id": "Confina con il Fiume Charles?"
+          "id": "Confina con il fiume Charles?"
         },
         "Distance to employment centers": {
           "description": "Distanza ponderata dai 5 centri per l'impiego principali di Boston.",
@@ -860,8 +861,8 @@
           "id": "Popolazione di stato inferiore"
         },
         "Median home value": {
-          "description": "Valore domestico medio in $1000.",
-          "id": "Valore domestico medio"
+          "description": "Reddito familiare medio in $1000.",
+          "id": "Reddito familiare medio"
         },
         "Nitric Oxide Concentration (PPM)": {
           "description": "Concentrazione di Ossido d'Azoto in parti per 10 milioni.",
@@ -935,7 +936,7 @@
     "insurance_cost": {
       "card": {
         "context": {
-          "potentialUses": "Può essere utilizzato per prevedere se qualcuno è un fumatore, a seconda delle altre informazioni assicurative?"
+          "potentialUses": "Può essere utilizzato per prevedere se qualcuno è un fumatore oppure no, a seconda delle altre informazioni assicurative?"
         },
         "description": "I costi assicurativi insieme a fattori come il numero di bambini, luogo, stato di fumatore/non fumatore, età, sesso, BMI."
       },
@@ -1040,15 +1041,15 @@
     "loneliness_interests": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, prevedi i tratti della personalità di qualcuno a seconda di altri tratti."
         },
         "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, incentrata esclusivamente sulle affermazioni sugli interessi personali"
       },
       "fields": {
         "Active sport": {
-          "description": "Mi piacciono gli sport attivi",
-          "id": "Sport attivi"
+          "description": "Mi piace fare sport ",
+          "id": "Fare sport"
         },
         "Adrenaline sports": {
           "description": "Mi piacciono gli sport adrenalinici",
@@ -1064,7 +1065,7 @@
         },
         "Cars": {
           "description": "Mi piacciono le auto",
-          "id": "Auto"
+          "id": "Automobili"
         },
         "Celebrities": {
           "description": "Mi piacciono le celebrità",
@@ -1083,8 +1084,8 @@
           "id": "Danzare"
         },
         "Economy Management": {
-          "description": "Mi piace la Gestione Economica",
-          "id": "Gestione Economica"
+          "description": "Mi piace l'economia",
+          "id": "Economia"
         },
         "Foreign languages": {
           "description": "Mi piacciono le lingue straniere",
@@ -1135,8 +1136,8 @@
           "id": "PC"
         },
         "Passive sport": {
-          "description": "Mi piacciono gli sport passivi",
-          "id": "Sport passivi"
+          "description": "Mi piace guardare lo sport",
+          "id": "Guardare lo sport"
         },
         "Pets": {
           "description": "Mi piacciono gli animali domestici",
@@ -1184,10 +1185,10 @@
     "loneliness_movies": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, prevedi i tratti della personalità di qualcuno a seconda di altri tratti."
         },
-        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, incentrata esclusivamente sui film."
+        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, focalizzata esclusivamente sui film."
       },
       "fields": {
         "Action": {
@@ -1196,7 +1197,7 @@
         },
         "Animated": {
           "description": "Mi piacciono i film animati",
-          "id": "Animati"
+          "id": "Animazione"
         },
         "Comedy": {
           "description": "Mi piacciono i film comici",
@@ -1207,7 +1208,7 @@
           "id": "Documentari"
         },
         "Fantasy/Fairy tales": {
-          "description": "Mi piacciono i film di fantasia/fiabeschi",
+          "description": "Mi piacciono i film di fantasia/favolosi",
           "id": "Fantasy/Fiabe"
         },
         "Horror": {
@@ -1228,7 +1229,7 @@
         },
         "Sci-fi": {
           "description": "Mi piacciono i film di fantascienza",
-          "id": "Sci-fi"
+          "id": "Fantascienza"
         },
         "Thriller": {
           "description": "Mi piacciono i film thriller",
@@ -1248,15 +1249,15 @@
     "loneliness_music": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, prevedi i tratti della personalità di qualcuno a seconda di altri tratti."
         },
-        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, incentrata esclusivamente sulla musica."
+        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, focalizzata esclusivamente sulla musica."
       },
       "fields": {
         "Alternative": {
-          "description": "Mi piace la musica alternativa",
-          "id": "Alternativa"
+          "description": "Mi piace la musica alternative",
+          "id": "Alternative"
         },
         "Classical music": {
           "description": "Mi piace la musica classica",
@@ -1340,7 +1341,7 @@
     "loneliness_personality": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, prevedi i tratti della personalità di qualcuno a seconda di altri tratti."
         },
         "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, incentrata esclusivamente sulle affermazioni sulla personalità."
@@ -1396,10 +1397,10 @@
     "loneliness_phobias": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, prevedi i tratti della personalità di qualcuno a seconda di altri tratti."
         },
-        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, incentrata esclusivamente sulla musica."
+        "description": "Una serie di dati di risposte al sondaggio raccolte da studenti slovacchi tra i 18 e i 21 anni alla FSEV UK. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, 'Classifica da 1 (fortemente in disaccordo) a 5 (fortemente d'accordo): Spesso, studio o lavoro anche nel mio tempo libero'. Questo è un sottoinsieme di una serie di dati più grande, focalizzata esclusivamente sulla musica."
       },
       "fields": {
         "Ageing": {
@@ -1483,14 +1484,15 @@
           "id": "etnia"
         },
         "shortness_of_breath": {
-          "description": "Se al paziente mancava il respiro.",
+          "description": "Se al paziente manca il respiro.",
           "id": "mancanza del respiro"
         },
         "weight": {
           "description": "Fasce di peso per il paziente.",
           "id": "peso"
         }
-      }
+      },
+      "name": "Priorità medica"
     },
     "movies": {
       "card": {
@@ -1629,7 +1631,7 @@
         },
         "Beta Carotene": {
           "description": "Un tipo di molecola lipidica, misurata in milligrammi (mg).",
-          "id": "Beta Carotene"
+          "id": "Betacarotene"
         },
         "Carbohydrate": {
           "description": "La fibra alimentare o crusca è la porzione non digeribile degli alimenti derivati da piante. Contiene due componenti principali: fibra solubile e fibra insolubile. Misurata in grammi (g).",
@@ -1915,27 +1917,27 @@
       },
       "fields": {
         "chili en polbo": {
-          "description": "Il raspato contiene peperoncino in polvere?",
+          "description": "Il raspado contiene peperoncino in polvere?",
           "id": "peperoncino in polvere"
         },
         "coconut": {
-          "description": "Il raspato contiene condimenti di cocco?",
+          "description": "Il raspado contiene condimenti di cocco?",
           "id": "cocco"
         },
         "lechera": {
-          "description": "Il raspato contiene condimenti di lechera?",
+          "description": "Il raspado contiene condimenti di lechera?",
           "id": "lechera"
         },
         "lime": {
-          "description": "Il raspato contiene condimenti di lime?",
+          "description": "Il raspado contiene condimenti di lime?",
           "id": "lime"
         },
         "mango": {
-          "description": "Il raspato contiene condimenti di mango?",
+          "description": "Il raspado contiene condimenti di mango?",
           "id": "mango"
         },
         "pecan": {
-          "description": "Il raspato contiene condimenti di noci pecan?",
+          "description": "Il raspado contiene condimenti di noci pecan?",
           "id": "pecan"
         },
         "preference": {
@@ -1943,11 +1945,11 @@
           "id": "preferenza"
         },
         "strawberry": {
-          "description": "Il raspato contiene condimenti di fragola?",
+          "description": "Il raspado contiene condimenti di fragola?",
           "id": "fragola"
         },
         "vanilla": {
-          "description": "Il raspato contiene condimenti di vaniglia?",
+          "description": "Il raspado contiene condimenti di vaniglia?",
           "id": "vaniglia"
         }
       },
@@ -2121,7 +2123,7 @@
       "card": {
         "context": {
           "potentialMisuses": "Qualsiasi cosa sia differente dallo scopo predetto.",
-          "potentialUses": "Utilizzato per addestrare un Bot di IA, a classificare le forme."
+          "potentialUses": "Utilizzato per addestrare Bot IA, a classificare le forme."
         },
         "description": "Le caratteristiche estratte da una serie di dati visivi, che mostrano diverse forme."
       },
@@ -2157,7 +2159,7 @@
       "card": {
         "context": {
           "potentialMisuses": "Qualsiasi cosa sia differente dallo scopo predetto.",
-          "potentialUses": "Utilizzato per addestrare un Bot di IA, a classificare le forme."
+          "potentialUses": "Utilizzato per addestrare Bot IA, a classificare le forme."
         },
         "description": "Le caratteristiche estratte da una serie di dati visivi, che mostrano diverse forme."
       },
@@ -2220,7 +2222,7 @@
         },
         "notice shoes": {
           "description": "Ti importa se le persone notano le tue scarpe?",
-          "id": "scarpe notate"
+          "id": "scarpe appariscenti"
         },
         "shoe": {
           "description": "Che tipo di scarpe vorresti indossare oggi?",
@@ -2342,12 +2344,12 @@
           "id": "supporto familiare"
         },
         "father's education": {
-          "description": "L'istruzione paterna da 0 (nessuna) a 4 (istruzione superiore)",
+          "description": "Livello di istruzione del padre da 0 (nessuna) a 4 (istruzione superiore)",
           "id": "istruzione paterna"
         },
         "father's job": {
           "description": "Il tipo di lavoro paterno.",
-          "id": "lavoro paterno"
+          "id": "lavoro del padre"
         },
         "freetime": {
           "description": "Tempo libero dopo la scuola: da 1 (molto poco) a 5 (molto)",
@@ -2379,7 +2381,7 @@
         },
         "mother's job": {
           "description": "Il tipo di lavoro della madre.",
-          "id": "lavoro materno"
+          "id": "lavoro della madre"
         },
         "nursery": {
           "description": "Ha frequentato l'asilo.",
@@ -2390,7 +2392,7 @@
           "id": "a pagamento"
         },
         "parent cohabitation status": {
-          "description": "Se i genitori vivono insieme (T) o separati (A)",
+          "description": "Se i genitori vivono insieme (T, together) o separati (A, apart)",
           "id": "stato di convivenza parentale"
         },
         "reason": {
@@ -2430,7 +2432,7 @@
     "student_survey": {
       "card": {
         "context": {
-          "potentialMisuses": "Utilizzando le informazioni demografiche da una serie di dati limitata per formulare ipotesi sui sottoinsiemi di persone: ad esempio, chiedendo previsioni su quali sessi tendono ad avere quali paure.",
+          "potentialMisuses": "Utilizzare informazioni demografiche provenienti da un insieme di dati limitato per formulare ipotesi su sottogruppi di persone: ad esempio, chiedere previsioni su quali generi hanno maggiori probabilità di nutrire timori di quale tipo.",
           "potentialUses": "Ad esempio, determina se a qualcuno potrebbe piacere un certo genere di musica, secondo altri suoi gusti."
         },
         "description": "Una serie di dati di risposte al sondaggio, raccolte da studenti slovacchi presso FSEV UK. Sono state poste domande su musica, cultura, fobie e informazioni demografiche. Gran parte delle risposte sono classifiche su una scala da 1 a 5. Ad esempio, la domanda 'Ti piace ascoltare la musica?', offriva una scala da 1 (Fortemente in disaccordo) a 5 (Fortemente d'accordo). Questa serie di dati contiene moltissime domande da esplorare."
@@ -2445,8 +2447,8 @@
           "id": "Azione"
         },
         "Active sport": {
-          "description": "Mi piacciono gli sport attivi",
-          "id": "Sport attivi"
+          "description": "Mi piace fare sport ",
+          "id": "Fare sport"
         },
         "Adrenaline sports": {
           "description": "Mi piacciono gli sport adrenalinici",
@@ -2465,12 +2467,12 @@
           "id": "Alcol"
         },
         "Alternative": {
-          "description": "Mi piace la musica alternativa",
-          "id": "Alternativa"
+          "description": "Mi piace la musica alternative",
+          "id": "Alternative"
         },
         "Animated": {
           "description": "Mi piacciono i film animati",
-          "id": "Animati"
+          "id": "Animazione"
         },
         "Appearence and gestures": {
           "description": "Sono ben educato e mi prendo cura del mio aspetto.",
@@ -2498,7 +2500,7 @@
         },
         "Cars": {
           "description": "Mi piacciono le auto",
-          "id": "Auto"
+          "id": "Automobili"
         },
         "Celebrities": {
           "description": "Mi piacciono le celebrità",
@@ -2509,7 +2511,7 @@
           "id": "Cambiare il passato"
         },
         "Charity": {
-          "description": "Do sempre in beneficienza",
+          "description": "Faccio sempre beneficienza",
           "id": "Beneficenza"
         },
         "Cheating in school": {
@@ -2570,7 +2572,7 @@
         },
         "Decision making": {
           "description": "Prendo il mio tempo per prendere decisioni.",
-          "id": "Presa decisionale"
+          "id": "Capacità decisionale"
         },
         "Documentary": {
           "description": "Mi piacciono i documentari",
@@ -2585,8 +2587,8 @@
           "id": "Mangiare per sopravvivere"
         },
         "Economy Management": {
-          "description": "Mi piace la Gestione Economica",
-          "id": "Gestione Economica"
+          "description": "Mi piace l'economia",
+          "id": "Economia"
         },
         "Education": {
           "description": "Titolo d'istruzione più alto ottenuto:",
@@ -2613,7 +2615,7 @@
           "id": "Falsità"
         },
         "Fantasy/Fairy tales": {
-          "description": "Mi piacciono i film di fantasia/fiabeschi",
+          "description": "Mi piacciono i film di fantasia/favolosi",
           "id": "Fantasy/Fiabe"
         },
         "Fear of public speaking": {
@@ -2726,7 +2728,7 @@
         },
         "Interests or hobbies": {
           "description": "Ho molti hobby e interessi differenti.",
-          "id": "Interessi od hobby"
+          "id": "Interessi o hobby"
         },
         "Internet": {
           "description": "Mi piace usare Internet",
@@ -2745,7 +2747,7 @@
           "id": "Mantenere le promesse"
         },
         "Knowing the right people": {
-          "description": "Mi assicuro sempre di connettere con le persone giuste.",
+          "description": "Mi assicuro sempre di essere in contatto con le persone giuste.",
           "id": "Conoscere le giuste persone"
         },
         "Latino": {
@@ -2837,8 +2839,8 @@
           "id": "Consigli dei genitori"
         },
         "Passive sport": {
-          "description": "Mi piacciono gli sport passivi",
-          "id": "Sport passivi"
+          "description": "Mi piace guardare lo sport",
+          "id": "Guardare lo sport"
         },
         "Personality": {
           "description": "Credo che tutti i tratti della mia personalità siano positivi.",
@@ -2922,7 +2924,7 @@
         },
         "Sci-fi": {
           "description": "Mi piacciono i film di fantascienza",
-          "id": "Sci-fi"
+          "id": "Fantascienza"
         },
         "Science and technology": {
           "description": "Mi piacciono le scienze e la tecnologia",
@@ -3084,67 +3086,67 @@
       },
       "fields": {
         "Apple cobbler": {
-          "description": "Se è stata servita una crostata alle mele, come dolce.",
+          "description": "Se è stata servita oppure no una crostata alle mele, come dolce.",
           "id": "Crostata di mele"
         },
         "Apple pie": {
-          "description": "Se è stata servita una torta alle mele, come dolce.",
+          "description": "Se è stata servita oppure no una torta alle mele, come dolce.",
           "id": "Torta di mele"
         },
         "Blondies": {
-          "description": "Se sono stati serviti blondie, come dolce.",
+          "description": "Se sono stati serviti oppure no blondie, come dolce.",
           "id": "Blondie"
         },
         "Brownies": {
-          "description": "Se sono stati serviti brownie, come dolce.",
+          "description": "Se sono stati serviti oppure no brownie, come dolce.",
           "id": "Brownies"
         },
         "Brussel sprouts": {
-          "description": "Se sono stati serviti dei cavoletti di Bruxelles con il pasto.",
+          "description": "Se con il pasto sono stati serviti o no dei cavoletti di Bruxelles.",
           "id": "Cavoletti di Bruxelles"
         },
         "Buttermilk pie": {
-          "description": "Se è stata servita una torta al latticello, come dolce.",
+          "description": "Se è stata servita oppur no una torta al latticello, come dolce.",
           "id": "Torta di latticello"
         },
         "Carrot cake": {
-          "description": "Se è stata servita una torta alle carote, come dolce.",
+          "description": "Se è stata servita oppure no una torta alle carote, come dolce.",
           "id": "Torta di carote"
         },
         "Carrots": {
-          "description": "Se sono state servite delle carote con il pasto.",
+          "description": "Se con il pasto sono state servite o no delle carote.",
           "id": "Carote"
         },
         "Cauliflower": {
-          "description": "Se è stato servito del cavolfiore con il pasto.",
+          "description": "Se con il pasto è stato servito o no del cavolfiore.",
           "id": "Cavolfiore"
         },
         "Cheesecake": {
-          "description": "Se è stata servita una cheesecake, come dolce.",
+          "description": "Se è stata servita oppure no una cheesecake, come dolce.",
           "id": "Cheesecake"
         },
         "Cherry pie": {
-          "description": "Se è stata servita una torta alle ciliegie, come dolce.",
-          "id": "Torta alle ciliegie"
+          "description": "Se è stata servita oppure no una torta di ciliegie, come dolce.",
+          "id": "Torta di ciliegie"
         },
         "Chocolate pie": {
-          "description": "Se è stata servita una torta al cioccolato, come dolce.",
+          "description": "Se è stata servita oppure no una torta al cioccolato, come dolce.",
           "id": "Torta al cioccolato"
         },
         "Coconut cream pie": {
-          "description": "Se è stata servita una torta alla crema di cocco, come dolce.",
+          "description": "Se è stata servita una torta alla crema di cocco, come dolce.oppure no ",
           "id": "Torta alla crema di cocco"
         },
         "Cookies": {
-          "description": "Se sono stati serviti biscotti, come dolci.",
+          "description": "Se sono stati serviti oppure no biscotti, come dolci.",
           "id": "Biscotti"
         },
         "Corn": {
-          "description": "Se sono state servite delle pannocchie con il pasto.",
+          "description": "Se con il pasto sono state servite o no delle pannocchie.",
           "id": "Pannocchia"
         },
         "Cornbread": {
-          "description": "Se è stato servito del pane di mais con il pasto.",
+          "description": "Se con il pasto il pane di mais è stato servito oppure no.",
           "id": "Pane di mais"
         },
         "Cranberry sauce": {
@@ -3152,55 +3154,55 @@
           "id": "Salsa di mirtilli"
         },
         "Fruit salad": {
-          "description": "Se è stata servta della macedonia con il pasto.",
+          "description": "Se con il pasto la macedonia è stata servita oppure no.",
           "id": "Macedonia"
         },
         "Fudge": {
-          "description": "Se è stato servito del caramello, come dolce.",
+          "description": "Se è stato servito oppure no del caramello, come dolce.",
           "id": "Caramello"
         },
         "Gravy": {
-          "description": "Se è stato servito del sugo con il pasto.",
-          "id": "Sughi"
+          "description": "Se con il pasto il sugo è stato servito oppure no.",
+          "id": "Sugo"
         },
         "Green beans/green bean casserole": {
-          "description": "Se è stato servito un piatto a base di fagiolini con il pasto.",
+          "description": "Se con il pasto Fagiolini/Casseruola di fagiolini è stata servita oppure no.",
           "id": "Fagiolini/Casseruola di fagiolini"
         },
         "Ice cream": {
-          "description": "Se è stato servito del gelato, come dolce.",
+          "description": "Se è stato servito oppure no del gelato, come dolce.",
           "id": "Gelato"
         },
         "Key lime pie": {
-          "description": "Se è stata servita una torta al lime delle Keys, come dolce.",
+          "description": "Se è stata servita oppure no una torta al lime delle Keys, come dolce.",
           "id": "Torta al lime delle Keys"
         },
         "Mac and cheese": {
-          "description": "Se è stata servita della pasta al formaggio con il pasto.",
-          "id": "Pasta al formaggio"
+          "description": "Se con il pasto sono stati serviti o no i maccheroni al formaggio.",
+          "id": "Maccheroni al formaggio"
         },
         "Main dish": {
-          "description": "La portata principale servita al pasto. Molto probabilmente del tacchino.",
-          "id": "Portata principale"
+          "description": "La portata principale servita a tavola. Molto probabilmente del tacchino.",
+          "id": "Piatto principale"
         },
         "Main dish cooking method": {
           "description": "Come è stata cucinata la portata principale, es. al forno, arrosto, fritto.",
           "id": "Metodo di cottura della portata principale"
         },
         "Mashed potatoes": {
-          "description": "Se è stato servito del purè con il pasto.",
+          "description": "Se con il pasto è stato servito o no del purè di patate.",
           "id": "Purè"
         },
         "Peach cobbler": {
-          "description": "Se è stata servita una crostata alle pesche, come dolce.",
+          "description": "Se è stata servita oppure no una crostata alle pesche, come dolce.",
           "id": "Crostata alle pesche"
         },
         "Peach pie": {
-          "description": "Se è stata servita una torta alle pesche, come dolce.",
+          "description": "Se è stata servita oppure no una torta alle pesche, come dolce.",
           "id": "Torta alle pesche"
         },
         "Pecan pie": {
-          "description": "Se è stata servita una torta alle noci pecan, come dolce.",
+          "description": "Se è stata servita una torta alle noci pecan oppure no come dolce.",
           "id": "Torta alle noci Pecan"
         },
         "Pumpkin pie": {
@@ -3208,19 +3210,19 @@
           "id": "Torta di zucca"
         },
         "Rolls/biscuits": {
-          "description": "Se sono stati serviti dei panini o biscotti con il pasto.",
+          "description": "Se con il pasto sono stati serviti o no panini o biscotti.",
           "id": "Panini/biscotti"
         },
         "Squash": {
-          "description": "Se è stata servita della zucca con il pasto.",
+          "description": "Se con il pasto la zucca a è stata servita oppure no.",
           "id": "Zucca"
         },
         "Stuffing base": {
-          "description": "Se è stato servito il ripieno, qual era l'ingrediente principale o nessuno se non è stato servito alcun ripieno.",
-          "id": "Base di ripieno"
+          "description": "Se è stato servito il ripieno, indicare l'ingrediente principale o nessuno se non è stato servito alcun ripieno.",
+          "id": "Base per il ripieno"
         },
         "Sweet potato pie": {
-          "description": "Se è stata servita una torta alle patate dolci, come dolce.",
+          "description": "Se è stata servita oppure no una torta alle patate dolci, come dolce.",
           "id": "Torta di patate dolci"
         },
         "US region": {
@@ -3228,12 +3230,12 @@
           "id": "Statii Uniti"
         },
         "Vegetable salad": {
-          "description": "Se è stata servita un'insalata di verdure con il pasto.",
+          "description": "Se con il pasto l'insalata di verdure è stata servita oppure no.",
           "id": "Insalata di verdure"
         },
         "Yams/sweet potato casserole": {
-          "description": "Se è stata servita una casseruola di marmellata o patate dolci, con il pasto.",
-          "id": "Casseruola di marmellata/patate dolci"
+          "description": "Se con il pasto sono state servite oppure no delle patatine frumate o patate dolci.",
+          "id": "Patatine frumate e patate dolci in casseruola"
         }
       },
       "name": "Sondaggio Alimentazione Regionale del Ringraziamento"
@@ -3325,7 +3327,7 @@
   },
   "generateResultsHeader": "Testare il modello.",
   "incorrectAnswer": "Sbagliata",
-  "modelCardAccuracy": "Precisione",
+  "modelCardAccuracy": "Accuratezza",
   "modelCardDatasetDetails": "A proposito dei Dati",
   "modelCardDatasetDetailsSize": "Dimensioni serie di dati",
   "modelCardDatasetDetailsSizeCount": "{rowCount} righe",
@@ -3333,6 +3335,7 @@
   "modelCardFeaturesAndLabel": "Caratteristiche ed Etichette",
   "modelCardIntendedUse": "Utilizzo Previsto",
   "modelCardLabel": "Etichetta",
+  "modelCardLimitations": "Limitazioni e avvertenze",
   "modelCardPossibleValues": "Valori Possibili",
   "modelCardPossibleValuesMaximum": "max",
   "modelCardPossibleValuesMinimum": "min",
@@ -3341,9 +3344,10 @@
   "navigateDone": "Termina",
   "navigateForward": "Prosegui",
   "potentialMisusesDescription": "Descrivi qualsiasi limitazione in come questo modello è stato creato o come dovrebbe essere utilizzato. Potresti descrivere cose come \"Evitare di utilizzare questo modello per...\" o \"Fai attenzione a...\".\nDomande importanti da considerare sono:",
-  "potentialMisusesDescriptionEnough": "Hai raccolto abbastanza dati da essere sicuro sulla precisione del modello?",
+  "potentialMisusesDescriptionEnough": "Hai raccolto abbastanza dati da essere sicuro sull'accuratezza del modello?",
   "potentialMisusesDescriptionRepresent": "I dati rappresentano tutti gli utenti e scenari possibili?",
   "potentialMisusesDescriptionSituations": "Ci sono situazioni in cui questo modello non dovrebbe assolutamente essere utilizzato?",
+  "potentialMisusesLabel": "Limitazioni e avvertenze",
   "potentialMisusesPlaceholder": "Scrivi una breve descrizione.",
   "potentialUsesDescription": "Descrivi il problemaa che pensi che questo modello potrebbe aiutare a risolvere, o una potenziale app che qualcuno potrebbe creare basandosi su di esso.",
   "potentialUsesLabel": "Utilizzo Previsto",
@@ -3351,16 +3355,16 @@
   "predictAIBotPredicts": "Previsioni IA",
   "predictButton": "Predict",
   "predictHeader": "Provalo!",
-  "predictPlaceholder": "min {minimum}, max {maximum}",
+  "predictPlaceholder": "min {minimo}, max {maximo}",
   "predictionStatement": "Prevedi {output} secondo {inputs}",
-  "resultsAccuracy": "Precisione",
+  "resultsAccuracy": "Accuratezza",
   "resultsDetailsButton": "Dettagli",
   "resultsHeader": "Risultato",
   "resultsPreviousResults": "Risultati precedenti",
   "resultsTableActualValueHeader": "Effettivo",
   "resultsTableFeatureHeader": "Caratteristiche",
   "resultsTablePredictedValueHeader": "Previsione IA",
-  "resultsTablePredictionRange": "Le previsioni hanno un intervallo di +/- {percentage}%",
+  "resultsTablePredictionRange": "Le previsioni hanno un intervallo di +/- {percentuale}%",
   "saveModelColumnCountLabel": "Descrizioni delle Colonne",
   "saveModelColumnTypeFeature": "caratteristica",
   "saveModelColumnTypeLabel": "etichetta",
@@ -3377,6 +3381,6 @@
   "trainModelButtonText": "Addestra",
   "trainModelHeading": "Addestramento",
   "tryAgain": "Riprova",
-  "uniqueOptionsWarningMessage": "Le colonne categoriche con oltre {valueCount} valori univoci non sono selezionabili come l'etichetta o come una caratteristica.",
+  "uniqueOptionsWarningMessage": "Le colonne categoriali con oltre {valueCount} valori univoci non sono selezionabili come l'etichetta o come una caratteristica.",
   "uniqueOptionsWarningNotice": "Nota"
 }

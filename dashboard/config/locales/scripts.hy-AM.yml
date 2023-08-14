@@ -1489,6 +1489,46 @@ hy:
           title: Minecraft Hour of Code
         netsim:
           title: Ինտերնետ Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: conditionals
+            lessonGroup-5:
+              display_name: փոփոխականների
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: nested Loops
+            lessonGroup-4:
+              display_name: գործառույթները
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-5:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: loops
         new-express:
           lesson_groups:
             content:
@@ -1551,6 +1591,7 @@ hy:
             game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
         starwarsblocks:
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
@@ -1571,6 +1612,12 @@ hy:
               display_name: Ուսուցիչի փորձեր
             required:
               display_name: Overview
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

@@ -1575,10 +1575,6 @@
           "swimming left and right": "ಎಡ ಮತ್ತು ಬಲಕ್ಕೆ ಈಜುವುದು",
           "wandering": "ಅಲೆದಾಡುವುದು"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "ಬೆಳೆಯುತ್ತಿದೆ",
           "jittering": "ನಡುಗುತ್ತಿದೆ",
@@ -3027,8 +3023,6 @@
           "spinning right": "ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "wandering": "ಅಲೆದಾಡುವುದು",
           "wobbling": "ಒದ್ದಾಡುವುದು"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "ಬೆಳೆಯುತ್ತಿದೆ",

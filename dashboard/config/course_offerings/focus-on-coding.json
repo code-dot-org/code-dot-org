@@ -12,9 +12,9 @@
   "cs_topic": "art_and_design,games_and_animations,physical_computing,web_design,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
+  "description": "Are you ready to code? This unit empowers students to strengthen their programming skills in web development, app development, and more.",
+  "professional_learning_program": "code.org/apply",
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": 443
 }

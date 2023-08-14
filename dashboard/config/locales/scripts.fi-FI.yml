@@ -611,6 +611,8 @@ fi:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
             lessonGroup-3:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
         csd1-dlp:
           lesson_groups:
             required:
@@ -1666,6 +1668,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1680,6 +1684,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1694,6 +1700,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -1708,6 +1716,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1724,6 +1734,8 @@ fi:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
             lessonGroup-3:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1738,6 +1750,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1854,6 +1868,46 @@ fi:
           title: Koodaustunti Minecraft Suunnittelija
         netsim:
           title: Internet simulaattori
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ehtolausekkeet
+            lessonGroup-5:
+              display_name: Muuttujat
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-6:
+              display_name: Tapahtumat
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sisäkkäiset silmukat
+            lessonGroup-4:
+              display_name: Funktiot
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-5:
+              display_name: Tapahtumat
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-6:
+              display_name: Silmukat
         new-e:
           lesson_groups:
             extra_course_content:
@@ -1931,6 +1985,7 @@ fi:
             ikioma Tähtien Sota -pelisi.
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
+          title: 'Tähtien sota: Rakenna galaksi koodaten (JavaScript)'
         starwarsblocks:
           description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
@@ -1947,6 +2002,12 @@ fi:
           lesson_groups:
             required:
               display_name: Yleiskatsaus
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

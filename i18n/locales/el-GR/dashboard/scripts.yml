@@ -160,6 +160,7 @@ el:
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
           student_description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
         starwars:
+          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα (JavaScript)'
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
@@ -2331,6 +2332,10 @@ el:
           title: 'Γεια σας κόσμο: Διάστημα'
         hello-world-soccer-2022:
           title: 'Γεια σας κόσμο: Ποδόσφαιρο'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd7-2023:
           lesson_groups:
             lessonGroup-4:
@@ -2502,10 +2507,34 @@ el:
               display_name: Εισαγωγή στο App Lab
             lessonGroup-5:
               display_name: Έρευνα
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Εισαγωγή στο App Lab
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2595,3 +2624,75 @@ el:
           lessons:
             lesson-4:
               name: Δεδομένα
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Δεδομένα
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-6:
+              display_name: Δεδομένα
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς αναγνώστες.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-6:
+              display_name: Συμβάντα
+            lessonGroup-7:
+              display_name: Έργο Λήξη Μαθήματος
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Συμβάντα
+            lessonGroup-6:
+              display_name: Δεδομένα
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-6:
+              display_name: Βρόχοι
+            lessonGroup-7:
+              display_name: Δεδομένα
+            lessonGroup-8:
+              display_name: Έργο Λήξη Μαθήματος
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Εμφωλευμένοι Βρόχοι
+            lessonGroup-4:
+              display_name: Συναρτήσεις
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Χαρακτήρας
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Χαρακτήρας
+            lessonGroup-3:
+              display_name: Συνθήκες
+            lessonGroup-5:
+              display_name: Μεταβλητές
+            lessonGroup-7:
+              display_name: Έργο Λήξη Μαθήματος
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.

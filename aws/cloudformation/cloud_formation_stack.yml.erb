@@ -520,9 +520,18 @@ Resources:
         # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
+        <%
+          # Most of our instances use 64-gigabyte volumes, but we want to use a
+          # slightly larger one for production and a larger one still for test.
+          default_volume_size = 64
+          volume_size_overrides = {
+            production: 128,
+            test: 256
+          }
+        %>
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
+            VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -619,12 +628,10 @@ Resources:
 
 <%=  component 'logging'%>
 
-<% if database-%>
   # ---------------------------------------------
   # Database
   # ---------------------------------------------
 <%=  component 'database'%>
-<% end -%>
 
   # ---------------------------------------------
   # Codeprojects Resources

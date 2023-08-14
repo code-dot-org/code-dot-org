@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-21 20:02:30 UTC",
+    "serialized_at": "2023-08-09 16:44:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16498,7 +16498,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
+      "url": "https://docs.google.com/document/d/1XuLY5osr9sZMfLAWMkqi8C7IdG_Uu3PshqKeSIhtKno/edit?usp=sharing",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16658,7 +16658,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1GaKD2JihCwsreJPzSTpSrl3MltFWpdwvFgej0QqFQ_s/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/template/preview",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
@@ -17393,7 +17393,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
@@ -20347,6 +20347,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

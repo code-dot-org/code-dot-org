@@ -53,14 +53,6 @@
         "CSD U3 Boolean Predict_2022": {
           "": "Este programa imprimirá un resultado aquí"
         },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Observa atentamente este código."
         },
@@ -1300,8 +1292,6 @@
         },
         "NEW Course 4 Artist Params 10": {
           "create_function": "Haz clic aquí para abrir el menú desplegable de \"Funciones\", y luego haz clic en el botón \"Crear una función\"."
-        },
-        "NEW Course 4 Artist Params 2": {
         },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función",
@@ -3322,26 +3312,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "¡Bloque nuevo!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
         },
         "ml-customize apps-choice3": {
           "CSD_AI_L10_predict": "Añade tu if-statement aquí dentro"

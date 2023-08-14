@@ -883,10 +883,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "交替程式積木在「舞蹈演員」類別中。"
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "您可以在自己的程式中呼叫使用功能多次！請嘗試呼叫兩次以解決此版圖。",
           "Function_intro_Ryan_b": "如果你呼叫了正確的函式，那麼這就是你要移動的路徑…"
@@ -1793,8 +1789,6 @@
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "當玩家贏得遊戲時，你可以執行以下操作：\n\n-   使恐龍消失。\n-   讓松鼠停下來。\n-   讓松鼠和騎士高興。\n-   設定新的背景。\n-   讓騎士感謝玩家的幫助。\n-   讓所有角色都消失，並顯示「你贏了！」消息。",
           "courseE_playLab_challenge1_b": "當玩家輸掉遊戲時，你可以採取以下操作：\n\n-   使騎士消失。\n-   使松鼠感到難過。\n-   讓恐龍說些什麼。\n-   設定新的背景。\n-   使所有角色消失，並顯示「遊戲結束」消息。"
-        },
-        "course4_artist_binary_challenge2": {
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "定義了一個函式之後，就可以隨時隨地呼叫它！",
@@ -5521,8 +5515,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "一個圓是 360 度。將轉彎次數乘以重複次數。是不是等於 360 ？檢查給出的旋轉，看看能不能得出正確的結果！"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "一個圓是 360 度。將轉彎次數乘以重複次數。是不是等於 360 ？檢查給出的旋轉，看看能不能得出正確的結果！"
@@ -12294,14 +12286,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "每次變數加2，而不是加1。"
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "你還需要這個積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12313,16 +12297,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "你還需要這個積木：\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "您想要將綠色積木中的句子「What should I shout?」（我該叫喊什麼？）更換成「Goal!」"
@@ -12379,10 +12353,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "你可以通過將一個帶不同變數的新提示積木連接到你的第一個“when answered”事件來添加第二個（或第三個、第四個）提示。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">what do you want for your birthday?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

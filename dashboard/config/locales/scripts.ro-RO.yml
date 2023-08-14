@@ -1655,6 +1655,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         csd1-dlp:
           lesson_groups:
             content:
@@ -3183,6 +3185,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3195,6 +3199,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3207,6 +3213,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3231,6 +3239,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3245,6 +3255,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3257,6 +3269,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3424,6 +3438,100 @@ ro:
           title: Minecraft Designer Hour of Code
         netsim:
           title: Simulator Internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii
+            şi creați propria dvs. artă, poveste sau joc.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spiriduși
+            lessonGroup-3:
+              display_name: Condiţionale
+            lessonGroup-5:
+              display_name: Variabile
+            lessonGroup-6:
+              display_name: Impactul computerelor
+            lessonGroup-7:
+              display_name: Proiect de final de curs
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii
+            şi creați propria dvs. artă, poveste sau joc.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spiriduși
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Vârsta: 5-8 ani'
+          description_short: O introducere în știința calculatoarelor pentru preșcolari.
+            Asemănătoare cu Cursul A, dar cu o prezentare mai aprofundată a conceptelor.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Evenimente
+            lessonGroup-7:
+              display_name: Proiect de final de curs
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Vârsta: 8-12 ani'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Repetiții imbricate
+            lessonGroup-4:
+              display_name: Funcţii
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Vârsta: 4-7 ani'
+          description_short: O introducere în informatică pentru preșcolari.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Date
+          lessons:
+            lesson-1:
+              name: Date
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Evenimente
+            lessonGroup-6:
+              display_name: Date
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Vârsta: 7-11 ani'
+          description_short: Învață despre condiții. Creează propriile opere de artă,
+            jocuri, chiar și o petrecere dansantă.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Bucle
+            lessonGroup-7:
+              display_name: Date
+            lessonGroup-8:
+              display_name: Proiect de final de curs
         new-e:
           lesson_groups:
             csf_e_1:
@@ -4081,6 +4189,17 @@ ro:
               display_name: Capitolul 1
             lessonGroup-3:
               display_name: Capirolul 2
+        test-nv-coursea-2023:
+          description_audience: 'Vârsta: 4-7 ani'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

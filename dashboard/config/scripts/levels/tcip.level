@@ -9,6 +9,7 @@
     "encrypted": "false",
     "level_data": {
       "text": "Base Mix",
+      "library": "tcip",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -325,9 +326,10 @@
         ]
       }
     },
+    "hide_share_and_remix": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-01 00:31:18 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-01 23:19:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-01 23:32:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:28:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:28:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:34:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:36:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:38:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:39:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-06-01 00:31:18 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-01 23:19:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-01 23:32:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:28:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:28:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:34:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:36:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:38:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-05 17:39:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-02 04:08:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

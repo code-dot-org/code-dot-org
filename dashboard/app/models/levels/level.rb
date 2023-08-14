@@ -38,6 +38,7 @@ class Level < ApplicationRecord
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+  has_many :rubrics, dependent: :destroy
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -55,8 +56,8 @@ class Level < ApplicationRecord
 
   validate :validate_game, on: [:create, :update]
 
-  after_save :write_custom_level_file
-  after_destroy :delete_custom_level_file
+  after_save {Services::LevelFiles.write_custom_level_file(self)}
+  after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
@@ -245,18 +246,6 @@ class Level < ApplicationRecord
     hash
   end
 
-  def should_write_custom_level_file?
-    write_to_file? && published
-  end
-
-  def write_custom_level_file
-    if should_write_custom_level_file?
-      file_path = Level.level_file_path(name)
-      File.write(file_path, to_xml)
-      file_path
-    end
-  end
-
   def should_allow_pairing?(current_script_id)
     if type == "LevelGroup"
       return false
@@ -270,12 +259,6 @@ class Level < ApplicationRecord
     end
 
     !(current_parent&.type == "LevelGroup")
-  end
-
-  def self.level_file_path(level_name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
-    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
-    level_paths.first || Rails.root.join("config/scripts/levels/#{level_name}.level")
   end
 
   def to_xml(options = {})
@@ -311,13 +294,6 @@ class Level < ApplicationRecord
   def report_bug_url(request)
     message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
-  end
-
-  def delete_custom_level_file
-    if write_to_file?
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
-      File.delete(file_path) if file_path && File.exist?(file_path)
-    end
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
@@ -845,9 +821,5 @@ class Level < ApplicationRecord
       str = matchdata.captures.first
     end
     str
-  end
-
-  private def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end

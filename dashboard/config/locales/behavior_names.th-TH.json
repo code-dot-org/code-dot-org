@@ -1575,10 +1575,6 @@
           "swimming left and right": "ว่ายน้ำไปทางซ้ายและขวา",
           "wandering": "เคลื่อนที่"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "ขยายตัว",
           "jittering": "กระสับกระส่าย",
@@ -3027,8 +3023,6 @@
           "spinning right": "หมุนไปทางขวา",
           "wandering": "เคลื่อนที่",
           "wobbling": "โยกเยก"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "ขยายตัว",

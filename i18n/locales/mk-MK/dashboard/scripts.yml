@@ -383,3 +383,42 @@ mk:
           lessons:
             lesson-4:
               name: Податоци
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Податоци
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Лупови
+            lessonGroup-7:
+              display_name: Податоци
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+            lessonGroup-5:
+              display_name: Променливи

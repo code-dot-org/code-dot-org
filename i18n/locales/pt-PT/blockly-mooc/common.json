@@ -2167,8 +2167,8 @@
   "teacherTabStatsTextResponses": "Respostas de texto",
   "teachingGuide": "Guia de Ensino",
   "teachingTip": "Dica de ensino",
-  "tellUsAboutYourself": "Conte-nos sobre você",
-  "tellUsAboutWorkshop": "Conte-nos sobre o workshop que você está participando",
+  "tellUsAboutYourself": "Fale-nos sobre si",
+  "tellUsAboutWorkshop": "Fale-nos sobre a formação que está a participar",
   "organizerNotListed": "Meu organizador não está listado",
   "facilitatorNotListed": "Meu facilitador não está listado",
   "test": "Teste",
@@ -2340,7 +2340,7 @@
   "windows": "Windows",
   "withoutHints": "Sem pedir pistas!",
   "workedWith": "Trabalhou Com:",
-  "workshopDate": "Data da Oficina",
+  "workshopDate": "Data da formação",
   "workspaceHeaderShort": "Área de trabalho: ",
   "workspaceProjectTemplateLevel": "Este ícone significa que este nível é parte de um projeto maior. Mudanças serão salvas através destes níveis.",
   "wrongCourseVersionWarningNotice": "Você está em uma versão mais nova deste curso",
@@ -2366,7 +2366,7 @@
   "yourSchoolParentDesc": "Aja para expandir a ciência da computação em sua escola ou distrito",
   "yourSchoolTeacherButton": "Comece a ensinar",
   "yourSchoolTeacherDesc": "Comece a ensinar hoje, não é necessária experiência com ciência da computação",
-  "yourSchoolTellUs": "Conte-nos sobre a sua escola",
+  "yourSchoolTellUs": "Fale-nos sobre a sua escola",
   "yourSectionsList": "Suas seções",
   "zipOrCountry": "Código postal ou país"
 }

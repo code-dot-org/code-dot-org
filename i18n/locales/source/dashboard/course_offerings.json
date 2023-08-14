@@ -56,7 +56,7 @@
   "sb-pt-cont": "sb-pt-cont",
   "sb-pt-exp": "sb-pt-exp",
   "sports": "Code Your Own Sports Game",
-  "starwars": "Star Wars: Building a Galaxy With Code (Javascript)",
+  "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
   "starwarsblocks": "Star Wars: Building a Galaxy With Code (Blockly)",
   "text-compression": "Text Compression",
   "csa-self-paced-pl": "Navigating Code.org for CSA Pilot Teachers",
@@ -450,5 +450,7 @@
   "nevada-standards-aligned-second-grade": "nevada-standards-aligned-second-grade",
   "nevada-standards-aligned-third-grade": "nevada-standards-aligned-third-grade",
   "tesspltest23": "tesspltest23",
-  "test-nv-coursea": "test-nv-coursea"
+  "test-nv-coursea": "test-nv-coursea",
+  "aichat": "aichat",
+  "how-ai-works": "How AI Works"
 }

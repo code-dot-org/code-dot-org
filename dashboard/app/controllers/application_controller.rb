@@ -4,6 +4,7 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'cpa'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -347,7 +348,7 @@ class ApplicationController < ActionController::Base
       policy_compliance_child_account_consent_path,
     ].include?(request.path)
 
-    redirect_to lockout_path unless current_user.child_account_policy_compliant?
+    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user)
   end
 
   private def pairing_still_enabled

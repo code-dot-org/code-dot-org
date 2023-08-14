@@ -2,14 +2,6 @@
   "az-AZ": {
     "data": {
       "mini_rubric": {
-        "CDU U6 Playground Sound Board_2019": {
-        },
-        "CDU U6 Playground Sound Board_2021": {
-        },
-        "CSD Games properties assessment_2021": {
-        },
-        "CSD Games properties assessment_2022": {
-        },
         "CSD U2 HTML Adding Paragraphs pt 2_2019": {
           "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
         },
@@ -22,12 +14,6 @@
         "CSD U2 Heading Test_2018": {
           "rubric_performance_level_2": "Bütün məzmun teqlərdə olur, paraqraf və başlıq teqlərindən məntiqi şəkildə istifadə edir."
         },
-        "CSD U2 Heading Test_2019": {
-        },
-        "CSD U2 Heading Test_2021": {
-        },
-        "CSD U2 Heading Test_2022": {
-        },
         "CSD U2 Image Tag 2_2019": {
           "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
         },
@@ -38,16 +24,6 @@
         "CSD U2 Image assessment_2022": {
           "rubric_performance_level_2": "Şəkil düzgün göstərilir və müəllif hüququ lisenziyasının təsvirinə uyğun olaraq işlədilir.",
           "rubric_performance_level_3": "`img` teqi istifadə edilir və şəkil üçün mənbə ünvanı təmin edilib, lakin şəklin düzgün göstərilməsinə mane olan kiçik sintaksis xətaları və ya yazı səhvləri ola bilər. Şəkil internet səhifəsində qanuni istifadə üçün mövcud olmaya bilər."
-        },
-        "CSD U2 add style_2019": {
-        },
-        "CSD U2 add style_2021": {
-        },
-        "CSD U2 add style_2022": {
-        },
-        "CSD U2 adding pages_2021": {
-        },
-        "CSD U2 adding pages_2022": {
         },
         "CSD U2 classes haikus_2021": {
           "rubric_performance_level_1": "Sinif və qaydalar dəsti düzgün yaradılıb, seçilmiş haykunun bütün elementləri daxil edilib və qaydalar dəstində ən azı üç qayda var.",
@@ -61,8 +37,6 @@
           "rubric_performance_level_3": "Və sinif və qayda dəsti yaradılıb, və veb səhifədən heç olmasa bir neçə element o sinifdədir, ancaq mətnə üslub verməyin qarşısını alan böyük xətalar ola bilər.",
           "rubric_performance_level_4": "Heç bir sinif ya da qaydalar dəsti yaradılmayıb ya da sinfə heç bir veb səhifə elementi qoyulmayıb."
         },
-        "CSD U2 classes summer_2019": {
-        },
         "CSD U2 text style h3_2019": {
           "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
         },
@@ -72,50 +46,8 @@
         "CSD U2 text style h3_2022": {
           "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
         },
-        "CSD U2 un_ordered lists": {
-        },
-        "CSD U3 Conditionals Apple 2_2018_2019": {
-        },
-        "CSD U3 Conditionals Apple 2_2021": {
-        },
-        "CSD U3 Conditionals Apple 2_2022": {
-        },
-        "CSD U3 Direction Arrows_2018_2019": {
-        },
-        "CSD U3 Direction Arrows_2021": {
-        },
-        "CSD U3 Direction Arrows_2022": {
-        },
-        "CSD U3 Draw Loop Plugged update your scene_2019": {
-        },
-        "CSD U3 Draw Loop Plugged update your scene_2021": {
-        },
-        "CSD U3 Draw Loop Plugged update your scene_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Else_2019": {
-        },
-        "CSD U3 Else_2021": {
-        },
-        "CSD U3 Else_2022": {
-        },
-        "CSD U3 Functions Add Change Background_2019": {
-        },
-        "CSD U3 Functions Add Change Background_2021": {
-        },
-        "CSD U3 Functions Add Change Background_2022": {
-        },
-        "CSD U3 Movement Fish_2021": {
-        },
-        "CSD U3 Movement Fish_2022": {
-        },
         "CSD U3 Movement Your Own 2_2018": {
           "rubric_performance_level_4": "Sayğac nümunəsi yoxdur."
-        },
-        "CSD U3 Random Debug Cloud_2018_2019": {
         },
         "CSD U3 Random Debug Cloud_2021": {
           "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et."
@@ -123,19 +55,11 @@
         "CSD U3 Random Debug Cloud_2022": {
           "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et."
         },
-        "CSD U3 Random rainbow snake_2018_2019": {
-        },
-        "CSD U3 Random rainbow snake_2021": {
-        },
-        "CSD U3 Random rainbow snake_2022": {
-        },
         "CSD U3 Sprites assessment_2021": {
           "rubric_key_concept": "Spraytları yarat və istifadə et."
         },
         "CSD U3 Sprites assessment_2022": {
           "rubric_key_concept": "Spraytları yarat və istifadə et."
-        },
-        "CSD U3 Sprites scene sprites_2019": {
         },
         "CSD U3 Variables assessment_2021": {
           "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
@@ -145,26 +69,6 @@
         },
         "CSD U3 Variables random with assignment_2019": {
           "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
-        },
-        "CSD U3 abstraction decelerateY_2019": {
-        },
-        "CSD U3 abstraction decelerateY_2021": {
-        },
-        "CSD U3 abstraction decelerateY_2022": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 collisions flyman make it your own_2019": {
-        },
-        "CSD U3 collisions horse_2019": {
-        },
-        "CSD U3 collisions horse_2021": {
-        },
-        "CSD U3 collisions horse_2022": {
         },
         "CSD U3 debug_2019": {
           "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
@@ -187,104 +91,6 @@
           "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
-        "CSD U3 platform challenge_2019": {
-        },
-        "CSD U3 platform review_2021": {
-        },
-        "CSD U3 platform review_2022": {
-        },
-        "CSD U4 - Design Mode Project_2019": {
-        },
-        "CSD U4 - Design Mode Project_2021": {
-        },
-        "CSD U4 - Design Mode Project_2022": {
-        },
-        "CSD U6 - Accelerometer - A_2222": {
-        },
-        "CSD U6 - Board Inputs - A_2222": {
-        },
-        "CSD U6 - Board Outputs - A_2222": {
-        },
-        "CSD U6 - Color LEDs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Functions - A_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Physical Input - A_2222": {
-        },
-        "CSD U6 - Physical Output - A_2222": {
-        },
-        "CSD U6 - Screen Inputs - A_2222": {
-        },
-        "CSD U6 - Screen Outputs - ChalB_2222": {
-        },
-        "CSD U6 - Sensors - A_2222": {
-        },
-        "CSD U6 LED all_2019": {
-        },
-        "CSD U6 LED all_2021": {
-        },
-        "CSD U6 analog rgb 3_2019": {
-        },
-        "CSD U6 analog rgb 3_2021": {
-        },
-        "CSD U6 circuit smart bike blinker buttons_2019": {
-        },
-        "CSD U6 circuit smart bike blinker buttons_2021": {
-        },
-        "CSD U6 circuit smart bike final_2019": {
-        },
-        "CSD U6 circuit smart bike final_2021": {
-        },
-        "CSD U6 create LED app 2_2019": {
-        },
-        "CSD U6 create LED app 2_2021": {
-        },
-        "CSD U6 emotion machine 4_2019": {
-        },
-        "CSD U6 emotion machine 4_2021": {
-        },
-        "CSD U6 for loop led color_2019": {
-        },
-        "CSD U6 for loop led color_2021": {
-        },
-        "CSD U6 for loop led personalize_2019": {
-        },
-        "CSD U6 for loop led personalize_2021": {
-        },
-        "CSD U6 getProperty buzzer_2019": {
-        },
-        "CSD U6 getProperty buzzer_2021": {
-        },
-        "CSD U6 goalie_2019": {
-        },
-        "CSD U6 goalie_2021": {
-        },
-        "CSD U6 light pattern off_2019": {
-        },
-        "CSD U6 light pattern off_2021": {
-        },
-        "CSD U6 params starchaser 5_2019": {
-        },
-        "CSD U6 params starchaser 5_2021": {
-        },
-        "CSD U6 setProperty hidden 2_2019": {
-        },
-        "CSD U6 setProperty hidden 2_2021": {
-        },
-        "CSD U6 setProperty xy_2019": {
-        },
-        "CSD U6 setProperty xy_2021": {
-        },
-        "CSD U6 tugowar buzzer_2019": {
-        },
-        "CSD U6 tugowar buzzer_2021": {
-        },
         "CSD Web CSS Assessment_2021": {
           "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
           "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
@@ -293,74 +99,8 @@
           "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
           "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
         },
-        "CSD games collisions assessment_2021": {
-        },
-        "CSD games collisions assessment_2022": {
-        },
-        "CSD games mousedown intro_2021": {
-        },
-        "CSD games mousedown intro_2022": {
-        },
-        "CSD web conditionals assessment_2021": {
-        },
-        "CSD web conditionals assessment_2022": {
-        },
-        "CSD web mouse assessment_2021": {
-        },
-        "CSD web mouse assessment_2022": {
-        },
-        "CSD web text assessment_2021": {
-        },
-        "CSD web text assessment_2022": {
-        },
-        "CSDU4 Project Events_2019": {
-        },
-        "CSDU4 Project Events_2021": {
-        },
-        "CSDU4 Project Events_2022": {
-        },
-        "CSDU6 - LED toggle buttonL up_2019": {
-        },
-        "CSDU6 - LED toggle buttonL up_2021": {
-        },
-        "CSDU6 arrays select variable_2019": {
-        },
-        "CSDU6 arrays select variable_2021": {
-        },
-        "CSDU6 making new arrays_2019": {
-        },
-        "CSDU6 making new arrays_2021": {
-        },
-        "U4 Model Design 7_2019": {
-        },
-        "U4 Model Design 7_2021": {
-        },
-        "U4 Model Design 7_2022": {
-        },
-        "U4 Model Program 5_2019": {
-        },
-        "U4 Model Program 5_2021": {
-        },
-        "U4 Model Program 5_2022": {
-        },
-        "allthethings-mini-rubric": {
-        },
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Əsas anlayış"
-        },
-        "allthethings-mini-rubric-weblab": {
-        },
-        "ml-club app-review submit": {
-        },
-        "ml-club app-review submit_2022": {
-        },
-        "ml-intro app lab-book recommender 4-2021": {
-        },
-        "ml-intro app lab-book recommender 4_2022": {
-        },
-        "ml-models in applab-zoo assessment": {
-        },
-        "ml-models in applab-zoo assessment_2022": {
         }
       }
     }

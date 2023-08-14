@@ -345,6 +345,41 @@ mk:
           title: Работилница за апликации
         hero:
           name: херој
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+            lessonGroup-5:
+              display_name: Променливи
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+          lessons:
+            lesson-1:
+              name: Податоци
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Лупови
+            lessonGroup-7:
+              display_name: Податоци
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -367,6 +402,10 @@ mk:
               display_name: Лупови
         sports:
           name: спортови
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:

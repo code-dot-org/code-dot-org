@@ -345,6 +345,30 @@ my:
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ
             စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
           title: Minecraft Hour of Code
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: ဖြစ်စဥ်များ
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: ဖြစ်စဥ်များ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Loops
         pre-express-2019:
           lesson_groups:
             csf_events:
@@ -377,6 +401,12 @@ my:
               display_name: Loops
         soccer:
           name: ဘောလုံး
+        starwars:
+          title: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
         time4cs-control-unit-1:
           lesson_groups:
             csf_events:

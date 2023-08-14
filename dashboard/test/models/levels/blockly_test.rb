@@ -198,15 +198,6 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
-  test 'converts from and to XML level format' do
-    name = 'Test level convert'
-    level = LevelLoader.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
-    xml = level.to_xml
-    xml2 = LevelLoader.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
-    level.destroy
-    assert_equal xml, xml2
-  end
-
   def create_custom_block(name, pool, block_text, args, category: 'Events')
     [{
       name: name,
@@ -1259,5 +1250,43 @@ class BlocklyTest < ActiveSupport::TestCase
     # Output should use <button></button> instead of <button />
     expected_output = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
     assert_equal expected_output, localized_start_html
+  end
+
+  test 'get_localized_property returns property translation when level should be localized' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: 'expected_failure_message_override')
+
+    level.stubs(:should_localize?).returns(true)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).once.returns('expected-blockly-level-property-translation')
+
+    assert_equal 'expected-blockly-level-property-translation', level.get_localized_property('failure_message_override')
+  end
+
+  test 'get_localized_property returns nil when level should not be localized' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: 'expected_failure_message_override')
+
+    level.stubs(:should_localize?).returns(false)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).never
+
+    assert_nil level.get_localized_property('failure_message_override')
+  end
+
+  test 'get_localized_property returns nil when value is nil' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: nil)
+
+    level.stubs(:should_localize?).returns(true)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).never
+
+    assert_nil level.get_localized_property('failure_message_override')
+  end
+
+  test 'localized_failure_message_override returns failure_message_override property translation' do
+    level = Blockly.new
+
+    level.expects(:get_localized_property).with('failure_message_override').once.returns('expected_failure_message_override_translation')
+
+    assert_equal 'expected_failure_message_override_translation', level.localized_failure_message_override
   end
 end
