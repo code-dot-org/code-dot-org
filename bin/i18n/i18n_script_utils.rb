@@ -295,4 +295,22 @@ class I18nScriptUtils
     # )
     puts "[#{error_class}] #{error_message}"
   end
+
+  def self.fix_yml_file(filepath)
+    # Ryby implementation of the removed perl script `bin/i18n-codeorg/lib/fix-ruby-yml.pl`
+    # while(<>) {
+    #   # Remove ---
+    #   s/^---\n//;
+    #   # Fixes the "no:" problem.
+    #   s/^([a-z]+(?:-[A-Z]+)?):(.*)/"\1":\2/g;
+    #   print;
+    # }
+
+    yml_data = File.read(filepath)
+
+    yml_data.sub!(/^---\n/, '')                             # Remove ---
+    yml_data.gsub!(/^([a-z]+(?:-[A-Z]+)?):(.*)/, '"\1":\2') # Fixes the "no:" problem.
+
+    File.write(filepath, yml_data)
+  end
 end
