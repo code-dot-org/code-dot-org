@@ -92,10 +92,10 @@ export default class FunctionEditor {
       if (e.isUiEvent) return;
       // save the procedure block only, ignore other blocks
       if (!this.block) return;
-      console.log('in save add change listener, block is ', this.block);
       const id = this.block.getProcedureModel().getId();
       const blockState = Blockly.serialization.blocks.save(this.block);
       this.allFunctions[id] = blockState;
+      console.log('block state to append: ', blockState);
       //Blockly.serialization.blocks.append(blockState, this.mainWorkspace);
       console.log({new_function_def: this.allFunctions[id]});
     });
@@ -145,7 +145,8 @@ export default class FunctionEditor {
   // TODO: Rename
   showForFunction(procedure) {
     this.editorWorkspace.clear();
-    console.log('in showForFunction, procedure.getName()', procedure.getName());
+    console.log('in showForFunction, procedure: ', procedure);
+    console.log({allFunctions: this.allFunctions});
     this.nameInput.value = procedure.getName();
     // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
     // this.functionDescriptionInput.value = procedure.getDescription();
@@ -239,8 +240,6 @@ export default class FunctionEditor {
 }
 
 const createCallBlock = function (procedure) {
-  console.log('creating call block');
-  console.log({procedure});
   const name = procedure.getName();
   return {
     kind: 'block',
@@ -248,11 +247,12 @@ const createCallBlock = function (procedure) {
     fields: {
       NAME: name,
     },
-    // mutation: {
-    //   name: name,
-    // },
+    mutation: {
+      name: name,
+    },
     extraState: {
       name: name,
+      id: procedure.getId(),
     },
   };
 };
