@@ -2530,9 +2530,9 @@ tr-TR:
       CourseF_outbreak_story:
         content1: açıklama buraya
         markdown: "# Salgın: Kendi Simülasyonunuzu Kodlayın\n\n## Canavar Şehri'ne
-          hoş geldiniz!\nCanavar Şehri genellikle mutlu ve sağlıklı bir yerdi. Canavar
-          Şehri'nin canavarları, arkadaşlarını ziyaret etmek için etrafta dolaşmaya
-          bayılırdı. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          Hoş Geldiniz!\nCanavar Şehri eskiden mutlu ve sağlıklı bir yerdi. Canavar
+          kasabasının canavarları, etrafta dolaşıp arkadaşlarını ziyaret etmeyi çok
+          severdi. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -2543,10 +2543,10 @@ tr-TR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nBir gün canavarlardan biri kendini hasta hissetmeye
-          başladı. Canavar bir **virüs** kapmış! Virüs, sizi hasta edebilecek küçük
-          bir mikroptur. Diğer canavarlar çok endişelenmediler. Arkadaşlarını ziyaret
-          etmeye devam ettiler.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBir gün, canavarlardan biri kendini hasta hissetmeye
+          başladı. Canavar bir **virüs** kapmıştı! Bu arada virüs, sizi hasta eden
+          küçük mikroplara denir. Diğer canavarlar bu durum karşısında çok endişeli
+          değillerdi. Arkadaşlarını ziyaret etmeye devam ettiler.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -2557,8 +2557,8 @@ tr-TR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÇok geçmeden iki canavar daha hasta oldu. Sebebi
-          aynı virüstü! Görünüşe göre virüsü arkadaşlarından kapmışlardı.\n\n<img
+          style=\"width:8%\">\n\nKısa süre sonra, iki canavar daha hastalandı. Hem
+          de aynı virüsten! Görünüşe göre virüsü arkadaşlarından kapmışlardı.\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -2571,8 +2571,8 @@ tr-TR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nVirüs yavaş yavaş yakınlardaki diğer canavarlara
-          yayıldı. Sağlıklı canavarlar, hepsinin hastalanacağından endişelenmeye başladı.
-          Hasta canavarlar, virüsü herkese bulaştıracaklarından endişelenmeye başladılar.\n\n<img
+          yayıldı. Sağlıklı canavarlar, herkesin hastalanacağından korkmaya başladı.
+          Hasta canavarlar da virüsü herkese bulaştıracaklarından endişelenmekteydi.\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -2585,24 +2585,24 @@ tr-TR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## Yayılmayı durdurmak\nNeyse ki, virüsü
-          inceledikten sonra, Canavar Şehri'nin komşuları önemli bir keşif yaptı.
-          Ağızlarına maske takarlarsa virüsü yayma olasılıklarının daha düşük olduğunu
-          fark ettiler. Yüz maskeleri takılı olduğunda hasta canavarların virüsü sağlıklı
-          canavarlara bulaştırma olasılığı daha düşüktü.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"float:right; width:30%\">\n\n## Yayılmayı durdurmak\nNeyse ki virüsü
+          inceledikten sonra Canavar Şehri'nin komşuları önemli bir keşif yaptı. Ağızlarına
+          maske takarlarsa virüsü yayma olasılıklarının daha düşük olduğunu fark ettiler.
+          Yüz maskeleri takılıyken, hasta canavarların virüsü sağlıklı canavarlara
+          bulaştırma olasılığı daha düşüktü.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          Sonra ne olacak?\n\nBugün, Canavar Şehri'ndeki virüs salgını için kendi
-          **simülasyonunuzu** oluşturmak ve çalıştırmak için kod yazacaksınız. Simülasyon,
-          bir sürecin veya sistemin bilgisayar modelidir. Canavar Şehri'nin komşularına
-          ne olacağı hakkında kod yazmayı ve tahminlerde bulunmayı öğrenin.\n\n<img
+          Peki şimdi ne olacak?\n\nBugün, Canavar Şehri'ndeki virüs salgınına ait
+          kendi **simülasyonunuzu** oluşturmak ve çalıştırmak için kod yazacaksınız.
+          Simülasyon, bir sürecin veya sistemin bilgisayar modelidir. Canavar Kasabası'nın
+          komşularına ne olacağı hakkında kodlamayı ve tahminlerde bulunmayı öğrenin.\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* *Virüs ne kadar hızlı yayılır?*\n\n*
-          *Herkes hasta olacak mı?*\n\n* *Maskeler nasıl yardımcı olur?*\n\n\nBitirdiğinizde
+          style=\"float:right; width:15%\">\n\n* *Virüs ne kadar hızlı yayılacak?*\n\n*
+          *Herkes hastalanacak mı?*\n\n* *Yüz maskeleri nasıl yardımcı olacak?*\n\n\nBitirdiğinizde
           simülasyonunuzu başkalarıyla paylaşın. Kasabaya bir virüs geldiğinde başkalarının
-          sağlıklı kalmasına yardımcı olmak için sizce neler yapabileceğimize dair
-          mesajınızı paylaşın. \n"
+          sağlıklı kalmasına yardımcı olmak için neler yapabileceğimiz hakkında düşüncelerinizi
+          belirtin."
       CourseF_outbreak_story2:
         content1: açıklama buraya
         markdown: |
