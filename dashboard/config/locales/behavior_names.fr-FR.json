@@ -299,7 +299,7 @@
         },
         "CourseF_outbreak2": {
           "recovering": "se remettre",
-          "wandering": "se balader"
+          "wandering": "errer"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "se remettre",
@@ -314,19 +314,19 @@
           "wandering": "se balader"
         },
         "CourseF_outbreak4": {
-          "growing": "aggrandissement",
-          "jittering": "gigoter",
-          "moving east": "se déplacer vers l'est",
+          "growing": "grandir",
+          "jittering": "s'agiter",
+          "moving east": "aller vers l'est",
           "moving north": "se déplacer vers le nord",
-          "moving south": "se déplacer vers le sud",
-          "moving west": "aller vers l'ouest",
+          "moving south": "aller vers le sud",
+          "moving west": "se déplacer vers l'ouest",
           "moving with arrow keys": "se déplacer avec les touches fléchées",
-          "patrolling": "patrouiller",
+          "patrolling": "patrouiller ",
           "recovering": "se remettre",
-          "shrinking": "rétrécissement",
-          "spinning left": "tournoyer à gauche",
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche ",
           "spinning right": "tournoyer à droite",
-          "swimming left and right": "nager de droite à gauche",
+          "swimming left and right": "nager de gauche à droite ",
           "wandering": "se balader"
         },
         "CourseF_outbreak4_-2022-2": {
@@ -362,18 +362,18 @@
           "wandering": "se balader"
         },
         "CourseF_outbreak7": {
-          "growing": "s'agrandir",
-          "jittering": "gigoter",
+          "growing": "grandir",
+          "jittering": "s'agiter",
           "moving east": "aller vers l'est",
           "moving left and right": "se déplacer à gauche et à droite",
           "moving north": "aller vers le nord",
           "moving south": "aller vers le sud",
           "moving west": "aller vers l'ouest",
           "moving with arrow keys": "se déplacer avec les touches fléchées",
-          "patrolling": "patrouiller",
+          "patrolling": "patrouiller ",
           "recovering": "se remettre",
-          "shrinking": "se rétrécir",
-          "spinning left": "tournoyer à gauche",
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche ",
           "spinning right": "tournoyer à droite",
           "wandering": "se balader"
         },
@@ -394,18 +394,18 @@
           "wandering": "se balader"
         },
         "CourseF_outbreak8": {
-          "growing": "s'agrandir",
-          "jittering": "gigoter",
+          "growing": "grandir",
+          "jittering": "s'agiter",
           "moving east": "aller vers l'est",
           "moving left and right": "se déplacer à gauche et à droite",
           "moving north": "aller vers le nord",
           "moving south": "aller vers le sud",
-          "moving west": "se déplacer vers l'ouest",
+          "moving west": "aller vers l'ouest",
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "patrolling": "patrouiller ",
           "recovering": "se remettre",
-          "shrinking": "se rétrécir",
-          "spinning left": "tournoyer à gauche",
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche ",
           "spinning right": "tournoyer à droite",
           "wandering": "se balader"
         },
