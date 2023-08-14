@@ -12,9 +12,9 @@
   "cs_topic": "data,physical_computing,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "description": "Let's talk hardware! This unit helps students learn how to use physical devices to solve problems.",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/OAx_6-wdslM/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=OAx_6-wdslM&wmode=transparent",
+  "published_date": null,
+  "self_paced_pl_course_offering_id": 443
 }

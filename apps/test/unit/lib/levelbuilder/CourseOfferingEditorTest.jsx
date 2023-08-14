@@ -34,31 +34,39 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        self_paced_pl_course_offering_id: 1,
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       },
       selfPacedPLCourseOfferings: [
         {
           id: 1,
           key: 'test-self-paced-pl-1',
           display_name: 'Self Paced PL 1',
-          course_version_path: null,
         },
         {
           id: 53,
           key: 'test-self-paced-pl-2',
           display_name: 'Self Paced PL 2',
-          course_version_path: null,
         },
         {
           id: 135,
           key: 'test-self-paced-pl-3',
           display_name: 'Self Paced PL 3',
-          course_version_path: null,
         },
       ],
       professionalLearningProgramPaths: {
         'K5 Workshops': 'code.org/professional-development-workshops',
         '6-12 Workshops': 'code.org/apply',
       },
+      videos: [
+        {
+          name: 'test_video',
+          youtube_url: 'https://www.youtube-nocookie.com/test_video',
+          thumbnail: null,
+          locale: 'en-US',
+        },
+      ],
     };
   });
 
@@ -98,6 +106,8 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -173,6 +183,8 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [

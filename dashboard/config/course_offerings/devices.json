@@ -3,7 +3,7 @@
   "display_name": "Creating Apps with Devices (Circuit Playground)",
   "category": "maker",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
@@ -12,9 +12,9 @@
   "cs_topic": "art_and_design,app_design,physical_computing,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
+  "description": "In this unit, students use App Lab and Adafruit's Circuit Playground to develop programs that use the same hardware inputs and outputs found in smart devices.",
+  "professional_learning_program": "code.org/apply",
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": 401
 }

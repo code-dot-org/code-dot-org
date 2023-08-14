@@ -1,1 +1,13 @@
-%h1 Aichat Fields
+%h1.control-legend{data: {toggle: "collapse", target: "#ai-chat"}}
+  AI Chat
+
+#ai-chat.in.collapse
+  = f.label :bot_title, 'Bot Title'
+  %p Short title for bot that will be shown to students with each message (eg, "History Bot").
+  = f.text_field :bot_title
+  = f.label :bot_description, 'Bot Description'
+  %p Student-facing description of the bot that students will interact with.
+  = f.text_area :bot_description, placeholder: '', rows: 2, class:"input-block-level"
+  = f.label :system_prompt, 'System Prompt'
+  %p Bot-facing prompt used to specify behavior of chatbot.
+  = f.text_area :system_prompt, placeholder: '', rows: 4, class:"input-block-level"

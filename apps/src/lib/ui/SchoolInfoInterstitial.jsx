@@ -365,7 +365,7 @@ export default class SchoolInfoInterstitial extends React.Component {
                 style={styles.button}
                 size="large"
                 text={i18n.save()}
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 id="save-button"
               />
             </div>

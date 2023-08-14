@@ -27,7 +27,7 @@ Feature: Curriculum Catalog Page
   Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
     Given I am on "http://studio.code.org/catalog/lang/es"
     Then I wait until I am on "http://studio.code.org/catalog?lang=es"
-    And I open my eyes to test "Curriculum Catalog in Spansih"
+    And I open my eyes to test "Curriculum Catalog in Spanish"
     Then I wait until element "#topic-dropdown" is visible
     And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is visible
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
@@ -103,6 +103,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -134,6 +135,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is not visible
 
     # Confirm unassign
     Then I am on "http://studio.code.org"
