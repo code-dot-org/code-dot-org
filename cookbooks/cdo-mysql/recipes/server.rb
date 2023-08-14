@@ -2,6 +2,7 @@ include_recipe 'cdo-mysql::repo'
 
 apt_package 'mysql-server' do
   action :upgrade
+  version '5.7*'
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
   notifies :run, 'execute[mysql-upgrade]', :immediately
