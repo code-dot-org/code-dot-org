@@ -2079,22 +2079,22 @@ mr-IN:
       CourseF_outbreak_story:
         content1: येथे वर्णन आहे
         markdown: |-
-          # उद्रेक: तुमच्या स्वत:च्या सिम्युलेशनचे कोडींग करा
+          # उद्रेक: तुमच्या स्वत:च्या कोडचे सिम्युलेशन करा
 
-          ## राक्षसांच्या शहरात स्वागत!
-          राक्षसांचे शहर म्हणजे सामान्यपणे एक आनंदी आणि निरोगी जागा आहे. राक्षसांच्या शहरातील राक्षसांना त्यंच्या मित्रांना भेटण्यासाठी इकडेतिकडे भटकायला आवडते.
+          ## राक्षसांच्या गावात तुमचे स्वागत!
+          राक्षसांचे गाव म्हणजे सामान्यपणे एक आनंदी आणि निरोगी जागा असते.  राक्षसांच्या गावातल्या राक्षसांना त्यांच्या मित्रांना भेटायला इकडे तिकडे जायला मजा येते.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          एके दिवशी, एका राक्षसाला बरे वाटेनासे झाले. राक्षसाला **विषाणू** संसर्ग झाला आहे! विषाणू म्हणजे एक लहान जंतू असतो, जो तुम्हाला आजारी पाडतो. इतर राक्षसांना फार चिंता वाटली नाही. ते त्यांच्या मित्रांना भेटत राहिले.
+          एके दिवशी, एक राक्षस आजारी पडला. त्याला **व्हायरसची** बाधा झाली होती! व्हायरस म्हणजे एक छोटा जंतू असतो, जो तुम्हाला आजारी पाडू शकतो. इतर राक्षसांना फार चिंता वाटली नाही. ते त्यांच्या मित्रांना भेटतच राहिले.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          नंतर लगेचच, अजून दोन राक्षस आजारी पडले. त्याचे कारण तोच विषाणू होता! त्यांना त्यांच्या मिताराक्डून विषाणू संसर्ग झाला असे दिसते.
+          त्यानंतर लगेचच, अजून दोन राक्षस आजारी पडले. त्याला तोच व्हायरस जबाबदार होता! त्यांना त्यांच्या मित्राकडूनच व्हायरसची लागण झाली असे वाटते.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          हळूहळू हा विषाणू जवळ असलेल्या इतर राक्षसांपर्यंत पोचला. निरोगी राक्षसांना अशी चिंता वाटू लागली की ते सगळेच आजारी पडतील. आजारी राक्षसांना अशी चिंता वाटू लागली की त्यांच्याकडून इतर सर्व राक्षसांना विषाणू संसर्ग होईल.
+          जे राक्षस जवळपास होते त्यांनासुद्धा हळूहळू व्हायरसची लागण झाली. निरोगी राक्षसांनासुद्धा आपण आजारी पडू अशी चिंता वाटू लागली. आजारी राक्षसांना अशी चिंता वाटू लागली की त्यांच्यामुळे इतर सगळ्यांना व्हायरसची लागण होईल.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
@@ -2103,7 +2103,7 @@ mr-IN:
           <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
 
           ## प्रसार थांबवणे
-          सुदैवाने, विषाणूचा अभ्यास केल्यावर राक्षसांच्या शहरातील  शेजाऱ्यांना एक महत्त्वाचा शोध लागला. त्यांच्या लक्षात आले की जर त्यांनी तोंडावर मास्क घातला तर त्याच्याकडून विषाणूचा प्रसार होण्याची शक्यता कमी आहे. फेस मास्क्स घातलेल्या आजारी राक्षसांकडून निरोगी राक्षसांकडे विषाणूचा प्रसार होण्याची शक्यता कमी आहे.
+          सुदैवाने, विषाणूचा अभ्यास केल्यावर, राक्षसांच्या गावाच्या शेजाऱ्यांना एक महत्त्वाचा शोध लागला. त्यांच्या असे लक्षात आले की जर त्यांनी आपल्या तोंडावर मास्क्स घातले की ते व्हायरसचा प्रसार करण्याची कमी शक्यता आहे, आजारी राक्षसांकडून निरोगी राक्षसांकडे व्हायरसचा प्रसार होण्याची कमी शक्यता आहे
 
           <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
 
@@ -2113,20 +2113,18 @@ mr-IN:
 
           ## पुढे काय होईल?
 
-          आज, तुम्ही राक्षसांच्या शहरातील विषाणू उद्रेकाचे तुमचे स्वत:चे सिम्युलेशन तयार करण्यासाठी आणि ते रन करण्यासाठी कोड लिहिणार आहात. सिम्युलेशन म्हणजे एखाद्या प्रक्रियेचे किंवा प्रणालीचे कॉम्प्युटर मॉडेल.   कोड करायला शिका आणि राक्षसांच्या शहराच्या शेजाऱ्यांच्या बाबतीत काय घडेल त्याचा अंदाज वर्तवा.
+          आज, तुम्ही राक्षसांच्या गावातल्या व्हायरस संसर्गाचे **सिम्युलेशन** करण्यासाठी तुमचा स्वत:चा कोड लिहिणार आहात आणि तो रन करणार आहात. सिम्युलेशन म्हणजे प्रोसेस किंवा सिस्टीमचे कॉम्प्युटर मॉडेल. कोड लिहायला शिका आणि राक्षसांच्या गावच्या शेजाऱ्यांचे काय होईल, त्याबद्दल अंदाज वर्तवा.
 
           <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
 
-          * *विषाणूचा प्रसार किती जलद होईल?*
+          * *व्हायरसचा प्रसार किती लवकर होईल?*
 
-          * *सगळेजण आजारी पडतील का?*
+          * *सगळेच आजारी पडतील का?*
 
           * *फेस मास्क्सचा कसा उपयोग होईल?*
 
 
-          तुमचे करून झाले की तुमचे सिम्युलेशन इतरांशी शेअर करा. जेव्हा विषाणू शहरात येतो तेव्हा इतरांना निरोगी ठेवण्यात मदत करण्यासाठी आपण काय करू शकतो असे तुम्हाल वाटते याबद्दलचा मेसेज इतरांशी शेअर करा.
-
-          <img src="https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png" style="float:left;width:30%">
+          तुमचे सिम्युलेशन करून झाल्यावर ते इतरांशी शेअर करा. जेव्हा गावात व्हायरस येतो तेव्हा इतरांना निरोगी ठेवण्यासाठी आपण काय करू शकतो? असे तुम्हाला वाटते, त्याबद्दलचा तुमचा मेसेज शेअर करा.
       CourseF_outbreak_story2:
         content1: येथे वर्णन आहे
         markdown: "# उद्रेक: शास्त्रज्ञाप्रमाणे विचार करणे\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"

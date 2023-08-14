@@ -291,7 +291,7 @@
         },
         "CourseF_outbreak1": {
           "recovering": "रिकव्हर होत आहे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "रिकव्हर होत आहे",
@@ -299,7 +299,7 @@
         },
         "CourseF_outbreak2": {
           "recovering": "रिकव्हर होत आहे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "रिकव्हर होत आहे",
@@ -307,7 +307,7 @@
         },
         "CourseF_outbreak3": {
           "recovering": "रिकव्हर होत आहे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak3_-2022-2": {
           "recovering": "रिकव्हर होत आहे",
@@ -347,7 +347,7 @@
         },
         "CourseF_outbreak5": {
           "recovering": "रिकव्हर होत आहे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "रिकव्हर होत आहे",
@@ -355,7 +355,7 @@
         },
         "CourseF_outbreak6": {
           "recovering": "रिकव्हर होत आहे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak6_-2022-2": {
           "recovering": "रिकव्हर होत आहे",
@@ -375,7 +375,7 @@
           "shrinking": "आकार कमी होणे",
           "spinning left": "डावीकडे स्पिन होणे",
           "spinning right": "उजवीकडे स्पिन होणे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak7_-2022-2": {
           "growing": "आकार वाढवणे",
@@ -394,8 +394,8 @@
           "wandering": "भटकणे"
         },
         "CourseF_outbreak8": {
-          "growing": "वाढत आहे",
-          "jittering": "थरथरत आहे",
+          "growing": "आकार वाढवणे",
+          "jittering": "थरथरणे",
           "moving east": "पूर्वेकडे जाणे",
           "moving left and right": "डावीकडे आणि उजवीकडे जाणे",
           "moving north": "उत्तरेकडे जाणे",
@@ -404,10 +404,10 @@
           "moving with arrow keys": "ॲरो कीज वापरून हालचाल करणे",
           "patrolling": "गस्त घालणे",
           "recovering": "रिकव्हर होत आहे",
-          "shrinking": "आकार कमी होत आहे",
+          "shrinking": "आकार कमी होणे",
           "spinning left": "डावीकडे स्पिन होणे",
           "spinning right": "उजवीकडे स्पिन होणे",
-          "wandering": "भटकत आहे"
+          "wandering": "भटकणे"
         },
         "CourseF_outbreak8_-2022-2": {
           "growing": "आकार वाढवणे",
