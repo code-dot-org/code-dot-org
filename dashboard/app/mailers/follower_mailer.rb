@@ -1,4 +1,4 @@
-class FollowerMailer < ActionMailer::Base
+class FollowerMailer < ApplicationMailer
   include ActionMailerMetrics
   default from: 'noreply@code.org'
 
