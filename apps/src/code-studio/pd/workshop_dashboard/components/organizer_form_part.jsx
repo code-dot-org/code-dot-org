@@ -69,7 +69,7 @@ export default class OrganizerFormPart extends React.Component {
                 value={this.props.organizerId}
                 onChange={this.props.onChange}
                 disabled={this.props.readOnly}
-                style={this.props.readOnly && styles.readOnlyInput}
+                style={this.props.readOnly ? styles.readOnlyInput : {}}
               >
                 {organizerOptions}
               </select>
