@@ -1136,6 +1136,10 @@ uk:
           lessons:
             lesson-21:
               name: Починаємо
+        csa-consumer-review-lab:
+          title: Лабораторія відгуків для курсу AP CSA
+        csa-data-lab:
+          title: Лабораторія даних для курсу AP CSA
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1163,6 +1167,21 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+        csa-labs-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Лабораторія Говоруна
+        csa-magpie-lab:
+          description_short: Лабораторія Говоруна досліджує основи обробки природної
+            мови, коли учні створюють програму чат-бота. Учні працюють з різними методами
+            класу String і практикують використання операторів if для оцінки введення
+            користувачем відповідної відповіді.
+          lessons:
+            lesson-2:
+              name: Робота з кодом Говоруна
+            lesson-3:
+              name: Робота з API для Говоруна і рядки
+          title: Лабораторія Говоруна для курсу AP CSA
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2477,7 +2496,7 @@ uk:
             **Рекомендації з реалізації Розділу 7**
 
             -   Опрацюйте Тему 1 Розділу 1, перш ніж починати цей розділ
-            -   У цьому розділі передбачається, що студенти знайомі з Програмною Лабораторією, зокрема з використанням режиму дизайну для створення інтерфейсу користувача і з використанням подій для зміни екрану при натисканні кнопки. [Натисніть тут](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview), щоб дізнатися більше про рекомендації щодо ознайомлення учнів з Програмною Лабораторією перед початком цього розділу.
+            -   У цьому розділі передбачається, що учні знайомі з Програмною Лабораторією, зокрема з використанням режиму дизайну для створення інтерфейсу користувача і з використанням подій для зміни екрану при натисканні кнопки. [Натисніть тут](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview), щоб дізнатися більше про рекомендації щодо ознайомлення учнів з Програмною Лабораторією перед початком цього розділу.
             -   Це факультативний розділ, який можна використовувати замість іншого розділу CSD - див. [Рекомендації з реалізації](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) для отримання додаткової інформації.
             -   Можна переглянути повні [Методичні рекомендації до програми](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) для отримання додаткової інформації про цей розділ
 
@@ -4146,6 +4165,11 @@ uk:
               display_name: Події
             lessonGroup-7:
               display_name: Проєкт
+            lessonGroup-8:
+              display_name: Дані
+          lessons:
+            lesson-1:
+              name: Дані
         nevada-standards-aligned-fourth-grade-2023:
           description: Ми створили курс E для учнів четвертого класу. Курс починається
             з ознайомлення з інструментом програмування Спрайт Лабораторія. Учні навчаться
@@ -4193,6 +4217,11 @@ uk:
               display_name: Події
             lessonGroup-6:
               display_name: Дані
+            lessonGroup-8:
+              display_name: Обчислювальні системи
+          lessons:
+            lesson-1:
+              name: Обчислювальні системи
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Вік: 7-11'
           lesson_groups:
@@ -4646,6 +4675,22 @@ uk:
           description_short: Створіть симуляцію спалаху вірусу за допомогою Sprite
             Lab.
           title: Симулювання Спалаху
+        vpl-csa-2023-m1:
+          title: Модуль 1.
+        vpl-csa-2023-m2:
+          title: Модуль 2.
+        vpl-csa-2023-m3:
+          title: Модуль 3.
+        vpl-csa-2023-m4:
+          title: Модуль 4.
+        vpl-csa-2023-m5:
+          title: Модуль 5.
+        vpl-csa-2023-m6:
+          title: Модуль 6.
+        vpl-csa-2023-m7:
+          title: Модуль 7.
+        vpl-csa-2023-m8:
+          title: Модуль 8.
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -4664,6 +4709,22 @@ uk:
               display_name: Модуль 7.
             CSD_Module 8:
               display_name: Модуль 8.
+        vpl-csd-2023-m1:
+          title: Модуль 1.
+        vpl-csd-2023-m2:
+          title: Модуль 2.
+        vpl-csd-2023-m3:
+          title: Модуль 3.
+        vpl-csd-2023-m4:
+          title: Модуль 4.
+        vpl-csd-2023-m5:
+          title: Модуль 5.
+        vpl-csd-2023-m6:
+          title: Модуль 6.
+        vpl-csd-2023-m7:
+          title: Модуль 7.
+        vpl-csd-2023-m8:
+          title: Модуль 8.
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4672,6 +4733,22 @@ uk:
           lessons:
             lesson-6:
               name: Модуль 2 Асинхронна робота
+        vpl-csp-2023-m1:
+          title: Модуль 1.
+        vpl-csp-2023-m2:
+          title: Модуль 2.
+        vpl-csp-2023-m3:
+          title: Модуль 3.
+        vpl-csp-2023-m4:
+          title: Модуль 4.
+        vpl-csp-2023-m5:
+          title: Модуль 5.
+        vpl-csp-2023-m6:
+          title: Модуль 6.
+        vpl-csp-2023-m7:
+          title: Модуль 7.
+        vpl-csp-2023-m8:
+          title: Модуль 8.
         web-development-2023:
           lesson_groups:
             lessonGroup-2:
