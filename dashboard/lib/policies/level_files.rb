@@ -34,8 +34,8 @@ module Policies
     # by name if provided, or all level files if not.
     #
     # Supports both our old level file location at
-    # "config/scripts/levels/{name}.level" and our new level file location at
-    # "config/levels/custom/{game}/{name}.level"
+    # "config/scripts/**/{name}.level" and our new level file location at
+    # "config/levels/(custom|dsl_defined)/{game}/{name}.level"
     #
     # TODO: once all old level files have been moved out of the config/scripts
     # directory, update this to just inspect config/levels/**
