@@ -209,6 +209,9 @@ USER ${USER}
 
 WORKDIR /home/${USER}
 
+# Enable Git LFS in ~/.gitconfig
+RUN git lfs install
+
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
