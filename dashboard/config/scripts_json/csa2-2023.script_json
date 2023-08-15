@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-23 16:40:56 UTC",
+    "serialized_at": "2023-08-15 14:54:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,6 +73,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2023"
       }
     }
@@ -345,6 +357,36 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2023"
       }
     }
@@ -945,6 +987,18 @@
         "lesson_activity.key": "8c6ec535-6c71-4f3d-89a3-1e9fce1e6036",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2023"
       }
     }
@@ -4790,6 +4844,16 @@
         "activity_section.key": "8658f7a1-39ce-405c-b6fc-6d4b31d4dea4",
         "lesson_activity.key": "8c6ec535-6c71-4f3d-89a3-1e9fce1e6036"
       }
+    },
+    {
+      "key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad",
+        "lesson_activity.key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8"
+      }
     }
   ],
   "script_levels": [
@@ -6817,6 +6881,27 @@
       "level_keys": [
         "CSA U2 Store Management Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7790,6 +7875,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2023",
         "activity_section.key": "4e85d584-2b68-45d5-832a-56691499cd9c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad"
       }
     }
   ],
@@ -10958,6 +11055,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
