@@ -114,7 +114,7 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_SORT_BY_FAMILY_NAME) {
-    if (action.isSortedByFamilyName === 'true') {
+    if (action.isSortedByFamilyName) {
       analyticsReport.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
         sectionId: action.sectionId,
         unitName: action.unitName,

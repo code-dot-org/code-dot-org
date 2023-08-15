@@ -460,14 +460,14 @@ class ManageStudentsTable extends Component {
     });
     if (selectedColumn === COLUMNS.FAMILY_NAME) {
       this.props.setSortByFamilyName(
-        'true',
+        true,
         this.props.sectionId,
         this.props.sectionUnitName,
         MANAGE_STUDENTS_TABLE
       );
     } else if (selectedColumn === COLUMNS.NAME) {
       this.props.setSortByFamilyName(
-        'false',
+        false,
         this.props.sectionId,
         this.props.sectionUnitName,
         MANAGE_STUDENTS_TABLE

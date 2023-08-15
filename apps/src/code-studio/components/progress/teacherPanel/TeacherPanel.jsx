@@ -35,6 +35,8 @@ import {
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import DCDO from '@cdo/apps/dcdo';
 
+const TEACHER_PANEL = 'TeacherPanel';
+
 class TeacherPanel extends React.Component {
   static propTypes = {
     scriptId: PropTypes.number,
@@ -250,6 +252,7 @@ class TeacherPanel extends React.Component {
               selectStyles={styles.select}
               sectionId={sectionId}
               unitName={unitName}
+              source={TEACHER_PANEL}
             />
           )}
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
