@@ -29,7 +29,6 @@ import {
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import DCDO from '@cdo/apps/dcdo';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
@@ -42,6 +41,7 @@ const CurriculumCatalogCard = ({
   topics = [],
   pathToCourse,
   onAssignSuccess,
+  quickViewDisplayed,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -71,6 +71,7 @@ const CurriculumCatalogCard = ({
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     onAssignSuccess={onAssignSuccess}
+    quickViewDisplayed={quickViewDisplayed}
     {...props}
   />
 );
@@ -98,6 +99,7 @@ CurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
+  quickViewDisplayed: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -121,6 +123,7 @@ const CustomizableCurriculumCatalogCard = ({
   isSignedOut,
   onAssignSuccess,
   courseId,
+  quickViewDisplayed,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -219,7 +222,7 @@ const CustomizableCurriculumCatalogCard = ({
                 : style.buttonsContainer_notEnglish
             )}
           >
-            {!!DCDO.get('quick-view', false) ? (
+            {quickViewDisplayed ? (
               <Button
                 color={Button.ButtonColor.neutralDark}
                 type="button"
@@ -281,6 +284,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
+  quickViewDisplayed: PropTypes.bool,
 };
 
 export default connect(
