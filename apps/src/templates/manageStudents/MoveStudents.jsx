@@ -279,7 +279,7 @@ class MoveStudents extends Component {
               style={styles.buttonWithoutMargin}
               text={i18n.moveStudents()}
               onClick={this.transfer}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={pendingTransfer || this.isButtonDisabled()}
               isPending={pendingTransfer}
               pendingText={i18n.movingStudents()}

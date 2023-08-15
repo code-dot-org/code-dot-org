@@ -533,6 +533,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    minitest-stub-const (0.6)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     msgpack (1.7.0)
@@ -999,6 +1000,7 @@ DEPENDENCIES
   minitest (~> 5.15)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
+  minitest-stub-const (~> 0.6)
   mocha
   mysql2 (>= 0.4.1)
   nakayoshi_fork

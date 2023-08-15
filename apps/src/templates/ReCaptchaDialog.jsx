@@ -122,7 +122,7 @@ export default class ReCaptchaDialog extends React.Component {
             <Button
               text={submitText}
               onClick={this.handleSubmit}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={!this.state.submitButtonEnabled}
             />
           </DialogFooter>

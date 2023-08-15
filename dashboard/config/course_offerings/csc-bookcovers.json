@@ -12,9 +12,9 @@
   "cs_topic": "art_and_design,app_design,games_and_animations,programming",
   "school_subject": "english_language_arts",
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
-  "description": null,
+  "description": "Use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more.",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "video": "https://www.youtube-nocookie.com/embed/CqUNczW1oKs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=CqUNczW1oKs&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 421
 }

@@ -12,6 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -24,6 +25,8 @@ const CurriculumCatalog = ({
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+
+  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
@@ -112,6 +115,7 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
+                  quickViewDisplayed={isQuickViewDisplayed}
                   deviceCompatibility={device_compatibility}
                   description={description}
                   professionalLearningProgram={professional_learning_program}
@@ -150,7 +154,6 @@ const CurriculumCatalog = ({
       <HeaderBanner
         headingText={i18n.curriculumCatalogHeaderTitle()}
         subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />

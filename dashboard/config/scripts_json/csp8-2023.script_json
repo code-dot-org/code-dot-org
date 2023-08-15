@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-06 18:30:04 UTC",
+    "serialized_at": "2023-08-07 21:53:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2505,6 +2505,7 @@
       "key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
       "position": 9,
       "properties": {
+        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
@@ -2977,7 +2978,8 @@
       "properties": {
         "level_keys": [
           "Student End of Unit Survey_csp10_2023"
-        ]
+        ],
+        "progression": "End-of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {

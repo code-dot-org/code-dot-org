@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:56:22.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -71,7 +76,12 @@
       "regularPolygon": null,
       "shape": null,
       "draw": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "assign_x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null
     },
     "display_name": "Dance Scene",
     "disable_procedure_autopopulate": "false",
@@ -99,19 +109,14 @@
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a focused free-play level: students are free to design a scene based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their scene, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
     "bubble_choice_description": "Create an animated scene of your favorite dance moves!",
     "validation_enabled": "false",
+    "start_blocks": "//1) Add or draw sprites in the Animation Tab.\r\n//2) Create your sprites and set their animations.\r\n\r\n//3) Add a draw loop with the appropriate properties needed to create the animation of your favorite dance moves.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "start_blocks": "//1) Add or draw sprites in the Animation Tab.\r\n//2) Create your sprites and set their animations.\r\n\r\n//3) Add a draw loop with the appropriate properties needed to create the animation of your favorite dance moves."
+    ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:56:22.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:22.704+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L9 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L9 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 00:12:28 +0000\",\"changed\":[\"never_autoplay_video\",\"long_instructions\",\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:46:44 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:22.704+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L9 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L9 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 00:12:28 +0000\",\"changed\":[\"never_autoplay_video\",\"long_instructions\",\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:46:44 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 16:26:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
