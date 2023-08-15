@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {Provider} from 'react-redux';
@@ -48,8 +49,9 @@ const setUp = overrideProps => {
 };
 
 const setUpWithMount = async overrideProps => {
-  const store = createStore(combineReducers({viewAs}), {
+  const store = createStore(combineReducers({viewAs, currentUser}), {
     viewAs: ViewType.Instructor,
+    currentUser: {},
   });
 
   const props = {...DEFAULT_PROPS, ...overrideProps};
