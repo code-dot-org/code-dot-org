@@ -161,6 +161,10 @@ RUN add-apt-repository ppa:git-core/ppa && \
     apt-get update && \
     apt-get install -y git>=2.15
 
+# we need git-lfs >= 3.0 to use SSH authentication with git-lfs
+RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git-lfs
+
 # install firefox
 RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/firefox-mozilla-build_47.0.1-0ubuntu1_amd64.deb && \
     echo 'ef016febe5ec4eaf7d455a34579834bcde7703cb0818c80044f4d148df8473bb  /tmp/firefox.deb' | sha256sum -c && \
