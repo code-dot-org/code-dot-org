@@ -16,7 +16,7 @@ const ScholarshipDropdown = ({
       value={scholarshipStatus}
       onChange={onChange}
       options={dropdownOptions}
-      disabled={!isWorkshopAdmin || disabled}
+      disabled={!isWorkshopAdmin && disabled}
     />
   </FormGroup>
 );
