@@ -9,13 +9,14 @@
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-08-03 21:31:54 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-10 18:45:03 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -46,7 +47,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
@@ -64,7 +65,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "This lesson centers around the [How AI Works: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how computer vision works. They first look at optical illusions to identify the features of the drawing that their eyes noticed. Students watch a video explaining computer vision and how a computer \"sees\". They design an algorithm that uses a network to decide what number the seven segment display is displaying. Finally, students test their algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how computer vision works. They first look at optical illusions to identify the features of the drawing that their eyes noticed. Students watch a video explaining computer vision and how a computer \"sees\". They design an algorithm that uses a network to decide what number the seven segment display is displaying. Finally, students test their algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Print copies of the Computer Vision Network activity guide for each group\n- (Optional) Print copies of the Seven Segment Display Manipulative",
         "student_overview": "Learn how computer vision works by designing an algorithm to detect numbers."
       },
@@ -82,7 +83,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This lesson centers around the [How AI Works: Neural Networks](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Neural Networks](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student",
         "student_overview": "Learn how neural networks work by adjusting the weights of a recommendation system to adjust the outputs."
       },
@@ -100,7 +101,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson centers around the [How AI Works: Chatbots and Large Language Models](https://youtu.be/T45kEEBzrT8) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nLarge Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia. In this lesson, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Chatbots and Large Language Models](https://youtu.be/X-AWdfSFCHQ) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nLarge Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia. In this lesson, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Print copies of the activity guide for each student",
         "student_overview": "Are Large Language Models (LLMs) intelligent or creative? Decide for yourself as you work with them to create something, and learn more about how they work!"
       },
@@ -118,7 +119,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson centers around the [How AI Works: Creativity and Imagination?](https://www.youtube.com/watch?v=gD1bEC9q54k) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nDiffusion models generate images. Diffusion AI converts an image to noise, and trains an AI to reverse the process. In this lesson, students learn how AI can generate images, then explore a diffusion AI widget. Finally, the class wraps up with a discussion about whether or not these models are creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Creativity and Imagination?](https://www.youtube.com/watch?v=X994dDnmRmY) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nDiffusion models generate images. Diffusion AI converts an image to noise, and trains an AI to reverse the process. In this lesson, students learn how AI can generate images, then explore a diffusion AI widget. Finally, the class wraps up with a discussion about whether or not these models are creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Print copies of the activity guide for each student",
         "student_overview": "Learn how AI can generate images by exploring a diffusion AI widget."
       },
@@ -136,7 +137,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "This lesson centers around the [How AI Works: Equal Access and Algorithmic Bias](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Equal Access and Algorithmic Bias](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
@@ -155,7 +156,7 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson centers around the [How AI Works: Privacy and the Future of Work](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn small groups, students conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
+        "overview": "This lesson centers around the [How AI Works: Privacy and the Future of Work](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn small groups, students conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
         "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
@@ -1220,6 +1221,30 @@
       }
     },
     {
+      "key": "316385e5-2df8-4e34-b964-6ee28ecc3e7f",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "316385e5-2df8-4e34-b964-6ee28ecc3e7f",
+        "lesson_activity.key": "e6f1149b-23f5-4e0e-a7ea-2bfae191cd68"
+      }
+    },
+    {
+      "key": "eb99e343-c072-48cd-84dd-49b6e56e8108",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb99e343-c072-48cd-84dd-49b6e56e8108",
+        "lesson_activity.key": "e6f1149b-23f5-4e0e-a7ea-2bfae191cd68"
+      }
+    },
+    {
       "key": "a7c37a28-46be-4a1a-b767-99482e8cf353",
       "position": 1,
       "properties": {
@@ -1652,6 +1677,30 @@
       },
       "seeding_key": {
         "activity_section.key": "b8fc8bcd-f477-431a-9586-9c2ad827f9da",
+        "lesson_activity.key": "3cdf708b-5e5e-4b8f-93d1-de1cb1465793"
+      }
+    },
+    {
+      "key": "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)\n",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd",
+        "lesson_activity.key": "3cdf708b-5e5e-4b8f-93d1-de1cb1465793"
+      }
+    },
+    {
+      "key": "38017a5c-eb05-4397-b122-8711c1559789",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "38017a5c-eb05-4397-b122-8711c1559789",
         "lesson_activity.key": "3cdf708b-5e5e-4b8f-93d1-de1cb1465793"
       }
     },
@@ -2118,6 +2167,30 @@
       }
     },
     {
+      "key": "96703b12-be00-4549-add6-28fffea6e76f",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "96703b12-be00-4549-add6-28fffea6e76f",
+        "lesson_activity.key": "fba301f4-2e80-4dee-bdab-fea07fe90181"
+      }
+    },
+    {
+      "key": "fde8393e-139e-40ef-b275-1d93b32daf61",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "fde8393e-139e-40ef-b275-1d93b32daf61",
+        "lesson_activity.key": "fba301f4-2e80-4dee-bdab-fea07fe90181"
+      }
+    },
+    {
       "key": "2913480b-0273-4c5a-95c8-23b002a842a0",
       "position": 1,
       "properties": {
@@ -2532,7 +2605,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This might be a good discussion to use the Whip Around Protocol for. https://www.theteachertoolkit.com/index.php/tool/whip-around"
+            "markdown": "This might be a good discussion to use the [Whip Around Protocol](https://www.theteachertoolkit.com/index.php/tool/whip-around)."
           }
         ]
       },
@@ -2575,6 +2648,30 @@
       }
     },
     {
+      "key": "e1924cec-7b85-408e-b577-211abaf1f02f",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1924cec-7b85-408e-b577-211abaf1f02f",
+        "lesson_activity.key": "83444760-81e7-4dcc-89f3-fa2069dc6a95"
+      }
+    },
+    {
+      "key": "e22c70e5-cc6f-4d97-9eff-5736cbb0031a",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "e22c70e5-cc6f-4d97-9eff-5736cbb0031a",
+        "lesson_activity.key": "83444760-81e7-4dcc-89f3-fa2069dc6a95"
+      }
+    },
+    {
       "key": "57b4147e-478a-451f-8931-a3b624c15095",
       "position": 1,
       "properties": {
@@ -2592,7 +2689,7 @@
       "key": "d7cae2b6-1735-4036-b8dc-5b8c35d4bb01",
       "position": 2,
       "properties": {
-        "progression_name": "Eliza Widget"
+        "progression_name": "(Optional) Eliza Widget"
       },
       "seeding_key": {
         "activity_section.key": "d7cae2b6-1735-4036-b8dc-5b8c35d4bb01",
@@ -2734,7 +2831,7 @@
       "key": "b6f5ed76-d406-4126-bc05-997d00cf8233",
       "position": 2,
       "properties": {
-        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Pause video at 1:07 when it says \"And even create complete video sequences with just a few words of instruction.\"_![](https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png)                                                          | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of things that AI can generate?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Look for a quick answer to check for understanding of the video so far.</p><p>Students may mention examples from the video such as building video sequences, but any place where humans provide AI with a prompt and it creates something will work. As a class, consider coming up with 1-2 examples not already stated in the video.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |\n| _Pause video at 2:08 where it says \"At this point, the generative AI has learned to generate real-looking imagery.\"_<br>![](https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png)                                                          | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> How did Generative Adversarial Networks make realistic-seeming images?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick check for understanding. Students should know that a Generative Adversarial Network is made out of 2 networks -- one that generates images and another that says if it thinks the image was real or generated. Eventually, the generator is able to fool the discriminator and the image seem real.<br><br> |\n| _Pause video at 2:50 when it says \"...the image loses all details and becomes pure noise.\"_![](https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png)</p>                                                     | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is happening in each version of the image?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick pause to allow students to synthesize what they are seeing. Students should note that the details in the images are getting slightly blurrier, but can still be seen. Eventually, the human eye can't see the details at all.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |\n| _Pause video at 3:42 when it says \"or to alter existing images.\"_<br>![](https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png)                                                                                                                       | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does the diffusion process train computers to build new images with specific details?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick check for understanding. Students should know that diffusion models learn from slowly adding noise and then slowly subtracting noise from images, until the generator knows how to find details in noise.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |\n| _Pause video at 4:33 when it says: \"...so the legal questions here are not simple.\"_![](https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png)                      | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Personal opinion: who do you think should \"own\" the images that AI creates? <br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one answer to this question; the idea is for students to truly think about the implications of image generation in AI. Depending on your preferences and class timing, this can be an involved discussion that takes several minutes. See the Teacher tip for additional ideas for how to facilitate this discussion.|\n| _Continue watching the video until it ends_ ![](https://images.code.org/73a09be0fbbae1200fa174efcb3b842f-screenshot1.png) | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What can you imagine creating with  a diffusion model??<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Get students excited about what diffusion models can do. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |"
+        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Pause video at 1:10 when it says \"And even create complete video sequences with just a few words of instruction.\"_![](https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png)                                                          | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of things that AI can generate?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Look for a quick answer to check for understanding of the video so far.</p><p>Students may mention examples from the video such as building video sequences, but any place where humans provide AI with a prompt and it creates something will work. As a class, consider coming up with 1-2 examples not already stated in the video.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |\n| _Pause video at 2:11 where it says \"At this point, the generative AI has learned to generate real-looking imagery.\"_<br>![](https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png)                                                          | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> How did Generative Adversarial Networks make realistic-seeming images?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick check for understanding. Students should know that a Generative Adversarial Network is made out of 2 networks -- one that generates images and another that says if it thinks the image was real or generated. Eventually, the generator is able to fool the discriminator and the image seem real.<br><br> |\n| _Pause video at 2:53 when it says \"...the image loses all details and becomes pure noise.\"_![](https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png)</p>                                                     | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is happening in each version of the image?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick pause to allow students to synthesize what they are seeing. Students should note that the details in the images are getting slightly blurrier, but can still be seen. Eventually, the human eye can't see the details at all.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |\n| _Pause video at 3:45 when it says \"or to alter existing images.\"_<br>![](https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png)                                                                                                                       | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does the diffusion process train computers to build new images with specific details?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick check for understanding. Students should know that diffusion models learn from slowly adding noise and then slowly subtracting noise from images, until the generator knows how to find details in noise.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |\n| _Pause video at 4:36 when it says: \"...so the legal questions here are not simple.\"_![](https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png)                      | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Personal opinion: who do you think should \"own\" the images that AI creates? <br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one answer to this question; the idea is for students to truly think about the implications of image generation in AI. Depending on your preferences and class timing, this can be an involved discussion that takes several minutes. See the Teacher tip for additional ideas for how to facilitate this discussion.|\n| _Continue watching the video until it ends_ ![](https://images.code.org/73a09be0fbbae1200fa174efcb3b842f-screenshot1.png) | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What can you imagine creating with  a diffusion model??<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Get students excited about what diffusion models can do. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |"
       },
       "seeding_key": {
         "activity_section.key": "b6f5ed76-d406-4126-bc05-997d00cf8233",
@@ -2948,6 +3045,30 @@
       },
       "seeding_key": {
         "activity_section.key": "aa1caf44-9127-400c-a5d0-291fedca756d",
+        "lesson_activity.key": "d8cda069-d77f-4119-8651-bf9a20cbca42"
+      }
+    },
+    {
+      "key": "5563b254-81f3-4d70-aa2a-c1551f9b8342",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "5563b254-81f3-4d70-aa2a-c1551f9b8342",
+        "lesson_activity.key": "d8cda069-d77f-4119-8651-bf9a20cbca42"
+      }
+    },
+    {
+      "key": "5da9894d-da25-4e52-9baa-3da9650a59b5",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "5da9894d-da25-4e52-9baa-3da9650a59b5",
         "lesson_activity.key": "d8cda069-d77f-4119-8651-bf9a20cbca42"
       }
     },
@@ -3318,6 +3439,30 @@
       }
     },
     {
+      "key": "8eec1224-f52f-468c-95ef-a7bcb08099ca",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "8eec1224-f52f-468c-95ef-a7bcb08099ca",
+        "lesson_activity.key": "dc7e2a1c-68fe-4916-bcde-92267f17168f"
+      }
+    },
+    {
+      "key": "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45",
+        "lesson_activity.key": "dc7e2a1c-68fe-4916-bcde-92267f17168f"
+      }
+    },
+    {
       "key": "17bd5635-8ba9-4318-96e4-d1e3bedf918b",
       "position": 1,
       "properties": {
@@ -3498,6 +3643,30 @@
       },
       "seeding_key": {
         "activity_section.key": "b14ca57e-bb0c-4cdc-bcc6-f0d2fee69b03",
+        "lesson_activity.key": "75a6c307-1c70-4932-94fd-e2e3a2caa2c9"
+      }
+    },
+    {
+      "key": "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52",
+        "lesson_activity.key": "75a6c307-1c70-4932-94fd-e2e3a2caa2c9"
+      }
+    },
+    {
+      "key": "8c9e0a32-aa02-41bc-b26d-131dea4ceac6",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c9e0a32-aa02-41bc-b26d-131dea4ceac6",
         "lesson_activity.key": "75a6c307-1c70-4932-94fd-e2e3a2caa2c9"
       }
     },
@@ -3734,6 +3903,30 @@
         "activity_section.key": "22d6a465-1588-4f86-8b85-53d2b9f85a1f",
         "lesson_activity.key": "e611ee32-23d2-4d19-995e-d23124fb63ff"
       }
+    },
+    {
+      "key": "9f7f1bb2-91d4-4640-b226-7e511cd54e9b",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f7f1bb2-91d4-4640-b226-7e511cd54e9b",
+        "lesson_activity.key": "e611ee32-23d2-4d19-995e-d23124fb63ff"
+      }
+    },
+    {
+      "key": "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b",
+        "lesson_activity.key": "e611ee32-23d2-4d19-995e-d23124fb63ff"
+      }
     }
   ],
   "script_levels": [
@@ -3896,7 +4089,7 @@
         "level_keys": [
           "LLM - Eliza_ai23"
         ],
-        "progression": "Eliza Widget"
+        "progression": "(Optional) Eliza Widget"
       },
       "bonus": false,
       "seeding_key": {
@@ -4267,11 +4460,11 @@
     },
     {
       "name": "Does AI Have Creativity and Imagination?",
-      "url": "https://www.youtube.com/watch?v=gD1bEC9q54k",
+      "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
       "key": "does_ai_have_creativity_and_imagination_",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm_cobrand-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4390,11 +4583,11 @@
     },
     {
       "name": "How AI Works: Chatbots and Large Language Models (Part 1)",
-      "url": "https://www.youtube.com/watch?v=EWgku6BncXk",
+      "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
       "key": "how_ai_works_chatbots_and_large_language_models_part_1_",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/llms_first_part_v1-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/llms_first_part_cobranded_lb-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4403,11 +4596,11 @@
     },
     {
       "name": "How AI Works: Chatbots and Large Language Models (Part 2)",
-      "url": "https://www.youtube.com/watch?v=GevmL_X3kYM",
+      "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
       "key": "how_ai_works_chatbots_and_large_language_models_part_2_",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/llms_second_part_v1-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/llms_second_part_cobranded_lb-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4416,11 +4609,11 @@
     },
     {
       "name": "How AI Works: Creativity and Imagination",
-      "url": "https://www.youtube.com/watch?v=gD1bEC9q54k",
+      "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
       "key": "how_ai_works_creativity_and_imagination",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm_cobrand-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4513,11 +4706,11 @@
     },
     {
       "name": "How Chatbots and Large Language Models Work",
-      "url": "https://www.youtube.com/watch?v=T45kEEBzrT8",
+      "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
       "key": "how_chatbots_and_large_language_models_work",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/howaiworks_llm_sm-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_llm_sm_cobrand-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

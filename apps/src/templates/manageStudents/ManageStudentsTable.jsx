@@ -372,7 +372,7 @@ class ManageStudentsTable extends Component {
           <Button
             __useDeprecatedTag
             onClick={this.props.saveAllStudents}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.saveAll()}
           />
         )}
