@@ -2,10 +2,10 @@ $message-editor-height: 100px;
 $default-spacing: 2px;
 
 .chatWorkspace {
-  margin: 10px 5%;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
+    width: 100%;
+    margin: 10px 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 .conversationArea {
@@ -99,7 +99,6 @@ $default-spacing: 2px;
 .dancingBot {
   margin-bottom: 50px;
   width: 200px;
-  height: 400px;
   position: relative;
   margin-left: 100px;
 
