@@ -149,7 +149,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+    let workspaceCode = Blockly.JavaScript.workspaceToCode(
+      Blockly.mainBlockSpace
+    );
+    console.log(`workspaceCode before getting procedure code `, workspaceCode);
+    if (this.getProcedureWorkspace()) {
+      workspaceCode +=
+        ' ' + Blockly.JavaScript.workspaceToCode(this.getProcedureWorkspace());
+    }
+    console.log({workspaceCode});
+    return workspaceCode;
   };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
@@ -660,11 +669,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
+    // Hidden workspace where we can put functions definitions.
+    const procedureWorkspace = new Blockly.Workspace();
+    blocklyWrapper.setProcedureWorkspace(procedureWorkspace);
+
     if (options.useModalFunctionEditor) {
       Blockly.functionEditor = new FunctionEditor();
       // TODO: Is this the best place to call the init function
       // (and is using the init function) reasonable for the modal function editor?
-      Blockly.functionEditor.init(workspace, opt_options);
+      Blockly.functionEditor.init(workspace, procedureWorkspace, opt_options);
     }
     blocklyWrapper.setMainWorkspace(workspace);
 
@@ -680,6 +693,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
     this.mainWorkspace = mainWorkspace;
+  };
+
+  blocklyWrapper.setProcedureWorkspace = function (procedureWorkspace) {
+    this.procedureWorkspace = procedureWorkspace;
+  };
+
+  blocklyWrapper.getProcedureWorkspace = function () {
+    return this.procedureWorkspace;
   };
 
   initializeBlocklyXml(blocklyWrapper);

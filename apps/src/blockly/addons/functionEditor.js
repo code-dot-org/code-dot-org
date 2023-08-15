@@ -33,8 +33,13 @@ export default class FunctionEditor {
     this.mainWorkspace = workspace;
   };
 
-  init(workspace, options) {
-    this.setMainWorkspace(workspace);
+  setProcedureWorkspace = workspace => {
+    this.procedureWorkspace = workspace;
+  };
+
+  init(mainWorkspace, procedureWorkspace, options) {
+    this.setMainWorkspace(mainWorkspace);
+    this.setProcedureWorkspace(procedureWorkspace);
 
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
@@ -87,19 +92,18 @@ export default class FunctionEditor {
     });
 
     // Serialized data from all procedures
-    this.allFunctions = {};
+    //this.allFunctions = {};
 
     // Add an event listener that saves the data for the given procedure whenever the procedure is saved
-    this.editorWorkspace.addChangeListener(e => {
-      if (e.isUiEvent) return;
-      // save the procedure block only, ignore other blocks
-      if (!this.block || !this.procedureId) return;
-      const blockState = Blockly.serialization.blocks.save(this.block);
-      //console.log('saving block with blockState ', blockState);
-      this.allFunctions[this.procedureId] = blockState;
-      console.log({allFunctions: this.allFunctions});
-      //Blockly.serialization.blocks.append(blockState, this.mainWorkspace);
-    });
+    // this.editorWorkspace.addChangeListener(e => {
+    //   if (e.isUiEvent) return;
+    //   // save the procedure block only, ignore other blocks
+    //   if (!this.block || !this.procedureId) return;
+    //   const blockState = Blockly.serialization.blocks.save(this.block);
+    //   //console.log('saving block with blockState ', blockState);
+    //   this.allFunctions[this.procedureId] = blockState;
+    //   console.log({allFunctions: this.allFunctions});
+    // });
 
     // TODO: I think this is firing too often. How can we fix it?
     this.editorWorkspace.addChangeListener(e => {
@@ -112,7 +116,10 @@ export default class FunctionEditor {
       ) {
         let event;
         try {
-          console.log('e.toJson()', e.toJson());
+          console.log(
+            'sending event to main workspace, e.toJson()',
+            e.toJson()
+          );
           event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
         } catch (err) {
           // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
@@ -125,6 +132,23 @@ export default class FunctionEditor {
         // Update the toolbox in case this change is happening while the flyout is open
         this.mainWorkspace.getToolbox().refreshSelection();
       }
+    });
+
+    // Mirror events from editor workspace to procedure workspace.
+    this.editorWorkspace.addChangeListener(e => {
+      if (e.isUiEvent) return;
+      console.log(
+        'sending event to procedure workspace, e.toJson()',
+        e.toJson()
+      );
+
+      var json = e.toJson();
+      // Convert JSON back into an event, then execute it.
+      var secondaryEvent = Blockly.Events.fromJson(
+        json,
+        this.procedureWorkspace
+      );
+      secondaryEvent.run(true);
     });
   }
 
@@ -145,7 +169,9 @@ export default class FunctionEditor {
 
   // TODO: Rename
   showForFunction(procedure) {
+    Blockly.Events.disable();
     this.editorWorkspace.clear();
+    Blockly.Events.enable();
     this.nameInput.value = procedure.getName();
     // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
     // this.functionDescriptionInput.value = procedure.getDescription();
@@ -153,53 +179,54 @@ export default class FunctionEditor {
     this.dom.style.display = '';
     Blockly.common.svgResize(this.editorWorkspace);
 
-    let existingData = this.allFunctions[procedure.getId()];
-    if (existingData) {
-      // If we already have stored data about the procedure, use that
-      existingData = {
-        ...existingData,
-        x: 50,
-        y: 200,
-      };
-      this.procedureId = procedure.getId();
-      this.block = Blockly.serialization.blocks.append(
-        existingData,
-        this.editorWorkspace
-      );
-    } else {
-      // Otherwise, we need to create a new block from scratch.
-      const newDefinitionBlock = {
-        kind: 'block',
-        type: 'procedures_defnoreturn',
-        extraState: {
-          procedureId: procedure.getId(),
-        },
-        fields: {
-          NAME: procedure.getName(),
-        },
-        deletable: false,
-        movable: false,
-        x: 50,
-        y: 200, // TODO: This is a magic number
-      };
-      this.block = Blockly.serialization.blocks.append(
-        newDefinitionBlock,
-        this.editorWorkspace
-      );
-      this.procedureId = this.block.getProcedureModel().getId();
-    }
+    const procedureMap = this.procedureWorkspace.getProcedureMap();
+    console.log({procedureMap});
+    //let existingData = this.allFunctions[procedure.getId()];
+    // if (existingData) {
+    //   // If we already have stored data about the procedure, use that
+    //   existingData = {
+    //     ...existingData,
+    //     x: 50,
+    //     y: 200,
+    //   };
+    //   this.procedureId = procedure.getId();
+    //   this.block = Blockly.serialization.blocks.append(
+    //     existingData,
+    //     this.editorWorkspace
+    //   );
+    // } else {
+    // Otherwise, we need to create a new block from scratch.
+    const newDefinitionBlock = {
+      kind: 'block',
+      type: 'procedures_defnoreturn',
+      extraState: {
+        procedureId: procedure.getId(),
+      },
+      fields: {
+        NAME: procedure.getName(),
+      },
+      deletable: false,
+      movable: false,
+      x: 50,
+      y: 200, // TODO: This is a magic number
+    };
+    this.block = Blockly.serialization.blocks.append(
+      newDefinitionBlock,
+      this.editorWorkspace
+    );
+    this.procedureId = this.block.getProcedureModel().getId();
+    //}
   }
 
   /**
    * Gets a legal name for a brand new function definition.
-   * @param mainWorkspace main workspace, to check for name collisions
    * @returns a legal name for a new function definition.
    */
   getNameForNewFunction() {
     let name = 'do something';
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
-    while (Blockly.Procedures.isNameUsed(name, this.mainWorkspace)) {
+    while (Blockly.Procedures.isNameUsed(name, this.procedureWorkspace)) {
       // Collision with another procedure.
       const r = name.match(/^(.*?)(\d+)$/);
       if (!r) {
@@ -217,28 +244,34 @@ export default class FunctionEditor {
       this.editorWorkspace.getProcedureMap()
     );
     const name = this.getNameForNewFunction();
-    const procedure = new ObservableProcedureModel(this.mainWorkspace, name);
-
-    // add the model to the main workspace so we know all procedures available there
-    // const allProcedures = Blockly.Procedures.allProcedures(workspace)[0];
-    this.mainWorkspace.getProcedureMap().add(procedure);
-    console.log(
-      `procedure added to main workspace is ${procedure.getId()} with name ${procedure.getName()}`
+    const hiddenProcedure = new ObservableProcedureModel(
+      this.procedureWorkspace,
+      name
     );
+    const mainProcedure = new ObservableProcedureModel(
+      this.mainWorkspace,
+      hiddenProcedure.getName(),
+      hiddenProcedure.getId()
+    );
+
+    // add the model to the procedure workspace so we know all procedures available there
+    // const allProcedures = Blockly.Procedures.allProcedures(workspace)[0];
+    this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
+    this.mainWorkspace.getProcedureMap().add(mainProcedure);
 
     // Add the procedure model to the editor's map as well
     // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
     // workspaces, so make a new one with the same data.
     const editorProcedureModel = new ObservableProcedureModel(
       this.editorWorkspace,
-      procedure.getName(),
-      procedure.getId()
+      hiddenProcedure.getName(),
+      hiddenProcedure.getId()
     );
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     console.log(
       `procedure added to editor workspace is ${editorProcedureModel.getId()} with name ${editorProcedureModel.getName()}`
     );
-    this.showForFunction(procedure);
+    this.showForFunction(hiddenProcedure);
   }
 }
 
