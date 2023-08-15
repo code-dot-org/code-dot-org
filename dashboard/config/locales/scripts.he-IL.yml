@@ -2213,6 +2213,11 @@ he:
               display_name: אירועים
             lessonGroup-7:
               display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: נתונים
+          lessons:
+            lesson-1:
+              name: נתונים
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-4:
@@ -2236,6 +2241,11 @@ he:
               display_name: אירועים
             lessonGroup-6:
               display_name: נתונים
+            lessonGroup-8:
+              display_name: מערכות מחשוב
+          lessons:
+            lesson-1:
+              name: מערכות מחשוב
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-6:
