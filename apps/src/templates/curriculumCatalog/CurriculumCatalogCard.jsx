@@ -203,7 +203,7 @@ const CustomizableCurriculumCatalogCard = ({
   };
 
   return (
-    <div>
+    <div className={style.selector}>
       <div>
         <div
           className={classNames(

@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
+import styler from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
@@ -63,7 +64,7 @@ const ExpandedCurriculumCatalogCard = ({
 
   const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
   return (
-    <div>
+    <div className={styler.centerExpandedCard}>
       <div className={style.expandedCardContainer}>
         <div className={style.flexDivider}>
           <div className={style.courseOfferingContainer}>
