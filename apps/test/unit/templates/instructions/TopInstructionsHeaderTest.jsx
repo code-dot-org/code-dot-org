@@ -106,6 +106,15 @@ describe('TopInstructionsHeader', () => {
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
   });
 
+  it('shows comments tab for elementary-level lessons', () => {
+    const wrapper = setUp({
+      displayFeedback: true,
+      isCSDorCSP: false,
+      tabSelected: TabType.COMMENTS,
+    });
+    expect(wrapper.find('.uitest-feedback')).to.have.length(1);
+  });
+
   it('does not show mute button when hasBackgroundMusic is false', () => {
     const wrapper = setUp({
       hasBackgroundMusic: false,
