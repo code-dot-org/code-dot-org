@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:40.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -76,8 +81,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L12.5 - shake_event\",\r\n  \"callout_text\": \"Change this event to detect a shake event\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"shake_event\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"onBoardEvent\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L12.5 - increase_steps\",\r\n  \"callout_text\": \"Increase steps here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"increase_steps\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//2\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null,
-    "encrypted_examples": "a+RA3pn5kiEpDCnz8+iEKde1NW6w0v/iWqXRPysNt51GuDg6dYWjE1CZvn9R\neAzdU2x+p66cSWsqSzKsXXlQ4Q==\n",
+    "encrypted_examples": "jp1YU4hvUIKqkoQ7ow/LgU/n3GciaLaXSS8Be3pa/PfpsMg4/OYY8ujlKXQH\niSk2Cd/PawWgRhjOr3m0L+wTpw==\n",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
       "/courses/csd-2022/guides/accelerometer-events",
@@ -88,15 +92,11 @@
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
       "/courses/csd-2022/guides/microbit-overview"
-    ]
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:40.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:40.809+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PB_2222\"},{\"changed_at\":\"2023-02-10 20:27:52 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:41:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:40.809+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PB_2222\"},{\"changed_at\":\"2023-02-10 20:27:52 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:41:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-08 16:55:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -95,6 +95,7 @@ export interface LevelProperties {
   disableProjects?: boolean;
   levelData?: LevelData;
   appName: AppName;
+  longInstructions?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require

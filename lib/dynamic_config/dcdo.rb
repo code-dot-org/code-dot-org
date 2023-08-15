@@ -50,7 +50,6 @@ class DCDOBase < DynamicConfigBase
       'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
       'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
       'family-name-features': DCDO.get('family-name-features', false),
-      'quick-view': DCDO.get('quick-view', false),
     }
   end
 end

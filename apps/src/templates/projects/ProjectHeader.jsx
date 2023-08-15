@@ -20,12 +20,12 @@ export default class ProjectHeader extends React.Component {
     return (
       <div>
         <HeaderBanner
-          short={true}
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeadingMillions({
             project_count: this.props.projectCount,
           })}
           backgroundUrl={backgroundUrl}
+          backgroundImageStyling={{backgroundPosition: '90% 40%'}}
         />
         <div className={'container main'}>
           {this.props.showDeprecatedCalcAndEvalWarning && (

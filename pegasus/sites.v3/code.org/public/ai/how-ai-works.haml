@@ -50,8 +50,7 @@ theme: responsive_full_width
         %p=hoc_s(:how_ai_works_lessons_in_a_day_desc_02)
         %p
           %strong=hoc_s(:module_label_duration)
-          -# =hoc_s(:module_duration_1_hr)
-          1 hour
+          =hoc_s(:module_duration_1_hr)
         %p
           %strong=hoc_s(:module_label_grades)
           =hoc_s(:module_grade_6_12)
@@ -66,3 +65,5 @@ theme: responsive_full_width
     %h2=hoc_s(:heading_additional_resources)
     %p=hoc_s(:how_ai_works_resources_desc)
     = view :how_ai_works_resources
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::AI_HOW_WORKS_PAGE_VISITED_EVENT

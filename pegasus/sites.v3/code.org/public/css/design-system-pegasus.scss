@@ -233,6 +233,16 @@ a.link-button {
     }
   }
 
+  &.white {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
+
+    &:hover {
+      background: $neutral_dark10;
+    }
+  }
+
   &.has-icon {
     .flex-wrapper {
       display: flex;
@@ -629,6 +639,12 @@ form {
   &.action-block__wrapper--three-col {
     @media screen and (min-width: $width-lg) {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
