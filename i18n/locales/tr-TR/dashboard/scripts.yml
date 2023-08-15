@@ -7017,6 +7017,10 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Kurulum
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -7074,6 +7078,9 @@ tr:
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu kursta yer alan dersler ayrıca öğrencilere başkalarıyla anlamlı bir şekilde işbirliği yapmayı, farklı problem çözme tekniklerini araştırmayı, zorlu görevler karşısında ısrar etmeyi ve internet güvenliği hakkında bilgi edinmeyi öğretir.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Veri
           lesson_groups:
             lessonGroup-2:
               display_name: Sayısal Vatandaşlık
@@ -7087,10 +7094,15 @@ tr:
               display_name: Olaylar
             lessonGroup-7:
               display_name: Ders Projesinin Sonu
+            lessonGroup-8:
+              display_name: Veri
           description_audience: 'Yaş: 5-8'
           description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş. Kurs A ile benzer ancak ilave kavram derinliği vardır.
           description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik. Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde çalışır. Öğrenciler programlamanın temellerini, işbirliği tekniklerini, araştırma ve eleştirel düşünme becerilerini, zorluklar karşısında direnmeyi ve internet güvenliğini öğreneceklerdir. Bu dersin sonunda öğrenciler Play Lab programlama ortamında oyunlar oluştururlar.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Bilişim Sistemleri
           lesson_groups:
             lessonGroup-2:
               display_name: Sayısal Vatandaşlık
@@ -7102,6 +7114,8 @@ tr:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Veri
+            lessonGroup-8:
+              display_name: Bilişim Sistemleri
           description: Kurs C'yi ikinci sınıftaki öğrenciler için geliştirdik. Öğrenciler sıralama, döngüler ve olaylar içeren programlar oluşturacaktır. Problem çözme tekniklerini araştıracaklar ve hem çevrimiçi hem de çevrimdışı pozitif topluluklar oluşturmak için stratejiler geliştirecekler. Kursun sonunda öğrenciler paylaşabilecekleri etkileşimli oyunlar oluşturacaklar.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -7158,3 +7172,53 @@ tr:
           description_audience: 'Yaş: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
+        vpl-csp-2023-m1:
+          title: Modül 1
+        vpl-csp-2023-m2:
+          title: Modül 2
+        vpl-csp-2023-m3:
+          title: Modül 3
+        vpl-csp-2023-m4:
+          title: Modül 4
+        vpl-csp-2023-m5:
+          title: Modül 5
+        vpl-csp-2023-m6:
+          title: Modül 6
+        vpl-csp-2023-m7:
+          title: Modül 7
+        vpl-csp-2023-m8:
+          title: Modül 8
+        vpl-csa-2023-m1:
+          title: Modül 1
+        how-ai-works-2023:
+          title: Yapay Zeka Nasıl Çalışır?
+        vpl-csa-2023-m2:
+          title: Modül 2
+        vpl-csa-2023-m3:
+          title: Modül 3
+        vpl-csa-2023-m4:
+          title: Modül 4
+        vpl-csa-2023-m5:
+          title: Modül 5
+        vpl-csa-2023-m6:
+          title: Modül 6
+        vpl-csa-2023-m7:
+          title: Modül 7
+        vpl-csa-2023-m8:
+          title: Modül 8
+        vpl-csd-2023-m1:
+          title: Modül 1
+        vpl-csd-2023-m2:
+          title: Modül 2
+        vpl-csd-2023-m3:
+          title: Modül 3
+        vpl-csd-2023-m4:
+          title: Modül 4
+        vpl-csd-2023-m5:
+          title: Modül 5
+        vpl-csd-2023-m6:
+          title: Modül 6
+        vpl-csd-2023-m7:
+          title: Modül 7
+        vpl-csd-2023-m8:
+          title: Modül 8
