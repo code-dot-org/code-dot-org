@@ -15,4 +15,5 @@ export const learningGoalShape = PropTypes.shape({
 
 export const rubricShape = PropTypes.shape({
   learningGoals: PropTypes.arrayOf(learningGoalShape),
+  lesson: PropTypes.shape({name: PropTypes.string, position: PropTypes.number}),
 });

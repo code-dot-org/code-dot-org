@@ -19,7 +19,11 @@ class Rubric < ApplicationRecord
 
   def summarize
     {
-      learningGoals: learning_goals.map(&:summarize)
+      learningGoals: learning_goals.map(&:summarize),
+      lesson: {
+        name: lesson.localized_name,
+        position: lesson.relative_position
+      }
     }
   end
 
