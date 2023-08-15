@@ -29,6 +29,8 @@ Here's a quick overview of the major landmarks:
   * [apps/README](./apps/README.md)
   * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
+For an overview of sites supported by this repository, check out our [URLs by Environment doc](https://docs.google.com/document/d/1rwwOY4l2_zOmO5ZEjTeVStxlIwW_L2iAksWm5FWKxiY).
+
 ### [dashboard](./dashboard)
 
 The server for our [**Code Studio** learning platform](https://studio.code.org/), a [Ruby on Rails](http://rubyonrails.org/) application responsible for:
