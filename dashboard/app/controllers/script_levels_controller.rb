@@ -161,6 +161,7 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
+    puts @script_level.lesson.localized_name
 
     present_level
   end
