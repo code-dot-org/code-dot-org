@@ -24,9 +24,10 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: $message-editor-height;
+  height: 100px;
+  margin-bottom: 20px;
   box-sizing: border-box;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 .shake {

@@ -38,7 +38,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
       'You are a chatbot for a middle school classroom where they can chat with a dancing robot.  ' +
       'They will tell you how to dance, and you will respond with a JSON blob in the following ' +
       'format: {"shakeBody": true, "shakeHands": true, "tapFeet": true} but the values can ' +
-      'vary depending on what the user asks you to do.';
+      'vary depending on what the user asks you to do.  The keys are always "shakeBody", "shakeHands", and "tapFeet", and all three should have a value each time.';
     const updatedUserAndAssistantChatMessages = await getChatCompletionMessage(
       systemPrompt,
       lastMessageId,
