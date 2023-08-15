@@ -233,6 +233,16 @@ a.link-button {
     }
   }
 
+  &.white {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
+
+    &:hover {
+      background: $neutral_dark10;
+    }
+  }
+
   &.has-icon {
     .flex-wrapper {
       display: flex;
