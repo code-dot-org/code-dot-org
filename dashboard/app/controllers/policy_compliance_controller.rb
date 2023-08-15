@@ -48,8 +48,10 @@ class PolicyComplianceController < ApplicationController
     end
 
     # Validate that the parent email is not the same as the student email
+    # Also remove any subaddressing from the email to prevent abuse
     parent_email = params.require(:'parent-email')
-    if current_user.hashed_email == Digest::MD5.hexdigest(parent_email)
+    sanitized_parent_email = parent_email.sub(/\+[^@]+@/, '@')
+    if current_user.hashed_email == Digest::MD5.hexdigest(sanitized_parent_email)
       redirect_back fallback_location: lockout_path and return
     end
 
