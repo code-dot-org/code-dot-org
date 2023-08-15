@@ -518,15 +518,18 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
+    const newCapacity = 40;
     const capacityField = wrapper.find('#capacity').first();
     capacityField.simulate('change', {
-      target: {name: 'capacity', value: 30},
+      target: {name: 'capacity', value: newCapacity},
     });
 
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
     saveButton.simulate('click');
 
-    // [TODO: Insert check here]
+    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
+      newCapacity
+    );
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
