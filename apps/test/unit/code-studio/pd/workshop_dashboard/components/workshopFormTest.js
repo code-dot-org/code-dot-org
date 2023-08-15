@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:
@@ -443,6 +444,89 @@ describe('WorkshopForm test', () => {
     assert(wrapper.find('#suppress_email').exists());
     assert(wrapper.find('#suppress_email').first().props().value);
     assert(wrapper.find('#suppress_email').first().props().disabled);
+  });
+
+  it('editing form as non-admin does not show organizer field', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([ProgramManager])}
+            facilitatorCourses={[]}
+            workshop={fakeWorkshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    expect(wrapper.find('OrganizerFormPart')).to.have.lengthOf(0);
+  });
+
+  it('editing form as admin shows organizer field and can change it', () => {
+    const organizerData = [
+      {key: 1, value: 1, label: 'Oscar Organizer'},
+      {key: 2, value: 2, label: 'Omar Organizer'},
+    ];
+    const server = sinon.fakeServer.create();
+    server.respondWith(
+      'GET',
+      `/api/v1/pd/workshops/${fakeWorkshop.id}/potential_organizers`,
+      [200, {'Content-Type': 'application/json'}, JSON.stringify(organizerData)]
+    );
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={fakeWorkshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    server.respond();
+
+    const organizerField = wrapper.find('#organizer-selector');
+    organizerField.simulate('change', {
+      target: {name: 'organizer', value: 2},
+    });
+
+    // Dave: This is where I was console logging the selector and seeing that the 'onChange' was just '{}'.
+
+    expect(wrapper.find('#organizer-selector').props().value).to.equal(
+      'Omar Organizer'
+    );
+
+    server.restore();
+  });
+
+  it('edits form and can save', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={fakeWorkshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: 30},
+    });
+
+    const saveButton = wrapper.find('#workshop-form-save-btn').first();
+    saveButton.simulate('click');
+
+    // [TODO: Insert check here]
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
