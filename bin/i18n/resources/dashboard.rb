@@ -8,6 +8,8 @@ module I18n
       I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard')).freeze
 
       def self.sync_in
+        FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
+
         Blocks.sync_in
         CourseContent.sync_in
         CourseOfferings.sync_in
@@ -19,7 +21,6 @@ module I18n
         Standards.sync_in
 
         puts 'Copying Dashboard source files'
-        FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
         # Special case the un-prefixed Yaml file.
         FileUtils.cp(CDO.dir('dashboard/config/locales/en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'base.yml'))
         # Copy in needed files from dashboard
