@@ -14,7 +14,6 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:
@@ -496,13 +495,6 @@ describe('WorkshopForm test', () => {
       {key: 1, value: 1, label: 'Oscar Organizer'},
       {key: 2, value: 2, label: 'Omar Organizer'},
     ];
-    const server = sinon.fakeServer.create();
-    server.respondWith(
-      'GET',
-      `/api/v1/pd/workshops/${fakeWorkshop.id}/potential_organizers`,
-      [200, {'Content-Type': 'application/json'}, JSON.stringify(organizerData)]
-    );
-
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
@@ -516,20 +508,17 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    server.respond();
+    wrapper
+      .find('OrganizerFormPart')
+      .first()
+      .setState({potentialOrganizers: organizerData});
 
-    const organizerField = wrapper.find('#organizer-selector');
+    const organizerField = wrapper.find('#organizer-selector').first();
     organizerField.simulate('change', {
       target: {name: 'organizer', value: 2},
     });
 
-    // Dave: This is where I was console logging the selector and seeing that the 'onChange' was just '{}'.
-
-    expect(wrapper.find('#organizer-selector').props().value).to.equal(
-      'Omar Organizer'
-    );
-
-    server.restore();
+    expect(wrapper.find('#organizer-selector').props().value).to.equal(2);
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {

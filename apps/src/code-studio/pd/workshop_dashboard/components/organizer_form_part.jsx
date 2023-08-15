@@ -65,6 +65,7 @@ export default class OrganizerFormPart extends React.Component {
           <Col sm={8}>
             {this.state.potentialOrganizers && (
               <select
+                id="organizer-selector"
                 className="form-control"
                 value={this.props.organizerId}
                 onChange={this.props.onChange}
