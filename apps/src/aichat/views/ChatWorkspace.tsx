@@ -8,6 +8,9 @@ import {ChatCompletionMessage} from '../types';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 import {getChatCompletionMessage} from '../chatApi';
 
+/**
+ * Renders the AI Chat Lab main chat workspace component.
+ */
 const ChatWorkspace: React.FunctionComponent = () => {
   const [storedMessages, setStoredMessages] =
     useState<ChatCompletionMessage[]>(demoChatMessages);

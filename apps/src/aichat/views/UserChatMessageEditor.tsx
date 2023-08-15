@@ -4,6 +4,9 @@ import moduleStyles from './userChatMessageEditor.module.scss';
 import {ChatWorkspaceContext} from './ChatWorkspace';
 import aichatI18n from '../locale';
 
+/**
+ * Renders the AI Chat Lab user chat message editor component.
+ */
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
