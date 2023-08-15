@@ -116,8 +116,8 @@ cn:
   pl_superhero_desc: 加入我们为初中和高中教育工作者提供的高度支持的专业学习计划。
   teach_ai_homepage_banner_title: 面向世界的人工智能教育
   teach_ai_homepage_banner_desc: Code.org 是TeachAI的一部分，致力于授权世界各地的教育工作者使用人工智能和人工智能进行教学。
-  curriculum_launch_2023_title: 为我们的课程引入令人难以置信的更新
-  curriculum_launch_2023_desc: CSC、CSP、CSD 等的更新——再加上新的课程目录和重新设计的 Teach 页面，可以帮助你找到所有内容！
+  curriculum_launch_2023_title: 不可思议的课程内容更新
+  curriculum_launch_2023_desc: CSC、CSP、CSD等内容更新，还有新的课程目录和重新设计的教学页面，可以帮助你找到所有内容！
   in_partnership_with: 合作伙伴：
   afe_partnership_logo_alt: 亚马逊未来工程师徽标
   afe_partnership_thanks_desc: Amazon Future Engineer 是一项全面的从童年到职业生涯的计划，旨在激励、教育和培训低收入和其他弱势儿童和年轻人从事计算机科学事业。[了解我们的合作伙伴关系]
@@ -126,9 +126,11 @@ cn:
   grade_level_label_elementary: 小学
   grade_level_label_middle: 初中
   grade_level_label_high: 高中
+  students_label: 学生
+  teachers_label: 教师
   teacher_label_csf: 计算机科学基础教师
   teacher_label_csd: 计算机科学探索教师
-  teacher_label_csp: CS 原理老师
+  teacher_label_csp: 计算机科学原理教师
   teacher_label_csc: 计算机科学联系老师
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 所需材料：
@@ -138,17 +140,19 @@ cn:
   call_to_action_try_activity: 尝试活动
   call_to_action_explore_unit: 探索单元
   call_to_action_explore_curriculum: 探索课程
-  call_to_action_explore_curriculum_options: 探索课程选项
+  call_to_action_explore_curriculum_options: 浏览课程选项
+  call_to_action_explore_lessons: 探索课程
   call_to_action_explore_modules: 探索模块
+  call_to_action_explore_module: 探索模块
   call_to_action_explore_workshops: 探索工作坊
-  call_to_action_explore_course: 探索课程
-  call_to_action_explore_courses: 探索课程
+  call_to_action_explore_course: 浏览课程
+  call_to_action_explore_courses: 浏览课程
   call_to_action_explore_full_course: 浏览完整课程
   call_to_action_explore_widgets: 浏览小部件
   call_to_action_explore_choice_level: 浏览示例选择级别
-  call_to_action_explore_collection: 探索系列
-  call_to_action_explore_unplugged_lesson: 浏览不插电的课程
-  call_to_action_try_app_lab: 试试应用实验室
+  call_to_action_explore_collection: 浏览系列
+  call_to_action_explore_unplugged_lesson: 浏览线下课程
+  call_to_action_try_app_lab: 尝试应用实验室
   call_to_action_view_lesson_plan: 查看教学计划
   call_to_action_self_paced_pl: 开始自定进度的专业学习
   call_to_action_apply_for_pl: 申请专业学习
@@ -179,15 +183,17 @@ cn:
   call_to_action_explore_career_resources: 探索职业资源
   call_to_action_watch_videos: 观看视频
   call_to_action_download_posters: 下载海报
-  call_to_action_contact_support: 联系 Code.org 支持人员
-  call_to_action_pick_units: 选择单位
-  call_to_action_focus_on_topic: 专注于一个话题
-  call_to_action_teach_full_intro_course: 教授一门完整的入门课程
+  call_to_action_contact_support: 联系Code.org支持服务
+  call_to_action_pick_units: 选择单元
+  call_to_action_focus_on_topic: 聚焦一个主题
+  call_to_action_teach_full_intro_course: 教授完整的入门课程
   call_to_action_see_module_details: 查看模块详情
   call_to_action_start_modules: 启动模块
   call_to_action_see_course_details: 查看课程详情
+  call_to_action_see_lesson_details: 查看课程详情
   call_to_action_learn_about_approach: 详细了解我们的方法
-  call_to_action_try_java_lab: 试试 Java 实验室
+  call_to_action_try_java_lab: 尝试Java实验室
+  call_to_action_notify_available: 有货时通知我
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -198,8 +204,8 @@ cn:
   aria_label_call_to_action_teaching_maker_microbit: '开始教学 “用设备创建应用程序” (micro: bit)
     专业学习计划'
   aria_label_call_to_action_curriculum_csf: 探索计算机科学基础知识课程
-  aria_label_call_to_action_curriculum_csf_express: 探索计算机科学基础速成课程
-  aria_label_call_to_action_curriculum_csf_express_pre_reader: 探索计算机科学基础知识预读者速成课程
+  aria_label_call_to_action_curriculum_csf_express: 浏览计算机科学基础速成课程
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: 探索计算机科学基础准读者速成课程
   aria_label_call_to_action_curriculum_csd: 探索 “计算机科学发现” 课程
   aria_label_call_to_action_curriculum_csp: 探索计算机科学原理课程
   aria_label_call_to_action_curriculum_csc: 探索计算机科学联系课程
@@ -207,47 +213,55 @@ cn:
   aria_label_call_to_action_curriculum_maker_cp: 探索使用设备创建应用程序（Circuit Playground）课程
   aria_label_call_to_action_curriculum_maker_microbit: '探索 “使用设备创建应用程序” (micro: bit)
     课程'
-  aria_label_call_to_action_curriculum_creating_apps_with_devices: 浏览 “使用设备创建应用程序”
-    单元
-  aria_label_call_to_action_curriculum_problem_solving_computing: 探索问题解决和计算单元
-  aria_label_call_to_action_curriculum_web_development: 探索 Web 开发单元
-  aria_label_call_to_action_curriculum_interactive_animations_games: 探索互动动画和游戏单元
-  aria_label_call_to_action_curriculum_design_process: 探索设计流程单元
-  aria_label_call_to_action_curriculum_data_society: 探索数据与社会单元
-  aria_label_call_to_action_collection_hardware: 探索硬件系列
-  aria_label_call_to_action_collection_design_purpose: 探索 “用目的设计” 系列
-  aria_label_call_to_action_collection_impact_society: 探索 “社会影响力” 系列
-  aria_label_call_to_action_collection_creativity: 探索创意系列
-  aria_label_call_to_action_collection_coding: 探索编程系列
-  aria_label_call_to_action_collection_data: 探索数据收集
-  aria_label_call_to_action_module_coding_w_poetry: 查看 “用诗歌编码” 模块的详细信息
-  aria_label_call_to_action_module_coding_time_capsule: 请参阅 “编码时间胶囊” 模块的详细信息
-  aria_label_call_to_action_module_simulating_marine_ecosystem: 请参阅 “模拟海洋生态系统” 模块详情
-  aria_label_call_to_action_module_coding_geometric_star_quilt: 查看 “编码几何星形被子” 模块的详细信息
-  aria_label_call_to_action_module_modeling_animal_adaptations: 查看 “动物改编建模” 模块的详细信息
-  aria_label_call_to_action_module_coding_book_covers: 查看编程书封面模块详情
-  aria_label_call_to_action_module_coding_interactive_maps: 查看交互式地图编码模块的详细信息
-  aria_label_call_to_action_csf_course_a: 查看课程 A 详情
-  aria_label_call_to_action_csf_course_b: 查看课程 B 详情
-  aria_label_call_to_action_csf_course_c: 查看课程 C 详情
-  aria_label_call_to_action_csf_course_d: 查看课程 D 详情
-  aria_label_call_to_action_csf_course_e: 查看课程 E 详情
-  aria_label_call_to_action_csf_course_f: 查看 F 课程详情
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: 浏览使用设备创建应用程序单元
+  aria_label_call_to_action_curriculum_problem_solving_computing: 浏览问题解决和计算单元
+  aria_label_call_to_action_curriculum_web_development: 浏览网络开发单元
+  aria_label_call_to_action_curriculum_interactive_animations_games: 浏览探索互动动画和游戏单元
+  aria_label_call_to_action_curriculum_design_process: 浏览设计流程单元
+  aria_label_call_to_action_curriculum_data_society: 浏览数据和社会单元
+  aria_label_call_to_action_collection_hardware: 浏览硬件系列
+  aria_label_call_to_action_collection_design_purpose: 探索有目标的设计系列
+  aria_label_call_to_action_collection_impact_society: 浏览社会影响系列
+  aria_label_call_to_action_collection_creativity: 浏览创意系列
+  aria_label_call_to_action_collection_coding: 浏览编程系列
+  aria_label_call_to_action_collection_data: 浏览数据系列
+  aria_label_call_to_action_module_coding_w_poetry: 查看诗歌编程模块详情
+  aria_label_call_to_action_module_coding_time_capsule: 查看时间胶囊编程模块详情
+  aria_label_call_to_action_module_simulating_marine_ecosystem: 查看模拟海洋生态系统模块详情
+  aria_label_call_to_action_module_coding_geometric_star_quilt: 查看几何星形被子编程模块详情
+  aria_label_call_to_action_module_modeling_animal_adaptations: 查看动物适应建模模块详情
+  aria_label_call_to_action_module_coding_book_covers: 查看书籍封面编程模块详情
+  aria_label_call_to_action_module_coding_interactive_maps: 查看交互式地图编程模块详情
+  aria_label_call_to_action_csf_course_a: 查看A课程详情
+  aria_label_call_to_action_csf_course_b: 查看B课程详情
+  aria_label_call_to_action_csf_course_c: 查看C课程详情
+  aria_label_call_to_action_csf_course_d: 查看D课程详情
+  aria_label_call_to_action_csf_course_e: 查看E课程详情
+  aria_label_call_to_action_csf_course_f: 查看课程F详情
+  aria_label_call_to_action_ai_pl_101_videos: 观看 AI 101 教师版视频
+  aria_label_call_to_action_ai_teaching_module: 探索教学 AI 和机器学习模块
+  aria_label_call_to_action_how_ai_works_lesson_01: 查看机器学习入门课程详情
+  aria_label_call_to_action_how_ai_works_lesson_02: 查看计算机视觉课程详情
+  aria_label_call_to_action_how_ai_works_lesson_03: 查看神经网络课程详情
+  aria_label_call_to_action_how_ai_works_lesson_04: 查看聊天机器人和大型语言模型课程详情
+  aria_label_call_to_action_how_ai_works_lesson_05: 查看生成图像课程详情
+  aria_label_call_to_action_how_ai_works_lesson_06: 查看算法偏差课程详情
+  aria_label_call_to_action_how_ai_works_lesson_07: 查看我们的 AI 道德准则课程详情
   video_title_professional_learning_program: Code.org 的专业学习计划
   curriculum_name_csf: 计算机科学基础知识
   curriculum_name_csf_02: 任何 CS 基础知识（A-F 课程）
   curriculum_name_csf_a_f: 计算机科学基础A-F
-  curriculum_name_csf_express: 快递
-  curriculum_name_csf_express_pre_reader: 预读者快报
-  curriculum_name_csf_course_a: A 课程
-  curriculum_name_csf_course_b: B 路线
-  curriculum_name_csf_course_c: C 路线
-  curriculum_name_csf_course_d: D 路线
-  curriculum_name_csf_course_e: E 路线
-  curriculum_name_csf_course_f: F 路线
-  curriculum_name_csf_no_device: 无设备/未插电
-  curriculum_name_csf_self_paced: 自定进度的课程
-  curriculum_name_csf_teacher_led: 老师带领的课
+  curriculum_name_csf_express: 速成
+  curriculum_name_csf_express_pre_reader: 准读者速成
+  curriculum_name_csf_course_a: A课程
+  curriculum_name_csf_course_b: B课程
+  curriculum_name_csf_course_c: C课程
+  curriculum_name_csf_course_d: D课程
+  curriculum_name_csf_course_e: E课程
+  curriculum_name_csf_course_f: F课程
+  curriculum_name_csf_no_device: 无设备/线下
+  curriculum_name_csf_self_paced: 自定进度课程
+  curriculum_name_csf_teacher_led: 教师主导课程
   curriculum_name_csd: 计算机科学发现
   curriculum_name_csp: 计算机科学原理
   curriculum_name_csc: 计算机科学联系
@@ -259,38 +273,36 @@ cn:
   curriculum_name_creating_apps_with_devices: 使用设备创建应用程序
   curriculum_name_poetry: 诗歌编程
   curriculum_name_dance_party: 舞会
-  curriculum_name_problem_solving_computing: 问题解决与计算
-  curriculum_name_web_development: 网页开发
+  curriculum_name_problem_solving_computing: 问题解决和计算
+  curriculum_name_web_development: 网络开发
   curriculum_name_interactive_animations_games: 互动动画和游戏
-  curriculum_name_design_process: 设计过程
-  curriculum_name_data_society: 数据与社会
+  curriculum_name_design_process: 设计流程
+  curriculum_name_data_society: 数据和社会
   curriculum_desc_csf_express: 学习创建计算机程序，培养解决问题的能力，并努力应对有趣的挑战！制作游戏和创意项目，与朋友、家人和老师分享。
-  curriculum_desc_csf_express_pre_reader: 通过解谜和创建动画场景，学习拖放式方块编码的基础知识。制作美术和简单的游戏，与朋友、家人和老师分享。
-  curriculum_desc_csf_course_a: 使用循环和事件等命令进行编程。教导学生与他人合作，研究不同的问题解决技巧，坚持面对具有挑战性的任务，并学习互联网安全。
-  curriculum_desc_csf_course_b: 通过不插电的活动和各种谜题，学生将学习编程、协作技巧、调查和批判性思维能力、面对困难的毅力以及互联网安全的基础知识。
+  curriculum_desc_csf_express_pre_reader: 通过解谜和创建动画场景，学习拖放式模块编程的基础知识。制作艺术品和简单的游戏，与朋友、家人和老师分享。
+  curriculum_desc_csf_course_a: 使用循环和事件等命令进行编程。教导学生与他人合作，研究不同的问题解决技巧，坚持不懈地面对挑战性任务，学习互联网安全知识。
+  curriculum_desc_csf_course_b: 通过线下活动和各种谜题，学生将学习编程基础知识、协作技巧、调查和批判性思维能力、面对困难的毅力以及互联网安全知识。
   curriculum_desc_csf_course_c: 创建包含排序、循环和事件的程序。研究解决问题的技巧并制定策略，以建立积极的线上和线下社区。创建学生可以分享的互动游戏。
-  curriculum_desc_csf_course_d: 回顾前期课程中的概念，包括循环和事件。之后，学生将加深对算法、嵌套循环、while 循环、条件语等的理解。
-  curriculum_desc_csf_course_e: 制作有趣的互动项目，强化对在线安全的学习。参与更复杂的编码，例如嵌套循环、函数和条件。
-  curriculum_desc_csf_course_f: 看看用户如何在他们使用的应用程序中做出选择。制作各种 Sprite Lab 应用程序，为用户提供选择。了解更多高级概念，包括变量和
-    “for” 循环。
-  curriculum_desc_problem_solving_computing: 使用解决问题的过程来解决难题、挑战和现实世界场景。了解计算机输入、输出、存储和处理，以帮助解决问题。
+  curriculum_desc_csf_course_d: 回顾前期课程中的概念，包括循环和事件。之后，学生将加深对算法、嵌套循环、while循环、条件语等的理解。
+  curriculum_desc_csf_course_e: 制作有趣的互动项目，强化对线上安全的学习。参与更复杂的编程，例如嵌套循环、函数和条件语句。
+  curriculum_desc_csf_course_f: 看看用户如何在他们使用的应用程序中做选择。制作各种为用户提供选择的精灵图实验室应用程序。了解更多高级概念，包括变量和“for”循环。
+  curriculum_desc_problem_solving_computing: 使用问题解决流程来解决难题、挑战和现实世界场景。了解计算机输入、输出、存储和处理，以帮助解决问题。
   curriculum_desc_web_development: 在网页上创建和共享内容，探索网络的创造潜力。在编程时培养批判性消费技能、解决问题的能力和团队合作。
   curriculum_desc_interactive_animations_games: 创建程序化图像、动画、互动艺术和游戏。熟悉编程概念和设计流程。
   curriculum_desc_design_process: 重点考虑计算的社会影响。通过设计挑战，学生可以同情他人的需求并开发解决方案。
-  curriculum_desc_data_society: 强调数据在解决问题中的作用以及计算机在此过程中的帮助。涵盖代表系统和相关挑战。了解数据收集如何帮助解决问题。
-  curriculum_desc_creating_apps_with_devices: '探索物理设备在计算中的作用。开发利用硬件输入和输出的程序。micro:
-    bit 和 Circuit Playground 都有这个单元的版本。'
-  collection_hardware: 专注于硬件
+  curriculum_desc_data_society: 强调数据在解决问题中的作用以及计算机在此过程中的帮助。涵盖表征系统和相关挑战。了解数据收集如何帮助解决问题。
+  curriculum_desc_creating_apps_with_devices: 探索物理设备在计算中的作用。开发利用硬件输入和输出的程序。这个单元有一个针对micro:bit和电路游乐场的版本。
+  collection_hardware: 聚焦硬件
   collection_hardware_desc: 使学生能够使用数据和物理设备来解决问题。
   collection_design_purpose: 专注于有目的的设计
   collection_design_purpose_desc: 使学生能够在为设备设计网站和应用程序时考虑用户的需求。
-  collection_impact_society: 聚焦对社会的影响
+  collection_impact_society: 聚焦社会影响
   collection_impact_society_desc: 使学生能够将计算机科学视为解决问题的工具，同时考虑更广泛的社会影响。
-  collection_creativity: 专注于创造力
-  collection_creativity_desc: 让学生在学习创建网站、动画和游戏以及设备应用程序时发挥创造力。
-  collection_coding: 专注于编码
-  collection_coding_desc: 使学生能够培养自己在 Web 开发、游戏和动画以及为设备创建应用程序方面的编程技能。
-  collection_data: 专注于数据
+  collection_creativity: 聚焦创造力
+  collection_creativity_desc: 让学生在学习创建网站、动画和游戏以及设备适用应用程序时发挥创造力。
+  collection_coding: 聚焦编程
+  collection_coding_desc: 使学生能够培养网络开发、游戏和动画以及创建设备适用应用程序方面的编程技能。
+  collection_data: 聚焦数据
   collection_data_desc: 使学生能够使用数据来解决问题。
   module_label_ages: 年龄：
   module_label_grades: 年级：
@@ -298,18 +310,22 @@ cn:
   module_label_curriculum_pure: 课程设置
   module_label_duration: '时长:'
   module_label_prerequisites: 先决条件：
-  module_label_level: 等级：
-  module_label_topics: 话题：
+  module_label_level: 级别：
+  module_label_topics: 主题：
   module_label_devices: 设备：
   module_label_tools: 编程工具：
   module_label_professional_learning: 专业学习：
-  module_label_languages: 支持的语言：
-  module_label_accessibility_features: 可访问性：
+  module_label_languages: 支持语言：
+  module_label_accessibility_features: 辅助功能：
   module_label_educator_tool: 教育工作者工具
   module_label_educator_course: 教育工作者课程
   module_label_student_tool: 学生工具
   module_label_student_product: 产品
   module_label_student_content_resources: 内容和资源
+  module_label_new: 全新
+  module_label_coming_soon: 即将上线
+  module_label_video_series: 视频系列
+  module_label_self_paced: 自定进度模块
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -332,9 +348,13 @@ cn:
   module_grade_9_12_teachers: 9-12年级教师
   module_level_beginner: 初学者
   module_level_intermediate: 中级
+  module_duration_45_mins: 45 分钟
+  module_duration_1_hr: 1 个小时
   module_duration_2_hrs: 2 个小时
   module_duration_3_hrs: 3 个小时
+  module_duration_5_hrs: 5 个小时
   module_duration_8_hrs: 8 个小时
+  module_duration_20_hrs: 20 个小时
   module_duration_35_hrs: 35 个小时
   module_duration_lesson: 课程
   module_duration_week: 周
@@ -342,7 +362,7 @@ cn:
   module_duration_quarter: 季度
   module_duration_semester: 学期
   module_duration_school_year: 学年
-  module_duration_month_quarter: 月份或季度
+  module_duration_month_quarter: 月或季度
   module_duration_month_semester_year: 月、学期或年
   module_prerequisites_none: 没有
   module_prerequisites_maker_cp: 进入赛道游乐场
@@ -359,56 +379,57 @@ cn:
   module_subject_science: 科学
   module_subject_math: 数学
   module_name_coding_w_poetry: 诗歌编程
-  module_name_coding_time_capsule: 对时间胶囊进行编码
+  module_name_coding_time_capsule: 时间胶囊编程
   module_name_simulating_marine_ecosystem: 模拟海洋生态系统
-  module_name_coding_geometric_star_quilt: 对几何星星被子进行编码
-  module_name_modeling_animal_adaptations: 对动物改编进行建模
-  module_name_coding_book_covers: 编程书籍封面
-  module_name_coding_interactive_maps: 对互动地图进行编码
+  module_name_coding_geometric_star_quilt: 几何星形被子编程
+  module_name_modeling_animal_adaptations: 动物适应建模
+  module_name_coding_book_covers: 书籍封面编程
+  module_name_coding_interactive_maps: 交互式地图编程
   module_desc_coding_w_poetry: 通过创作互动诗歌，用代码说明情绪和语气，探索编程和语言艺术的交汇点。
-  module_desc_coding_time_capsule: 创建数字时光胶囊来捕捉和保存未来的记忆。
-  module_desc_simulating_marine_ecosystem: 使用编码来模拟海洋生态系统，探索不同生物与其环境之间的相互依存关系。
-  module_desc_coding_geometric_star_quilt: 学习在令人惊叹的星星被子中创建几何图案的代码，将数学概念与创意表达融为一体。
-  module_desc_modeling_animal_adaptations: 使用代码对动物适应进行建模，加深你对不同物种如何进化以在环境中生存的理解。
-  module_desc_coding_book_covers: 使用代码创建一本书的动画封面，使用精灵和文字来传达角色、场景、情节等。
-  module_desc_coding_interactive_maps: 使用编码来绘制讲述故事的地图，使您能够以引人入胜的交互方式探索地理信息。
+  module_desc_coding_time_capsule: 创建数字时間胶囊，为未来捕捉和保存记忆。
+  module_desc_simulating_marine_ecosystem: 使用编程模拟海洋生态系统，探索不同生物与其环境之间的相互依存关系。
+  module_desc_coding_geometric_star_quilt: 学习在令人惊叹的星形被子中创建几何图案的代码，将数学概念与创意表达融为一体。
+  module_desc_modeling_animal_adaptations: 使用代码对动物适应建模，加深你对不同物种如何进化以在环境中生存的理解。
+  module_desc_coding_book_covers: 使用代码创建书籍的动画封面，使用精灵图和文本来传达角色、场景、情节等。
+  module_desc_coding_interactive_maps: 使用编码来绘制讲述故事的地图，让你能够以引人入胜的交互方式探索地理信息。
   values_01: 我们相信计算机科学是所有学生的基础
   values_02: 我们致力于实现公平、准入和机会
   values_03: 我们相信合作教育社区的力量
   values_04: 我们对反馈反应敏捷且反应迅速
   values_05: 我们以诚信和透明的方式行事
   values_06: 我们认为，要产生广泛的影响力，就需要大胆思考和整体行动
-  heading_professional_learning: 满足您需求的专业学习
+  heading_professional_learning: 满足你的需求的专业学习
   heading_additional_resources: 其他资源
   heading_support_and_questions: 支持和问题
-  heading_faq: 经常问的问题
+  heading_faq: 常见问题
   heading_curriculum_at_a_glance: 课程一览
   heading_curricula_at_a_glance: 课程一览
-  heading_engaging_projects: 激发学习灵感的引人入胜的项目和活动
-  heading_build_apps: 生成应用程序
+  heading_engaging_projects: 激发学习灵感的迷人项目和活动
+  heading_build_apps: 构建应用程序
   heading_widgets: 小工具
   heading_choice_levels: 选择级别
   heading_year_long_intro_course: 为期一年的入门课程
   heading_flexible_units: 灵活的单元
-  heading_collections: 藏品
-  heading_find_a_module: 为你的课堂寻找一个模块
-  heading_no_devices: 没有设备？我们已经为你准备好了
-  heading_java_lab: Java 实验室
-  heading_objects_first: 首先是物体
+  heading_collections: 系列
+  heading_find_a_module: 为你的课堂寻找模块
+  heading_no_devices: 没有设备？我们为你准备好了
+  heading_java_lab: Java实验室
+  heading_objects_first: 对象优先
+  heading_these_lessons_will: 这些课程将：
   professional_learning_section_desc: 在准备教学时获得所需的支持。老师们喜欢它，超过90％的老师将其评为有史以来最好的职业发展！
   professional_learning_section_desc_short: 在准备教学时获得所需的支持。
-  professional_learning_section_desc_self_paced: 及时的支持，使您可以根据自己的日程安排自信地准备教学。
-  professional_learning_section_block_facilitator_led_workshops: 我们高度支持的专业学习计划将使您与一群老师聚集在一起，互相学习，并在您开始向学生教授免费课程的第一年时邀请专家辅导员。面对面和虚拟研讨会将于今年夏天开始。
-  professional_learning_section_block_facilitator_led_workshops_csf: 加入当地教师的行列，为在课堂上实施计算机科学提供鼓舞人心的实践支持。我们的区域合作伙伴为个别教师或全校PD提供高质量的为期一天的Code.org研讨会。报名参加您附近的专业发展研讨会！
+  professional_learning_section_desc_self_paced: 及时的支持，让你可以根据自己的日程安排自信地准备教学。
+  professional_learning_section_block_facilitator_led_workshops: 我们高度支持的专业学习计划将让你与一群老师聚在一起，互相学习，并在你开始向学生教授免费课程的第一年提供专家辅导员。面对面和虚拟研讨会将于今年夏天开始。
+  professional_learning_section_block_facilitator_led_workshops_csf: 加入当地教师的行列，为在课堂上实施计算机科学提供鼓舞人心的实践支持。我们的区域合作伙伴为个别教师或全校PD提供为期一天的高质量Code.org研讨会。报名参加附近的专业发展研讨会！
   professional_learning_section_block_csa: Our highly supportive Professional Learning
     Program will bring you together with a group of teachers to learn from each other
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
-  professional_learning_section_workshops_starting: 面对面和虚拟研讨会将于今年夏天开始。
+  professional_learning_section_workshops_starting: 面对面和虚拟研讨会于今年夏天开始。
   no_devices_section_subhead: 来吧，切断电线（一会儿）！
-  no_devices_section_desc: CS 教育并不一定要在屏幕前进行，设备访问不应该成为学习计算机科学概念的障碍。
-  support_and_questions_section_subhead: 还有问题吗？向我们伸出援手！我们随时为您提供帮助。
-  support_and_questions_section_desc: 我们的支持团队随时为您解答有关开始使用 Code.org 进行教学的任何问题。您也可以在我们的教师论坛上向其他老师询问他们的经验。
+  no_devices_section_desc: 计算机科学教育并不一定要在屏幕前进行，设备访问不应该成为学习计算机科学概念的障碍。
+  support_and_questions_section_subhead: 还有问题吗？找我们！我们随时提供帮助。
+  support_and_questions_section_desc: 我们的支持团队随时为你解答关于开始使用Code.org进行教学的任何问题。你还可以在我们的教师论坛上向其他老师询问他们的经验。
   blockchain_hero_heading: 区块链是如何运作的
   blockchain_hero_desc: 通过我们的新视频系列 “区块链的工作原理” 和随附的课程，深入了解区块链的世界！
   blockchain_intro_heading: 看看区块链是如何运作的
@@ -477,6 +498,9 @@ cn:
   ai_curriculum_grades_03: 成绩等级：3-12
   ai_curriculum_duration_03: 时长:1 小时
   ai_curriculum_btn_aria_label_03: 试试 AI for Oceans 活动
+  ai_curriculum_title_04: 人工智能的工作原理
+  ai_curriculum_desc_04: 这些课程是对 AI 如何运作视频系列的补充。每节课都与该系列的单个视频配对，深入了解视频中介绍的概念。
+  ai_curriculum_btn_aria_label_04: 探索 AI 的工作原理课程
   ai_carousel_heading: 老师们对使用 Code.org 的人工智能的评价：
   ai_carousel_quote_01: 这节课还让我的学生有机会看到分类系统中有观点要素。后来，当我们开始看到偏见如何最终出现在人工智能中时，我得以将它们拉回来，提醒他们，用于训练模型的数据是基于选择的。
   ai_carousel_quote_02: 我的学生了解到，当涉及到他们几乎每天都在经历的技术进步时，他们不必只是消费者。他们实际上可以成为创作者！
@@ -488,6 +512,8 @@ cn:
   ai_pl_list_04: 考虑一下人工智能和机器学习对现实世界的影响。
   ai_pl_list_05: 浏览章节末的项目。
   ai_pl_duration: 时长:2 小时
+  ai_pl_title: 教学 AI 和机器学习
+  ai_pl_desc: 人工智能和机器学习简介。使用 AI Lab 训练机器学习模型。并使用机器学习应用程序。考虑一下人工智能和机器学习对现实世界的影响。
   ai_video_series_title: 人工智能的工作原理
   ai_video_series_desc: 在微软首席执行官萨蒂亚·纳德拉（Satya Nadella）的介绍下，这一系列短视频将向您介绍人工智能的工作原理及其重要性。然后深入研究算法偏见和人工智能决策伦理等问题。
   ai_resources_heading: 其他资源
@@ -503,29 +529,69 @@ cn:
   ai_resources_btn_aria_label_03: 浏览教师人工智能网站
   ai_pl_101_hero_heading: 加入我们，进行AI赋能
   ai_pl_101_hero_desc: 通过我们为教育工作者提供的免费线上学习系列，探索人工智能（AI）在教育中的变革潜力。
-  ai_pl_101_hero_presented: 由主持
-  ai_pl_101_intro_heading: 什么是面向教师的 AI 101？
-  ai_pl_101_intro_text: AI 101 for Teachers 是一个免费的基础在线专业学习系列，适用于任何对开创性的人工智能 (AI) 世界及其在教育领域的变革潜力感兴趣的教师和教育工作者。Partners
-    Code.org、ETS、ISTE、Khan Academy 将与知名专家举办引人入胜的会议，这些会议将揭开人工智能的神秘面纱，探索负责任的实施，解决偏见，并展示人工智能驱动的学习如何彻底改变学生的成绩。加入我们，踏上探索和赋权的旅程，开启人工智能教学的未来。
-  ai_pl_101_partnership_between: 两者之间的伙伴关系
-  ai_pl_101_join_email_title: 注册即可抢先体验面向教师的 AI 101
-  ai_pl_101_pro_join_email_desc: 成为第一个听到每个会话何时启动的人。从 Code.org、ETS、ISTE 和 Khan Academy
-    获取有关人工智能资源的最新信息。
+  ai_pl_101_hero_desc_02: 面向教师的全面在线学习系列。
+  ai_pl_101_hero_presented: 出品人
+  ai_pl_101_intro_heading: 什么是AI 101 for Teachers？
+  ai_pl_101_intro_text: AI 101 for Teachers是一个免费的基础线上专业学习系列，适用于任何对开创性的人工智能（AI）世界及其在教育领域的变革潜力感兴趣的教师和教育工作者。Code.org、ETS、ISTE、Khan
+    Academy等合作伙伴将与知名专家举办引人入胜的会议，这些会议将揭开人工智能的神秘面纱，探索负责任的实施，解决偏见，并展示人工智能驱动的学习如何彻底改变学生的成绩。加入我们，踏上探索和赋权的旅程，开启人工智能教学的未来。
+  ai_pl_101_partnership_between: 合作伙伴关系：
+  ai_pl_101_join_email_title: 注册以抢先体验AI 101 for Teachers
+  ai_pl_101_pro_join_email_desc: 成为第一个听到每个课程何时启动的人。从Code.org、ETS、ISTE和Khan Academy获取有关人工智能资源的最新信息。
   ai_pl_101_explore_title: 人工智能相关资源
-  ai_pl_101_explore_desc: 我们有来自 Code.org、ETS、ISTE 和 Khan Academy 的各种其他资源供你使用，以支持这个新的、不断增长的领域的教师。在下面查看它们。
+  ai_pl_101_explore_desc: 我们为你提供来自Code.org、ETS、ISTE和Khan Academy的各种额外资源，以在这个不断增长的新领域支持教师。在下面查看它们。
   ai_pl_101_explore_title_1: Khanmigo
-  ai_pl_101_explore__desc_1: Khan Academy 由人工智能驱动的教具使教师能够停止将时间花在他们不喜欢的准备任务上，而是专注于自己喜欢的事情——教学。
-  ai_pl_101_explore__button_1: 试试 Khanmigo
-  ai_pl_101_explore_title_2: 面向教育工作者的人工智能探索
-  ai_pl_101_explore__desc_2: 六年来，ISTE的这门为时15小时的在线课程一直在指导K-12教育工作者了解人工智能在教学和学习中的基本知识。该课程每年提供三次，在专家讲师的持续支持下完全异步进行。
+  ai_pl_101_explore__desc_1: Khan Academy由人工智能教学辅助工具使教师能够停止将时间花在他们不喜欢的准备任务上，而是专注于自己喜欢的事情——教学。
+  ai_pl_101_explore__button_1: 尝试Khanmigo
+  ai_pl_101_explore_title_2: 教育工作者人工智能探索
+  ai_pl_101_explore__desc_2: 六年来，ISTE的这门15小时在线课程一直在指导K-12教育工作者掌握人工智能教授和学习的基本要素。该课程每年提供三次，在专家讲师的持续支持下完全异步进行。
   ai_pl_101_explore__button_2: 开始课程
   ai_pl_101_explore_title_3: 人工智能课程
-  ai_pl_101_explore__desc_3: 在 Code.org 的 3-12 年级的 AI 课程中，学生使用有趣的活动来了解计算机如何从数据中学习。该课程还邀请学生研究机器学习和数据，同时反思人工智能的伦理影响。
-  ai_pl_101_explore__button_3: 探索课程
-  ai_pl_101_explore_title_4: ETS 的标准互动
-  ai_pl_101_explore__desc_4: 这个指导性的五段写作平台指导学习者完成写作过程的五个关键阶段：准备/计划、写作、修改、编辑、反思。ETS
+  ai_pl_101_explore__desc_3: 在Code.org的3-12年级AI课程中，学生使用有趣的活动来了解计算机如何从数据中学习。该课程还邀请学生研究机器学习和数据，同时反思人工智能的伦理影响。
+  ai_pl_101_explore__button_3: 浏览课程
+  ai_pl_101_explore_title_4: ETS的标准互动
+  ai_pl_101_explore__desc_4: 这个指导性的五段写作平台指导学习者完成写作流程的五个关键阶段：准备/计划、写作、修改、编辑、反思。ETS
     利用尖端的评分模型和人工智能，帮助教师在整个写作体验中提供迭代反馈和形成性评估，从而实现写作体验的个性化体验。
-  ai_pl_101_explore__button_4: "“探索” 工具"
+  ai_pl_101_explore__button_4: 浏览工具
+  ai_pl_101_video_title_1: 与 Sal Khan 和 Hadi Partovi 的炉边交谈
+  ai_pl_101_video_desc_1: 加入 Sal Khan（Khan Academy）和哈迪·帕尔托维（Code.org），在炉边聊一聊在课堂上拥抱人工智能。期待热烈的讨论，包括当今围绕人工智能的一些最具争议的话题。
+  ai_pl_101_video_title_2: 为教育工作者揭开人工智能的神秘面纱
+  ai_pl_101_video_desc_2: 人工智能基础知识简介，它将使您掌握基础知识，以了解人工智能对我们社会的深远影响及其与教育领域日益增长的相关性。您将获得有关利用
+    AI 完成课堂任务以及节省管理任务时间的实用见解。
+  ai_pl_101_video_title_3: 利用 AI 改变学习方式
+  ai_pl_101_video_desc_3: 探索 AI 与教育的交汇点。本课程探讨了如何将人工智能与教学法相结合，以增强学生的学习。对于寻求利用人工智能来改变教学实践以丰富学生学习体验的教育工作者来说，这是必须参加的课程。
+  ai_pl_101_video_title_4: 确保采用负责任的 AI 方法
+  ai_pl_101_video_desc_4: 探索将人工智能融入教育环境的伦理考虑因素和最佳实践。本次会议将提供具体的策略、资源和现实世界中的示例，所有这些都旨在了解人工智能的潜在偏见以及随之而来的伦理考虑。
+  ai_pl_101_video_title_5: 将 AI 带入课堂
+  ai_pl_101_video_desc_5: 本课程侧重于人工智能教学、评估和利用 AI 教育工具，以及利用 AI 进行学生评估。它融合了理论、实践示例和资源，旨在使教育工作者能够驾驭人工智能领域并增强学生的学习体验。
+  ai_pl_101_video_desc_6: 详细了解推动人工智能重大变革的新技术，包括两个关于大型语言模型（如ChatGPT）和生成式人工智能的新视频。直接从专家那里听听这些新技术的工作原理：OpenAI首席技术官米拉·穆拉蒂和RunwayML首席执行官克里斯托瓦尔·瓦伦苏埃拉。
+  how_ai_works_hero_heading: 人工智能的工作原理
+  how_ai_works_hero_desc: 通过我们的视频系列和随附的课程 “人工智能如何运作”，深入了解人工智能的世界！
+  how_ai_works_intro_desc: 这一系列短视频和随附的课堂课程将向您和您的学生介绍人工智能的工作原理及其重要性。您可以根据主题选择单独的课程，在一堂课中探索整个系列主题，或者教授所有
+    7 节课以进行更深入的探索。
+  how_ai_works_intro_list_01: 向您介绍人工智能和机器学习
+  how_ai_works_intro_list_02: 深入了解生成式 AI 的工作原理，包括大型语言模型 (LLM) 和图像生成
+  how_ai_works_intro_list_03: 探索偏见、道德、隐私和负责任地使用 AI
+  how_ai_works_intro_list_04: 触摸人工智能在现实世界中的应用，包括计算机视觉
+  how_ai_works_lessons_heading: 为你的课堂开设的人工智能课
+  how_ai_works_lesson_title_01: 机器学习简介
+  how_ai_works_lesson_desc_01: 了解一种称为机器学习的人工智能，以及他们如何使用问题解决过程来帮助训练机器人解决问题。参与机器学习活动，机器人正在学习如何检测鱼类中的模式。
+  how_ai_works_lesson_title_02: 计算机视觉
+  how_ai_works_lesson_desc_02: 了解计算机视觉的工作原理。观看解释计算机视觉以及计算机如何 “看见” 的视频。然后设计一种算法，该算法使用网络来决定七段显示屏显示的数字并对其进行测试。
+  how_ai_works_lesson_title_03: 神经网络
+  how_ai_works_lesson_desc_03: 了解神经网络的工作原理。使用小部件以亲身体验的方式探索神经网络。观看解释神经网络的视频。最后，讨论在创建推荐系统时需要多元化的视角。
+  how_ai_works_lesson_title_04: 聊天机器人和大型语言模型
+  how_ai_works_lesson_desc_04: 了解什么是大型语言模型 (LLM) 及其工作原理，然后使用 LLM 与 AI 共同创建文本。最后，讨论一下法学硕士是聪明的还是有创造力的。
+  how_ai_works_lesson_title_05: 生成图像
+  how_ai_works_lesson_desc_05: 了解 AI 如何生成图像，然后探索扩散 AI 小部件，讨论这些模型是否具有创造力。
+  how_ai_works_lesson_title_06: 算法偏差
+  how_ai_works_lesson_desc_06: 练习裁剪图像以发现Twitter裁剪算法背后的偏见，然后阅读并观看有关发现这种有偏见的算法的视频。最后，讨论识别和减少算法偏差的方法。
+  how_ai_works_lesson_title_07: 我们的 AI 道德准则
+  how_ai_works_lesson_desc_07: 使用揭露自己选择的人工智能领域的道德陷阱的文章和视频进行研究。为世界各地的人工智能创作者和立法者收集全班的
+    “我们的人工智能道德准则” 资源。
+  how_ai_works_lessons_in_a_day_title: 人工智能在一天之内是如何运作的
+  how_ai_works_lessons_in_a_day_desc: 只有一天时间？也可以选择在一天之内向学生介绍整个系列。非常适合任何想要向学生介绍人工智能的学科领域老师，甚至可以作为客座老师的课。
+  how_ai_works_lessons_in_a_day_desc_02: 在一天之内介绍所有 “人工智能工作原理” 视频。学生通过匹配视频中的词汇来关注每个视频，然后回答有关每个视频的反思问题。
+  how_ai_works_resources_desc: 有兴趣了解有关人工智能的更多信息吗？以下是一些其他资源，可以帮助您和您的学生扩展学习范围。
   ai_vid_intro_caption: 介绍 AI 的工作原理
   ai_vid_chatbots_caption: 聊天机器人和大型语言模型的工作原理
   ai_vid_creativity_caption: 人工智能有创造力和想象力吗？
@@ -702,10 +768,10 @@ cn:
   teach_page_additional_materials_list_desc_02: 我们提供不断增长的教育视频库，供世界各地的教育工作者在线上或在课堂使用。我们的目标是让我们的工作扩展到课程覆盖范围之外。
   teach_page_additional_materials_list_heading_03: 课堂海报
   teach_page_additional_materials_list_desc_03: 将这些各类榜样的海报打印出来挂在学校，激励学生尝试计算机科学。
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -825,139 +891,120 @@ cn:
   csp_page_faq_answer_07_04: For more information about our goals and approach to
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
-  csd_page_top_desc: Code.org 最灵活的课程，允许将每个单元单独教学，组合成以特定领域为重点的集合，或者作为一整年的课程。免费课程向学生介绍如何构建自己的网站、应用程序、动画、游戏和物理计算系统。
-  csd_page_intro_heading: 灵活的课程可满足您的需求
+  csd_page_top_desc: Code.org最灵活的课程，允许每个单元单独教学，组合为聚焦特定领域的系列，或者作为整年课程。免费课程向学生介绍如何构建自己的网站、应用程序、动画、游戏和物理计算系统。
+  csd_page_intro_heading: 灵活的课程满足你的需求
   csd_page_intro_list_01: 灵活的入门课程
-  csd_page_intro_list_02: 话题的广度
+  csd_page_intro_list_02: 主题广度
   csd_page_intro_list_03: 无需事先经验
   csd_page_intro_list_04: 构建许多不同类型的项目
-  csd_page_intro_list_05: 令人兴奋又有趣
-  csd_page_quote: 本课程包罗万象，组织良好，以学生为中心！课程中令人难以置信的组织使我年复一年地使用它。
-  csd_page_curriculum_glance_topics: 人工智能、数据、网页设计、物理计算、应用程序设计、游戏和动画、艺术与设计、编程
+  csd_page_intro_list_05: 刺激而有趣
+  csd_page_quote: 本课程包罗万象，组织良好，以学生为中心！课程中的卓越组织让我年复一年地使用它。
+  csd_page_curriculum_glance_topics: 人工智能、数据、网页设计、物理计算、应用程序设计、游戏和动画、艺术和设计、编程
   csd_page_curriculum_glance_devices: Laptop, Chromebook
-  csd_page_curriculum_glance_tools: 应用实验室、游戏实验室、人工智能实验室、Web 实验室
+  csd_page_curriculum_glance_tools: 应用实验室，游戏实验室，人工智能实验室，网络实验室
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csd_page_curriculum_glance_professional_languages: 英文
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: 为你的课堂选择合适的 CS Discoverions 课程
-  csd_page_pick_a_course_desc: CS Discovery 提供了多种选择，因此有一门课程可以满足所有不同的需求。
+  csd_page_pick_a_course_heading: 为你的课堂选择合适的计算机科学发现课程
+  csd_page_pick_a_course_desc: 计算机科学发现提供多种选择，因此总有可以满足各种需求的课程。
   csd_page_pick_a_course_heading_02: 你想如何挑选内容？
-  csd_page_courses_year_desc: 通过 7 个单元，学生可以探索各种各样的主题。
+  csd_page_courses_year_desc: 学生可以通过7个单元探索各种各样的主题。
   csd_page_courses_year_action_block_desc: '这是一门计算机科学入门课程，使学生能够创建真实的工件，并以计算机科学作为创造力、沟通、解决问题和乐趣的媒介。 '
-  csd_page_courses_flexible_units_desc: CS Discoveries 的每个单元都可以单独使用，无需事先经验，这使您可以选择适合课堂的确切单元。
-  csd_page_courses_collections_desc: 通过一组侧重于特定主题的单元，深入了解一个领域。
-  csd_page_faq_question_01: CS Discovery 是否符合标准？
-  csd_page_faq_answer_01: CS Discoveries 是以 K-12 计算机科学框架和 2017 年 CSTA 标准为指导编写的。目前，CS
-    Discoveries 中的每节课都包含与 2017 年 CSTA 相关标准的映射。[标准映射摘要可在此处找到] (%{mappings_url})。这些标准的
-    Google 表格版本可在 [CSD 标准] (%{csd_standards_url}) 中找到。
+  csd_page_courses_flexible_units_desc: 计算机科学发现的每个单元都可以单独使用，无需事先经验，这使得你可以选择适合课堂的确切单元。
+  csd_page_courses_collections_desc: 通过一组聚焦特定主题的单元，深入了解一个领域。
+  csd_page_faq_question_01: 计算机科学发现是否与标准相对应？
+  csd_page_faq_answer_01: 计算机科学发现以K-12计算机科学框架和2017年CSTA标准为指导编写。目前，计算机科学发现中的每节课都包含与2017年CSTA相关标准的映射。[标准映射摘要可在此处找到](%{mappings_url})。Google表格版本的标准可在[计算机科学发现标准](%{csd_standards_url})中找到。
   csd_page_faq_question_02: 如何/在哪里可以获得这门课程的专业发展？
-  csd_page_faq_answer_02: 我们的专业学习计划提供全年支持。该计划以为期五天的暑期研讨会拉开序幕，在那里你将有机会亲身体验课程并与你所在地区的其他老师见面。我们全年提供后续研讨会和论坛支持。您无需任何计算机科学经验即可开始使用。老师们也很喜欢！90%
-    的人将其评为有史以来最好的职业发展。[点击这里申请并了解更多] (%{apply_url})。
-  csd_page_faq_question_03: 我正在教 CS Discovery，但和我的学生在一起的时间还不到一个学期。你会推荐什么？
-  csd_page_faq_answer_03_01: 日程安排有限、无法在一学年内教授 CS Discoveries 的所有单元的教师现在可以根据他们想要关注的内容轻松分配一组特定的
-    CS Discovery 单元。这些集合仍然与 CS Discoveries 中的单位完全相同，只需根据我们下面的建议分组在一起，即可深入了解 CS Discoveries
-    的特定领域。每个集合大约为一个学期或略少于一个学期。[点击此处查看我们的收藏选项] (%{collections_url})。
-  csd_page_faq_answer_03_02: 对于日程安排更加有限的教师，他们一次只能从 CS Discovery 中分配一个单元，而无需分配整门课程。我们希望这有助于支持那些作为大型课程一部分嵌入的
-    CS Discoveries 单元的教室，或者在有限的时间表内教授计算机科学的教室。[点击此处查看我们的弹性单位] (%)。
-  csd_page_faq_question_04: CS Discovery 需要哪些材料和补给品？
-  csd_page_faq_answer_04_01: 教授本课程时需要考虑的一项潜在成本是印刷。许多课程都有专为指导学生完成活动而设计的讲义。虽然不需要打印所有这些讲义，但许多讲义都是为印刷而设计的，我们强烈建议尽可能打印。
-  csd_page_faq_answer_04_02: 除了印刷外，有些课程还需要典型的课堂用品和操作工具，例如：学生日记、海报纸、记号笔/彩色铅笔、剪刀、废纸、胶水或胶带、便利贴或索引卡（或类似大小的废纸），以及尺子或某种直边。
-  csd_page_faq_answer_04_03: 除了这些一般课程材料外，还要求在特定单元中提供以下项目：
+  csd_page_faq_answer_02: 我们的专业学习计划提供全年支持。该计划以为期五天的暑期研讨会拉开序幕，在那里你将有机会亲身体验课程并与你所在地区的其他老师见面。我们全年提供后续研讨会和论坛支持。你无需任何计算机科学经验即可开始使用。老师们也很喜欢它！90%的人将其评为有史以来最好的职业发展。[点击这里申请并了解更多](%{apply_url})。
+  csd_page_faq_question_03: 我正在教授计算机科学发现，但与我的学生在一起的时间不到一个学期。你们有什么建议？
+  csd_page_faq_answer_03_01: 日程安排有限、无法在一学年内教授计算机科学发现的所有单元的教师，现在可以根据他们想聚焦的内容轻松分配一组特定的计算机科学发现单元。这些系列仍然与计算机科学发现中的单元完全相同，只是根据我们下面的建议分组在一起，从而深入了解计算机科学发现的特定领域。每个系列大约为一个学期或略少于一个学期。[点击此处查看我们的系列选项](%{collections_url})。
+  csd_page_faq_answer_03_02: 对于日程安排更加有限的教师，他们可以一次从计算机科学发现中分配一个单元，而无需分配整门课程。我们希望这有助于支持那些作为大型课程一部分而教授计算机科学发现单元的课堂，或在有限的时间表内教授计算机科学的课堂。[点击此处查看我们的灵活单元](%)。
+  csd_page_faq_question_04: 计算机科学发现需要哪些材料和用品？
+  csd_page_faq_answer_04_01: 教授本课程时需要考虑的一项潜在成本是打印。许多课程都有专为指导学生完成活动而设计的讲义。虽然不需要打印所有这些讲义，但许多讲义都是为印刷而设计的，我们强烈建议尽可能打印。
+  csd_page_faq_answer_04_02: 除了打印外，有些课程还需要典型的课堂用品和教具，例如：学生日志、海报纸、记号笔/彩色铅笔、剪刀、废纸、胶水或胶带、便利贴或索引卡（或类似尺寸的废纸）以及尺子或直边物体。
+  csd_page_faq_answer_04_03: 除了这些一般课程材料外，特定单元还需要以下物品：
   csd_page_faq_answer_04_04: 问题解决和计算
-  csd_page_faq_answer_04_05: 铝箔、装水的容器、便士（请注意，几分钱可以用其他相同大小的重量代替）。如果您无法获得这些用品，则可以进行其他活动。
-  csd_page_faq_answer_04_06: 使用设备创建应用程序（选项 A 和选项 B）
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: 创客用品，例如空纸巾盒、纸板卷或刮纸
-  csd_page_faq_answer_04_10: "*注意：“使用设备创建应用程序” 单元有两个实现选项——一个用于使用电路游乐场的用户，另一个用于使用 micro:
-    bit 的用户。教师不应同时购买两套设备或教授两个单元选项，因为它们是等效的，涵盖的内容相同。"
-  csd_page_faq_question_06: CS Discoveries 如何与其他 Code.org 课程搭配使用？
-  csd_page_faq_answer_06_01: CS Discovery 旨在自然地融入我们的 [CS 基础知识] (%{csf_url}) 课程和 [CS
-    原则] (%{csp_url}) 课程。虽然这些课程中的每门课程都旨在成为适合年龄的计算机科学切入点，但以前有经验的学生会发现许多新主题可供探索，他们将在新颖且更具挑战性的背景下重温熟悉的主题。
-  csc_page_top_desc: 将计算机科学 (CS) 与数学、语言艺术、科学和社会研究等其他科目联系起来。
-  csc_page_intro_heading: 在讲授核心科目标准的同时教学 CS
-  csc_page_intro_list_01: 将 CS 融入其他科目
+  csd_page_faq_answer_04_05: 铝箔、水容器、硬币（请注意，硬币可以用其他相同尺寸的重物代替）。如果你无法获取这些用品，则可以进行其他活动。
+  csd_page_faq_answer_04_06: 使用设备创建应用程序（选项A和选项B）
+  csd_page_faq_answer_04_07: 选项A：电路游乐场课堂设置。查看[code.org/maker/circuitplayground](%{url})了解更多详情。
+  csd_page_faq_answer_04_08: 选项B：micro:bit设备课堂设置。查看[code.org/maker/microbit](%{url})了解更多详情。
+  csd_page_faq_answer_04_09: 制作者用品，例如空纸巾盒、纸板卷或刮纸
+  csd_page_faq_answer_04_10: "*注意：使用设备创建应用程序单元有两个实施选项：一个用于使用电路游乐场的用户，另一个用于使用micro:
+    bit的用户。教师不应同时购买两套设备或教授两个单元选项，因为它们是等价的，涵盖的内容相同。"
+  csd_page_faq_question_06: 计算机科学发现如何与其他Code.org课程搭配使用？
+  csd_page_faq_answer_06_01: 计算机科学发现旨在自然地融入我们的[计算机科学基础](%{csf_url})课程和[计算机科学原理](%{csp_url})课程。虽然这些课程中的每门课程都旨在成为适合年龄的计算机科学切入点，但之前有经验的学生会发现许多可供探索的新主题，他们将在新颖且更具挑战性的背景下重温熟悉的主题。
+  csc_page_top_desc: 将计算机科学与数学、语言艺术、科学和社会研究等其他科目联系起来。
+  csc_page_intro_heading: 在涵盖核心科目标准的同时教授计算机科学
+  csc_page_intro_list_01: 将计算机科学融入其他科目
   csc_page_intro_list_02: 强化其他科目的学习
-  csc_page_intro_list_03: 符合核心学科标准
+  csc_page_intro_list_03: 符合核心科目标准
   csc_page_intro_list_04: 向学生传授计算机科学知识的有趣方式
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: 适合任何背景的老师
+  csc_page_intro_list_06: 适合任何背景的教师
   csc_page_curriculum_glance_topics: 跨学科
   csc_page_curriculum_glance_devices: 笔记本电脑、Chromebook、平板电脑
-  csc_page_curriculum_glance_tools: 雪碧实验室
+  csc_page_curriculum_glance_tools: 精灵图实验室
   csc_page_curriculum_glance_professional_learning: 自定进度模块
   csc_page_curriculum_glance_professional_languages: 英文
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: 我非常感谢这些课程的全面性和节奏如何。我不熟悉计算机科学，但是有了你提供的课程，我有信心帮助我的学生掌握这些概念并将其与我们的课程联系起来。
-  csc_page_find_a_module_desc: 我们目前的 CS Connections 课程适用于三年级至五年级的教室，旨在每天上1周的45分钟课程。
-  csc_page_faq_question_01: CS 连接是否已映射到标准？
-  csc_page_faq_answer_01: 是的！CS Connections 与 ELA 和数学的共同核心州标准 (CCSS)、下一代科学标准 (NGSS)
-    和计算机科学教师协会标准 (CSTA) 对应。
-  csc_page_faq_question_02: 教学 CS Connections 要花多少钱？
+  csc_page_quote: 我非常感谢这些课程的全面性和良好节奏。我不熟悉计算机科学，但是利用你们提供的课程，我有信心帮助我的学生掌握这些概念并将其与我们的课程联系起来。
+  csc_page_find_a_module_desc: 我们目前的计算机科学联系课程适用于三年级至五年级的课堂，设计为每天上45分钟的课，为期1周。
+  csc_page_faq_question_01: 计算机科学联系是否与标准相对应？
+  csc_page_faq_answer_01: 是的！计算机科学联系与ELA和数学共同核心州标准（CCSS）、下一代科学标准 （NGSS）和计算机科学教师协会标准（CSTA）相对应。
+  csc_page_faq_question_02: 教授计算机科学联系要花多少钱？
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: 如何/在哪里可以获得 CS Connections 的专业发展？
-  csc_page_faq_answer_03: 我们为 CS Connections 提供自定进度的专业发展。通过阅读、观看视频、完成互动谜题和反思自己的学习，你将培养自己的理解，同时准备在课堂上教授任何
-    CS Connections 模块。[从这里开始] (%{get_started_url})。
-  csc_page_faq_answer_03_coming_soon: CS Connections 的专业学习即将上线！
-  csc_page_faq_question_04: 教学 CS Connections 的推荐时机是什么？
-  csc_page_faq_answer_04: 每个 CS Connections 模块的设计时间均为一周。
-  csc_page_faq_question_05: CS 连接需要什么材料？
+  csc_page_faq_question_03: 如何/在哪里可以获得计算机科学联系的专业发展？
+  csc_page_faq_answer_03: 我们为计算机科学联系提供自定进度的专业发展。通过阅读、观看视频、完成互动谜题和反思自己的学习，你将培养自己的理解，同时为在课堂上教授任何计算机科学联系模块做好准备。[从这里开始](%{get_started_url})。
+  csc_page_faq_answer_03_coming_soon: 计算机科学联系专业学习即将推出！
+  csc_page_faq_question_04: 计算机科学联系的推荐教授时间是什么时候？
+  csc_page_faq_answer_04: 每个计算机科学联系模块的设计时间为一周。
+  csc_page_faq_question_05: 计算机科学联系需要什么材料？
   csc_page_faq_answer_05: 理想情况下，每个学生都将拥有自己的计算机，教师将拥有一台投影仪来显示与每节课相对应的幻灯片。
   csf_page_top_desc: 为期一年的免费课程，向学生介绍计算机科学的基本概念，并挑战他们探索计算和技术如何影响世界。
-  csf_page_intro_heading: 每个年级都有免费且有趣的初级课程
+  csf_page_intro_heading: 针对每个年级的免费而有趣的小学课程
   csf_page_intro_list_01: 六门课程，每个小学年级一门
-  csf_page_intro_list_02: 公平的 CS 入门课程
+  csf_page_intro_list_02: 公平计算机科学入门课程
   csf_page_intro_list_03: 对同年级的所有学生使用相同的课程，无论他们的经验如何
   csf_page_intro_list_04: 所有课程都为学生提供了合适的切入点
-  csf_page_quote: 从工作坊结束后的星期一开始，我就一直在教这门课程。我和学生们都喜欢它（他们的课堂老师也喜欢！！！）
-  csf_page_curriculum_glance_topics: 编程、互联网、游戏和动画、艺术与设计、应用程序设计
+  csf_page_quote: 从工作坊结束后的星期一开始，我就一直在教这门课程。我和学生们都喜欢它（他们的课堂老师也喜欢！）
+  csf_page_curriculum_glance_topics: 编程、互联网、游戏和动画、艺术和设计、应用程序设计
   csf_page_curriculum_glance_devices: 笔记本电脑、Chromebook、平板电脑
-  csf_page_curriculum_glance_tools: Sprite Lab、游戏实验室
+  csf_page_curriculum_glance_tools: 精灵图实验室，游戏实验室
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: 阿拉伯语、印尼语、加泰罗尼亚语、简体中文、繁体中文、捷克语、法语、德语、印地语、意大利语、日语、韩语、卡纳达语、马来语、马拉地语、蒙古语、波兰语、葡萄牙语、罗马尼亚语、俄语、斯洛伐克语、塔加洛语、泰米尔语、泰语、土耳其语、乌克兰语、西班牙语、乌尔都语、西班牙语、西班牙语、乌兹别克语、越南语
+  csf_page_curriculum_glance_languages: 阿拉伯语、印尼语、加泰罗尼亚语、简体中文、繁体中文、捷克语、法语、德语、印地语、意大利语、日语、韩语、卡纳达语、马来语、马拉地语、蒙古语、波兰语、巴西葡萄牙语、罗马尼亚语、俄语、斯洛伐克语、他加禄语、泰米尔语、泰语、土耳其语、乌克兰语、拉美西班牙语、乌尔都语、西班牙西班牙语、乌兹别克语、越南语
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: 为你的课堂选择合适的 CS 基础课程
-  csf_page_pick_a_course_desc: CS 基础知识提供了多种选择，因此有一门课程可以满足所有不同的需求。
+  csf_page_pick_a_course_heading: 为你的课堂选择合适的计算机科学基础课程
+  csf_page_pick_a_course_desc: 计算机科学基础提供多种选择，因此总有可以满足各种需求的课程。
   csf_page_pick_a_course_heading_02: 你的学生将如何参与这些内容？
-  csf_page_courses_heading: 专为您的小学课堂设计的课程
-  csf_page_courses_desc: 查找与您所教年级对应的课程。每门课程为期大约一个月。
-  csf_page_courses_self_paced_heading: 自定进度的基础课程
-  csf_page_courses_self_paced_desc: 教师通过教授我们的不插电活动和领导全班讨论，在学生的学习中发挥着至关重要的作用，但是，我们认识到，CS
-    基础知识并不总是在传统的课堂环境中教授。除了 A-F 课程外，我们还提供两门自定进度的速成课程。这些快速课程专为教师允许每个学生按照自己的节奏独立工作的情况而设计。
-  csf_page_faq_question_01: CS 基础知识是否符合标准？
-  csf_page_faq_answer_01_01: CS 基础知识是以 K-12 计算机科学框架和 CSTA 标准为指导编写的。目前，CS 基础知识中的每节课都包含与相关
-    CSTA 标准的映射。每门课程的所有 CSTA 映射摘要可在以下网址找到：
-  csf_page_faq_answer_01_list_01: "[A 课程标准] (%{course_a_url})"
-  csf_page_faq_answer_01_list_02: "[B 课程标准] (%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[C 课程标准] (%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[D 课程标准] (%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[E 课程标准] (%{course_e_url})"
-  csf_page_faq_answer_01_list_06: "[F 课程标准] (%{course_f_url})"
-  csf_page_faq_answer_01_02: 这些标准的 Google 表格版本可在 [CSF 标准] (%{csf_standards_url}) 中找到。
-  csf_page_faq_question_02: 我怎样才能将 CS 基础知识带到我的整个学校？
-  csf_page_faq_answer_02: 作为美国领先的K-12 CS课程，我们的小学课程已在达拉斯等主要城市学区以及爱荷华州的小型农村地区被证明是有效的。无需聘请专家来教学
-    CS。我们的计划经过独一无二的设计，旨在为刚接触计算机科学的教师提供支持，同时提供灵活的课程发展以满足学生的需求。[分享这本手册] (%{brochure_url})
-    与您的学校和学区管理员，或者 [建议他们看看我们的管理员页面] (%{admins_url}) 专为回答管理员最常见的问题而设计。
-  csf_page_faq_question_03: 教学 CS 基础知识要花多少钱？
-  csf_page_faq_question_04: 如何/在哪里可以获得 CS 基础知识的专业发展？
-  csf_page_faq_answer_04_01: 刚开始教授计算机科学？不用担心！我们的大多数老师以前从未教过计算机科学。加入当地教师的行列，为在课堂上实施计算机科学提供鼓舞人心的实践支持。我们的区域合作伙伴为个别教师或全校PD提供高质量的为期一天的Code.org研讨会。[报名参加你附近的专业发展研讨会]
-    (%{sign_up_url})！
-  csf_page_faq_answer_04_02: 加入参加我们工作坊的超过 100,000 名教师的行列。我们的大多数研讨会与会者都说：“这是我参加过的最好的职业发展。”事实上，[90%
-    的参与者会向其他老师推荐我们的课程] (%{rec_url})！
-  csf_page_faq_question_05: 教学 CS 基础知识的推荐时间是什么时候？
-  csf_page_faq_answer_05: 每门CSF课程包括13-17节课，为期45分钟。我们建议所有学生按照老师设定的节奏在课间移动。有许多由教师主导的项目关卡旨在同步体验，而技能培养课程可以由学生按照自己的节奏完成。
-  csf_page_faq_question_06: CS 基础知识需要什么材料？
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_courses_heading: 专为小学课堂设计的课程
+  csf_page_courses_desc: 查找与所教年级对应的课程。每门课程为期大约一个月。
+  csf_page_courses_self_paced_heading: 自定进度小学课程
+  csf_page_courses_self_paced_desc: 教师通过教授线下活动和引导全班讨论，在学生的学习中发挥着至关重要的作用，但是，我们认识到，计算机科学基础并不总是在传统的课堂环境中教授。除了A-F课程外，我们还提供两门自定进度的速成课程，教师可以让每个学生按照自己的节奏独立学习。
+  csf_page_faq_question_01: 计算机科学基础是否与标准相对应？
+  csf_page_faq_answer_01_01: 计算机科学基础是以K-12计算机科学框架和CSTA标准为指导编写的。目前，计算机科学基础中的每节课都包含与相关CSTA标准的映射。每门课程的所有CSTA映射摘要可在下面找到：
+  csf_page_faq_answer_01_list_01: "[A课程标准](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[B课程标准](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[C课程标准](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[D课程标准](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[E课程标准](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[F课程标准](%{course_f_url})"
+  csf_page_faq_answer_01_02: Google表格版本的标准可在[计算机科学基础标准](%{csf_standards_url})中找到。
+  csf_page_faq_question_02: 我怎样才能将计算机科学基础带到我的整个学校？
+  csf_page_faq_answer_02: 作为美国领先的K-12计算机科学课程，我们的小学课程已在达拉斯等主要城市学区以及爱荷华州的小型农村地区被证明有效。无需聘请专家来教授计算机科学。我们的计划经过独一无二的设计，旨在为刚接触计算机科学的教师提供支持，同时提供灵活的课程演进以满足学生的需求。与学校和学区管理员[分享这本手册](%{brochure_url})，或者[建议他们查看我们的管理员页面](%{admins_url})，那是专为回答管理员常见问题而设计的。
+  csf_page_faq_question_03: 教授计算机科学基础要花多少钱？
+  csf_page_faq_question_04: 如何/在哪里可以获得计算机科学基础的专业发展？
+  csf_page_faq_answer_04_01: 刚开始教授计算机科学？不用担心！我们的大多数老师以前从未教过计算机科学。加入当地教师的行列，为在课堂上实施计算机科学提供鼓舞人心的实践支持。我们的区域合作伙伴为个别教师或全校PD提供为期一天的高质量Code.org研讨会。[注册参加附近的专业发展研讨会](%{sign_up_url})！
+  csf_page_faq_answer_04_02: 成为逾10万名参与研讨会的教师中的一员。我们的大多数研讨会与会者都说：“这是我参加过的最好的职业发展。”事实上，[90%的参与者会向其他老师推荐我们的课程](%{rec_url})！
+  csf_page_faq_question_05: 计算机科学基础的推荐教授时间是什么时候？
+  csf_page_faq_answer_05: 每门计算机科学基础课程包括13-17节为期45分钟的课。我们建议所有学生按照老师设定的节奏在课间推进。有许多由教师主导的旨在同步体验的项目关卡，技能培养课程可以由学生按照自己的节奏完成。
+  csf_page_faq_question_06: 计算机科学基础需要什么材料？
+  csf_page_faq_answer_06: 许多课程都有指导学生完成活动的讲义。这些资源可以打印出来或以数字形式分发。有些课程需要典型的课堂用品和教具。[访问计算机科学基础教学大纲了解更多](%{syllabus_url})。
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -970,7 +1017,7 @@ cn:
   csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csa_page_curriculum_glance_devices: Laptop, Chromebook
-  csa_page_curriculum_glance_tools: Java 实验室
+  csa_page_curriculum_glance_tools: Java实验室
   csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
   csa_page_curriculum_glance_languages: 英文
   csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
@@ -1130,6 +1177,7 @@ cn:
   not_found_title: 您访问的页面无法找到
   not_found_desc: 您要找的网页不存在。
   not_found_instructions: 检查网页地址并重新提交，或从下面的列表中选择一个链接。
+  company_code_dot_org: 代码.org
   company_4-H: 4-H青少年发展
   company_asa: 课后联盟
   company_asos: ASOS
@@ -1184,6 +1232,7 @@ cn:
   company_evsd: 东谷学区
   company_eastonvilleschooldistrict: 伊顿维尔学区
   company_enumclawschooldistrict: 埃纳姆克洛学区
+  company_ets: ETS
   company_everettsd: 埃弗瑞特公立学校
   company_fsusd: 费尔菲尔德-苏森 统一学区
   company_fayettecountypublicschools: 费耶特县公立学校
@@ -1205,6 +1254,7 @@ cn:
   company_houstonisd: 休斯敦独立学区
   company_hcpss: 霍华德县公立学校
   company_idla: 爱达荷数字学习学院
+  company_iste: 站点
   company_janesvilleschooldistrict: 简斯维尔学区
   company_johnstoncountyschools: 约翰斯顿县学校
   company_lps: 林肯公立学校
@@ -7833,8 +7883,8 @@ cn:
   tutorial_ai4alldance_string_platforms: 所有高版本浏览器
   tutorial_ai4allneural_string_platforms: 所有高版本浏览器
   tutorial_spheroinout_string_platforms: 未插电
-  tutorial_edisonblueprint_string_platforms: 所有高版本浏览器
-  tutorial_edisonmaze_string_platforms: 所有高版本浏览器
+  tutorial_edisonblueprint_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
+  tutorial_edisonmaze_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_milnefunctions_string_platforms: 所有高版本浏览器
   tutorial_sasmap_string_platforms: 所有现代浏览器、iPad、屏幕阅读器
   tutorial_firstrobotics_string_platforms: 所有高版本浏览器
@@ -8736,56 +8786,53 @@ cn:
     2022 年夏季的 Codechella 活动。
   careers_page_code_pride_alt_text: 两名展示女性气质的员工拿着 Code.org 品牌的彩虹横幅的末端微笑。在他们身后，有几个人穿着
     Code.org 衬衫，挥舞着彩虹旗，与一辆五颜六色的大众汽车一起行走。
-  accessibility_hero_heading: Code.org 上的无障碍功能
+  accessibility_hero_heading: Code.org上的无障碍功能
   accessibility_hero_desc: 我们致力于消除阻碍残疾学生和教育工作者融入和充分参与的障碍，确保每个学生都有机会接触计算机科学。
-  accessibility_efforts_title: 我们在 2023 年的努力
-  accessibility_efforts_desc: 为了实现我们建立一个完全可访问的平台的目标，我们正在实施一项全面的行动计划，其中包括：
+  accessibility_efforts_title: 我们在2023年的努力
+  accessibility_efforts_desc: 为了实现我们建立一个完全无障碍平台的目标，我们正在实施一项全面的行动计划，其中包括：
   accessibility_efforts_card_title_1: 内部无障碍培训
-  accessibility_efforts_card_desc_1: 我们的产品和工程团队将在 2023 年 12 月之前完成全面的无障碍培训。
-  accessibility_efforts_card_title_2: VPAT 分析
-  accessibility_efforts_card_desc_2: 完成 [自愿产品无障碍模板] (%{voluntary_url})，以建立基准并每年衡量进度。结果将于
-    2023 年 9 月在此页面公布。
+  accessibility_efforts_card_desc_1: 我们的产品和工程团队将在2023年12月之前完成全面的无障碍培训。
+  accessibility_efforts_card_title_2: VPAT分析
+  accessibility_efforts_card_desc_2: 完成[自愿产品无障碍模板](%{voluntary_url})，以建立基准并每年衡量进度。结果将于2023年9月在此页面获取。
   accessibility_efforts_card_title_3: 支持无障碍设计的工具
-  accessibility_efforts_card_desc_3: '团队成员将有机会使用各种工具，确保所有新功能的设计和构建都考虑到可访问性。 '
+  accessibility_efforts_card_desc_3: '团队成员将有机会使用各种工具，确保所有新功能的设计和构建都考虑到无障碍性。 '
   accessibility_efforts_card_title_4: 无障碍课程
-  accessibility_efforts_card_desc_4: 到 2023 年 12 月，我们将在《计算机科学原理》和《计算机科学发现》的前几个单元中达到
-    [WCAG AA 级合规] (%{wcag_url})。
-  accessibility_explore_title: 浏览 Code.org 的无障碍资源
-  accessibility_explore_text: 我们的无障碍资源页面为我们的功能和工具提供了全面的文档和指导，包括可访问的 Hour of Code 课程、身临其境的阅读器、键盘导航和自定义选项。
+  accessibility_efforts_card_desc_4: 到2023年12月，我们将在计算机科学原理和计算机科学发现的前几个单元中达到 [WCAG
+    AA级合规](%{wcag_url})。
+  accessibility_explore_title: 浏览Code.org的无障碍资源
+  accessibility_explore_text: 我们的无障碍资源页面为我们的功能和工具提供全面的文档和指导，包括无障碍编程一小时课程、身临其境的阅读器、键盘导航和自定义选项。
   accessibility_explore_button: 查看无障碍资源页面
   accessibility_help_us_title: 帮助我们改进
-  accessibility_help_us_text: 在 Code.org，我们对反馈反应敏捷且反应迅速。如果您有建议可以帮助我们改善工具和资源的可访问性，请联系我们。感谢您帮助我们向所有学生提供计算机科学！
+  accessibility_help_us_text: 在Code.org，我们敏捷而迅速地回应反馈。如果您有建议可以帮助我们改进工具和资源的无障碍性，请联系我们。感谢您帮助我们向所有学生传授计算机科学！
   accessibility_help_us_button: 告诉我们如何改进
-  accessibility_commit_title: Code.org 对无障碍环境的承诺
-  accessibility_commit_text_1: Code.org 相信计算机科学是所有学生的基础，我们致力于确保我们的平台和课程中的公平、机会和机会。
+  accessibility_commit_title: Code.org对无障碍服务的承诺
+  accessibility_commit_text_1: Code.org相信计算机科学是所有学生的基础，我们致力于确保我们的平台和课程中的公平、访问和机会。
   accessibility_commit_text_2: 我们正在采取整体方法来支持所有学生的学习需求，并努力缩小残疾学生在获得计算机科学教育方面的差距。
-  accessibility_commit_text_3: 我们从小处着手，但会衡量我们的进度并不断迭代，直到我们能够解决最复杂的可访问性挑战。
-  accessibility_commit_text_4: 在 Code.org，我们致力于不断改善工具的可访问性，我们很高兴能迈出这一重要一步，为所有学生和教育工作者提供更大的公平、机会和机会。
+  accessibility_commit_text_3: 我们从小处着手，但会衡量我们的进度并不断迭代，直到我们能够解决最复杂的无障碍性挑战。
+  accessibility_commit_text_4: 在Code.org，我们致力于不断改善工具的无障碍性，我们很高兴能迈出重要的一步，为所有学生和教育工作者提供更大的公平、访问和机会。
   accessibility_partner_title: 我们的合作伙伴和推荐
   accessibility_partner_desc: 我们向正在寻找更易于理解的计算机科学内容的学生和教师推荐以下资源。
-  accessibility_card_title_1: 访问 csfor All
+  accessibility_card_title_1: AccessCSForAll
   accessibility_card_text_1: 为教师提供资源，让他们将无障碍计算带入中学，也为残疾高中生提供资源，让他们与技术领域的导师建立联系。
-  accessibility_card_title_2: blocks4All
-  accessibility_card_text_2: 适用于iPad的基于区块的编程环境，可使用Dash机器人教授基本的编程概念。可通过 VoiceOver、Switch
-    Control 和语音控制进行访问。
-  accessibility_card_title_3: 跳码器
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: 适用于iPad的基于模块编程环境，可使用Dash机器人教授基本的编程概念。可通过VoiceOver、Switch
+    Control和Voice Control进行访问。
+  accessibility_card_title_3: Code Jumper
   accessibility_card_text_3: 为有视力障碍的学生提供的物理编程辅助工具/资源。
-  accessibility_card_title_4: csforAll
-  accessibility_card_text_4: 一个与美国各地不同组织协调项目和计划的组织。
-  accessibility_card_title_5: "《聋人儿童守则》"
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: 一个与美国各地的不同组织协调项目和计划的组织。
+  accessibility_card_title_5: 聋人儿童准则
   accessibility_card_text_5: 促进计算机科学和技术教育，以增强失聪或听力障碍学生的能力。
   accessibility_card_title_6: 人人都能编程
-  accessibility_card_text_6: Apple 为 Swift Playgrounds 设计的课程，为有无障碍需求的学生提供 VoiceOver（修改后的
-    TTS）和经过调整的课程。
+  accessibility_card_text_6: Apple为Swift Playgrounds设计的课程，为有无障碍需求的学生提供VoiceOver（修订TTS）和经过调整的课程。
   accessibility_card_title_7: 可汗学院
-  accessibility_card_text_7: 提供各种便利的课程提供者，包括字幕、成绩单以及减少动画动作和隐藏视觉依赖内容的能力。主持一些 Code.org
-    课程，以及其他计算课程。
-  accessibility_card_title_8: 快照电路
-  accessibility_card_text_8: 一款教育产品，通过无焊拼接电子元件教授电子元件。可以为有视力障碍的学生提供无障碍包。
+  accessibility_card_text_7: 具有各种调整的课程提供者，包括字幕、文本以及减少动画动作和隐藏视觉相关内容的能力。主持一些Code.org课程以及额外的计算课程。
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: 一款教育产品，通过无焊拼接电子元件教授电子元件。可以为有视觉障碍的学生提供无障碍包。
   accessibility_card_title_9: Sphero
-  accessibility_card_text_9: 专为智障学生设计的交互式编程机器人球和 STEM 教育套件。需要与相应的应用程序配对。
-  accessibility_card_title_10: '法定人数 '
-  accessibility_card_text_10: 使用 Quorum 改编自 Code.org 的 AP 计算机科学原理课程，Quorum 是一种基于证据的语言，最初旨在为盲人或视障学生提供无障碍环境。
+  accessibility_card_text_9: 专为智力障碍学生设计的交互式编程机器人球和STEM教育套件。需要与相应的应用程序配对。
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: 使用Quorum对Code.org的AP计算机科学原理课程进行的改编。Quorum是一种基于证据的语言，最初旨在为盲人或视障学生提供无障碍环境。
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人
