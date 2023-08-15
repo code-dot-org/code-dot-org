@@ -2,29 +2,136 @@ $message-editor-height: 100px;
 $default-spacing: 2px;
 
 .chatWorkspace {
-    margin: 10px 5%;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
+  margin: 10px 5%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 .conversationArea {
-    margin: 5px 2%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: $default-spacing;
-    box-sizing: border-box;
-    overflow: scroll;
+  margin: 5px 2%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: $default-spacing;
+  box-sizing: border-box;
+  overflow: scroll;
 }
 
 .userChatMessageEditor {
-    padding: 1% 1%;
-    margin: 10px 2%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: $message-editor-height;
-    box-sizing: border-box;
-    overflow: scroll;
+  padding: 1% 1%;
+  margin: 10px 2%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: $message-editor-height;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.shake {
+  animation: shake 2s ease infinite;
+}
+
+@keyframes shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.verticalShake {
+  animation: vertical-shake 4s ease infinite;
+}
+
+@keyframes vertical-shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-10px);
+  }
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.angleShake {
+  animation: angle-shake 2s ease infinite;
+  transform-origin: top left;
+}
+
+@keyframes angle-shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotateZ(-20deg);
+  }
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: rotateZ(20deg);
+  }
+}
+
+.dancingBot {
+  margin-bottom: 50px;
+  width: 200px;
+  height: 400px;
+  position: relative;
+  margin-left: 100px;
+
+  .botImage {
+    width: 150px;
+  }
+
+  .hand0Image {
+    position: absolute;
+    right: 25;
+    width: 75px;
+    top: 130px;
+  }
+
+  .hand1Image {
+    position: absolute;
+    left: -75px;
+    width: 75px;
+    top: 130px;
+  }
+
+  .foot0Image {
+    position: absolute;
+    right: 20px;
+    width: 75px;
+    bottom: -40px;
+  }
+
+  .foot1Image {
+    position: absolute;
+    left: -45px;
+    width: 75px;
+    bottom: -40px;
+  }
 }
