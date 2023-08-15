@@ -7,12 +7,13 @@ import AichatView from '@cdo/apps/aichat/views/AichatView';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
+import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -25,12 +26,19 @@ interface AppProperties {
   backgroundMode: boolean;
   /** React View for the Lab */
   node: React.ReactNode;
+  /**
+   * Display theme for this lab. This will likely be configured by user
+   * preferences eventually, but for now this is fixed for each lab. Defaults
+   * to the default theme if not specified.
+   */
+  theme?: Theme;
 }
 
 const appsProperties: {[appName in AppName]?: AppProperties} = {
   music: {
     backgroundMode: true,
     node: <MusicView />,
+    theme: Theme.DARK,
   },
   standalone_video: {
     backgroundMode: false,
@@ -39,6 +47,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   aichat: {
     backgroundMode: false,
     node: <AichatView />,
+    theme: Theme.LIGHT,
   },
 };
 
@@ -55,6 +64,15 @@ const LabViewsRenderer: React.FunctionComponent = () => {
       setAppsToRender([...appsToRender, currentAppName]);
     }
   }, [currentAppName, appsToRender]);
+
+  // Set the theme for the current app.
+  const {setTheme} = useContext(ThemeContext);
+  useEffect(() => {
+    if (currentAppName) {
+      const theme = appsProperties[currentAppName]?.theme || DEFAULT_THEME;
+      setTheme(theme);
+    }
+  }, [currentAppName, setTheme]);
 
   // Iterate through appsToRender and render Lab views for each. If
   // backgroundMode is true, the Lab view will always be rendered, but
