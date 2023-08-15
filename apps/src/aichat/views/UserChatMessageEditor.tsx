@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import {ChatWorkspaceContext} from './ChatWorkspace';
@@ -8,6 +8,10 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;
+  const handleSubmit = useCallback(() => {
+    onSubmit?.(userMessage);
+    setUserMessage('');
+  }, [onSubmit, userMessage]);
 
   return (
     <div className={moduleStyles.UserChatMessageEditor}>
@@ -21,10 +25,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         key="submit"
         text="Submit"
         icon="arrow-up"
-        onClick={() => {
-          onSubmit?.(userMessage);
-          setUserMessage('');
-        }}
+        onClick={() => handleSubmit()}
         color={Button.ButtonColor.brandSecondaryDefault}
       />
     </div>
