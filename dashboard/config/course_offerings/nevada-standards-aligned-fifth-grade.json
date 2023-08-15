@@ -8,7 +8,7 @@
   "marketing_initiative": "CSF",
   "grade_levels": "5",
   "header": "teacher_led",
-  "image": null,
+  "image": "https://images.code.org/4add0a26276e4959e1e70931567b73c5-image (1).png",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",

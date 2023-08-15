@@ -76,7 +76,7 @@
 
   .desktop-pad-right { padding-right: 30px; }
 
-  .container_responsive { width: 970px; margin: 0 auto; max-width: none !important; }
+  .container_responsive { width: 960px; margin: 0 auto; max-width: none !important; }
 
   .tile-container-responsive { display: flex; flex-direction: row; justify-content: space-between; }
   .tile-container-responsive > * { margin-right: 20px; }

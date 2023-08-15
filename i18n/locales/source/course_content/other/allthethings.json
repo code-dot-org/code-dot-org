@@ -407,6 +407,7 @@
   "https://studio.code.org/s/allthethings/lessons/13/levels/2": {
     "short_instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
     "long_instructions": "The `string-append` function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of `string-append`.",
+    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\"",
     "callouts": {
       "": "Teal colored blocks, like this one, output string values"
     }
