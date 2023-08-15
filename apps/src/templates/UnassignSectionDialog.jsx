@@ -51,7 +51,7 @@ class UnassignSectionDialog extends Component {
           <Button
             text={i18n.unassignConfirm()}
             onClick={this.unassign}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="ui-confirm-unassign-section-button"
           />
         </DialogFooter>
