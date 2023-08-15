@@ -2,7 +2,7 @@ import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 import aichatI18n from '../locale';
-import {ChatCompletionMessage} from '../types';
+import {ChatCompletionMessage, Role, Status} from '../types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 
 interface ChatMessageProps {
@@ -11,17 +11,18 @@ interface ChatMessageProps {
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
+const EDUBOT_NAME = 'Edubot'; // TODO: Replace with name from levelbuilder.
 
 const isAssistant = (role: string) => {
-  return role === 'assistant';
+  return role === Role.ASSISTANT;
 };
 
 const isUser = (role: string) => {
-  return role === 'user';
+  return role === Role.USER;
 };
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === 'ok') {
+  if (status === Status.OK) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -40,7 +41,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === 'personal') {
+  } else if (status === Status.PERSONAL) {
     return (
       <div
         className={classNames(
@@ -57,7 +58,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
 };
 
 const displayAssistantMessage = (status: string, chatMessageText: string) => {
-  if (status === 'ok') {
+  if (status === Status.OK) {
     return (
       <div
         id={'chat-workspace-message-body'}
@@ -88,7 +89,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
             semanticTag="h5"
             visualAppearance="heading-xs"
           >
-            {message.name} ({message.role})
+            {EDUBOT_NAME} ({message.role})
           </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>

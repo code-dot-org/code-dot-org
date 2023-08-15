@@ -4,7 +4,7 @@ import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import aichatI18n from '../locale';
-import {ChatCompletionMessage} from '../types';
+import {ChatCompletionMessage, Status, Role} from '../types';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 import {getChatCompletionMessage} from '../chatApi';
 
@@ -16,32 +16,33 @@ const ChatWorkspace: React.FunctionComponent = () => {
     useState<ChatCompletionMessage[]>(demoChatMessages);
 
   const onSubmit = async (message: string) => {
-    const lastMessageId =
+    const latestMessageId =
       storedMessages.length === 0
         ? 1
         : storedMessages[storedMessages.length - 1].id;
+
+    // TODO: Post user message with status unknown while message is being sent to backend.
 
     // TODO: Filter inappropriate and too personal messages.
     const appropriateChatMessages = [...storedMessages];
     // Retrieve system prompt from levebuilder - assign for now.
     const systemPrompt =
       'You are a chatbot for a middle school classroom where they can chat with a historical figure. You must answer only questions about the formation of America and the founding fathers. You will act as George Washington; every question you answer must be from his perspective. Wait for the student to ask a question before responding.';
-    const updatedUserAndAssistantChatMessages = await getChatCompletionMessage(
+    const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
-      lastMessageId,
+      latestMessageId,
       message,
       appropriateChatMessages
     );
-    // If the returned array contains only one message, the user's message did not pass filters and
-    // is returned without an assistant chat message.
-    if (updatedUserAndAssistantChatMessages.length === 2) {
-      // Update assistant chat message with appropriate name.
-      updatedUserAndAssistantChatMessages[1].name = 'EduBot'; // TODO: assign name from levelbuilder settings.
-    }
-    setStoredMessages([
-      ...storedMessages,
-      ...updatedUserAndAssistantChatMessages,
-    ]);
+
+    const newChatMessage: ChatCompletionMessage = {
+      id: chatApiResponse.userMessageId,
+      role: Role.USER,
+      status: Status.UNKNOWN,
+      chatMessageText: message,
+    };
+    newChatMessage.status = chatApiResponse.status;
+    setStoredMessages([...storedMessages, newChatMessage]);
   };
 
   return (

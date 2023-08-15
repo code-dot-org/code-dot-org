@@ -10,7 +10,6 @@ export type AichatLocale = {
 
 export type ChatCompletionMessage = {
   id: number;
-  name: string;
   role: Role;
   chatMessageText: string;
   status: Status;

@@ -54,13 +54,12 @@ async function post(
     const token = await getAuthenticityToken();
     headers[AUTHENTICITY_TOKEN_HEADER] = token;
   }
-
   const response = await fetch(endpoint, {
     method: 'POST',
     body,
     headers,
   });
-
+  console.log('response', response);
   if (!response.ok) {
     throw new Error(response.status + ' ' + response.statusText);
   }

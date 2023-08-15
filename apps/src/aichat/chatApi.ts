@@ -9,6 +9,7 @@ async function postOpenaiChatCompletion(
   payload: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   // Send request to chat completion backend controller.
+  console.log('payload', payload);
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
@@ -33,54 +34,39 @@ const formatForChatCompletion = (
 };
 
 /**
- * This function formats the AI Chat conversation including the system prompt into the payload
- * and passes the payload to `postOpenaiChatCompletion`. It then receives the assistant chat response
- * and updates the chat completion user message status accordingly. It returns the user and assistant
- * chat completion messages.
+ * This function formats chat completion messages including the system prompt, passes them
+ * to `postOpenaiChatCompletion`, then returns the status of the response and assistant message if successful.
  */
 export async function getChatCompletionMessage(
   systemPrompt: string,
-  lastMessageId: number,
+  userMessageId: number,
   newMessage: string,
   chatMessages: ChatCompletionMessage[]
-): Promise<ChatCompletionMessage[]> {
-  const newChatMessage: ChatCompletionMessage = {
-    id: lastMessageId + 1,
-    name: Role.USER,
-    role: Role.USER,
-    status: Status.UNKNOWN,
-    chatMessageText: newMessage,
-  };
+): Promise<ChatCompletionResponse> {
+  const messagesToSend = [
+    {role: Role.SYSTEM, content: systemPrompt},
+    ...formatForChatCompletion(chatMessages),
+    {role: Role.USER, content: newMessage},
+  ];
+  console.log('messagesToSend', messagesToSend);
 
-  const systemPromptMessage: ChatCompletionMessage = {
-    id: 0,
-    name: Role.SYSTEM,
-    role: Role.SYSTEM,
-    chatMessageText: systemPrompt,
-    status: Status.OK,
-  };
-  const messagesToSend = [systemPromptMessage, ...chatMessages, newChatMessage];
-  const payload = formatForChatCompletion(messagesToSend);
-  const response = await postOpenaiChatCompletion(payload);
+  const response = await postOpenaiChatCompletion(messagesToSend);
 
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
   if (!response) {
-    newChatMessage.status = Status.INAPPROPRIATE; // TODO: Update status to be more accurate.
-    return [newChatMessage];
+    return {status: Status.PERSONAL, userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
   }
-  // Response was successful, so update status of new message.
-  newChatMessage.status = Status.OK;
-
-  const assistantMessage = response.content;
-  const assistantChatMessage: ChatCompletionMessage = {
-    id: newChatMessage.id + 1,
-    name: Role.ASSISTANT, // Will be reassigned in ChatWorkspace.tsx.
-    role: Role.ASSISTANT,
+  return {
     status: Status.OK,
-    chatMessageText: assistantMessage,
+    userMessageId,
+    assistantResponse: response.content,
   };
-  return [newChatMessage, assistantChatMessage];
 }
 
 type OpenaiChatCompletionMessage = {role: string; content: string};
+type ChatCompletionResponse = {
+  status: Status;
+  userMessageId: number;
+  assistantResponse?: string;
+};
