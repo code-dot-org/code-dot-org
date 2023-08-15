@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:
@@ -75,6 +76,51 @@ describe('WorkshopForm test', () => {
 
     const someControl = wrapper.find(FormControl);
     assert(someControl.exists());
+  });
+
+  it('creates and publishes workshop', () => {
+    const onPublish = sinon.spy();
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={onPublish}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    // Set fields required for publishing
+    const locationField = wrapper.find('#location_name').first();
+    locationField.simulate('change', {
+      target: {name: 'location_name', value: 'Test location'},
+    });
+
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: 10},
+    });
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'Admin/Counselor Workshop'},
+    });
+
+    const subjectField = wrapper.find('#subject').first();
+    subjectField.simulate('change', {
+      target: {name: 'subject', value: 'SLP Intro'},
+    });
+
+    // Publish workshop
+    const publishButton = wrapper.find('#workshop-form-save-btn').first();
+    publishButton.simulate('click');
+
+    expect(onPublish).to.have.been.calledOnce;
   });
 
   it('inputs disabled in readonly', () => {
