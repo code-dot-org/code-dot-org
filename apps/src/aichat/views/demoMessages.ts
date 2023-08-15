@@ -1,6 +1,5 @@
 // Will delete once we've connected UI to backend.
-import {ChatCompletionMessage} from '../types';
-import {Role, Status} from '../constants';
+import {ChatCompletionMessage, Role, Status} from '../types';
 
 const demoChatMessages: ChatCompletionMessage[] = [
   {

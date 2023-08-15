@@ -1,29 +1,43 @@
-import {ChatCompletionMessage} from './types';
+import {Role, Status, ChatCompletionMessage} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {Role, Status} from './constants';
+import {CHAT_COMPLETION_URL} from './constants';
 
-export async function postOpenaiChatCompletion(
-  chatMessages: ChatCompletionMessage[]
-): Promise<ChatCompletionResponse> {
-  const payload = {messages: formatForChatCompletion(chatMessages)};
+/**
+ * This function sends a POST request to the chat completion backend controller.
+ */
+async function postOpenaiChatCompletion(
+  payload: OpenaiChatCompletionMessage[]
+): Promise<OpenaiChatCompletionMessage | null> {
   // Send request to chat completion backend controller.
-  const url = '/openai/chat_completion';
-  const response = await HttpClient.post(url, JSON.stringify(payload), true, {
-    'Content-Type': 'application/json; charset=UTF-8',
-  });
-  if (response.status === 200) {
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+  if (response.ok) {
     return await response.json();
   } else {
     return null;
   }
 }
 
-const formatForChatCompletion = (chatMessages: ChatCompletionMessage[]) => {
+const formatForChatCompletion = (
+  chatMessages: ChatCompletionMessage[]
+): OpenaiChatCompletionMessage[] => {
   return chatMessages.map(message => {
     return {role: message.role, content: message.chatMessageText};
   });
 };
 
+/**
+ * This function formats the AI Chat conversation including the system prompt into the payload
+ * and passes the payload to `postOpenaiChatCompletion`. It then receives the assistant chat response
+ * and updates the chat completion user message status accordingly. It returns the user and assistant
+ * chat completion messages.
+ */
 export async function getChatCompletionMessage(
   systemPrompt: string,
   lastMessageId: number,
@@ -46,7 +60,8 @@ export async function getChatCompletionMessage(
     status: Status.OK,
   };
   const messagesToSend = [systemPromptMessage, ...chatMessages, newChatMessage];
-  const response = await postOpenaiChatCompletion(messagesToSend);
+  const payload = formatForChatCompletion(messagesToSend);
+  const response = await postOpenaiChatCompletion(payload);
 
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
@@ -68,4 +83,4 @@ export async function getChatCompletionMessage(
   return [newChatMessage, assistantChatMessage];
 }
 
-type ChatCompletionResponse = {role: string; content: string} | null;
+type OpenaiChatCompletionMessage = {role: string; content: string};

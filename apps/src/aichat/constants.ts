@@ -1,12 +1,1 @@
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-  SYSTEM = 'system',
-}
-
-export enum Status {
-  OK = 'ok',
-  PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
-  UNKNOWN = 'unknown',
-}
+export const CHAT_COMPLETION_URL = '/openai/chat_completion';
