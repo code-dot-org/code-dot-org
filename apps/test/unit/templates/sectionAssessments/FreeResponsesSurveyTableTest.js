@@ -7,7 +7,7 @@ import {
   surveyTwo,
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
-describe('FreeResponsesAssessmentsTable', () => {
+describe('FreeResponsesSurveyTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
       <FreeResponsesSurveyTable freeResponses={surveyTwo} />
