@@ -93,10 +93,11 @@ export default class FunctionEditor {
     this.editorWorkspace.addChangeListener(e => {
       if (e.isUiEvent) return;
       // save the procedure block only, ignore other blocks
-      if (!this.block) return;
-      const id = this.block.getProcedureModel().getId();
+      if (!this.block || !this.procedureId) return;
       const blockState = Blockly.serialization.blocks.save(this.block);
-      this.allFunctions[id] = blockState;
+      //console.log('saving block with blockState ', blockState);
+      this.allFunctions[this.procedureId] = blockState;
+      console.log({allFunctions: this.allFunctions});
       //Blockly.serialization.blocks.append(blockState, this.mainWorkspace);
     });
 
@@ -160,6 +161,7 @@ export default class FunctionEditor {
         x: 50,
         y: 200,
       };
+      this.procedureId = procedure.getId();
       this.block = Blockly.serialization.blocks.append(
         existingData,
         this.editorWorkspace
@@ -184,6 +186,7 @@ export default class FunctionEditor {
         newDefinitionBlock,
         this.editorWorkspace
       );
+      this.procedureId = this.block.getProcedureModel().getId();
     }
   }
 
@@ -244,12 +247,13 @@ const createCallBlock = function (procedure) {
   return {
     kind: 'block',
     type: 'procedures_callnoreturn',
+    // TODO: are fields and mutation necessary?
     fields: {
       NAME: name,
     },
-    mutation: {
-      name: name,
-    },
+    // mutation: {
+    //   name: name,
+    // },
     extraState: {
       name: name,
       id: procedure.getId(),
@@ -267,9 +271,6 @@ const createCallBlock = function (procedure) {
  */
 // Equivalent to blockly-samples registerToolboxCategoryCallback->modalProceduresToolboxCallback
 export function flyoutCategory(workspace, includeNewButton = true) {
-  console.warn(
-    'The modal function editor is very much a work in progress! Safety goggles on...'
-  );
   const blockList = [];
   if (includeNewButton) {
     blockList.push({
