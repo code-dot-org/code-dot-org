@@ -124,7 +124,6 @@ const CurriculumCatalog = ({
       <HeaderBanner
         headingText={i18n.curriculumCatalogHeaderTitle()}
         subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />

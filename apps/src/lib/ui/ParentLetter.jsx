@@ -10,11 +10,13 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
-  'https://medium.com/@codeorg/code-orgs-commitment-to-student-privacy-earns-accolades-cae1cca35632';
+  'https://privacy.commonsense.org/evaluation/code.org';
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
+const STUDENT_PRIVACY_POLICY_URL =
+  'https://code.org/privacy-nov2021#protecting-childrens-privacy';
 
 const LOGIN_TYPE_NAMES = {
   [SectionLoginType.clever]: 'Clever accounts',
@@ -134,7 +136,7 @@ class ParentLetter extends React.Component {
             markdown={i18n.parentLetterStudentPrivacyDetails({
               pledgeLink: PRIVACY_PLEDGE_URL,
               commonSenseLink: COMMON_SENSE_ARTICLE_URL,
-              privacyPolicyLink: pegasus('/privacy/student-privacy'),
+              privacyPolicyLink: STUDENT_PRIVACY_POLICY_URL,
             })}
           />
           <p>{i18n.parentLetterClosing()}</p>
