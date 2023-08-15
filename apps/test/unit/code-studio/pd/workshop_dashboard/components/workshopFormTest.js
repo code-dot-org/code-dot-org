@@ -100,6 +100,34 @@ describe('WorkshopForm test', () => {
     });
   });
 
+  it('edits form and can save', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={fakeWorkshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const newCapacity = 40;
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: newCapacity},
+    });
+
+    const saveButton = wrapper.find('#workshop-form-save-btn').first();
+    saveButton.simulate('click');
+
+    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
+      newCapacity
+    );
+  });
+
   it('workshop with one session shows add session button in row', () => {
     const workshop = Factory.build('workshop');
     const wrapper = mount(
@@ -502,34 +530,6 @@ describe('WorkshopForm test', () => {
     );
 
     server.restore();
-  });
-
-  it('edits form and can save', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([WorkshopAdmin])}
-            facilitatorCourses={[]}
-            workshop={fakeWorkshop}
-            readOnly={false}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const newCapacity = 40;
-    const capacityField = wrapper.find('#capacity').first();
-    capacityField.simulate('change', {
-      target: {name: 'capacity', value: newCapacity},
-    });
-
-    const saveButton = wrapper.find('#workshop-form-save-btn').first();
-    saveButton.simulate('click');
-
-    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
-      newCapacity
-    );
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
