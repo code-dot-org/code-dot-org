@@ -12,9 +12,9 @@
   "cs_topic": "web_design,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "professional_learning_program": null,
-  "video": null,
+  "description": "Students learn problem solving, creative expression, and teamwork as they work to create and share content on their very own web pages.",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/itx0RYOnoBs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=itx0RYOnoBs&wmode=transparent",
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": 443
 }

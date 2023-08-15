@@ -1,0 +1,36 @@
+name 'csa-se-setup-part3'
+title 'Step 3: Installing Visual Studio Code Insiders'
+
+markdown <<MARKDOWN
+# Step 3: Set Up Visual Studio Code Insiders
+
+## Installing Visual Studio Code Insiders
+
+### If you're on a Windows PC
+
+If you are on a Windows PC, navigate to [**code.visualstudio.com/insiders**](https://code.visualstudio.com/insiders/) and click the blue **Download for Windows** button.
+
+![](https://images.code.org/a4f602f3bdfb3cd7b0b32629a9acb26b-image-1691876373489.png)
+
+When the file has finished downloading, double-click it to run the installer. Follow the instructions provided by the installer.
+
+### If you're on a Mac
+
+Navigate to [**code.visualstudio.com/insiders/#osx**](https://code.visualstudio.com/insiders/#osx) and click the blue **Download Mac Universal** button.
+
+![](https://images.code.org/39fbc28a75f47c000a65fa283ea9f5ff-image-1691876453404.png)
+
+When the file has finished downloading, double-click it to run the installer. Follow the instructions provided by the installer.
+
+## Adding Java Extensions to VS Code
+
+1. Click the **Extensions** icon in VS Code.
+
+2. In the search bar, type **java**.
+
+3. From the results, select **Extension Pack for Java**.
+
+![](https://images.code.org/3f02dbad77a5e56d001b6b0418b306a5-image-1691876523910.png)
+
+4. Click the **Install** button to install this extension pack.
+MARKDOWN
