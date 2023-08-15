@@ -152,12 +152,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     let workspaceCode = Blockly.JavaScript.workspaceToCode(
       Blockly.mainBlockSpace
     );
-    console.log(`workspaceCode before getting procedure code `, workspaceCode);
     if (this.getProcedureWorkspace()) {
-      workspaceCode +=
-        ' ' + Blockly.JavaScript.workspaceToCode(this.getProcedureWorkspace());
+      workspaceCode += Blockly.JavaScript.workspaceToCode(
+        this.getProcedureWorkspace()
+      );
     }
-    console.log({workspaceCode});
     return workspaceCode;
   };
 
