@@ -5,6 +5,8 @@ class I18n::Resources::DashboardTest < Minitest::Test
   def test_sync_in
     exec_seq = sequence('execution')
 
+    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/dashboard')).in_sequence(exec_seq)
+
     I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Dashboard::CourseContent.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Dashboard::CourseOfferings.expects(:sync_in).in_sequence(exec_seq)
@@ -16,7 +18,6 @@ class I18n::Resources::DashboardTest < Minitest::Test
     I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(exec_seq)
 
     # Copying source files
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/dashboard')).in_sequence(exec_seq)
     FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/en.yml'), CDO.dir('i18n/locales/source/dashboard/base.yml')).in_sequence(exec_seq)
     FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/data.en.yml'), CDO.dir('i18n/locales/source/dashboard/data.yml')).in_sequence(exec_seq)
     FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/devise.en.yml'), CDO.dir('i18n/locales/source/dashboard/devise.yml')).in_sequence(exec_seq)
