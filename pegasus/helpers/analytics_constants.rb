@@ -6,6 +6,7 @@ module AnalyticsConstants
     ADMIN_PAGE_VISITED_EVENT = 'Administrator Page Visited'.freeze,
     AI_PAGE_VISIT_EVENT = 'AI Page Visited'.freeze,
     AI_PL_PAGE_VISIT_EVENT = 'AI PL Page Visited'.freeze,
+    AI_HOW_WORKS_PAGE_VISITED_EVENT = 'How AI Works Page Visited'.freeze,
     CSA_CURRICULUM_PAGE_VISITED_EVENT = 'CSA Curriculum Page Visited'.freeze,
     CSC_CURRICULUM_PAGE_VISITED_EVENT = 'CSC Curriculum Page Visited'.freeze,
     CSD_CURRICULUM_PAGE_VISITED_EVENT = 'CSD Curriculum Page Visited'.freeze,

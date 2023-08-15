@@ -1572,18 +1572,12 @@ sv:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': alla
           RATE:
             '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': alla
       aalab_spriteSayChoices:
         text: "{SPRITE} säger {SPEECH}"
@@ -1736,7 +1730,6 @@ sv:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'

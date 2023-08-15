@@ -906,6 +906,8 @@
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsning'
+            lessonGroup-5:
+              display_name: Undersøkelse
         csd1-dlp:
           lesson_groups:
             content:
@@ -2231,6 +2233,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøkelse
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2245,6 +2249,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøkelse
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2259,6 +2265,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøkelse
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2273,6 +2281,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøkelse
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2289,6 +2299,8 @@
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsning'
+            lessonGroup-5:
+              display_name: Undersøkelse
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:

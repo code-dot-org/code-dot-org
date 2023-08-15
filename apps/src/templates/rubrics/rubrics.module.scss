@@ -44,3 +44,70 @@
     line-height: 1.1875;
   }
 }
+
+.learningGoalRow {
+  border-bottom: 1px solid $neutral_dark40;
+  height: 40px;
+  summary:hover {
+    background: none;
+  }
+}
+
+.learningGoalHeader {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  line-height: 154%;
+}
+
+.learningGoalHeaderLeftSide {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: $gotham-bold;
+
+  // TODO: [DES-321] remove span styles
+  span {
+    font-size: 14px;
+    font-weight: 350;
+  }
+
+  .arrowIcon {
+    font-weight: 900;
+    font-size: 16px;
+  }
+}
+
+.learningGoalHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+}
+
+.aiToken {
+  display: flex;
+  height: 20px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 0;
+
+  border-radius: 30px;
+  border: 1px solid $product_affirmative_default;
+  color: $product_affirmative_default;
+  background: $light_affirmative_100;
+
+  font-family: $gotham-extra-bold;
+}
+
+.learningGoalExpanded {
+  border-bottom: 1px solid $neutral_dark40;
+  padding: 20px 16px;
+}
