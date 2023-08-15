@@ -59,7 +59,5 @@ describe('WorkshopForm test', () => {
     // Publish workshop
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
-
-
   });
 });
