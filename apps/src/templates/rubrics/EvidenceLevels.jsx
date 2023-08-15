@@ -10,7 +10,7 @@ import {
   BodyThreeText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
-import {UNDERSTAND_LEVEL_STRINGS} from './rubricHelpers';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevels({
   evidenceLevels,
@@ -32,7 +32,7 @@ export default function EvidenceLevels({
           >
             {' '}
             <RadioButton
-              label={UNDERSTAND_LEVEL_STRINGS[evidenceLevel.understanding]}
+              label={UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
               name={radioGroupName}
               value={evidenceLevel.id}
               size={'s'}
@@ -55,7 +55,7 @@ export default function EvidenceLevels({
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             <BodyTwoText className={style.evidenceLevelLabel}>
-              {UNDERSTAND_LEVEL_STRINGS[evidenceLevel.understanding]}
+              {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
             </BodyTwoText>
             <BodyThreeText className={style.evidenceLevelDescription}>
               {evidenceLevel.teacherDescription}

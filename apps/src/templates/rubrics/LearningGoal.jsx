@@ -10,7 +10,7 @@ import {
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import EvidenceLevels from './EvidenceLevels';
-import SafeMarkdown from '../SafeMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default function LearningGoal({
   learningGoal,
@@ -59,7 +59,7 @@ export default function LearningGoal({
         />
         {learningGoal.tips && (
           <div>
-            <Heading6>Tips for Evaluation</Heading6>
+            <Heading6>{i18n.tipsForEvaluation()}</Heading6>
             <div className={style.learningGoalTips}>
               <SafeMarkdown markdown={learningGoal.tips} />
             </div>
