@@ -1,5 +1,4 @@
 class PeerReviewMailer < ApplicationMailer
-  include ActionMailerMetrics
   default from: 'Code.org <teacher@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
