@@ -190,6 +190,8 @@ module Services
     # @param [Hash] data - The input data to seed from.
     # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_hash(data)
+      puts "seed from hash data"
+      puts data
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
@@ -394,15 +396,24 @@ module Services
     end
 
     def self.import_levels_script_levels(levels_script_levels_data, seed_context)
+      puts levels_script_levels_data
+
       levels_by_seeding_key = seed_context.levels.index_by(&:key)
+      puts "levels by seeding_key"
+      puts levels_by_seeding_key
+
       script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
       levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
         seeding_key = lsl_data['seeding_key']['level.key']
+        puts "seeding Key"
+        puts seeding_key
         unless lsl_data['seeding_key']['script_level.level_keys'].include?(seeding_key)
           raise "level.key not found in script_level.level_keys for #{lsl_data}"
         end
         level = levels_by_seeding_key[seeding_key]
+        puts "level"
+        puts level
         unless level
           # TODO: we may want to get rid of this query since we make it for each new LevelsScriptLevel.
           level = Level.find_by_key(seeding_key)
