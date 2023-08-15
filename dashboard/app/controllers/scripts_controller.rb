@@ -13,6 +13,9 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -163,6 +166,10 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    # Deprecated scripts should not be edited.
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
