@@ -11,6 +11,11 @@ end
 
 apt_package 'git'
 
+# Install Git LFS, from: https://packagecloud.io/github/git-lfs/install#chef
+packagecloud_repo "github/git-lfs" do
+  type "deb"
+end
+
 cookbook_file "#{node[:home]}/.gitconfig" do
   source 'gitconfig'
   mode '644'
