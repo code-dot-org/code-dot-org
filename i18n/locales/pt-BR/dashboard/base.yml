@@ -1257,7 +1257,7 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
-  unit_prefix: "Unidade %{n}"
+  unit_prefix: "Unidade 4"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:
@@ -1286,3 +1286,4 @@ pt:
     binary: "Binário"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Formato de pixel"
+
