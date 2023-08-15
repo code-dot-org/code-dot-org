@@ -95,11 +95,7 @@ export default class FunctionEditor {
     this.editorWorkspace.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!this.mainWorkspace) return;
-      if (
-        e instanceof ProcedureBase &&
-        e.type !== 'procedure_create' &&
-        e.type !== 'procedure_delete'
-      ) {
+      if (e instanceof ProcedureBase) {
         let event;
         try {
           // console.log(
@@ -123,7 +119,6 @@ export default class FunctionEditor {
     // Mirror events from editor workspace to procedure workspace.
     this.editorWorkspace.addChangeListener(e => {
       if (e.isUiEvent) return;
-      //if (e.type !== 'procedure_create') {
       console.log(
         'sending event to procedure workspace, e.toJson()',
         e.toJson()
@@ -135,7 +130,6 @@ export default class FunctionEditor {
         this.procedureWorkspace
       );
       secondaryEvent.run(true);
-      //}
     });
   }
 
@@ -160,15 +154,6 @@ export default class FunctionEditor {
     this.editorWorkspace.clear();
     Blockly.Events.enable();
 
-    // Add the procedure model to the editor's map as well
-    // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
-    // workspaces, so make a new one with the same data.
-    const editorProcedureModel = new ObservableProcedureModel(
-      this.editorWorkspace,
-      procedure.getName(),
-      procedure.getId()
-    );
-    this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     this.nameInput.value = procedure.getName();
     // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
     // this.functionDescriptionInput.value = procedure.getDescription();
@@ -259,6 +244,18 @@ export default class FunctionEditor {
     // const allProcedures = Blockly.Procedures.allProcedures(workspace)[0];
     this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
     this.mainWorkspace.getProcedureMap().add(mainProcedure);
+
+    Blockly.Events.disable();
+    // Add the procedure model to the editor's map as well
+    // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
+    // workspaces, so make a new one with the same data.
+    const editorProcedureModel = new ObservableProcedureModel(
+      this.editorWorkspace,
+      hiddenProcedure.getName(),
+      hiddenProcedure.getId()
+    );
+    this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
+    Blockly.Events.enable();
     this.showForFunction(hiddenProcedure);
   }
 }

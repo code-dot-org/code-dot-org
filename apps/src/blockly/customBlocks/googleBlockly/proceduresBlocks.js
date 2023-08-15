@@ -59,6 +59,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -85,6 +86,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -129,6 +131,18 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
       }
     });
   }
+});
+
+GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
+  const mixin = {
+    destroy: function () {
+      // no-op
+      // this overrides the destroy hook registered
+      // in the procedure_def_get_def_mixin
+    },
+  };
+  // We can't register this as a mixin since we're overwriting existing methods
+  Object.assign(this, mixin);
 });
 
 // TODO: After updating to Blockly v10, remove this local copy of
