@@ -12,9 +12,9 @@
   "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": "Intro to ML",
-  "professional_learning_program": "code.org/professional-development-workshops",
-  "video": "https://www.youtube-nocookie.com/embed/KHbwOetbmbs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=KHbwOetbmbs&wmode=transparent",
-  "published_date": "2023-07-30 07:00:00 UTC",
-  "self_paced_pl_course_offering_id": 390
+  "description": "Explore how computers learn from data to make decisions, then develop projects around real-world data and design an app to solve a personally relevant problem.",
+  "professional_learning_program": "code.org/apply",
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": 460
 }

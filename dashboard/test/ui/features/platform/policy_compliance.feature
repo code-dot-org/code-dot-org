@@ -84,3 +84,17 @@ Feature: Policy Compliance and Parental Permission
     When I press "lockout-submit"
     Then I wait to see "#lockout-panel-form"
     And element "#parent-email" has value "parent2@example.com"
+
+  Scenario: Student should not be able to enter their own email as their parent's email
+    Given I create a young student in Colorado who has never signed in named "Sally Student" and go home
+
+    # TODO: Can possibly get rid of this when the lockout is redirected on sign in
+    Given I am on "http://studio.code.org/lockout"
+
+    # It should not be a pending request
+    Then I wait to see "#lockout-panel-form"
+    And element "#permission-status" contains text "Not Submitted"
+
+    # Type in the student email as the parent email, which should disable the button
+    And I type the email for "Sally Student" into element "#parent-email"
+    Then element "#lockout-submit" is disabled

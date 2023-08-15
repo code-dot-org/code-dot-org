@@ -90,7 +90,7 @@ export const OrangeButtonWithStyledIcon = () => (
   <Button
     __useDeprecatedTag
     href="/foo/bar"
-    color={Button.ButtonColor.orange}
+    color={Button.ButtonColor.brandSecondaryDefault}
     icon="caret-down"
     iconStyle={{fontSize: 24, position: 'relative', top: 3}}
     text="Assign Course"

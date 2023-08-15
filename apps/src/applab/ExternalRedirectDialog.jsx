@@ -59,7 +59,7 @@ class ExternalRedirectDialog extends React.Component {
           <Button
             onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             style={{margin: 0}}
           />
         </DialogFooter>
