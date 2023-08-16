@@ -150,6 +150,7 @@ class HttpCache
       '__profilin', # Used by rack-mini-profiler
       session_key,
       storage_id,
+      "_experiments#{env_suffix}"
     ].concat(default_cookies)
 
     {
