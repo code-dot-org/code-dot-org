@@ -1,4 +1,5 @@
 source 'https://supermarket.chef.io'
 
 metadata
-cookbook 'packagecloud'
+instance_eval File.read('../local_cookbooks.rb'), __FILE__
+
