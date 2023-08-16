@@ -714,6 +714,7 @@ pt:
         csd_sprite_properties: Propriedades do Sprite
         csa-pl-documentation: Documentação no Java Lab
         csc-starquilts-intro: 'CSC: Star Quilts'
+        csc-mapmakers-intro: Codificação de Mapas Interativos
         csa-pl-vocab-pm: Vocabulário de gerenciamento de projetos
         csc-ecosystems-intro: Introdução aos ecossistemas
         PL_CSD_MicroBit_Intro: Introdução ao Micro:bit
@@ -735,6 +736,7 @@ pt:
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        csc_bookcovers_intro: Codificando Capas de Livros
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

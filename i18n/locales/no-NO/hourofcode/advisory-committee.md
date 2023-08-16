@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Kodetime og CSEDWeek rådgivende komité
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Kodetime og CSEDWeek rådgivende komité
 
 {{ advisory-committee/about_headshots }}
 

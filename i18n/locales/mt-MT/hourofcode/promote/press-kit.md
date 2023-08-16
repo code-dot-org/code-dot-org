@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Kit tal-Istampa
 ---
 
 {{ signup_button }}

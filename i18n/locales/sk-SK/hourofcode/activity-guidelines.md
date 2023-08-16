@@ -184,19 +184,19 @@ Okrem toho, aby mohli byť všetky aktivity zaradené do zoznamu, musia spĺňa�
 - nesmú vyžadovať registráciu;
 - nesmú vyžadovať žiadnu platbu (výnimkou sú aktivity v oblasti robotiky, ktoré môžu vyžadovať nákup robota/modelu) Pri samostatne vedených aktivitách pre nových učiteľov a žiakov bude hodnotiaca komisia skúmať, či:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Pri samoorientovaných aktivitách pre nových učiteľov a študentov bude kontrolná komisia hľadať, či:
 
 - získajú najvyššie hodnotenie od hodnotiacej komisie;
 - sú jednohodinové samostatne vedené aktivity určené pre začiatočníkov (žiakov a učiteľov);
 - oslovujú širokú škálu používateľov (naprieč platformami, jazykmi a vekovými kategóriami);
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Učitelia a žiaci budú môcť vyhľadávať a filtrovať náš zoznam aktivít na základe filtrov, ako je trieda, úroveň znalostí, predmet, hardvér atď. Predvolene sa najprv zobrazia plány hodín a aktivity, ktoré:
 
 - Pozitívna spätná väzba – Čo sa podarilo?
 - Kritická spätná väzba – Čo by sa dalo zlepšiť?
-- Appeal to a wide range of users (across platforms, languages, and ages)
+- oslovujú širokú škálu používateľov (naprieč platformami, jazykmi a vekovými kategóriami);
 - Podnecuje táto aktivita žiakov k tomu, aby vytvorili niečo jedinečné?
-- Are new this year
+- sú novinkou tohto roka.
 
 [**Späť na začiatok**](#top)
 
@@ -204,11 +204,11 @@ Teachers and students will be able to search through and filter our list of acti
 
 ## Usmernenia na predloženie žiadosti o predbežné kvalitatívne posúdenie
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Do svojho kurzu môžete zahrnúť [logo Hodiny kódu](https://hourofcode.com/us/promote/resources#logo), ale nie je to povinné. Ak používate logo Hodiny kódu, pozrite si nižšie uvedené pokyny týkajúce sa ochrannej známky. <u>Za žiadnych okolností nie je povolené používať logo a názov Code.org.</u> Obe sú chránené ochrannou známkou a nie je možné ich používať spolu s názvom značky tretej strany bez výslovného písomného súhlasu.
 
 Poznámka: Toto sú všeobecné usmernenia pre poskytovanie spätnej väzby. Predbežné posúdenie vašej aktivity môže zahŕňať spätnú väzbu vo všetkých týchto kategóriách, prípadne len v jednej či dvoch.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Pridajte poznámky pre učiteľa.** Väčšina aktivít by mala byť vykonávaná v réžii žiakov, ale ak aktivitu sprostredkúva alebo riadi učiteľ, uveďte jasné a jednoduché pokyny pre učiteľa vo forme poznámok pre učiteľa na samostatnej adrese URL, ktorú predložíte spolu s aktivitou. Nielen žiaci, ale aj niektorí učitelia sú nováčikmi. Uveďte napríklad tieto informácie:
 
 - Na akých platformách a v akých prehliadačoch funguje tento kurz najlepšie?
 - Funguje na smartfónoch? Tabletoch?
@@ -217,13 +217,13 @@ Poznámka: Toto sú všeobecné usmernenia pre poskytovanie spätnej väzby. Pre
 
 Všetky aktivity predložené na predbežné posúdenie dostanú spätnú väzbu do 1. septembra. Poskytneme vám aj odkaz na formulár, ktorý môžete použiť na vysvetlenie konkrétnych zmien vykonaných v aktivite v reakcii na spätnú väzbu.
 
-Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez ohľadu na to, či bola alebo nebola posúdená predbežne. Počas obdobia štandardného posudzovania (september – október) sa hodnotitelia zamerajú na hodnotenie aktivít podľa kritérií opísaných v časti „Ako sa budú aktivity hodnotiť“ vyššie. Pokiaľ nezaznamenáte konkrétne zmeny v aktivite, hodnotitelia sa pri hodnotení aktivít môžu a pravdepodobne aj budú spoliehať na spätnú väzbu z prvotného posúdenia. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez ohľadu na to, či bola alebo nebola posúdená predbežne. Počas obdobia štandardného posudzovania (september – október) sa hodnotitelia zamerajú na hodnotenie aktivít podľa kritérií opísaných v časti „Ako sa budú aktivity hodnotiť“ vyššie. Pokiaľ nezaznamenáte konkrétne zmeny v aktivite, hodnotitelia sa pri hodnotení aktivít môžu a pravdepodobne aj budú spoliehať na spätnú väzbu z prvotného posúdenia. @Scratch.“ Použite hashtag **#HourOfCode** (s veľkými písmenami H, O, C).
 
-**Create your activity in Spanish or in other languages besides English.**
+**Vytvorte aktivitu v španielčine alebo v iných jazykoch okrem angličtiny.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Vysvetlite alebo prepojte aktivitu so spoločensky významným kontextom.** Počítačové programovanie sa stane superschopnosťou, keď žiaci uvidia, ako môže zmeniť svet k lepšiemu!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Uistite sa, že váš kurz možno použiť v rámci modelu [párového programovania](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** To je obzvlášť užitočné pre Hodinu kódu, pretože mnohé učebne nemajú hardvér pre všetkých žiakov.
 
 [**Späť na začiatok**](#top)
 
@@ -231,15 +231,15 @@ Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez 
 
 ## Odporúčania na vytvorenie jednohodinových samostatných kurzov
 
-**Poskytnite spätnú väzbu na konci aktivity.** (Napr.: „Dokončili ste 10 úrovní a zoznámili ste sa s cyklami! Skvelá práca!“) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+**Poskytnite spätnú väzbu na konci aktivity.** (Napr.: „Dokončili ste 10 úrovní a zoznámili ste sa s cyklami! Skvelá práca!“) Nechceme zabrániť tomuto použitiu, ale chceme sa uistiť, že použitie spadá do niekoľkých limitov:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Používajte „Hodinu Kódexu“ iba v súvislosti s nekomerčnými aktivitami CS Education v kontexte kampane Hodina Kódexu a na žiadny iný účel.
+2. Názov „Hour of Code“ sa musí používať tak, aby nenaznačoval, že ide o vašu vlastnú značku, ale že ide skôr o odkaz na občianske hnutie Hour of Code. Dobrý príklad: „Zúčastnite sa hodiny kódu® na Acmecorp.com“. Nevhodné použitie: „Vyskúšajte Hour of Code od Moja spoločnosť“.
+3. Použite horný index „®“ na najvýznamnejších miestach, ktoré spomeniete „Hodina kódu“, a to na vašej webovej stránke aj v popisoch aplikácií.
+4. Zahrňte jazyk na stránku (alebo do päty) vrátane odkazov na webové stránky Hodina kódu, CsedWeek a Code.org, ktorý zverejňuje obe nasledujúce informácie: a. Hour of Code® a Hora del Código® sú registrované ochranné známky spoločnosti Code.org; a b. „[Hodina kódu](http://hourofcode.com/) ® je celoštátna iniciatíva [Code.org](http://code.org/) , ktorej cieľom je predstaviť miliónom študentov jednu hodinu informatiky a počítačového programovania.“
+5. V názvoch aplikácií nepoužívajte „Hodinu kódu“.
+6. Nepoužívajte „Hodinu kódu“ v súvislosti s akýmkoľvek komerčným využitím alebo účelom (napr. umiestnenie vašej aktivity Hodiny kódu za paywall; propagácia inej platenej služby v rámci vašej aktivity Hodiny kódu; predaj tovaru Hodina kódu).
+7. Nepoužívajte „Hodinu kódu“ v súvislosti s akoukoľvek aktivitou, ktorá si vyžaduje prihlásenie alebo vytvorenie účtu.
 
 [**Späť na začiatok**](#top)
 
@@ -247,15 +247,15 @@ Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez 
 
 ## Pokyny pre ochranné známky
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+V záujme presnejšieho sledovania účasti musia všetci partneri, ktorí poskytujú kurzy, na prvú stránku svojich kurzov v rámci Hodiny kódu umiestniť jednopixelové sledovacie obrázky. Pixelový obrázok sa musí nachádzať len na úvodnej stránke. Nepridávajte ho na žiadne ďalšie stránky svojho kurzu.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Hodine kódu. Povedie to k presnejšiemu počítaniu účastníkov vášho kurzu.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Ak bude váš kurz schválený a zaradený na finálnu stránku kurzov, Code.org vám poskytne jedinečný sledovací pixel, ktorý môžete začleniť do svojho kurzu. Pozrite si príklad nižšie.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+POZNÁMKA: v prípade inštalovateľných aplikácií (aplikácie pre iOS/Android alebo aplikácie pre počítač) to nie je dôležité.
 
-Example tracking pixels for Dance Party:
+Príklady sledovacích pixelov pre Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -266,7 +266,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Sledovací pixel
 
-To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Hodine kódu. Povedie to k presnejšiemu počítaniu účastníkov vášho kurzu. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Hodine kódu. Povedie to k presnejšiemu počítaniu účastníkov vášho kurzu. Je oveľa pravdepodobnejšie, že vaši používatelia budú reagovať na správy od vás o vašej aktivite. Využite medzinárodnú kampaň Hodina kódu počas Týždňa informatiky ako zámienku na to, aby ste vyzvali používateľov, aby sa zapojili, a pomohli nám tak osloviť viac žiakov!
 
 - Prezentujte Hodinu kódu a CSEdWeek na svojich webových stránkach. Napríklad: <http://www.tynker.com/hour-of-code>.
 - Propagujte Hodinu kódu prostredníctvom sociálnych médií, tradičných médií, poštových zoznamov atď. s použitím hashtagu #HourOfCode (s veľkými písmenami H, O, C).
