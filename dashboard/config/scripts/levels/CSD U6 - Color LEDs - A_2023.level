@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:14:03.000Z",
   "level_num": "custom",
@@ -8,13 +9,12 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
       "color": null,
-      "intensity": null,
-      "onBoardEvent": null
+      "intensity": null
     },
     "edit_code": true,
     "embed": "false",
@@ -50,7 +50,7 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Light Patterns\r\n\r\nThis app creates different light patterns on the circuit playground by pressing buttons on the screen. It already has one light pattern, which can be activated by clicking a button on the screen. \r\n\r\nAdd your own button to the screen that creates your own light pattern - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\r\n\r\n## Do This\r\n\r\n**In Design Mode:**\r\n1) Add a new button to your screen. Give it a meaningful ID\r\n\r\n**In Code Mode:**\r\n2) When the user clicks the button, a light pattern appears\r\n\t- Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block for your button\r\n    - Add the [`colorLEDs.color()`(#f78183)](/docs/applab/color/) and [`colorLEDs.intensity()`(#f78183)](/docs/applab/color/) blocks to create your own light design. You should use each LED on your board.\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -80,9 +80,8 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"},{\"changed_at\":\"2023-08-15 16:37:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-15 16:38:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
