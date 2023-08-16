@@ -88,6 +88,7 @@ GRAPH
   cdo-cloudwatch-agent (0.1.20)
     aws_cloudwatch (>= 0.0.0)
   cdo-github-access (0.1.11)
+    apt (>= 0.0.0)
     packagecloud (>= 0.0.0)
   cdo-home-ubuntu (0.1.8)
   cdo-i18n (0.1.18)
