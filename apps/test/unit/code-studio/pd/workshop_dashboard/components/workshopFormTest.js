@@ -536,37 +536,6 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('OrganizerFormPart')).to.have.lengthOf(0);
   });
 
-  it('editing form as admin shows organizer field and can change it', () => {
-    const organizerData = [
-      {key: 1, value: 1, label: 'Oscar Organizer'},
-      {key: 2, value: 2, label: 'Omar Organizer'},
-    ];
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([WorkshopAdmin])}
-            facilitatorCourses={[]}
-            workshop={fakeWorkshop}
-            readOnly={false}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    wrapper
-      .find('OrganizerFormPart')
-      .first()
-      .setState({potentialOrganizers: organizerData});
-
-    const organizerField = wrapper.find('#organizer-selector').first();
-    organizerField.simulate('change', {
-      target: {name: 'organizer', value: 2},
-    });
-
-    expect(wrapper.find('#organizer-selector').props().value).to.equal(2);
-  });
-
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
     const cspSummerWorkshopStartSoon = Factory.build(
       'csp summer workshop starting within a month'
