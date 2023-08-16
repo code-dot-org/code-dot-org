@@ -15,11 +15,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const [storedMessages, setStoredMessages] =
     useState<ChatCompletionMessage[]>(demoChatMessages);
 
+  // This function is called when the user submits a chat message.
+  // It sends the user message to the backend and retrieves the assistant response.
   const onSubmit = async (message: string) => {
-    const latestMessageId =
+    const newMessageId =
       storedMessages.length === 0
         ? 1
-        : storedMessages[storedMessages.length - 1].id;
+        : storedMessages[storedMessages.length - 1].id + 1;
 
     // TODO: Post user message with status unknown while message is being sent to backend.
 
@@ -28,21 +30,36 @@ const ChatWorkspace: React.FunctionComponent = () => {
     // Retrieve system prompt from levebuilder - assign for now.
     const systemPrompt =
       'You are a chatbot for a middle school classroom where they can chat with a historical figure. You must answer only questions about the formation of America and the founding fathers. You will act as George Washington; every question you answer must be from his perspective. Wait for the student to ask a question before responding.';
+
+    // Send user message to backend and retrieve assistant response.
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
-      latestMessageId,
+      newMessageId,
       message,
       appropriateChatMessages
     );
 
-    const newChatMessage: ChatCompletionMessage = {
-      id: chatApiResponse.userMessageId,
-      role: Role.USER,
-      status: Status.UNKNOWN,
-      chatMessageText: message,
-    };
-    newChatMessage.status = chatApiResponse.status;
-    setStoredMessages([...storedMessages, newChatMessage]);
+    // Add user chat messages to newMessages.
+    let newMessages: ChatCompletionMessage[] = [
+      {
+        id: chatApiResponse.id,
+        role: Role.USER,
+        status: chatApiResponse.status,
+        chatMessageText: message,
+      },
+    ];
+
+    // Add assistant chat messages to newMessages.
+    if (chatApiResponse.assistantResponse) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: chatApiResponse.id + 1,
+        role: Role.ASSISTANT,
+        status: Status.OK,
+        chatMessageText: chatApiResponse.assistantResponse,
+      };
+      newMessages = [...newMessages, assistantChatMessage];
+    }
+    setStoredMessages([...storedMessages, ...newMessages]);
   };
 
   return (

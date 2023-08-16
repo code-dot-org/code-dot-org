@@ -6,10 +6,10 @@ import {CHAT_COMPLETION_URL} from './constants';
  * This function sends a POST request to the chat completion backend controller.
  */
 async function postOpenaiChatCompletion(
-  payload: OpenaiChatCompletionMessage[]
+  messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   // Send request to chat completion backend controller.
-  console.log('payload', payload);
+  const payload = {messages: messagesToSend};
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
@@ -48,18 +48,17 @@ export async function getChatCompletionMessage(
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: newMessage},
   ];
-  console.log('messagesToSend', messagesToSend);
 
   const response = await postOpenaiChatCompletion(messagesToSend);
 
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
   if (!response) {
-    return {status: Status.PERSONAL, userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
+    return {status: Status.PERSONAL, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
   }
   return {
     status: Status.OK,
-    userMessageId,
+    id: userMessageId,
     assistantResponse: response.content,
   };
 }
@@ -67,6 +66,6 @@ export async function getChatCompletionMessage(
 type OpenaiChatCompletionMessage = {role: string; content: string};
 type ChatCompletionResponse = {
   status: Status;
-  userMessageId: number;
+  id: number;
   assistantResponse?: string;
 };
