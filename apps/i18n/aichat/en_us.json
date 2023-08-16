@@ -5,8 +5,8 @@
   "tooPersonalUserMessage": "This message has been flagged as too personal.",
   "warningModalHeader": "Remember to chat responsibly!",
   "allMessagesSentAreRecorded": "All messages sent to AI Chat are recorded.",
-  "inappropriateMessageLimit": "Inappropriate messages will be flagged and your teacher will be notified. Users who send more than X inappropriate messages will be locked out of Chat AI.",
-  "anythingPersonalCanNotBeSubmitted": "In order to protect your privacy, anything deemed personal information (name, phone number, address, etc.) can not be submitted to Chat AI. ",
+  "inappropriateMessagesAreFlagged": "Inappropriate messages will be flagged and your teacher will be notified.",
+  "anythingPersonalCanNotBeSubmitted": "In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted to AI chat.",
   "whatIsPersonalInformation": "What is considered personal information?",
-  "warningModalOkButtonText": "Ok, let’s chat!"
+  "warningModalOkButtonText": "Start chatting"
 }

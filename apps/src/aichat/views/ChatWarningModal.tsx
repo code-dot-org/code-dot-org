@@ -31,7 +31,7 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
     <BodyTwoText>
       <StrongText>{aichatI18n.allMessagesSentAreRecorded()}</StrongText>
     </BodyTwoText>
-    <BodyTwoText>{aichatI18n.inappropriateMessageLimit()}</BodyTwoText>
+    <BodyTwoText>{aichatI18n.inappropriateMessagesAreFlagged()}</BodyTwoText>
     <br />
     <BodyTwoText>{aichatI18n.anythingPersonalCanNotBeSubmitted()}</BodyTwoText>
     <a href="#">{aichatI18n.whatIsPersonalInformation()}</a>
