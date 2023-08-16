@@ -56,8 +56,19 @@ function initPage() {
   const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
   if (rubricFabMountPoint) {
     const rubricData = getScriptData('rubric');
+    const studentLevelInfoData = document.querySelector(
+      'script[data-student-level-info]'
+    );
+    const studentLevelInfo = !!studentLevelInfoData
+      ? JSON.parse(studentLevelInfoData.dataset.studentLevelInfo)
+      : null;
+    /* TODO: fetch teacher preferences and determine if feedback is available */
     ReactDOM.render(
-      <RubricFloatingActionButton rubric={rubricData} />,
+      <RubricFloatingActionButton
+        rubric={rubricData}
+        studentLevelInfo={studentLevelInfo}
+        teacherHasEnabledAi
+      />,
       rubricFabMountPoint
     );
   }

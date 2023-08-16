@@ -1,11 +1,18 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 const icon = require('@cdo/static/AI-FAB.png');
 import RubricContainer from './RubricContainer';
 import {rubricShape} from './rubricShapes';
 
-export default function RubricFloatingActionButton({rubric}) {
+export default function RubricFloatingActionButton({
+  rubric,
+  teacherHasEnabledAi,
+  studentLevelInfo,
+}) {
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log(studentLevelInfo);
 
   return (
     <div id="fab-contained">
@@ -16,11 +23,19 @@ export default function RubricFloatingActionButton({rubric}) {
         onClick={() => setIsOpen(!isOpen)}
         type="button"
       />
-      {isOpen && <RubricContainer rubric={rubric} />}
+      {isOpen && (
+        <RubricContainer
+          rubric={rubric}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          studentLevelInfo={studentLevelInfo}
+        />
+      )}
     </div>
   );
 }
 
 RubricFloatingActionButton.propTypes = {
   rubric: rubricShape,
+  teacherHasEnabledAi: PropTypes.bool,
+  studentLevelInfo: PropTypes.object,
 };
