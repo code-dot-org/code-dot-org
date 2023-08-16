@@ -26,6 +26,16 @@ const ExpandedCurriculumCatalogCard = ({
   const [topics, setTopics] = useState(
     i18n.topic() + ': ' + subjectsAndTopics.join(', ')
   );
+  const icons = {
+    ideal: 'circle-check',
+    not_recommended: 'triangle-exclamation',
+    incompatible: 'circle-xmark',
+  };
+  const compatibilities = {
+    'circle-check': '#3ea33e',
+    'triangle-exclamation': '#eed202',
+    'circle-xmark': '#e5311a',
+  };
 
   useEffect(() => {
     const subjects = subjectsRef.current;
@@ -37,11 +47,6 @@ const ExpandedCurriculumCatalogCard = ({
   const getDeviceCompatibility = deviceCompatibility => {
     const devices = JSON.parse(deviceCompatibility);
     const compatibilityIcons = {};
-    const icons = {
-      ideal: 'circle-check',
-      not_recommended: 'triangle-exclamation',
-      incompatible: 'circle-xmark',
-    };
     for (var device in devices) {
       compatibilityIcons[
         device !== 'no_device'
@@ -53,16 +58,11 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const getIconColor = compatibility => {
-    const compatibilities = {
-      'circle-check': '#3ea33e',
-      'triangle-exclamation': '#eed202',
-      'circle-xmark': '#e5311a',
-    };
-
     return compatibilities[compatibility];
   };
 
   const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
+
   return (
     <div>
       <div
