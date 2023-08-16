@@ -15,7 +15,7 @@ const makerCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const countingCurriculum = {
@@ -35,7 +35,7 @@ const countingCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const poemArtCurriculum = {
@@ -55,7 +55,7 @@ const poemArtCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const danceUnpluggedCurriculum = {
@@ -76,7 +76,7 @@ const danceUnpluggedCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course1Curriculum = {
@@ -96,7 +96,7 @@ const course1Curriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course2Curriculum = {
@@ -116,7 +116,7 @@ const course2Curriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course3Curriculum = {
@@ -136,7 +136,7 @@ const course3Curriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course4Curriculum = {
@@ -156,7 +156,7 @@ const course4Curriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noGradesCurriculum = {
@@ -176,7 +176,7 @@ const noGradesCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noPathCurriculum = {
@@ -196,17 +196,8 @@ const noPathCurriculum = {
   professional_learning_program: null,
   video: null,
   published_date: null,
-  self_paced_pl_course_offering_id: null,
+  self_paced_pl_course_offering_path: null,
 };
-
-const selfPacedPlCurriculum = [
-  {
-    id: 390,
-    key: 'self-paced-pl-csd-2021',
-    display_name: 'Teaching CS Discoveries',
-    course_version_path: '/courses/self-paced-pl-csd-2022',
-  },
-];
 
 // Curricula groups
 const allCurricula = [
@@ -293,5 +284,4 @@ export default {
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,
   noPathCurriculum,
-  selfPacedPlCurriculum,
 };
