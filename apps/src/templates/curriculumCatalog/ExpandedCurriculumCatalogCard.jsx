@@ -66,7 +66,7 @@ const ExpandedCurriculumCatalogCard = ({
   return (
     <div>
       <div
-        className={`${centererStyle.arrowContainer} ${centererStyle.arrowContainer}`}
+        className={`${style.arrowContainer} ${centererStyle.arrowContainer}`}
       />
       <div className={centererStyle.centerExpandedCard}>
         <div className={style.expandedCardContainer}>
