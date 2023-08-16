@@ -80,7 +80,6 @@ export const procedureDefMutator = {
   saveExtraState: function () {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
-    state['name'] = this.getProcedureModel().getName();
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -130,10 +129,6 @@ export const procedureDefMutator = {
           i
         );
       }
-    }
-
-    if (state['name']) {
-      this.model_.name = state['name'];
     }
 
     this.doProcedureUpdate();

@@ -115,22 +115,16 @@ export default class FunctionEditor {
       this.mainWorkspace.getToolbox().refreshSelection();
     });
 
-    // TODO: I think this is firing too often. How can we fix it?
     this.editorWorkspace.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!this.mainWorkspace) return;
       if (e instanceof ProcedureBase) {
         let event;
         try {
-          // console.log(
-          //   'sending event to main workspace, e.toJson()',
-          //   e.toJson()
-          // );
           event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
         } catch (err) {
           // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
           // the delete in the secondary workspace cannot be deserialized into the original workspace.
-          console.log(err);
           return;
         }
         event.run(true);
@@ -142,12 +136,8 @@ export default class FunctionEditor {
 
     // Mirror events from editor workspace to procedure workspace.
     this.editorWorkspace.addChangeListener(e => {
-      if (e.isUiEvent) return;
+      if (e.isUiEvent || !this.procedureWorkspace) return;
       var json = e.toJson();
-      // console.log(
-      //   'sending event to procedure workspace, e.toJson()',
-      //   e.toJson()
-      // );
       // Convert JSON back into an event, then execute it.
       var secondaryEvent = Blockly.Events.fromJson(
         json,
@@ -157,7 +147,6 @@ export default class FunctionEditor {
     });
   }
 
-  // TODO: Address areas in codebase where hideIfOpen is used
   hide() {
     this.dom.style.display = 'none';
   }
@@ -172,15 +161,18 @@ export default class FunctionEditor {
   // TODO
   refreshParamsEverywhere() {}
 
-  // TODO: Rename
+  /**
+   * Show the given procedure in the function editor. Either load from
+   * the procedure workspace if it already exists, or create a new block.
+   * @param {Procedure} procedure The procedure to show.
+   */
   showForFunction(procedure) {
     Blockly.Events.disable();
     this.editorWorkspace.clear();
     Blockly.Events.enable();
 
     this.nameInput.value = procedure.getName();
-    // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
-    // this.functionDescriptionInput.value = procedure.getDescription();
+    // TODO: populate description
 
     this.dom.style.display = '';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -191,17 +183,12 @@ export default class FunctionEditor {
     );
 
     if (existingProcedureBlock) {
-      // If we already have stored data about the procedure, use that
-      let existingData = Blockly.serialization.blocks.save(
+      // If we already have stored data about the procedure, use that.
+      const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
-      existingData = {
-        ...existingData,
-        x: 50,
-        y: 200,
-      };
       this.block = Blockly.serialization.blocks.append(
-        existingData,
+        addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
     } else {
@@ -217,11 +204,9 @@ export default class FunctionEditor {
         },
         deletable: false,
         movable: false,
-        x: 50,
-        y: 200, // TODO: This is a magic number
       };
       this.block = Blockly.serialization.blocks.append(
-        newDefinitionBlock,
+        addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
@@ -259,16 +244,17 @@ export default class FunctionEditor {
       hiddenProcedure.getId()
     );
 
-    // add the model to the procedure and main workspaces so we know all procedures available there.
-    // We add to the editor workspace in showForFunction.
-    // const allProcedures = Blockly.Procedures.allProcedures(workspace)[0];
+    // Add the model to the procedure and main workspaces so we know all procedures available there.
     this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
     this.mainWorkspace.getProcedureMap().add(mainProcedure);
 
-    Blockly.Events.disable();
     // Add the procedure model to the editor's map as well
     // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
     // workspaces, so make a new one with the same data.
+    // We disable events during this operation because we mirror events from the editor workspace to
+    // the other workspaces, but we don't need to mirror this event as we set up the procedure in the other
+    // workspaces above.
+    Blockly.Events.disable();
     const editorProcedureModel = new ObservableProcedureModel(
       this.editorWorkspace,
       hiddenProcedure.getName(),
@@ -276,6 +262,7 @@ export default class FunctionEditor {
     );
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
+
     this.showForFunction(hiddenProcedure);
   }
 }
@@ -285,13 +272,6 @@ const createCallBlock = function (procedure) {
   return {
     kind: 'block',
     type: 'procedures_callnoreturn',
-    // TODO: are fields and mutation necessary?
-    fields: {
-      NAME: name,
-    },
-    // mutation: {
-    //   name: name,
-    // },
     extraState: {
       name: name,
       id: procedure.getId(),
@@ -316,8 +296,6 @@ export function flyoutCategory(workspace, includeNewButton = true) {
       text: 'Create a Function',
       callbackKey: 'newProcedureCallback',
     });
-  } else {
-    // TODO: Is there another case to be handled here?
   }
 
   // Get all the procedures from the workspace and create call blocks for them
@@ -326,4 +304,21 @@ export function flyoutCategory(workspace, includeNewButton = true) {
     .getProcedures()
     .forEach(procedure => blockList.push(createCallBlock(procedure)));
   return blockList;
+}
+
+/**
+ * Add x and y coordinates to the block configuration so it shows up
+ * correctly in the editor workspace. When we copy the block between workspaces
+ * the x and y coordinates don't persist, so we need to add this to both new and
+ * existing function definitions.
+ * @param blockConfig: Block json configuration
+ * @returns Block configuration with x and y coordinates
+ */
+function addEditorWorkspaceBlockConfig(blockConfig) {
+  const returnValue = {
+    ...blockConfig,
+    x: 50,
+    y: 210,
+  };
+  return returnValue;
 }
