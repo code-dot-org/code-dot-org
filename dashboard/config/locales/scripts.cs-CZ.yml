@@ -3664,6 +3664,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
             úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů
@@ -8577,6 +8579,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kódování1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8659,6 +8663,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kreativitu1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8740,6 +8746,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na data1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8849,6 +8857,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na design-s-účelu-1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8934,6 +8944,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           name: zaměřit se na hardware1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -9313,6 +9325,8 @@ cs:
           student_description: Vyzkoušejte základy informatiky s postavičkami z Angy
             Birds, Plants vs. Zombies a Scratem z Doby ledové!
           title: Klasické bludiště
+        how-ai-works-2023:
+          title: Jak funguje umělá inteligence
         iceage:
           description: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
           description_short: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
@@ -9603,6 +9617,11 @@ cs:
               display_name: Události
             lessonGroup-7:
               display_name: Projekt na zakončení kurzu
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description: Vytvořili jsme kurz E pro studenty ve čtvrtém ročníku. Kurz
             začíná úvodem do programovacího nástroje Sprite Lab. Studenti se naučí
@@ -9662,6 +9681,11 @@ cs:
               display_name: Události
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Výpočetní systémy
+          lessons:
+            lesson-1:
+              name: Výpočetní systémy
         nevada-standards-aligned-third-grade-2023:
           description: Vytvořili jsme kurz D pro studenty ve třetím ročníku. Kurz
             začíná přehledem konceptů nalezených v dřívějších kurzech, včetně smyček
@@ -11157,6 +11181,22 @@ cs:
               name: 'Modul 6 post-work: String methods in Unit 6'
           name: vpl-csa-2022
           title: CSA Virtuální profesionální učení
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: CS Discoveries Virtuální profesionální učení 2020 - 21
@@ -11184,6 +11224,22 @@ cs:
           title: CS Discoveries Virtuální profesionální učení 2021 - 22
         vpl-csd-2022:
           title: CS Discoveries Virtuální profesionální učení 2022 - 23
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd-ci-1:
           description: "Tento profesionální výukový modul je navržen tak, aby Vám
             pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto
@@ -11675,6 +11731,22 @@ cs:
           title: CS Principy Virtuální profesionální učení 21 - 22
         vpl-csp-2022:
           title: CS Principy Virtuální profesionální učení 22 - 23
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

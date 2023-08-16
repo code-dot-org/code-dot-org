@@ -1601,6 +1601,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         csd1-dlp:
           description: 'यह प्रशिक्षण में Code.org CS अन्वेषण समन्वयकों के लिए गहन
             प्रशिक्षण योजना की इकाई 1 है। यहां आप Code.org CS अन्वेषण पाठ्यक्रम की
@@ -4675,6 +4677,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4702,6 +4706,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4729,6 +4735,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-data2:
           description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
             का कैसे उपयोग करते हैं।
@@ -4775,6 +4783,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4806,6 +4816,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         focus-on-hardware2-2023:
           description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
             का कैसे उपयोग करते हैं।
@@ -4978,6 +4990,8 @@ hi:
           student_description: एंग्री बर्ड्स, पौधे बनाम ज़ोम्बीज और हिमयुग के स्क्रैट
             के पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत आजमाएं!
           title: क्लासिक मेज़ (Classic Maze)
+        how-ai-works-2023:
+          title: AI कैसे काम करता है
         iceage:
           description: हिमयुग प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं!
           description_short: हिमयुग प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं!
@@ -5125,6 +5139,11 @@ hi:
               display_name: घटनाएँ
             lessonGroup-7:
               display_name: कोर्स समाप्ति प्रोजेक्ट
+            lessonGroup-8:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'उम्र: 8-12'
           lesson_groups:
@@ -5163,6 +5182,11 @@ hi:
               display_name: घटनाएँ
             lessonGroup-6:
               display_name: डेटा
+            lessonGroup-8:
+              display_name: कंप्यूटिंग सिस्टम
+          lessons:
+            lesson-1:
+              name: कंप्यूटिंग सिस्टम
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'उम्र: 7-11'
           description_short: सापेक्ष स्टेटमेंट्स के बारे में सीखें और अपनी खुद की
@@ -6004,6 +6028,22 @@ hi:
           description_short: एक वायरस आउटब्रेक में से सिम्युलेशन का प्रोग्राम बनाने
             के लिए स्प्राइट लैब का इस्तेमाल करें।
           title: एक आउटब्रेक को सिम्युलेट करना
+        vpl-csa-2023-m1:
+          title: मॉड्यूल 1
+        vpl-csa-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csa-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csa-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csa-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csa-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csa-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csa-2023-m8:
+          title: मॉड्यूल 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -6022,6 +6062,22 @@ hi:
               display_name: मॉड्यूल 7
             CSD_Module 8:
               display_name: मॉड्यूल 8
+        vpl-csd-2023-m1:
+          title: मॉड्यूल 1
+        vpl-csd-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csd-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csd-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csd-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csd-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csd-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csd-2023-m8:
+          title: मॉड्यूल 8
         vpl-csd-ci-1:
           description: |-
             यह पेशेवर शिक्षण मॉड्यूल आपको Code.org की समस्या समाधान और कंप्यूटिंग इकाई सिखाने के लिए तैयार करने में मदद करने के लिए बनाया गया है।
@@ -6353,6 +6409,22 @@ hi:
 
             **सुझाया गया समय:** 120 मिनट
           title: 'मॉड्यूल 7: AI और मशीन लर्निंग सिखाने की तैयारी'
+        vpl-csp-2023-m1:
+          title: मॉड्यूल 1
+        vpl-csp-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csp-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csp-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csp-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csp-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csp-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csp-2023-m8:
+          title: मॉड्यूल 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

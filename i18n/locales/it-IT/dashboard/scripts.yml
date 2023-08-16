@@ -3575,6 +3575,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         csd2-2023:
           lesson_groups:
@@ -3923,6 +3925,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -3949,6 +3953,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -3967,6 +3973,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-data2:
           lesson_groups:
@@ -3990,6 +3998,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -4014,6 +4024,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-coding2-2023:
           lesson_groups:
@@ -4227,6 +4239,10 @@ it:
               display_name: Progetto di fine corso
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configurazione
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4284,6 +4300,9 @@ it:
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description: Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell'infanzia. Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, perseverare di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dati
           lesson_groups:
             lessonGroup-2:
               display_name: Cittadinanza digitale
@@ -4297,10 +4316,15 @@ it:
               display_name: Eventi
             lessonGroup-7:
               display_name: Progetto di fine corso
+            lessonGroup-8:
+              display_name: Dati
           description_audience: Da 5 a 8 anni
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni imparano le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistemi informatici
           lesson_groups:
             lessonGroup-2:
               display_name: Cittadinanza digitale
@@ -4312,6 +4336,8 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Dati
+            lessonGroup-8:
+              display_name: Sistemi informatici
           description: Abbiamo realizzato il Corso C per gli alunni della seconda primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli ed eventi. Indagano tecniche di risoluzione dei problemi e sviluppano strategie per collaborare positivamente sia online che offline. Entro la fine del corso, gli alunni creano giochi interattivi da condividere con amici e conoscenti.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -4363,3 +4389,5 @@ it:
               display_name: Progetto di fine corso
           description_audience: Da 9 a 13 anni
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+        how-ai-works-2023:
+          title: Come funziona l'IA

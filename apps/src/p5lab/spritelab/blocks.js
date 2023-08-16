@@ -9,6 +9,7 @@ import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -289,10 +290,23 @@ const customInputTypes = {
         }
       }
       block.thumbnailSize = 32;
+      // Try to get the image url for this block. If we find one,
+      // initialize the field with the image and short string.
+      // Otherwise, initialize the field with the long string and a 1 pixel
+      // wide empty image.
+      const imageUrl = Blockly.getPointerBlockImageUrl(
+        block,
+        spriteLabPointers
+      );
+      // We set the width to 1 so we don't show a blank space when there is no
+      // image (we can't set a width of 0). We keep the height the same no matter what
+      // because blockly doesn't seem to support us changing the height after initialization.
+      const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
+      const label = imageUrl.length > 0 ? block.shortString : block.longString;
       currentInputRow
-        .appendField(block.longString)
+        .appendField(label)
         .appendField(
-          new Blockly.FieldImage('', 1, block.thumbnailSize),
+          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },

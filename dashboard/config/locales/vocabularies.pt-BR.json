@@ -49,12 +49,28 @@
         "function/csd/2021": {
           "word": "Função"
         },
+        "empathy/csd/2021": {
+          "word": "Empatia",
+          "definition": "No design, refere-se a prestar atenção aos sentimentos e às necessidades do usuário ao projetar um produto."
+        },
         "user/csd/2021": {
           "word": "Usuário",
           "definition": "Alguém que usa um objeto, incluindo software e hardware."
         },
+        "usability/csd/2021": {
+          "word": "Usabilidade",
+          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+        },
+        "prototype/csd/2021": {
+          "definition": "Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes de desenvolver uma versão final."
+        },
         "user_interface/csd/2021": {
-          "word": "Interface do Usuário"
+          "word": "Interface do Usuário",
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+        },
+        "feature/csd/2021": {
+          "word": "Recurso",
+          "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "for_loop/csd/2021": {
           "word": "Laço “for”",
@@ -324,7 +340,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2021": {
@@ -527,7 +543,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2021": {
@@ -702,12 +718,28 @@
           "word": "Função",
           "definition": "Um trecho nomeado de instruções de programação."
         },
+        "empathy/csd/2022": {
+          "word": "Empatia",
+          "definition": "No design, refere-se a prestar atenção aos sentimentos e às necessidades do usuário ao projetar um produto."
+        },
         "user/csd/2022": {
           "word": "Usuário",
           "definition": "Alguém que usa um objeto, incluindo software e hardware."
         },
+        "usability/csd/2022": {
+          "word": "Usabilidade",
+          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+        },
+        "prototype/csd/2022": {
+          "definition": "Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes de desenvolver uma versão final."
+        },
         "user_interface/csd/2022": {
-          "word": "Interface do Usuário"
+          "word": "Interface do Usuário",
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+        },
+        "feature/csd/2022": {
+          "word": "Recurso",
+          "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "output/csd/2022": {
           "word": "Saída",
@@ -997,7 +1029,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2022": {
@@ -1088,7 +1120,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2022": {
@@ -1187,7 +1219,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2022": {

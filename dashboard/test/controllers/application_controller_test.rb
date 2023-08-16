@@ -22,7 +22,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "account with permission should NOT be locked out" do
-    user = create(:locked_out_student, :with_parent_permission)
+    user = create(:locked_out_child, :with_parent_permission)
     sign_in user
     get '/home'
     assert_response :success
@@ -45,7 +45,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "locked out account can still sign out" do
-    user = create(:locked_out_student)
+    user = create(:locked_out_child)
     sign_in user
     sign_in user
     get '/users/sign_out'
@@ -53,14 +53,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "locked out account can still change the language" do
-    user = create(:locked_out_student)
+    user = create(:locked_out_child)
     sign_in user
     post '/locale'
     refute_redirect_to '/lockout'
   end
 
   test "locked out account can access the policy consent routes" do
-    user = create(:locked_out_student)
+    user = create(:locked_out_child)
     sign_in user
     get '/policy_compliance/child_account_consent'
     refute_redirect_to '/lockout'

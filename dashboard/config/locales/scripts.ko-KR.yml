@@ -1763,6 +1763,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         csd1-dlp:
           description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org
             CS 발견 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 성찰 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서
@@ -4621,6 +4623,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4654,6 +4658,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4687,6 +4693,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-data2:
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           lesson_groups:
@@ -4721,6 +4729,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4757,6 +4767,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         focus-on-hardware2-2023:
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           lesson_groups:
@@ -4896,6 +4908,8 @@ ko:
           student_description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies, 아이스 에지지의
             스크랫 캐릭터들과 함께 배워보세요.
           title: 고전 미로게임
+        how-ai-works-2023:
+          title: AI 작동방법
         iceage:
           description: 아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!
           description_short: 아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!
@@ -5067,6 +5081,11 @@ ko:
               display_name: 이벤트
             lessonGroup-7:
               display_name: 과정말 프로젝트
+            lessonGroup-8:
+              display_name: 데이터
+          lessons:
+            lesson-1:
+              name: 데이터
         nevada-standards-aligned-fourth-grade-2023:
           description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로
             시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이
@@ -5118,6 +5137,11 @@ ko:
               display_name: 이벤트
             lessonGroup-6:
               display_name: 데이터
+            lessonGroup-8:
+              display_name: 컴퓨팅 시스템
+          lessons:
+            lesson-1:
+              name: 컴퓨팅 시스템
         nevada-standards-aligned-third-grade-2023:
           description: 3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에
             대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다.
@@ -5677,6 +5701,22 @@ ko:
             csf_data:
               display_name: 코드 바이트를 위한 바이러스 시뮬레이션
           title: 발생 시뮬레이션하기
+        vpl-csa-2023-m1:
+          title: 모듈 1
+        vpl-csa-2023-m2:
+          title: 모듈 2
+        vpl-csa-2023-m3:
+          title: 모듈 3
+        vpl-csa-2023-m4:
+          title: 모듈 4
+        vpl-csa-2023-m5:
+          title: 모듈 5
+        vpl-csa-2023-m6:
+          title: 모듈 6
+        vpl-csa-2023-m7:
+          title: 모듈 7
+        vpl-csa-2023-m8:
+          title: 모듈 8
         vpl-csd-2020:
           title: CS 발견 가상 전문가 학습 2020 - 21
         vpl-csd-2021:
@@ -5697,6 +5737,22 @@ ko:
               display_name: 모듈 7
             CSD_Module 8:
               display_name: 모듈 8
+        vpl-csd-2023-m1:
+          title: 모듈 1
+        vpl-csd-2023-m2:
+          title: 모듈 2
+        vpl-csd-2023-m3:
+          title: 모듈 3
+        vpl-csd-2023-m4:
+          title: 모듈 4
+        vpl-csd-2023-m5:
+          title: 모듈 5
+        vpl-csd-2023-m6:
+          title: 모듈 6
+        vpl-csd-2023-m7:
+          title: 모듈 7
+        vpl-csd-2023-m8:
+          title: 모듈 8
         vpl-csd-ci-1:
           description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을
             주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및
@@ -5846,6 +5902,22 @@ ko:
           title: CS 원리 가상 전문가 학습
         vpl-csp-2021:
           name: vpl-csp-2021
+        vpl-csp-2023-m1:
+          title: 모듈 1
+        vpl-csp-2023-m2:
+          title: 모듈 2
+        vpl-csp-2023-m3:
+          title: 모듈 3
+        vpl-csp-2023-m4:
+          title: 모듈 4
+        vpl-csp-2023-m5:
+          title: 모듈 5
+        vpl-csp-2023-m6:
+          title: 모듈 6
+        vpl-csp-2023-m7:
+          title: 모듈 7
+        vpl-csp-2023-m8:
+          title: 모듈 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

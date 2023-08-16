@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Como fazer o evento Hour of Code
 ---
 
 {{ signup_button }}

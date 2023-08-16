@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2023-07-31 17:49:00 UTC",
+    "serialized_at": "2023-08-08 16:13:10 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -111,7 +111,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2023",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-07-25 23:07:47 UTC",
+    "serialized_at": "2023-08-08 17:50:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10086,7 +10086,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursed-2022/resources",
+      "url": "/s/coursed-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -10097,7 +10097,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursed-2022/standards",
+      "url": "/s/coursed-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -10108,7 +10108,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursed-2022/vocab",
+      "url": "/s/coursed-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -12239,5 +12239,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

@@ -1588,6 +1588,10 @@ it:
             corso e le risorse per gli insegnanti. \n\n**Tempo suggerito:** 1 ora"
           name: piattaforma-di-autoapprendimento-csa
           title: Navigare nel sito Code.org per gli Insegnanti di CSA Pilota
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configurazione
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2148,6 +2152,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4515,6 +4521,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4561,6 +4569,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4607,6 +4617,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4640,6 +4652,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4688,6 +4702,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4857,6 +4873,8 @@ it:
           student_description: Impara i concetti base dell'informatica con i personaggi
             di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
           title: Labirinto Classico
+        how-ai-works-2023:
+          title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con
             L'Era Glaciale!
@@ -5037,6 +5055,11 @@ it:
               display_name: Eventi
             lessonGroup-7:
               display_name: Progetto di fine corso
+            lessonGroup-8:
+              display_name: Dati
+          lessons:
+            lesson-1:
+              name: Dati
         nevada-standards-aligned-fourth-grade-2023:
           description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
             Il corso inizia con un'introduzione allo ambiente di programmazione denominato
@@ -5101,6 +5124,11 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Dati
+            lessonGroup-8:
+              display_name: Sistemi informatici
+          lessons:
+            lesson-1:
+              name: Sistemi informatici
         nevada-standards-aligned-third-grade-2023:
           description: Abbiamo creato il corso D per gli alunni della terza primaria.
             Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,

@@ -140,7 +140,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -164,7 +164,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -263,7 +263,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -347,7 +347,7 @@ es-MX:
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": al azar
       Dancelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           GROUP:
             sprites: todo
@@ -675,7 +675,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -699,7 +699,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -710,7 +710,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -735,7 +735,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -810,7 +810,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -839,7 +839,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -854,7 +854,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -884,7 +884,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -1256,7 +1256,7 @@ es-MX:
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
       gamelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           FORMAT:
             '"border"': orilla
@@ -1537,7 +1537,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
       gamelab_setSpeed_dropdown:
         text: ajustar {SPRITE} a velocidad {SIZE}
@@ -2380,7 +2380,7 @@ es-MX:
       Vector_setColor:
         text: establecer color para {COLOR}
       Vector_setSize:
-        text: establecer ancho {WIDTH} altura {HEIGHT}
+        text: definir ancho {WIDTH} altura {HEIGHT}
       Vector_teleportTo:
         text: establecer posición {POSITION}
       Vector_vectorNorth:
@@ -2635,7 +2635,6 @@ es-MX:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

@@ -52,11 +52,11 @@
   csedweek_map_signup: "Regjistro ngjarjen tënde"
   csedweek_map_search_placeholder: "Kërko ngjarjet Hour of Code"
   csedweek_map_search_search: "Kërko"
-  csedweek_map_search_reset: "Rivendosn"
+  csedweek_map_search_reset: "Rifillo"
   csedweek_map_legend_title: "Legjend"
   csedweek_map_legend_event: "Ngjarje e Orës së Kodimit"
   csedweek_map_legend_cs_tech_jam: "Ngjarje speciale"
-  cded_sign_up: "Rregjistrohu"
+  cded_sign_up: "Regjistrohu"
   cded_try_it: "Provoje"
   try_now: "Mëso më Shumë"
   california_heading: "Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike"
@@ -294,7 +294,7 @@
   homepage_action_text_hoc: "Një Orë e Kodimit për çdo nxënës."
   homepage_action_text_num_served: "# e dorëzuar"
   homepage_action_text_join_us: "Na u bashko!"
-  homepage_action_text_sign_up: "Rregjistrohu"
+  homepage_action_text_sign_up: "Regjistrohu"
   homepage_action_text_try_it: "Provoje"
   homepage_action_text_volunteers: "Kërkohen vullnetarë teknik"
   homepage_action_text_codevideo: "Ndiq videon"
@@ -399,7 +399,7 @@
   starwars_javascript_title: "JavaScript"
   starwars_javascript_description: "Përdor blloqe me tërheqje-lëshim dhe JavaScript."
   starwars_javascript_specs: "Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+"
-  starwars_blocks_title: "Blloqe"
+  starwars_blocks_title: "Blloqet"
   starwars_blocks_description: "Përdor blloqet me tërheqje-lëshim."
   starwars_blocks_specs: "Shumë gjuhë | Browserët modern, telefonat e mençur, tableta | Moshat 6-106"
   starwars_platform_text: "Browserat e kohës, smartphones, tableta"
@@ -448,7 +448,7 @@
   video_5min: "5 minutë"
   speak_another_language: "Flet një gjuhë tjetër?"
   help_translate: "Na ndihmo të përkthejmë."
-  are_you_teacher: "A jeni një mësues?"
+  are_you_teacher: "A jeni një mësimdhënës?"
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre."
@@ -674,7 +674,7 @@
   code_sign_up: "Rregjistrohu për të marrë pjesë në Javën Edukative për SHK"
   learn_more: "Mëso më Shumë"
   learn_sign_up_description: "Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë Javës së Mësimdhënies së Shkencave Kompjuterike"
-  learn_sign_up_button: "Rregjistrohu"
+  learn_sign_up_button: "Regjistrohu"
   learn_educator_resources_description: "Mësoni si të jepni mësim për Orën e Kodimit"
   learn_educator_resources_button: "Burimet e Mësimdhënësit"
   hoc2014_try_new_tutorials: "Provo tutorialet e reja të Orës së Kodimit"
@@ -755,10 +755,14 @@
   course2_name: "Kursi 2"
   course3_name: "Kursi 3"
   course4_name: "Kursi 4"
+  courseb-2021_name: Kursi B (2021)
   coursea-2022_name: Kursi A (2022)
   courseb-2022_name: Kursi B (2022)
   coursec-2022_name: Kursi C (2022)
   coursed-2022_name: Kursi D (2022)
+  coursee-2022_name: Kursi E (2022)
+  coursef-2022_name: Kursi F (2022)
+  express-2022_name: Kursi Express (2022)
   accelerated_name: "Kurs i Avancuar"
   20-hour_name: Kurs i Avancuar
   gumball_name: "Bota Mahnitëse e Gumball"
@@ -1184,6 +1188,7 @@
   compatibility_unsupported_browser: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
   compatibility_unsupported_browser_markdown: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
   flappy_shortcode: "përplas flatrat"
+  header_my_dashboard: "Paneli im"
   header_courses: "Kurset"
   header_course_catalog: "Katalogu i kursit"
   header_project_gallery: "Projekte"
@@ -1237,9 +1242,11 @@
   hoc2018_dance_teacher_resources_tile2_button: "Aktiviteti Unplugged"
   hoc2018_dance_amazon_about_future_engineer_button: "Mëso më shumë"
   footer_powered_by_aws: "Mundësuar nga Amazon Web Services"
+  footer_built_on_github: "E ndërtuar në GitHub nga Microsoft"
   footer_privacy_policy: "Rregullat e Privatësisë"
   footer_about: "Rreth"
   footer_donate: "Dhuro"
+  footer_store: "Dyqani"
   footer_support: "Ndihma dhe Komuniteti"
   footer_terms: "Termat"
   ai_for_oceans_lesson_plan: "plani mësimor"

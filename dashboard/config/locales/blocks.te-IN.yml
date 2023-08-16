@@ -397,28 +397,8 @@ te:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -507,7 +487,6 @@ te:
           SPEED:
             '0.25': వెరీ స్లో
             '0.5': స్లో
-            '1': normal
             '2': ఫాస్ట్
             '4': వెరీ ఫాస్ట్
         text: సెట్ చేయండి {SPRITE} డాన్స్ స్పీడ్ {SPEED} కు
@@ -528,7 +507,6 @@ te:
           SPEED:
             '0.25': వెరీ స్లో
             '0.5': స్లో
-            '1': normal
             '2': ఫాస్ట్
             '4': వెరీ ఫాస్ట్
         text: సెట్ చేయండి {GROUP} డాన్స్ స్పీడ్{SPEED} కు
@@ -861,8 +839,6 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
         text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
       DansBlocks_setForegroundEffect2:
         options:
@@ -874,8 +850,6 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "[SPRITE1COSTUME] తో [VAR1] కమ్యూనికేట్ చేయండి"
       FunctionBlocks_makeManipulative2:
@@ -1050,15 +1024,11 @@ te:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
         text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': నిమ్మ రసం
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1177,7 +1147,6 @@ te:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1231,7 +1200,6 @@ te:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -1494,11 +1462,8 @@ te:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': స్లో
-            '5': normal
             '7': ఫాస్ట్
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

@@ -2,15 +2,18 @@
   "script": {
     "name": "vpl-csp-2023-m4",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSP Virtual PL",
-      "is_migrated": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-28 17:53:20 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-02 20:00:06 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -128,6 +131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview_2023"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -150,6 +156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence_2023"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -172,6 +181,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Lists EIPM reflection_2023"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -194,6 +206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5_2023"
+        ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
       "bonus": false,
@@ -216,6 +231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals_2023"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -238,6 +256,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -260,6 +281,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate_2023"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -282,6 +306,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -304,6 +331,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets_2023"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -326,6 +356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up_2023"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

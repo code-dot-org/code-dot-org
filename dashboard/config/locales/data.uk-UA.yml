@@ -785,9 +785,9 @@ uk:
         csc-starquilts-intro: Кодуємо геометричний зірковий узор
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_applab_arrays: Вступ до масивів
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія додатків - Режим
+        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим
           дизайну'
-        csd_applab_designmode_short: Режим дизайну Лабораторії додатків
+        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
         csd_applab_loops: Цикли в Лабораторії додатків
         csd_applab_parameters: Функції з параметрами
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
@@ -822,7 +822,7 @@ uk:
         csd_pair_programming: Парне програмування
         csd_problem_solving_process: Процес вирішення проблем
         csd_sprite_properties: Властивості спрайтів
-        csd_u6_circuit_playground: Фізична інформатика
+        csd_u6_circuit_playground: Програмування пристроїв
         csd_u6_input_output: Вхідні та вихідні дані
         csd_weblab_css_1: Основи CSS - частина 1
         csd_weblab_css_2: Основи CSS - частина 2

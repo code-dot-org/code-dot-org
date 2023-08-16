@@ -814,6 +814,10 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
         csd1-dlp:
           lesson_groups:
             content:
@@ -1767,6 +1771,26 @@ et:
           student_description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga?
             Proovi meie Flappy Code õpetusvideot!
           title: Flappy kood
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-4:
@@ -1905,6 +1929,11 @@ et:
               display_name: Tsüklid
             lessonGroup-6:
               display_name: Sündmused
+            lessonGroup-8:
+              display_name: Andmed
+          lessons:
+            lesson-1:
+              name: Andmed
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:

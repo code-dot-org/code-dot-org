@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-07-31 22:17:54 UTC",
+    "serialized_at": "2023-08-14 22:32:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -48,16 +48,58 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Intro to GitHub",
+      "key": "lesson-9",
+      "name": "Setup",
       "absolute_position": 1,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "key": "842c83be-7d6b-4989-bf19-a8dbbef7cedf",
+            "notice": "Technical Issues May Happen!",
+            "details": "Setting up a local development environment can be tricky and can longer than anticipated. If students run into issues along the way, don't worry! It happens even to the most experienced developers. Most of the time, going back through a step fixes the issue. Be prepared to spend a couple of days on setup instead of just one depending on the size of your class.",
+            "link": "",
+            "type": "warning",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": ""
+          }
+        ],
+        "overview": "This lesson lays the groundwork for students' upcoming software development journey by installing the following software tools:\n\n* the Java JDK\n* Maven\n* VS Code Insiders\n\nStudents also set up a GitHub account, download Git, and integrate it within the VS Code environment. To ensure a smooth progression and identify any technical issues early, they complete a setup test to verify the correct installation and configuration of their tools.\n\nFor Mac users, an additional TensorFlow setup is necessary, which will enable them to run and explore the computer vision apps in the next chapter.",
+        "preparation": "* If students do not have access to installing software on their computers, complete the Software Setup section before class or make arrangements with your school's IT department to install the software.",
+        "student_overview": "Hey there! Today, we're setting up the tools you'll need for our exciting journey into software development. First, we'll install some essential software like Java JDK, Maven, and VS Code Insiders. Then, we'll step into the realm of version control by creating a GitHub account and integrating Git with our coding environment. Don't worry, we'll run a test to make sure everything's working perfectly. For those using a Mac, we have an extra setup for TensorFlow, preparing us for some cool computer vision apps we'll explore soon."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Intro to GitHub",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
         "overview": "**How can the integration of commits, PRs, and code reviews in GitHub lead to a productive and collaborative environment for software development?**\n\nIn this lesson, students are introduced to Git and GitHub, with a focus on understanding the importance of version control systems and gaining practical skills in using these tools. Through hands-on exploration and practice, they learn to clone repositories, make commits, push changes, manage branches, and work with pull requests in GitHub to expose students to the collaborative practices and tools common in the software development industry.",
         "preparation": "* Preview the _What is GitHub?_ video\n* Print copies of the Getting Started on GitHub resource (one for each student) if students do not already have GitHub accounts\n* Print copies of the GitHub Student Developer Pack resource (one for each student) if students do not already have verified student GitHub accounts\n* Print copies of the Submitting an Assignment on GitHub Classroom resource (one for each student)\n* Print copies of the Frame of Reference: Teamwork and Collaboration handout (one for each student)\n* Print copies of the GitHub Scavenger Hunt handout (one for each pair of students)",
@@ -72,11 +114,14 @@
     {
       "key": "lesson-2",
       "name": "Intro to Copilot",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
+        "overview": "**How might tools like ChatGPT or GitHub Copilot impact my role as a software engineer?**\n\nIn this lesson, students explore GitHub Copilot, an AI-powered programming assistant. Beginning with a discussion on the benefits and challenges of pair programming, students are introduced to the concept of large language models, using Copilot as a prime example. They then get hands-on experience with Copilot, acting alternatively as driver and navigator, tackling various programming tasks to understand its functionality and limitations. This lesson deepens students' understanding of AI in software development and allows them to gauge the impact such tools could have on their future roles as software engineers.",
+        "preparation": "* Preview the video _How AI Works: Chatbots and Large Language Models_\n* Play around with Copilot or ChatGPT as a pair programmer\n* Print copies of the Intro to Copilot handout (one for each student)",
+        "student_overview": "**How might tools like ChatGPT or GitHub Copilot impact my role as a software engineer?**\n\nIn this lesson, you'll be teaming up with GitHub Copilot, an AI-powered coding assistant! We'll start by discussing pair programming, why it's cool, and some challenges we face with it. Then, we'll dive into the world of AI, specifically looking at large language models, and how Copilot uses this technology. But it's not all talk – you'll actually get to use Copilot to help solve different coding challenges, experiencing firsthand how AI can transform the way we code. By the end of the lesson, you'll have a clearer idea of how tools like Copilot might shape your future as a software engineer."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -87,11 +132,14 @@
     {
       "key": "lesson-3",
       "name": "Build with Copilot",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
+        "overview": "**How does AI-generated code from GitHub Copilot impact the development process, and what potential challenges and advantages does it present?**\n\nIn this lesson, students use what they learned about GitHub Copilot to explore how it can be integrated into their development workflow. They practice using Copilot to create, enhance, or debug programs to gain hands-on experience and deepen their understanding of this powerful tool, effectively preparing them for future challenges in computer science. Students consider the impacts of AI-generated code on the development process and identify best practices for using tools like Copilot.",
+        "preparation": "* Print copies of the FlixRate App, BinaryBazaar App, Virtual Pet App, and WeatherWise App activity guides (one for each pair of students)",
+        "student_overview": "**How does AI-generated code from GitHub Copilot impact the development process, and what potential challenges and advantages does it present?**\n\nIn today's lesson, you'll take a closer look at using GitHub Copilot to explore how you can weave it into your usual coding process to create, improve, or even debug programs. You'll gain hands-on experience to deepen your understanding of this powerful tool, getting you well-prepared for the future of computer science. You'll also consider how AI-generated code can shake up the coding scene and identify the best ways to make the most out of tools like Copilot."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -102,10 +150,10 @@
     {
       "key": "lesson-4",
       "name": "Intro to AI Models",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -117,11 +165,14 @@
     {
       "key": "lesson-5",
       "name": "Training Your Model",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
+        "overview": "**How do software engineers train a model?**\n\nIn this lesson, students explore how AI can be integrated into existing Java programs. They use Teachable Machine to gain hands-on experience in training computer vision models, emphasizing the importance of data classification and iterative refinement. As students engage in discussions and practical exercises, they develop a nuanced understanding of AI's capabilities, its constraints, and the ethical considerations underpinning its application.",
+        "preparation": "* Preview the Teachable Machine tutorial videos\n* Print copies of the Train Your Model handout (one for each student)",
+        "student_overview": "**How do software engineers train a model?**\n\nIn this lesson, you'll explore how AI can potentially give a fresh twist to simple Java programs. You'll start by choosing a Java program to brainstorm ways to make it smarter with AI. Using Teachable Machine, you'll get hands-on experience in training a computer to recognize images. Along the way, you'll learn about the steps to train a model, the importance of data categories, and even discover some challenges AI faces."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -132,20 +183,108 @@
     {
       "key": "lesson-6",
       "name": "Using Your Model",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
+        "overview": "**How does the integration of computer vision enhance the user experience in modern applications, and what are the potential risks associated with it?**\n\nIn this lesson, students will explore the intracacies of integrating computer vision models into pre-existing apps, allowing them to understand both the technical and ethical facets of the process. They reflect on the advantages and potential pitfalls of using computer vision, emphasizing its real-world implications on user experience and data privacy. Students then gain hands-on experience adapting apps to function with Teachable Machine models and subsequently test their iterations, while also strengthening their software engineering skills using GitHub and Copilot.",
+        "preparation": "* Print copies of the Use Your Model handout (one for each student)",
+        "student_overview": "**How do engineers modify existing programs to incorporate computer vision programs, and what are the societal and computing impacts?**\n\nIn this lesson, you'll get hands-on experience in taking existing apps and supercharging them with the power of AI using the models you created with Teachable Machine. But we won't just be looking at the tech side of things – we'll also consider the big picture. What are the benefits and challenges of using computer vision in apps? How does it change the user experience, and what ethical questions arise when collecting visual data? By the end of the lesson, you'll not only have enhanced an app with AI but also pondered the responsibilities that come with this technology."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Software Engineering and Computer Vision Post-Survey",
+      "absolute_position": 8,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "2c3c5c62-0020-402d-8031-254a365888cf",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Software Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c3c5c62-0020-402d-8031-254a365888cf",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "GitHub Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "74f34124-e751-4f31-a118-f8b8d7155340",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Testing"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74f34124-e751-4f31-a118-f8b8d7155340",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699",
+      "position": 4,
+      "properties": {
+        "name": "TensorFlow Setup (Mac Only)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "b3cb7347-1972-4257-ad8c-15614c9827fa",
+      "position": 5,
+      "properties": {
+        "duration": 10,
+        "name": "Pre-Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3cb7347-1972-4257-ad8c-15614c9827fa",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
     {
       "key": "550d737e-3a95-481b-9475-c7981e1168b3",
       "position": 1,
@@ -200,9 +339,249 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "aa53e44c-c355-4ec8-af3f-1ee25588fbcf",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa53e44c-c355-4ec8-af3f-1ee25588fbcf",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "85a5b876-01b8-4852-a180-cb51a00592b3",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85a5b876-01b8-4852-a180-cb51a00592b3",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "de529ace-1001-4ac5-9d65-ba63a32883f0",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "e8485f8f-1c67-4308-8920-05d2cc5d9945",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "593f43ef-d35a-432a-99c5-c508a012f0ce",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c",
+      "position": 2,
+      "properties": {
+        "duration": 70,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "95719263-6508-423b-b80b-37faf9391bca",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "d091f96d-d213-48d1-a71e-6a48243ad56d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the software setup to download and install the following:\n\n* Java JDK\n* Maven\n* VS Code Insiders",
+        "progression_name": "Software Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d",
+        "lesson_activity.key": "2c3c5c62-0020-402d-8031-254a365888cf"
+      }
+    },
+    {
+      "key": "87fa51d1-8123-4ad8-a770-69119c6baca6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the GitHub setup to:\n\n* Create a GitHub account\n* Download and install Git\n* Configure Git in VS Code",
+        "progression_name": "GitHub Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6",
+        "lesson_activity.key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2"
+      }
+    },
+    {
+      "key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the setup test to make sure their software is correctly installed and configured.",
+        "progression_name": "Software Setup Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0",
+        "lesson_activity.key": "74f34124-e751-4f31-a118-f8b8d7155340"
+      }
+    },
+    {
+      "key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** If students are using Macs, have them complete the TensorFlow setup so they can run the computer vision apps in Chapter 2.",
+        "progression_name": "TensorFlow Setup (Mac Only)"
+      },
+      "seeding_key": {
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff",
+        "lesson_activity.key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699"
+      }
+    },
+    {
+      "key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Pre-Survey and Assessment.",
+        "progression_name": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a",
+        "lesson_activity.key": "b3cb7347-1972-4257-ad8c-15614c9827fa"
+      }
+    },
     {
       "key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
       "position": 1,
@@ -381,7 +760,19 @@
       "key": "a8120ce8-29de-4878-8676-969067d881fb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce GitHub.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to complete the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _What is GitHub?_.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce GitHub.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to complete the GitHub Scavenger Hunt handout.",
+        "progression_name": "GitHub Scavenger Hunt"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8120ce8-29de-4878-8676-969067d881fb",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "9e506665-670b-4d34-9ea1-1b3a01c991aa",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _What is GitHub?_.",
         "tips": [
           {
             "type": "teachingTip",
@@ -390,7 +781,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a8120ce8-29de-4878-8676-969067d881fb",
+        "activity_section.key": "9e506665-670b-4d34-9ea1-1b3a01c991aa",
         "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
       }
     },
@@ -470,6 +861,808 @@
         "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b",
         "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
       }
+    },
+    {
+      "key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703",
+      "position": 7,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "65657eda-1150-4c3b-ba56-6dbcffd6ddc0",
+      "position": 1,
+      "properties": {
+        "description": "Pair programming can be a highly effective strategy for developing high-quality code and learning from your peers, but it's not without its challenges. As we explore these dynamics today, think about your own experiences and how you've navigated the advantages and potential hurdles of pair programming.",
+        "name": "Pair Programming",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "65657eda-1150-4c3b-ba56-6dbcffd6ddc0",
+        "lesson_activity.key": "aa53e44c-c355-4ec8-af3f-1ee25588fbcf"
+      }
+    },
+    {
+      "key": "feb45b79-9f64-483c-9c1c-52f856c82c56",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n\n* _What are the benefits of pair programming?_\n* _What are some of the skills needed to make pair programming successful?_\n\n**Discussion Goal:** Students should mention aspects like code review in real-time, knowledge sharing, improved code quality, and reduced errors as benefits to pair programming. Students could highlight the importance of communication, problem-solving, adaptability, and patience as skills needed to make this strategy successful. They should also mention that pair programming requires a clear understanding of each person's role (driver or navigator).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you used pair programming throughout the year, you may choose to reference class materials you used or created (i.e., anchor charts) and revisit some of the discussions and ideas from earlier in the year about this strategy.\n\nIf you did not use pair programming throughout the year and students are unfamiliar with the strategy, show the [**Pair Programming**](https://youtu.be/q7d\\_JtyCq1A) video before the discussion to have students consider potential benefits and skills needed as well as potential challenges."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "feb45b79-9f64-483c-9c1c-52f856c82c56",
+        "lesson_activity.key": "aa53e44c-c355-4ec8-af3f-1ee25588fbcf"
+      }
+    },
+    {
+      "key": "9cf29ba8-6144-4342-8f17-8939e32f8725",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What are some challenges that arise when pair programming?_\n\n**Discussion Goal:** Students should consider elements like potential conflicts due to differing coding styles or approaches, productivity issues if the pairing is mismatched, and possible inefficiencies if one programmer dominates the process. They might also mention challenges associated with communication difficulties or even the potential for burnout due to constant collaboration and reduced time for independent thinking."
+      },
+      "seeding_key": {
+        "activity_section.key": "9cf29ba8-6144-4342-8f17-8939e32f8725",
+        "lesson_activity.key": "aa53e44c-c355-4ec8-af3f-1ee25588fbcf"
+      }
+    },
+    {
+      "key": "6e49f072-1462-4889-a09d-5e812735848f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Intro to Copilot handout.",
+        "duration": "10",
+        "name": "Large Language Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e49f072-1462-4889-a09d-5e812735848f",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "cc9d8fbf-11b7-45cd-8edf-80bfe6020b2c",
+      "position": 2,
+      "properties": {
+        "description": "Today we're going to practice working with an AI code generating tool called GitHub Copilot. Copilot uses a category of AI technologies called large language models to help write new code and improve or debug existing code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc9d8fbf-11b7-45cd-8edf-80bfe6020b2c",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "cfb6513c-a283-4a9d-a3b5-ca73d966d4d0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _How AI Works: Large Language Models_.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a lengthy video with a lot of content and terminology. It is not important for students to understand all the details about large language models – the goal is for students to obtain a high-level understanding about how tools like ChatGPT and Copilot function. Preview the video before class to identify points to pause and allow students to ask questions or reflect on what was discussed to promote active engagement with the video and support mental processing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb6513c-a283-4a9d-a3b5-ca73d966d4d0",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "31f2b046-e759-4e2a-a1e1-31020e9e727f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What questions do you have after watching the video?_&#x20;\n\n**Discussion Goal:** Students share questions they may have about concepts introduced in the video. For example, students might ask questions similar to the following:\n\n* How does the AI ensure the output is accurate and not producing misleading information, since it's just predicting based on probabilities?\n* What are the specific ways human tuning is applied to a system like ChatGPT to ensure reasonable results and to protect against biased or dangerous content?\n* The video mentioned AI can sometimes get things wrong. What are some common errors that a language model like ChatGPT can make?\n* How does the model decide when to use full words, word parts, or code when it's choosing tokens? What kind of logic does it use to make these decisions?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this discussion to generate questions that you can return to later in this or even the next chapter. You can capture these questions on a shared document or chart paper that is displayed somewhere in the classroom. Revisit these questions throughout the unit, and encourage students to continue adding questions they might think of later.\n\nDon't be afraid to be transparent with your students about how many of these questions might not have answers from you or from anyone for that matter. Part of what makes studying and working with these tools exciting is the pace at which they are developing. Empower your students by reminding them that they may be the ones to discover the answers to some of these questions before anyone else can."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31f2b046-e759-4e2a-a1e1-31020e9e727f",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "e5c9fdfb-114f-4681-bdc9-737ee5e7bae1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _large language model_."
+      },
+      "seeding_key": {
+        "activity_section.key": "e5c9fdfb-114f-4681-bdc9-737ee5e7bae1",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "fcbf86ee-bc1a-482f-8e29-68cdaa4e59d2",
+      "position": 6,
+      "properties": {
+        "description": "Now we are going to try pair programming using Copilot as a partner. For the first activity, you will be the driver, and Copilot will be the navigator. In the second activity, you will switch roles with Copilot acting as the driver and you acting as the navigator.",
+        "duration": "20",
+        "name": "Pair Programming with Copilot",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fcbf86ee-bc1a-482f-8e29-68cdaa4e59d2",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "ad67b623-ae90-463c-84c2-e4bdde22485a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the pair programming roles. Click through the animated slide to explain that students will act as the driver and write the code, and they should use Copilot as the navigator by prompting it to provide suggestions for improvement, debugging the code, and making sure that the code they are writing will achieve the goal.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 1 - Copilot as the Navigator section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
+        "progression_name": "Copilot as the Navigator",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may want to review sorting algorithms before this activity to remind students of different algorithms and their pseudocode. Encourage students to use a sorting algorithm they learned earlier in the year and to refer to that algorithm when they are interacting with Copilot.\n\nIf you see students who are using copy and paste to prompt Copilot, ask them how they might decompose the problem or reword the information given in the comments or instructions. Have them consider what they might say or ask if their navigator was another student.\n\nIf you use a timer to help manage pair programming in your class normally, you may choose to use the timer in this instance to help remind students to check in with Copilot every 1-2 minutes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ad67b623-ae90-463c-84c2-e4bdde22485a",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "be956bbe-6024-4a48-b6e1-26f022be43b5",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the pair programming roles. Click through the animated slide to explain that they will now use Copilot as the driver to write the code, and they act as the navigator to provide suggestions for improvement, debug the code, and making sure that the code Copilot is writing will achieve the goal.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Copilot cannot actually manipulate the keyboard and mouse as the driver. However, students should use it to write the code as if it were the driver and enter the code it suggests into the editor. As the navigator, they should interact with Copilot to provide input on the code it suggests, point out any errors, and make sure that it achieves the intended goal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be956bbe-6024-4a48-b6e1-26f022be43b5",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "cd9b68ec-cf1d-4cd3-8c5e-e7ff1db428bf",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 2 - Copilot as the Driver section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
+        "progression_name": "Copilot as the Driver"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd9b68ec-cf1d-4cd3-8c5e-e7ff1db428bf",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "16538f51-8517-4052-90e2-23b1092d7868",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you discover from working with Copilot as a pair programmer?_\n\n**Discussion Goal:** Students should share their experience using Copilot as a tool for automated code suggestions, exploring how it aided (or potentially hindered) their coding process. They might mention points like using Copilot to generate starter code, suggest solutions for common coding problems, and even learning from its suggestions. Students may also be aware of its limitations, like the risk of over-reliance or the occasional incorrect or suboptimal solution. They should realize the need for balancing the productivity benefits and the learning opportunities Copilot presents with an understanding of its potential shortcomings.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share reflections they had from working with Copilot with their peers. Listen for themes as you circulate around that you can highlight to the whole class as you transition to the wrap up."
+      },
+      "seeding_key": {
+        "activity_section.key": "16538f51-8517-4052-90e2-23b1092d7868",
+        "lesson_activity.key": "a0054f12-631a-4be6-b94b-42ea9e5dfc81"
+      }
+    },
+    {
+      "key": "90f4735d-6e1f-4ea2-bedc-5ad8fe72b9e6",
+      "position": 1,
+      "properties": {
+        "description": "Let's take a step back and revisit the Question of the Day: **How might tools like ChatGPT or GitHub Copilot impact my role as a software engineer?** Hopefully some of the discoveries you've had during the lesson today will begin to inform your answer to this question. Let's take a look at a comparison of two tasks that might help you further answer this larger question.",
+        "name": "Impact of Copilot",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "90f4735d-6e1f-4ea2-bedc-5ad8fe72b9e6",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
+      "key": "f8d9ac3b-8ce0-4889-901c-0c58be4b110e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you notice about these descriptions?_\n\n**Discussion Goal:** Students should point out the difference in specificity and detail. The CSA FRQ provides a lot of details, while the Engineering Team Task lacks many details.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Based on your experience today, which of these tasks do you think Copilot would be more helpful with?_\n\n**Discussion Goal:** Students should recall from their experience that Copilot struggles with very open-ended tasks that are presented without context. They might suggest that creative and innovative problem-solving required for open-ended tasks is still something humans need to perform, while AI tools will be most helpful with assisting with well-defined tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8d9ac3b-8ce0-4889-901c-0c58be4b110e",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
+      "key": "d5c809a8-fbba-460f-a9ff-89019a8f177b",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5c809a8-fbba-460f-a9ff-89019a8f177b",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
+      "key": "61112c41-aa40-460e-a924-4aab5792d72b",
+      "position": 4,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "61112c41-aa40-460e-a924-4aab5792d72b",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
+      "key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
+      "key": "6e848181-cb92-42c7-ab04-a86704ec76e6",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to explore how GitHub Copilot can be used as a tool in the development process. Let's start by taking a look at how this tool compares to your own debugging process and intuition.",
+        "name": "Guess the Bug",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6e848181-cb92-42c7-ab04-a86704ec76e6",
+        "lesson_activity.key": "85a5b876-01b8-4852-a180-cb51a00592b3"
+      }
+    },
+    {
+      "key": "ebc84ab0-ac7d-4788-bff1-1cb8378a2fd7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the code segment and ask students to write down what they think the bug is and how it can be fixed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could also have students turn and talk to a neighbor about what they think the bug is and how it can be fixed as a Think-Pair-Share."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ebc84ab0-ac7d-4788-bff1-1cb8378a2fd7",
+        "lesson_activity.key": "85a5b876-01b8-4852-a180-cb51a00592b3"
+      }
+    },
+    {
+      "key": "129f9b06-33a7-4dbc-b1cb-dccdaba231ad",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the result from using the Copilot chat to identify the bug and how to fix it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the result from using Copilot by right-clicking on the selected code to suggest a fix for the bug.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If possible, demonstrate using Copilot to identify the bug and get suggestions for how to fix it by copying and pasting the code into a new Java file in VS Code or GitHub Codespaces. Show students using the chat and right-clicking on the selected code to identify the bug and get suggestions for fixes.\n\nYou might also have students suggest modifications to the code segment to add additional bugs and see if Copilot can identify these and suggest fixes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "129f9b06-33a7-4dbc-b1cb-dccdaba231ad",
+        "lesson_activity.key": "85a5b876-01b8-4852-a180-cb51a00592b3"
+      }
+    },
+    {
+      "key": "431d899b-d0f9-4bc2-b93a-df66d95635e2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does this compare to what you wrote down? How is it similar or different?_\n\n**Discussion Goal:** Students should reflect on their own understanding of code debugging in comparison to the solutions suggested by Copilot. They should identify similarities or differences between their own solutions and AI-generated fixes, fostering critical thinking and discernment in evaluating code solutions."
+      },
+      "seeding_key": {
+        "activity_section.key": "431d899b-d0f9-4bc2-b93a-df66d95635e2",
+        "lesson_activity.key": "85a5b876-01b8-4852-a180-cb51a00592b3"
+      }
+    },
+    {
+      "key": "aefafd74-25b1-49a2-823d-890446922dc6",
+      "position": 1,
+      "properties": {
+        "description": "Tools like Copilot can help us fix errors in our code, create new programs, or add new features to existing programs. As these tools improve, they can be useful as part of the software development process. How we use these tools, though, might be different depending on the problem we are trying to solve.",
+        "duration": "20",
+        "name": "Copilot as a Dev Tool",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aefafd74-25b1-49a2-823d-890446922dc6",
+        "lesson_activity.key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f"
+      }
+    },
+    {
+      "key": "044d27ae-1a34-4edf-8646-080159bfef97",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n**Do This:** Introduce the problems and have each pair choose the problem they want to work on:\n\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the FlixRate app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the VirtualPet app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the BinaryBazaar app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the WeatherWise app\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the activity guide for their chosen problem.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fork the corresponding program and complete the activity guide.",
+        "progression_name": "Copilot as a Dev Tool"
+      },
+      "seeding_key": {
+        "activity_section.key": "044d27ae-1a34-4edf-8646-080159bfef97",
+        "lesson_activity.key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f"
+      }
+    },
+    {
+      "key": "6f835ea1-bdcc-43f9-b0bb-179c8bd512b9",
+      "position": 3,
+      "properties": {
+        "description": "Now that we have explored using Copilot to help us build, improve, or fix a program, we've likely uncovered some advantages and potential pitfalls of using AI-generated code. Think about your experience and consider how it aided your work and where it might have been less effective.",
+        "duration": "10",
+        "name": "Using AI-Generated Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6f835ea1-bdcc-43f9-b0bb-179c8bd512b9",
+        "lesson_activity.key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f"
+      }
+    },
+    {
+      "key": "e06cb7df-7ea2-423e-b851-e15a9334b06a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does AI-generated code aid in the development process? What are the drawbacks of using AI-generated code?_\n\n**Discussion Goal:** Students should identify and explain the significant benefits of AI-generated code in streamlining the software development process, including aspects like bug detection, code suggestion, and time efficiency. Additionally, they should also provide thoughtful commentary on potential drawbacks associated with AI-generated code, such as reliability concerns, lack of creative problem-solving, and over-reliance risks. Students should express their ideas on how to strike a balance between AI-assisted and human-driven coding to maximize productivity and maintain software quality.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To get students moving and sharing ideas, try conducting this as a Snowball discussion by doing the following:\n\n* Place students in pairs to respond to the discussion prompt.\n* After each student has had a chance to share their ideas, the pair should then join another pair, creating a group of four. Pairs share their ideas with the pair they just joined.\n* Next, groups of four join together to form groups of eight, and so on, until the whole class has joined together in one large discussion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e06cb7df-7ea2-423e-b851-e15a9334b06a",
+        "lesson_activity.key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f"
+      }
+    },
+    {
+      "key": "a21b30b6-2b0f-4881-8340-5aea1deb9bb3",
+      "position": 1,
+      "properties": {
+        "description": "We have a lot of thoughts and ideas about using AI-generated code as a software engineer. Now, I want you to reflect on this discussion and think about your key takeaways. Consider how this technology could influence your coding practices and what it might mean for your future in computer science. Remember, this is about your personal insights and understanding, so there's no wrong answer!",
+        "name": "AI in My Coding Journey",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a21b30b6-2b0f-4881-8340-5aea1deb9bb3",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "f295a44f-ed65-40e9-a966-cbd0878ed18a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students jot down their key takeaways about AI in programming from this lesson. They should focus on how Copilot and AI might influence their own coding practices and the potential implications for their future in computer science.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student share one insight or takeaway they wrote down. It could be an observation, a question they still have, a concern, or an idea about how they might use AI tools like Copilot in their future projects.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _How do you see tools like GitHub Copilot changing the landscape of programming in the future?_\n* _How can we ensure that AI tools like GitHub Copilot are used responsibly in programming?_\n* _In what ways can AI tools and human programmers complement each other?_\n\n**Discussion Goal:** Students should share their thoughts on how AI tools like GitHub Copilot might revolutionize the future of programming, including implications for coding speed, efficiency, and accessibility. They should also suggest strategies for ensuring the responsible and ethical use of AI in programming, taking into account issues of code reliability, security, and over-reliance. Students should also consider the potential synergy between AI tools and human programmers by identifying how each can supplement the other's strengths and compensate for their weaknesses for optimal software development.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "f295a44f-ed65-40e9-a966-cbd0878ed18a",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "07024ebe-b109-4e69-9c86-ffa2c93f085e",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "07024ebe-b109-4e69-9c86-ffa2c93f085e",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f",
+      "position": 4,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "c0ae7433-1d5f-4437-b237-180ba3644467",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "2826f403-1687-49f1-807e-229e7d70c95b",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to be training a model that can be used in an existing Java program. Before you train the model, you're going to first pick the existing Java program that you will work on.",
+        "name": "Select a Program",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2826f403-1687-49f1-807e-229e7d70c95b",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "02a023ca-dc7c-44cd-9f0e-95cb57960847",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Train Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Select a Program section of the activity guide.",
+        "progression_name": "Select a Program"
+      },
+      "seeding_key": {
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "47b87af0-e032-4af7-873e-b4f888087bf5",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students who picked the same Java program in pairs or small groups of three.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How could you incorporate an AI model into your program?_\n\n**Discussion Goal:** Students should share ideas about how AI integration might enhance the functionality of their chosen program. They should point out AI's role, its impact on user experience, and may even identify potential challenges."
+      },
+      "seeding_key": {
+        "activity_section.key": "47b87af0-e032-4af7-873e-b4f888087bf5",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "d0b7682b-d152-4c27-9d7a-c607bb96d965",
+      "position": 1,
+      "properties": {
+        "description": "We're going to be using Teachable Machine for computer vision. Teachable Machine makes it easy for us to train a computer to recognize images. The steps in training our model is to gather samples, train, and then to test and retrain.",
+        "name": "Train Your Model",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d0b7682b-d152-4c27-9d7a-c607bb96d965",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "6cfe4920-9c84-4948-86c3-99c832abafd3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _**class**_.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What classes might you need for your model?_\n\n**Discussion Goal:** Students should identify and describe specific categories or types of data their AI model would need to recognize or differentiate between. They should consider the distinct outputs or decisions the model is expected to make and group the data into clear, manageable classes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Probe students further to have them articulate the relevance of each class to the program's functionality and how each contributes to the desired AI-enhanced experience."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cfe4920-9c84-4948-86c3-99c832abafd3",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Teachable Machine portion of the activity guide.",
+        "progression_name": "Teachable Machine",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should save their model somewhere where they can access it in the next lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "dc6e897c-3506-4f8c-b920-eb8b4e11e6f7",
+      "position": 1,
+      "properties": {
+        "description": "Some of you may have had to retrain your model as you were testing. It is important to consider the limitations of AI computer vision.",
+        "name": "Limitations of AI",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dc6e897c-3506-4f8c-b920-eb8b4e11e6f7",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "bdc38fce-0efa-4d0a-b444-0fa1d4aff0ea",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _When did your model not work?_\n* _How did you retrain it?_\n\n**Discussion Goal:** Students share situations when their model did not work. For example, if students were training a model to detect rock, paper, scissors, their model may not work if two hands show two different symbols. They may share that they added additional categories (classes) to detect unknown symbols.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "bdc38fce-0efa-4d0a-b444-0fa1d4aff0ea",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "11e78375-dd47-4f22-b54e-6d2948f13e49",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "11e78375-dd47-4f22-b54e-6d2948f13e49",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "a2cfb4a1-8325-447b-8388-f9c287858fd6",
+      "position": 4,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "d4bd626b-56b3-4b05-aeb3-e6ac965515d6",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to incorporate our computer vision model into your chosen app. Let's start first by thinking about the pluses and minuses of using computer vision in these apps.",
+        "name": "Why Computer Vision?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4bd626b-56b3-4b05-aeb3-e6ac965515d6",
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce"
+      }
+    },
+    {
+      "key": "96272ff4-5d94-4e7e-8673-3732bee6bec6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Use Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Why Computer Vision section of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Think back to the Java app you chose last lesson. How might incorporating computer vision make it a better app? How might it make the app worse?_\n\n**Discussion Goal:** Students reflect on the pros and cons of incorporating computer vision. They may predict that adding computer vision will make the app more interactive and fun. They may also note that if the model isn't trained well, the app will not work. In addition, using computer vision requires collecting more video and image data from the user."
+      },
+      "seeding_key": {
+        "activity_section.key": "96272ff4-5d94-4e7e-8673-3732bee6bec6",
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce"
+      }
+    },
+    {
+      "key": "e9446298-f70d-4062-897c-a49b004f8577",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, you used your app without computer vision. Today, you will modify your app to work with your Teachable Machine model.",
+        "duration": "35",
+        "name": "Incorporating Your Model",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e9446298-f70d-4062-897c-a49b004f8577",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "b078cbb8-a347-49c3-8a0b-0c28be42945c",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students follow the Incorporate Your Model section of the activity guide.",
+        "progression_name": "Incorporate Your Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These repos are different versions of the apps and contain code for loading and processing the Teachable Machine model to make predictions. It's not required or important for students to understand this code, however, if students are curious, encourage them to use Copilot to explain it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "8d9de5c6-7ec0-41b2-b448-62cd749e8b6c",
+      "position": 3,
+      "properties": {
+        "description": "Now that you've implemented the logic needed to incorporate your model, let's merge your changes to your group's main branch and test it out. You may find that you need to make changes to either your model or code, and that's okay! Remember that software engineering is an iterative and collaborative process.",
+        "duration": "20",
+        "name": "Testing Your App",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d9de5c6-7ec0-41b2-b448-62cd749e8b6c",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "d0ab28a3-41a2-4a31-82bf-b41e9653cf84",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge and Test Your App section of the activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could choose to spend more time on this portion to allow students to add additional features to the app. Students could brainstorm one or two additional features or general improvements they want to add and repeat the process of creating branches and submitting pull requests to merge their new features or improvements to the main branch to test."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d0ab28a3-41a2-4a31-82bf-b41e9653cf84",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "acd2c44c-30e9-41ab-888d-5822bb0d8769",
+      "position": 5,
+      "properties": {
+        "description": "In a previous lesson, we learned about datasheets, which can be used to help document the datasets used to train our machine learning models. They help people develop machine learning models, and people using those models understand more about the data underpinning the models and their predictions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "acd2c44c-30e9-41ab-888d-5822bb0d8769",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "e9caed86-4a8c-4883-8c97-60740459c993",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review datasheets.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Datasheet section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9caed86-4a8c-4883-8c97-60740459c993",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "e972ea15-449a-40fb-8b4a-7effab2ba0e3",
+      "position": 7,
+      "properties": {
+        "description": "Now that you have tried your own app, it's time to try a different one!",
+        "duration": "15",
+        "name": "Try Another App",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e972ea15-449a-40fb-8b4a-7effab2ba0e3",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "c2991d0f-4bb6-45b6-8b88-c72fb0621153",
+      "position": 8,
+      "properties": {
+        "description": "**Group:** Place students in pairs with a partner that worked on a different app than themselves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students try their partner's app and complete the Your Partner's App section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2991d0f-4bb6-45b6-8b88-c72fb0621153",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "3d6035bc-24e7-4452-bafc-6da3d9d8b150",
+      "position": 1,
+      "properties": {
+        "description": "Now that you have used some apps with computer vision, we're going to think about when software engineers should or should not use computer vision.",
+        "name": "Software Engineering and Computer Vision",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6035bc-24e7-4452-bafc-6da3d9d8b150",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "7efc3659-ed7e-4144-834a-d909a73807ad",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the quote by computer scientists Remi Denton and Timnit Gebru.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Software Engineering and Computer Vision portion of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Given what you wrote down and the previous quote, when do you think software engineers should or should not use computer vision?_\n\n**Discussion Goal:** Students share that although it is important to make sure that the model works and is not biased, software engineers should also think critically about whether or not their computer vision model should exist and how it can be used.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are interested in learning more about Emily Denton and Timnit Gebru's work, the quote is taken from their [**workshop**](https://sites.google.com/view/fatecv-tutorial/schedule) \"Tutorial on Fairness Accountability Transparency and Ethics in Computer Vision\" at CVPR 2020.\n\nStudents can also research more about the [**Algorithmic Justice League**](https://www.ajl.org/) and learn about the [**questionable use of Artificial Intelligence for job applications**](https://interaktiv.br.de/ki-bewerbung/en/)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7efc3659-ed7e-4144-834a-d909a73807ad",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "d4f32b77-4ee8-4e12-9d60-48cfa64fa4f6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "d4f32b77-4ee8-4e12-9d60-48cfa64fa4f6",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "43b8430c-1d64-480a-b720-a01b953439bf",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b8430c-1d64-480a-b720-a01b953439bf",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "f89a4443-6537-4574-a086-9997385e3d2a",
+      "position": 5,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
+      "position": 6,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2",
+        "lesson_activity.key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5"
+      }
     }
   ],
   "script_levels": [
@@ -477,8 +1670,236 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "progression": "GitHub Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      },
+      "level_keys": [
+        "csa-se-setup-part4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "progression": "GitHub Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      },
+      "level_keys": [
+        "csa-se-setup-part5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "progression": "Software Setup Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0"
+      },
+      "level_keys": [
+        "csa-se-setup-part6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "progression": "TensorFlow Setup (Mac Only)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff"
+      },
+      "level_keys": [
+        "csa-se-setup-part7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment"
+        ],
+        "progression": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a"
+      },
+      "level_keys": [
+        "CSA-SE-CV-PreSurvey-and-Assessment"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Repo"
+        ],
+        "progression": "GitHub Scavenger Hunt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L1-Repo"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a8120ce8-29de-4878-8676-969067d881fb"
+      },
+      "level_keys": [
+        "CSA-SE-L1-Repo"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L1L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -494,9 +1915,499 @@
       "level_keys": [
         "CSA-SE-L1L1"
       ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L1-Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703"
+      },
+      "level_keys": [
+        "CSA-SE-L1-Survey"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Navigator"
+        ],
+        "progression": "Copilot as the Navigator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-Copilot-Navigator"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "ad67b623-ae90-463c-84c2-e4bdde22485a"
+      },
+      "level_keys": [
+        "CSA-SE-Copilot-Navigator"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Driver"
+        ],
+        "progression": "Copilot as the Driver"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-Copilot-Driver"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "cd9b68ec-cf1d-4cd3-8c5e-e7ff1db428bf"
+      },
+      "level_keys": [
+        "CSA-SE-Copilot-Driver"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L2L1"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L2L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "61112c41-aa40-460e-a924-4aab5792d72b"
+      },
+      "level_keys": [
+        "CSA-SE-L2L1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L2-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L2-Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf"
+      },
+      "level_keys": [
+        "CSA-SE-L2-Survey"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L1"
+        ],
+        "progression": "Copilot as a Dev Tool"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "044d27ae-1a34-4edf-8646-080159bfef97"
+      },
+      "level_keys": [
+        "CSA-SE-L3-L1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L2"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f"
+      },
+      "level_keys": [
+        "CSA-SE-L3-L2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-L3-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L3-Survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467"
+      },
+      "level_keys": [
+        "CSA-SE-L3-Survey"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Select a Program"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teachable Machine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-Survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410"
+      },
+      "level_keys": [
+        "CSA-CV-L2-Survey"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Incorporate Your Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c"
+      },
+      "level_keys": [
+        "CSA-CV-L3-L1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a"
+      },
+      "level_keys": [
+        "CSA-CV-L3-L2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L3-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-Survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89"
+      },
+      "level_keys": [
+        "CSA-CV-L3-Survey"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment"
+        ],
+        "progression": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2"
+      },
+      "level_keys": [
+        "CSA-SE-CV-PostSurvey-and-Assessment"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part1",
+        "script_level.level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part2",
+        "script_level.level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part3",
+        "script_level.level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part4",
+        "script_level.level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part5",
+        "script_level.level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part6",
+        "script_level.level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part7",
+        "script_level.level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-CV-PreSurvey-and-Assessment",
+        "script_level.level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L1-Repo",
+        "script_level.level_keys": [
+          "CSA-SE-L1-Repo"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a8120ce8-29de-4878-8676-969067d881fb"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA-SE-L1L1",
@@ -507,6 +2418,198 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering",
         "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L1-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L1-Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-Copilot-Navigator",
+        "script_level.level_keys": [
+          "CSA-SE-Copilot-Navigator"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "ad67b623-ae90-463c-84c2-e4bdde22485a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-Copilot-Driver",
+        "script_level.level_keys": [
+          "CSA-SE-Copilot-Driver"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "cd9b68ec-cf1d-4cd3-8c5e-e7ff1db428bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L2L1",
+        "script_level.level_keys": [
+          "CSA-SE-L2L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "61112c41-aa40-460e-a924-4aab5792d72b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L2-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L2-Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L3-L1",
+        "script_level.level_keys": [
+          "CSA-SE-L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "044d27ae-1a34-4edf-8646-080159bfef97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L3-L2",
+        "script_level.level_keys": [
+          "CSA-SE-L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L3-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L3-Survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L3",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L2-Survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L3-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L3-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L3-Survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-CV-PostSurvey-and-Assessment",
+        "script_level.level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2"
       }
     }
   ],
@@ -525,7 +2628,7 @@
     },
     {
       "name": "[KEY] GitHub Scavenger Hunt",
-      "url": "https://docs.google.com/document/d/1\\_P9xE9PFtgoxjAK9rtTvkjkG0vGegT9m0fITJ5JaQic/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_P9xE9PFtgoxjAK9rtTvkjkG0vGegT9m0fITJ5JaQic/edit?usp=sharing",
       "key": "_key_github_scavenger_hunt",
       "properties": {
         "audience": "Verified Teacher",
@@ -533,6 +2636,116 @@
       },
       "seeding_key": {
         "resource.key": "_key_github_scavenger_hunt"
+      }
+    },
+    {
+      "name": "[KEY] Train Your Model",
+      "url": "https://docs.google.com/document/d/1QM2mqU\\_lnonkdndOrXV354gckTLK0nh\\_0zlPxEnO2C4/edit",
+      "key": "_key_train_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_train_your_model"
+      }
+    },
+    {
+      "name": "[KEY] Use Your Model",
+      "url": "https://docs.google.com/document/d/1ZyqyrnyCy4RJVpTC7LawIjQKEWiTyoOp31h9W6TSxGE/edit?usp=sharing",
+      "key": "_key_use_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_use_your_model"
+      }
+    },
+    {
+      "name": "BinaryBazaar App",
+      "url": "https://docs.google.com/document/d/1Obs0IoQ4IPKmAbOJCAqA86VfqQaykMnAs9OageySJWI/edit?usp=sharing",
+      "key": "binarybazaar_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "binarybazaar_app"
+      }
+    },
+    {
+      "name": "BinaryBazaar Repo",
+      "url": "https://github.com/code-dot-org/csa-se-lesson3b",
+      "key": "binarybazaar_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "binarybazaar_repo"
+      }
+    },
+    {
+      "name": "BrandBook Repo",
+      "url": "https://github.com/jamjamgobambam/brandbook",
+      "key": "brandbook_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "brandbook_repo"
+      }
+    },
+    {
+      "name": "Build with Copilot",
+      "url": "https://docs.google.com/presentation/d/1eo7EGBBbHtrr-I0FU6odL8xQwdQffJOGNALLv2HZ4hE/edit?usp=sharing",
+      "key": "build_with_copilot",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_with_copilot"
+      }
+    },
+    {
+      "name": "ByteBud Repo",
+      "url": "https://github.com/jamjamgobambam/bytebud",
+      "key": "bytebud_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "bytebud_repo"
+      }
+    },
+    {
+      "name": "FlixRate App",
+      "url": "https://docs.google.com/document/d/1r26_vf4l5t5uPWJZlduMIC3r1jqnIER_lLFwx9su9nA/edit?usp=drive_link",
+      "key": "flixrate_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "flixrate_app"
+      }
+    },
+    {
+      "name": "FlixRate Repo",
+      "url": "https://github.com/code-dot-org/csa-se-lesson3a",
+      "key": "flixrate_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flixrate_repo"
       }
     },
     {
@@ -600,6 +2813,79 @@
       }
     },
     {
+      "name": "Guessing Game Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2a",
+      "key": "guessing_game_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guessing_game_repo"
+      }
+    },
+    {
+      "name": "Harmony Helper Repo",
+      "url": "https://github.com/jamjamgobambam/harmonyhelper",
+      "key": "harmony_helper_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "harmony_helper_repo"
+      }
+    },
+    {
+      "name": "Honest Headlines Repo",
+      "url": "https://github.com/jamjamgobambam/honestheadlines",
+      "key": "honest_headlines_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "honest_headlines_repo"
+      }
+    },
+    {
+      "name": "How AI Works: Chatbots and Large Language Models",
+      "url": "https://youtu.be/T45kEEBzrT8",
+      "key": "how_ai_works_chatbots_and_large_language_models",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_works_chatbots_and_large_language_models"
+      }
+    },
+    {
+      "name": "Intro to Copilot",
+      "url": "https://docs.google.com/presentation/d/1gImpJkSVwGG8lzJRO8OcT5BBXXNUXlx0GRnp5KIVEYE/edit?usp=sharing",
+      "key": "intro_to_copilot",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_copilot"
+      }
+    },
+    {
+      "name": "Intro to Copilot",
+      "url": "https://docs.google.com/document/d/1A4VFzGIGG88zi66seiQAUow8KmQNqYfAbQsaus4Adik/edit?usp=sharing",
+      "key": "intro_to_copilot_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_copilot_1"
+      }
+    },
+    {
       "name": "Intro to GitHub",
       "url": "https://docs.google.com/presentation/d/1NCxGnTcSxzXHpeLK1pimdqro0mg5uIg2P35vsXlgE9U/edit?usp=sharing",
       "key": "intro_to_github",
@@ -609,6 +2895,42 @@
       },
       "seeding_key": {
         "resource.key": "intro_to_github"
+      }
+    },
+    {
+      "name": "PixelPedia Repo",
+      "url": "https://github.com/jamjamgobambam/pixelpedia",
+      "key": "pixelpedia_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pixelpedia_repo"
+      }
+    },
+    {
+      "name": "Rock, Paper, Scissors Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2b",
+      "key": "rock_paper_scissors_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "rock_paper_scissors_repo"
+      }
+    },
+    {
+      "name": "SocialSense Repo",
+      "url": "https://github.com/jamjamgobambam/socialsense",
+      "key": "socialsense_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "socialsense_repo"
       }
     },
     {
@@ -646,6 +2968,190 @@
       },
       "seeding_key": {
         "resource.key": "submitting_an_assignment_on_github_classroom"
+      }
+    },
+    {
+      "name": "Teachable Machine",
+      "url": "https://teachablemachine.withgoogle.com/",
+      "key": "teachable_machine",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 1: Gather",
+      "url": "https://www.youtube.com/watch?v=DFBbSTvtpy4",
+      "key": "teachable_machine_tutorial_1_gather",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_1_gather"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 2: Train",
+      "url": "https://www.youtube.com/watch?v=CO67EQ0ZWgA",
+      "key": "teachable_machine_tutorial_2_train",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_2_train"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 3: Export",
+      "url": "https://www.youtube.com/watch?v=n-zeeRLBgd0",
+      "key": "teachable_machine_tutorial_3_export",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_3_export"
+      }
+    },
+    {
+      "name": "TextTrekkers Repo",
+      "url": "https://github.com/jamjamgobambam/texttrekkers",
+      "key": "texttrekkers_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "texttrekkers_repo"
+      }
+    },
+    {
+      "name": "Train Your Model",
+      "url": "https://docs.google.com/document/d/13nh3Tao6YPTKVNx7yRoMIqgt9MdPfNnRLHc9Pwwp728/edit?usp=sharing",
+      "key": "train_your_model",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "train_your_model"
+      }
+    },
+    {
+      "name": "Training Your Model",
+      "url": "https://docs.google.com/presentation/d/1UL78CHMg64FYEu5afQpzxZm2D0AsFxebmdNhI4WOOeA/edit?usp=sharing",
+      "key": "training_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "training_your_model"
+      }
+    },
+    {
+      "name": "Unlock the App Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2c",
+      "key": "unlock_the_app_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlock_the_app_repo"
+      }
+    },
+    {
+      "name": "Urban Explorer Repo",
+      "url": "https://github.com/jamjamgobambam/urbanexplorer",
+      "key": "urban_explorer_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "urban_explorer_repo"
+      }
+    },
+    {
+      "name": "Use Your Model",
+      "url": "https://docs.google.com/document/d/1vt8Rvuf\\_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit",
+      "key": "use_your_model",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "use_your_model"
+      }
+    },
+    {
+      "name": "Using Your Model",
+      "url": "https://docs.google.com/presentation/d/1s9ml7ucEZ8YjbtbQsClGV41enK7eTqyS9NkANcYok0k/edit?usp=sharing",
+      "key": "using_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_your_model"
+      }
+    },
+    {
+      "name": "Virtual Pet App",
+      "url": "https://docs.google.com/document/d/1KsX36QTzlYAJETcWqO0vivtl778FwLnDWNJAJd4sdVU/edit?usp=sharing",
+      "key": "virtual_pet_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_pet_app"
+      }
+    },
+    {
+      "name": "Virtual Pet Repo",
+      "url": "https://github.com/code-dot-org/csa-se-lesson3c",
+      "key": "virtual_pet_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_pet_repo"
+      }
+    },
+    {
+      "name": "WeatherWise App",
+      "url": "https://docs.google.com/document/d/1Y9oyQGOUkT8f6vZ8Ee5LQ8pPwkdr7m4d0RkhSP5c8XQ/edit?usp=sharing",
+      "key": "weatherwise_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "weatherwise_app"
+      }
+    },
+    {
+      "name": "WeatherWise Repo",
+      "url": "https://github.com/code-dot-org/csa-se-lesson3d",
+      "key": "weatherwise_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "weatherwise_repo"
       }
     },
     {
@@ -727,6 +3233,204 @@
         "lesson.key": "lesson-1",
         "resource.key": "what_is_github_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "brandbook_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "bytebud_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "harmony_helper_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "honest_headlines_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "how_ai_works_chatbots_and_large_language_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "intro_to_copilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "intro_to_copilot_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "pixelpedia_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "socialsense_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "texttrekkers_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "urban_explorer_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "binarybazaar_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "binarybazaar_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "build_with_copilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "flixrate_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "flixrate_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "virtual_pet_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "virtual_pet_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "weatherwise_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "weatherwise_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_train_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guessing_game_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "rock_paper_scissors_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_1_gather"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_2_train"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_3_export"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "train_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "training_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unlock_the_app_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_use_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "use_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "using_your_model"
+      }
     }
   ],
   "scripts_resources": [
@@ -752,6 +3456,16 @@
       }
     },
     {
+      "key": "class",
+      "word": "class",
+      "definition": "a category that a machine learning model learns",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
       "key": "git",
       "word": "Git",
       "definition": "a type of version control system that allows software engineers to have a full copy of the code that can contain the full history of all changes",
@@ -759,6 +3473,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "git"
+      }
+    },
+    {
+      "key": "large_language_model",
+      "word": "large language model",
+      "definition": "an artificial intelligence system trained on a vast amount of text data to generate human-like text based on given prompts",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model"
       }
     },
     {
@@ -822,12 +3546,74 @@
         "lesson.key": "lesson-1",
         "vocabulary.key": "version_control_system"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "large_language_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "class"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "0a9d0395-1533-4019-a288-7776dab579e3",
+      "properties": {
+        "description": "Explain the impacts, strengths, and limitations of AI-generated code in the software development process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "0a9d0395-1533-4019-a288-7776dab579e3"
+      }
+    },
+    {
+      "key": "219f3556-f548-4ac7-9c78-38f90be3642c",
+      "properties": {
+        "description": "Analyze an existing Java program to propose meaningful ways to enhance its functionality through the incorporation of an AI model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "219f3556-f548-4ac7-9c78-38f90be3642c"
+      }
+    },
+    {
+      "key": "2c320089-6428-4f43-925d-e2d6d099a07a",
+      "properties": {
+        "description": "Use GitHub Copilot to debug and enhance existing code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "2c320089-6428-4f43-925d-e2d6d099a07a"
+      }
+    },
+    {
+      "key": "35cb2cda-7d4d-48c3-b6bb-d79eb60e87c0",
+      "properties": {
+        "description": "Train a model, identifying scenarios where the model may not perform as expected, and implement retraining strategies to refine its accuracy"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "35cb2cda-7d4d-48c3-b6bb-d79eb60e87c0"
+      }
+    },
+    {
+      "key": "4888b628-0be4-474e-8cff-41e68d026a3c",
+      "properties": {
+        "description": "Identify potential skills software engineers may need to develop to work efficiently with AI technologies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "4888b628-0be4-474e-8cff-41e68d026a3c"
+      }
+    },
     {
       "key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7",
       "properties": {
@@ -836,6 +3622,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7"
+      }
+    },
+    {
+      "key": "91eed728-2975-4e1e-9705-f15d576cf18d",
+      "properties": {
+        "description": "Identify advantages and disadvantages of incorporating computer vision into applications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "91eed728-2975-4e1e-9705-f15d576cf18d"
       }
     },
     {
@@ -849,6 +3645,36 @@
       }
     },
     {
+      "key": "98d50552-a706-4e8f-b314-b0f4fe938afe",
+      "properties": {
+        "description": "Explain how the role of a software engineer might evolve as a result of AI technologies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "98d50552-a706-4e8f-b314-b0f4fe938afe"
+      }
+    },
+    {
+      "key": "a068624b-382a-463f-bb2d-ad1fd87e0ba4",
+      "properties": {
+        "description": "Use AI tools to assist with the development of software products while recognizing the limitations of the tools"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "a068624b-382a-463f-bb2d-ad1fd87e0ba4"
+      }
+    },
+    {
+      "key": "d45c4579-890d-4945-aabc-93ebf40d5ab2",
+      "properties": {
+        "description": "Reflect on the evolving role of AI in the future of programming and how it can complement personal coding skills"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "d45c4579-890d-4945-aabc-93ebf40d5ab2"
+      }
+    },
+    {
       "key": "da147a36-5372-47fe-b36f-bb9887ef56cc",
       "properties": {
         "description": "Explain the concept of version control systems, specifically Git, and their importance in managing changes to source code over time"
@@ -856,6 +3682,26 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "da147a36-5372-47fe-b36f-bb9887ef56cc"
+      }
+    },
+    {
+      "key": "f44a9d36-d581-42fc-858d-c62f75a7af20",
+      "properties": {
+        "description": "Modify an existing app to function with a Teachable Machine model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f44a9d36-d581-42fc-858d-c62f75a7af20"
+      }
+    },
+    {
+      "key": "f881fdb4-6103-4561-9885-8637bf59177c",
+      "properties": {
+        "description": "Explain the core steps involved in training an AI model using tools like Teachable Machine, specifically in the context of computer vision"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "f881fdb4-6103-4561-9885-8637bf59177c"
       }
     }
   ],
@@ -865,6 +3711,27 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     }
   ],
