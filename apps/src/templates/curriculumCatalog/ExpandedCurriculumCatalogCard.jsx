@@ -3,6 +3,11 @@ import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
+import {
+  BodyTwoText,
+  Heading4,
+  Heading6,
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
@@ -72,21 +77,23 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <h4 style={{marginBottom: '8px'}}>{courseDisplayName}</h4>
+              <Heading4 style={{marginBottom: '8px'}}>
+                {courseDisplayName}
+              </Heading4>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
-                  <p>{gradeRange}</p>
+                  <BodyTwoText>{gradeRange}</BodyTwoText>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="clock" className="fa-solid" />
-                  <p>{duration}</p>
+                  <BodyTwoText>{duration}</BodyTwoText>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="book" className="fa-solid" />
-                  <p ref={subjectsRef} className={style.subjectsText}>
+                  <BodyTwoText ref={subjectsRef} className={style.subjectsText}>
                     {topics}
-                  </p>
+                  </BodyTwoText>
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
@@ -109,7 +116,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <h6>{i18n.availableResources()}</h6>
+                    <Heading6>{i18n.availableResources()}</Heading6>
                     <hr className={style.thickDivider} />
                     <a className={style.bodyText} href="#">
                       {i18n.lessonPlans()}
@@ -132,7 +139,7 @@ const ExpandedCurriculumCatalogCard = ({
                     </a>
                   </div>
                   <div className={style.professionalLearning}>
-                    <h6>{i18n.professionalLearning()}</h6>
+                    <Heading6>{i18n.professionalLearning()}</Heading6>
                     <hr className={style.thickDivider} />
                     <a
                       className={style.professionalLearningText}
@@ -201,7 +208,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </a>
               </div>
               <div className={style.relatedContainer}>
-                <h6>{i18n.relatedCurricula()}</h6>
+                <Heading6>{i18n.relatedCurricula()}</Heading6>
                 <hr className={style.thickDivider} />
               </div>
             </div>

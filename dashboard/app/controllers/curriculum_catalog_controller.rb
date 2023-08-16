@@ -22,8 +22,7 @@ class CurriculumCatalogController < ApplicationController
       languageNativeName: @language_native_name,
       isSignedOut: @is_signed_out,
       isTeacher: @is_teacher,
-      sections: @sections_for_teacher,
-      selfPacedPlCourseOfferings: CourseOffering.professional_learning_and_self_paced_course_offerings
+      sections: @sections_for_teacher
     }
   end
 end

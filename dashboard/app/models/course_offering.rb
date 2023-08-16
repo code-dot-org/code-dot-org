@@ -199,13 +199,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings(locale_code = 'en-us')
+  def self.professional_learning_and_self_paced_course_offerings
     all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
       {
         id: co.id,
         key: co.key,
         display_name: co.display_name,
-        course_version_path: co.path_to_latest_published_version(locale_code),
       }
     end
   end
@@ -324,7 +323,7 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
-      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
     }
   end
 
