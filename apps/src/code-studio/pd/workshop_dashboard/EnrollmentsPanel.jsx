@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Button} from 'react-bootstrap-2';
 import moment from 'moment';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';

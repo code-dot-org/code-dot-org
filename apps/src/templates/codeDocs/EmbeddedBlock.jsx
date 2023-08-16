@@ -20,8 +20,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [blockRef]);
+  }, [blockName, blockRef]);
 
   return (
     <div>

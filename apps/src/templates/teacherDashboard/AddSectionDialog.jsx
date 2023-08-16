@@ -51,8 +51,12 @@ const AddSectionDialog = ({
     ) {
       setParticipantType(assignedCourseOffering.participant_audience);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [assignedCourseOffering, asyncLoadComplete, section?.participantType]);
+  }, [
+    assignedCourseOffering,
+    asyncLoadComplete,
+    section?.participantType,
+    setParticipantType,
+  ]);
 
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();

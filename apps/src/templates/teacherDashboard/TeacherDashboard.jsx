@@ -44,8 +44,7 @@ function TeacherDashboard({
       if (prevLocation) {
         action(location, prevLocation);
       }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [prevLocation]);
+    }, [action, prevLocation]);
   };
 
   useLocationChange((location, prevLocation) => {
