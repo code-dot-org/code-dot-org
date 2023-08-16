@@ -14,5 +14,10 @@
 def experiment_value(name, request, default = nil)
   return request.params[name] if request.params[name].present?
   return request.cookies[name] if request.cookies[name].present?
+  experiments_cookie = request.cookies[environment_specific_cookie_name('_experiments')]
+  if experiments_cookie.present?
+    experiments = JSON.parse(experiments_cookie)
+    return true if experiments.include?(name)
+  end
   DCDO.get(name, default)
 end
