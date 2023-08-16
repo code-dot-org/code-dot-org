@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.1
+    image: codedotorg/code-dot-org:add-git-lfs
     pull: always
     volumes:
       - name: rbenv
@@ -144,7 +144,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.1
+    image: codedotorg/code-dot-org:add-git-lfs
     pull: always
     volumes:
       - name: rbenv
@@ -210,6 +210,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 83134bebe48b9c0fb9ff12b8ef0fa324462208ae9802d027fc6e169c36ceac89
+hmac: c448ed8c5e80617ecaaf250543ad05b0ca2fc1e604656dc7593eb7f70a91ba92
 
 ...

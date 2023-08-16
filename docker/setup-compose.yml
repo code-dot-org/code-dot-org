@@ -13,7 +13,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:1.8.1
+    image: codedotorg/code-dot-org:add-git-lfs
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
