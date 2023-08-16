@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
@@ -12,8 +13,14 @@ import {getChatCompletionMessage} from '../chatApi';
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent = () => {
+  const [showWarningModal, setShowWarningModal] = useState(true);
   const [storedMessages, setStoredMessages] =
     useState<ChatCompletionMessage[]>(demoChatMessages);
+
+  const onCloseWarningModal = useCallback(
+    () => setShowWarningModal(false),
+    [setShowWarningModal]
+  );
 
   // This function is called when the user submits a chat message.
   // It sends the user message to the backend and retrieves the assistant response.
@@ -65,6 +72,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
   return (
     <ChatWorkspaceContext.Provider value={{onSubmit: onSubmit}}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
+        {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
         <PanelContainer
           id="chat-workspace-panel"
           headerText={aichatI18n.aichatWorkspaceHeader()}
