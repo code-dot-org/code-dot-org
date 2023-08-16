@@ -7982,6 +7982,10 @@ zh-CN:
             \-了解与更广泛的 CS 社区建立联系的机会。
 
             **建议时间**：70 分钟
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: 设置
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8051,6 +8055,9 @@ zh-CN:
           description_short: 为学前学生准备的计算机科学介绍
           description: 课程 A 为包括幼儿园学生在内的初学者提供计算机科学课程。学生将学习使用循环和事件等命令进行编程。本课程中的课程还教会学生与他人进行有意义的合作，研究不同的问题解决技巧，坚持面对具有挑战性的任务，并学习互联网安全知识。
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: 数据
           lesson_groups:
             lessonGroup-2:
               display_name: 数字公民
@@ -8064,10 +8071,15 @@ zh-CN:
               display_name: 事件
             lessonGroup-7:
               display_name: 课程项目结束
+            lessonGroup-8:
+              display_name: 数据
           description_audience: 年龄： 5-8
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
           description: 我们在开发课程B时考虑到了一年级学生。虽然课程 B 中的概念与课程 A 中的概念相似，但学生可以学习更复杂的不插手活动并完成更多种类的谜题。学生将学习编程、协作技巧、调查和批判性思维能力、面对困难的毅力以及互联网安全的基础知识。在本课程结束时，学生在 Play Lab 编程环境中创建游戏。
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: 计算系统
           lesson_groups:
             lessonGroup-2:
               display_name: 数字公民
@@ -8079,6 +8091,8 @@ zh-CN:
               display_name: 事件
             lessonGroup-6:
               display_name: 数据
+            lessonGroup-8:
+              display_name: 计算系统
           description: 我们为二年级的学生开发了课程 C。学生将创建包含排序、循环和事件的节目。他们将研究解决问题的技巧，并制定在网上和线下建立积极社区的策略。在课程结束时，学生将创建可以分享的互动游戏。
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8135,3 +8149,53 @@ zh-CN:
           description_audience: 年龄：9-13
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
           description: 我们为五年级的学生创建了课程 F。本课程首先研究用户如何在他们使用的应用程序中做出选择。然后，学生学习制作各种 Sprite Lab 应用程序，这些应用程序还为用户提供选择。在本课程的后面的课程中，学生将学习各种环境中的变量。在整个课程中，学生有更大的自主权和更多的选择。在课程结束时，学生将创建互动项目，与朋友和家人分享。
+        vpl-csp-2023-m1:
+          title: 模块 1
+        vpl-csp-2023-m2:
+          title: 模块 2
+        vpl-csp-2023-m3:
+          title: 模块 3
+        vpl-csp-2023-m4:
+          title: 模块 4
+        vpl-csp-2023-m5:
+          title: 模块 5
+        vpl-csp-2023-m6:
+          title: 模块 6
+        vpl-csp-2023-m7:
+          title: 模块 7
+        vpl-csp-2023-m8:
+          title: 模块 8
+        vpl-csa-2023-m1:
+          title: 模块 1
+        how-ai-works-2023:
+          title: AI 的工作原理
+        vpl-csa-2023-m2:
+          title: 模块 2
+        vpl-csa-2023-m3:
+          title: 模块 3
+        vpl-csa-2023-m4:
+          title: 模块 4
+        vpl-csa-2023-m5:
+          title: 模块 5
+        vpl-csa-2023-m6:
+          title: 模块 6
+        vpl-csa-2023-m7:
+          title: 模块 7
+        vpl-csa-2023-m8:
+          title: 模块 8
+        vpl-csd-2023-m1:
+          title: 模块 1
+        vpl-csd-2023-m2:
+          title: 模块 2
+        vpl-csd-2023-m3:
+          title: 模块 3
+        vpl-csd-2023-m4:
+          title: 模块 4
+        vpl-csd-2023-m5:
+          title: 模块 5
+        vpl-csd-2023-m6:
+          title: 模块 6
+        vpl-csd-2023-m7:
+          title: 模块 7
+        vpl-csd-2023-m8:
+          title: 模块 8

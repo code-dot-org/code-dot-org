@@ -196,6 +196,8 @@ mn:
   grade_level_label_elementary: Бага сургууль
   grade_level_label_middle: Дунд сургууль
   grade_level_label_high: Ахлах сургууль
+  students_label: Оюутнууд
+  teachers_label: Багш нар
   teacher_label_csf: CS багш үндэс
   teacher_label_csd: CS нээлт Багш
   teacher_label_csp: CS зарчим багш
@@ -209,7 +211,9 @@ mn:
   call_to_action_explore_unit: Нэгж судлах
   call_to_action_explore_curriculum: Сургалтын хөтөлбөрийг судлах
   call_to_action_explore_curriculum_options: Сургалтын хөтөлбөрийн сонголтуудыг судлах
+  call_to_action_explore_lessons: Хичээлийг судлах
   call_to_action_explore_modules: Модулиудыг судлах
+  call_to_action_explore_module: Модулийг судлах
   call_to_action_explore_workshops: Семинар судлах
   call_to_action_explore_course: Хичээлийг судлах
   call_to_action_explore_courses: Курсуудыг судлах
@@ -257,8 +261,10 @@ mn:
   call_to_action_see_module_details: Модулийн дэлгэрэнгүй мэдээллийг үзнэ үү
   call_to_action_start_modules: Модулиудыг эхлүүлэх
   call_to_action_see_course_details: Хичээлийн дэлгэрэнгүйг үзнэ үү
+  call_to_action_see_lesson_details: Хичээлийн дэлгэрэнгүйг үзнэ үү
   call_to_action_learn_about_approach: Бидний хандлагын талаар илүү ихийг олж мэдэх
   call_to_action_try_java_lab: Java Lab үзээрэй
+  call_to_action_notify_available: Боломжтой бол надад мэдэгдээрэй
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
@@ -328,6 +334,24 @@ mn:
   aria_label_call_to_action_csf_course_d: Курс D дэлгэрэнгүй мэдээллийг үзнэ үү
   aria_label_call_to_action_csf_course_e: Курс E дэлгэрэнгүй мэдээллийг үзнэ үү
   aria_label_call_to_action_csf_course_f: Курс F дэлгэрэнгүй мэдээллийг үзнэ үү
+  aria_label_call_to_action_ai_pl_101_videos: Багш нарын видео бичлэгийг AI 101-ийг
+    үзээрэй
+  aria_label_call_to_action_ai_teaching_module: Заах AI ба Machine Learning модулийг
+    судлах
+  aria_label_call_to_action_how_ai_works_lesson_01: Машины сургалтын хичээлийн дэлгэрэнгүйг
+    танилцуулгаас үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_02: Компьютерийн алсын хараатай хичээлийн
+    дэлгэрэнгүйг үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_03: Мэдрэлийн сүлжээний хичээлийн
+    дэлгэрэнгүйг үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_04: Chatbots болон Том Хэлний Загваруудын
+    хичээлийн дэлгэрэнгүй мэдээллийг үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_05: Generative Images хичээлийн дэлгэрэнгүйг
+    үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_06: Алгоритмын хэвийсэн хичээлийн
+    дэлгэрэнгүйг үзнэ үү
+  aria_label_call_to_action_how_ai_works_lesson_07: Манай AI ёс зүйн дүрмийн хичээлийн
+    дэлгэрэнгүйг үзнэ үү
   video_title_professional_learning_program: Code.org-ийн мэргэжлийн сургалтын хөтөлбөр
   curriculum_name_csf: Компьютерийн шинжлэх ухааны үндэс
   curriculum_name_csf_02: Аливаа CS үндэс (Курс A-F)
@@ -443,6 +467,10 @@ mn:
   module_label_student_tool: Оюутны хэрэгсэл
   module_label_student_product: Бүтээгдэхүүний
   module_label_student_content_resources: Агуулга ба нөөц
+  module_label_new: Шинэ
+  module_label_coming_soon: Тун удахгүй
+  module_label_video_series: Видео цуврал
+  module_label_self_paced: Өөрөө хурдацтай модуль
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -465,9 +493,13 @@ mn:
   module_grade_9_12_teachers: 9-12 багш нар
   module_level_beginner: Эхлэгч
   module_level_intermediate: Завсрын
+  module_duration_45_mins: 45 минут
+  module_duration_1_hr: 1 цаг
   module_duration_2_hrs: 2 цаг
   module_duration_3_hrs: 3 цаг
+  module_duration_5_hrs: 5 цаг
   module_duration_8_hrs: 8 цаг
+  module_duration_20_hrs: 20 цаг
   module_duration_35_hrs: 35 цаг
   module_duration_lesson: Хичээл
   module_duration_week: Долоо хоног
@@ -540,6 +572,7 @@ mn:
   heading_no_devices: Төхөөрөмж байхгүй байна уу? Бид та хамрагдсан байна
   heading_java_lab: Жава Лаб
   heading_objects_first: Эхлээд объектууд
+  heading_these_lessons_will: 'Эдгээр хичээлүүд нь:'
   professional_learning_section_desc: Заах бэлтгэлээ базааж байхдаа хэрэгтэй дэмжлэгээ
     аваарай. Багш нар үүнийг хайрладаг бөгөөд 90% -иас дээш нь хамгийн сайн мэргэжлийн
     хөгжлийг эрэмбэлдэг!
@@ -673,6 +706,11 @@ mn:
   ai_curriculum_duration_03: 'Үргэлжлэх хугацаа: 1 цаг'
   ai_curriculum_btn_aria_label_03: Далайн үйл ажиллагаанд зориулсан хиймэл оюун ухааны
     үйл ажиллагааг туршиж үзээрэй
+  ai_curriculum_title_04: AI хэрхэн ажилладаг вэ
+  ai_curriculum_desc_04: Эдгээр хичээлүүд нь хиймэл оюун ухааны хэрхэн ажилладаг видео
+    цувралыг нэмэгдүүлдэг. Хичээл бүрийг цувралаас нэг видеотой хослуулж, видеонууд
+    дээр танилцуулсан ойлголтуудыг гүнзгийрүүлэн судлах болно.
+  ai_curriculum_btn_aria_label_04: AI хичээл хэрхэн ажилладаг талаар судлах
   ai_carousel_heading: 'Багш нар Code.org-тай AI-ийн талаар юу гэж хэлдэг вэ:'
   ai_carousel_quote_01: Энэ хичээл нь миний оюутнуудад ангиллын системд үзэл бодлын
     элемент байгааг харах боломжийг олгосон юм. Хожим нь бид AI дээр хэвийх утгыг
@@ -690,6 +728,10 @@ mn:
   ai_pl_list_04: AI болон машин сургалтын бодит ертөнцийн үр дагаврыг авч үзье.
   ai_pl_list_05: бүлэг төслүүдийн төгсгөл судлах.
   ai_pl_duration: 'Үргэлжлэх хугацаа: 2 цаг'
+  ai_pl_title: AI ба машин сурах заах
+  ai_pl_desc: Хиймэл оюун ухаан, машин сургалтын танилцуулга. AI Lab ашиглан машин
+    сургалтын загварыг сур. болон машин сургалтын програм нь татан оролцуулах. AI
+    болон машин сургалтын бодит ертөнцийн үр дагаврыг авч үзье.
   ai_video_series_title: AI хэрхэн ажилладаг вэ
   ai_video_series_desc: Майкрософтын гүйцэтгэх захирал Сатья Наделлагийн танилцуулснаар
     энэхүү цуврал богино хэмжээний видео нь хиймэл оюун ухаан хэрхэн ажилладаг, яагаад
@@ -716,6 +758,7 @@ mn:
   ai_pl_101_hero_heading: Багш нарт зориулсан AI 101
   ai_pl_101_hero_desc: Боловсролд хиймэл оюун ухаан (AI) -ийн хувиргах боломжийг олж
     мэдээрэй сурган хүмүүжүүлэгчдэд зориулсан үнэгүй онлайн сургалтын цуврал.
+  ai_pl_101_hero_desc_02: Багш нарт зориулсан онлайн сургалтын цогц цуврал.
   ai_pl_101_hero_presented: Танилцуулсан
   ai_pl_101_intro_heading: Багш нарт зориулсан AI 101 гэж юу вэ?
   ai_pl_101_intro_text: Багш нарт зориулсан AI 101 нь хиймэл оюун ухаан (AI) болон
@@ -759,6 +802,97 @@ mn:
     хиймэл оюун ухааны хөшүүрэг ашиглан бичих туршлагыг хувийн болгож, багш нарт бичих
     туршлагын туршид давтагдах санал хүсэлт, явцын үнэлгээ өгөхөд туслах болно.'
   ai_pl_101_explore__button_4: Хэрэгсэл судлах
+  ai_pl_101_video_title_1: Саль Хан, Хади Партови нартай галын дэргэдэх чат
+  ai_pl_101_video_desc_1: Салл Хан (Хан Академи), Хади Партови (Code.org) нартай нэгдээрэй
+    ангид хиймэл оюун ухааныг хүлээн авах галын дэргэдэх чат. Өнөөдөр AI-ийг тойрсон
+    хамгийн маргаантай сэдвүүдийг багтаасан амьд хэлэлцүүлэг өрнөнө гэж найдаж байна.
+  ai_pl_101_video_title_2: Сурган хүмүүжүүлэгчдэд зориулсан хиймэл оюун ухааны боловсрол
+  ai_pl_101_video_desc_2: Хиймэл оюун ухааны суурь ойлголтуудын танилцуулга Манай
+    нийгэмд АИ-ийн гүн гүнзгий нөлөө, боловсролын салбарт улам бүр нэмэгдэж байгааг
+    ойлгох суурь мэдлэгийг танд эзэмшүүлэх болно. Та ангид даалгаварт хиймэл оюун
+    ухааныг ашиглах, захиргааны даалгаварт цаг хугацаа хэмнэх практик ойлголтыг олж
+    авах болно.
+  ai_pl_101_video_title_3: AI ашиглан суралцах өөрчлөх
+  ai_pl_101_video_desc_3: AI ба боловсролын уулзварыг судлах. Энэхүү хуралдаан нь
+    оюутны сургалтыг сайжруулахын тулд AI-ийг сурган хүмүүжүүлэх арга зүйтэй хэрхэн
+    хослуулж болохыг судлах болно. Оюутнуудын суралцах туршлагыг баяжуулахын тулд
+    заах туршлагыг өөрчлөхийн тулд AI хөшүүрэг болгохыг эрэлхийлж буй сурган хүмүүжүүлэгчдийн
+    хувьд заавал байх ёстой зүйл юм.
+  ai_pl_101_video_title_4: АИ-д хариуцлагатай хандах хандлагыг хангах
+  ai_pl_101_video_desc_4: Боловсролын орчинд хиймэл оюун ухааныг нэгтгэх ёс зүйн асуудлууд,
+    шилдэг туршлагыг судлах. Энэхүү хуралдаан нь хиймэл оюун ухааны боломжит алдаа,
+    түүнтэй холбоотой ёс зүйн асуудлуудыг ойлгоход чиглэсэн тодорхой стратеги, нөөц,
+    бодит жишээнүүдийг өгөх болно.
+  ai_pl_101_video_title_5: АИ-ийг ангид авчрах нь
+  ai_pl_101_video_desc_5: Энэ хуралдаан AI тухай заах тал дээр анхаарна, үнэлэх, AI
+    боловсролын арга хэрэгслийг ашиглах,, оюутны үнэлгээ AI хөшүүрэг. онолын баялаг
+    хольц нь, практик жишээ,, нөөц, Энэ нь AI ландшафтыг жолоодож, оюутны сургалтын
+    туршлагыг сайжруулах багш нарыг чадавхжуулах зорилготой.
+  ai_pl_101_video_desc_6: 'Том хэлний загварууд (ChatGPT гэх мэт) болон Generative
+    AI дээрх хоёр шинэ видеог багтаасан AI-ийн томоохон өөрчлөлтийг жолоодох шинэ
+    технологийн талаар илүү ихийг олж мэдээрэй. Эдгээр шинэ технологиуд хэрхэн ажилладаг
+    талаар мэргэжилтнүүдээс шууд сонсоорой: Мира Мурати, OpenAI-ийн CTO, RunwayML-ийн
+    гүйцэтгэх захирал Кристобал Валензуэла нар.'
+  how_ai_works_hero_heading: AI хэрхэн ажилладаг вэ
+  how_ai_works_hero_desc: "“AI хэрхэн ажилладаг вэ”, манай видео цуврал болон дагалдах
+    хичээлүүдээр хиймэл оюун ухааны ертөнцөд шумбах!"
+  how_ai_works_intro_desc: Энэхүү цуврал богино хэмжээний видео бичлэгүүд болон анги
+    доторх хичээлүүд нь хиймэл оюун ухаан хэрхэн ажилладаг, яагаад чухал болохыг танд
+    болон танай оюутнуудад танилцуулах болно. Та сэдэв дээр үндэслэн бие даасан хичээлийг
+    сонгож, бүхэл бүтэн цуврал сэдвүүдийг нэг ангид судлах эсвэл гүнзгий шумбахын
+    тулд бүх 7 хичээлийг зааж болно.
+  how_ai_works_intro_list_01: Хиймэл оюун ухаан, машин сургалтын талаар танд танилцуул
+  how_ai_works_intro_list_02: Том хэлний загварууд (LLMs) болон дүрс үүсгэх зэрэг
+    генератив AI хэрхэн ажилладаг талаар шумбах
+  how_ai_works_intro_list_03: Алдаа, ёс зүй, нууцлал, хиймэл оюун ухааны хариуцлагатай
+    хэрэглээг судлах
+  how_ai_works_intro_list_04: Компьютерийн алсын хараа зэрэг AI-ийн бодит ертөнцийн
+    програмууд дээр хүрнэ үү
+  how_ai_works_lessons_heading: Танай ангид зориулсан хиймэл оюун ухааны хичээлүүд
+  how_ai_works_lesson_title_01: Машины сургалтын танилцуулга
+  how_ai_works_lesson_desc_01: Машин суралцах гэж нэрлэгддэг хиймэл оюун ухааны нэг
+    хэлбэр, асуудлыг шийдэхийн тулд роботыг сургахад туслахын тулд Асуудал шийдвэрлэх
+    үйл явцыг хэрхэн ашиглаж болох талаар олж мэдээрэй. Робот загасны хэв маягийг
+    хэрхэн илрүүлэх талаар сурч байгаа машин сургалтын үйл ажиллагаанд оролцох.
+  how_ai_works_lesson_title_02: Компьютерийн алсын хараа
+  how_ai_works_lesson_desc_02: Компьютерийн алсын хараа хэрхэн ажилладаг талаар суралц.
+    Компьютерийн алсын хараа, компьютер хэрхэн “хардаг” талаар тайлбарласан видеог
+    үзээрэй. Дараа нь долоон сегментийн дэлгэцийг ямар тоогоор харуулахыг шийдэж,
+    тест хийхийн тулд сүлжээг ашигладаг алгоритмыг зохион бүтээнэ үү.
+  how_ai_works_lesson_title_03: Мэдрэлийн сүлжээ
+  how_ai_works_lesson_desc_03: Мэдрэлийн сүлжээ хэрхэн ажилладаг талаар суралц. замдаа
+    гарт мэдрэлийн сүлжээг судлах нь виджетүүд ашиглах. Мэдрэлийн сүлжээг тайлбарлах
+    видео үзэх. Эцэст нь зөвлөмжийн системийг бий болгох үед янз бүрийн хэтийн хэрэгцээг
+    хэлэлцэх.
+  how_ai_works_lesson_title_04: Chatbots ба том хэлний загварууд
+  how_ai_works_lesson_desc_04: Large Language Model (LLM) гэж юу болох, энэ нь хэрхэн
+    ажилладаг талаар мэдэж аваарай, дараа нь LLM-ийг ашиглан AI-тэй текст үүсгэх.
+    Эцэст нь хэлэхэд, ХХМ-ууд ухаалаг эсвэл бүтээлч үү, үгүй юу гэдэг талаар ярилц.
+  how_ai_works_lesson_title_05: Генератив зураг
+  how_ai_works_lesson_desc_05: AI хэрхэн зураг үүсгэж болохыг олж мэдээд дараа нь
+    диффузийн AI виджетийг судалж, эдгээр загварууд нь бүтээлч эсэх талаар ярилцаарай.
+  how_ai_works_lesson_title_06: Алгоритмын хэвийсэн
+  how_ai_works_lesson_desc_06: Твиттерийн газар тариалангийн алгоритмын суурь хэвийсэн
+    утгыг илрүүлэхийн тулд зураг зурах дадлага хий, дараа нь уншиж, энэ гажсан алгоритмыг
+    нээсэн тухай видеог үзээрэй. Эцэст нь алгоритм дахь хэвийсэн утгыг таних, багасгах
+    арга замыг ярилц.
+  how_ai_works_lesson_title_07: Манай AI ёс зүйн дүрэм
+  how_ai_works_lesson_desc_07: Тэдний сонгосон хиймэл оюун ухааны салбарт ёс зүйн
+    бэрхшээлийг илчилж нийтлэл, видео ашиглан судалгаа хийх. AI бүтээгчид болон хууль
+    тогтоогчдод зориулж анги даяар “Манай AI ёс зүйн дүрэм” нөөцийг цуглуул.
+  how_ai_works_lessons_in_a_day_title: Өдөрт хиймэл оюун ухааны ажил хэрхэн ажилладаг
+    вэ
+  how_ai_works_lessons_in_a_day_desc: Зөвхөн өдөр байна уу? Бүхэл бүтэн цувралыг нэг
+    өдрийн дотор оюутнуудад танилцуулах сонголт бас бий. Оюутнуудыг AI-тэй танилцуулах,
+    эсвэл зочин багшийн хичээл болгон танилцуулах гэж буй аливаа субьект бүсийн багшид
+    төгс тохирно.
+  how_ai_works_lessons_in_a_day_desc_02: "“AI хэрхэн ажилладаг вэ” видео бичлэгийг
+    нэг өдрийн дотор танилцуул. Оюутнууд видео бичлэг бүрийн хамт дагаж, видео бичлэгээс
+    үгсийн санг тааруулж, дараа нь видео бүрийн талаар эргэцүүлэн бодох асуултанд
+    хариулах болно."
+  how_ai_works_resources_desc: AI-ийн талаар илүү ихийг мэдэхийг сонирхож байна уу?
+    Танд болон суралцагчдын суралцах хугацааг уртасгахад туслах нэмэлт эх сурвалжуудыг
+    энд оруулав.
   ai_vid_intro_caption: AI хэрхэн ажилладаг талаар танилцуулах
   ai_vid_chatbots_caption: Chatbots болон том хэлний загварууд хэрхэн ажилладаг
   ai_vid_creativity_caption: AI нь бүтээлч байдал, төсөөлөлтэй юу?
@@ -1102,10 +1236,10 @@ mn:
   teach_page_additional_materials_list_desc_03: Сургуульдаа өлгөх, сурагчдадаа компьютерийн
     шинжлэх ухааныг туршиж үзэх урам зориг өгөхийн тулд янз бүрийн үүргийн загваруудын
     эдгээр зурагт хуудсыг хэвлэ.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1669,6 +1803,7 @@ mn:
   not_found_desc: Хүссэн хуудас олдсонгүй
   not_found_instructions: Вэб хаягийг шалгаад дахин илгээх эсвэл доорх жагсаалтаас
     холбоосыг сонгоно уу.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Залуучуудын хөгжил
   company_asa: Сургуулийн дараах холбоо
   company_asos: АСОС
@@ -1721,6 +1856,7 @@ mn:
   company_evsd: Зүүн хөндий сургуулийн дүүрэг
   company_eastonvilleschooldistrict: Итонвилл сургуулийн дүүрэг
   company_enumclawschooldistrict: Дүүрэг сургууль
+  company_ets: ETS
   company_everettsd: Эверетт улсын сургуулиуд
   company_fsusd: Фейрфилд-Суисун нэгдсэн сургуулийн дүүрэг
   company_fayettecountypublicschools: Файетте мужийн олон нийтийн сургууль
@@ -1742,6 +1878,7 @@ mn:
   company_houstonisd: Хьюстон бие даасан сургууль дүүргийн
   company_hcpss: Ховард Каунти улсын сургууль
   company_idla: Айдахо дижитал сургалтын академи
+  company_iste: ХАШАА
   company_janesvilleschooldistrict: Жанесвилл сургуулийн дүүрэг
   company_johnstoncountyschools: Жонстон мужийн сургуулиуд
   company_lps: Линкольн улсын сургууль
@@ -11824,8 +11961,9 @@ mn:
   tutorial_ai4alldance_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_ai4allneural_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_spheroinout_string_platforms: Залгаагдаагүй
-  tutorial_edisonblueprint_string_platforms: Орчин үеийн бүх хөтчүүд
-  tutorial_edisonmaze_string_platforms: Орчин үеийн бүх хөтчүүд
+  tutorial_edisonblueprint_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет,
+    iPad
+  tutorial_edisonmaze_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет, iPad
   tutorial_milnefunctions_string_platforms: Орчин үеийн бүх хөтчүүд, Дэлгэц уншигч
   tutorial_sasmap_string_platforms: Бүх орчин үеийн хөтчүүд, Ipad, Дэлгэц уншигч
   tutorial_firstrobotics_string_platforms: Орчин үеийн бүх хөтчүүд

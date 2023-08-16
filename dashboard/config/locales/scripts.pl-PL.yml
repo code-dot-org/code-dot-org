@@ -1927,6 +1927,8 @@ pl:
               display_name: 'Rozdział 1: GitHub i Copilot'
             lessonGroup-3:
               display_name: 'Rozdział 2: Wizja komputerowa'
+            lessonGroup-4:
+              display_name: Ankieta wstępna
           lessons:
             lesson-1:
               name: Wprowadzenie do GitHub
@@ -7764,6 +7766,13 @@ pl:
           student_description: Poznaj podstawy informatyki z postaciami z Angry Birds,
             Plants vs Zombies i Wiewióra z Epoki lodowcotej!
           title: Klasyczny labirynt
+        how-ai-works-2023:
+          name: how-ai-works-2023
+          student_description: |-
+            Dowiedz się, jak działa sztuczna inteligencja, uczestnicząc w różnych doświadczeniach i oglądając serię filmów [Jak działa AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) !
+
+            \*\*Chcesz uczyć tych lekcji? \*\* [Kliknij tutaj, aby wyświetlić plany lekcji dla tych lekcji](/s/how-ai-works-2023?viewAs=Instructor)
+          title: Jak działa AI
         iceage:
           description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
           description_short: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w
@@ -8007,6 +8016,8 @@ pl:
           lessons:
             lesson-1:
               name: Remiksuj projekty
+            lesson-2:
+              name: SNAP - Rosa Linn
           name: musiclab
           title: Lekcje testowe w laboratorium muzycznym
         musiclab-2023:
@@ -8094,6 +8105,11 @@ pl:
               display_name: Zdarzenia
             lessonGroup-7:
               display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Dane
+          lessons:
+            lesson-1:
+              name: Dane
           name: nevada-standards-aligned-first-grade-2023
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: W wieku 8-12
@@ -8138,6 +8154,11 @@ pl:
               display_name: Zdarzenia
             lessonGroup-6:
               display_name: Dane
+            lessonGroup-8:
+              display_name: Systemy komputerowe
+          lessons:
+            lesson-1:
+              name: Systemy komputerowe
           name: nevada-standards-aligned-second-grade-2023
         nevada-standards-aligned-third-grade-2023:
           description_audience: W wieku 7-11
@@ -8249,6 +8270,9 @@ pl:
           name: physcomp-temp
         pixelation:
           title: Pikselacja
+        pl-csd-2023-m1:
+          name: pl-csd-2023-m1
+          title: 'Moduł 1 '
         pl-csd-bugs:
           description_short: Debugowanie w Game Lab - Warsztat w roku akademickim
             1
@@ -9366,6 +9390,30 @@ pl:
               name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
           name: vpl-csa-2022
           title: CSA Wirtualne profesjonalne uczenie się
+        vpl-csa-2023-m1:
+          name: vpl-csa-2023-m1
+          title: Moduł 1
+        vpl-csa-2023-m2:
+          name: vpl-csa-2023-m2
+          title: Moduł 2
+        vpl-csa-2023-m3:
+          name: vpl-csa-2023-m3
+          title: Moduł 3
+        vpl-csa-2023-m4:
+          name: vpl-csa-2023-m4
+          title: Moduł 4
+        vpl-csa-2023-m5:
+          name: vpl-csa-2023-m5
+          title: Moduł 5
+        vpl-csa-2023-m6:
+          name: vpl-csa-2023-m6
+          title: Moduł 6
+        vpl-csa-2023-m7:
+          name: vpl-csa-2023-m7
+          title: Moduł 7
+        vpl-csa-2023-m8:
+          name: vpl-csa-2023-m8
+          title: Moduł 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki
@@ -9393,6 +9441,66 @@ pl:
           name: vpl-csd-2021
         vpl-csd-2022:
           name: vpl-csd-2022
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 1 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-4:
+              name: 'Sesja synchroniczna 3: Podsumowanie'
+          name: vpl-csd-2023-m1
+          title: Moduł 1
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 2 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 5: Przegląd badan dotyczących programu nauczania'
+            lesson-4:
+              name: 'Sesja synchroniczna 6: Ocenianie'
+            lesson-5:
+              name: 'Sesja synchroniczna 7: Scenariusze włączenia'
+            lesson-6:
+              name: 'Sesja synchroniczna 8: Podsumowanie'
+          name: vpl-csd-2023-m2
+          title: Moduł 2
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 3 Synchroniczny
+          name: vpl-csd-2023-m3
+          title: Moduł 3
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 4 Synchroniczny
+          name: vpl-csd-2023-m4
+          title: Moduł 4
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 5 Synchroniczny
+          name: vpl-csd-2023-m5
+          title: Moduł 5
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 6 Synchroniczny
+          name: vpl-csd-2023-m6
+          title: Moduł 6
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 7 Synchroniczny
+          name: vpl-csd-2023-m7
+          title: Moduł 7
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 8 Synchroniczny
+          name: vpl-csd-2023-m8
+          title: Moduł 8
         vpl-csd-ci-1:
           lesson_groups:
             lessonGroup-2:
@@ -9577,6 +9685,30 @@ pl:
           name: vpl-csp-2021
         vpl-csp-2022:
           name: vpl-csp-2022
+        vpl-csp-2023-m1:
+          name: vpl-csp-2023-m1
+          title: Moduł 1
+        vpl-csp-2023-m2:
+          name: vpl-csp-2023-m2
+          title: Moduł 2
+        vpl-csp-2023-m3:
+          name: vpl-csp-2023-m3
+          title: Moduł 3
+        vpl-csp-2023-m4:
+          name: vpl-csp-2023-m4
+          title: Moduł 4
+        vpl-csp-2023-m5:
+          name: vpl-csp-2023-m5
+          title: Moduł 5
+        vpl-csp-2023-m6:
+          name: vpl-csp-2023-m6
+          title: Moduł 6
+        vpl-csp-2023-m7:
+          name: vpl-csp-2023-m7
+          title: Moduł 7
+        vpl-csp-2023-m8:
+          name: vpl-csp-2023-m8
+          title: Moduł 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

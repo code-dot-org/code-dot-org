@@ -3141,12 +3141,12 @@
           "type": "منبع"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "طراحی بدون کامپیوتر ",
+          "name": "بلاکلی بلاک‌های بدون کامپیوتر ",
           "url": "https://docs.google.com/presentation/d/1yCSXTWqT91yDQU9QLlFEyjk189ntTsJeIyCEyXD2NX0/edit?usp=sharing",
           "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/coursea/2021": {
-          "name": "Wiggles - GoNoodle",
+          "name": "ویگلز - گونودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -3223,7 +3223,7 @@
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "صورتک‌های احساسی - تصویر حسی",
@@ -3370,11 +3370,11 @@
           "type": "منبع"
         },
         "class-section-video/courseb/2021": {
-          "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
+          "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "طراحی بدون کامپیوتر ",
+          "name": "بلاکلی بلاک‌های بدون کامپیوتر ",
           "url": "https://docs.google.com/presentation/d/1yCSXTWqT91yDQU9QLlFEyjk189ntTsJeIyCEyXD2NX0/edit?usp=sharing",
           "type": "دستکاری‌ها"
         },
@@ -3393,7 +3393,7 @@
           "type": "فیلم دانش‌آموز"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - GoNoodle",
+          "name": "ویگلز - گونودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -3423,22 +3423,22 @@
           "type": "ویدیو"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1wnQ-XERxH3L_XgMSogJUCQU6EjzSSce0hgZnpzFQ7kI/edit?usp=sharing",
           "type": "کلید پاسخ ارزیابی"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1fQHz6nVIrGPD7lcwMI_ZWt6yEdST8zBw6TiDx96zFTM/edit?usp=sharing",
           "type": "کاربرگ"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1isI7s7symwSF5bcwbaf9VJVJx_xofZQS-ryU-LfgmJM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://youtu.be/JoKTqHCni0M",
           "type": "ویدئوی Unplugged"
         },
@@ -3465,7 +3465,7 @@
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "رویداد بزرگ (دوره‌های A,B)",
@@ -3634,7 +3634,7 @@
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "the_big_event_course_c_/coursec/2021": {
           "name": "The Big Event (دوره C)",
@@ -3679,7 +3679,7 @@
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1Y4oBMMMGJRL39iiPaHuM3wDIQYuUlnEL4MnoGOc24Bc/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bits در مقابل Bytes",
@@ -3809,7 +3809,7 @@
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
           "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
@@ -3927,7 +3927,7 @@
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "شرطی ها با کارتها",
           "url": "https://docs.google.com/document/d/1-U4jWjZ62QHR9fNpr8hiW0WmlCEcgj_jsbjdDkqJjp0/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
           "name": "شرط با کارت‌های برنامه نمونه",
@@ -4094,7 +4094,7 @@
         "csf-songwriting-assessment/coursee/2021": {
           "name": "توابع بدون برق و رایانه: ترانه سرایی",
           "url": "https://docs.google.com/document/d/1qw3sviNepoy9zFqOqmkBe-jQwmNB1lh9nS9FfU1UVfM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "csf-songwriting-worksheets/coursee/2021": {
           "name": "توابع بدون برق و رایانه: ترانه سرایی",
@@ -4319,7 +4319,7 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "برای تفریح حلقه ای",
           "url": "https://docs.google.com/document/d/1vQuxqQhhbnmhwJVx78W8az9PqDo_wflU1242X0VflWg/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "برای تفریح حلقه ای",
@@ -4374,7 +4374,7 @@
         "csf-internet-assessment/coursef/2021": {
           "name": "اینترنت",
           "url": "https://docs.google.com/document/d/1WpB_zfsOBjiUiwSaqHVf5wDE9Wt0h9LCvx1fr5UnC68/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
           "name": "کارت‌های IP آدرس‌ها و کارت‌های نوع تحویل",
@@ -4567,7 +4567,7 @@
           "type": "ویدئو"
         },
         "class-section-video/pre-express/2021": {
-          "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
+          "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
           "type": "ویدئو معلم"
         },
@@ -7606,12 +7606,12 @@
           "type": "ویدئوی Unplugged"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
-          "name": "طراحی بدون کامپیوتر ",
+          "name": "بلاکلی بلاک‌های بدون کامپیوتر ",
           "url": "https://docs.google.com/presentation/d/1yCSXTWqT91yDQU9QLlFEyjk189ntTsJeIyCEyXD2NX0/edit?usp=sharing",
           "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/coursea/2022": {
-          "name": "Wiggles - GoNoodle",
+          "name": "ویگلز - گونودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -7668,7 +7668,7 @@
         "the_big_event_1/coursea/2022": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "the_big_event_2/coursea/2022": {
           "name": "رویداد بزرگ",
@@ -7808,7 +7808,7 @@
           "type": "تصاویر احساسی"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
+          "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
           "url": ""
         },
         "pair_programming/courseb/2022": {
@@ -7817,12 +7817,12 @@
           "type": "فیلم دانش‌آموز"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
-          "name": "طراحی بدون کامپیوتر ",
+          "name": "بلاکلی بلاک‌های بدون کامپیوتر ",
           "url": "https://docs.google.com/presentation/d/1yCSXTWqT91yDQU9QLlFEyjk189ntTsJeIyCEyXD2NX0/edit?usp=sharing",
           "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/courseb/2022": {
-          "name": "Wiggles - GoNoodle",
+          "name": "ویگلز - گونودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -7852,22 +7852,22 @@
           "type": "ویدئو"
         },
         "getting_loopy/courseb/2022": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://youtu.be/JoKTqHCni0M",
           "type": "ویدئوی Unplugged"
         },
         "getting_loopy_1/courseb/2022": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1fQHz6nVIrGPD7lcwMI_ZWt6yEdST8zBw6TiDx96zFTM/edit?usp=sharing",
           "type": "کاربرگ"
         },
         "getting_loopy_2/courseb/2022": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1isI7s7symwSF5bcwbaf9VJVJx_xofZQS-ryU-LfgmJM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "getting_loopy_3/courseb/2022": {
-          "name": "سر گیجه گرفتن",
+          "name": "حلقه زدن",
           "url": "https://docs.google.com/document/d/1wnQ-XERxH3L_XgMSogJUCQU6EjzSSce0hgZnpzFQ7kI/edit?usp=sharing",
           "type": "کلید پاسخ ارزیابی"
         },
@@ -7893,7 +7893,7 @@
         "the_big_event_1/courseb/2022": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "the_big_event_2/courseb/2022": {
           "name": "رویداد بزرگ",
@@ -8066,7 +8066,7 @@
         "the_big_event_1/coursec/2022": {
           "name": "رویداد بزرگ",
           "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "the_big_event_2/coursec/2022": {
           "name": "رویداد بزرگ",
@@ -8121,7 +8121,7 @@
         "binary_bracelets_3/coursec/2022": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1Y4oBMMMGJRL39iiPaHuM3wDIQYuUlnEL4MnoGOc24Bc/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "دستبند دودویی",
@@ -8265,7 +8265,7 @@
         "graph_paper_programming_4/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
           "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "graph_paper_programming_5/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
@@ -8369,7 +8369,7 @@
         "conditionals_with_cards_2/coursed/2022": {
           "name": "شرطی ها با کارتها",
           "url": "https://docs.google.com/document/d/1-U4jWjZ62QHR9fNpr8hiW0WmlCEcgj_jsbjdDkqJjp0/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "conditionals_with_cards_3/coursed/2022": {
           "name": "شرطی ها با کارتها",
@@ -8536,7 +8536,7 @@
         "functions_unplugged_songwriting_2/coursee/2022": {
           "name": "توابع بدون برق و رایانه: ترانه سرایی",
           "url": "https://docs.google.com/document/d/1qw3sviNepoy9zFqOqmkBe-jQwmNB1lh9nS9FfU1UVfM/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "functions_unplugged_songwriting_3/coursee/2022": {
           "name": "توابع بدون برق و رایانه: ترانه سرایی",
@@ -8750,7 +8750,7 @@
         "internet/coursef/2022": {
           "name": "اینترنت",
           "url": "https://docs.google.com/document/d/1WpB_zfsOBjiUiwSaqHVf5wDE9Wt0h9LCvx1fr5UnC68/edit?usp=sharing",
-          "type": "ارزشیابی"
+          "type": "ارزیابی"
         },
         "internet_1/coursef/2022": {
           "name": "اینترنت",
@@ -8921,7 +8921,7 @@
           "type": "تصاویر احساسی"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2022": {
-          "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
+          "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
           "type": "ویدئو معلم"
         },

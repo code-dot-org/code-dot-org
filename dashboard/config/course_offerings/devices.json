@@ -3,7 +3,7 @@
   "display_name": "Creating Apps with Devices (Circuit Playground)",
   "category": "maker",
   "is_featured": false,
-  "assignable": false,
+  "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",

@@ -125,6 +125,12 @@ And(/^I create a (young )?student( in Colorado)?( who has never signed in)? name
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
+And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I type "#{@users[name][:email]}" into "#{element}"
+  GHERKIN
+end
+
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   create_user(name,
     data_transfer_agreement_required: '1',

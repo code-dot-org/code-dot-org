@@ -197,6 +197,8 @@ vi:
   grade_level_label_elementary: Trường tiểu học
   grade_level_label_middle: Trường trung học cơ sở
   grade_level_label_high: Trường trung học
+  students_label: Học sinh, sinh viên
+  teachers_label: Giáo viên
   teacher_label_csf: Nguyên tắc cơ bản của KHMT cho Giáo viên
   teacher_label_csd: Giáo viên khám phá KHMT
   teacher_label_csp: Nguyên tắc của KHMT cho Giáo viên
@@ -210,7 +212,9 @@ vi:
   call_to_action_explore_unit: Khám phá đơn vị
   call_to_action_explore_curriculum: Khám phá chương trình giảng dạy
   call_to_action_explore_curriculum_options: Khám phá các lựa chọn giáo trình
+  call_to_action_explore_lessons: Khám phá các bài học
   call_to_action_explore_modules: Khám phá các mô-đun
+  call_to_action_explore_module: Khám phá mô-đun
   call_to_action_explore_workshops: Khám phá hội thảo
   call_to_action_explore_course: Khám phá khóa học
   call_to_action_explore_courses: Khám phá khóa học
@@ -259,8 +263,10 @@ vi:
   call_to_action_see_module_details: Xem thông tin chi tiết học phần
   call_to_action_start_modules: Bắt đầu học phần
   call_to_action_see_course_details: Xem thông tin chi tiết khóa học
+  call_to_action_see_lesson_details: Xem chi tiết bài học
   call_to_action_learn_about_approach: Tìm hiểu thêm về cách tiếp cận của chúng tôi
   call_to_action_try_java_lab: Dùng thử Java Lab
+  call_to_action_notify_available: Thông báo cho tôi khi có sẵn
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -334,6 +340,22 @@ vi:
   aria_label_call_to_action_csf_course_d: Xem thông tin chi tiết khóa học D
   aria_label_call_to_action_csf_course_e: Xem thông tin chi tiết khóa học E
   aria_label_call_to_action_csf_course_f: Xem thông tin chi tiết khóa học F
+  aria_label_call_to_action_ai_pl_101_videos: Xem video AI 101 dành cho giáo viên
+  aria_label_call_to_action_ai_teaching_module: Khám phá mô-đun Giảng dạy AI và Học
+    máy
+  aria_label_call_to_action_how_ai_works_lesson_01: Xem chi tiết bài học Giới thiệu
+    về Machine Learning
+  aria_label_call_to_action_how_ai_works_lesson_02: Xem chi tiết bài học Computer
+    Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Xem chi tiết bài học Neural Networks
+  aria_label_call_to_action_how_ai_works_lesson_04: Xem chi tiết bài học về Chatbots
+    và Mô hình ngôn ngữ lớn
+  aria_label_call_to_action_how_ai_works_lesson_05: Xem chi tiết bài học Generative
+    Images
+  aria_label_call_to_action_how_ai_works_lesson_06: Xem chi tiết bài học Algorithmic
+    Bias
+  aria_label_call_to_action_how_ai_works_lesson_07: Xem chi tiết bài học về Quy tắc
+    Đạo đức AI của chúng tôi
   video_title_professional_learning_program: Chương trình học chuyên nghiệp của Code.org
   curriculum_name_csf: Các nguyên tắc cơ bản về khoa học máy tính
   curriculum_name_csf_02: Bất kỳ nguyên tắc cơ bản CS nào (Khóa học A-F)
@@ -410,9 +432,9 @@ vi:
     và sự hỗ trợ của máy tính trong quá trình này. Bao gồm các hệ thống đại diện và
     những thách thức liên quan. Khám phá cách thu thập dữ liệu hỗ trợ giải quyết vấn
     đề.
-  curriculum_desc_creating_apps_with_devices: 'Khám phá vai trò của các thiết bị thực
+  curriculum_desc_creating_apps_with_devices: Khám phá vai trò của các thiết bị thực
     tế trong điện toán. Phát triển các chương trình sử dụng dữ liệu đầu vào và đầu
-    ra phần cứng. Có một phiên bản của bài học này cho cả micro: bit và Circuit Playground.'
+    ra phần cứng. Có một phiên bản của bài học này cho cả micro:bit và Circuit Playground.
   collection_hardware: Chuyên đề Phần cứng
   collection_hardware_desc: Tạo điều kiện cho học viên sử dụng dữ liệu và các thiết
     bị thực tế để giải quyết vấn đề.
@@ -445,12 +467,16 @@ vi:
   module_label_tools: Công cụ lập trình
   module_label_professional_learning: 'Đào tạo chuyên môn:'
   module_label_languages: 'Ngôn ngữ hỗ trợ:'
-  module_label_accessibility_features: 'Khả năng tiếp cận:'
+  module_label_accessibility_features: 'Trợ năng:'
   module_label_educator_tool: Công cụ dạy học
   module_label_educator_course: Khóa học dành cho giáo viên
   module_label_student_tool: Công cụ dành cho học viên
   module_label_student_product: Sản phẩm
   module_label_student_content_resources: Nội dung & tài nguyên
+  module_label_new: Mới
+  module_label_coming_soon: Sắp ra mắt
+  module_label_video_series: Loạt video
+  module_label_self_paced: Mô-đun tự theo nhịp độ
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -473,9 +499,13 @@ vi:
   module_grade_9_12_teachers: Giáo viên lớp 9-12
   module_level_beginner: Sơ cấp
   module_level_intermediate: Trung cấp
+  module_duration_45_mins: 45 phút
+  module_duration_1_hr: 1 giờ
   module_duration_2_hrs: 2 giờ
   module_duration_3_hrs: 3 giờ
+  module_duration_5_hrs: 5 giờ
   module_duration_8_hrs: 8 giờ
+  module_duration_20_hrs: 20 giờ
   module_duration_35_hrs: 35 giờ
   module_duration_lesson: Bài học
   module_duration_week: Tuần
@@ -549,8 +579,9 @@ vi:
   heading_collections: Cụm bài học
   heading_find_a_module: Tìm học phần cho lớp học của bạn
   heading_no_devices: Bạn không có thiết bị ư? Chúng tôi sẽ hỗ trợ bạn
-  heading_java_lab: Phòng thí nghiệm Java
+  heading_java_lab: Java Lab
   heading_objects_first: Đối tượng đầu tiên
+  heading_these_lessons_will: 'Những bài học này sẽ:'
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -685,6 +716,11 @@ vi:
   ai_curriculum_grades_03: 'Cấp lớp: 3-12'
   ai_curriculum_duration_03: 'Thời lượng: 1 giờ'
   ai_curriculum_btn_aria_label_03: Hãy thử hoạt động AI cho đại dương
+  ai_curriculum_title_04: Cách thức hoạt động của AI
+  ai_curriculum_desc_04: Những bài học này bổ sung cho loạt video Cách thức hoạt động
+    của AI. Mỗi bài học được ghép nối với một video duy nhất từ bộ truyện, đi sâu
+    hơn vào các khái niệm được giới thiệu trong video.
+  ai_curriculum_btn_aria_label_04: Khám phá cách thức hoạt động của AI
   ai_carousel_heading: 'Giáo viên nói gì về AI với Code.org:'
   ai_carousel_quote_01: Bài học này cũng cho học sinh của tôi cơ hội thấy rằng có
     một yếu tố quan điểm trong các hệ thống phân loại. Sau đó, khi chúng tôi bắt đầu
@@ -703,6 +739,10 @@ vi:
   ai_pl_list_04: Xem xét các tác động trong thế giới thực của AI và học máy.
   ai_pl_list_05: Khám phá các dự án cuối chương.
   ai_pl_duration: 'Thời lượng: 2 giờ'
+  ai_pl_title: Dạy AI và học máy
+  ai_pl_desc: Giới thiệu về trí tuệ nhân tạo và học máy. Đào tạo mô hình học máy bằng
+    AI Lab. và tương tác với các ứng dụng học máy. Xem xét các tác động trong thế
+    giới thực của AI và học máy.
   ai_video_series_title: Cách thức hoạt động của AI
   ai_video_series_desc: Với phần giới thiệu của Giám đốc điều hành Microsoft Satya
     Nadella, loạt video ngắn này sẽ giới thiệu cho bạn cách thức hoạt động của trí
@@ -730,6 +770,7 @@ vi:
   ai_pl_101_hero_desc: Khám phá tiềm năng mang tính cách mạng của trí tuệ nhân tạo
     (AI) trong giáo dục với loạt bài học trực tuyến miễn phí dành cho giáo viên của
     chúng tôi.
+  ai_pl_101_hero_desc_02: Một loạt bài học trực tuyến toàn diện dành cho giáo viên.
   ai_pl_101_hero_presented: Trình bày bởi
   ai_pl_101_intro_heading: AI 101 dành cho giáo viên là gì?
   ai_pl_101_intro_text: AI 101 dành cho giáo viên là chuỗi bài học đào tạo chuyên
@@ -759,7 +800,7 @@ vi:
   ai_pl_101_explore__desc_2: Trong suốt sáu năm, khóa học trực tuyến kéo dài 15 giờ
     đến từ ISTE này đã hướng dẫn giáo viên ở các cấp K-12 về các yếu tố cần thiết
     của AI trong công tác dạy và học. Khóa học được tổ chức ba lần mỗi năm và hoàn
-    toàn tách biệt với dịch vụ hỗ trợ liên tục của giảng vieen chuyên gia.
+    toàn tách biệt với dịch vụ hỗ trợ liên tục của giảng viên chuyên gia.
   ai_pl_101_explore__button_2: Bắt đầu khóa học
   ai_pl_101_explore_title_3: Giáo trình AI
   ai_pl_101_explore__desc_3: Trong giáo trình AI dành cho lớp 3-12 của Code.org, học
@@ -774,6 +815,97 @@ vi:
     tận dụng các mô hình chấm điểm tiên tiến và AI, hỗ trợ giáo viên góp ý nhiều lần
     và đánh giá thường xuyên trong suốt quá trình viết.'
   ai_pl_101_explore__button_4: Công cụ khám phá
+  ai_pl_101_video_title_1: Trò chuyện bên lò sưởi với Sal Khan và Hadi Partovi
+  ai_pl_101_video_desc_1: Tham gia Sal Khan (Học viện Khan) và Hadi Partovi (Code.org)
+    để trò chuyện bên lò sưởi về việc nắm lấy trí tuệ nhân tạo trong lớp học. Mong
+    đợi một cuộc thảo luận sôi nổi bao gồm một số chủ đề gây tranh cãi nhất xung quanh
+    AI hiện nay.
+  ai_pl_101_video_title_2: Làm sáng tỏ AI cho các nhà giáo dục
+  ai_pl_101_video_desc_2: Giới thiệu về các nguyên tắc cơ bản của Trí tuệ nhân tạo
+    sẽ trang bị cho bạn kiến thức nền tảng để hiểu tác động sâu sắc của AI trong xã
+    hội của chúng ta và sự liên quan ngày càng tăng của nó đối với lĩnh vực giáo dục.
+    Bạn sẽ có được những hiểu biết thực tế về việc tận dụng AI cho các nhiệm vụ trong
+    lớp học và tiết kiệm thời gian cho các nhiệm vụ hành chính.
+  ai_pl_101_video_title_3: Chuyển đổi việc học với AI
+  ai_pl_101_video_desc_3: Khám phá sự giao thoa giữa AI và giáo dục. Phần này khám
+    phá cách AI có thể được kết hợp với sư phạm để nâng cao việc học của học sinh.
+    Đây là một hoạt động phải tham dự đối với các nhà giáo dục đang tìm cách tận dụng
+    AI để chuyển đổi phương pháp giảng dạy của họ để làm phong phú thêm trải nghiệm
+    học tập của học sinh.
+  ai_pl_101_video_title_4: Đảm bảo cách tiếp cận có trách nhiệm với AI
+  ai_pl_101_video_desc_4: Khám phá những cân nhắc về đạo đức và các phương pháp hay
+    nhất để kết hợp trí tuệ nhân tạo trong môi trường giáo dục. Phiên này sẽ cung
+    cấp các chiến lược, tài nguyên và ví dụ cụ thể trong thế giới thực, tất cả đều
+    nhằm mục đích tìm hiểu những thành kiến tiềm năng của AI và những cân nhắc về
+    đạo đức đi kèm với nó.
+  ai_pl_101_video_title_5: Đưa AI vào lớp học
+  ai_pl_101_video_desc_5: Phần này tập trung vào việc giảng dạy về AI, đánh giá và
+    sử dụng các công cụ giáo dục AI và tận dụng AI để đánh giá học sinh. Với sự pha
+    trộn phong phú của lý thuyết, ví dụ thực tế và tài nguyên, nó nhằm mục đích trao
+    quyền cho các nhà giáo dục điều hướng bối cảnh AI và nâng cao trải nghiệm học
+    tập của học sinh.
+  ai_pl_101_video_desc_6: 'Tìm hiểu thêm về công nghệ mới thúc đẩy những thay đổi
+    lớn trong AI, bao gồm hai video mới về Mô hình ngôn ngữ lớn (như ChatGPT) và AI
+    thế hệ. Nghe cách các công nghệ mới này hoạt động trực tiếp từ các chuyên gia:
+    Mira Murati, CTO của OpenAI và Cristóbal Valenzuela, Giám đốc điều hành của RunwayML.'
+  how_ai_works_hero_heading: Cách thức hoạt động của AI
+  how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
+    loạt video của chúng tôi và các bài học kèm theo!
+  how_ai_works_intro_desc: Loạt video ngắn này và các bài học trong lớp học đi kèm
+    sẽ giới thiệu cho bạn và học sinh của bạn về cách thức hoạt động của trí tuệ nhân
+    tạo và lý do tại sao nó lại quan trọng. Bạn có thể chọn các bài học cá nhân dựa
+    trên chủ đề, khám phá toàn bộ chuỗi chủ đề trong một lớp hoặc dạy tất cả 7 bài
+    học để đào sâu hơn.
+  how_ai_works_intro_list_01: Giới thiệu với bạn về trí tuệ nhân tạo và học máy
+  how_ai_works_intro_list_02: Đi sâu vào cách AI tổng hợp hoạt động, bao gồm các mô
+    hình ngôn ngữ lớn (LLM) và tạo hình ảnh
+  how_ai_works_intro_list_03: Khám phá sự thiên vị, đạo đức, quyền riêng tư và việc
+    sử dụng AI có trách nhiệm
+  how_ai_works_intro_list_04: Chạm vào các ứng dụng trong thế giới thực của AI, bao
+    gồm cả thị giác máy tính
+  how_ai_works_lessons_heading: Bài học AI cho lớp học của bạn
+  how_ai_works_lesson_title_01: Giới thiệu về Machine Learning
+  how_ai_works_lesson_desc_01: Tìm hiểu về một dạng trí tuệ nhân tạo được gọi là học
+    máy và cách họ có thể sử dụng Quy trình giải quyết vấn đề để giúp đào tạo robot
+    giải quyết vấn đề. Tham gia vào các hoạt động học máy trong đó robot đang học
+    cách phát hiện các mẫu trong cá.
+  how_ai_works_lesson_title_02: Tầm nhìn máy tính
+  how_ai_works_lesson_desc_02: Tìm hiểu cách hoạt động của thị giác máy tính. Xem
+    video giải thích tầm nhìn máy tính và cách máy tính “nhìn thấy”. Sau đó, thiết
+    kế một thuật toán sử dụng mạng để quyết định số hiển thị bảy đoạn hiển thị và
+    kiểm tra nó.
+  how_ai_works_lesson_title_03: Mạng nơ-ron
+  how_ai_works_lesson_desc_03: Tìm hiểu cách mạng nơ-ron hoạt động. Sử dụng một vật
+    dụng để khám phá các mạng nơ-ron một cách dễ dàng. Xem video giải thích mạng nơ-ron.
+    Cuối cùng thảo luận về sự cần thiết của các quan điểm đa dạng khi tạo các hệ thống
+    khuyến nghị.
+  how_ai_works_lesson_title_04: Chatbots và mô hình ngôn ngữ lớn
+  how_ai_works_lesson_desc_04: Tìm hiểu mô hình ngôn ngữ lớn (LLM) là gì và nó hoạt
+    động như thế nào, sau đó sử dụng LLM để đồng tạo văn bản với AI. Cuối cùng, thảo
+    luận về việc LLM có thông minh hay sáng tạo hay không.
+  how_ai_works_lesson_title_05: Hình ảnh Generative
+  how_ai_works_lesson_desc_05: Tìm hiểu cách AI có thể tạo ra hình ảnh, sau đó khám
+    phá tiện ích AI khuếch tán và thảo luận xem các mô hình này có sáng tạo hay không.
+  how_ai_works_lesson_title_06: Xu hướng thuật toán
+  how_ai_works_lesson_desc_06: Thực hành cắt xén hình ảnh để khám phá sự thiên vị
+    cơ bản của thuật toán cắt xén Twitter, sau đó đọc và xem video về việc phát hiện
+    ra thuật toán thiên vị này. Cuối cùng, thảo luận về các cách để nhận biết và giảm
+    sai lệch trong các thuật toán.
+  how_ai_works_lesson_title_07: Quy tắc đạo đức AI của chúng tôi
+  how_ai_works_lesson_desc_07: Tiến hành nghiên cứu bằng cách sử dụng các bài báo
+    và video phơi bày những cạm bẫy đạo đức trong lĩnh vực trí tuệ nhân tạo mà họ
+    lựa chọn. Tập hợp tài nguyên “Quy tắc đạo đức AI của chúng tôi” trên toàn lớp
+    dành cho những người sáng tạo và nhà lập pháp AI ở khắp mọi nơi.
+  how_ai_works_lessons_in_a_day_title: AI hoạt động như thế nào trong một ngày
+  how_ai_works_lessons_in_a_day_desc: Chỉ có một ngày? Ngoài ra còn có tùy chọn để
+    giới thiệu toàn bộ loạt bài cho sinh viên trong một ngày. Hoàn hảo cho bất kỳ
+    giáo viên lĩnh vực chủ đề nào muốn giới thiệu cho học sinh về AI, hoặc thậm chí
+    là một bài học cho giáo viên khách mời.
+  how_ai_works_lessons_in_a_day_desc_02: Giới thiệu tất cả các video “Cách thức hoạt
+    động của AI” trong một ngày. Học sinh theo dõi từng video bằng cách kết hợp từ
+    vựng từ video, sau đó trả lời câu hỏi phản ánh về mỗi video.
+  how_ai_works_resources_desc: Bạn muốn tìm hiểu thêm về AI? Dưới đây là một số tài
+    nguyên bổ sung có thể giúp mở rộng việc học của bạn và học sinh của bạn.
   ai_vid_intro_caption: Giới thiệu cách thức hoạt động của AI
   ai_vid_chatbots_caption: Chatbots và mô hình ngôn ngữ lớn hoạt động như thế nào
   ai_vid_creativity_caption: AI có sự sáng tạo và trí tưởng tượng không?
@@ -1129,10 +1261,10 @@ vi:
   teach_page_additional_materials_list_desc_03: Hãy in poster có hình các tấm gương
     đáng học tập để treo trong trường và truyền cảm hứng cho học sinh của bạn thử
     môn khoa học máy tính.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1141,7 +1273,7 @@ vi:
   csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
-  csp_page_curriculum_glance_tools: Phòng thí nghiệm ứng dụng
+  csp_page_curriculum_glance_tools: App Lab
   csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csp_page_curriculum_glance_professional_languages: Tiếng Việt
@@ -1257,247 +1389,251 @@ vi:
     hoặc như một khóa học cả năm. Giáo trình miễn phí này giới thiệu cho học viên
     về hoạt động lập trình web, ứng dụng, hoạt ảnh, game và hệ thống máy tính thực
     tế.
-  csd_page_intro_heading: Chương trình giảng dạy linh hoạt để đáp ứng nhu cầu của
-    bạn
-  csd_page_intro_list_01: Giáo trình giới thiệu linh hoạt
-  csd_page_intro_list_02: Độ rộng của các chủ đề
+  csd_page_intro_heading: Giáo trình linh hoạt để đáp ứng nhu cầu của bạn
+  csd_page_intro_list_01: Giáo trình nhập môn linh hoạt
+  csd_page_intro_list_02: Phạm vi của chủ đề
   csd_page_intro_list_03: Không cần kinh nghiệm trước
   csd_page_intro_list_04: Xây dựng nhiều loại dự án khác nhau
   csd_page_intro_list_05: Thú vị và vui vẻ
-  csd_page_quote: Chương trình giảng dạy này bao gồm tất cả, được tổ chức tốt và lấy
-    học viên làm trung tâm! Sự tổ chức đáng kinh ngạc trong chương trình giảng dạy
-    là điều khiến tôi sử dụng nó năm này qua năm khác.
+  csd_page_quote: Giáo trình này rất toàn diện, sắp xếp hợp lý và lấy học viên làm
+    trọng tâm! Cấu trúc tuyệt vời của giáo trình là động lực khiến tôi vận dụng từ
+    năm này qua năm khác.
   csd_page_curriculum_glance_topics: Trí tuệ nhân tạo, Dữ liệu, Thiết kế web, Điện
-    toán thực tế, Thiết kế ứng dụng, Trò chơi và hình ảnh động, Nghệ thuật và thiết
-    kế, Lập trình
+    toán thực tế, Thiết kế ứng dụng, Game và hoạt hình, Nghệ thuật và thiết kế, Lập
+    trình
   csd_page_curriculum_glance_devices: Laptop, Chromebook
-  csd_page_curriculum_glance_tools: Phòng thí nghiệm ứng dụng, Phòng thí nghiệm game,
-    Phòng thí nghiệm AI, Phòng thí nghiệm Web
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csd_page_curriculum_glance_professional_languages: Tiếng Việt
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Chọn khóa học Khám phá CS phù hợp cho lớp học của
-    bạn
-  csd_page_pick_a_course_desc: Với bộ tùy chọn đa dạng được cung cấp cho CS Discoveries,
-    có một khóa học cho tất cả các nhu cầu khác nhau.
+  csd_page_pick_a_course_heading: Chọn khóa học Khám phá KHMT phù hợp cho lớp học
+    của bạn
+  csd_page_pick_a_course_desc: Với danh sách lựa chọn đa dạng dành cho khóa học Khám
+    phá KHMT, luôn có khóa học phù hợp với nhu cầu của bạn.
   csd_page_pick_a_course_heading_02: Bạn muốn chọn nội dung như thế nào?
-  csd_page_courses_year_desc: Qua 7 bài học học viên khám phá nhiều chủ đề khác nhau.
-  csd_page_courses_year_action_block_desc: 'Một khóa học khoa học máy tính giới thiệu
-    tạo điều kiện cho học viên tạo ra các hiện vật đích thực và tham gia vào khoa
-    học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề
-    và vui vẻ. '
-  csd_page_courses_flexible_units_desc: Mỗi bài học của CS Discoveries có thể được
-    sử dụng riêng mà không cần kinh nghiệm trước, giúp bạn chọn các bài học chính
-    xác phù hợp với lớp học của bạn.
-  csd_page_courses_collections_desc: Đi sâu hơn vào một lĩnh vực với một tập hợp các
-    bài học tập trung vào một chủ đề cụ thể.
-  csd_page_faq_question_01: Khám phá CS có được ánh xạ theo tiêu chuẩn không?
-  csd_page_faq_answer_01: CS Discoveries được viết bằng cách sử dụng cả Khung K-12
-    cho Khoa học Máy tính và tiêu chuẩn CSTA 2017 làm hướng dẫn. Hiện tại, mỗi bài
-    học trong CS Discoveries đều chứa ánh xạ đến các tiêu chuẩn CSTA 2017 có liên
-    quan. [Bản tóm tắt các ánh xạ tiêu chuẩn có thể được tìm thấy ở đây] (%{mappings_url}).
-    Phiên bản Google Sheets của các tiêu chuẩn có thể được tìm thấy tại [Tiêu chuẩn
-    CSD] (%{csd_standards_url}).
-  csd_page_faq_question_02: Làm thế nào/Tôi có thể nhận được sự phát triển chuyên
-    nghiệp cho khóa học này ở đâu?
-  csd_page_faq_answer_02: Chương trình Đào tạo chuyên môn của chúng tôi cung cấp hỗ
-    trợ quanh năm. Chương trình bắt đầu với một hội thtrực tuyến mùa hè kéo dài năm
-    ngày, nơi bạn sẽ có cơ hội làm việc thực hành với chương trình giảng dạy và gặp
-    gỡ các giáo viên khác trong khu vực của bạn. Trong suốt cả năm, chúng tôi cung
-    cấp các hội thtrực tuyến tiếp theo và hỗ trợ diễn đàn. Bạn không cần bất kỳ kinh
-    nghiệm khoa học máy tính nào trước đó để bắt đầu. Và giáo viên thích nó! 90% xếp
-    hạng nó là sự phát triển chuyên nghiệp tốt nhất từ trước đến nay. [Bấm vào đây
-    để đăng ký và tìm hiểu thêm] (%{apply_url}).
-  csd_page_faq_question_03: Tôi đang dạy CS Discoveries nhưng có ít hơn một học kỳ
-    với học viên của mình. Bạn muốn giới thiệu gì?
-  csd_page_faq_answer_03_01: Các giáo viên có lịch trình hạn chế, không thể dạy tất
-    cả các bài học Khám phá CS trong suốt một năm học, giờ đây có thể dễ dàng chỉ
-    định một bộ bài học Khám phá CS cụ thể dựa trên những gì họ muốn tập trung vào.
-    Các bộ sưu tập này vẫn giống với các bài học chính xác được tìm thấy trong CS
-    Discoveries, được nhóm lại với nhau chỉ đơn giản dựa trên các khuyến nghị của
-    chúng tôi bên dưới để đi sâu vào một lĩnh vực cụ thể của CS Discoveries. Mỗi bộ
-    sưu tập là khoảng một học kỳ hoặc ít hơn một học kỳ một chút. [Bấm vào đây để
-    xem các tùy chọn Bộ sưu tập của chúng tôi] (%{collections_url}).
-  csd_page_faq_answer_03_02: Đối với những giáo viên có lịch trình hạn chế hơn, họ
-    có khả năng chỉ định chỉ định một bài học tại một thời điểm từ CS Discoveries
-    mà không cần chỉ định toàn bộ khóa học. Chúng tôi hy vọng điều này sẽ giúp hỗ
-    trợ các lớp học dạy các bài học Khám phá CS được nhúng như một phần của các khóa
-    học lớn hơn hoặc khi giảng dạy khoa học máy tính theo một lịch trình hạn chế.
-    [Bấm vào đây để xem các bài học linh hoạt của chúng tôi] (%).
-  csd_page_faq_question_04: Những vật liệu và vật tư nào được yêu cầu cho CS Discoveries?
-  csd_page_faq_answer_04_01: Một chi phí tiềm năng cần xem xét khi giảng dạy khóa
-    học này là in ấn. Nhiều bài học có tài liệu phát tay được thiết kế để hướng dẫn
-    học viên thông qua các hoạt động. Mặc dù không bắt buộc phải in tất cả các tài
-    liệu phát tay này, nhưng nhiều tài liệu đã được thiết kế để in và chúng tôi khuyên
-    bạn nên in khi có thể.
-  csd_page_faq_answer_04_02: 'Ngoài in ấn, một số bài học yêu cầu các đồ dùng và thao
-    tác trong lớp học điển hình như: Tạp chí học viên, giấy áp phích, bút đánh dấu/bút
-    chì màu, kéo, giấy vụn, keo dán hoặc băng keo, ghi chú sau hoặc thẻ chỉ mục (hoặc
-    giấy vụn có kích thước tương tự), và thước kẻ hoặc một cạnh thẳng của một số loại.'
-  csd_page_faq_answer_04_03: 'Ngoài các tài liệu khóa học chung, các mục sau đây được
-    yêu cầu trong các bài học cụ thể:'
+  csd_page_courses_year_desc: Qua 7 bài học, học viên sẽ khám phá nhiều chủ đề khác
+    nhau.
+  csd_page_courses_year_action_block_desc: 'Khóa học khoa học máy tính nhập môn tạo
+    điều kiện cho học viên tạo ra các hiện vật đích thực và tương tác với khoa học
+    máy tính như một phương tiện sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ. '
+  csd_page_courses_flexible_units_desc: Mỗi bài học của khóa học Khám phá KHMT có
+    thể triển khai riêng mà không cần có trước kinh nghiệm, giúp bạn chọn các bài
+    học chính xác phù hợp với lớp học của bạn.
+  csd_page_courses_collections_desc: Khai thác sâu hơn một lĩnh vực với một tập hợp
+    các bài học tập trung vào một chủ đề cụ thể.
+  csd_page_faq_question_01: Khóa học Khám phá KHMT có đáp ứng các tiêu chuẩn không?
+  csd_page_faq_answer_01: Khóa học Khám phá KHMT được biên soạn bằng cách áp dụng
+    cả Khung K-12 cho môn Khoa học Máy tính và tiêu chuẩn CSTA 2017 làm định hướng.
+    Hiện tại, mỗi bài học trong Khám phá KHMT đều đáp ứng các tiêu chuẩn CSTA 2017
+    liên quan. [Bạn có thể xem bản tóm tắt các điều kiện đáp ứng tiêu chuẩn ở đây](%{mappings_url}).
+    Bạn cũng có thể xem phiên bản Google Sheets của các tiêu chuẩn tại [Tiêu chuẩn
+    CSD](%{csd_standards_url}).
+  csd_page_faq_question_02: Tôi có thể được bồi dưỡng chuyên môn cho khóa học này
+    ở đâu và bằng cách nào?
+  csd_page_faq_answer_02: Chương trình đào tạo chuyên môn của chúng tôi cung cấp dịch
+    vụ hỗ trợ quanh năm. Chương trình này bắt đầu bằng buổi hội thảo trực tuyến mùa
+    hè kéo dài năm ngày, nơi bạn sẽ có cơ hội thực hành với giáo trình và gặp gỡ các
+    thầy cô giáo khác trong khu vực. Trong suốt cả năm, chúng tôi tiếp tục tổ chức
+    các buổi hội ảo trực tuyến và hỗ trợ trên diễn đàn. Bạn không cần có trước bất
+    kỳ kinh nghiệm nào với bộ môn khoa học máy tính để bắt đầu. Giáo viên rất thích
+    chương trình này! 90% giáo viên đánh giá đây là chương trình bồi dưỡng chuyên
+    môn tốt nhất từ trước đến nay. [Nhấn vào đây để đăng ký và tìm hiểu thêm](%{apply_url}).
+  csd_page_faq_question_03: Tôi đang dạy khóa học Khám phá KHMT nhưng chỉ có thể dạy
+    dưới một học kỳ. Có đề xuất nào không?
+  csd_page_faq_answer_03_01: Các giáo viên có thời gian dạy hạn chế, không thể dạy
+    tất cả các bài học Khám phá KHMT trong cả năm học, giờ đây có thể dễ dàng chỉ
+    định một nhóm bài học Khám phá KHMT cụ thể dựa trên những nội dung mà họ muốn
+    tập trung. Các nhóm bài học này vẫn giống với các bài học có trong Khám phá KHMT,
+    được xếp nhóm với nhau dựa trên đề xuất của chúng tôi dưới đây nhằm khai thác
+    sâu một lĩnh vực cụ thể trong khóa học Khám phá KHMT. Mỗi nhóm bài học kéo dài
+    khoảng một học kỳ hoặc ngắn hơn một học kỳ một chút. [Nhấn vào đây để xem các
+    lựa chọn Nhóm bài học của chúng tôi](%{collections_url}).
+  csd_page_faq_answer_03_02: Đối với những giáo viên có thời gian dạy hạn chế hơn
+    nữa, họ có thể chỉ định từng bài học trong khóa học Khám phá KHMT mà không cần
+    chỉ định toàn bộ khóa học. Chúng tôi hy vọng phương pháp này sẽ giúp hỗ trợ các
+    lớp học dạy các bài học Khám phá KHMT kết hợp như một phần của các khóa học lớn
+    hơn hoặc khi giảng dạy môn khoa học máy tính theo thời khóa biểu hạn chế. [Nhấn
+    vào đây để xem các bài học linh hoạt của chúng tôi](%).
+  csd_page_faq_question_04: Cần có những tài liệu và dụng cụ học tập nào trong khóa
+    học Khám phá KHMT?
+  csd_page_faq_answer_04_01: Một khoản chi phí ẩn cần cân nhắc khi giảng dạy khóa
+    học này là in ấn. Nhiều bài học có tài liệu được thiết kế để hướng dẫn học viên
+    triển khai các hoạt động. Mặc dù không bắt buộc phải in tất cả tài liệu này, nhưng
+    nhiều tài liệu được thiết kế để in và chúng tôi khuyên bạn nên in khi có thể.
+  csd_page_faq_answer_04_02: 'Ngoài in ấn, một số bài học còn yêu cầu đồ dùng và dụng
+    cụ học tập điển hình trong lớp học như: Nhật ký học sinh, giấy làm poster, bút
+    đánh dấu/bút chì màu, kéo, giấy vụn, keo dán hoặc băng keo, giấy ghi chú sau hoặc
+    thẻ ghi chú (hoặc giấy vụn có kích thước tương tự), và thước kẻ hoặc dụng cụ có
+    cạnh thẳng.'
+  csd_page_faq_answer_04_03: 'Ngoài các tài liệu chung của khóa học, một số bài học
+    cụ thể yêu cầu các mục sau đây:'
   csd_page_faq_answer_04_04: Giải quyết vấn đề và tính toán
   csd_page_faq_answer_04_05: Giấy nhôm, hộp đựng nước, đồng xu (lưu ý rằng đồng xu
-    có thể được thay thế bằng một số loại trọng lượng khác có cùng kích thước). Các
-    hoạt động thay thế có sẵn nếu bạn không có quyền truy cập vào các nguồn cung cấp
-    này.
-  csd_page_faq_answer_04_06: Tạo ứng dụng với thiết bị (Tùy chọn A và Tùy chọn B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Nguồn cung cấp của nhà sản xuất, chẳng hạn như hộp khăn
-    giấy rỗng hoặc cuộn các tông hoặc giấy cào
-  csd_page_faq_answer_04_10: "* Lưu ý: Đơn vị Tạo ứng dụng với Thiết bị có hai tùy
-    chọn triển khai - một cho những người sử dụng sân chơi mạch và một cho những người
-    sử dụng micro:bit. Giáo viên không nên mua cả hai bộ thiết bị hoặc dạy cả hai
-    tùy chọn bài học vì chúng tương đương và bao gồm cùng một nội dung."
-  csd_page_faq_question_06: Làm thế nào để CS Discoveries phù hợp với các khóa học
-    Code.org khác?
-  csd_page_faq_answer_06_01: CS Discoveries được thiết kế để phù hợp một cách tự nhiên
-    giữa các khóa học [CS Fundamentals] (%{csf_url}) và khóa học [Nguyên tắc CS] (%{csp_url})
-    của chúng tôi. Mặc dù mỗi khóa học này được thiết kế để trở thành một điểm vào
-    phù hợp với lứa tuổi đối với khoa học máy tính, học viên có kinh nghiệm trước
-    đó sẽ tìm thấy nhiều chủ đề mới để khám phá và họ sẽ xem lại các chủ đề quen thuộc
-    trong bối cảnh mới lạ và thách thức hơn.
-  csc_page_top_desc: Tạo kết nối giữa khoa học máy tính (CS) và các môn học khác như
-    toán học, ngôn ngữ nghệ thuật, khoa học và nghiên cứu xã hội.
-  csc_page_intro_heading: Dạy CS trong khi bao gồm các tiêu chuẩn chủ đề cốt lõi
-  csc_page_intro_list_01: Kết hợp CS vào các môn học khác
-  csc_page_intro_list_02: Tăng cường việc học trong các môn học khác
-  csc_page_intro_list_03: Đáp ứng các tiêu chuẩn chủ đề cốt lõi
-  csc_page_intro_list_04: Cách thú vị để dạy học viên về khoa học máy tính
+    có thể được thay thế bằng một số dụng cụ khác có cùng kích thước). Chúng tôi có
+    các hoạt động thay thế nếu bạn không thể tìm được các dụng cụ này.
+  csd_page_faq_answer_04_06: Tạo ứng dụng bằng thiết bị (Lựa chọn A và Lựa chọn B)
+  csd_page_faq_answer_04_07: 'Lựa chọn A: Bố trí lớp học bằng Circuit Playgrounds.
+    Hãy truy cập [code.org/maker/circuitplayground](%{url}) để biết thêm thông tin.'
+  csd_page_faq_answer_04_08: 'Lựa chọn B: Bố trí lớp học bằng thiết bị micro:bit.
+    Hãy truy cập [code.org/maker/microbit](%{url}) để biết thêm thông tin.'
+  csd_page_faq_answer_04_09: Dụng cụ Maker như hộp khăn giấy rỗng hoặc cuộn các tông
+    hoặc giấy cào
+  csd_page_faq_answer_04_10: "* Lưu ý: Bài học Tạo ứng dụng bằng thiết bị có hai lựa
+    chọn phương thức triển khai: triển khai cho người sử dụng Circuit Playground và
+    triển khai cho người sử dụng micro:bit. Giáo viên không nên mua cả hai bộ thiết
+    bị hoặc áp dụng cả hai lựa chọn cho bài học vì hai phương thức này tương đương
+    và cùng đề cập một nội dung."
+  csd_page_faq_question_06: Làm thế nào để điều chỉnh khóa học Khám phá KHMT sao cho
+    phù hợp với các khóa học Code.org khác?
+  csd_page_faq_answer_06_01: Khám phá KHMT được thiết kế để phù hợp một cách tự nhiên
+    giữa các khóa học [Nguyên tắc cơ bản của KHMT](%{csf_url}) và khóa học [Nguyên
+    tắc KHMT](%{csp_url}) của chúng tôi. Mặc dù mỗi khóa học này được thiết kế để
+    trở thành bài học nhập môn khoa học máy tính phù hợp với lứa tuổi nhưng học viên
+    có kinh nghiệm trước đó sẽ tìm thấy nhiều chủ đề mới để khám phá và họ sẽ ôn lại
+    các chủ đề quen thuộc trong bối cảnh mới lạ và thách thức hơn.
+  csc_page_top_desc: Liên kết giữa khoa học máy tính (KHMT) và các môn học khác như
+    toán, ngữ văn, khoa học và nghiên cứu xã hội.
+  csc_page_intro_heading: Dạy KHMT mà vẫn tuân thủ các tiêu chuẩn môn học cốt lõi
+  csc_page_intro_list_01: Kết hợp KHMT vào các môn học khác
+  csc_page_intro_list_02: Củng cố việc học các môn học khác
+  csc_page_intro_list_03: Đáp ứng các tiêu chuẩn môn học cốt lõi
+  csc_page_intro_list_04: Phương pháp thú vị để dạy học viên về khoa học máy tính
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: Dễ dàng cho bất kỳ giáo viên với bất kỳ nền tảng
+  csc_page_intro_list_06: Dễ dàng cho mọi giáo viên có nền tảng khác nhau
   csc_page_curriculum_glance_topics: Liên ngành
   csc_page_curriculum_glance_devices: Máy tính xách tay, Chromebook, Máy tính bảng
-  csc_page_curriculum_glance_tools: Phòng thí nghiệm Sprite
-  csc_page_curriculum_glance_professional_learning: Mô-đun tự theo nhịp độ
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Các học phần tự học
   csc_page_curriculum_glance_professional_languages: Tiếng Việt
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: Tôi đánh giá rất cao các bài học kỹ lưỡng và nhịp độ tốt như thế
-    nào. Tôi không quen thuộc với khoa học máy tính, nhưng với những bài học bạn cung
-    cấp, tôi cảm thấy tự tin trong việc giúp học viên của mình nắm bắt các khái niệm
-    và gắn chúng vào chương trình giảng dạy của chúng tôi.
-  csc_page_find_a_module_desc: Các dịch vụ Kết nối CS hiện tại của chúng tôi dành
-    cho các lớp học từ lớp 3 đến lớp 5 và được thiết kế để dành 1 tuần với các bài
-    học 45 phút mỗi ngày.
-  csc_page_faq_question_01: Kết nối CS có được ánh xạ theo tiêu chuẩn không?
-  csc_page_faq_answer_01: Vâng! Kết nối CS được ánh xạ tới Tiêu chuẩn Nhà nước Cốt
-    lõi Chung (CCSS) cho ELA và Toán học, Tiêu chuẩn Khoa học Thế hệ Tiếp theo (NGSS)
-    và Tiêu chuẩn Hiệp hội Giáo viên Khoa học Máy tính (CSTA).
-  csc_page_faq_question_02: Chi phí để dạy CS Connections là bao nhiêu?
+  csc_page_quote: Tôi đánh giá rất cao sự toàn diện và nhịp độ hợp lý của các bài
+    học. Tôi chưa quen với môn khoa học máy tính, nhưng với những bài học cung cấp
+    trong chương trình này, tôi thấy tự tin trong việc hỗ trợ học viên của mình nắm
+    bắt các khái niệm và gắn kết với giáo trình của chúng tôi.
+  csc_page_find_a_module_desc: Các khóa học Kết nối KHMT hiện tại của chúng tôi dành
+    cho các học sinh lớp 3 đến lớp 5 và được thiết kế để triển khai trong 1 tuần với
+    các tiết học 45 phút mỗi ngày.
+  csc_page_faq_question_01: Khóa học Kết nối KHMT có đáp ứng các tiêu chuẩn không?
+  csc_page_faq_answer_01: Có! Kết nối KHMT đáp ứng các Tiêu chuẩn cốt lõi chung của
+    bang (CCSS) cho ELA và Toán, Tiêu chuẩn khoa học thế hệ mới (NGSS) và Tiêu chuẩn
+    hiệp hội giáo viên môn khoa học máy tính (CSTA).
+  csc_page_faq_question_02: Chi phí để dạy khóa học Kết nối KHMT là bao nhiêu?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: Làm thế nào/Tôi có thể nhận được sự phát triển chuyên
-    nghiệp cho CS Connections ở đâu?
-  csc_page_faq_answer_03: Chúng tôi cung cấp sự phát triển chuyên nghiệp theo nhịp
-    độ riêng cho CS Connections. Thông qua việc đọc, xem video, hoàn thành các bài
-    tập tương tác và suy ngẫm về việc học của mình, bạn sẽ phát triển sự hiểu biết
-    của riêng mình trong khi chuẩn bị dạy bất kỳ học phần CS Connections nào trong
-    lớp học của bạn. [Bắt đầu tại đây] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Học tập chuyên nghiệp cho CS Connections sắp
-    ra mắt!
-  csc_page_faq_question_04: Thời gian khuyến nghị để dạy Kết nối CS là gì?
-  csc_page_faq_answer_04: Mỗi học phần CS Connections được thiết kế để mất một tuần.
-  csc_page_faq_question_05: Tôi cần những tài liệu gì cho Kết nối CS?
+  csc_page_faq_question_03: Tôi có thể được bồi dưỡng chuyên môn cho khóa học Kết
+    nối KHMT ở đâu và bằng cách nào?
+  csc_page_faq_answer_03: Chúng tôi có triển khai hoạt động bồi dưỡng chuyên môn theo
+    nhịp độ riêng cho khóa học Kết nối KHMT. Thông qua việc đọc, xem video, hoàn thành
+    các bài tập tương tác và suy ngẫm trong quá tình học, bạn sẽ nâng cao kiến thức
+    của riêng mình trong quá trình chuẩn bị dạy bất kỳ học phần nào trong khóa học
+    Kết nối KHMT trên lớp. [Bắt đầu tại đây](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Đào tạo chuyên môn cho khóa học Kết nối KHMT
+    sắp ra mắt!
+  csc_page_faq_question_04: Thời gian đề xuất để dạy khóa học Kết nối KHMT là bao
+    lâu?
+  csc_page_faq_answer_04: Mỗi học phần của khóa học Kết nối KHMT được thiết kế để
+    dạy trong một tuần.
+  csc_page_faq_question_05: Tôi cần những tài liệu gì cho khóa học Kết nối KHMT?
   csc_page_faq_answer_05: Lý tưởng nhất là mỗi học viên sẽ có máy tính riêng và giáo
-    viên sẽ có một máy chiếu để hiển thị trình chiếu tương ứng với từng bài học.
-  csf_page_top_desc: Chương trình giảng dạy miễn phí kéo dài một năm giới thiệu cho
-    học viên các khái niệm cơ bản của khoa học máy tính và thách thức họ khám phá
-    cách máy tính và công nghệ có thể tác động đến thế giới.
-  csf_page_intro_heading: Các khóa học tiểu học miễn phí và thú vị cho mỗi lớp
-  csf_page_intro_list_01: Sáu khóa học, một cho mỗi lớp tiểu học
-  csf_page_intro_list_02: Các khóa học CS giới thiệu công bằng
+    viên sẽ có máy chiếu để trình chiếu nội dung tương ứng với từng bài học.
+  csf_page_top_desc: Giáo trình miễn phí kéo dài một năm sẽ giới thiệu cho học viên
+    các khái niệm cơ bản của khoa học máy tính và khuyến khích họ khám phá cách máy
+    tính và công nghệ tác động đến thế giới.
+  csf_page_intro_heading: Các khóa học bậc tiểu học miễn phí và thú vị cho mỗi lớp
+  csf_page_intro_list_01: Sáu khóa học, một khóa học cho mỗi lớp ở bậc tiểu học
+  csf_page_intro_list_02: Các khóa học nhập môn KHMT đại trà
   csf_page_intro_list_03: Sử dụng cùng một khóa học cho tất cả học viên trong cùng
-    một lớp, bất kể kinh nghiệm của họ
-  csf_page_intro_list_04: Tất cả các khóa học tạo điểm đầu vào phù hợp cho học viên
-  csf_page_quote: Tôi đã giảng dạy khóa học kể từ thứ Hai sau hội thtrực tuyến. Các
-    học viên và tôi YÊU nó (và giáo viên lớp học của họ cũng vậy!!!)
-  csf_page_curriculum_glance_topics: Lập trình, Internet, Trò chơi và Hoạt hình, Nghệ
-    thuật và thiết kế, Thiết kế ứng dụng
+    một lớp mà không phụ thuộc kinh nghiệm của học viên
+  csf_page_intro_list_04: Tất cả khóa học đều ở cấp độ nhập môn phù hợp với học viên
+  csf_page_quote: Tôi đã giảng dạy khóa học kể từ thứ Hai sau buổi hội thảo trực tuyến.
+    Học sinh và tôi đều RẤT THÍCH (và giáo viên của các em cũng vậy!!!)
+  csf_page_curriculum_glance_topics: Lập trình, Internet, Game và Hoạt hình, Mỹ thuật
+    và Thiết kế, Thiết kế ứng dụng
   csf_page_curriculum_glance_devices: Máy tính xách tay, Chromebook, Máy tính bảng
-  csf_page_curriculum_glance_tools: Sprite Lab, Phòng thí nghiệm chơi
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: Tiếng Ả Rập, Bahasa Indonesia, Catalán, Tiếng
-    Trung giản thể, Trung Quốc phồn thể, Séc, Pháp, Đức, Hindi, Ý, Nhật Bản, Hàn Quốc,
-    Kannada, Mã Lai, Marathi, Mông Cổ, Ba Lan, Bồ Đào Nha-BR, Rumani, Nga, Slovak,
-    Tagalog, Tamil, Thái Lan, Thổ Nhĩ Kỳ, Ukraina, Latam Tây Ban Nha, Urdu, Tây Ban
-    Nha, Uzbek, Việt Nam
+  csf_page_curriculum_glance_languages: Tiếng Ả Rập, Tiếng Indonesia, Tiếng Catalán,
+    Tiếng Trung giản thể, Tiếng Trung phồn thể, Tiếng Séc, Tiếng Pháp, Tiếng Đức,
+    Tiếng Hindi, Tiếng Ý, Tiếng Nhật, Tiếng Hàn Quốc, Tiếng Kannada, Tiếng Malaysia,
+    Tiếng Marathi, Tiếng Mông Cổ, Tiếng Ba Lan, Tiếng Bồ Đào Nha, Tiếng Rumani, Tiếng
+    Nga, Tiếng Slovak, Tiếng Tagalog, Tiếng Tamil, Tiếng Thái, Tiếng Thổ Nhĩ Kỳ, Tiếng
+    Ukraina, Tiếng Tây Ban Nha ở Châu Mỹ, Tiếng Urdu, Tiếng Tây Ban Nha, Tiếng Uzbek,
+    Tiếng Việt
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: Chọn khóa học Cơ bản CS phù hợp cho lớp học của
-    bạn
-  csf_page_pick_a_course_desc: Với bộ tùy chọn đa dạng được cung cấp cho CS Fundamentals,
-    có một khóa học cho tất cả các nhu cầu khác nhau.
-  csf_page_pick_a_course_heading_02: Học sinh của bạn sẽ tương tác với nội dung như
+  csf_page_pick_a_course_heading: Chọn khóa học Nguyên tắc cơ bản của KHMT phù hợp
+    cho lớp học của bạn
+  csf_page_pick_a_course_desc: Với danh sách lựa chọn đa dạng dành cho khóa học Nguyên
+    tắc cơ bản của KHMT, luôn có khóa học phù hợp với nhu cầu của bạn.
+  csf_page_pick_a_course_heading_02: Học viên của bạn sẽ tương tác với nội dung như
     thế nào?
-  csf_page_courses_heading: Các khóa học được thiết kế đặc biệt cho lớp học tiểu học
-    của bạn
-  csf_page_courses_desc: Tìm khóa học cho lớp bạn dạy. Mỗi khóa học kéo dài khoảng
-    một tháng.
-  csf_page_courses_self_paced_heading: Chương trình giảng dạy tiểu học tự theo nhịp
-    độ
-  csf_page_courses_self_paced_desc: Giáo viên đóng một vai trò quan trọng trong việc
-    học của học viên bằng cách dạy các hoạt động không dùng thiết bị điện tử của chúng
-    tôi và dẫn dắt các cuộc thtrực tuyến luận cả lớp, tuy nhiên, chúng tôi nhận ra
-    rằng Nguyên tắc cơ bản CS không phải lúc nào cũng được dạy trong môi trường lớp
-    học truyền thống. Chúng tôi cung cấp hai khóa học tốc hành tự theo nhịp độ cùng
-    với Khóa học A-F. Các khóa học cấp tốc này được thiết kế cho các tình huống mà
-    giáo viên giúp mỗi học viên làm việc theo tốc độ của riêng họ một cách độc lập.
-  csf_page_faq_question_01: Các nguyên tắc cơ bản của CS có được ánh xạ theo tiêu
-    chuẩn không?
-  csf_page_faq_answer_01_01: 'CS Fundamentals được viết bằng cách sử dụng cả Khung
-    K-12 cho Khoa học Máy tính và các tiêu chuẩn CSTA làm hướng dẫn. Hiện tại, mỗi
-    bài học trong CS Fundamentals đều chứa ánh xạ đến các tiêu chuẩn CSTA có liên
-    quan. Tóm tắt tất cả các ánh xạ CSTA cho mỗi khóa học có thể được tìm thấy tại:'
-  csf_page_faq_answer_01_list_01: "[Tiêu chuẩn khóa học A] (%{course_a_url})"
-  csf_page_faq_answer_01_list_02: "[Tiêu chuẩn khóa học B] (%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[Tiêu chuẩn khóa học C] (%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[Tiêu chuẩn khóa học D] (%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[Tiêu chuẩn khóa học E] (%{course_e_url})"
-  csf_page_faq_answer_01_list_06: "[Tiêu chuẩn khóa học F] (%{course_f_url})"
-  csf_page_faq_answer_01_02: Phiên bản Google Sheets của các tiêu chuẩn có thể được
-    tìm thấy tại [Tiêu chuẩn CSF] (%{csf_standards_url}).
-  csf_page_faq_question_02: Làm thế nào tôi có thể mang CS Fundamentals đến toàn trường
-    của tôi?
-  csf_page_faq_answer_02: Chương trình giảng dạy CS K-12 hàng đầu tại Hoa Kỳ, chương
-    trình tiểu học của chúng tôi đã được chứng minh là hiệu quả ở các khu học chánh
-    đô thị lớn như Dallas, cũng như các quận nông thôn nhỏ ở Iowa. Không cần phải
-    thuê chuyên gia để dạy CS. Chương trình của chúng tôi được thiết kế độc đáo để
-    hỗ trợ giáo viên mới làm quen với CS đồng thời cung cấp sự linh hoạt để phát triển
-    các bài học để phù hợp với nhu cầu của học viên. [Chia sẻ tài liệu này] (%{brochure_url})
-    với quản trị viên trường học và học khu của bạn, hoặc [đề nghị họ xem trang quản
-    trị viên của chúng tôi] (%{admins_url}) được thiết kế đặc biệt để trả lời các
-    câu hỏi phổ biến nhất của quản trị viên.
-  csf_page_faq_question_03: Chi phí để dạy CS Fundamentals là bao nhiêu?
-  csf_page_faq_question_04: Làm thế nào/Tôi có thể nhận được sự phát triển chuyên
-    nghiệp cho CS Fundamentals ở đâu?
-  csf_page_faq_answer_04_01: Mới dạy khoa học máy tính? Không phải lo lắng! Hầu hết
-    các giáo viên của chúng tôi chưa bao giờ dạy khoa học máy tính trước đây. Tham
-    gia cùng các giáo viên địa phương để được hỗ trợ truyền cảm hứng và thực hành
-    để triển khai khoa học máy tính trong lớp học của bạn. Các Đối tác Khu vực của
-    chúng tôi cung cấp các hội thtrực tuyến Code.org một ngày chất lượng cao cho từng
-    giáo viên hoặc cho PD toàn trường. [Đăng ký một hội thtrực tuyến phát triển chuyên
-    nghiệp gần bạn] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
-  csf_page_faq_question_05: Thời gian khuyến nghị để giảng dạy CS Cơ bản là gì?
+  csf_page_courses_heading: Các khóa học được thiết kế riêng cho bậc tiểu học
+  csf_page_courses_desc: Hãy tìm khóa học cho lớp mà bạn đang dạy. Mỗi khóa học kéo
+    dài khoảng một tháng.
+  csf_page_courses_self_paced_heading: Giáo trình tự học bậc tiểu học
+  csf_page_courses_self_paced_desc: Giáo viên đóng vai trò quan trọng trong quá trình
+    học tập của học viên bằng cách hướng dẫn các hoạt động không dùng thiết bị điện
+    tử và dẫn dắt các cuộc thảo luận cả lớp, tuy nhiên, chúng tôi nhận ra rằng Nguyên
+    tắc cơ bản của KHMT không phải lúc nào cũng được dạy trong môi trường lớp học
+    truyền thống. Chúng tôi cung cấp hai khóa tự học cấp tốc cùng với Khóa học A-F.
+    Các khóa học cấp tốc này được thiết kế cho các tình huống mà giáo viên giúp mỗi
+    học viên tự học tốc độ của riêng mình một cách độc lập.
+  csf_page_faq_question_01: Nguyên tắc cơ bản của KHMT có đáp ứng các tiêu chuẩn không?
+  csf_page_faq_answer_01_01: 'Nguyên tắc cơ bản của KHMT được biên soạn bằng cách
+    áp dụng cả Khung K-12 cho bộ môn Khoa học máy tính và các tiêu chuẩn CSTA làm
+    định hướng. Hiện tại, mỗi bài học trong khóa học Nguyên tắc cơ bản của KHMT đều
+    tuân thủ các tiêu chuẩn CSTA có liên quan. Bạn có thể xem bản tóm tắt tất cả điều
+    kiện đáp ứng CSTA cho mỗi khóa học tại:'
+  csf_page_faq_answer_01_list_01: "[Tiêu chuẩn khóa học A](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Tiêu chuẩn khóa học B](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Tiêu chuẩn khóa học C](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Tiêu chuẩn khóa học D](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Tiêu chuẩn khóa học E](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Tiêu chuẩn khóa học F](%{course_f_url})"
+  csf_page_faq_answer_01_02: Bạn có thể tìm thấy phiên bản Google Sheets của các tiêu
+    chuẩn tại [Tiêu chuẩn CSF](%{csf_standards_url}).
+  csf_page_faq_question_02: Làm thế nào để phổ cập khóa học Nguyên tắc cơ bản của
+    KHMT cho cả trường?
+  csf_page_faq_answer_02: Giáo trình KHMT K-12 hàng đầu tại Hoa Kỳ, chương trình tiểu
+    học của chúng tôi đã được chứng minh là phát huy hiệu quả ở các học khu đô thị
+    lớn như Dallas, cũng như các quận nông thôn nhỏ ở Iowa. Bạn không cần phải thuê
+    chuyên gia để dạy môn KHMT. Chương trình của chúng tôi được thiết kế riêng để
+    hỗ trợ giáo viên mới làm quen với KHMT, đồng thời mang đến sự linh hoạt để phát
+    triển các bài học sao cho phù hợp với nhu cầu của học viên. [Hãy chia sẻ tài liệu
+    này](%{brochure_url}) với ban giám hiệu nhà trường và học khu hoặc [đề nghị họ
+    xem trang dành cho ban giám hiệu của chúng tôi](%{admins_url}) được thiết kế chuyên
+    để trả lời các câu hỏi phổ biến nhất của ban giám hiệu.
+  csf_page_faq_question_03: Chi phí để dạy Nguyên tắc cơ bản của KHMT là bao nhiêu?
+  csf_page_faq_question_04: Tôi có thể được bồi dưỡng chuyên môn cho khóa học Nguyên
+    tắc cơ bản của KHMT ở đâu và bằng cách nào?
+  csf_page_faq_answer_04_01: Bạn mới bắt đầu dạy môn khoa học máy tính? Không cần
+    lo lắng! Hầu hết các giáo viên của chúng tôi chưa bao giờ dạy khoa học máy tính
+    trước đây. Hãy tham gia cùng các giáo viên địa phương để được truyền cảm hứng
+    và hỗ trợ thực hành triển khai môn khoa học máy tính trong lớp học của bạn. Các
+    Đối tác khu vực của chúng tôi tổ chức các buổi hội thảo trực tuyến Code.org kéo
+    dài một ngày chất lượng cao cho từng giáo viên hoặc cho PD toàn trường. [Hãy đăng
+    ký hội thảo trực tuyến bồi dưỡng chuyên môn gần bạn](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Hãy đồng hành cùng hơn 100.000 giáo viên đã tham gia
+    các buổi hội thảo của chúng tôi. Phần lớn người tham gia hội thảo đều nói rằng
+    “đây là buổi bồi dưỡng chuyên môn tuyệt nhất mà tôi từng tham gia”. Trên thực
+    tế, [90% người tham gia đề xuất chương trình của chúng tôi cho các giáo viên khác](%{rec_url})!
+  csf_page_faq_question_05: Thời gian đề xuất để dạy khóa học Nguyên tắc cơ bản của
+    KHMT là bao lâu?
   csf_page_faq_answer_05: Mỗi khóa học CSF bao gồm 13-17 bài học được thiết kế cho
-    các tiết 45 phút. Chúng tôi khuyên tất cả học viên chuyển từ bài học này sang
-    bài học khác với tốc độ do giáo viên đặt ra. Có rất nhiều cấp độ dự án do giáo
-    viên hướng dẫn được thiết kế để cùng trải nghiệm trong khi các bài học xây dựng
-    kỹ năng có thể được hoàn thành bởi học viên theo tốc độ của riêng họ.
-  csf_page_faq_question_06: Tôi cần những tài liệu gì cho CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+    các tiết học 45 phút. Chúng tôi khuyên tất cả học viên học từng bài theo tốc độ
+    do giáo viên đè ra. Có rất nhiều cấp độ dự án do giáo viên hướng dẫn được thiết
+    kế để cùng trải nghiệm. Đối với các bài học xây dựng kỹ năng, học viên có thể
+    hoàn thành theo tốc độ của riêng mình.
+  csf_page_faq_question_06: Tôi cần những tài liệu gì cho khóa học Nguyên tắc cơ bản
+    của KHMT?
+  csf_page_faq_answer_06: Nhiều bài học có tài liệu phát cho học sinh nhằm hướng dẫn
+    triển khai hoạt động. Các tài liệu này có thể in ra hoặc gửi bản mềm. Một số bài
+    học cần có dụng cụ học tập điển hình trong lớp học. [Hãy truy cập trang Đề cương
+    CSF để tìm hiểu thêm](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1510,7 +1646,7 @@ vi:
   csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csa_page_curriculum_glance_devices: Laptop, Chromebook
-  csa_page_curriculum_glance_tools: Phòng thí nghiệm Java
+  csa_page_curriculum_glance_tools: Java Lab
   csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
   csa_page_curriculum_glance_languages: Tiếng Việt
   csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
@@ -1718,6 +1854,7 @@ vi:
   not_found_desc: Không tìm thấy trang được yêu cầu
   not_found_instructions: Kiểm tra địa chỉ trang web và tải lại hoặc chọn một liên
     kết từ danh sách dưới đây.
+  company_code_dot_org: Code.org
   company_4-H: Phát triển Thanh niên 4-H
   company_asa: Tiếng Việt
   company_asos: ASOS
@@ -1770,6 +1907,7 @@ vi:
   company_evsd: Học khu East Valley
   company_eastonvilleschooldistrict: Học khu Eatonville
   company_enumclawschooldistrict: Học khu Enumclaw
+  company_ets: ET
   company_everettsd: Trường công lập Everette
   company_fsusd: Học khu thống nhất Fairfield-Suisun
   company_fayettecountypublicschools: Trường Công lập Quận Fayette
@@ -1791,6 +1929,7 @@ vi:
   company_houstonisd: Học khu độc lập Houston
   company_hcpss: Trường Công lập Quận Howard
   company_idla: Học viện học kỹ thuật số Idaho
+  company_iste: LÀ
   company_janesvilleschooldistrict: Học khu Janesville
   company_johnstoncountyschools: Trường Quận Johnston
   company_lps: Trường công lập Lincoln
@@ -12204,8 +12343,10 @@ vi:
   tutorial_ai4alldance_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_ai4allneural_string_platforms: Tất cả các trình duyệt hiện đại
   tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: Tất cả các trình duyệt hiện đại
-  tutorial_edisonmaze_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_edisonblueprint_string_platforms: Tất cả các trình duyệt hiện đại, máy
+    tính bảng Android, iPad
+  tutorial_edisonmaze_string_platforms: Tất cả các trình duyệt hiện đại, máy tính
+    bảng Android, iPad
   tutorial_milnefunctions_string_platforms: Tất cả các trình duyệt hiện đại, Trình
     đọc màn hình
   tutorial_sasmap_string_platforms: Tất cả các trình duyệt hiện đại, iPad, Trình đọc
@@ -13407,99 +13548,95 @@ vi:
     khi cầm hai đầu của biểu ngữ cầu vồng mang thương hiệu Code.org. Đằng sau họ,
     một số người đang mặc áo Code.org và vẫy cờ cầu vồng trong khi đi bộ bên cạnh
     một con bọ Volkswagen nhiều màu.
-  accessibility_hero_heading: Khả năng truy cập tại Code.org
+  accessibility_hero_heading: Trợ năng tại Code.org
   accessibility_hero_desc: Chúng tôi tận tâm loại bỏ các rào cản ngăn cản sự hòa nhập
-    và tham gia đầy đủ của học viên và giáo viên khuyết tật, đảm btrực tuyến rằng
-    MỌI học viên đều có quyền truy cập vào khoa học máy tính.
-  accessibility_efforts_title: Nỗ lực của chúng tôi cho năm 2023
-  accessibility_efforts_desc: 'Để đạt được mục tiêu của chúng tôi về một nền tảng
-    có thể truy cập đầy đủ, chúng tôi đang triển khai một kế hoạch hành động toàn
-    diện bao gồm:'
-  accessibility_efforts_card_title_1: Đào tạo khả năng tiếp cận nội bộ
+    và tham gia đầy đủ của học viên và giáo viên khuyết tật, đảm bảo rằng MỌI học
+    viên đều có khả năng tiếp cận môn khoa học máy tính.
+  accessibility_efforts_title: Nỗ lực của chúng tôi trong năm 2023
+  accessibility_efforts_desc: 'Để đạt được mục tiêu về một nền tảng mà ai cũng có
+    thể tiếp cận, chúng tôi đang triển khai một kế hoạch hành động toàn diện bao gồm:'
+  accessibility_efforts_card_title_1: Đào tạo nội bộ về trợ năng
   accessibility_efforts_card_desc_1: Nhóm sản phẩm và kỹ thuật của chúng tôi sẽ hoàn
-    thành khóa đào tạo khả năng tiếp cận toàn diện vào tháng 12 năm 2023.
+    thành khóa đào tạo toàn diện về trợ năng vào tháng 12 năm 2023.
   accessibility_efforts_card_title_2: Phân tích VPAT
-  accessibility_efforts_card_desc_2: Hoàn thành [Mẫu trợ năng sản phẩm tự nguyện]
-    (%{voluntary_url}) để thiết lập đường cơ sở và đo lường tiến độ hàng năm. Kết
-    quả có sẵn trên trang này trước tháng 9 năm 2023.
-  accessibility_efforts_card_title_3: Các công cụ hỗ trợ thiết kế có thể truy cập
+  accessibility_efforts_card_desc_2: Hoàn thành [Mẫu trợ năng sản phẩm tự nguyện](%{voluntary_url})
+    để thiết lập đường cơ sở và đo lường tiến độ hàng năm. Kết quả sẽ được đăng tải
+    trên trang này trước tháng 9 năm 2023.
+  accessibility_efforts_card_title_3: Các công cụ hỗ trợ thiết kế trợ năng
   accessibility_efforts_card_desc_3: 'Các thành viên trong nhóm sẽ có quyền truy cập
-    vào các công cụ đảm btrực tuyến tất cả các tính năng mới được thiết kế và xây
-    dựng với khả năng truy cập trong tâm trí. '
-  accessibility_efforts_card_title_4: Chương trình giảng dạy dễ tiếp cận
-  accessibility_efforts_card_desc_4: Chúng tôi sẽ đạt được [Tuân thủ WCAG Level AA]
-    (%{wcag_url}) cho một vài bài học đầu tiên của Nguyên tắc Khoa học Máy tính và
-    Khám phá Khoa học Máy tính vào tháng 12 năm 2023.
+    vào các công cụ đảm bảo tất cả các tính năng mới được thiết kế và xây dựng có
+    cân nhắc tới yếu tố trợ năng. '
+  accessibility_efforts_card_title_4: Giáo trình dễ tiếp cận
+  accessibility_efforts_card_desc_4: Chúng tôi sẽ đáp ứng yêu cầu [Tuân thủ WCAG Level
+    AA](%{wcag_url}) cho một vài bài học đầu tiên của Nguyên tắc của khoa học máy
+    tính và Khám phá khoa học máy tính vào tháng 12 năm 2023.
   accessibility_explore_title: Khám phá tài nguyên trợ năng của Code.org
   accessibility_explore_text: Trang tài nguyên trợ năng của chúng tôi cung cấp tài
-    liệu và hướng dẫn toàn diện cho các tính năng và công cụ của chúng tôi, bao gồm
-    các bài học Giờ viết mã lệnh có thể truy cập, trình đọc nhập vai, điều hướng bàn
-    phím và các tùy chọn tùy chỉnh.
+    liệu và hướng dẫn toàn diện cho các tính năng và công cụ, bao gồm các bài học
+    Giờ lập trình trợ năng, công cụ đọc văn bản, điều hướng bàn phím và các tùy chọn
+    tùy chỉnh.
   accessibility_explore_button: Xem trang tài nguyên trợ năng
-  accessibility_help_us_title: Giúp chúng tôi cải thiện
-  accessibility_help_us_text: Tại Code.org, chúng tôi nhanh nhẹn và đáp ứng phản hồi.
-    Nếu bạn có đề xuất để giúp chúng tôi cải thiện khả năng tiếp cận của các công
-    cụ và tài nguyên của chúng tôi, vui lòng liên hệ. Cảm ơn bạn đã giúp chúng tôi
-    cung cấp khoa học máy tính cho tất cả học viên!
-  accessibility_help_us_button: Hãy cho chúng tôi biết làm thế nào chúng tôi có thể
-    cải thiện
-  accessibility_commit_title: Cam kết của Code.org về khả năng truy cập
+  accessibility_help_us_title: Đóng góp ý kiến
+  accessibility_help_us_text: Tại Code.org, chúng tôi phản hồi nhiệt tình với góp
+    ý của bạn. Vui lòng liên hệ nếu bạn có đề xuất để giúp chúng tôi cải thiện tính
+    trợ năng của các công cụ và tài nguyên. Cảm ơn bạn đã giúp chúng tôi mang bộ môn
+    khoa học máy tính đến cho tất cả học viên!
+  accessibility_help_us_button: Hãy cho chúng tôi biết cách cải thiện
+  accessibility_commit_title: Cam kết của Code.org về tính trợ năng
   accessibility_commit_text_1: Code.org tin rằng khoa học máy tính là nền tảng cho
-    tất cả học viên và chúng tôi cam kết đảm btrực tuyến công bằng, quyền truy cập
-    và cơ hội trên nền tảng của chúng tôi và trong chương trình giảng dạy của chúng
-    tôi.
-  accessibility_commit_text_2: Chúng tôi đang thực hiện một cách tiếp cận toàn diện
-    để hỗ trợ nhu cầu học tập của tất cả học viên và làm việc để thu hẹp khoảng cách
-    trong việc tiếp cận giáo dục khoa học máy tính cho học viên khuyết tật.
+    tất cả học viên và chúng tôi cam kết đảm bảo sự công bằng, khả năng truy cập và
+    cơ hội trên nền tảng của chúng tôi cũng như trong giáo trình của chúng tôi.
+  accessibility_commit_text_2: Chúng tôi đang triển khai một hướng tiếp cận toàn diện
+    để hỗ trợ nhu cầu học tập của tất cả học viên và nỗ lực để thu hẹp khoảng cách
+    về khả năng tiếp cận bộ môn khoa học máy tính đối với học viên khuyết tật.
   accessibility_commit_text_3: Chúng tôi đang bắt đầu từ quy mô nhỏ, nhưng sẽ đo lường
-    tiến trình của chúng tôi và liên tục lặp đi lặp lại cho đến khi chúng tôi có thể
-    giải quyết ngay cả những thách thức về khả năng truy cập phức tạp nhất.
+    tiến trình của chúng tôi và liên tục lặp đi lặp lại cho đến khi có thể giải quyết
+    ngay cả những thách thức phức tạp nhất về trợ năng.
   accessibility_commit_text_4: Tại Code.org, chúng tôi cam kết liên tục cải thiện
-    khả năng tiếp cận của các công cụ của mình và chúng tôi rất vui mừng được thực
-    hiện bước quan trọng này để hướng tới sự công bằng, khả năng tiếp cận và cơ hội
-    cao hơn cho tất cả học viên và giáo viên.
-  accessibility_partner_title: Đối tác và khuyến nghị của chúng tôi
+    tính trợ năng của các công cụ và chúng tôi rất vui mừng được thực hiện công đoạn
+    quan trọng này nhằm hướng tới sự công bằng, khả năng tiếp cận và cơ hội cao hơn
+    cho tất cả học viên và giáo viên.
+  accessibility_partner_title: Đối tác và đề xuất của chúng tôi
   accessibility_partner_desc: Chúng tôi đề xuất các tài nguyên sau đây cho học viên
     và giáo viên đang tìm kiếm nội dung khoa học máy tính dễ tiếp cận hơn.
-  accessibility_card_title_1: Truy cậpForAll
-  accessibility_card_text_1: Tài nguyên dành cho giáo viên để đưa máy tính có thể
-    truy cập đến các trường trung học và cho học viên trung học khuyết tật để kết
-    nối với các cố vấn trong không gian công nghệ.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Tài nguyên dành cho giáo viên để đưa máy tính trợ năng
+    đến các trường trung học và cho học viên trung học khuyết tật để kết nối với các
+    chuyên gia cố vấn trong không gian công nghệ.
   accessibility_card_title_2: Blocks4All
-  accessibility_card_text_2: Một môi trường lập trình dựa trên khối cho iPad dạy các
-    khái niệm lập trình cơ bản bằng cách sử dụng robot Dash. Có thể truy cập bằng
-    VoiceOver, Switch Control và Voice Control.
-  accessibility_card_title_3: Mã Jumper
-  accessibility_card_text_3: Một tài nguyên hỗ trợ/lập trình thực tế cho học viên
-    khiếm thị.
+  accessibility_card_text_2: Môi trường lập trình khối trên iPad, dạy các khái niệm
+    lập trình cơ bản bằng robot Dash. Có thể truy cập bằng tính năng Thuyết minh,
+    Điều khiển công tắc và Điều khiển giọng nói.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: Tài nguyên hỗ trợ/lập trình thực tế cho học viên khiếm
+    thị.
   accessibility_card_title_4: CSForAll
-  accessibility_card_text_4: Một tổ chức phối hợp các dự án và chương trình với các
-    tổ chức khác nhau trên khắp Hoa Kỳ.
-  accessibility_card_title_5: Mã trẻ em điếc
+  accessibility_card_text_4: Tổ chức phối hợp các dự án và chương trình với các tổ
+    chức khác nhau trên khắp Hoa Kỳ.
+  accessibility_card_title_5: Deaf Kids Code
   accessibility_card_text_5: Thúc đẩy giáo dục khoa học máy tính và công nghệ để tạo
     điều kiện cho học viên bị điếc hoặc khiếm thính.
-  accessibility_card_title_6: Mọi người đều có thể viết mã lệnh
-  accessibility_card_text_6: Một chương trình giảng dạy được thiết kế bởi Apple cho
-    Swift Playgrounds cung cấp VoiceOver (TTSs đã sửa đổi) và chương trình giảng dạy
-    phù hợp cho học viên có nhu cầu tiếp cận.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: Giáo trình được thiết kế bởi Apple cho Swift Playgrounds
+    nhằm cung cấp tính năng Thuyết minh (phiên bản sửa đổi của tính năng TTS) và giáo
+    trình phù hợp cho học viên có nhu cầu về trợ năng.
   accessibility_card_title_7: Học viện Khan
-  accessibility_card_text_7: Một nhà cung cấp chương trình giảng dạy với nhiều tiện
-    nghi khác nhau, bao gồm chú thích, bảng điểm và khả năng giảm chuyển động hoạt
-    ảnh và ẩn nội dung phụ thuộc trực quan. Lưu trữ một số chương trình giảng dạy
-    Code.org, cộng với các chương trình giảng dạy điện toán bổ sung.
-  accessibility_card_title_8: Mạch Snap
-  accessibility_card_text_8: Một sản phẩm giáo dục dạy các thiết bị điện tử với các
-    linh kiện điện tử gắn liền với nhau không hàn. Có thể bao gồm một gói truy cập
+  accessibility_card_text_7: Nhà cung cấp giáo trình với nhiều tiện nghi khác nhau,
+    bao gồm chú thích, bảng điểm và khả năng giảm chuyển động hoạt ảnh cũng như ẩn
+    nội dung phụ thuộc vào hình ảnh. Lưu trữ một số giáo trình Code.org, kết hợp với
+    các giáo trình máy tính bổ sung.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: Một sản phẩm giáo dục dạy về các thiết bị điện tử có
+    linh kiện điện tử lắp ráp với nhau, không hàn. Có thể bao gồm một gói tiếp cận
     cho học viên khiếm thị.
   accessibility_card_title_9: Sphero
-  accessibility_card_text_9: Một quả bóng robot lập trình tương tác và bộ giáo dục
-    STEM dành cho học viên khuyết tật trí tuệ. Cần phải được ghép nối với một ứng
-    dụng thích hợp.
-  accessibility_card_title_10: 'Nhóm túc số '
-  accessibility_card_text_10: Một sự điều chỉnh của chương trình giảng dạy AP Computer
-    Science Principles của Code.org sử dụng Quorum, một ngôn ngữ dựa trên bằng chứng
-    ban đầu được thiết kế để cung cấp khả năng tiếp cận cho học viên khiếm thị hoặc
-    khiếm thị.
+  accessibility_card_text_9: Một quả bóng robot lập trình tương tác và bộ công cụ
+    giáo dục STEM dành cho học viên khuyết tật trí tuệ. Cần phải ghép nối với một
+    ứng dụng thích hợp.
+  accessibility_card_title_10: Quorum
+  accessibility_card_text_10: Bản điều chỉnh của giáo trình Nguyên tắc cơ bản của
+    khoa học máy tính AP của Code.org sử dụng Quorum, ngôn ngữ dựa trên bằng chứng
+    ban đầu được thiết kế để cung cấp tính trợ năng cho học viên mù hoặc khiếm thị.
   language_code:
     ar: tiếng Ả Rập
     az: Azerbaijani

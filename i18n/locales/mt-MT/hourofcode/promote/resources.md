@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Riżorsi
 ---
 
 {{ signup_button }}

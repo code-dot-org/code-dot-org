@@ -140,36 +140,39 @@ ko:
   teach_ai_homepage_banner_title: 전 세계를 위한 AI 교육
   teach_ai_homepage_banner_desc: Code.org는 전 세계의 모든 교육자들이 AI를 어떻게 활용하는지, AI가 무엇인지
     가르칠 수 있도록 지원하는 TeachAI에 함께 합니다.
-  curriculum_launch_2023_title: 커리큘럼에 대한 놀라운 업데이트를 소개합니다
-  curriculum_launch_2023_desc: CSC, CSP, CSD 등에 대한 업데이트와 함께 새로운 커리큘럼 카탈로그와 새롭게 디자인된
+  curriculum_launch_2023_title: 새로운 커리큘럼 업데이트를 소개합니다
+  curriculum_launch_2023_desc: CSC, CSP, CSD 등에 대한 업데이트와 새로운 커리큘럼 카탈로그, 그리고 새롭게 디자인된
     교육 페이지를 통해 모든 내용을 쉽게 찾을 수 있습니다!
-  in_partnership_with: 파트너십을 통해
-  afe_partnership_logo_alt: 아마존 퓨처 엔지니어 로고
-  afe_partnership_thanks_desc: Amazon Future Engineer는 저소득층 및 기타 불우한 아동과 청소년이 컴퓨터
-    과학 분야에서 경력을 쌓을 수 있도록 영감을 주고, 교육하고, 훈련하기 위한 포괄적인 아동 및 직업 교육 프로그램입니다.[파트너십에 대해 알아보기]
-    (%{afe_url}).
+  in_partnership_with: '파트너사:'
+  afe_partnership_logo_alt: 아마존 미래 엔지니어 로고
+  afe_partnership_thanks_desc: 아마존 미래 엔지니어 프로그램은 저소득층 및 취약계층의 아동과 청소년이 컴퓨터 과학 진로를
+    설계할 수 있도록 영감을 주고, 교육하고, 훈련하는 종합적인 아동 진로 교육 프로그램입니다. [파트너십에 대해 자세히 알아보기](%{afe_url}).
   grade_level: 학년 수준
   grade_level_label_elementary: 초등학생
   grade_level_label_middle: 중학생
   grade_level_label_high: 고등학생
-  teacher_label_csf: CS 기초 교사
+  students_label: 학생
+  teachers_label: 선생님
+  teacher_label_csf: 컴퓨터 과학 기초 교사
   teacher_label_csd: CS 디스커버리즈 선생님
-  teacher_label_csp: CS 원칙 교사
-  teacher_label_csc: CS 연결 교사
+  teacher_label_csp: 컴퓨터 과학 원칙 교사
+  teacher_label_csc: 컴퓨터 과학 연결 교사
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: '필수 자료:'
-  optional_materials: '옵션 자료:'
+  optional_materials: '추가 선택 자료:'
   call_to_action_learn_more: 더보기
   call_to_action_watch_now: 지금 시청하기
   call_to_action_try_activity: 액티비티 체험하기
   call_to_action_explore_unit: 익스플로어 유닛
   call_to_action_explore_curriculum: 커리큘럼 알아보기
   call_to_action_explore_curriculum_options: 커리큘럼 옵션 살펴보기
+  call_to_action_explore_lessons: 강의 살펴보기
   call_to_action_explore_modules: 모듈 살펴보기
+  call_to_action_explore_module: 모듈 살펴보기
   call_to_action_explore_workshops: 워크숍 둘러보기
-  call_to_action_explore_course: 코스 둘러보기
+  call_to_action_explore_course: 교육 과정 살펴보기
   call_to_action_explore_courses: 교육 과정 살펴보기
-  call_to_action_explore_full_course: 전체 과정 살펴보기
+  call_to_action_explore_full_course: 전체 교육 과정 살펴보기
   call_to_action_explore_widgets: 위젯 살펴보기
   call_to_action_explore_choice_level: 예제 선택 수준 살펴보기
   call_to_action_explore_collection: 컬렉션 살펴보기
@@ -197,7 +200,7 @@ ko:
   call_to_action_resources_tools: 프로그래밍 툴 체험하기
   call_to_action_sign_up_free: 무료 가입
   call_to_action_explore_ai_resources: AI 리소스 알아보기
-  call_to_action_explore_curriculum_catalog: 커리큘럼 카탈로그 보기
+  call_to_action_explore_curriculum_catalog: 커리큘럼 카탈로그 둘러보기
   call_to_action_see_full_curriculum_catalog: 커리큘럼 카탈로그 전체 보기
   call_to_action_find_self_paced_modules: 자기 주도 모듈 찾기
   call_to_action_join_teacher_forums: 교사 포럼 참여하기
@@ -212,8 +215,10 @@ ko:
   call_to_action_see_module_details: 모듈 세부 정보 보기
   call_to_action_start_modules: 시작 모듈
   call_to_action_see_course_details: 교육 과정 세부 정보 보기
+  call_to_action_see_lesson_details: 수업 세부 정보 보기
   call_to_action_learn_about_approach: 우리의 접근 방식에 대해 자세히 알아보기
   call_to_action_try_java_lab: 자바 랩 사용해보기
+  call_to_action_notify_available: 입고되면 알림 받기
   aria_label_call_to_action_afe: 아마존 퓨처 엔지니어에 대해 자세히 알아보기
   aria_label_call_to_action_teaching_csf: 컴퓨터 과학 기초 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csd: 컴퓨터 과학 디스커버리 교육 전문 학습 프로그램 시작
@@ -263,6 +268,15 @@ ko:
   aria_label_call_to_action_csf_course_d: 코스 D 세부 정보 보기
   aria_label_call_to_action_csf_course_e: 코스 E 세부 정보 보기
   aria_label_call_to_action_csf_course_f: 코스 F 세부 정보 보기
+  aria_label_call_to_action_ai_pl_101_videos: 교사를 위한 AI 101 동영상 보기
+  aria_label_call_to_action_ai_teaching_module: 교육 AI 및 머신 러닝 모듈 살펴보기
+  aria_label_call_to_action_how_ai_works_lesson_01: 머신 러닝 입문 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_02: 컴퓨터 비전 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_03: 신경망 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_04: 챗봇 및 대규모 언어 모델 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_05: 제너레이티브 이미지 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_06: 알고리즘 편향 강의 세부 정보 보기
+  aria_label_call_to_action_how_ai_works_lesson_07: AI 윤리 강령 강의 세부 정보 보기
   video_title_professional_learning_program: Code.org의 전문 학습 프로그램
   curriculum_name_csf: 컴퓨터 과학 기초
   curriculum_name_csf_02: 모든 CS 기초 (A-F 과정)
@@ -355,6 +369,10 @@ ko:
   module_label_student_tool: 학생 도구
   module_label_student_product: 제품
   module_label_student_content_resources: 콘텐츠 및 리소스
+  module_label_new: 신규
+  module_label_coming_soon: 곧 출시됩니다
+  module_label_video_series: 비디오 시리즈
+  module_label_self_paced: 자습형 모듈
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -377,9 +395,13 @@ ko:
   module_grade_9_12_teachers: 9-12세 담당 교사
   module_level_beginner: 초급
   module_level_intermediate: 중급
+  module_duration_45_mins: 45분
+  module_duration_1_hr: 1시간
   module_duration_2_hrs: 2시간
   module_duration_3_hrs: 3시간
+  module_duration_5_hrs: 5시간
   module_duration_8_hrs: 8시간
+  module_duration_20_hrs: 20시간
   module_duration_35_hrs: 35시간
   module_duration_lesson: 수업
   module_duration_week: 주
@@ -445,6 +467,7 @@ ko:
   heading_no_devices: 기기가 없나요?저희가 도와드리겠습니다
   heading_java_lab: 자바 랩
   heading_objects_first: 오브젝트 우선
+  heading_these_lessons_will: 이러한 수업은 다음과 같습니다.
   professional_learning_section_desc: 가르칠 준비를 하면서 필요한 지원을 받으십시오.90% 이상이 최고의 전문성 개발로
     선정되어 교사들이 좋아합니다!
   professional_learning_section_desc_short: 가르칠 준비를 하면서 필요한 지원을 받으십시오.
@@ -547,6 +570,10 @@ ko:
   ai_curriculum_grades_03: '학년 수준: 3-12'
   ai_curriculum_duration_03: '활동 소요시간: ~1시간'
   ai_curriculum_btn_aria_label_03: AI 포 오션스 액티비티 체험하기
+  ai_curriculum_title_04: AI 작동 방식
+  ai_curriculum_desc_04: 이 강의는 AI 작동 방식 동영상 시리즈를 보완합니다.각 강의는 시리즈의 단일 비디오와 함께 제공되어
+    비디오에서 소개된 개념을 더 자세히 살펴봅니다.
+  ai_curriculum_btn_aria_label_04: AI 작동 원리 살펴보기 강의
   ai_carousel_heading: 'Code.org를 활용한 AI에 대한 교사들의 의견:'
   ai_carousel_quote_01: 또한 이 수업을 통해 학생들은 분류 체계에 의견 요소가 있다는 것을 알 수 있었습니다.나중에 AI에서 편견이
     어떻게 나타날 수 있는지 알아보기 시작했을 때, 모델을 학습하는 데 사용되는 데이터가 선택에 기반한다는 것을 상기시킬 수 있었습니다.
@@ -560,6 +587,9 @@ ko:
   ai_pl_list_04: AI와 머신 러닝이 현실에 미치는 영향을 생각해 보세요.
   ai_pl_list_05: 챕터 종료 프로젝트를 살펴보세요.
   ai_pl_duration: '기간: 2시간'
+  ai_pl_title: AI 및 머신 러닝 교육
+  ai_pl_desc: 인공 지능 및 머신 러닝에 대한 소개AI Lab을 사용하여 머신 러닝 모델을 트레이닝하고 머신 러닝 앱에 참여하세요.AI와
+    머신 러닝이 현실에 미치는 영향을 생각해 보세요.
   ai_video_series_title: AI 작동 방식
   ai_video_series_desc: 마이크로소프트 CEO 사티아 나델라 (Satya Nadella) 의 소개와 함께 이 짧은 동영상 시리즈에서는
     인공 지능이 어떻게 작동하고 왜 중요한지 소개합니다.그런 다음 알고리즘 편향과 AI 의사 결정의 윤리와 같은 문제를 탐구해 보세요.
@@ -580,6 +610,7 @@ ko:
   ai_resources_btn_aria_label_03: 교사를 위한 AI 웹사이트 살펴보기
   ai_pl_101_hero_heading: 교사를 위한 AI 101
   ai_pl_101_hero_desc: 교육자를 위한 무료 온라인 학습 시리즈를 통해 교육 분야에서 인공 지능 (AI) 의 혁신적인 잠재력을 알아보십시오.
+  ai_pl_101_hero_desc_02: 교사를 위한 종합 온라인 학습 시리즈.
   ai_pl_101_hero_presented: 에 의해 제시
   ai_pl_101_intro_heading: 교사를 위한 AI 101이란 무엇입니까?
   ai_pl_101_intro_text: AI 101 for Teachers는 획기적인 인공 지능 (AI) 세계와 교육의 혁신적인 잠재력에 관심이
@@ -610,6 +641,65 @@ ko:
     쓰기, 수정, 편집, 반영을 통해 학습자를 지도합니다.ETS는 최첨단 채점 모델과 AI를 활용하여 교사들이 글쓰기 경험 전반에 걸쳐 반복적인
     피드백과 형성적 평가를 제공하도록 지원함으로써 작문 경험을 개인화합니다.
   ai_pl_101_explore__button_4: 탐색 도구
+  ai_pl_101_video_title_1: 살 칸, 하디 파르토비와의 노변 대화
+  ai_pl_101_video_desc_1: 살 칸 (칸 아카데미) 과 하디 파르토비 (Code.org) 와 함께 강의실에서 인공 지능을 수용하는
+    방법에 대해 이야기를 나눠보세요.오늘날 AI와 관련하여 가장 논란이 많은 몇 가지 주제를 포함하여 활발한 토론을 기대하세요.
+  ai_pl_101_video_title_2: 교육자를 위한 AI 이해하기
+  ai_pl_101_video_desc_2: AI가 우리 사회에 미치는 심오한 영향과 교육 분야와의 관련성이 높아짐에 대해 이해하는 데 필요한 기초
+    지식을 갖추게 해 줄 인공 지능의 기초를 소개합니다.강의실 작업에 AI를 활용하고 관리 작업에 소요되는 시간을 절약할 수 있는 실용적인 통찰력을
+    얻을 수 있습니다.
+  ai_pl_101_video_title_3: AI를 통한 학습 혁신
+  ai_pl_101_video_desc_3: AI와 교육의 교차점을 살펴보세요.이 세션에서는 AI를 교육학과 결합하여 학생 학습을 향상시키는 방법을
+    살펴봅니다.AI를 활용하여 교육 관행을 혁신하여 학생들의 학습 경험을 향상시키려는 교육자는 반드시 참석해야 합니다.
+  ai_pl_101_video_title_4: AI에 대한 책임감 있는 접근 방식 보장
+  ai_pl_101_video_desc_4: 교육 환경에 인공 지능을 통합하기 위한 윤리적 고려 사항 및 모범 사례를 살펴보세요.이 세션에서는 AI의
+    잠재적 편견과 그에 따른 윤리적 고려 사항을 이해하기 위한 구체적인 전략, 리소스 및 실제 사례를 제공합니다.
+  ai_pl_101_video_title_5: 강의실에 AI 도입
+  ai_pl_101_video_desc_5: 이 세션은 AI에 대한 교육, AI 교육 도구 평가 및 활용, 학생 평가를 위한 AI 활용에 중점을
+    둡니다.이론, 실제 사례 및 리소스가 풍부하게 혼합되어 교육자가 AI 환경을 탐색하고 학생의 학습 경험을 향상시킬 수 있도록 지원하는 것을
+    목표로 합니다.
+  ai_pl_101_video_desc_6: '대규모 언어 모델 (예: ChatGPT) 및 제너레이티브 AI에 대한 두 개의 새로운 비디오를 통해
+    AI의 큰 변화를 주도하는 새로운 기술에 대해 자세히 알아보세요.OpenAI의 CTO인 미라 무라티 (Mira Murati) 와 런웨이ML
+    CEO 크리스토발 발렌수엘라 (Cristóbal Valenzuela) 등 전문가들로부터 이러한 신기술이 어떻게 작동하는지 직접 들어보세요.'
+  how_ai_works_hero_heading: AI 작동 방식
+  how_ai_works_hero_desc: 동영상 시리즈와 함께 제공되는 강의를 통해 “How AI 작동 방식”을 통해 AI의 세계로 빠져들어
+    보세요!
+  how_ai_works_intro_desc: 이 짧은 동영상 시리즈와 함께 제공되는 강의실 수업은 여러분과 학생들에게 인공 지능이 어떻게 작동하고
+    왜 중요한지 소개합니다.주제에 따라 개별 수업을 선택하거나, 한 수업에서 전체 주제 시리즈를 탐색하거나, 7개의 강의를 모두 가르쳐 더 깊이
+    파고들 수 있습니다.
+  how_ai_works_intro_list_01: 인공 지능과 머신 러닝을 소개합니다
+  how_ai_works_intro_list_02: 대규모 언어 모델 (LLM) 및 이미지 생성을 비롯한 제너레이티브 AI의 작동 방식 자세히 알아보기
+  how_ai_works_intro_list_03: 편견, 윤리, 개인 정보 보호 및 AI의 책임 있는 사용에 대해 알아보세요
+  how_ai_works_intro_list_04: 컴퓨터 비전을 포함한 AI의 실제 응용 프로그램을 살펴보세요.
+  how_ai_works_lessons_heading: 수업을 위한 AI 수업
+  how_ai_works_lesson_title_01: 머신 러닝 소개
+  how_ai_works_lesson_desc_01: 머신 러닝이라는 인공 지능의 한 형태에 대해 알아보고 문제 해결 프로세스를 사용하여 로봇이
+    문제를 해결하도록 훈련하는 방법을 알아봅니다.로봇이 물고기의 패턴을 감지하는 방법을 학습하는 기계 학습 활동에 참여하세요.
+  how_ai_works_lesson_title_02: 컴퓨터 비전
+  how_ai_works_lesson_desc_02: 컴퓨터 비전이 어떻게 작동하는지 알아보십시오.컴퓨터 비전과 컴퓨터가 “보는” 방법을 설명하는
+    비디오를 시청하십시오.그런 다음 네트워크를 사용하여 7세그먼트 디스플레이에 표시되는 숫자를 결정하는 알고리즘을 설계하고 테스트합니다.
+  how_ai_works_lesson_title_03: 뉴럴 네트워크
+  how_ai_works_lesson_desc_03: 신경망이 어떻게 작동하는지 알아보세요.위젯을 사용하여 직접 신경망을 탐색해 보세요.신경망을
+    설명하는 비디오를 시청하십시오.마지막으로 추천 시스템을 만들 때 다양한 관점의 필요성에 대해 논의하십시오.
+  how_ai_works_lesson_title_04: 챗봇 및 대규모 언어 모델
+  how_ai_works_lesson_desc_04: 대형 언어 모델 (LLM) 이 무엇이고 어떻게 작동하는지 알아본 다음 LLM을 사용하여 AI와
+    함께 텍스트를 생성하세요.마지막으로 LLM이 지능적인지 창의적인지 논의하십시오.
+  how_ai_works_lesson_title_05: 제너레이티브 이미지
+  how_ai_works_lesson_desc_05: AI가 이미지를 생성하는 방법을 알아본 다음 확산 AI 위젯을 살펴보고 이러한 모델이 창의적인지
+    여부를 논의하세요.
+  how_ai_works_lesson_title_06: 알고리즘 편향
+  how_ai_works_lesson_desc_06: 이미지 자르기를 연습하여 Twitter 자르기 알고리즘의 근간이 되는 편향을 알아낸 다음 이
+    편향된 알고리즘의 발견에 대한 동영상을 읽고 시청해 보세요.마지막으로, 알고리즘의 편향을 인식하고 줄이는 방법에 대해 논의하십시오.
+  how_ai_works_lesson_title_07: AI 윤리강령
+  how_ai_works_lesson_desc_07: 선택한 인공 지능 분야의 윤리적 함정을 폭로하는 기사 및 비디오를 사용하여 연구를 수행하십시오.전
+    세계의 AI 제작자와 입법자를 위한 학급 전반의 “AI 윤리 강령” 자료를 준비하세요.
+  how_ai_works_lessons_in_a_day_title: 하루 만에 AI가 작동하는 방식
+  how_ai_works_lessons_in_a_day_desc: 하루밖에 안 남았어요?하루 만에 학생들에게 전체 시리즈를 소개할 수 있는 옵션도
+    있습니다.학생들에게 AI를 소개하거나 초빙 강사를 위한 수업으로 사용하려는 모든 과목 영역 교사에게 적합합니다.
+  how_ai_works_lessons_in_a_day_desc_02: "“AI 작동 방식” 동영상을 모두 하루 만에 소개하세요.학생들은 각 동영상의
+    내용을 따라가며 영상의 어휘를 맞추고, 각 동영상에 대한 반성 질문에 답합니다."
+  how_ai_works_resources_desc: AI에 대해 더 자세히 알고 싶으신가요?다음은 여러분과 학생들의 학습을 연장하는 데 도움이
+    될 수 있는 몇 가지 추가 리소스입니다.
   ai_vid_intro_caption: AI 작동 방식 소개
   ai_vid_chatbots_caption: 챗봇과 대규모 언어 모델의 작동 방식
   ai_vid_creativity_caption: AI에 창의성과 상상력이 있나요?
@@ -842,10 +932,10 @@ ko:
   teach_page_additional_materials_list_heading_03: 교실 포스터
   teach_page_additional_materials_list_desc_03: 다양한 롤모델의 포스터를 인쇄해 교실에 붙이고, 학생들이 컴퓨터
     과학에 도전하도록 동기부여를 해주세요.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1025,10 +1115,10 @@ ko:
   csd_page_faq_answer_04_05: 알루미늄 호일, 물통, 페니 (페니는 같은 크기의 다른 무게로 바꿀 수 있음).이러한 물품을 이용할
     수 없는 경우 대체 활동을 이용할 수 있습니다.
   csd_page_faq_answer_04_06: 장치를 사용하여 앱 생성 (옵션 A 및 옵션 B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: '옵션 A: 교실용 서킷 플레이그라운드 세트. 자세한 내용은 [code.org/maker/circuitplayground](%{url})를
+    참조하세요.'
+  csd_page_faq_answer_04_08: '옵션 B: 교실용 마이크로비트 장치 세트. 자세한 내용은 [code.org/maker/microbit](%{url})를
+    참조하세요.'
   csd_page_faq_answer_04_09: 빈 티슈 박스, 판지 롤 또는 스크래치 페이퍼와 같은 메이커 소모품
   csd_page_faq_answer_04_10: "*참고: 장치로 앱 만들기 유닛에는 두 가지 구현 옵션이 있습니다. 하나는 회로 플레이그라운드를
     사용하는 경우이고 다른 하나는 micro:bit 를 사용하는 경우입니다.교사는 두 장치 세트를 모두 구입하거나 두 장치 옵션을 모두 가르쳐서는
@@ -1129,9 +1219,8 @@ ko:
     속도로 수업을 옮길 것을 권장합니다.학생들이 각자의 속도에 맞춰 기술 습득 수업을 완료할 수 있도록 고안된 교사 주도 프로젝트 레벨이 많이
     있습니다.
   csf_page_faq_question_06: CS 기초에 필요한 자료는 무엇입니까?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: 대부분의 수업에는 학생 활동을 안내하는 유인물이 있습니다. 인쇄해 사용하시거나 온라인으로 배포할 수
+    있습니다. 일부 수업에는 일반적인 교실 용품과 교구가 필요합니다. [자세한 내용은 CSF 강의 계획서를 참조하세요](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1315,6 +1404,7 @@ ko:
   not_found_title: 페이지를 찾을 수 없습니다.
   not_found_desc: 요청한 페이지를 찾을 수 없습니다. 주소를 정확히 입력했는지 확인해보세요.
   not_found_instructions: 웹 주소를 확인 하 고 다시 제출 또는 아래 목록에서 링크를 선택하십시오.
+  company_code_dot_org: Code.org
   company_4-H: 4-H 클럽
   company_asa: 사교육 연합
   company_asos: ASOS
@@ -1367,6 +1457,7 @@ ko:
   company_evsd: 이스트 밸리 학군
   company_eastonvilleschooldistrict: 이턴빌 학군
   company_enumclawschooldistrict: 이늠클로 학군
+  company_ets: ETS
   company_everettsd: 에버렛 공립학교
   company_fsusd: 페어필드 -수순 언합 학군
   company_fayettecountypublicschools: 파이에트 카운티 공립학교
@@ -1388,6 +1479,7 @@ ko:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: 사이트
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -9327,8 +9419,8 @@ ko:
   tutorial_ai4alldance_string_platforms: 모든 최신 브라우저
   tutorial_ai4allneural_string_platforms: 모든 최신 브라우저
   tutorial_spheroinout_string_platforms: 언플러그드
-  tutorial_edisonblueprint_string_platforms: 모든 최신 브라우저
-  tutorial_edisonmaze_string_platforms: 모든 최신 브라우저
+  tutorial_edisonblueprint_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_edisonmaze_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_milnefunctions_string_platforms: 최신 웹 브라우저
   tutorial_sasmap_string_platforms: 모든 최신 브라우저, iPad, 스크린 리더
   tutorial_firstrobotics_string_platforms: 모든 최신 브라우저

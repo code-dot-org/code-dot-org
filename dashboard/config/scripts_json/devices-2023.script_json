@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "devices",
-    "serialized_at": "2023-08-08 18:40:03 UTC",
+    "serialized_at": "2023-08-14 17:01:18 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2350,10 +2350,21 @@
       }
     },
     {
-      "key": "7185cee2-aea6-49ea-85a8-349c40569dc5",
+      "key": "367ad0f6-4b87-42e7-91b0-55ac5c18a438",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook.",
+        "description": "**Discussion Goal:** This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up."
+      },
+      "seeding_key": {
+        "activity_section.key": "367ad0f6-4b87-42e7-91b0-55ac5c18a438",
+        "lesson_activity.key": "7782d0ed-1e1e-43a8-a3ed-bff25eb008fe"
+      }
+    },
+    {
+      "key": "7185cee2-aea6-49ea-85a8-349c40569dc5",
+      "position": 4,
+      "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2363,7 +2374,7 @@
     },
     {
       "key": "c28cb16f-a664-4d78-a918-d22baca111d6",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2374,7 +2385,7 @@
     },
     {
       "key": "0427e5cf-fa67-4e0b-91ff-babe7fb30ca5",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2391,7 +2402,7 @@
     },
     {
       "key": "790c204a-1f43-44c2-96ac-783d39a3e335",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },

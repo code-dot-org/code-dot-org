@@ -1,5 +1,5 @@
 ---
-title: Activity Guidelines
+title: Veiklos gairės
 ---
 
 <style>
@@ -8,271 +8,271 @@ title: Activity Guidelines
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# “Hour of Code™” ir “Computer Science Education Week” vadovėlių ir pamokų kūrimo ir pateikimo gairės
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org talpina įvairias “Hour of Code™” veiklas, pamokas ir vaizdo įrašus “Code.org” ir “Hour of Code” svetainėse. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Norite pateikti savo savarankišką vadovėlį, mokytojo vadovaujamą pamoką ar robotų/formuotojų veiklą, kuri paaiškina informatikos principą? Prisijunkite prie šio pasaulinio judėjimo ir padėkite dalyviams visame pasaulyje pradėti nuo valandos kodo arba eiti toliau su kelių pamokų, dienos ar savaitės trukmės veikla.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**Perskaitę gaires, galite pateikti savo veiklą per mūsų [Hour of Code™ Activity Pateikimo puslapis](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Galite pateikti veiklą bet kuriuo metu, tačiau įtraukimo į bet kuriuos kalendorinius metus terminas yra spalio 1 d. (Pavyzdžiui, bet kokia veikla, gauta po 2023 m. Spalio 1 d., Nebus įtraukta į 2023 metų kodekso valandą.)** Jei turite klausimų apie savo veiklos pateikimą, susisiekite su mumis adresu support@code.org.
 
-A few tips:
+Keletas patarimų:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Pateikite daugiau nei vieną veiklą**: Jei sukūrėte įvairių lygių, skirtingo amžiaus ar kitų kategorijų veiklą, mes išvardijame jūsų veiklą atskirai, kad kiekvienas mokytojas galėtų rasti tinkamą dalyką savo klasei. Pateikite kiekvieną pamoką ar veiklą atskirai. Atsižvelgiant į pastaraisiais metais matytų pranešimų skaičių, turėsime laiko peržiūrėti **iki 5 veiklų** vienam partneriui. Po to mes stengsimės peržiūrėti kuo daugiau, kol prasidės “Hour of Code”.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Be pradedančiųjų pamokų**: Be pamokų mokytojams ir studentams, kurie pirmą kartą mokosi informatikos, pateikiame mokymosi patirtį kompiuterių mokslo išminties klasėms, kurios nori eiti šiek tiek toliau! Padėkite mums pateikdami pamokas klasėms, kurios jau yra patogios pagrindams.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Dalykinės sritys**: Ar puiki pamoka idėja, kuri integruoja kompiuterių mokslą į matematiką? Istorija? Kalbos menai? Mokslas? Menas? Arba kitas dalykas? Mes turėjome daug prašymų iš mokytojų, kurie nori prijungti Kodo valandą prie savo dalyko srities. Mokytojai gali filtruoti savo klasės tipą (pažymių grupę ar dalyko sritį), todėl mums reikia jūsų pagalbos užpildant spragas, kad galėtume pasiūlyti klasių veiklą ar pamokų planus, kurie susiję CS su kiekviena pagrindine dalykine sritimi skirtingoms pažymių grupėms. Mes taip pat ir toliau turime “Computer Science” kategoriją mokytojams, kurie ieško bendrosios CS veiklos.
 
 <a id="top"></a>
 
-## Index:
+## Indeksas:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Ką pateikti](#whatsubmit)
+- [Bendrosios “Code™” veiklos valandos kūrimo gairės](#guidelines)
+- [Kaip pateikti](#submit)
+- [Kaip bus vertinama veikla](#inclusion)
+- [Pasiūlymai jūsų veiklos projektavimui](#design)
+- [Prekių ženklų gairės](#tm)
+- [Pikselių sekimas](#pixel)
+- [Skatinti savo veiklą, CSedWeek, ir Valanda kodas](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Ką pateikti
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Savarankiškas galvosūkis ar žaidimas ([](https://code.org/dance)pavyzdys)**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Ši veikla yra skirta studentams savarankiškai nukreipti per pamoka. Jie nereikalauja daug instrukcijų iš mokytojo ar mokytojo prep darbą.
 
 **Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Dabar, kai šimtai tūkstančių pedagogų išbandė Kodekso valandą, daugelis klasių yra pasirengę kūrybiškesnėms veikloms, mokančioms informatikos pagrindų. Norėdami padėti labiau pažengusiems mokytojams rasti įkvėpimo, mes renkame ir kuruojame “mokytojų vadovaujamas” pamokas ir veiklos planus “Hour of Code” veteranams.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Vienos rūšies veikla, kurią vykdysime patyrusiems mokytojams, yra “atviros smėlio dėžės” kūrimo projektai. Veikla, skatinanti mokinius kurti savo programą, žaidimą, svetainę ar kitą projektą. Tinkamai palengvinus, atviresnė veikla gali geriau parodyti kompiuterių mokslo kūrybinį pobūdį.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Kai kurie pedagogai taip pat gali pageidauti surengti “Hour of Code” veiklą, kuri laikosi tradicinio pamokos formato, o ne vadovo-galvosūkio/žaidimo patirties.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Galite pradėti nuo šio [šablono](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) savo pamokų planui.
 
-**Activities for teachers in other subjects/fields**
+**Kitų dalykų/sričių mokytojams skirta veikla**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Mes taip pat turime pamokų planus, skirtus skirtingoms dalykinėms sritims. Pavyzdžiui, vienos valandos pamokų planas, skirtas mokyti kodą geometrijos klasėje. Arba mad-lib pratimas anglų klasei. Arba kūrybinė viktorinos kūrimo veikla istorijos klasei. Tai gali padėti įdarbinti kitų dalykinių sričių mokytojus, kurie vadovaus “Hour of Code” veiklai, kuri yra unikali jų sričiai, tuo pačiu parodydama, kaip CS gali paveikti ir sustiprinti daugybę skirtingų dalykinių sričių.
 
-Examples:
+Pavyzdžiai:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Veidrodiniai vaizdai (veikla dailės mokytojui)
+- Arduino veikla fizikos mokytojui
+- Istorijos mokytojo technologijos veiklos istorija
+- Ir žr. [šį sąrašą](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) , jei norite gauti daugiau pedagogų idėjų (arba įtraukite savo į sąrašą, kad įkvėptumėte kitus)
 
-**For students with special needs**
+**Studentams su specialiais poreikiais**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Jei kuriate veiklą ar vadovėlį, skirtą specialiųjų poreikių studentams, skambinkite aprašyme. Visų pirma, regėjimo sutrikimui yra labai nedaug galimybių. Jei jūsų veikla skirta šiai auditorijai, praneškite mums.
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Bendrosios Kodo valandos veiklos sukūrimo gairės
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Kodo valandos tikslas yra suteikti pradedantiesiems prieinamą pirmąjį informatikos ar programavimo skonį. Tonas turėtų būti toks:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- Kiekvienas gali mokytis informatikos - nepriklausomai nuo amžiaus, lyties, rasės ar gebėjimo/negalios.
+- Kompiuterių mokslas yra susijęs su įvairiomis sritimis ir interesais. Visi turėtų to išmokti!
+- Skatinkite studentus sukurti kažką unikalaus, kuriuo būtų galima pasidalyti su tėvais/draugais ar internetu.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Veikla turėtų išmokyti informatikos koncepcijos, tokios kaip kilpos, sąlygos, šifravimas ar kaip veikia internetas. Veikla taip pat gali išmokyti apie tai, kaip kompiuterių mokslas jungiasi su realaus pasaulio profesijomis, įvykiais ar istorija. Pavyzdžiui, mokyti UX dizainą kurti programas, kurios būtų prasmingos auditorijai ar priežasčiai. Mes atgrasome nuo veiklos, kuri orientuota į programavimo sintaksę, o ne sąvokas. Pavyzdžiui, mes išvardinsime, bet ne paryškinsime veiklą, kuri moko HTML. Panašiai mes atgrasome blokuoti programavimo pamokas, kuriose daugiausia dėmesio skiriama konfigūracijos parinkčių nustatymui/keitimui, o ne mokymuisi modeliuoti algoritmą ar procesą.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Veikla, kuriai reikia įdiegti programą, darbalaukio programą ar žaidimų konsolę, yra gerai, bet ne ideali. Mes neišvardinsime veiklos, kuriai reikia prisiregistruoti ar sumokėti. (Robotikos veiklai gali prireikti įsigyti robotikos.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Studentų vadovaujama (savarankiškai vadovaujama) Formatas:* Originali kodo valanda buvo daugiausia pagrįsta savarankiškų vadovėlių ar pamokų sėkme, kurią pasirinktinai padėjo mokytojas. Yra daugybė esamų variantų, tačiau jei norite sukurti naują, ši veikla turėtų būti sukurta taip, kad jie galėtų būti linksmi studentui, dirbančiam vienam, arba klasėje, kurios mokytojas turi minimalų prep arba CS foną. Jose turėtų būti numatytos kryptys studentams, o ne atviro valandos trukmės iššūkis. Idealiu atveju instrukcijos ir vadovėliai būtų integruoti tiesiai į programavimo platformą, kad būtų išvengta skirtukų ar langų perjungimo tarp mokymo ir programavimo platformos.
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Kaip pateikti
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Apsilankykite [valandos kodo™ veiklos pateikimo puslapyje](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) ir užpildykite klausimus, kad pateiktumėte savo veiklą.
 
-What you’ll need:
+Ką jums reikės:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Pirminio kontakto, atstovaujančio pateiktą veiklą, vardas, pavardė ir el. Paštas
+* Veiklos pavadinimas (pavadinime negali būti “Kodo valanda”)
+* URL nuoroda į veiklą
+* Veiklos aprašymas (maks. Simbolių skaičius: 400) 
+    * Prašome įtraukti į aprašymą, ar tai daugiausia studentų vadovaujasi ar mokytojas palengvino. Be to, kai kurios mokyklos yra suinteresuotos žinoti, ar “Hour of Code” veikla yra susijusi su bendraisiais pagrindiniais ar naujos kartos mokslo standartais. Jei veikla susijusi su konkrečiais standartais, apsvarstykite galimybę įtraukti šią informaciją.
+* Rekomenduojamas (-i) klasės lygis (-ai) numatytiems vartotojams. Galite kreiptis į \[Computer Science Teachers' Association anketa K-12 Standartai\] (https://k12cs.org/framework-statements-by-grade-band/) už laipsnį-tinkamas kompiuterių mokslo sąvokas. Pavyzdys laipsnio lygiai apima: 
+    * Vaikų darželis - 1 klasė (4—6 metų amžiaus)
+    * 2-5 klasės (7-10 metų amžiaus)
+    * 6-8 klasės (11—13 metų)
+    * 9+ klasės (14+ amžius)
+* Dalykinių sričių, kurias apima jūsų veikla, sąrašas (be kompiuterių mokslo). Pavyzdžiui, jei matematikos mokytojas gali naudoti jūsų veiklą mokydamas apie kampus ar parabolus, išvardinkite kaip matematiką. Jei turite proto libs veiklą, kuri moko veiksmažodžius/daiktavardžius/ir kt. pasirinkti kalbos menus.
+* Programavimo kalbų, kurias moko jūsų veikla, sąrašas. T.y. C/C ++, “Java”, “JavaScript” ir kt. arba nepriklausoma nuo kalbos (pamokų planams, kurie gali būti mokomi keliomis kalbomis)
+* Palaikomų natūralių kalbų sąrašas. Pastaba: Kalbos nustatymas yra veiklos teikėjo atsakomybė; mes peradresuosime visus vartotojus į vieną pateiktą URL.
+* Kokio lygio patirtį pedagogas turėtų naudoti jūsų veiklai? (pvz., Pradedantysis arba patogus.) Ir kokio lygio patirtį turėtų turėti studentai? Jei norite parengti pažangesnę “Hour of Code™” veiklą, įtraukite ankstesnes žinias, reikalingas savo veiklos aprašyme.
+* Jūsų veiklos trukmė 
+    * Tik 1 valanda
+    * 1 valanda su tolesnio kurso
+    * 2-6 valandos (gali būti kelios pamokos)
+* Prieinamumo apgyvendinimo vietų sąrašas, jei jūsų veikla juos turi. Tai apima ekrano skaitytuvo suderinamumą, teksto į kalbą galimybes, didelio kontrasto spalvų naudojimą ar bet kokią kitą pritaikytą neįgaliesiems pritaikytą pritaikymą.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Papildomi dalykai, kurių jums reikės pateikdami pamokų planus
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Nuoroda į pamokų planą. Tai gali būti tinklalapis, dropbox nuoroda, “Google” diskas ar panaši paslauga.
+* Kokios programinės įrangos ir (arba) techninės įrangos mokytojui reikės, kad galėtų atlikti jūsų pamokos planą (“Scratch”? Robotai? Nieko?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Papildomi dalykai, kurių jums reikės pateikdami internetinę veiklą
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Jūsų organizacijos pavadinimas ir logotipas
+* Nesvarbu, ar tai atitinka COPPA reikalavimus, ar ne
+* URL nuoroda į mokytojų pastabas (neprivaloma)
+* Išbandytų/suderinamų platformų sąrašas: 
+    * Žiniatinklis pagrįstas: kokias platformas išbandėte? 
+        * OS - “Mac”, “Win” ir kitos versijos
+        * Naršyklės - IE11, kraštas, “Firefox”, “Chrome”, “Safari”
+        * “iOS” mobilusis “Safari” (optimizuotas mobiliesiems telefonams)
+        * “Android Chrome” (optimizuotas mobiliesiems telefonams)
+    * Ne žiniatinklio pagrindu: nurodykite vietinio kodo platformą (“Mac”, “Win”, “iOS”, “Android”, “XBox”, kita)
+    * Atjungtas
+* Kodo valandos veiklos ekrano kopija arba rinkodaros vaizdas. Prašome atsiųsti bent vieną vaizdą su 4:3 matmenimis. Tai turėtų būti bent 520pikselių iki 390 pikselių. Šiame paveikslėlyje neturėtų būti jokio teksto (išskyrus jūsų logotipą), kad jis būtų labiau prieinamas ne angliškai kalbėtojams. Jei nepateikiamas tinkamas vaizdas, mes galime padaryti savo ekrano kopiją iš jūsų mokymo programos ARBA galime pasirinkti jo neišvardyti. Visi vaizdai turi būti pateikti kaip URL nuoroda į .jpg, .jpeg arba .png.
+* Norėdami tiksliau stebėti dalyvavimą, trečiųjų šalių mokymo partneriai turi įtraukti 1 pikselių stebėjimo vaizdus į pirmąjį savo “Hour of Code” vadovėlių puslapį. Žr. [stebėjimo pikselių](#pixel) skyrių žemiau, jei norite gauti daugiau informacijos.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Dalintis socialinės žiniasklaidos, kad jie baigė Kodekso valandą
+    * Gauti sertifikatą, kad jie baigė Kodekso valandą
+    * Peržiūrėkite lyderių lenteles apie tai, kuriose šalyse/miestuose yra didžiausias dalyvavimo lygis “Hour of Code” veikloje
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Neprivaloma) Mes galime atlikti tolesnius veiksmus naudodamiesi internetine apklausa/formos nuoroda, kurioje prašoma pateikti šios veiklos metrikos ataskaitą: 
+    * Veiklai internete (ypač išmaniųjų telefonų/planšetinių kompiuterių programoms): 
+        * Vartotojų skaičius
+        * Kiek baigė užduotį
+        * Vidutinis užduoties laikas
+        * Visų naudotojų parašytų kodo eilučių skaičius
+        * Kiek toliau tęsė tolesnį mokymąsi (matuojamas kaip bet kuris vartotojas, kuris baigia užduotį ir eina į papildomas užduotis jūsų svetainėje)
+    * Veiklos neprisijungus 
+        * Popierinės veiklos versijos atsisiuntimų skaičius (jei taikoma)
 
-#### Additional things you’ll need when submitting Robotics
+#### Papildomi dalykai, kurių jums reikės pateikdami “Robotics”
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Jei pateikiate robotikos veiklą, turime žinoti robotikos išlaidas vienam studentui.
+* Norėdami įvertinti robotikos veiklą įtraukimui į svetainę, turėsime atsiųsti pavyzdžių rinkinius recenzentams.
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Kaip bus vertinama veikla
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Įvairus informatikos pedagogų komitetas reitinguos teikimus pagal kokybinius ir kiekybinius kriterijus. Bus išvardytos visos veiklos rūšys, atitinkančios pagrindinius kriterijus. Mokytojai galės filtruoti ir rūšiuoti, kad surastų geriausią veiklą savo klasėje.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Veiklos ir pamokų planų vertinimo rubrikoje bus ieškomi šie kriterijai visoms veikloms ir atitinkamai juos reitinguosite:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Aukšta gamybos kokybė
+- Skatinti visų demografinių grupių mokymąsi (esp. studentai, kuriems nepakankamai atstovaujama CS, kaip jaunos moterys, marginalizuotų rasinių ir etninių grupių studentai ir neįgalūs studentai)
+- Švietimo (moko informatikos sąvokas gerai)
+- Įdomus ir patrauklus
+- Skatina mokinius sukurti kažką unikalaus, kuriuo jie gali pasidalinti (Jaunesniems mokiniams: su tėvais ir klasės draugais. Senesnio amžiaus studentams: internete)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Jei peržiūros komitetas įvertina nulinę gamybos kokybę (dėl blogų klaidų ar instrukcijų, dėl kurių ją labai sunku naudoti), skatinant mokymąsi nepakankamai atstovaujamose grupėse (dėl rasistinės/seksistinės medžiagos), edukacine verte (nemoko CS sąvokų) arba linksmas/įtraukiantis (dėl sunku/atgrasymo studentams dirbti), veikla nebus įtraukta į sąrašą.
 
-In addition, in order to be listed, all activities must:
+Be to, norint būti įtrauktiems į sąrašą, visos veiklos rūšys turi būti:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Būkite tinkami valstybinės mokyklos klasei (be ginklų, nėra aiškaus ar brandaus turinio, jokio religinio turinio ir kt.)
+- Nereikalauti užsiregistruoti
+- Reikalauti nemokėti (išskyrus robotikos veiklą, dėl kurios gali prireikti roboto/rinkinio pirkimo)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Naujų mokytojų ir studentų savarankiškos veiklos peržiūros komitetas ieškos, ar:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Mokytojai gali naudotis pamoka ar veikla be jokių informatikos fone
+- Studentai gali būti sėkmingas be informatikos fone
+- Studentai gali nukreipti save per pamoka be tėvų ar mokytojų patarimų
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Mokytojai ir mokiniai galės ieškoti ir filtruoti mūsų veiklų sąrašą, remdamiesi tokiais filtrais kaip pažymys, patirties lygis, tema, aparatinė įranga ir kt. Pagal numatytuosius nustatymus pirmiausia parodysime pamokų planus ir veiklą, kuri:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Gaukite aukščiausius įvertinimus iš peržiūros komiteto
+- Ar viena valanda savarankiškai nukreipta veikla skirta pradedantiesiems (studentams ir mokytojams)
+- Kreipimasis į platų vartotojų ratą (įvairiose platformose, kalbose ir amžiuose)
+- Nereikalauti diegimo
+- Ar nauji šiais metais
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Pasiūlymai projektuojant vieną valandą savarankiškai vadovaujasi vadovėliai
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Į savo pamoką galite įtraukti “ [Hour of Code” logotipą](https://hourofcode.com/us/promote/resources#logo) , tačiau to nereikia. Jei naudojate “Hour of Code” logotipą, žr. toliau pateiktas prekės ženklo gaires. <u>Jokiomis aplinkybėmis negalima naudoti Code.org logotipo ir pavadinimo.</u> Abu yra prekės ženklai ir negali būti susimaišę su trečiosios šalies prekės ženklu be aiškaus raštiško leidimo.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Įsitikinkite, kad vidutinis studentas gali patogiai baigti per valandą.** Apsvarstykite galimybę pabaigoje pridėti atvirą veiklą studentams, kurie greičiau juda per pamoką. Atminkite, kad dauguma vaikų bus absoliutūs kompiuterių mokslo ir kodavimo pradedantiesiems.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Įtraukti mokytojo pastabas.** Dauguma veiklų turėtų būti nukreipta į studentus, tačiau jei veiklą palengvina ar valdo mokytojas, prašome nurodyti aiškias ir paprastas mokytojo nurodymus mokytojo užrašų pavidalu atskiru URL, pateiktu kartu su jūsų veikla. Ne tik studentai yra naujokai, bet ir kai kurie mokytojai. Įtraukti tokią informaciją kaip:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Kokiose platformose ir naršyklėse pamoka geriausiai veikia?
+- Ar tai veikia išmaniuosiuose telefonuose? Tabletės?
+- Ar rekomenduojate poros programavimą?
+- Naudojimo klasėje svarstymai? Pvz., jei yra vaizdo įrašų, patarkite mokytojams parodyti vaizdo įrašus projektuojamu ekranu, kad visa klasė galėtų peržiūrėti kartu
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Įtraukti grįžtamąjį ryšį veiklos pabaigoje.** (Pvz. “Jūs baigėte 10 lygių ir sužinojote apie kilpas! Puikus darbas!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Skatinkite studentus skelbti socialinėje žiniasklaidoje (kai tinkama), kai jie baigs.** Pavyzdžiui, “Aš padariau valandą kodo su ________ Ar jūs? #HourOfCode “arba “Aš padariau #HourOfCode kaip #CSEdWeek dalį. Ar tu? @Scratch.” Naudokite žymą **#HourOfCode** (didžiosiomis raidėmis H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Sukurkite savo veiklą ispanų arba kitomis kalbomis, be anglų kalbos.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Paaiškinkite arba prijunkite veiklą prie socialiai reikšmingo konteksto.** Kompiuterių programavimas tampa supervalstybe, kai studentai mato, kaip jis gali pakeisti pasaulį į gerąją pusę!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Įsitikinkite, kad jūsų pamoka gali būti naudojama [poros programavimo](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmoje.** Tai ypač naudinga Kodekso valandai, nes daugelyje klasių nėra 1:1 aparatūros visiems studentams.
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Prekių ženklų gairės
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+“Hour of Code®” ir “Hora del Código®” yra registruoti “Code.org” prekių ženklai. Daugelis mūsų mokymo partnerių savo interneto svetainėse naudojo mūsų “Kodo valandos” prekių ženklus, susijusius su savo “Hour of Code” veikla. Nenorime užkirsti kelio šiam naudojimui, tačiau norime įsitikinti, kad naudojimas neviršija kelių ribų:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Naudokite “Kodo valandą” tik dėl nekomercinių CS švietimo veiklos “Hour of Code” kampanijos kontekste ir jokiais kitais tikslais.
+2. Bet kokia nuoroda į “Kodo valandą” turėtų būti naudojama taip, kad tai nereiškia, kad tai yra jūsų prekės ženklas, o tai reiškia “Kodo valandą” kaip “grassroots” judėjimą. Geras pavyzdys: “Dalyvaukite “Code®” valandoje “Acmecorp.com”. Blogas pavyzdys: “Išbandykite “ACME Corp” kodo valandą”.
+3. Naudokite “®” viršraštį žinomiausiose vietose, kuriose minite “Kodo valanda”, tiek savo svetainėje, tiek programų aprašymuose.
+4. Puslapyje (arba poraštėje) įtraukite kalbą, įskaitant nuorodas į kodo valandą, CSedWeek ir Code.org tinklalapius, kurie atskleidžia abu šiuos dalykus: a. Hour of Code® ir Hora del Código® yra registruoti prekių ženklai Code.org; ir b. “[valandos kodas](http://hourofcode.com/) ® yra visos šalies iniciatyva [Code.org](http://code.org/) supažindinti milijonus studentų į vieną valandą kompiuterių mokslo ir kompiuterių programavimo.”
+5. Nenaudokite “Kodo valanda” programų pavadinimuose.
+6. Nenaudokite “Kodo valandos” dėl bet kokio komercinio naudojimo ar tikslo (pvz., Savo “Hour of Code” veiklos pateikimas už darbo užmokesčio sienos; reklamuojant kitą mokamą paslaugą kaip “Hour of Code” veiklos dalį; parduodant “Hour of Code” prekes).
+7. Nenaudokite “Kodo valandos” ryšium su bet kokia veikla, kuriai reikia prisijungimo ar paskyros sukūrimo.
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Pikselių sekimas
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Norėdami tiksliau stebėti dalyvavimą, prašome kiekvieno mokymo partnerio įtraukti 1 pikselių stebėjimo vaizdą į pirmąjį savo “Hour of Code” vadovėlių puslapį. Pikselių vaizdas turi būti tik pradiniame puslapyje. Neįtraukite į jokius tarpinius savo mokymo puslapius.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Tai leis mums suskaičiuoti vartotojus, kurie atlieka jūsų “Hour of Code” pamoką. Tai lems tikslesnius dalyvavimo skaičiavimus jūsų pamoka.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Jei jūsų pamoka yra patvirtinta ir įtraukta į galutinį mokymo puslapį, Code.org suteiks jums unikalų stebėjimo pikselių, kad galėtumėte integruoti į savo vadovėlį. Žr. Pavyzdį žemiau.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+PASTABA: tai nėra svarbu daryti įdiegiamose programose (“iOS”/“Android” programose arba darbalaukyje įdiegtoms programoms)
 
-Example tracking pixels for Dance Party:
+“Dance Party” pikselių stebėjimo pavyzdys:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Skatinti savo veiklą, CSedWeek, ir Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Prašome reklamuoti savo veiklą savo tinkle! Nukreipkite juos į savo “Hour of Code” puslapį. Jūsų vartotojai yra daug labiau linkę reaguoti į laišką iš jūsų apie jūsų veiklą. Naudokite tarptautinę “Hour of Code” kampaniją kompiuterių mokslo švietimo savaitės metu kaip pasiteisinimą, kad paskatintumėte vartotojus pakviesti kitus prisijungti ir padėti mums pasiekti daugiau studentų!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Funkcija Kodo valanda ir CSedWeek jūsų svetainėje. Ex: <http://www.tynker.com/hour-of-code>
+- Skatinkite kodo valandą naudodami socialinę žiniasklaidą, tradicinę žiniasklaidą, adresų sąrašus ir kt., Naudodami hashtag #HourOfCode (didžiosiomis raidėmis H, O, C)
+- Surinkite vietinį renginį arba paprašykite savo darbuotojų surengti renginį vietos mokyklose ar bendruomenės grupėse.
+- Daugiau informacijos rasite mūsų [išteklių rinkinyje](https://hourofcode.com/us/promote) .
 
-[**Back to the top**](#top)
+[**Atgal į viršų**](#top)
 
 {{ signup_button }}

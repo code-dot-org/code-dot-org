@@ -184,19 +184,19 @@ Code.org는 다양한 아워오브코드™ 활동과 레슨, 비디오를 Code.
 - 가입할 필요가 없습니다.
 - 결제할 필요가 없습니다 (로봇/키트 구매를 요구하는 로봇공학 활동 제외) 새 교사와 신입생을 위한 자기 주도형 활동의 경우, 검토 위원회가 다음을 살펴볼 것입니다.
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+신입 교사와 학생을 위한 자기 주도적 활동을 위해 검토 위원회는 다음 사항을 검토합니다.
 
 - 검토 위원회에서 최고 점수를 받음
 - 초보자 (학생과 교사)를 위해 설계된 한 시간 자기 주도형 활동임 
 - 광범위한 사용자에게서 주목을 받음 (플랫폼과 언어, 연령을 망라하여).
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+교사와 학생은 학년 또는 경험 수준, 과목, 하드웨어 등과 같은 검색어에 기초하여 활동 목록을 검색 및 필터링 할 수 있습니다. 기본적으로, 먼저 다음과 같은 레슨 플랜과 활동을 보여드리겠습니다. 
 
 - 긍정적인 피드백 - 무엇이 잘 되고 있는지?
 - 비판적 피드백 - 개선해야 할 점은?
-- Appeal to a wide range of users (across platforms, languages, and ages)
+- 광범위한 사용자에게서 주목을 받음 (플랫폼과 언어, 연령을 망라하여).
 - 이 활동이 학생들에게 독창적인 것을 만들도록 북돋아 줍니까?
-- Are new this year
+- 올해 새 레슨 플랜/활동임.
 
 [**맨 위로**](#top)
 
@@ -204,11 +204,11 @@ Teachers and students will be able to search through and filter our list of acti
 
 ## 조기 정성 검사 (신설)를 위한 제출 가이드라인
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+[아워오브코드 로고](https://hourofcode.com/us/promote/resources#logo)를 튜토리얼에 삽입할 수 있지만 필수 사항은 아닙니다. 만약 Hour of Code 로고를 사용한다면, 다음의 트레이드마크 가이드라인들을 살펴보세요. <u>어떤 상황에서도 Code.org 로고와 이름은 사용할 수 없습니다.</u> 두 가지 모두 상표이며 명시적 서면 허가 없이는 제 3자 브랜드 명과 혼용할 수 없습니다.
 
 비고: 다음은 피드백을 제공하기 위한 일반 가이드라인입니다. 활동 조기 검토에는 다음 범주 모두에서의 피드백을 포함시키거나 또는 한 두개 범주의 피드백만을 포함시킬 수 있습니다.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**선생님용 설명을 포함해서** 대부분의 활동들은 학생들 스스로 자기주도적으로 가능해야합니다. 하지만 선생님의 도움이나 지도를 통해서 이루어지는 활동들에는, 반드시 선생님들을 위해 여러분의 활동에 대한 명확하고 간단한 지도사항/방법/내용을 별도의 URL 주소 형태로 함께 제공해 주세요. 대부분의 학생들이 초보자인것과 같이, 많은 선생님들도 별로 다르지 않습니다. 다음과 같은 정보를 포함시켜주세요:
 
 - 튜토리얼이 가장 잘 작동하는 플랫폼과 브라우저는 무엇입니까?
 - 스마트폰에서도 동작합니까? 태블릿은 어떤가요?
@@ -217,13 +217,13 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 조기 검토를 위해 제출된 모든 활동은 9월 1일까지 피드백을 받을 것입니다. 또한 피드백에 대한 반응으로 수정한 경우, 수정 사항을 설명하기 위해 사용할 양식을 링크로 제공할 것입니다.
 
-10월 1일 전에 제출된 각 활동은 조기 검토를 받았는지 여부와 상관 없이 기본 검토를 받을 것입니다. 이 기본 검토 과정 (9월~10월) 동안, 검토자는 활동을 위의 "활동 평가 방법" 섹션에서 설명한 기준에 의거하여 등급을 매기는 데 중점을 둘 것입니다. 활동의 특정 변경사항을 명시하지 않은 한, 검토자는 조기 검토 피드백에 의지해 활동 점수를 매길 수 밖에 없으며 또한 그렇 가능성이 높습니다. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+10월 1일 전에 제출된 각 활동은 조기 검토를 받았는지 여부와 상관 없이 기본 검토를 받을 것입니다. 이 기본 검토 과정 (9월~10월) 동안, 검토자는 활동을 위의 "활동 평가 방법" 섹션에서 설명한 기준에 의거하여 등급을 매기는 데 중점을 둘 것입니다. 활동의 특정 변경사항을 명시하지 않은 한, 검토자는 조기 검토 피드백에 의지해 활동 점수를 매길 수 밖에 없으며 또한 그렇 가능성이 높습니다. @Scratch?" **#HourOfCode** 해쉬 태그를 사용하세요.(대문자 H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**스페인어 또는 영어 외 다른 언어로 활동을 만드세요.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**사회적으로 중요한 맥락으로 활동들을 설명하고 연관시켜주세요.** 세상을 좀더 좋게 변화시킬 수 있다는 것을 학생들이 인식하게 될 때 컴퓨터 프로그래밍은 매우 강력한 힘과 능력이 됩니다.
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**튜토리얼은[페어 프로그래밍](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) 패러다임에서도 사용할 수 있음을 명심하세요.** 모든 학생을 위한 1:1 하드웨어가 있는 교실은 많지 않기 때문에 이 방식은 특히 아워오브코드에 유용합니다.
 
 [**맨 위로**](#top)
 
@@ -231,15 +231,15 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 ## 한 시간 자기 주도형 튜토리얼 설계를 위한 제안사항
 
-**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!) 이러한 사용을 막고 싶지는 않지만 사용량이 몇 가지 제한 내에 포함되도록 하고자 합니다.
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. “아워오브코드”는 아워오브코드 캠페인과 관련하여 비상업적 CS Education 활동과 관련해서만 사용하고 다른 용도로는 사용하지 마십시오.
+2. 패션 제품에는 "아워오브코드" 라는 참조 표시를 사용해야 한다는 것은 그것이 귀사의 고유 브랜드명임을 나타내는 것이 아니라 "아워오브코드"를 풀뿌리 운동으로서 지칭하는 것입니다. 좋은 예: “AcmeCorp.com의 아워 오브 코드® 에 참여하세요.” 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
+3. 웹사이트와 앱 설명에서 “Hour of Code”를 언급한 가장 눈에 잘 띄는 곳에 “®” 위 첨자를 사용하세요.
+4. 페이지 (또는 바닥글) 에 아워오브코드, CSEDWeek 및 Code.org 웹 사이트로 연결되는 링크를 포함하여 다음 내용을 모두 공개하는 언어를 포함하십시오. a. 아워오브코드® 및 호라 델 코디고® 는 Code.org의 등록 상표이며, b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. 앱 이름에 “아워오브코드”를 사용하지 마세요.
+6. 상업적 용도나 목적 (예: 아워오브코드 활동을 페이월 뒤에 배치, 아워오브코드 활동의 일환으로 다른 유료 서비스 홍보, 아워오브코드 상품 판매) 과 관련하여 “아워오브코드”를 사용하지 마십시오.
+7. 로그인이나 계정 생성이 필요한 활동과 관련하여 “Hour of Code”를 사용하지 마십시오.
 
 [**맨 위로**](#top)
 
@@ -247,15 +247,15 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 ## 상표 가이드라인
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+참가를 더 정확하게 추적관리하기 위해, 각 튜토리얼 파트너에게 아워오브코드 튜토리얼의 첫 번째 페이지에 1-픽셀 추적 이미지를 넣어줄 것을 요청합니다. 픽셀 이미지는 시작 페이지에만 나와야 합니다. 튜토리얼에 중간 페이지는 삽입시키지 마십시오.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+아워오브코드 튜토리얼을 하는 사용자를 셀 수 있게 허용합니다. 그렇게 하면 튜토리얼에 얼마나 많은 사람들이 참여하는지 정확하게 셀 수 있게 해줍니다.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+튜토리얼이 승인되어 최종 튜터리얼 페이지에 포함되면, Code.org는 튜토리얼에 통합시킬 고유 추적 픽셀을 제공할 것입니다. 아래 예 참조.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+참고: 설치 가능형 앱/응용프로그램(iOS/Android, PC)에는 별로 중요하지 않습니다.
 
-Example tracking pixels for Dance Party:
+예 댄스 파티를 위한 트랙킹 픽셀:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -266,7 +266,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## 트랙킹 픽셀
 
-아워오브코드 튜토리얼을 하는 사용자를 셀 수 있게 허용합니다. 그렇게 하면 튜토리얼에 얼마나 많은 사람들이 참여하는지 정확하게 셀 수 있게 해줍니다. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+아워오브코드 튜토리얼을 하는 사용자를 셀 수 있게 허용합니다. 그렇게 하면 튜토리얼에 얼마나 많은 사람들이 참여하는지 정확하게 셀 수 있게 해줍니다. 활동에 관한 우편물에 사용자가 답장을 할 가능성이 훨씬 더 높습니다. 컴퓨터 과학 교육주간 동안 국제 아워오브코드 캠페인을 사용자가 다른 이들을 참여하게 초대하고 우리가 더 많은 학생들에게 다가 가는데 도움을 주도록 권장하는 구실로 활용합니다.
 
 - 웹사이트를 아워오브코드와 CSEdWeek 내용으로 구성. 예: <http://www.tynker.com/hour-of-code>
 - 소셜 미디어와 전통적 매체, 우편 목록 등을 사용하고 해시태그#HourOfCode (대문자 H, O, C와 함께)를 붙여 아워오브코드를 홍보합니다.

@@ -8076,6 +8076,9 @@ fr:
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description: Le Cours A propose un programme d'informatique pour les lecteurs débutants, dont les élèves de maternelle. Les élèves apprendront à programmer en utilisant des commandes telles que les boucles et les événements. Les leçons qui se trouvent dans ce cours enseigneront également aux élèves à collaborer sérieusement les uns avec les autres, différentes techniques de résolution de problèmes, à persister face aux tâches plus exigeantes, et comment naviguer l'internet en toute sécurité.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Données
           lesson_groups:
             lessonGroup-2:
               display_name: Citoyenneté Numérique
@@ -8089,10 +8092,15 @@ fr:
               display_name: Événements
             lessonGroup-7:
               display_name: Projet de fin de cours
+            lessonGroup-8:
+              display_name: Données
           description_audience: 'Âges : 5 à 8 ans'
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si les notions présentées dans le Cours B suivent de près celles du Cours A, les élèves découvriront néanmoins des activités déconnectées plus complexes et travailleront avec une plus grande variété de casse-têtes. Les élèves apprendront les bases de la programmation, des techniques de collaboration, développeront des compétences d'investigation et leur esprit critique, et apprendront à persévérer face aux difficultés et à naviguer l'internet en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres jeux dans l'environnement Labo Jeux.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
           lesson_groups:
             lessonGroup-2:
               display_name: Citoyenneté Numérique
@@ -8104,6 +8112,8 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Données
+            lessonGroup-8:
+              display_name: Systèmes informatiques
           description: Nous avons développé le Cours C pour des élèves de CE1. Les élèves créeront des programmes avec du séquençage, des boucles et des événements. Ils examineront des techniques de résolution de problèmes et élaboreront des stratégies pour créer des communautés positives en ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs qu'ils pourront partager.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8160,3 +8170,53 @@ fr:
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description: Nous avons créé le cours F pour les élèves de cinquième année. Le cours commence par examiner comment les utilisateurs font leurs choix dans les applications qu'ils utilisent. Les étudiants apprennent ensuite à créer diverses applications Sprite Lab qui offrent également des choix à l'utilisateur. Au cours des dernières leçons du cours, les étudiants découvriront les variables dans divers contextes. Les étudiants bénéficient d'une plus grande autonomie et d'un plus grand choix tout au long de ce cours. À la fin du cours, les étudiants auront créé des projets interactifs à partager avec leurs amis et leur famille.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8

@@ -737,6 +737,8 @@ es-MX:
         PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
         how-ai-works-llms-full: Cómo funcionan los chatbots y la modelación de lenguage
         how-ai-works-creativity-full: '¿La IA tiene creatividad e imaginación?'
+        llms-cobranded: 'Cómo funciona la IA: chatbots y modelos de lenguaje grande'
+        generative-ai-cobranded: 'Cómo funciona la IA: IA generativa'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
