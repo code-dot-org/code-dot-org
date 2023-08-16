@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:10.000Z",
   "level_num": "custom",
@@ -22,12 +23,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
-      "stop": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "getProperty": null,
@@ -73,7 +73,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<img src=\"https://images.code.org/74019d972f7a63e8f4f16cbec2c2662a-image-1634600926494.png\" style=\"width: 150px; float:right; margin: 10px;\" />\r\n\r\n# Traffic Control\r\n \r\nYou are helping design an app that can control the traffic lights in a construction zone. The app will control the lights to tell drivers whether to merge left or right in order to avoid construction. The app will also control the color and brightness of the lights to make sure they’re not blinding or distracting.\r\n \r\nThe app has already been started for you, but the code needs to be finished.\r\n \r\n## Do This\r\n1) Get the value from the color dropdown and store it in a variable [(Show Me Where)](#triggercallout=colorVar)\r\n2) Get the value from the brightness slider and store it in a variable [(Show Me Where)](#triggercallout=brightnessVar)\r\n3) ::: details [If the direction is `\"left\"`: set the left LEDs and turn off the right LEDs]\r\n\t- Inside the first if-statement [(Show Me Where)](#triggercallout=leftIf):\r\n \t- Turn on the left side of the board to the appropriate color and intensity\r\n\t\t- Turn off the right side of the board\r\n   :::\r\n4) ::: details [If the direction is `\"right\"`: set the right LEDs and turn off the left LEDs]\r\n\t- Inside the second if-statement [(Show Me Where)](#triggercallout=rightIf):\r\n\t\t- Turn on the right side of the board to the appropriate color and intensity\r\n\t\t- Turn off the left side of the board\r\n   :::",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -101,9 +101,8 @@
     "encrypted_examples": "GyN/kRhlGOyuppr/TcOB3Fm0IQ6Gu574gw6egUDtQG+NCcJ8cXSFuKKW/IKP\nswl0datxml3E1BC8VxEa14gbcQ==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:10.626+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - A_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:10.626+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - A_2222\"},{\"changed_at\":\"2023-08-15 16:53:02 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
