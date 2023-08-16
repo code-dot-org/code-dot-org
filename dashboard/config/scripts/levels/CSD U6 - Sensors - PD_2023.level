@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:16:45.000Z",
   "level_num": "custom",
@@ -36,11 +37,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -84,7 +85,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/62718fc559646f13520aa1c68a69b4e5-image-1650057902548.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Volume Meter\r\n\r\nThis app simulates a \"Volume Meter\" that displays how loud or quiet your environment is. It uses a button that changes height to react to the sound in the room - the louder the sound, the taller the button.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Set the `soundSensor` scale to match the height of the app screen]\r\n\t- Add a [`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/) block to set the range of values from 30-400\r\n    :::\r\n2) ::: details [Create an event to continuously check the `soundSensor`]\r\n\t- Add an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the `soundSensor` has `data`\r\n    :::\r\n3) ::: details [Update the button's height to match the `soundSensor` value]\r\n\t- Use the [`setProperty()`(#fff176)](/docs/applab/setProperty/) and [`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/) blocks to update the `height` of the button\r\n    :::\r\n\r\n**Run The App!** As you speak or make noise near the circuit playground, the app should react in real time!",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -108,9 +109,8 @@
     "encrypted_examples": "6xYUNTFX9BMu8/87mTEa3jVvOlEVHlf7WNaGEfvQbkNTvxhp9XpkCfWNm+Sh\n1COiP0oh3LTgio39uVIiRh4ogA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:45.913+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:45.913+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PD_2222\"},{\"changed_at\":\"2023-08-15 22:56:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
