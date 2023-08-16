@@ -45,7 +45,7 @@ fa:
       Artist Intro with JR Hildebrande: معرفی Artist با JR Hildebrande
       Artist Project: پروژه Artist
       'Artist: Variables': 'هنرمند: متغیرها'
-      Assessment: ارزشیابی
+      Assessment: ارزیابی
       Attribution: نسبت دادن
       Back and Forth: عقب و جلو
       Basic Conditionals: شرطی های پایه
@@ -457,7 +457,7 @@ fa:
       'Video: De-bugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
       'Video: Debugging': 'فیلم: اشکال زدایی'
       'Video: Debugging with Scrat ': 'فیلم: اشکال زدایی با Scrat '
-      'Video: Debugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
+      'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه استپ (Step)'
       'Video: Events': 'فیلم: رویدادها'
       'Video: Events in App Lab': 'فیلم: رویدادها در App Lab'
       'Video: Follow The Digital Trail': 'فیلم: پیروی از رد دیجیتال'
@@ -512,7 +512,7 @@ fa:
       'Video: Publishing Your Website': 'فیلم: انتشار وبسایت خود'
       'Video: Repeat Blocks': 'فیلم: بلوک های تکرار شونده'
       'Video: Repeat Blocks with BB-8': 'فیلم: بلوک های تکرار شونده با BB-8'
-      'Video: Repeat Blocks with the Artist': 'فیلم: بلوک های تکرار شونده با Artist'
+      'Video: Repeat Blocks with the Artist': 'ویدئو: بلوک های تکرار شونده با هنرمند'
       'Video: Repeat Until Blocks': 'فیلم: بلوک های تا وقتی که تکرار شونده'
       'Video: Repeat Until Statements': 'فیلم: گزاره های تکرار شونده تا وقتی که'
       'Video: Sprites in Action': 'فیلم: اسپرایت ها در حین عمل'
@@ -521,8 +521,8 @@ fa:
       'Video: Text and Prompts': 'فیلم: متن و پیامواره ها'
       'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیوی کدنویسی'
       'Video: The Big Event - Unplugged Activity': 'فیلم: رویداد بزرگ - فعالیت بدون کار با رایانه'
-      'Video: The Collector': 'ویدئو: جمع‌کننده'
-      'Video: The Harvester': 'فیلم: برداشت کننده'
+      'Video: The Collector': 'فیلم: گردآورنده'
+      'Video: The Harvester': 'فیلم: هاروستر'
       'Video: Training Data & Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Training Data and Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Unplugged Variables in Envelopes': 'فیلم: متغیرهای بدون کار با رایانه در پاکت بسته'
@@ -533,7 +533,7 @@ fa:
       'Video: What is Machine Learning?': 'فیلم: یادگیری ماشینی چیست؟'
       'Video: While Loops with the Farmer': 'فیلم: حلقه های درحالیکه با Farmer'
       'Video: Wrap-up': 'فیلم: جمعبندی'
-      Warm Up: آمادگی
+      Warm Up: آماده شوید
       Website Project: پروژه وبسایتی
       Welcome to Monster Town: به شهر هیولاها خوش آمدید
       Where'd They Go?: کجا رفتند؟

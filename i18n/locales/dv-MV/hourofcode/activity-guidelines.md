@@ -14,7 +14,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -96,7 +96,7 @@ To get a sense of the wide variety of types of tutorials and lesson plans you ca
 
 ## How to submit
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
 What you’ll need:
 

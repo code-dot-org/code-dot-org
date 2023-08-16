@@ -9131,6 +9131,8 @@ ar:
             الغاضبة (Angry Birds) ، ولعبة المزروعات ضذ الزومبي (Plants vs. Zombies)
             ، وشخصية القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
           title: المتاهة الكلاسيكية
+        how-ai-works-2023:
+          title: كيف يعمل الذكاء الاصطناعي
         iceage:
           description: أنشئ قصة أو صمم لعبة باستخدام مختبر لعبة العصر الجليدي!
           description_short: أنشئ قصة أو صمم لعبة باستخدام مختبر لعبة العصر الجليدي!
@@ -9422,6 +9424,11 @@ ar:
               display_name: الأحداث
             lessonGroup-7:
               display_name: مشروع نهاية الدورة التدريبية.
+            lessonGroup-8:
+              display_name: البيانات
+          lessons:
+            lesson-1:
+              name: البيانات
         nevada-standards-aligned-fourth-grade-2023:
           description: ابدأ في البرمجة باستخدام الخوارزميات والحلقات والعبارات الشرطية
             والأحداث ثم تنتقل إلى الوظائف. في الجزء الثاني من هذه الدورة، قم بتصميم
@@ -9473,6 +9480,11 @@ ar:
               display_name: الأحداث
             lessonGroup-6:
               display_name: البيانات
+            lessonGroup-8:
+              display_name: أنظمة الحوسبة
+          lessons:
+            lesson-1:
+              name: أنظمة الحوسبة
         nevada-standards-aligned-third-grade-2023:
           description: يطور الطلاب فهمهم للحلقات والعبارات الشرطية والأحداث. وبخلاف
             البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
@@ -10957,6 +10969,22 @@ ar:
               name: 'الوحدة السادسة بعد العمل: أساليب السلسلة في الوحدة 6'
           name: vl-csa-2022
           title: التعلم المهني الافتراضي CSA
+        vpl-csa-2023-m1:
+          title: الوحدة 1
+        vpl-csa-2023-m2:
+          title: الوحدة 2
+        vpl-csa-2023-m3:
+          title: الوحدة 3
+        vpl-csa-2023-m4:
+          title: الوحدة 4
+        vpl-csa-2023-m5:
+          title: الوحدة 5
+        vpl-csa-2023-m6:
+          title: الوحدة 6
+        vpl-csa-2023-m7:
+          title: الوحدة 7
+        vpl-csa-2023-m8:
+          title: الوحدة 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: التعلم المهني الافتراضي لـ CS Discoveries 2020 - 21
@@ -10984,6 +11012,22 @@ ar:
           title: التعلم المهني الافتراضي لـ CS Discoveries 2021 - 22
         vpl-csd-2022:
           title: اكتشافات علوم الكمبيوتر - التعلم المهني الافتراضي 2022 - 23
+        vpl-csd-2023-m1:
+          title: الوحدة 1
+        vpl-csd-2023-m2:
+          title: الوحدة 2
+        vpl-csd-2023-m3:
+          title: الوحدة 3
+        vpl-csd-2023-m4:
+          title: الوحدة 4
+        vpl-csd-2023-m5:
+          title: الوحدة 5
+        vpl-csd-2023-m6:
+          title: الوحدة 6
+        vpl-csd-2023-m7:
+          title: الوحدة 7
+        vpl-csd-2023-m8:
+          title: الوحدة 8
         vpl-csd-ci-1:
           description: |-
             تم تصميم وحدة التعلم الاحترافية هذه لمساعدتك في التحضير لتدريس وحدة حل المشكلات والحوسبة في Code.org.
@@ -11586,6 +11630,22 @@ ar:
           title: مبادئ علوم الكمبيوتر - التعلم المهني الافتراضي 21-22
         vpl-csp-2022:
           title: مبادئ علوم الكمبيوتر - التعلم المهني الافتراضي 22 - 23
+        vpl-csp-2023-m1:
+          title: الوحدة 1
+        vpl-csp-2023-m2:
+          title: الوحدة 2
+        vpl-csp-2023-m3:
+          title: الوحدة 3
+        vpl-csp-2023-m4:
+          title: الوحدة 4
+        vpl-csp-2023-m5:
+          title: الوحدة 5
+        vpl-csp-2023-m6:
+          title: الوحدة 6
+        vpl-csp-2023-m7:
+          title: الوحدة 7
+        vpl-csp-2023-m8:
+          title: الوحدة 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

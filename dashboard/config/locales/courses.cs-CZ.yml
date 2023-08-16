@@ -78,6 +78,8 @@ cs:
           description_short: Naučte se základní principy informatiky.
         mike-test:
           title: Základy informatiky
+        vpl-csa-2023:
+          title: CSA Virtuální profesionální učení
     resources:
       curriculum/csd/2017:
         name: Obsah kurzu

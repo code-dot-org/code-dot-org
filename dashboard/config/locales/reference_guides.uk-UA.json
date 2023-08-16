@@ -92,6 +92,15 @@
         "csd-2022/hyperlinks": {
           "display_name": "Гіперпосилання"
         },
+        "csd-2022/if-else-statements": {
+          "display_name": "Команди Якщо/Інакше"
+        },
+        "csd-2022/if-statements": {
+          "display_name": "Команди умови"
+        },
+        "csd-2022/if-statements-2": {
+          "display_name": "Команди умови"
+        },
         "csd-2022/importing-a-model-in-app-lab": {
           "display_name": "Імпортування моделі в App Lab"
         },
@@ -121,6 +130,9 @@
         },
         "csd-2022/modifying-arrays": {
           "display_name": "Змінення та створення масивів"
+        },
+        "csd-2022/naming-variables": {
+          "display_name": "Іменування змінних"
         },
         "csd-2022/other": {
           "display_name": "Інше"
@@ -171,10 +183,10 @@
           "display_name": "Властивості тексту"
         },
         "csd-2022/the-counter-pattern": {
-          "display_name": "Лічильник шаблону"
+          "display_name": "Шаблон лічильника"
         },
         "csd-2022/the-counter-pattern-2": {
-          "display_name": "Лічильник шаблону"
+          "display_name": "Шаблон лічильника"
         },
         "csd-2022/the-draw-loop": {
           "display_name": "Цикл малювання"

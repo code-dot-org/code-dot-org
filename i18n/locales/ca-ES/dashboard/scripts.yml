@@ -7856,6 +7856,10 @@ ca:
             -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
 
             \*\* Temps suggerit: 70 minuts
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configuració
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -7890,6 +7894,9 @@ ca:
           description_short: Una introducció a la informàtica per prelectors.
           description: El curs A ofereix un pla d'estudis d'informàtica per als lectors inicials, inclosos els estudiants de Kindergarten. Els estudiants aprendran a programar utilitzant ordres com bucles i esdeveniments. Les lliçons presentades en aquest curs també ensenyen als estudiants a col·laborar de manera significativa amb els altres, investigar diferents tècniques de resolució de problemes, persistir davant de tasques desafiants i aprendre sobre seguretat a Internet.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dades
           lesson_groups:
             lessonGroup-2:
               display_name: Ciutadania digital
@@ -7903,10 +7910,15 @@ ca:
               display_name: Esdeveniments
             lessonGroup-7:
               display_name: Projecte de final de curs
+            lessonGroup-8:
+              display_name: Dades
           description_audience: De 5 a 8 anys
           description_short: Introducció a la informàtica per a prelectors. Similar al curs A, però amb profunditat de concepte afegit.
           description: Hem desenvolupat el curs B pensant en els alumnes de primer de primària. Mentre que els conceptes del curs B paral·lelament als del curs A, els estudiants aprenen activitats unplugged més sofisticades i treballen a través d'una major varietat de puzles. Els estudiants aprendran els conceptes bàsics de programació, tècniques de col·laboració, habilitats d'investigació i pensament crític, persistència davant la dificultat i seguretat a Internet. Al final d'aquest curs, els alumnes creen jocs en l'entorn de programació Play Lab.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistemes Informàtics
           lesson_groups:
             lessonGroup-2:
               display_name: Ciutadania digital
@@ -7918,6 +7930,8 @@ ca:
               display_name: Esdeveniments
             lessonGroup-6:
               display_name: Dades
+            lessonGroup-8:
+              display_name: Sistemes Informàtics
           description: Hem desenvolupat el Curs C per a estudiants de segon de primària. Els estudiants crearan programes amb seqüenciació, bucles i esdeveniments. Investigaran tècniques de resolució de problemes i desenvoluparan estratègies per a la construcció de comunitats positives tant online com offline. Al final del curs, els alumnes crearan jocs interactius que podran compartir.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -7974,3 +7988,51 @@ ca:
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           description: Hem creat el Curs F per a estudiants de cinquè de primària. El curs comença observant com els usuaris prenen decisions en les apps que utilitzen. Els estudiants aprenen a fer una varietat d'aplicacions Sprite Lab que també ofereixen opcions per a l'usuari. En les lliçons posteriors del curs, els estudiants aprendran sobre variables en diversos contextos. L'alumnat té més autonomia i més opcions al llarg d'aquest curs. Al final del curs, els alumnes hauran creat projectes interactius per compartir amb els seus amics i familiars.
+        vpl-csp-2023-m1:
+          title: Mòdul 1
+        vpl-csp-2023-m2:
+          title: Mòdul 2
+        vpl-csp-2023-m3:
+          title: Mòdul 3
+        vpl-csp-2023-m4:
+          title: Mòdul 4
+        vpl-csp-2023-m5:
+          title: Mòdul 5
+        vpl-csp-2023-m6:
+          title: Mòdul 6
+        vpl-csp-2023-m7:
+          title: Mòdul 7
+        vpl-csp-2023-m8:
+          title: Mòdul 8
+        vpl-csa-2023-m1:
+          title: Mòdul 1
+        vpl-csa-2023-m2:
+          title: Mòdul 2
+        vpl-csa-2023-m3:
+          title: Mòdul 3
+        vpl-csa-2023-m4:
+          title: Mòdul 4
+        vpl-csa-2023-m5:
+          title: Mòdul 5
+        vpl-csa-2023-m6:
+          title: Mòdul 6
+        vpl-csa-2023-m7:
+          title: Mòdul 7
+        vpl-csa-2023-m8:
+          title: Mòdul 8
+        vpl-csd-2023-m1:
+          title: Mòdul 1
+        vpl-csd-2023-m2:
+          title: Mòdul 2
+        vpl-csd-2023-m3:
+          title: Mòdul 3
+        vpl-csd-2023-m4:
+          title: Mòdul 4
+        vpl-csd-2023-m5:
+          title: Mòdul 5
+        vpl-csd-2023-m6:
+          title: Mòdul 6
+        vpl-csd-2023-m7:
+          title: Mòdul 7
+        vpl-csd-2023-m8:
+          title: Mòdul 8

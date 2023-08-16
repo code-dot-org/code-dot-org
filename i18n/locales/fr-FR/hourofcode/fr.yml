@@ -201,6 +201,8 @@ fr:
   grade_level_label_elementary: École primaire
   grade_level_label_middle: École intermédiaire
   grade_level_label_high: Lycée
+  students_label: Élèves
+  teachers_label: Enseignants
   teacher_label_csf: Professeur de base de CS
   teacher_label_csd: Enseignant de CS Discoveries
   teacher_label_csp: Professeur de principes CS
@@ -214,7 +216,9 @@ fr:
   call_to_action_explore_unit: Explorez l'unité
   call_to_action_explore_curriculum: Explorez le programme
   call_to_action_explore_curriculum_options: Explorez les options de programme
+  call_to_action_explore_lessons: Explorez les leçons
   call_to_action_explore_modules: Explorez les modules
+  call_to_action_explore_module: Module d'exploration
   call_to_action_explore_workshops: Explorez les ateliers
   call_to_action_explore_course: Explorez le cours
   call_to_action_explore_courses: Découvrez les cours
@@ -262,8 +266,10 @@ fr:
   call_to_action_see_module_details: Voir les détails du module
   call_to_action_start_modules: Modules de démarrage
   call_to_action_see_course_details: Voir les détails du cours
+  call_to_action_see_lesson_details: Voir les détails de la leçon
   call_to_action_learn_about_approach: En savoir plus sur notre approche
   call_to_action_try_java_lab: Essayez Java Lab
+  call_to_action_notify_available: Avertissez-moi dès que disponible
   aria_label_call_to_action_afe: En savoir plus sur Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Lancez le programme d'apprentissage professionnel
     Teaching Computer Science Fundamentals
@@ -336,6 +342,24 @@ fr:
   aria_label_call_to_action_csf_course_d: Voir les détails du cours D
   aria_label_call_to_action_csf_course_e: Voir les détails du cours E
   aria_label_call_to_action_csf_course_f: Voir les détails du cours F
+  aria_label_call_to_action_ai_pl_101_videos: Regardez les vidéos AI 101 pour les
+    enseignants
+  aria_label_call_to_action_ai_teaching_module: Explorez le module d'enseignement
+    de l'IA et de l'apprentissage automatique
+  aria_label_call_to_action_how_ai_works_lesson_01: Voir les détails de la leçon d'introduction
+    à l'apprentissage automatique
+  aria_label_call_to_action_how_ai_works_lesson_02: Voir les détails de la leçon de
+    vision par ordinateur
+  aria_label_call_to_action_how_ai_works_lesson_03: Voir les détails de la leçon sur
+    les réseaux de neurones
+  aria_label_call_to_action_how_ai_works_lesson_04: Consultez les détails de la leçon
+    sur les chatbots et les grands modèles linguistiques
+  aria_label_call_to_action_how_ai_works_lesson_05: Voir les détails de la leçon sur
+    les images génératives
+  aria_label_call_to_action_how_ai_works_lesson_06: Voir les détails de la leçon sur
+    le biais algorithmique
+  aria_label_call_to_action_how_ai_works_lesson_07: Consultez les détails de la leçon
+    Notre code d'éthique en matière d'IA
   video_title_professional_learning_program: Le programme de formation professionnelle
     de Code.org
   curriculum_name_csf: Principes fondamentaux de l'informatique
@@ -460,6 +484,10 @@ fr:
   module_label_student_tool: Outil pour étudiants
   module_label_student_product: Produit
   module_label_student_content_resources: Contenu et ressources
+  module_label_new: Nouveau
+  module_label_coming_soon: Prochainement
+  module_label_video_series: Séries de vidéos
+  module_label_self_paced: Module à rythme automatique
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -482,9 +510,13 @@ fr:
   module_grade_9_12_teachers: 'Enseignants du secondaire supérieur '
   module_level_beginner: Débutant
   module_level_intermediate: Intermédiaire
+  module_duration_45_mins: 45 minutes
+  module_duration_1_hr: 1 heure
   module_duration_2_hrs: 2 heures
   module_duration_3_hrs: 3 heures
+  module_duration_5_hrs: 5 heures
   module_duration_8_hrs: 8 heures
+  module_duration_20_hrs: 20 heures
   module_duration_35_hrs: 35 heures
   module_duration_lesson: Leçon
   module_duration_week: Semaine
@@ -561,6 +593,7 @@ fr:
   heading_no_devices: Aucun appareil ? Nous avons ce qu'il vous faut
   heading_java_lab: Labo Java
   heading_objects_first: Les objets d'abord
+  heading_these_lessons_will: 'Ces leçons permettront de :'
   professional_learning_section_desc: Obtenez le soutien dont vous avez besoin pour
     vous préparer à enseigner. Les enseignants l'adorent, plus de 90 % d'entre eux
     le considèrent comme le meilleur développement professionnel de tous les temps !
@@ -696,6 +729,11 @@ fr:
   ai_curriculum_grades_03: 'Niveaux scolaires : 3-12'
   ai_curriculum_duration_03: 'Durée : 1 heure'
   ai_curriculum_btn_aria_label_03: Essayez l'activité AI for Oceans
+  ai_curriculum_title_04: Comment fonctionne l'IA
+  ai_curriculum_desc_04: Ces leçons complètent la série de vidéos How AI Works. Chaque
+    leçon est associée à une seule vidéo de la série, qui permet d'approfondir les
+    concepts présentés dans les vidéos.
+  ai_curriculum_btn_aria_label_04: Découvrez les leçons sur le fonctionnement de l'IA
   ai_carousel_heading: 'Ce que les enseignants disent à propos de l''IA avec Code.org :'
   ai_carousel_quote_01: Cette leçon a également permis à mes élèves de constater qu'il
     existe un élément d'opinion dans les systèmes de classification. Plus tard, lorsque
@@ -715,6 +753,11 @@ fr:
     automatique.
   ai_pl_list_05: Explorez les projets de fin de chapitre.
   ai_pl_duration: 'Durée : 2 heures'
+  ai_pl_title: Enseignement de l'IA et de l'apprentissage automatique
+  ai_pl_desc: Introduction à l'intelligence artificielle et à l'apprentissage automatique.
+    Entraînez un modèle d'apprentissage automatique à l'aide d'AI Lab. et utilisez
+    des applications d'apprentissage automatique. Réfléchissez aux implications réelles
+    de l'IA et de l'apprentissage automatique.
   ai_video_series_title: Comment fonctionne l'IA
   ai_video_series_desc: Présentée par le PDG de Microsoft, Satya Nadella, cette série
     de courtes vidéos vous expliquera comment fonctionne l'intelligence artificielle
@@ -743,6 +786,7 @@ fr:
   ai_pl_101_hero_desc: Découvrez le potentiel de transformation de l'intelligence
     artificielle (IA) sur le plan de l'éducation grâce à notre série de modules de
     formation en ligne gratuits destinés aux éducateurs.
+  ai_pl_101_hero_desc_02: Une série complète d'apprentissage en ligne pour les enseignants.
   ai_pl_101_hero_presented: Présenté par
   ai_pl_101_intro_heading: Qu'est-ce que AI 101 pour les enseignants ?
   ai_pl_101_intro_text: AI 101 for Teachers est une série d'apprentissage professionnel
@@ -792,6 +836,105 @@ fr:
     aidant les enseignants à fournir un feedback itératif et une évaluation formative
     tout au long de l''expérience d''écriture.'
   ai_pl_101_explore__button_4: Outil d'exploration
+  ai_pl_101_video_title_1: Entretien au coin du feu avec Sal Khan et Hadi Partovi
+  ai_pl_101_video_desc_1: Rejoignez Sal Khan (Khan Academy) et Hadi Partovi (Code.org)
+    pour une discussion au coin du feu sur l'intégration de l'intelligence artificielle
+    en classe. Attendez-vous à une discussion animée incluant certains des sujets
+    les plus controversés concernant l'IA aujourd'hui.
+  ai_pl_101_video_title_2: Démystifier l'IA pour les éducateurs
+  ai_pl_101_video_desc_2: Introduction aux principes fondamentaux de l'intelligence
+    artificielle qui vous permettra d'acquérir les connaissances fondamentales nécessaires
+    pour comprendre l'impact profond de l'IA sur notre société et sa pertinence croissante
+    dans le domaine de l'éducation. Vous obtiendrez des informations pratiques sur
+    l'utilisation de l'IA pour les tâches en classe et vous gagnerez du temps sur
+    les tâches administratives.
+  ai_pl_101_video_title_3: Transformer l'apprentissage grâce à l'IA
+  ai_pl_101_video_desc_3: Explorez l'intersection de l'IA et de l'éducation. Cette
+    session explore comment l'IA peut être combinée à la pédagogie pour améliorer
+    l'apprentissage des élèves. C'est un rendez-vous incontournable pour les éducateurs
+    qui souhaitent tirer parti de l'IA pour transformer leurs pratiques pédagogiques
+    afin d'enrichir les expériences d'apprentissage de leurs élèves.
+  ai_pl_101_video_title_4: Garantir une approche responsable de l'IA
+  ai_pl_101_video_desc_4: Explorez les considérations éthiques et les meilleures pratiques
+    pour intégrer l'intelligence artificielle dans les environnements éducatifs. Cette
+    session fournira des stratégies concrètes, des ressources et des exemples concrets,
+    tous visant à comprendre les biais potentiels de l'IA et les considérations éthiques
+    qui en découlent.
+  ai_pl_101_video_title_5: L'IA au service de la salle de classe
+  ai_pl_101_video_desc_5: Cette session met l'accent sur l'enseignement de l'IA, l'évaluation
+    et l'utilisation d'outils pédagogiques liés à l'IA et l'utilisation de l'IA pour
+    l'évaluation des étudiants. Grâce à un riche mélange de théories, d'exemples pratiques
+    et de ressources, il vise à donner aux enseignants les moyens de s'y retrouver
+    dans le paysage de l'IA et d'améliorer les expériences d'apprentissage des étudiants.
+  ai_pl_101_video_desc_6: 'Apprenez-en davantage sur les nouvelles technologies à
+    l''origine des grands changements en matière d''IA, avec deux nouvelles vidéos
+    sur les grands modèles linguistiques (tels que ChatGPT) et l''IA générative. Découvrez
+    comment ces nouvelles technologies fonctionnent directement auprès des experts :
+    Mira Murati, directrice technique d''OpenAI, et Cristóbal Valenzuela, PDG de RunwayML.'
+  how_ai_works_hero_heading: Comment fonctionne l'IA
+  how_ai_works_hero_desc: Plongez dans le monde de l'IA avec « Comment fonctionne
+    l'IA », notre série de vidéos et les leçons qui l'accompagnent !
+  how_ai_works_intro_desc: Cette série de courtes vidéos et de leçons en classe qui
+    les accompagnent vous expliquera, à vous et à vos élèves, comment fonctionne l'intelligence
+    artificielle et pourquoi elle est importante. Vous pouvez choisir des leçons individuelles
+    en fonction du sujet, explorer toute la série de sujets en un seul cours ou enseigner
+    les 7 leçons pour approfondir.
+  how_ai_works_intro_list_01: Vous initier à l'intelligence artificielle et à l'apprentissage
+    automatique
+  how_ai_works_intro_list_02: Découvrez comment fonctionne l'IA générative, y compris
+    les grands modèles de langage (LLM) et la génération d'images
+  how_ai_works_intro_list_03: Explorez les préjugés, l'éthique, la confidentialité
+    et l'utilisation responsable de l'IA
+  how_ai_works_intro_list_04: Découvrez les applications réelles de l'IA, y compris
+    la vision par ordinateur
+  how_ai_works_lessons_heading: Cours d'IA pour votre classe
+  how_ai_works_lesson_title_01: Présentation de l'apprentissage automatique
+  how_ai_works_lesson_desc_01: Découvrez une forme d'intelligence artificielle appelée
+    apprentissage automatique et comment ils peuvent utiliser le processus de résolution
+    de problèmes pour entraîner un robot à résoudre des problèmes. Participez à des
+    activités d'apprentissage automatique dans le cadre desquelles un robot apprend
+    à détecter des modèles chez les poissons.
+  how_ai_works_lesson_title_02: Vision par ordinateur
+  how_ai_works_lesson_desc_02: Découvrez comment fonctionne la vision par ordinateur.
+    Regardez une vidéo expliquant la vision par ordinateur et la façon dont un ordinateur
+    « voit ». Concevez ensuite un algorithme qui utilise un réseau pour déterminer
+    le numéro affiché par l'écran à sept segments et testez-le.
+  how_ai_works_lesson_title_03: Réseaux de neurones
+  how_ai_works_lesson_desc_03: Découvrez comment fonctionnent les réseaux de neurones.
+    Utilisez un widget pour explorer les réseaux de neurones de manière pratique.
+    Regardez une vidéo expliquant les réseaux neuronaux. Enfin, discutez de la nécessité
+    de perspectives diverses lors de la création de systèmes de recommandation.
+  how_ai_works_lesson_title_04: Chatbots et grands modèles de langage
+  how_ai_works_lesson_desc_04: Découvrez ce qu'est un modèle de langage étendu (LLM)
+    et comment il fonctionne, puis utilisez un modèle LLM pour co-créer un texte avec
+    l'IA. Enfin, déterminez si les LLM sont intelligents ou créatifs.
+  how_ai_works_lesson_title_05: Images génératives
+  how_ai_works_lesson_desc_05: Découvrez comment l'IA peut générer des images, puis
+    explorez un widget d'IA de diffusion et déterminez si ces modèles sont créatifs
+    ou non.
+  how_ai_works_lesson_title_06: Biais algorithmique
+  how_ai_works_lesson_desc_06: Entraînez-vous à recadrer des images pour découvrir
+    le biais sous-jacent à l'algorithme de recadrage de Twitter, puis lisez et regardez
+    une vidéo sur la découverte de cet algorithme biaisé. Enfin, discutez des moyens
+    de reconnaître et de réduire les biais dans les algorithmes.
+  how_ai_works_lesson_title_07: Notre code d'éthique en matière d'IA
+  how_ai_works_lesson_desc_07: Menez des recherches à l'aide d'articles et de vidéos
+    qui exposent les pièges éthiques dans le domaine de l'intelligence artificielle
+    de leur choix. Réunissez une ressource à l'échelle de la classe intitulée « Notre
+    code d'éthique en matière d'IA » pour les créateurs et les législateurs de l'IA
+    du monde entier.
+  how_ai_works_lessons_in_a_day_title: Comment fonctionne l'IA en un jour
+  how_ai_works_lessons_in_a_day_desc: Vous n'avez qu'une journée ? Il est également
+    possible de présenter l'ensemble de la série aux étudiants en une seule journée.
+    Parfait pour tout enseignant spécialisé qui souhaite initier ses élèves à l'IA,
+    ou même comme leçon pour un professeur invité.
+  how_ai_works_lessons_in_a_day_desc_02: Présentez toutes les vidéos « Comment fonctionne
+    l'IA » en une journée. Les élèves suivent chaque vidéo en faisant correspondre
+    le vocabulaire de la vidéo, puis en répondant à une question de réflexion sur
+    chaque vidéo.
+  how_ai_works_resources_desc: Vous souhaitez en savoir plus sur l'IA ? Voici quelques
+    ressources supplémentaires qui peuvent vous aider à approfondir votre apprentissage
+    et celui de vos élèves.
   ai_vid_intro_caption: Présentation du fonctionnement de l'IA
   ai_vid_chatbots_caption: Comment fonctionnent les chatbots et les grands modèles
     de langage
@@ -1159,10 +1302,10 @@ fr:
   teach_page_additional_materials_list_desc_03: Imprimez les affiches de divers modèles
     que vous accrocherez dans votre école. Elles inciteront vos élèves à s'intéresser
     davantage à l'informatique.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1763,6 +1906,7 @@ fr:
   not_found_desc: La page demandée n'a pas pu être trouvée
   not_found_instructions: Vérifiez l'addresse Internet et ressoumettez ou choisissez
     un lien de parmis la liste ci-dessous.
+  company_code_dot_org: Code.org
   company_4-H: Développement des Jeunes 4-H
   company_asa: Aliiance Après-École
   company_asos: ASOS
@@ -1815,6 +1959,7 @@ fr:
   company_evsd: Groupe scolaire de Valley East
   company_eastonvilleschooldistrict: Groupe scolaire Eatonville
   company_enumclawschooldistrict: Groupe scolaire Enumclaw
+  company_ets: ANIMAUX DE COMPAGNIE
   company_everettsd: Écoles publiques Everette
   company_fsusd: Groupe scolaire de Fairfield-Suisun Unified
   company_fayettecountypublicschools: Écoles publiques du comté de la Fayette
@@ -1836,6 +1981,7 @@ fr:
   company_houstonisd: District scolaire indépendant de Houston
   company_hcpss: Écoles publiques du comté de Howard
   company_idla: Académie d'apprentissage numérique de l'Idaho
+  company_iste: SITE
   company_janesvilleschooldistrict: Groupe scolaire Janesville
   company_johnstoncountyschools: Écoles du comté de Johnston
   company_lps: Écoles publiques de lincoln
@@ -12568,8 +12714,10 @@ fr:
   tutorial_ai4alldance_string_platforms: Tous les navigateurs actuels
   tutorial_ai4allneural_string_platforms: Tous les navigateurs actuels
   tutorial_spheroinout_string_platforms: Débranché
-  tutorial_edisonblueprint_string_platforms: Tous les navigateurs actuels
-  tutorial_edisonmaze_string_platforms: Tous les navigateurs actuels
+  tutorial_edisonblueprint_string_platforms: Tous les navigateurs modernes, tablette
+    Android, iPad
+  tutorial_edisonmaze_string_platforms: Tous les navigateurs modernes, tablette Android,
+    iPad
   tutorial_milnefunctions_string_platforms: Tous les navigateurs actuels
   tutorial_sasmap_string_platforms: Tous les navigateurs modernes, iPad, lecteur d'écran
   tutorial_firstrobotics_string_platforms: Tous les navigateurs actuels
