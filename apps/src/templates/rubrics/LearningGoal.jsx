@@ -2,27 +2,39 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {learningGoalShape} from './rubricShapes';
+import {learningGoalShape, reportingDataShape} from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function LearningGoal({
   learningGoal,
   teacherHasEnabledAi,
   canProvideFeedback,
+  reportingData,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
 
+  const handleClick = () => {
+    const eventName = isOpen
+      ? EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+      : EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      learningGoalKey: learningGoal.key,
+      learningGoal: learningGoal.learningGoal,
+    });
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <details
-      className={style.learningGoalRow}
-      onClick={() => setIsOpen(!isOpen)}
-    >
+    <details className={style.learningGoalRow} onClick={handleClick}>
       <summary className={style.learningGoalHeader}>
         <div className={style.learningGoalHeaderLeftSide}>
           {isOpen && (
@@ -59,6 +71,7 @@ LearningGoal.propTypes = {
   learningGoal: learningGoalShape.isRequired,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
+  reportingData: reportingDataShape,
 };
 
 const AiToken = () => {
