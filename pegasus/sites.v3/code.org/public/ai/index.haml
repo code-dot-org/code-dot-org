@@ -189,7 +189,7 @@ theme: responsive_full_width
 %section#ai-videos
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
-    %p=hoc_s(:ai_video_series_desc)
+    %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
     .video-series
       = view :ai_vid_chatbots
       = view :ai_vid_creativity
