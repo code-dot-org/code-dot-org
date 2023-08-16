@@ -668,7 +668,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
-    // Hidden workspace where we can put functions definitions.
+    // Hidden workspace where we can put function definitions.
     const procedureWorkspace = new Blockly.Workspace();
     blocklyWrapper.setProcedureWorkspace(procedureWorkspace);
 

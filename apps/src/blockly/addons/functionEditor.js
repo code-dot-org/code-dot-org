@@ -51,15 +51,18 @@ export default class FunctionEditor {
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
     });
 
+    // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
+    // Rename handler
     this.nameInput = document.getElementById(MODAL_EDITOR_NAME_INPUT_ID);
     this.nameInput.addEventListener('input', e => {
       this.block.getProcedureModel().setName(e.target.value);
     });
 
+    // Description handler
     this.functionDescriptionInput = document.getElementById(
       'functionDescriptionText'
     );
@@ -67,45 +70,21 @@ export default class FunctionEditor {
       // TODO: Save the description to the procedure model
     });
 
-    // Set up the delete function button
+    // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', () => {
-        // delete all caller blocks from the procedure workspace
-        Blockly.Procedures.getCallers(
-          this.block.getProcedureModel().getName(),
-          this.procedureWorkspace
-        ).forEach(block => {
-          block.dispose();
-        });
+      .addEventListener('click', this.handleDelete.bind(this));
 
-        // delete all caller blocks from the main workspace
-        Blockly.Procedures.getCallers(
-          this.block.getProcedureModel().getName(),
-          this.mainWorkspace
-        ).forEach(block => {
-          block.dispose();
-        });
-
-        // delete the block from the editor workspace's procedure map
-        // this will also cause it to be deleted from the main and procedure
-        // workspaces' map
-        this.editorWorkspace
-          .getProcedureMap()
-          .delete(this.block.getProcedureModel().getId());
-
-        // delete the block from the editor workspace and hide the modal
-        this.block.dispose();
-        this.hide();
-      });
-
+    // Main workspace toolbox procedure category callback
     this.mainWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      flyoutCategory(this.mainWorkspace, true)
+      this.flyoutCategory(this.mainWorkspace, true)
     );
+
+    // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
     // false to not show the new function button inside the modal editor
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      flyoutCategory(this.mainWorkspace, false)
+      this.flyoutCategory(this.mainWorkspace, false)
     );
 
     // Set up the "new procedure" button in the toolbox
@@ -115,36 +94,7 @@ export default class FunctionEditor {
       this.mainWorkspace.getToolbox().refreshSelection();
     });
 
-    this.editorWorkspace.addChangeListener(e => {
-      // If the main workspace hasn't been initialized yet, don't do anything
-      if (!this.mainWorkspace) return;
-      if (e instanceof ProcedureBase) {
-        let event;
-        try {
-          event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
-        } catch (err) {
-          // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
-          // the delete in the secondary workspace cannot be deserialized into the original workspace.
-          return;
-        }
-        event.run(true);
-
-        // Update the toolbox in case this change is happening while the flyout is open
-        this.mainWorkspace.getToolbox().refreshSelection();
-      }
-    });
-
-    // Mirror events from editor workspace to procedure workspace.
-    this.editorWorkspace.addChangeListener(e => {
-      if (e.isUiEvent || !this.procedureWorkspace) return;
-      var json = e.toJson();
-      // Convert JSON back into an event, then execute it.
-      var secondaryEvent = Blockly.Events.fromJson(
-        json,
-        this.procedureWorkspace
-      );
-      secondaryEvent.run(true);
-    });
+    this.setUpEditorWorkspaceChangeListeners();
   }
 
   hide() {
@@ -188,7 +138,7 @@ export default class FunctionEditor {
         existingProcedureBlock
       );
       this.block = Blockly.serialization.blocks.append(
-        addEditorWorkspaceBlockConfig(existingData),
+        this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
     } else {
@@ -206,7 +156,7 @@ export default class FunctionEditor {
         movable: false,
       };
       this.block = Blockly.serialization.blocks.append(
-        addEditorWorkspaceBlockConfig(newDefinitionBlock),
+        this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
@@ -265,60 +215,127 @@ export default class FunctionEditor {
 
     this.showForFunction(hiddenProcedure);
   }
-}
 
-const createCallBlock = function (procedure) {
-  const name = procedure.getName();
-  return {
-    kind: 'block',
-    type: 'procedures_callnoreturn',
-    extraState: {
-      name: name,
-      id: procedure.getId(),
-    },
-  };
-};
+  handleDelete() {
+    // delete all caller blocks from the procedure workspace
+    Blockly.Procedures.getCallers(
+      this.block.getProcedureModel().getName(),
+      this.procedureWorkspace
+    ).forEach(block => {
+      block.dispose();
+    });
 
-/**
- * Constructs the blocks required by the flyout for the procedure category.
- * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
- * Derived from core Google Blockly:
- * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
- * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns an array of XML block elements
- */
-// Equivalent to blockly-samples registerToolboxCategoryCallback->modalProceduresToolboxCallback
-export function flyoutCategory(workspace, includeNewButton = true) {
-  const blockList = [];
-  if (includeNewButton) {
-    blockList.push({
-      kind: 'button',
-      text: 'Create a Function',
-      callbackKey: 'newProcedureCallback',
+    // delete all caller blocks from the main workspace
+    Blockly.Procedures.getCallers(
+      this.block.getProcedureModel().getName(),
+      this.mainWorkspace
+    ).forEach(block => {
+      block.dispose();
+    });
+
+    // delete the block from the editor workspace's procedure map
+    // this will also cause it to be deleted from the main and procedure
+    // workspaces' map
+    this.editorWorkspace
+      .getProcedureMap()
+      .delete(this.block.getProcedureModel().getId());
+
+    // delete the block from the editor workspace and hide the modal
+    this.block.dispose();
+    this.hide();
+  }
+
+  setUpEditorWorkspaceChangeListeners() {
+    // Mirror procedure events from editor workspace to main workspace.
+    // This allows updates for things like procedure name to propogate to the main
+    // workspace.
+    this.editorWorkspace.addChangeListener(e => {
+      // If the main workspace hasn't been initialized yet, don't do anything
+      if (!this.mainWorkspace) return;
+      if (e instanceof ProcedureBase) {
+        let event;
+        try {
+          event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
+        } catch (err) {
+          // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
+          // the delete in the secondary workspace cannot be deserialized into the original workspace.
+          return;
+        }
+        event.run(true);
+
+        // Update the toolbox in case this change is happening while the flyout is open
+        this.mainWorkspace.getToolbox().refreshSelection();
+      }
+    });
+
+    // Mirror all non-ui events from editor workspace to procedure workspace.
+    // This allows us to propogate edits to functions to the procedure workspace
+    // (the source of truth for function definitions).
+    this.editorWorkspace.addChangeListener(e => {
+      if (e.isUiEvent || !this.procedureWorkspace) return;
+      var json = e.toJson();
+      // Convert JSON back into an event, then execute it.
+      var secondaryEvent = Blockly.Events.fromJson(
+        json,
+        this.procedureWorkspace
+      );
+      secondaryEvent.run(true);
     });
   }
 
-  // Get all the procedures from the workspace and create call blocks for them
-  workspace
-    .getProcedureMap()
-    .getProcedures()
-    .forEach(procedure => blockList.push(createCallBlock(procedure)));
-  return blockList;
-}
+  /**
+   * Add x and y coordinates to the block configuration so it shows up
+   * correctly in the editor workspace. When we copy the block between workspaces
+   * the x and y coordinates don't persist, so we need to add this to both new and
+   * existing function definitions.
+   * @param blockConfig: Block json configuration
+   * @returns Block configuration with x and y coordinates
+   */
+  addEditorWorkspaceBlockConfig(blockConfig) {
+    const returnValue = {
+      ...blockConfig,
+      x: 50,
+      y: 210,
+    };
+    return returnValue;
+  }
 
-/**
- * Add x and y coordinates to the block configuration so it shows up
- * correctly in the editor workspace. When we copy the block between workspaces
- * the x and y coordinates don't persist, so we need to add this to both new and
- * existing function definitions.
- * @param blockConfig: Block json configuration
- * @returns Block configuration with x and y coordinates
- */
-function addEditorWorkspaceBlockConfig(blockConfig) {
-  const returnValue = {
-    ...blockConfig,
-    x: 50,
-    y: 210,
-  };
-  return returnValue;
+  /**
+   * Constructs the blocks required by the flyout for the procedure category.
+   * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
+   * Derived from core Google Blockly:
+   * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
+   * @param {WorkspaceSvg} workspace The workspace containing procedures.
+   * @returns an array of XML block elements
+   */
+  // Equivalent to blockly-samples registerToolboxCategoryCallback->modalProceduresToolboxCallback
+  flyoutCategory(workspace, includeNewButton = true) {
+    const blockList = [];
+    if (includeNewButton) {
+      blockList.push({
+        kind: 'button',
+        text: 'Create a Function',
+        callbackKey: 'newProcedureCallback',
+      });
+    }
+
+    // Get all the procedures from the workspace and create call blocks for them
+    workspace
+      .getProcedureMap()
+      .getProcedures()
+      .forEach(procedure => blockList.push(this.createCallBlock(procedure)));
+    return blockList;
+  }
+
+  createCallBlock(procedure) {
+    const name = procedure.getName();
+    return {
+      kind: 'block',
+      type: 'procedures_callnoreturn',
+      extraState: {
+        name: name,
+        id: procedure.getId(),
+      },
+    };
+  }
 }
