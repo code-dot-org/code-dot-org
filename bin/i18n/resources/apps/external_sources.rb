@@ -12,6 +12,13 @@ module I18n
         def self.sync_in
           puts 'Preparing external sources'
 
+          # Preparing Blockly Core files
+          blockly_core_dir = CDO.dir(File.join(I18N_SOURCE_DIR, 'blockly-core'))
+          FileUtils.mkdir_p(blockly_core_dir)
+          Dir[CDO.dir('apps/node_modules/@code-dot-org/blockly/i18n/locales/en-US/*.json')].each do |filepath|
+            FileUtils.cp(filepath, blockly_core_dir)
+          end
+
           FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
 
           # ml-playground (AI Lab) files
