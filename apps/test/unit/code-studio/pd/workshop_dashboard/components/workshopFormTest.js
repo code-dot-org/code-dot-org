@@ -112,6 +112,8 @@ describe('WorkshopForm test', () => {
       target: {name: 'subject', value: 'SLP Intro'},
     });
 
+    expect(onPublish).not.to.have.been.called;
+
     // Publish workshop
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
@@ -141,6 +143,8 @@ describe('WorkshopForm test', () => {
     capacityField.simulate('change', {
       target: {name: 'capacity', value: newCapacity},
     });
+
+    expect(onSave).not.to.have.been.called;
 
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
     saveButton.simulate('click');
