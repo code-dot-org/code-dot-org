@@ -121,6 +121,7 @@ uk:
       Create an App in App Lab: Створення програми в Лабораторії ШІ
       Create your project: Створити власний проєкт
       Creating Sprites: Створення Sprites
+      Customize: Налаштування
       Customize Your App: Налаштовуємо нашу програму
       Customizing Your App: Налаштування свого застосунка
       Dance Crews: Танцювальні команди
@@ -173,6 +174,7 @@ uk:
       Finish the Prototype: Закінчити прототип
       Finishing Functions: Завершення функцій
       Finishing Touches: Завершальні штрихи
+      Flyer Game: Гра Літун
       Follow the Algorithm - Unplugged Activity: Дотримання алгоритму - Безмашинна
         вправа
       Fonts and Style: Шрифти та стиль
@@ -191,7 +193,7 @@ uk:
       Graph Paper Programming - Unplugged Activity: Безмашинна вправа - Програмування
         по клітинках
       Green Glass Door: Зелені скляні двері
-      HTML Tags: HTML Теги
+      HTML Tags: Теги HTML
       Hardware and Software: Обладнання та програмне забезпечення
       Headings: Заголовки
       Headings in HTML: Заголовки в HTML
@@ -200,6 +202,8 @@ uk:
       How to Make a Sprite: Як створити спрайт
       Hyperlinks: Гіперпосилання
       Ice Age Loops: Ice Age Петлі
+      If Statements: Команди умови
+      If-Else Statements: Команди Якщо/Інакше
       Images and Sounds: Зображення та звуки
       Import Your Model: Імпортування моделі
       Import a Model: Імпортування моделі
@@ -222,6 +226,7 @@ uk:
       Introducing Sprite Lab: Представляємо Спрайт Лабораторію
       Introduction to Arrays: Вступ до масивів
       Introduction to Game Lab: Знайомство з Ігровою Лабораторією
+      Introduction to Variables: Знайомство зі змінними
       Introduction to Variables - Part 1: Вступ до змінних - Частина 1
       Isaac's Survey Data: Дані опитування Айзека
       Iteration and Parameters: Ітерація та параметри
@@ -292,6 +297,7 @@ uk:
         вправа
       My Online Neighborhood: Мій інтернет-район
       My Robotic Friends - Unplugged Activity: Мої друзі-роботи - Безмашинна вправа
+      Naming Variables: Іменування змінних
       New Shapes: Нові фігури
       Orientation: Орієнтація
       Overview: Огляд
@@ -362,7 +368,7 @@ uk:
       Sample Personal Web Pages: Приклади персональних вебсторінок
       Sample Personal Websites: Приклади персональних вебсторінок
       Sample Platform Jumper Game: Приклад гри "Стрибунець"
-      Sample Programs: Зразки програм
+      Sample Programs: Приклади програм
       Sample Web Page: Приклад вебсторінки
       Sample Website: Приклад вебсайту
       Scoring & Scoreboard: Бали та табло
@@ -383,7 +389,7 @@ uk:
       Skill-Building: Розвиток навичок
       Sliders: Слайдери
       Smart Bike - Blinkers: Розумний велосипед - Blinkers
-      Social Sleuth: Соціальний розшук
+      Social Sleuth: Соціальний детектив
       Songwriting - Functions Unplugged Activity: Написання пісень - Функції з безмашинними
         вправами
       Speed it Up, Slow it Down: Пришвидшення та сповільнення
@@ -393,12 +399,13 @@ uk:
       Sprite Properties: Властивості спрайтів
       Sprite Scenes: Сцени спрайтів
       Star Chaser: Зірка Chaser
+      Teach A.I. a new word: Навчаємо ШІ новому слову
       Text Compression: Стиснення тексту
       The Animation Tab: Анімація
       The Big Event - Unplugged Activity: Велика подія - Безмашинна вправа
       The Buzzer: Зумер
       The Collector: Колекціонер
-      The Counter Pattern: Лічильник шаблону
+      The Counter Pattern: Шаблон лічильника
       The Draw Loop: Цикл малювання
       The Harvester: Фермерка
       The Internet - Unplugged Activity: Інтернет - Безмашинна вправа

@@ -9,7 +9,7 @@
   "dropletBlock_createSprite_description": "Crea un sprite en la posición inicial especificada.",
   "dropletBlock_createSprite_param0_description": "Coordenada X inicial.",
   "dropletBlock_createSprite_param1_description": "Coordenada Y inicial.",
-  "dropletBlock_createSprite_param2": "ancho",
+  "dropletBlock_createSprite_param2": "el ancho",
   "dropletBlock_createSprite_param2_description": "Anchura del rectángulo del marcador de posición y del colisionador hasta que se establezca una imagen o un nuevo colisionador.",
   "dropletBlock_createSprite_param3": "altura",
   "dropletBlock_createSprite_param3_description": "Altura del rectángulo del marcador de posición y del colisionador hasta que se establezca una imagen o un nuevo colisionador.",

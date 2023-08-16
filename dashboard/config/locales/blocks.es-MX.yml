@@ -141,7 +141,7 @@ es-MX:
             '"height"': altura
             '"rotation"': rotación
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
@@ -165,7 +165,7 @@ es-MX:
             '"height"': altura
             '"rotation"': rotación
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: cambiar {GROUP} {PROPERTY} por {VAL}
@@ -265,7 +265,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: "{SPRITE} {PROPERTY}"
@@ -379,7 +379,7 @@ es-MX:
             '"SLOTH"': perezosos
             '"UNICORN"': unicornios
             sprites: todo
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -676,7 +676,7 @@ es-MX:
             '"height"': altura
             '"rotation"': rotación
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: 'definir {SPRITE} {PROPERTY} a {VAL} '
@@ -701,7 +701,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: definir {PROPERTY} de {GROUP} a {VAL}
@@ -712,7 +712,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: distribuye aleatoriamente {SPRITE} {PROPERTY}
@@ -737,7 +737,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
         text: distribuir {GROUP} {PROPERTY} aleatoriamente
@@ -812,7 +812,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
           RANGE:
@@ -841,7 +841,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
           RANGE:
@@ -857,7 +857,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
           RANGE:
@@ -887,7 +887,7 @@ es-MX:
             '"rotation"': rotación
             '"scale"': tamaño
             '"tint"': tonalidad
-            '"width"': ancho
+            '"width"': el ancho
             '"x"': posición horizontal
             '"y"': posición vertical
           RANGE:
@@ -1728,7 +1728,7 @@ es-MX:
       Vector_setColor:
         text: establecer color para {COLOR}
       Vector_setSize:
-        text: establecer ancho {WIDTH} altura {HEIGHT}
+        text: definir ancho {WIDTH} altura {HEIGHT}
       Vector_teleportTo:
         text: establecer posición {POSITION}
       Vector_vectorNorth:
@@ -1995,7 +1995,6 @@ es-MX:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2239,7 +2238,7 @@ es-MX:
             '"right"': columna derecha
             '"row"': renglon
             '"top"': fila superior
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -2528,7 +2527,7 @@ es-MX:
           PROPERTY:
             '"height"': altura
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
         text: definir {SPRITE} {PROPERTY} a {N}%
       gamelab_setSpeed_dropdown:
         options:

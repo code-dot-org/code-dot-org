@@ -225,11 +225,22 @@ input[type=submit] {
 a.link-button {
   &.secondary {
     background: none;
-    border-color: $neutral-dark;
-    color: $neutral-dark;
+    border-color: $neutral_dark;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
+    }
+  }
+
+  &.white {
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
+
+    &:hover {
+      background: $neutral_dark10;
+      border-color: $neutral_dark10;
     }
   }
 
@@ -631,6 +642,12 @@ form {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 // Action blocks shared styles
@@ -656,8 +673,11 @@ form {
     }
   }
 
-  figure.video-responsive {
-    margin-bottom: 1rem;
+  figure {
+
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
@@ -670,6 +690,12 @@ form {
     h3 {
       @include heading-sm;
     }
+  }
+
+  // Hides the unused caption div from the
+  // display_video_thumbnail partial
+  .video_caption_link {
+    display: none;
   }
 }
 

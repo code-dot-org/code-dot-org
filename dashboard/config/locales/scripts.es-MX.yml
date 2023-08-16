@@ -2340,6 +2340,10 @@ es-MX:
               display_name: Navegando por Code.org
           name: csa-autodidacta-pl
           title: Navegando por Code.org Piloto para Profesores de CSA
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configuración
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3906,6 +3910,8 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             lessonGroup-4:
               display_name: Lecciones Alternativas
+            lessonGroup-5:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -9631,6 +9637,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -9697,6 +9705,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -9763,6 +9773,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -9832,6 +9844,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -9902,6 +9916,8 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             lessonGroup-4:
               display_name: Lecciones Alternativas
+            lessonGroup-5:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación
             altamente interactiva y colaborativa al campo de la informática, enmarcada
             dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
@@ -10237,6 +10253,8 @@ es-MX:
           student_description: "¡Prueba los fundamentos de la informática con los
             personajes de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!"
           title: Laberinto clásico
+        how-ai-works-2023:
+          title: Cómo funciona la Inteligencia Artificial
         iceage:
           description: "¡Crea una historia o crea un juego con el laboratorio de juegos
             de la Edad de hielo!"
@@ -10527,6 +10545,11 @@ es-MX:
               display_name: Eventos
             lessonGroup-7:
               display_name: Proyecto de fin de curso
+            lessonGroup-8:
+              display_name: Datos
+          lessons:
+            lesson-1:
+              name: Datos
         nevada-standards-aligned-fourth-grade-2023:
           description: Hemos creado el curso E para los alumnos de cuarto curso. El
             curso comienza con una introducción a la herramienta de programación Laboratorio
@@ -10591,6 +10614,11 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Datos
+            lessonGroup-8:
+              display_name: Sistemas de computación
+          lessons:
+            lesson-1:
+              name: Sistemas de computación
         nevada-standards-aligned-third-grade-2023:
           description: Hemos creado el curso D para los alumnos de tercer grado.  El
             curso comienza con un repaso de los conceptos encontrados en cursos anteriores,
@@ -12172,6 +12200,22 @@ es-MX:
               name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
           name: vpl-csa-2022
           title: Aprendizaje Profesional Virtual de CSA
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Aprendizaje Profesional Virtual de CS Discoveries 2020 - 21
@@ -12199,6 +12243,22 @@ es-MX:
           title: Aprendizaje Profesional Virtual de CS Discoveries 2021 - 22
         vpl-csd-2022:
           title: Aprendizaje Profesional Virtual de CS Discoveries 2021 - 22
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8
         vpl-csd-ci-1:
           description: "Este módulo de aprendizaje profesional está diseñado para
             ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación
@@ -12669,6 +12729,22 @@ es-MX:
         vpl-csp-2022:
           name: vpl-csp-2022
           title: CS Principios de Aprendizaje Profesional Virtual 21 - 22
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

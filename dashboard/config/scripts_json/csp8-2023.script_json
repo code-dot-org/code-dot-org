@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:08:39 UTC",
+    "serialized_at": "2023-08-07 21:53:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2505,6 +2505,7 @@
       "key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
       "position": 9,
       "properties": {
+        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
@@ -2977,7 +2978,8 @@
       "properties": {
         "level_keys": [
           "Student End of Unit Survey_csp10_2023"
-        ]
+        ],
+        "progression": "End-of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -4033,10 +4035,200 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "computer_virus_scanning_software",
+      "word": "Computer Virus Scanning Software",
+      "definition": "protects a computing system against infection",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "key": "computing_innovation",
+      "word": "Computing Innovation",
+      "definition": "includes a program as an integral part of its function. Can be physical (e.g. self-driving car), non-physical computing software (e.g. picture editing software), or non-physical computing concepts (e.g., e-commerce).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "key": "decryption",
+      "word": "Decryption",
+      "definition": "a process that reverses encryption, taking a secret message and reproducing the original plain text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "key": "encryption",
+      "word": "Encryption",
+      "definition": "a process of encoding messages to keep them secret, so only \"authorized\" parties can read it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "key": "keylogging",
+      "word": "Keylogging",
+      "definition": "the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "key": "malware",
+      "word": "Malware",
+      "definition": "software intended to damage a computing system or to take partial control over its operation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "key": "multi_factor_authentication",
+      "word": "Multi-factor Authentication",
+      "definition": "a system that requires at least two steps to unlock protected information; each step adds a new layer of security that must be broken to gain unauthorized access",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    },
+    {
+      "key": "personally_identifiable_information_ppi_",
+      "word": "Personally Identifiable Information (PPI)",
+      "definition": "information about an individual that identifies, links, relates, or describes them",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "personally_identifiable_information_ppi_"
+      }
+    },
+    {
+      "key": "phishing",
+      "word": "Phishing",
+      "definition": "a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "key": "public_key_encryption",
+      "word": "Public Key Encryption",
+      "definition": "pairs a public key for encryption and a private key for decryption. The sender does not need the receiver’s private key to encrypt a message, but the receiver’s private key is required to decrypt the message",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "key": "rouge_access_point",
+      "word": "Rouge Access Point",
+      "definition": "a wireless access point that gives unauthorized access to secure networks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rouge_access_point"
+      }
+    },
+    {
+      "key": "symmetric_key_encryption",
+      "word": "Symmetric Key Encryption",
+      "definition": "involves one key for both encryption and decryption",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Data Policies and Privacy",
+        "vocabulary.key": "personally_identifiable_information_ppi_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "rouge_access_point"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

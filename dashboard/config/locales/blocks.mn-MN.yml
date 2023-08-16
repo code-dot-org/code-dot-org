@@ -7,19 +7,11 @@ mn:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': дундаж
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': дундаж
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -462,28 +454,8 @@ mn:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -1370,7 +1342,6 @@ mn:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1427,16 +1398,10 @@ mn:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': бүгд
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': бүгд
       binary_drawBin:
         text: хоёртыг зурах {BIN}
@@ -1583,7 +1548,6 @@ mn:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -1810,8 +1774,6 @@ mn:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '100': large
-            '30': small
             '50': дундаж
       gamelab_mirrorSprite:
         options:
@@ -1931,9 +1893,6 @@ mn:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': дундаж
       gamelab_setProp:
         options:
@@ -1950,9 +1909,6 @@ mn:
           PROPERTY:
             '"scale"': хэмжээ
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': дундаж
         text: "{SPRITE} {PROPERTY}-г {SIZE} руу тохируулах"
       gamelab_setSizes:
@@ -1965,11 +1921,9 @@ mn:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': удаан
             '5': хэвийн
             '7': хурдан
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS}-г {COLOR} руу өөрчлөх"
       gamelab_setupSim:

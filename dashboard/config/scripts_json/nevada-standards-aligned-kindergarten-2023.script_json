@@ -13,12 +13,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-kindergarten",
-    "serialized_at": "2023-07-31 23:45:46 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-09 22:27:36 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

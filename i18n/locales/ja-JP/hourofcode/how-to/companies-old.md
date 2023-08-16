@@ -48,8 +48,8 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
 - ヘッドフォンを準備するか、参加者に自分のものを持ってくるように頼みます。
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 参加者がペアになると、主催者にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **十分な数のデバイスがないですか？**[ペアプログラミング](https://www.youtube.com/watch?v=vgkahOzFH2Q)の出番です。 参加者がペアになると、主催者にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+- **ネットワーク通信速度が遅いですか？**イベントの冒頭でビデオを全体に見せれば、各自がビデオをダウンロードする必要はありません。 Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
 まずは、コンピュータサイエンスが私たちの身の回りの生活にどのような影響を与えているのかといった話をすることで、生徒の興味を引き付けましょう。 あなたがなぜコンピュータサイエンスの分野で働くことにしたのか、今の会社でどんな仕事をしているのか伝えることも、生徒たちを刺激する一助になるでしょう。

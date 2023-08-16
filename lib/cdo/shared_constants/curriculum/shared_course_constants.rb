@@ -116,7 +116,10 @@ module Curriculum
       {
         hoc: 'HOC',
         csc: 'CSC',
-        csf: 'CSF'
+        csf: 'CSF',
+        csa: 'CSA',
+        csp: 'CSP',
+        csd: 'CSD'
       }
     )
 

@@ -1144,6 +1144,10 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         csd1-dlp:
           lesson_groups:
             content:
@@ -2349,20 +2353,40 @@ bg:
           student_description: Искате ли да напишете своя собствена игра за по-малко
             от 10 минути? Опитайте нашите Flappy код уроци!
           title: Flappy код
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-data3-2023:
           title: AI и Машинно Обучение
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         focus-on-hardware3a-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2532,6 +2556,11 @@ bg:
               display_name: Събития
             lessonGroup-7:
               display_name: Проект за Края на Курса
+            lessonGroup-8:
+              display_name: Данни
+          lessons:
+            lesson-1:
+              name: Данни
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:

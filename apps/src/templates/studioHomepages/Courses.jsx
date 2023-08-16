@@ -60,8 +60,8 @@ class Courses extends Component {
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={description}
-          short={!isSignedOut}
           backgroundUrl={backgroundUrl}
+          backgroundImageStyling={{backgroundPosition: '40% 40%'}}
         >
           {isSignedOut && (
             <Button
@@ -109,6 +109,7 @@ const styles = {
     borderColor: color.white,
     color: color.neutral_dark,
     fontFamily: `"Gotham 5r", sans-serif`,
+    width: 'fit-content',
   },
 };
 

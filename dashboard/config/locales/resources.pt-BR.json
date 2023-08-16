@@ -570,9 +570,11 @@
           "name": "Processo de resolução de problemas"
         },
         "solving-problems-exemplar-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Chave de resposta"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "what-is-a-computer-2020/csd/2021": {
@@ -636,13 +638,18 @@
         "paper-planes/csd/2021": {
           "type": "Guia de atividades"
         },
+        "plane-how-to-videos/csd/2021": {
+          "name": "Vídeos de Instruções da Code.org"
+        },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "Recurso"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
@@ -660,6 +667,7 @@
           "type": "Recurso"
         },
         "intro_to_web_lab_part_2/csd/2021": {
+          "name": "Introdução ao Web Lab Parte 2",
           "type": "Vídeo"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
@@ -723,18 +731,26 @@
           "type": "Recurso"
         },
         "your-personal-style-1-2-3/csd/2021": {
+          "name": "Seu Estilo Pessoal",
           "type": "Rubrica"
         },
         "your-personal-style-1/csd/2021": {
+          "name": "Seu Estilo Pessoal",
           "type": "Revisão em grupo"
         },
         "your-personal-style/csd/2021": {
+          "name": "Seu Estilo Pessoal",
           "type": "Guia do projeto"
         },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "name": "Licenciando seu Trabalho"
+        },
         "licensing-your-work-2020/csd/2021": {
+          "name": "Licenciando seu Trabalho",
           "type": "Guia de atividades"
         },
         "creative-commons-video/csd/2021": {
+          "name": "Visão Geral do Creative Commons",
           "type": "Vídeo"
         },
         "creative_commons_search/csd/2021": {
@@ -746,21 +762,26 @@
           "type": "Recurso"
         },
         "define-your-web-page/csd/2021": {
+          "name": "Defina sua Página da Web",
           "type": "Guia de atividades"
         },
         "layout-properties/csd/2021": {
           "name": "Propriedades do Layout"
         },
         "person-web-page-prepare/csd/2021": {
+          "name": "Página Pessoal da Web - Prepare-se",
           "type": "Guia do projeto"
         },
         "personal-web-page-1/csd/2021": {
+          "name": "Página Pessoal da Web",
           "type": "Revisão em grupo"
         },
         "person-web-page-reflect/csd/2021": {
+          "name": "Página Pessoal da Web - Reflita",
           "type": "Guia do projeto"
         },
         "personal-web-page/csd/2021": {
+          "name": "Página Pessoal da Web",
           "type": "Rubrica"
         },
         "publishing_your_website/csd/2021": {
@@ -768,16 +789,21 @@
           "type": "Vídeo"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
+          "name": "Página Pessoal da Web - Lista de Verificação do Aluno",
           "type": "Recurso"
         },
         "extra_code_in_challenge_levels/csd/2021": {
           "type": "Recurso"
         },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "Websites com um Propósito"
+        },
         "websites-for-a-purpose/csd/2021": {
+          "name": "Websites com um Propósito",
           "type": "Guia de atividades"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
-          "name": "Vídeo: Gerenciando Discordâncias",
+          "name": "Vídeo: Gerenciando Conflitos",
           "type": "Vídeo"
         },
         "how-teamwork-works/csd/2021": {
@@ -1029,16 +1055,42 @@
         "unit-4-the-design-process/csd/2021": {
           "type": "Slides"
         },
+        "pspe-image/csd/2021": {
+          "name": "Processo de Resolução de Problemas com Empatia",
+          "type": "Imagem"
+        },
         "designing_with_empathy/csd/2021": {
+          "name": "Projetando com Empatia",
           "type": "Guia de atividades"
+        },
+        "designing_with_empathy_1/csd/2021": {
+          "name": "Projetando com Empatia"
         },
         "reacting-as-your-user/csd/2021": {
           "type": "Guia de atividades"
         },
+        "profile-1/csd/2021": {
+          "name": "Perfil 1",
+          "type": "Perfil do Usuário"
+        },
+        "profile-2/csd/2021": {
+          "name": "Perfil 2",
+          "type": "Perfil do Usuário"
+        },
+        "profile-3/csd/2021": {
+          "name": "Perfil 3",
+          "type": "Perfil do Usuário"
+        },
+        "profile-4/csd/2021": {
+          "name": "Perfil 4",
+          "type": "Perfil do Usuário"
+        },
         "user-centered-design-2021/csd/2021": {
+          "name": "Design Centrado no Usuário (Definir e Preparar) 2021",
           "type": "Guia de atividades"
         },
         "the-design-thinking-process/csd/2021": {
+          "name": "O Processo de Design Thinking",
           "type": "Vídeo"
         },
         "user-centered-design-reflect-2021/csd/2021": {
@@ -1143,9 +1195,14 @@
           "type": "Guia de atividades"
         },
         "bugs-and-features-planning/csd/2021": {
+          "name": "Erros e Recursos",
           "type": "Guia de atividades"
         },
+        "bugs_and_features/csd/2021": {
+          "name": "Erros e Recursos"
+        },
         "updating-your-prototype/csd/2021": {
+          "name": "Atualizando seu Protótipo",
           "type": "Guia de atividades"
         },
         "app-presentation/csd/2021": {
@@ -3258,6 +3315,7 @@
           "type": "Slides"
         },
         "solving_problems/csd/2022": {
+          "name": "Resolução de Problemas",
           "type": "Chave de resposta"
         },
         "solving_problems_1/csd/2022": {
@@ -3367,11 +3425,15 @@
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "type": "Slides"
         },
+        "code_org_how-to_video_playlist/csd/2022": {
+          "name": "Vídeos de Instruções da Code.org"
+        },
         "paper_tower/csd/2022": {
           "name": "Torre de Papel",
           "type": "Guia de atividades"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "name": "Introdução à Resolução de Problemas (Torre de Papel)",
           "type": "Slides"
         },
         "solving_problems_2/csd/2022": {
@@ -3382,6 +3444,7 @@
           "type": "Recurso"
         },
         "exploring_problem_solving_animals_/csd/2022": {
+          "name": "Explorando a Resolução de Problemas)",
           "type": "Slides"
         },
         "solving_problems_3/csd/2022": {
@@ -3389,6 +3452,7 @@
           "type": "Guia de atividades"
         },
         "exploring_problem_solving_games_/csd/2022": {
+          "name": "Explorando a Resolução de Problemas (Jogos)",
           "type": "Slides"
         },
         "exploring_web_pages/csd/2022": {
@@ -3408,6 +3472,7 @@
           "type": "Recurso"
         },
         "intro_to_web_lab_part_2/csd/2022": {
+          "name": "Introdução ao Web Lab Parte 2",
           "type": "Vídeo"
         },
         "video_intro_to_web_lab_part_1/csd/2022": {
@@ -3483,21 +3548,29 @@
           "type": "Slides"
         },
         "your_personal_style/csd/2022": {
+          "name": "Seu Estilo Pessoal",
           "type": "Rubrica"
         },
         "your_personal_style_1/csd/2022": {
+          "name": "Seu Estilo Pessoal",
           "type": "Revisão em grupo"
         },
         "your_personal_style_2/csd/2022": {
+          "name": "Seu Estilo Pessoal",
           "type": "Guia do projeto"
         },
         "mini-project_your_personal_style/csd/2022": {
           "type": "Slides"
         },
         "creative_commons_overview/csd/2022": {
+          "name": "Visão Geral do Creative Commons",
           "type": "Vídeo"
         },
+        "licensing_your_work/csd/2022": {
+          "name": "Licenciando seu Trabalho"
+        },
         "licensing_your_work_1/csd/2022": {
+          "name": "Licenciando seu Trabalho",
           "type": "Guia de atividades"
         },
         "intellectual_property/csd/2022": {
@@ -3516,6 +3589,7 @@
           "type": "Slides"
         },
         "define_your_web_page/csd/2022": {
+          "name": "Defina sua Página da Web",
           "type": "Guia de atividades"
         },
         "websites_for_expression/csd/2022": {
@@ -3529,6 +3603,7 @@
           "type": "Slides"
         },
         "personal_web_page_-_prepare/csd/2022": {
+          "name": "Página Pessoal da Web - Prepare-se",
           "type": "Guia do projeto"
         },
         "your_web_page_prepare/csd/2022": {
@@ -3538,15 +3613,19 @@
           "type": "Recurso"
         },
         "personal_web_page/csd/2022": {
+          "name": "Página Pessoal da Web",
           "type": "Revisão em grupo"
         },
         "personal_web_page_-_reflect/csd/2022": {
+          "name": "Página Pessoal da Web - Reflita",
           "type": "Guia do projeto"
         },
         "personal_web_page_-_student_checklist/csd/2022": {
+          "name": "Página Pessoal da Web - Lista de Verificação do Aluno",
           "type": "Recurso"
         },
         "personal_web_page_1/csd/2022": {
+          "name": "Página Pessoal da Web",
           "type": "Rubrica"
         },
         "publishing_your_website/csd/2022": {
@@ -3556,15 +3635,19 @@
         "project_-_personal_web_page/csd/2022": {
           "type": "Slides"
         },
+        "websites_for_a_purpose/csd/2022": {
+          "name": "Websites com um Propósito"
+        },
         "websites_for_a_purpose_1/csd/2022": {
           "name": "Sites com um Propósito",
           "type": "Guia de atividades"
         },
         "websites_for_a_purpose_2/csd/2022": {
+          "name": "Websites com um Propósito",
           "type": "Slides"
         },
         "video_managing_disagreement/csd/2022": {
-          "name": "Vídeo: Gerenciando Discordâncias",
+          "name": "Vídeo: Gerenciando Conflitos",
           "type": "Vídeo"
         },
         "video_teamwork/csd/2022": {
@@ -3717,6 +3800,7 @@
           "type": "Recurso"
         },
         "introduction_to_sprites/csd/2022": {
+          "name": "Introdução aos Sprites",
           "type": "Vídeo"
         },
         "sprites/csd/2022": {
@@ -3895,6 +3979,7 @@
           "type": "Guia do projeto"
         },
         "mini-project_-_side_scroller/csd/2022": {
+          "name": "Mini-projeto - Rolagem Lateral",
           "type": "Slides"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
@@ -3959,12 +4044,38 @@
           "type": "Slides"
         },
         "designing_with_empathy/csd/2022": {
+          "name": "Projetando com Empatia",
           "type": "Guia de atividades"
         },
+        "designing_with_empathy_1/csd/2022": {
+          "name": "Projetando com Empatia"
+        },
+        "problem_solving_process_with_empathy/csd/2022": {
+          "name": "Processo de Resolução de Problemas com Empatia",
+          "type": "Imagem"
+        },
         "designing_with_empathy_2/csd/2022": {
+          "name": "Projetando com Empatia",
           "type": "Slides"
         },
+        "profile_1/csd/2022": {
+          "name": "Perfil 1",
+          "type": "Perfil do Usuário"
+        },
+        "profile_2/csd/2022": {
+          "name": "Perfil 2",
+          "type": "Perfil do Usuário"
+        },
+        "profile_3/csd/2022": {
+          "name": "Perfil 3",
+          "type": "Perfil do Usuário"
+        },
+        "profile_4/csd/2022": {
+          "name": "Perfil 4",
+          "type": "Perfil do Usuário"
+        },
         "reacting_as_your_user/csd/2022": {
+          "name": "Reagindo como o Usuário",
           "type": "Guia de atividades"
         },
         "understanding_your_user/csd/2022": {
@@ -3972,18 +4083,22 @@
           "type": "Slides"
         },
         "the_design_thinking_process/csd/2022": {
+          "name": "O Processo de Design Thinking",
           "type": "Vídeo"
         },
         "user_centered_design_define_prepare_2021/csd/2022": {
+          "name": "Design Centrado no Usuário (Definir e Preparar) 2021",
           "type": "Guia de atividades"
         },
         "user_centered_design_-_define_and_prepare/csd/2022": {
+          "name": "Design Centrado no Usuário - Definir e Preparar",
           "type": "Slides"
         },
         "user_centered_design_try_reflect_2021/csd/2022": {
           "type": "Guia de atividades"
         },
         "user_centered_design_-_try_and_reflect/csd/2022": {
+          "name": "Design Centrado no Usuário - Experimente e Reflita",
           "type": "Slides"
         },
         "user_interface_screens/csd/2022": {
@@ -4049,6 +4164,7 @@
           "type": "Guia de atividades"
         },
         "exploring_ui_elements/csd/2022": {
+          "name": "Explorando Elementos de Interface UI",
           "type": "Slides"
         },
         "design_mode/csd/2022": {
@@ -4063,6 +4179,7 @@
           "type": "Guia de atividades"
         },
         "build_a_paper_prototype/csd/2022": {
+          "name": "Crie um Protótipo de Papel",
           "type": "Slides"
         },
         "paper_prototype_user_testing/csd/2022": {
@@ -4092,15 +4209,19 @@
           "type": "Guia de atividades"
         },
         "design_mode_in_app_lab/csd/2022": {
+          "name": "Modo de Design no App Lab",
           "type": "Slides"
         },
         "build_a_digital_prototype/csd/2022": {
+          "name": "Crie um Protótipo Digital",
           "type": "Slides"
         },
         "events_in_app_lab/csd/2022": {
+          "name": "Eventos no App Lab",
           "type": "Slides"
         },
         "events_in_app_lab_1/csd/2022": {
+          "name": "Eventos no App Lab",
           "type": "Vídeo"
         },
         "changing_screens/csd/2022": {
@@ -4120,6 +4241,7 @@
           "type": "Recurso"
         },
         "linking_prototype_screens/csd/2022": {
+          "name": "Vinculando Telas de Protótipo",
           "type": "Slides"
         },
         "digital_prototype_user_testing/csd/2022": {
@@ -4130,15 +4252,22 @@
           "type": "Slides"
         },
         "bugs_and_features/csd/2022": {
+          "name": "Erros e Recursos",
           "type": "Guia de atividades"
         },
+        "bugs_and_features_1/csd/2022": {
+          "name": "Erros e Recursos"
+        },
         "bugs_and_features_2/csd/2022": {
+          "name": "Erros e Recursos",
           "type": "Slides"
         },
         "updating_your_prototype/csd/2022": {
+          "name": "Atualizando seu Protótipo",
           "type": "Guia de atividades"
         },
         "updating_your_prototype_1/csd/2022": {
+          "name": "Atualizando seu Protótipo",
           "type": "Slides"
         },
         "app_presentation/csd/2022": {

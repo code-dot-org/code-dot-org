@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:06:59 UTC",
+    "serialized_at": "2023-08-07 22:43:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1318,7 +1318,13 @@
       "position": 4,
       "properties": {
         "description": "**Distribute:** Give students copies of [r csp_parameters_and_return_make_-_rock_paper_scissors_app/csp/2023] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Rock Paper Scissors App"
+        "progression_name": "Make the Rock Paper Scissors App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5690fb1b-cf43-4e59-b9ca-da20537405ee",
@@ -3750,6 +3756,18 @@
       }
     },
     {
+      "name": "Customize Make Lessons: How-To-Guide",
+      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
+      "key": "customize_make_lessons_how-to-guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://youtu.be/M17C4rBwstE",
       "key": "functions_with_parameters",
@@ -3996,6 +4014,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
         "resource.key": "csp_unit_7_-_lesson_3_-_parameters_and_return_practice"
       }
@@ -4133,10 +4157,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "api",
+      "word": "API",
+      "definition": "Application Program Interface - specifications for how functions in a library behave and can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "Argument",
+      "definition": "the value passed to the parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "a group of functions (procedures) that may be used in creating new programs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "modularity",
+      "word": "Modularity",
+      "definition": "the subdivision of a computer program into separate subprograms",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "a variable in a function definition. Used as a placeholder for values that will be passed through the function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "a process and allows a procedure to be used only knowing what it does, not how it does it. Procedural abstraction allows a solution to a large problem to be based on the solution of smaller subproblems. This is accomplished by creating procedures to solve each of the subproblems.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "key": "return",
+      "word": "Return",
+      "definition": "used to return the flow of control to the point where the procedure (also known as a function) was called and to return the value of expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "return"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "vocabulary.key": "procedural_abstraction"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

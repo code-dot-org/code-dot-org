@@ -1871,6 +1871,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd1-dlp:
           description: 'Ini adalah Unit 1 dari Deeper Learning Plan bagi fasilitator
             pelatihan  CS Discoveries Code.org. Di sini Anda akan mendapati prompt
@@ -5230,6 +5232,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5265,6 +5269,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5300,6 +5306,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
@@ -5344,6 +5352,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5382,6 +5392,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
@@ -5562,6 +5574,8 @@ id:
           student_description: Coba dasar-dasar ilmu komputer dengan karakter dari
             Angry Birds, Plants vs. Zombies, dan Scrat from Ice Age!
           title: Labirin Klasik
+        how-ai-works-2023:
+          title: Bagaimana AI bekerja
         iceage:
           description: Membuat cerita atau membuat permainan dengan laboratorium bermain
             Ice Age!
@@ -5735,6 +5749,11 @@ id:
               display_name: kegiatan
             lessonGroup-7:
               display_name: Proyek Akhir Kursus
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Usia: 8-12'
           lesson_groups:
@@ -5773,6 +5792,11 @@ id:
               display_name: kegiatan
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Komputasi
+          lessons:
+            lesson-1:
+              name: Sistem Komputasi
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Usia: 7-11'
           description_short: Pelajari tentang pernyataan conditional. Buat karya seni,
@@ -6751,6 +6775,22 @@ id:
         virustest:
           description_short: Gunakan Sprite Lab untuk membuat simulasi wabah virus.
           title: Mensimulasikan Wabah
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -6769,6 +6809,22 @@ id:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd-ci-1:
           description: |-
             Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
@@ -7103,6 +7159,22 @@ id:
 
             **Waktu yang disarankan:** 120 menit
           title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

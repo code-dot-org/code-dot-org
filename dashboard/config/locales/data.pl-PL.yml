@@ -1028,6 +1028,8 @@ pl:
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
         function: Funkcje
+        generative-ai-cobranded: 'Jak działa sztuczna inteligencja: Generatywna sztuczna
+          inteligencja'
         gumball_events: Gumball w Godzinie Kodowania - Zdarzenia
         gumball_intro: Gumball w Godzinie Kodowania - Wprowadzenie
         gumball_repeat: Gumball w Godzinie Kodowania - Instrukcje powtarzania
@@ -1075,6 +1077,8 @@ pl:
         infinity_playlab_intro: Play Lab - Wprowadzenie
         infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
         lesson_planning: Planowanie lekcji
+        llms-cobranded: 'Jak działa sztuczna inteligencja: Chatboty i duże modele
+          językowe (LLM)'
         loop_for: Blok licznika
         loop_times: Blok powtórz razy
         loop_until: Blok powtarzaj aż

@@ -2967,6 +2967,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3235,6 +3237,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3251,6 +3255,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3266,6 +3272,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3282,6 +3290,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3296,6 +3306,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3451,6 +3463,9 @@ is:
           description_audience: 'Aldur: 4-7'
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Gögn
           lesson_groups:
             lessonGroup-2:
               display_name: Stafrænn borgari
@@ -3462,6 +3477,8 @@ is:
               display_name: Atvik
             lessonGroup-7:
               display_name: Lokaverkefni námskeiðs
+            lessonGroup-8:
+              display_name: Gögn
           description_audience: 'Aldur: 5 - 8'
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:

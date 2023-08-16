@@ -350,7 +350,7 @@ km:
       artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
-      dance: 'Dance Party'
+      dance: 'កម្មវិធីរាំ'
       gamelab: 'មន្ទីរពិសោធន៍ហ្គេម'
       gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
       gumball: 'The Amazing World of Gumball'
@@ -523,9 +523,9 @@ km:
     aquatic:
       title: "ម៉ាញក្រាស់"
     dance-2019:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     dance:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     flappy:
       title: 'Flappy កូដ'
       body: 'តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!'
@@ -652,3 +652,4 @@ km:
   behaviors:
     this_sprite: "Sprite មួយនេះ"
   code_org_logo_alt: "ទំព័រដើម Code.org​"
+

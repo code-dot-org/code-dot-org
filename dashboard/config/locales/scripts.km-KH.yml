@@ -477,6 +477,10 @@ km:
           lessons:
             lesson-4:
               name: អ​ថេរ
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: ចៃដន្យ
         csd-apprentice-18:
           lesson_groups:
             required:
@@ -826,7 +830,7 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         dance-2019:
-          title: Dance Party
+          title: កម្មវិធីរាំ
         dance-extras:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។

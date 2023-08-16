@@ -12,13 +12,14 @@ module I18n
         def self.sync_in
           puts 'Preparing external sources'
 
-          FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
+          # Preparing Blockly Core files
+          blockly_core_dir = CDO.dir(File.join(I18N_SOURCE_DIR, 'blockly-core'))
+          FileUtils.mkdir_p(blockly_core_dir)
+          Dir[CDO.dir('apps/node_modules/@code-dot-org/blockly/i18n/locales/en-US/*.json')].each do |filepath|
+            FileUtils.cp(filepath, blockly_core_dir)
+          end
 
-          # Preparing Oceans tutorial UI Strings
-          # TODO: move the file to the `external-sources` folder instead of `blockly-mooc`
-          ml_activities_dir = File.join(I18N_SOURCE_DIR_PATH, 'ml-activities')
-          FileUtils.mkdir_p(ml_activities_dir)
-          FileUtils.cp(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(ml_activities_dir, 'oceans.json'))
+          FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
 
           # ml-playground (AI Lab) files
 
