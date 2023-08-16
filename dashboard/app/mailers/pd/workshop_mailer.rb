@@ -99,7 +99,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, days_before: nil)
+  def teacher_enrollment_reminder(enrollment, days_before = nil)
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @organizer = @workshop.organizer
