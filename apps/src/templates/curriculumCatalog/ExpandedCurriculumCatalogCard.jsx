@@ -2,6 +2,7 @@ import React from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
+import {BodyTwoText, Heading4} from '@cdo/apps/componentLibrary/typography';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -18,19 +19,19 @@ const ExpandedCurriculumCatalogCard = ({
   return (
     <div>
       <div className={style.expandedCardContainer}>
-        <h4>{courseDisplayName}</h4>
+        <Heading4>{courseDisplayName}</Heading4>
         <div className={style.infoContainer}>
           <div className={style.iconWithDescription}>
             <FontAwesome icon="user" className="fa-solid" />
-            <p>{gradeRange}</p>
+            <BodyTwoText>{gradeRange}</BodyTwoText>
           </div>
           <div className={style.iconWithDescription}>
             <FontAwesome icon="clock" className="fa-solid" />
-            <p>{duration}</p>
+            <BodyTwoText>{duration}</BodyTwoText>
           </div>
           <div className={style.iconWithDescription}>
             <FontAwesome icon="book" className="fa-solid" />
-            <p>{subjectsAndTopics.join(', ')}</p>
+            <BodyTwoText>{subjectsAndTopics.join(', ')}</BodyTwoText>
           </div>
         </div>
         <div>{deviceCompatibility}</div>

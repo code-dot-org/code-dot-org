@@ -165,6 +165,7 @@ const CustomizableCurriculumCatalogCard = ({
     );
   };
 
+  console.log(selfPacedPlCourseOfferingPath);
   const renderAssignDialog = () => {
     if (isSignedOut) {
       return (
