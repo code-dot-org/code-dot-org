@@ -45,9 +45,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             workshop={fakeWorkshop}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -66,9 +64,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshop}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -78,7 +74,7 @@ describe('WorkshopForm test', () => {
     assert(someControl.exists());
   });
 
-  it('creates and publishes workshop', () => {
+  it('creates and publishes new workshop form', () => {
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -123,6 +119,38 @@ describe('WorkshopForm test', () => {
     expect(onPublish).to.have.been.calledOnce;
   });
 
+  it('edits form and can save', () => {
+    const onSave = sinon.spy();
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={onSave}
+            workshop={fakeWorkshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const newCapacity = 40;
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: newCapacity},
+    });
+
+    const saveButton = wrapper.find('#workshop-form-save-btn').first();
+    saveButton.simulate('click');
+
+    expect(onSave).to.have.been.calledOnce;
+    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
+      newCapacity
+    );
+  });
+
   it('inputs disabled in readonly', () => {
     const workshop = Factory.build('workshop');
     const wrapper = mount(
@@ -145,34 +173,6 @@ describe('WorkshopForm test', () => {
     });
   });
 
-  it('edits form and can save', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([WorkshopAdmin])}
-            facilitatorCourses={[]}
-            workshop={fakeWorkshop}
-            readOnly={false}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const newCapacity = 40;
-    const capacityField = wrapper.find('#capacity').first();
-    capacityField.simulate('change', {
-      target: {name: 'capacity', value: newCapacity},
-    });
-
-    const saveButton = wrapper.find('#workshop-form-save-btn').first();
-    saveButton.simulate('click');
-
-    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
-      newCapacity
-    );
-  });
-
   it('workshop with one session shows add session button in row', () => {
     const workshop = Factory.build('workshop');
     const wrapper = mount(
@@ -182,7 +182,6 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             workshop={workshop}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -205,7 +204,6 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             workshop={workshop}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -239,7 +237,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -272,7 +269,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -300,7 +296,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -335,7 +330,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -368,7 +362,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -397,7 +390,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -441,7 +433,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -491,7 +482,6 @@ describe('WorkshopForm test', () => {
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
-            onSaved={() => {}}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -527,7 +517,6 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={fakeWorkshop}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -547,9 +536,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshopStartSoon}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -570,9 +557,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshopStartSoon}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -593,9 +578,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={csdSummerWorkshopStartSoon}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -616,9 +599,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={cspAYW1WorkshopStartSoon}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -639,9 +620,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshopStartOverMonth}
-            onSaved={() => {}}
             today={getFakeToday(false)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -662,9 +641,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshopStartSoon}
-            onSaved={() => {}}
             today={getFakeToday(true)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
@@ -685,9 +662,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([ProgramManager])}
             facilitatorCourses={[]}
             workshop={cspSummerWorkshopStartOverMonth}
-            onSaved={() => {}}
             today={getFakeToday(true)}
-            readOnly={false}
           />
         </MemoryRouter>
       </Provider>
