@@ -1,6 +1,7 @@
 .join-coalition-wrapper {
   display: flex;
   flex-direction: row;
+  border: 1px solid var(--neutral_dark20);
  }
 
 .left-side-image {
@@ -9,8 +10,7 @@
 }
 
 .join-coalition-wrapper .right {
-  background-color: #7665a0;
-  color: #fff;
+  background-color: var(--neutral_light);
   padding: 30px;
   min-height: 200px;
   display: flex;
@@ -28,10 +28,8 @@
   font-family: 'Gotham 7r', sans-serif;
   padding: 0px;
   margin: 0px;
-  color: #5b6770;
   font-size: 26px;
   padding-bottom: 10px;
-  color: white;
   line-height: 26px;
 }
 
