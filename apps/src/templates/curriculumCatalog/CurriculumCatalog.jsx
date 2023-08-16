@@ -49,16 +49,6 @@ const CurriculumCatalog = ({
     setAssignSuccessMessage('');
   };
 
-  const getSelfPacedPlPath = selfPacedPlId => {
-    if (selfPacedPlId !== null) {
-      const course_offering = selfPacedPlCourseOfferings.find(
-        curriculum => curriculum.id === selfPacedPlId
-      );
-      return course_offering ? course_offering.course_version_path : null;
-    }
-    return null;
-  };
-
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -93,7 +83,7 @@ const CurriculumCatalog = ({
                 professional_learning_program,
                 video,
                 published_date,
-                self_paced_pl_course_offering_id,
+                self_paced_pl_course_offering_path,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -121,9 +111,9 @@ const CurriculumCatalog = ({
                   professionalLearningProgram={professional_learning_program}
                   video={video}
                   publishedDate={published_date}
-                  selfPacedPlCourseOfferingPath={getSelfPacedPlPath(
-                    self_paced_pl_course_offering_id
-                  )}
+                  selfPacedPlCourseOfferingPath={
+                    self_paced_pl_course_offering_path
+                  }
                   {...props}
                 />
               )
