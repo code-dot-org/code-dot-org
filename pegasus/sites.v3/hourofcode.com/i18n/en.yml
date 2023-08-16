@@ -195,6 +195,7 @@
   call_to_action_learn_about_approach: "Learn more about our approach"
   call_to_action_try_java_lab: "Try Java Lab"
   call_to_action_notify_available: "Notify me when available"
+  call_to_action_register_early_access: "Register for early access"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
