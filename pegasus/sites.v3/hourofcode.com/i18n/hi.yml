@@ -193,6 +193,8 @@ hi:
   grade_level_label_elementary: एलीमेंट्री स्कूल
   grade_level_label_middle: मिडिल स्कूल
   grade_level_label_high: हाई स्कूल
+  students_label: छात्र
+  teachers_label: शिक्षक
   teacher_label_csf: सीएस फंडामेंटल्स टीचर
   teacher_label_csd: CS खोज शिक्षक
   teacher_label_csp: सीएस प्रिंसिपल्स टीचर
@@ -206,7 +208,9 @@ hi:
   call_to_action_explore_unit: यूनिट एक्सप्लोर करें
   call_to_action_explore_curriculum: पाठ्यक्रम का अन्वेषण करें
   call_to_action_explore_curriculum_options: पाठ्यचर्या के विकल्पों का अन्वेषण करें
+  call_to_action_explore_lessons: सबक एक्सप्लोर करें
   call_to_action_explore_modules: मॉड्यूल एक्सप्लोर करें
+  call_to_action_explore_module: मॉड्यूल एक्सप्लोर करें
   call_to_action_explore_workshops: कार्यशालाओं का अन्वेषण करें
   call_to_action_explore_course: कोर्स एक्सप्लोर करें
   call_to_action_explore_courses: कोर्स एक्सप्लोर करें
@@ -253,8 +257,10 @@ hi:
   call_to_action_see_module_details: मॉड्यूल विवरण देखें
   call_to_action_start_modules: मॉड्यूल शुरू करें
   call_to_action_see_course_details: कोर्स का विवरण देखें
+  call_to_action_see_lesson_details: पाठ का विवरण देखें
   call_to_action_learn_about_approach: हमारे दृष्टिकोण के बारे में और जानें
   call_to_action_try_java_lab: जावा लैब का प्रयास करें
+  call_to_action_notify_available: उपलब्ध होने पर मुझे सूचित करें
   aria_label_call_to_action_afe: Amazon फ्यूचर इंजीनियर के बारे में और जानें
   aria_label_call_to_action_teaching_csf: टीचिंग कंप्यूटर साइंस फंडामेंटल्स प्रोफेशनल
     लर्निंग प्रोग्राम शुरू करें
@@ -329,6 +335,20 @@ hi:
   aria_label_call_to_action_csf_course_d: कोर्स डी का विवरण देखें
   aria_label_call_to_action_csf_course_e: कोर्स ई का विवरण देखें
   aria_label_call_to_action_csf_course_f: कोर्स F का विवरण देखें
+  aria_label_call_to_action_ai_pl_101_videos: शिक्षकों के वीडियो के लिए AI 101 देखें
+  aria_label_call_to_action_ai_teaching_module: टीचिंग एआई और मशीन लर्निंग मॉड्यूल
+    का अन्वेषण करें
+  aria_label_call_to_action_how_ai_works_lesson_01: मशीन लर्निंग पाठ विवरण का परिचय
+    देखें
+  aria_label_call_to_action_how_ai_works_lesson_02: कंप्यूटर विज़न पाठ विवरण देखें
+  aria_label_call_to_action_how_ai_works_lesson_03: तंत्रिका नेटवर्क पाठ विवरण देखें
+  aria_label_call_to_action_how_ai_works_lesson_04: चैटबॉट्स और लार्ज लैंग्वेज मॉडल्स
+    के पाठ विवरण देखें
+  aria_label_call_to_action_how_ai_works_lesson_05: जेनेरेटिव इमेज के पाठ का विवरण
+    देखें
+  aria_label_call_to_action_how_ai_works_lesson_06: एल्गोरिथम बायस पाठ विवरण देखें
+  aria_label_call_to_action_how_ai_works_lesson_07: हमारी एआई कोड ऑफ एथिक्स पाठ विवरण
+    देखें
   video_title_professional_learning_program: Code.org का प्रोफेशनल लर्निंग प्रोग्राम
   curriculum_name_csf: कंप्यूटर साइंस फंडामेंटल्स
   curriculum_name_csf_02: कोई भी सीएस फंडामेंटल्स (कोर्स ए-एफ)
@@ -442,6 +462,10 @@ hi:
   module_label_student_tool: स्टूडेंट टूल
   module_label_student_product: प्रोडक्ट
   module_label_student_content_resources: सामग्री और संसाधन
+  module_label_new: नया
+  module_label_coming_soon: जल्द आ रहा है
+  module_label_video_series: वीडियो श्रृंखला
+  module_label_self_paced: सेल्फ-पेस्ड मॉड्यूल
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -464,9 +488,13 @@ hi:
   module_grade_9_12_teachers: 9-12 शिक्षक
   module_level_beginner: नौसिखिया
   module_level_intermediate: मध्यवर्ती
+  module_duration_45_mins: 45 मिनट
+  module_duration_1_hr: 1 घंटा
   module_duration_2_hrs: 2 घंटे
   module_duration_3_hrs: 3 घंटे
+  module_duration_5_hrs: 5 घंटे
   module_duration_8_hrs: 8 घंटे
+  module_duration_20_hrs: 20 घंटे
   module_duration_35_hrs: 35 घंटे
   module_duration_lesson: पाठ
   module_duration_week: हफ़्ता
@@ -540,6 +568,7 @@ hi:
   heading_no_devices: कोई डिवाइस नहीं है? हमने आपको कवर किया है
   heading_java_lab: जावा लैब
   heading_objects_first: ऑब्जेक्ट्स पहले
+  heading_these_lessons_will: 'ये सबक होंगे:'
   professional_learning_section_desc: पढ़ाने की तैयारी के दौरान आपको जो सहायता चाहिए
     वह प्राप्त करें। शिक्षक इसे पसंद करते हैं, 90% से अधिक इसे अब तक का सबसे अच्छा
     व्यावसायिक विकास मानते हैं!
@@ -670,6 +699,11 @@ hi:
   ai_curriculum_grades_03: 'ग्रेड स्तर: 3-12'
   ai_curriculum_duration_03: 'अवधि: 1 घंटा'
   ai_curriculum_btn_aria_label_03: महासागरों की गतिविधि के लिए AI आज़माएं
+  ai_curriculum_title_04: AI कैसे काम करता है
+  ai_curriculum_desc_04: ये पाठ How AI Works वीडियो श्रृंखला के पूरक हैं। प्रत्येक
+    पाठ को श्रृंखला के एक वीडियो के साथ जोड़ा जाता है, जो वीडियो में पेश की गई अवधारणाओं
+    के बारे में गहराई से बताता है।
+  ai_curriculum_btn_aria_label_04: AI के काम करने के तरीके के बारे में जानें
   ai_carousel_heading: 'Code.org के साथ AI के बारे में शिक्षक क्या कहते हैं:'
   ai_carousel_quote_01: इस पाठ ने मेरे छात्रों को यह देखने का अवसर भी दिया कि वर्गीकरण
     प्रणालियों में राय का एक तत्व है। बाद में, जब हमने यह देखना शुरू किया कि एआई में
@@ -688,6 +722,10 @@ hi:
   ai_pl_list_04: एआई और मशीन लर्निंग के वास्तविक दुनिया के प्रभावों पर विचार करें।
   ai_pl_list_05: अध्याय परियोजनाओं के अंत का अन्वेषण करें।
   ai_pl_duration: 'अवधि: 2 घंटे'
+  ai_pl_title: एआई और मशीन लर्निंग सिखाना
+  ai_pl_desc: आर्टिफिशियल इंटेलिजेंस और मशीन लर्निंग का परिचय। AI लैब का उपयोग करके
+    मशीन लर्निंग मॉडल को प्रशिक्षित करें और मशीन लर्निंग ऐप्स के साथ जुड़ें। एआई और
+    मशीन लर्निंग के वास्तविक दुनिया के प्रभावों पर विचार करें।
   ai_video_series_title: AI कैसे काम करता है
   ai_video_series_desc: माइक्रोसॉफ्ट के सीईओ सत्या नडेला द्वारा एक परिचय के साथ, लघु
     वीडियो की यह श्रृंखला आपको बताएगी कि आर्टिफिशियल इंटेलिजेंस कैसे काम करता है और
@@ -713,6 +751,7 @@ hi:
   ai_pl_101_hero_heading: AI एम्पावर्ड के लिए हमसे जुड़ें!
   ai_pl_101_hero_desc: शिक्षकों के लिए हमारी निःशुल्क ऑनलाइन शिक्षण श्रृंखला के साथ
     शिक्षा में कृत्रिम बुद्धिमत्ता (AI) की परिवर्तनकारी क्षमता की खोज करें।
+  ai_pl_101_hero_desc_02: शिक्षकों के लिए एक व्यापक ऑनलाइन शिक्षण श्रृंखला।
   ai_pl_101_hero_presented: द्वारा प्रस्तुत
   ai_pl_101_intro_heading: शिक्षकों के लिए AI 101 क्या है?
   ai_pl_101_intro_text: शिक्षकों के लिए AI 101 कृत्रिम बुद्धिमत्ता (AI) की ज़बरदस्त
@@ -757,6 +796,96 @@ hi:
     दौरान पुनरावृत्त प्रतिक्रिया और प्रारंभिक मूल्यांकन प्रदान करने में शिक्षकों की
     सहायता करता है।'
   ai_pl_101_explore__button_4: टूल एक्सप्लोर करें
+  ai_pl_101_video_title_1: साल खान और हादी पार्टोवी के साथ फायरसाइड चैट
+  ai_pl_101_video_desc_1: कक्षा में आर्टिफिशियल इंटेलिजेंस को अपनाने के बारे में एक
+    फायरसाइड चैट के लिए साल खान (खान अकादमी) और हादी पार्टोवी (Code.org) से जुड़ें।
+    आज AI के आसपास के कुछ सबसे विवादास्पद विषयों सहित एक जीवंत चर्चा की अपेक्षा करें।
+  ai_pl_101_video_title_2: शिक्षकों के लिए AI का रहस्योद्घाटन
+  ai_pl_101_video_desc_2: आर्टिफिशियल इंटेलिजेंस के मूल सिद्धांतों का परिचय जो आपको
+    हमारे समाज में एआई के गहन प्रभाव और शिक्षा के क्षेत्र में इसकी बढ़ती प्रासंगिकता
+    को समझने के लिए मूलभूत ज्ञान से लैस करेगा। आप कक्षा में कार्यों के लिए AI का लाभ
+    उठाने और प्रशासनिक कार्यों पर समय बचाने में व्यावहारिक अंतर्दृष्टि प्राप्त करेंगे।
+  ai_pl_101_video_title_3: एआई के साथ ट्रांसफॉर्मिंग लर्निंग
+  ai_pl_101_video_desc_3: एआई और शिक्षा के चौराहे का अन्वेषण करें। यह सत्र इस बात
+    की पड़ताल करता है कि छात्रों के सीखने को बढ़ाने के लिए AI को शिक्षाशास्त्र के
+    साथ कैसे जोड़ा जा सकता है। यह उन शिक्षकों के लिए ज़रूरी है जो अपने छात्रों के
+    सीखने के अनुभवों को समृद्ध बनाने के लिए अपनी शिक्षण पद्धतियों को बदलने के लिए
+    AI का लाभ उठाना चाहते हैं।
+  ai_pl_101_video_title_4: AI के लिए एक जिम्मेदार दृष्टिकोण सुनिश्चित करना
+  ai_pl_101_video_desc_4: शैक्षिक वातावरण में कृत्रिम बुद्धिमत्ता को शामिल करने के
+    लिए नैतिक विचारों और सर्वोत्तम प्रथाओं का अन्वेषण करें। यह सत्र ठोस रणनीतियां,
+    संसाधन और वास्तविक दुनिया के उदाहरण प्रदान करेगा, जिनका उद्देश्य एआई के संभावित
+    पूर्वाग्रहों और इसके साथ आने वाले नैतिक विचारों को समझना है।
+  ai_pl_101_video_title_5: AI को क्लासरूम में लाना
+  ai_pl_101_video_desc_5: यह सत्र AI के बारे में शिक्षण, AI शैक्षिक उपकरणों का मूल्यांकन
+    और उपयोग करने और छात्र मूल्यांकन के लिए AI का लाभ उठाने पर केंद्रित है। सिद्धांत,
+    व्यावहारिक उदाहरणों और संसाधनों के समृद्ध मिश्रण के साथ, इसका उद्देश्य शिक्षकों
+    को एआई परिदृश्य को नेविगेट करने और छात्रों के सीखने के अनुभवों को बढ़ाने के लिए
+    सशक्त बनाना है।
+  ai_pl_101_video_desc_6: 'AI में बड़े बदलावों को चलाने वाली नई तकनीक के बारे में
+    और जानें, जिसमें लार्ज लैंग्वेज मॉडल (जैसे ChatGPT) और Generative AI पर दो नए
+    वीडियो शामिल हैं। सुनें कि ये नई तकनीकें सीधे विशेषज्ञों से कैसे काम करती हैं:
+    मीरा मुराती, ओपनएआई की सीटीओ, और रनवेएमएल के सीईओ क्रिस्टोबल वालेंज़ुएला।'
+  how_ai_works_hero_heading: AI कैसे काम करता है
+  how_ai_works_hero_desc: "“How AI Works”, हमारी वीडियो श्रृंखला और उससे जुड़े पाठों
+    के साथ AI की दुनिया में गोता लगाएँ!"
+  how_ai_works_intro_desc: लघु वीडियो और साथ में कक्षा में पाठ की यह श्रृंखला आपको
+    और आपके छात्रों को बताएगी कि आर्टिफिशियल इंटेलिजेंस कैसे काम करता है और यह क्यों
+    मायने रखता है। आप विषय के आधार पर अलग-अलग पाठ चुन सकते हैं, एक कक्षा में विषयों
+    की पूरी श्रृंखला का पता लगा सकते हैं या गहराई से गोता लगाने के लिए सभी 7 पाठ पढ़ा
+    सकते हैं।
+  how_ai_works_intro_list_01: आपको आर्टिफिशियल इंटेलिजेंस और मशीन लर्निंग से परिचित
+    कराएं
+  how_ai_works_intro_list_02: जनरेटिव एआई कैसे काम करता है, इसमें गोता लगाएँ, जिसमें
+    बड़े भाषा मॉडल (LLM) और इमेज जनरेशन शामिल हैं
+  how_ai_works_intro_list_03: पूर्वाग्रह, नैतिकता, गोपनीयता और AI के जिम्मेदार उपयोग
+    का अन्वेषण करें
+  how_ai_works_intro_list_04: कंप्यूटर विज़न सहित AI के वास्तविक दुनिया के अनुप्रयोगों
+    पर स्पर्श करें
+  how_ai_works_lessons_heading: आपकी कक्षा के लिए AI सबक
+  how_ai_works_lesson_title_01: मशीन लर्निंग का परिचय
+  how_ai_works_lesson_desc_01: मशीन लर्निंग नामक कृत्रिम बुद्धिमत्ता के एक रूप के
+    बारे में जानें और समस्याओं को हल करने के लिए रोबोट को प्रशिक्षित करने में मदद
+    करने के लिए वे समस्या समाधान प्रक्रिया का उपयोग कैसे कर सकते हैं। मशीन लर्निंग
+    गतिविधियों में भाग लें जहां एक रोबोट सीख रहा है कि मछली में पैटर्न का पता कैसे
+    लगाया जाए।
+  how_ai_works_lesson_title_02: कंप्यूटर विज़न
+  how_ai_works_lesson_desc_02: जानें कि कंप्यूटर विज़न कैसे काम करता है। कंप्यूटर
+    विज़न और कंप्यूटर कैसे “देखता है” के बारे में बताते हुए एक वीडियो देखें। फिर एक
+    एल्गोरिथ्म डिज़ाइन करें जो यह तय करने के लिए नेटवर्क का उपयोग करता है कि सात सेगमेंट
+    डिस्प्ले किस नंबर को प्रदर्शित कर रहा है और इसका परीक्षण करें।
+  how_ai_works_lesson_title_03: न्यूरल नेटवर्क
+  how_ai_works_lesson_desc_03: जानें कि न्यूरल नेटवर्क कैसे काम करते हैं। व्यावहारिक
+    तरीके से तंत्रिका नेटवर्क का पता लगाने के लिए विजेट्स का उपयोग करें। तंत्रिका
+    नेटवर्क की व्याख्या करने वाला एक वीडियो देखें। अंत में सिफारिश प्रणाली बनाते समय
+    विविध दृष्टिकोणों की आवश्यकता पर चर्चा करें।
+  how_ai_works_lesson_title_04: चैटबॉट्स और बड़ी भाषा के मॉडल
+  how_ai_works_lesson_desc_04: जानें कि लार्ज लैंग्वेज मॉडल (LLM) क्या है और यह कैसे
+    काम करता है, फिर AI के साथ टेक्स्ट बनाने के लिए LLM का उपयोग करें। अंत में, इस
+    बारे में चर्चा करें कि एलएलएम बुद्धिमान या रचनात्मक हैं या नहीं।
+  how_ai_works_lesson_title_05: जनरेटिव इमेज
+  how_ai_works_lesson_desc_05: जानें कि AI छवियों को कैसे उत्पन्न कर सकता है, फिर
+    एक प्रसार AI विजेट का पता लगाएं और चर्चा करें कि ये मॉडल रचनात्मक हैं या नहीं।
+  how_ai_works_lesson_title_06: एल्गोरिथम बायस
+  how_ai_works_lesson_desc_06: Twitter क्रॉपिंग एल्गोरिथम में अंतर्निहित पूर्वाग्रह
+    को उजागर करने के लिए छवियों को क्रॉप करने का अभ्यास करें, फिर इस पक्षपाती एल्गोरिथम
+    की खोज के बारे में एक वीडियो पढ़ें और देखें। अंत में, एल्गोरिदम में पूर्वाग्रह
+    को पहचानने और कम करने के तरीकों पर चर्चा करें।
+  how_ai_works_lesson_title_07: हमारी AI आचार संहिता
+  how_ai_works_lesson_desc_07: उन लेखों और वीडियो का उपयोग करके शोध करें जो उनकी पसंद
+    के कृत्रिम बुद्धिमत्ता क्षेत्र में नैतिक नुकसान को उजागर करते हैं। हर जगह AI रचनाकारों
+    और विधायकों के लिए एक क्लास-वाइड “हमारा AI कोड ऑफ़ एथिक्स” संसाधन इकट्ठा करें।
+  how_ai_works_lessons_in_a_day_title: AI एक दिन में कैसे काम करता है
+  how_ai_works_lessons_in_a_day_desc: क्या आपके पास केवल एक दिन है? एक ही दिन में
+    छात्रों को पूरी श्रृंखला पेश करने का विकल्प भी है। किसी भी विषय-क्षेत्र के शिक्षक
+    के लिए बिल्कुल सही, जो छात्रों को AI से परिचित कराना चाहता है, या यहाँ तक कि एक
+    अतिथि शिक्षक के लिए एक पाठ के रूप में भी।
+  how_ai_works_lessons_in_a_day_desc_02: एक दिन में “AI कैसे काम करता है” के सभी वीडियो
+    पेश करें। छात्र वीडियो से शब्दावली का मिलान करके प्रत्येक वीडियो के साथ अनुसरण
+    करते हैं, फिर प्रत्येक वीडियो के बारे में एक प्रतिबिंब प्रश्न का उत्तर देते हैं।
+  how_ai_works_resources_desc: AI के बारे में और जानने के इच्छुक हैं? यहां कुछ अतिरिक्त
+    संसाधन दिए गए हैं जो आपको और आपके छात्रों की शिक्षा को बढ़ाने में मदद कर सकते
+    हैं।
   ai_vid_intro_caption: पेश है AI कैसे काम करता है
   ai_vid_chatbots_caption: चैटबॉट्स और लार्ज लैंग्वेज मॉडल कैसे काम करते हैं
   ai_vid_creativity_caption: क्या AI में रचनात्मकता और कल्पना है?
@@ -1089,10 +1218,10 @@ hi:
   teach_page_additional_materials_list_desc_03: छात्रों को कंप्यूटर विज्ञान आज़माने
     के लिए प्रेरित करने के लिए स्कूलों में टांगने के लिए विभिन्न रोल मॉडल के पोस्टर
     प्रिंट करें।
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1665,6 +1794,7 @@ hi:
   not_found_desc: अनुरोधित किया गया पृष्ठ नहीं मिला
   not_found_instructions: वेब पते की जांच करें और पुनः लिंक करें या नीचे दी गई सूची
     से लिंक चुनें।
+  company_code_dot_org: Code.org
   company_4-H: 4-एच यूथ डेवलपमेंट
   company_asa: आफ्टरस्कूल एलायंस
   company_asos: असोस
@@ -1717,6 +1847,7 @@ hi:
   company_evsd: ईस्ट वैली स्कूल डिस्ट्रिक्ट
   company_eastonvilleschooldistrict: ईटनविल स्कूल डिस्ट्रिक्ट
   company_enumclawschooldistrict: एनमक्लाव स्कूल डिस्ट्रिक्ट
+  company_ets: ईटीएस
   company_everettsd: एवरेट पब्लिक स्कूल
   company_fsusd: फेयरफील्ड-सुइसुन यूनिफाइड स्कूल डिस्ट्रिक्ट
   company_fayettecountypublicschools: फेयेट काउंटी पब्लिक स्कूल
@@ -1738,6 +1869,7 @@ hi:
   company_houstonisd: ह्यूस्टन इंडिपेंडेंट स्कूल डिस्ट्रिक्ट
   company_hcpss: हॉवर्ड काउंटी पब्लिक स्कूल
   company_idla: इडाहो डिजिटल लर्निंग एकेडमी
+  company_iste: साइट
   company_janesvilleschooldistrict: जेन्सविले स्कूल डिस्ट्रिक्ट
   company_johnstoncountyschools: जॉन्सटन काउंटी स्कूल
   company_lps: लिंकन पब्लिक स्कूल
@@ -11968,8 +12100,9 @@ hi:
   tutorial_ai4alldance_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_ai4allneural_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_spheroinout_string_platforms: अनप्लग्ड
-  tutorial_edisonblueprint_string_platforms: सभी आधुनिक ब्राउज़र्स
-  tutorial_edisonmaze_string_platforms: सभी आधुनिक ब्राउज़र्स
+  tutorial_edisonblueprint_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
+    आईपैड
+  tutorial_edisonmaze_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड
   tutorial_milnefunctions_string_platforms: सभी आधुनिक ब्राउज़र, स्क्रीन रीडर
   tutorial_sasmap_string_platforms: सभी आधुनिक ब्राउज़र्स, आईपैड, स्क्रीन रीडर
   tutorial_firstrobotics_string_platforms: सभी आधुनिक ब्राउज़र्स

@@ -8010,6 +8010,9 @@ cs:
           description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
           description: Kurz A nabízí osnovy informatiky pro začínající čtenáře, včetně studentů mateřských škol. Studenti se naučí programovat pomocí příkazů, jako jsou smyčky a události. Lekce uvedené v tomto kurzu také učí studenty smysluplně spolupracovat s ostatními, zkoumat různé techniky řešení problémů, přetrvávat tváří v tvář náročným úkolům, a dozvědět se o bezpečnosti internetu.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digitální občanství
@@ -8023,10 +8026,15 @@ cs:
               display_name: Události
             lessonGroup-7:
               display_name: Projekt na zakončení kurzu
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Věk: 5-8 let'
           description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. Obdoba kurzu A, ale s větší hloubkou probíraných koncepcí.
           description: Vyvinuli jsme kurz B s ohledem na první srovnávače. Zatímco koncepty v kurzu B paralelní s těmi v kurzu A, studenti se učí sofistikovanější odpojené aktivity a pracují prostřednictvím větší škály hádanek. Studenti se naučí základy programování, techniky spolupráce, dovednosti vyšetřování a kritického myšlení, vytrvalost tváří v tvář obtížnosti, a bezpečnost internetu. Na konci tohoto kurzu studenti vytvoří hry v programovacím prostředí Play Lab.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Výpočetní systémy
           lesson_groups:
             lessonGroup-2:
               display_name: Digitální občanství
@@ -8038,6 +8046,8 @@ cs:
               display_name: Události
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Výpočetní systémy
           description: Vyvinuli jsme kurz C pro studenty ve druhém ročníku. Studenti budou vytvářet programy se sekvenováním, smyčky, a události. Budou zkoumat techniky řešení problémů a vyvinout strategie pro budování pozitivních komunit online i offline. Na konci kurzu budou studenti vytvářet interaktivní hry, které mohou sdílet.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8094,3 +8104,53 @@ cs:
           description_audience: 'Věk: 9-13 let'
           description_short: Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru.
           description: Vytvořili jsme kurz F pro studenty v páté třídě. Kurz začíná tím, že se podíváme na to, jak se uživatelé rozhodují v aplikacích, které používají. Studenti se pak naučí vytvářet různé aplikace Sprite Lab, které také nabízejí možnosti pro uživatele. V pozdějších hodinách kurzu se studenti seznámí s proměnnými v různých kontextech. Studenti mají v průběhu tohoto kurzu větší samostatnost a více možností. Na konci kurzu budou studenti vytvářet interaktivní projekty, které budou sdílet se svými přáteli a rodinou.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Jak funguje umělá inteligence
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

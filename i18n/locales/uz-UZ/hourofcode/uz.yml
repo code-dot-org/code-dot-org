@@ -192,6 +192,8 @@ uz:
   grade_level_label_elementary: Boshlang'ich Maktab
   grade_level_label_middle: O‘rta Maktab
   grade_level_label_high: Yuqori Sinflar
+  students_label: Oʻquvchilar
+  teachers_label: O‘qituvchilar
   teacher_label_csf: KF Asoslari o'qituvchisi
   teacher_label_csd: Kompyuter fanlari kashfiyotlari O'qituvchi
   teacher_label_csp: KF Tamoyillari o'qituvchisi
@@ -206,7 +208,9 @@ uz:
   call_to_action_explore_curriculum: O'quv dasturini o'rganib chiqing
   call_to_action_explore_curriculum_options: O'quv dasturining variantlarini o'rganib
     chiqing
+  call_to_action_explore_lessons: Darslarni o'rganing
   call_to_action_explore_modules: Modullarni o'rganib chiqing
+  call_to_action_explore_module: Modulni o'rganing
   call_to_action_explore_workshops: Seminarni o'rganib chiqing
   call_to_action_explore_course: Kursni o'rganib chiqing
   call_to_action_explore_courses: Kurslarni o'rganib chiqing
@@ -258,9 +262,11 @@ uz:
   call_to_action_see_module_details: Modul tafsilotlarini ko'ring
   call_to_action_start_modules: Modullarni ishga tushirish
   call_to_action_see_course_details: Kurs tafsilotlarini ko'ring
+  call_to_action_see_lesson_details: Dars tafsilotlarini ko'ring
   call_to_action_learn_about_approach: Bizning yondashuvimiz haqida ko'proq bilib
     oling
   call_to_action_try_java_lab: Java Labbni sinab ko'ring
+  call_to_action_notify_available: Mavjud bo'lganda menga xabar bering
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -281,7 +287,7 @@ uz:
   aria_label_call_to_action_curriculum_csf_express: Kompyuter Fanlari Asoslari Ekspress
     kursini o'rganib chiqing
   aria_label_call_to_action_curriculum_csf_express_pre_reader: Kompyuter Fanlari Asoslari
-    O'qish oldi Ekspres kursini o'rganib chiqing
+    maktabgacha yoshdagi o'quvchilar uchun Ekspress kursini o'rganib chiqing
   aria_label_call_to_action_curriculum_csd: Kompyuter Fanlari kashfiyotlari o'quv
     dasturini o'rganib chiqing
   aria_label_call_to_action_curriculum_csp: Kompyuter Fanlari tamoyillari o'quv dasturini
@@ -331,25 +337,43 @@ uz:
     dasturlash moduli tafsilotlarini ko'rib chiqing
   aria_label_call_to_action_csf_course_a: A Kursi tafsilotlarini ko'rib chiqing
   aria_label_call_to_action_csf_course_b: B Kursi tafsilotlarini ko'rib chiqing
-  aria_label_call_to_action_csf_course_c: C kursi tafsilotlariga qarang
-  aria_label_call_to_action_csf_course_d: D kurs tafsilotlarini ko'ring
-  aria_label_call_to_action_csf_course_e: E kursi tafsilotlarini ko'ring
-  aria_label_call_to_action_csf_course_f: F kursi tafsilotlarini ko'ring
+  aria_label_call_to_action_csf_course_c: C Kursi tafsilotlarini ko'rib chiqing
+  aria_label_call_to_action_csf_course_d: D Kursi tafsilotlarini ko'rib chiqing
+  aria_label_call_to_action_csf_course_e: 'E Kursi tafsilotlarini ko''rib chiqing '
+  aria_label_call_to_action_csf_course_f: F Kursi tafsilotlarini ko'rib chiqing
+  aria_label_call_to_action_ai_pl_101_videos: O'qituvchilar videolari uchun AI 101
+    ni tomosha qiling
+  aria_label_call_to_action_ai_teaching_module: O'qitish sun'iy intellekti va mashinani
+    o'rganish modulini o'rganing
+  aria_label_call_to_action_how_ai_works_lesson_01: Mashinani o'rganishga kirish darsi
+    tafsilotlariga qarang
+  aria_label_call_to_action_how_ai_works_lesson_02: Computer Vision darsining tafsilotlarini
+    ko'ring
+  aria_label_call_to_action_how_ai_works_lesson_03: Neyron tarmoqlari darsining tafsilotlarini
+    ko'ring
+  aria_label_call_to_action_how_ai_works_lesson_04: Chatbots va katta til modellari
+    darslari tafsilotlarini ko'ring
+  aria_label_call_to_action_how_ai_works_lesson_05: Generativ tasvirlar darsining
+    tafsilotlarini ko'ring
+  aria_label_call_to_action_how_ai_works_lesson_06: Algoritmik tarafkashlik darsining
+    tafsilotlarini ko'ring
+  aria_label_call_to_action_how_ai_works_lesson_07: Bizning AI axloq kodeksi darsining
+    tafsilotlarini ko'ring
   video_title_professional_learning_program: Code.org professional ta'lim dasturi
   curriculum_name_csf: Kompyuter fanlari asoslari
   curriculum_name_csf_02: Har qanday Kompyuter fanlari asoslari (A-F kurslar)
   curriculum_name_csf_a_f: Kompyuter fanlari asoslari A-F
   curriculum_name_csf_express: Ekspress
-  curriculum_name_csf_express_pre_reader: Pre-Reader Express
-  curriculum_name_csf_course_a: Kurs A
-  curriculum_name_csf_course_b: Kurs B
-  curriculum_name_csf_course_c: Kurs C
-  curriculum_name_csf_course_d: Kurs D
-  curriculum_name_csf_course_e: Kurs E
-  curriculum_name_csf_course_f: Kurs F
-  curriculum_name_csf_no_device: Qurilma yo'q/elektr tarmog'idan uzilgan
-  curriculum_name_csf_self_paced: O'z-o'zidan dars
-  curriculum_name_csf_teacher_led: O'qituvchi dars olib bordi
+  curriculum_name_csf_express_pre_reader: Maktabgacha yoshdagi o‘quvchilar uchun Ekspress
+  curriculum_name_csf_course_a: A Kursi
+  curriculum_name_csf_course_b: B Kursi
+  curriculum_name_csf_course_c: C Kursi
+  curriculum_name_csf_course_d: D Kursi
+  curriculum_name_csf_course_e: E Kursi
+  curriculum_name_csf_course_f: F Kursi
+  curriculum_name_csf_no_device: Qurilma mavjud emas/oflayn
+  curriculum_name_csf_self_paced: Mustaqil o'rganish uchun dars
+  curriculum_name_csf_teacher_led: O'qituvchi tomonidan olib boriluvchi dars
   curriculum_name_csd: Kompyuter Fanlari Kashfiyotlari
   curriculum_name_csp: Kompyuter fani tamoyillari
   curriculum_name_csc: Kompyuter fanlari aloqalari
@@ -358,83 +382,85 @@ uz:
   curriculum_name_ai: Sun’iy intellekt (AI) va mashinalar o‘rganishi
   curriculum_name_maker_cp: 'Vositalar (Circuit Playground) yordamida ilovalarni yaratish '
   curriculum_name_maker_microbit: Vositalar (micro:bit) yordamida ilovalarni yaratish
-  curriculum_name_creating_apps_with_devices: Qurilmalar bilan ilovalarni yaratish
+  curriculum_name_creating_apps_with_devices: Qurilmalar orqali Ilovalarni Yaratish
   curriculum_name_poetry: She'riyat bilan dasturlash
   curriculum_name_dance_party: Raqs Bazmi
-  curriculum_name_problem_solving_computing: Muammolarni hal qilish va hisoblash
-  curriculum_name_web_development: Veb-ishlab chiqish
-  curriculum_name_interactive_animations_games: Interaktiv animatsiyalar va o'yinlar
-  curriculum_name_design_process: Dizayn jarayoni
-  curriculum_name_data_society: Ma'lumotlar va jamiyat
-  curriculum_desc_csf_express: Kompyuter dasturlarini yaratishni, muammolarni hal
-    qilish ko'nikmalarini rivojlantirishni va qiziqarli qiyinchiliklarni engishni
-    o'rganing! Do'stlaringiz, oilangiz va o'qituvchilar bilan baham ko'rish uchun
-    o'yinlar va ijodiy loyihalar qiling.
-  curriculum_desc_csf_express_pre_reader: Jumboqlarni echish va animatsion sahnalarni
-    yaratish orqali bloklarni sudrab olib tashlash kodlash asoslarini o'rganing. Do'stlaringiz,
-    oilangiz va o'qituvchilar bilan baham ko'rish uchun san'at va oddiy o'yinlar yarating.
-  curriculum_desc_csf_course_a: Ilmoqlar va hodisalar kabi buyruqlar yordamida dastur.
-    Talabalarni boshqalar bilan hamkorlik qilishga, muammolarni hal qilishning turli
-    usullarini o'rganishga, qiyin vazifalar oldida turishga va Internet xavfsizligini
-    o'rganishga o'rgating.
-  curriculum_desc_csf_course_b: Tarmoqdan uzilgan mashg'ulotlar va turli jumboqlar
-    orqali talabalar dasturlash asoslarini, hamkorlik usullarini, tergov va tanqidiy
-    fikrlash ko'nikmalarini, qiyinchiliklarga qarshi qat'iyatlilikni va Internet xavfsizligini
-    o'rganadilar.
-  curriculum_desc_csf_course_c: Sekvensiya, ko'chadan va hodisalar bilan dasturlar
-    yarating. Muammolarni hal qilish usullarini o'rganing va onlayn va oflayn rejimda
-    ijobiy jamoalarni yaratish strategiyasini ishlab chiqing. Talabalar baham ko'rishlari
+  curriculum_name_problem_solving_computing: Muammolarni Yechish va Hisoblash
+  curriculum_name_web_development: Veb dasturlash
+  curriculum_name_interactive_animations_games: Interaktiv Animatsiyalar va O'yinlar
+  curriculum_name_design_process: Dizayn (loyihalash) Jarayoni
+  curriculum_name_data_society: 'Ma''lumotlar va jamiyat '
+  curriculum_desc_csf_express: Kompyuter dasturlarini yaratish, muammolarni yechish
+    ko'nikmalarini rivojlantirish va qiziqarli chaqiriqlar bilan ishlashni o'rganing!
+    Do'stlaringiz, oilangiz va o'qituvchilar bilan baham ko'rish uchun o'yinlar va
+    ijodiy loyihalarni yarating.
+  curriculum_desc_csf_express_pre_reader: Jumboqlarni yechish va animatsion sahnalarni
+    yaratish orqali bloklarni sudrab olib tashlash orqali dasturlash asoslarini o'rganing.
+    Do'stlaringiz, oilangiz va o'qituvchilar bilan baham ko'rish uchun estetik va
+    oddiy o'yinlarni yarating.
+  curriculum_desc_csf_course_a: Sikllar va hodisalar kabi buyruqlar yordamida dasturlang.
+    O'quvchilarni boshqalar bilan hamkorlik qilishga, muammolarni yechishning turli
+    usullarini o'rganishga, chaqiriqlar bilan yuzma-yuz kelganda qattiy turishga va
+    Internet xavfsizligini o'rganishga o'rgating.
+  curriculum_desc_csf_course_b: Kompyutersiz (oflayn) mashg'ulotlar va turli jumboqlar
+    orqali o'quvchilar dasturlash asoslarini, hamkorlik usullarini, tadqiq qilish
+    va tanqidiy fikrlash ko'nikmalarini, qiyinchiliklar duch kelganda qat'iy turishni
+    va Internet xavfsizligini o'rganadilar.
+  curriculum_desc_csf_course_c: Ketma-ketlik, sikllar va hodisalar yordamida dasturlar
+    yarating. Muammolarni yechish usullarini tadqiq qiling va onlayn va oflayn rejimda
+    ijobiy jamoalarni yaratish strategiyasini ishlab chiqing. O'quvchilar baham ko'rishlari
     mumkin bo'lgan interfaol o'yinlarni yarating.
-  curriculum_desc_csf_course_d: Oldingi kurslarda topilgan tushunchalarni, shu jumladan
-    ko'chadan va voqealarni ko'rib chiqish. Shundan so'ng, talabalar algoritmlar,
-    ichki halqalar, halqalar, shartli va boshqalar haqidagi tushunchalarini rivojlantiradilar.
-  curriculum_desc_csf_course_e: Onlayn xavfsizlikni o'rganishni kuchaytiradigan qiziqarli,
-    interaktiv loyihalarni qiling. Ichki halqalar, funktsiyalar va shartlar kabi murakkabroq
-    kodlash bilan shug'ullaning.
+  curriculum_desc_csf_course_d: Oldingi kurslardagi tushunchalarni, shu jumladan halqalar
+    va hodisalarni ko'rib chiqing. Shundan so'ng, o'quvchilar algoritmlar, ichma-ich
+    sikllar, sikllar shartli va boshqacha bo'lgandagi holatlarni rivojlantiradilar.
+  curriculum_desc_csf_course_e: Onlayn xavfsizlik haqida o'rganishni mustahkamlovchi,
+    interaktiv loyihalarni qiziqarli bajaring. Ichma-ich sikllar, funktsiyalar va
+    shartlar kabi murakkabroq dasturlash bilan shug'ullaning.
   curriculum_desc_csf_course_f: Foydalanuvchilar foydalanadigan ilovalarda qanday
-    tanlov qilishlariga qarang. Foydalanuvchi uchun tanlov taklif qiladigan turli
+    tanlov qilishlariga qarang. Foydalanuvchi tanlovi uchun taklif qiladigan turli
     xil Sprite Lab ilovalarini yarating. Ko'proq rivojlangan tushunchalarni, shu jumladan
-    o'zgaruvchilar va “for” ko'chadan o'rganing.
-  curriculum_desc_problem_solving_computing: Jumboqlar, qiyinchiliklar va real stsenariylarni
-    hal qilish uchun muammolarni hal qilish jarayonidan foydalaning. Muammolarni hal
-    qilishda yordam berish uchun kompyuterni kiritish, chiqarish, saqlash va qayta
-    ishlash haqida bilib oling.
-  curriculum_desc_web_development: Veb-sahifalarda kontent yarating va ulashing, Internetning
-    ijodiy salohiyatini o'rganing. Dasturlash paytida tanqidiy iste'mol ko'nikmalarini,
-    muammolarni hal qilish qobiliyatini va jamoaviy ishlashni rivojlantiring.
+    o'zgaruvchilar va “for” sikllarini o'rganing.
+  curriculum_desc_problem_solving_computing: Jumboqlar, chaqiriqlar va real senariylarni
+    hal qilish uchun muammolarni yechish jarayonidan foydalaning. Muammolarni yechishga
+    yordam berish uchun kompyuterga ma'lumotlarni kiritish, chiqarish, saqlash va
+    qayta ishlash haqida bilib oling.
+  curriculum_desc_web_development: Internetning ijodiy salohiyatini o'rgangan holda
+    Veb-sahifalarda kontent yarating va ulashing. Dasturlash davomida tanqidiy iste'mol
+    ko'nikmalarini, muammolarni uechish qobiliyatini va jamoaviy ishlashni rivojlantiring.
   curriculum_desc_interactive_animations_games: Dasturiy tasvirlar, animatsiyalar,
-    interaktiv san'at va o'yinlarni yarating. Dasturlash tushunchalari va dizayn jarayoni
+    interfaol san'at va o'yinlarni yarating. Dasturlash tushunchalari va dizayn jarayoni
     bilan tanishing.
-  curriculum_desc_design_process: Hisoblashning ijtimoiy ta'sirini ko'rib chiqishga
-    e'tibor qarating. Dizayn muammolari orqali talabalar boshqalarning ehtiyojlariga
-    hamdardlik bildiradilar va echimlarni ishlab chiqadilar.
-  curriculum_desc_data_society: Muammolarni hal qilishda ma'lumotlarning rolini va
-    bu jarayonda kompyuterlarning yordamini ta'kidlaydi. Muqova vakillik tizimlari
-    va ular bilan bog'liq muammolar. Ma'lumotlar to'plami muammolarni hal qilishga
-    qanday yordam berishini bilib oling.
-  curriculum_desc_creating_apps_with_devices: 'Hisoblashda jismoniy qurilmalarning
-    rolini o''rganing. Uskuna kirish va chiqishlaridan foydalanadigan dasturlarni
-    ishlab chiqish. Ushbu jihozning mikro: bit va Circuit Playground uchun versiyasi
-    mavjud.'
-  collection_hardware: Uskuna haqida o'ylang
-  collection_hardware_desc: Talabalarga muammolarni hal qilish uchun ma'lumotlar va
-    jismoniy qurilmalardan foydalanish imkoniyatini beradi.
-  collection_design_purpose: Maqsadli dizaynga e'tibor qarating
-  collection_design_purpose_desc: Talabalarga qurilmalar uchun veb-saytlar va ilovalarni
-    loyihalashda foydalanuvchilarning ehtiyojlari haqida o'ylashga imkon beradi.
-  collection_impact_society: Jamiyatdagi ta'sirga e'tibor qarating
-  collection_impact_society_desc: Talabalarga kengroq ijtimoiy ta'sirlarni hisobga
-    olgan holda muammolarni hal qilish vositasi sifatida informatika haqida o'ylash
+  curriculum_desc_design_process: Dasturlashning ijtimoiy ta'sirini ko'rib chiqishga
+    e'tibor qarating. Dizayn chaqiriqlari orqali o'quvchilar boshqalarning ehtiyojlarini
+    ko'rsatib o'tadilar va yechimlarni ishlab chiqadilar.
+  curriculum_desc_data_society: Muammolarni yechishda ma'lumotlarning rolini va bu
+    jarayonda kompyuterlarning yordami ta'kidlanadi. Taqdimot tizimlari va ular bilan
+    bog'liq chaqiriqlar. Ma'lumotlar to'plami muammolarni yeschishga qanday yordam
+    berishini kshf eting.
+  curriculum_desc_creating_apps_with_devices: Hisoblashda jismoniy qurilmalarning
+    rolini o'rganing. Uskunalarga ma'lumot kiritish va chiqarishda foydalaniladigan
+    dasturlarni ishlab chiqing. Ushbu bo'limning mikro:bit va Circuit Playground (Sxema
+    o'yin maydonchasi) uchun versiyasi mavjud.
+  collection_hardware: Uskunaga diqqat qarating
+  collection_hardware_desc: O'quvchilarni muammolarni yechishda uchun ma'lumotlar
+    va jismoniy qurilmalardan foydalanish imkoniyatini beradi.
+  collection_design_purpose: Maqsadli Dizayn (loyihalash)ga e'tibor qarating
+  collection_design_purpose_desc: O'quvchilarni qurilmalar uchun veb-saytlar va ilovalarni
+    loyihalashda foydalanuvchilarning ehtiyojlari haqida o'ylashga imkoniyat beradi.
+  collection_impact_society: Jamiyatga bo'lgan ta'sirga e'tibor qarating
+  collection_impact_society_desc: O'quvchilarga kengroq ijtimoiy ta'sirlarni hisobga
+    olgan holda muammolarni yechish vositasi sifatida kompyuter fanlari haqida o'ylash
     imkoniyatini beradi.
   collection_creativity: Ijodkorlikka e'tibor qarating
-  collection_creativity_desc: Talabalarga veb-saytlar, animatsiyalar va o'yinlar va
-    qurilmalar uchun ilovalar yaratishni o'rganganlarida ijodiy bo'lishga imkon beradi.
-  collection_coding: Kodlashga e'tibor qarating
-  collection_coding_desc: Talabalarga veb-ishlab chiqish, o'yinlar va animatsiya va
-    qurilmalar uchun ilovalar yaratishda kodlash ko'nikmalarini shakllantirish imkoniyatini
+  collection_creativity_desc: O'quvchilarga veb-saytlar, animatsiyalar va o'yinlar
+    va qurilmalar uchun ilovalar yaratishni o'rganyotganlarida ijodkor bo'lishga imkoniyat
     beradi.
-  collection_data: Ma'lumotlarga e'tibor qarating
-  collection_data_desc: Talabalarga muammolarni hal qilish uchun ma'lumotlardan foydalanish
+  collection_coding: Dasturlashga e'tibor qarating
+  collection_coding_desc: O'quvchilarga veb-dasturlash, o'yinlar va animatsiya va
+    qurilmalar uchun ilovalar yaratishda ularning dasturlash ko'nikmalarini shakllantirish
+    imkoniyatini beradi.
+  collection_data: 'Ma''lumotlarga e''tibor qarating '
+  collection_data_desc: o'quvchilarga muammolarni yechish uchun ma'lumotlardan foydalanish
     imkoniyatini beradi.
   module_label_ages: 'Yoshlari:'
   module_label_grades: 'Sinflari:'
@@ -446,14 +472,19 @@ uz:
   module_label_topics: 'Mavzular:'
   module_label_devices: 'Qurilmalar:'
   module_label_tools: 'Dasturlash vositalari:'
-  module_label_professional_learning: 'Kasbiy ta''lim:'
+  module_label_professional_learning: 'Professional tarzda o''rganish:'
   module_label_languages: 'Qo''llab-quvvatlanadigan tillar:'
-  module_label_accessibility_features: 'Erişilebilirlik:'
-  module_label_educator_tool: Tarbiyachi vositasi
+  module_label_accessibility_features: 'Imkoniyati chegaralanganlar uchun foydalanish
+    imkoniyatlari:'
+  module_label_educator_tool: O'qituvchi vositasi
   module_label_educator_course: O'qituvchi kursi
   module_label_student_tool: Talaba vositasi
   module_label_student_product: Mahsulot
-  module_label_student_content_resources: Kontent va manbalar
+  module_label_student_content_resources: Mundarija va manbalar
+  module_label_new: Yangi
+  module_label_coming_soon: Tez orada
+  module_label_video_series: Video seriyasi
+  module_label_self_paced: O'z-o'zidan ishlaydigan modul
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -474,11 +505,15 @@ uz:
   module_grade_k_5_teachers: 'K-5 O''qituvchilari '
   module_grade_6_10_teachers: '6-10 O''qituvchilari '
   module_grade_9_12_teachers: '9-12 O''qituvchilari '
-  module_level_beginner: Boshlovchi
-  module_level_intermediate: Intermediate
+  module_level_beginner: Boshlang'ich
+  module_level_intermediate: O'rta
+  module_duration_45_mins: 45 daqiqa
+  module_duration_1_hr: 1 soat
   module_duration_2_hrs: 2 soat
   module_duration_3_hrs: 3 soat
+  module_duration_5_hrs: 5 soat
   module_duration_8_hrs: 8 soat
+  module_duration_20_hrs: 20 soat
   module_duration_35_hrs: 35 soat
   module_duration_lesson: Dars
   module_duration_week: Hafta
@@ -486,8 +521,8 @@ uz:
   module_duration_quarter: Chorak
   module_duration_semester: Semestr
   module_duration_school_year: O'quv yili
-  module_duration_month_quarter: Oy yoki chorak
-  module_duration_month_semester_year: Oy, semestr yoki yil
+  module_duration_month_quarter: Oy yoki Chorak
+  module_duration_month_semester_year: Oy, Semestr yoki Yil
   module_prerequisites_none: Hech qaysi
   module_prerequisites_maker_cp: Circuit Playground (Sxema o'yin maydonchasi)ga kirish
   module_prerequisites_maker_microbit: micro:bit ga kirish
@@ -500,36 +535,36 @@ uz:
     yaratishni o''qitish '
   module_label_teaching_maker_microbit: Vositalar (micro:bit) yordamida ilovalarni
     yaratishni o'qitish
-  module_subject_english_language_arts: Ingliz tili san'ati
-  module_subject_social_studies: Ijtimoiy tadqiqotlar
-  module_subject_science: Ilm-fan
+  module_subject_english_language_arts: Ingliz Tili Fani
+  module_subject_social_studies: Jamiyatshunoslik
+  module_subject_science: Tabiiy fanlar
   module_subject_math: Matematika
   module_name_coding_w_poetry: She'riyat bilan dasturlash
-  module_name_coding_time_capsule: Vaqt kapsulasini kodlash
-  module_name_simulating_marine_ecosystem: Dengiz ekotizimini simulyatsiya qilish
-  module_name_coding_geometric_star_quilt: Geometrik yulduzli choyshablarni kodlash
-  module_name_modeling_animal_adaptations: Hayvonlarning moslashuvini modellashtirish
-  module_name_coding_book_covers: Kitob muqovalarini kodlash
-  module_name_coding_interactive_maps: Interaktiv xaritalarni kodlash
-  module_desc_coding_w_poetry: Kodlash va til san'atining kesishishini interaktiv
-    she'rlar yaratish, kayfiyat va ohangni kod bilan tasvirlash orqali o'rganing.
-  module_desc_coding_time_capsule: Kelajak uchun xotiralarni yozib olish va saqlash
-    uchun raqamli vaqt kapsulasini yarating.
-  module_desc_simulating_marine_ecosystem: Dengiz ekotizimini simulyatsiya qilish
-    uchun kodlashdan foydalaning, turli organizmlar va ularning atrof-muhit o'rtasidagi
-    o'zaro bog'liqlikni o'rganing.
+  module_name_coding_time_capsule: Vaqt Kapsulasini dasturlash
+  module_name_simulating_marine_ecosystem: Dengiz Ekotizimini simulyatsiya qilish
+  module_name_coding_geometric_star_quilt: Geometrik Yulduzli choyshabni dasturlash
+  module_name_modeling_animal_adaptations: Hayvon Moslashuvlarini modellashtirish
+  module_name_coding_book_covers: Kitob Muqovalarini dasturlash
+  module_name_coding_interactive_maps: Interaktiv Xaritalarni dasturlash
+  module_desc_coding_w_poetry: Dasturlash va til fanlarining kesishishini interfaol
+    she'rlar yaratish, kayfiyat va ohangni kodlar bilan tasvirlash orqali tadqiq qilish.
+  module_desc_coding_time_capsule: 'Kelajak uchun xotiralarni yozib olish va saqlash
+    uchun raqamli vaqt kapsulasini yarating. '
+  module_desc_simulating_marine_ecosystem: Dengiz Ekotizimini, turli organizmlar va
+    ularning atrof-muhit o'rtasidagi o'zaro bog'liqlikni o'rganish orqali simulyatsiya
+    qilish uchun dasturlashdan foydalaning.
   module_desc_coding_geometric_star_quilt: Matematik tushunchalarni ijodiy ifoda bilan
-    aralashtirib, ajoyib yulduz choyshablarida geometrik naqshlarni yaratish uchun
-    kodni o'rganing.
-  module_desc_modeling_animal_adaptations: Hayvonlarning moslashuvini modellashtirish
-    uchun koddan foydalaning, har xil turlarning o'z muhitida omon qolish uchun qanday
-    rivojlanganligi haqidagi tushunchangizni chuqurlashtiring.
-  module_desc_coding_book_covers: Kitobning animatsion muqovasini yaratish uchun koddan
-    foydalaning, belgilar, sozlamalar, syujet va boshqalarni etkazish uchun spritlar
-    va matnlardan foydalaning.
-  module_desc_coding_interactive_maps: Geografik ma'lumotlarni qiziqarli va interaktiv
-    tarzda o'rganishga imkon beradigan hikoyani aytib beradigan xaritani ishlab chiqish
-    uchun kodlashdan foydalaning.
+    aralashtirib, ajoyib yulduz choyshablarda geometrik naqshlarni yaratish uchun
+    dasturlashni o'rganing.
+  module_desc_modeling_animal_adaptations: Hayvonlar ekranizatsiyasini modellashtirish
+    uchun har xil turlarning o'z muhitida omon qolish uchun qanday rivojlanganligi
+    haqidagi tushunchangizni chuqurlashtirish uchun kodlardan foydalaning.
+  module_desc_coding_book_covers: Kod yordamida personajlar, sozlamalar, syujet va
+    boshqalarni yetkazish uchun elflar va matnlar yordamida animatsion kitob muqovasi
+    yaratishingiz mumkin.
+  module_desc_coding_interactive_maps: Geografik ma'lumotlarni qiziqarli va interfaol
+    tarzda tadqiq qilishga imkon beradigan hikoyani aytib beradigan xaritani ishlab
+    chiqish uchun dasturlashdan foydalaning.
   values_01: Biz kompyuter fanlari barcha talabalar uchun asos deb hisoblaymiz
   values_02: Biz tenglik, foydalanish va imkoniyatlarga sodiqmiz
   values_03: Biz hamkorlikdagi ta'lim hamjamiyatining kuchiga ishonamiz
@@ -537,11 +572,10 @@ uz:
   values_05: Bizning faoliyatimiz halol va shaffof
   values_06: Bizning fikrimizcha, keng ko'lamli ta'sir chuqur o'ylashni va yaxlit
     harakat qilishni talab qiladi
-  heading_professional_learning: Sizning ehtiyojlaringizga javob beradigan professional
-    ta'lim
+  heading_professional_learning: Ehtiyojlaringizga javob beradigan professional ta'lim
   heading_additional_resources: Qo‘shimcha manbalar
-  heading_support_and_questions: Qo'llab-quvvatlash va savollar
-  heading_faq: Tez-tez beriladigan savollar
+  heading_support_and_questions: 'Qo''llab-quvvatlash va savollar '
+  heading_faq: 'Tez-tez beriladigan savollar '
   heading_curriculum_at_a_glance: Bir qarashda o'quv dasturi
   heading_curricula_at_a_glance: Bir qarashda o'quv dasturlari
   heading_engaging_projects: Ta'limni ilhomlantiradigan qiziqarli loyihalar va tadbirlar
@@ -555,6 +589,7 @@ uz:
   heading_no_devices: Qurilmalar yo'qmi? Biz sizni qamrab oldik
   heading_java_lab: Java laboratoriyasi
   heading_objects_first: Avval ob'ektlar
+  heading_these_lessons_will: 'Ushbu darslar:'
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -692,6 +727,11 @@ uz:
   ai_curriculum_duration_03: 'Davomiyligi: 1 soat'
   ai_curriculum_btn_aria_label_03: Okeanlar faoliyati uchun sun'iy intellektni sinab
     ko'ring
+  ai_curriculum_title_04: AI qanday ishlaydi
+  ai_curriculum_desc_04: Ushbu darslar AI qanday ishlaydi video seriyasini to'ldiradi.
+    Har bir dars seriyadagi bitta video bilan birlashtirilgan bo'lib, videolarda kiritilgan
+    tushunchalarga chuqurroq kirib boradi.
+  ai_curriculum_btn_aria_label_04: AI darslarini qanday ishlashini o'rganing
   ai_carousel_heading: 'Code.org yordamida o''qituvchilar AI haqida nima deyishadi:'
   ai_carousel_quote_01: Bu dars, shuningdek, o'quvchilarimga tasniflash tizimlarida
     fikr elementi borligini ko'rish imkoniyatini berdi. Keyinchalik, biz sun'iy intellektda
@@ -710,6 +750,10 @@ uz:
   ai_pl_list_04: AI va mashinani o'rganishning haqiqiy ta'sirini ko'rib chiqing.
   ai_pl_list_05: Bo'lim loyihalarini o'rganing.
   ai_pl_duration: 'Muddati: 2 soat'
+  ai_pl_title: SI va mashinaviy o'rganishni o'qitish
+  ai_pl_desc: Sun'iy intellekt va mashinani o'rganishga kirish. AI Laboratoridan foydalanib,
+    mashinani o'rganish modelini o'rgating. va mashinani o'rganish ilovalari bilan
+    shug'ullaning. AI va mashinani o'rganishning haqiqiy ta'sirini ko'rib chiqing.
   ai_video_series_title: AI qanday ishlaydi
   ai_video_series_desc: Microsoft bosh direktori Satya Nadellaning kirish so'zi bilan
     ushbu qisqa videolar seriyasi sizni sun'iy intellekt qanday ishlashi va nima uchun
@@ -737,6 +781,7 @@ uz:
   ai_pl_101_hero_heading: AI EmpowerED uchun bizga qo'shiling!
   ai_pl_101_hero_desc: O'qituvchilar uchun bepul onlayn o'quv tizimimiz orqali ta'limdagi
     sun'iy intellektning (SI) o'zgartiruvchan imkoniyatlarini kashf eting.
+  ai_pl_101_hero_desc_02: O'qituvchilar uchun keng qamrovli onlayn o'quv seriyasi.
   ai_pl_101_hero_presented: Tomonidan taqdim etilgan
   ai_pl_101_intro_heading: O'qituvchilar uchun AI 101 nima?
   ai_pl_101_intro_text: O'qituvchilar uchun AI 101 - bu sun'iy intellekt (AI) ning
@@ -784,6 +829,102 @@ uz:
     yozish tajribasi davomida takroriy teskari aloqa va shakllantiruvchi baho berishda
     yordam beradi.'
   ai_pl_101_explore__button_4: Asbobni o'rganing
+  ai_pl_101_video_title_1: Sal Xon va Xadi Partovi bilan Fireside suhbati
+  ai_pl_101_video_desc_1: Sal Xon (Xon akademiyasi) va Xadi Partoviy (Code.org) ga
+    qoʻshiling va sinfda sunʼiy intellektni oʻrganishga oid suhbat uchun. Bugungi
+    kunda sun'iy intellekt bilan bog'liq eng munozarali mavzularni o'z ichiga olgan
+    jonli munozarani kuting.
+  ai_pl_101_video_title_2: O'qituvchilar uchun sun'iy intellektni yo'q qilish
+  ai_pl_101_video_desc_2: Sun'iy intellekt asoslari bilan tanishish, bu sizni sun'iy
+    intellektning jamiyatimizga chuqur ta'sirini va uning ta'lim sohasiga tobora ortib
+    borayotgan ahamiyatini tushunish uchun asosiy bilimlar bilan ta'minlaydi. Siz
+    sinfdagi vazifalar uchun sun'iy intellektdan foydalanish va ma'muriy vazifalarga
+    vaqtni tejash bo'yicha amaliy tushunchalarga ega bo'lasiz.
+  ai_pl_101_video_title_3: O'qishni sun'iy intellekt bilan o'zgartirish
+  ai_pl_101_video_desc_3: AI va ta'limning kesishishini o'rganing. Ushbu sessiya talabalarning
+    bilimini oshirish uchun sun'iy intellektni pedagogika bilan qanday birlashtirish
+    mumkinligini o'rganadi. O'quvchilarning o'quv tajribalarini boyitish uchun o'qitish
+    amaliyotini o'zgartirish uchun sun'iy intellektdan foydalanishni istagan o'qituvchilar
+    ishtirok etishlari shart.
+  ai_pl_101_video_title_4: AIga mas'uliyatli yondashuvni ta'minlash
+  ai_pl_101_video_desc_4: Ta'lim muhitiga sun'iy intellektni kiritish bo'yicha axloqiy
+    mulohazalar va ilg'or tajribalarni o'rganing. Ushbu sessiya aniq strategiyalar,
+    manbalar va real dunyo misollarini taqdim etadi, ularning barchasi sun'iy intellektning
+    potentsial tarafkashliklarini va u bilan birga keladigan axloqiy mulohazalarni
+    tushunishga qaratilgan.
+  ai_pl_101_video_title_5: Sinfga sun'iy intellektni olib kelish
+  ai_pl_101_video_desc_5: Ushbu sessiya AI haqida o'rgatish, AI ta'lim vositalarini
+    baholash va ulardan foydalanish va talabalarni baholash uchun sun'iy intellektdan
+    foydalanishga qaratilgan. Nazariya, amaliy misollar va manbalarning boy aralashmasi
+    bilan u o'qituvchilarga sun'iy intellekt landshaftini boshqarish va talabalarning
+    o'rganish tajribasini oshirish imkoniyatini berishga qaratilgan.
+  ai_pl_101_video_desc_6: 'Katta til modellari (ChatGpt kabi) va Generative AI bo''yicha
+    ikkita yangi videoni o''z ichiga olgan sun''iy intellektdagi katta o''zgarishlarni
+    keltirib chiqaradigan yangi texnologiya haqida ko''proq bilib oling. Ushbu yangi
+    texnologiyalar qanday ishlashini to''g''ridan-to''g''ri mutaxassislardan tinglang:
+    Mira Murati, OpenAI CTO va RunwayML bosh direktori Kristobal Valenzuela.'
+  how_ai_works_hero_heading: AI qanday ishlaydi
+  how_ai_works_hero_desc: "“AI qanday ishlaydi”, bizning video seriyamiz va unga qo'shilgan
+    darslarimiz bilan sun'iy intellekt dunyosiga sho'ng'ing!"
+  how_ai_works_intro_desc: Ushbu qisqa videolar seriyasi va sinfdagi darslar sizni
+    va o'quvchilaringizni sun'iy intellekt qanday ishlashi va nima uchun muhimligi
+    bilan tanishtiradi. Siz mavzu asosida individual darslarni tanlashingiz, bitta
+    sinfdagi barcha mavzularni o'rganishingiz yoki chuqurroq sho'ng'ish uchun barcha
+    7 ta darsni o'rgatishingiz mumkin.
+  how_ai_works_intro_list_01: Sizni sun'iy intellekt va mashinani o'rganish bilan
+    tanishtiring
+  how_ai_works_intro_list_02: Generativ AI qanday ishlashiga, shu jumladan katta til
+    modellari (LLM) va tasvirni yaratishga sho'ng'ing
+  how_ai_works_intro_list_03: Noaniqlik, axloq, maxfiylik va sun'iy intellektdan mas'uliyatli
+    foydalanishni o'rganing
+  how_ai_works_intro_list_04: AIning haqiqiy dunyo ilovalariga, shu jumladan kompyuterni
+    ko'rishga teging
+  how_ai_works_lessons_heading: Sizning sinfingiz uchun sun'iy intellekt darslari
+  how_ai_works_lesson_title_01: Mashinani o'rganishga kirish
+  how_ai_works_lesson_desc_01: Mashinani o'rganish deb nomlangan sun'iy intellektning
+    shakli va ular robotni muammolarni hal qilishga o'rgatish uchun muammolarni hal
+    qilish jarayonidan qanday foydalanishlari haqida bilib oling. Robot baliqdagi
+    naqshlarni aniqlashni o'rganadigan mashinani o'rganish tadbirlarida ishtirok eting.
+  how_ai_works_lesson_title_02: Kompyuterni ko'rish
+  how_ai_works_lesson_desc_02: Kompyuterni ko'rish qanday ishlashini bilib oling.
+    Kompyuterni ko'rishni va kompyuterning “qanday ko'rishini” tushuntiruvchi videoni
+    tomosha qiling. Keyin etti segmentli displey qaysi raqamni ko'rsatayotganini aniqlash
+    uchun tarmoqdan foydalanadigan algoritmni ishlab chiqing va uni sinab ko'ring.
+  how_ai_works_lesson_title_03: Neyron tarmoqlari
+  how_ai_works_lesson_desc_03: Neyron tarmoqlari qanday ishlashini bilib oling. Yo'lda
+    neyron tarmoqlarni o'rganish uchun vidjetlardan foydalaning. Neyron tarmoqlarini
+    tushuntiruvchi videoni tomosha qiling. Nihoyat, tavsiya tizimlarini yaratishda
+    turli istiqbollarga bo'lgan ehtiyojni muhokama qiling.
+  how_ai_works_lesson_title_04: Chatbotlar va katta til modellari
+  how_ai_works_lesson_desc_04: Katta til modeli (LLM) nima ekanligini va u qanday
+    ishlashini bilib oling, so'ngra AI bilan birgalikda matn yaratish uchun LLM-dan
+    foydalaning. Nihoyat, LLMlarning aqlli yoki ijodiy ekanligi haqida muhokama qiling.
+  how_ai_works_lesson_title_05: Generativ tasvirlar
+  how_ai_works_lesson_desc_05: AI tasvirlarni qanday yaratishi mumkinligini bilib
+    oling, so'ngra diffuzion AI vidjetini o'rganing va bu modellar ijodiy yoki yo'qligini
+    muhokama qiling.
+  how_ai_works_lesson_title_06: Algoritmik tarafkashlik
+  how_ai_works_lesson_desc_06: Twitter kesish algoritmining asosini aniqlash uchun
+    rasmlarni kesishni mashq qiling, so'ngra ushbu noaniq algoritmning kashf etilishi
+    haqidagi videoni o'qing va tomosha qiling. Nihoyat, algoritmlardagi noaniqlikni
+    tan olish va kamaytirish usullarini muhokama qiling.
+  how_ai_works_lesson_title_07: Bizning sun'iy intellekt kodeksimiz
+  how_ai_works_lesson_desc_07: Sun'iy intellekt sohasidagi axloqiy tuzoqlarni ochib
+    beradigan maqolalar va videolar yordamida tadqiqot o'tkazing. Hamma joyda sun'iy
+    intellekt yaratuvchilari va qonun chiqaruvchilari uchun “Bizning AI axloq kodeksi”
+    sinfidagi manbani yig'ing.
+  how_ai_works_lessons_in_a_day_title: AI bir kunda qanday ishlaydi
+  how_ai_works_lessons_in_a_day_desc: Faqat bir kun bormi? Shuningdek, butun seriyani
+    talabalarga bir kunda tanishtirish imkoniyati mavjud. Talabalarni sun'iy intellekt
+    bilan tanishtirmoqchi bo'lgan har qanday fan o'qituvchisi uchun yoki hatto mehmon
+    o'qituvchisi uchun dars sifatida juda mos keladi.
+  how_ai_works_lessons_in_a_day_desc_02: Barcha “AI qanday ishlaydi” videolarini bir
+    kunda tanishtiring. Talabalar har bir video bilan birga videoning so'z boyligini
+    moslashtirish orqali kuzatib boradilar, so'ngra har bir video haqidagi savolga
+    javob berishadi.
+  how_ai_works_resources_desc: AI haqida ko'proq bilishni xohlaysizmi? Bu erda sizga
+    va o'quvchilaringizning o'qishini kengaytirishga yordam beradigan qo'shimcha manbalar
+    mavjud.
   ai_vid_intro_caption: AI qanday ishlashini tanishtirish
   ai_vid_chatbots_caption: Chatbots va katta til modellari qanday ishlaydi
   ai_vid_creativity_caption: AI ijodkorlik va tasavvurga egami?
@@ -1141,10 +1282,10 @@ uz:
   teach_page_additional_materials_list_desc_03: Maktabingizda osib qo'yish va o'quvchilaringizni
     kompyuter fanlarini sinab ko'rishga ilhomlantirish uchun turli xil namuna modellari
     plakatlarni chop eting.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1274,242 +1415,254 @@ uz:
   csd_page_intro_list_01: Moslashuvchan kirish o'quv dasturi
   csd_page_intro_list_02: Mavzularning kengligi
   csd_page_intro_list_03: Oldindan tajriba kerak emas
-  csd_page_intro_list_04: Turli xil loyihalarni yarating
-  csd_page_intro_list_05: Qiziqarli va qiziqarli
+  csd_page_intro_list_04: Turli xil loyihalarni tuzing
+  csd_page_intro_list_05: Xayajonli va qiziqarli
   csd_page_quote: Ushbu o'quv dasturi hamma narsani qamrab olgan, yaxshi tashkil etilgan
-    va talabalarga yo'naltirilgan! O'quv dasturidagi aql bovar qilmaydigan tashkilot
-    meni yildan-yilga ishlatishga majbur qiladi.
-  csd_page_curriculum_glance_topics: Sun'iy intellekt, ma'lumotlar, veb-dizayn, jismoniy
-    hisoblash, ilova dizayni, o'yinlar va animatsiyalar, san'at va dizayn, dasturlash
+    va talabalarga yo'naltirilgan! O'quv dasturining aql bovar qilmaydigan tuzilishi
+    yildan-yilga undan foydalanishga undaydi.
+  csd_page_curriculum_glance_topics: Sun'iy intellekt, Ma'lumotlar, Veb-dizayn, Jismoniy
+    Hisoblash, Ilova dizayni, O'yinlar va animatsiyalar, San'at va Dizayn, Dasturlash
   csd_page_curriculum_glance_devices: Laptop, Chromebook
-  csd_page_curriculum_glance_tools: Ilova laboratoriyasi, o'yin laboratoriyasi, AI
-    laboratoriyasi, veb-laboratoriya
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csd_page_curriculum_glance_professional_languages: Ingliz
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Sinfingiz uchun to'g'ri CS Discoveries kursini tanlash
-  csd_page_pick_a_course_desc: CS Discoveries uchun taqdim etilgan turli xil variantlar
-    to'plami bilan har xil ehtiyojlar uchun kurs mavjud.
-  csd_page_pick_a_course_heading_02: Tarkibni qanday tanlashni xohlaysiz?
-  csd_page_courses_year_desc: 7 birlik orqali talabalar turli mavzularni o'rganadilar.
-  csd_page_courses_year_action_block_desc: 'Talabalarga haqiqiy artefaktlar yaratish
-    va ijodkorlik, muloqot, muammolarni hal qilish va o''yin-kulgi vositasi sifatida
-    informatika bilan shug''ullanish imkoniyatini beruvchi kirish informatika kursi. '
-  csd_page_courses_flexible_units_desc: CS Discoveries -ning har bir birligi oldindan
-    tajriba talab qilinmasdan mustaqil ravishda ishlatilishi mumkin, bu sizning sinfingiz
-    uchun mos keladigan aniq birliklarni tanlash imkonini beradi.
-  csd_page_courses_collections_desc: Muayyan mavzuga qaratilgan birliklar to'plami
-    bilan bir sohaga chuqurroq sho'ng'ing.
-  csd_page_faq_question_01: CS kashfiyotlari standartlarga mos keladimi?
-  csd_page_faq_answer_01: CS Discoveries K-12 Kompyuter fanlari uchun Framework va
-    2017 CSTA standartlari yordamida ko'rsatma sifatida yozilgan. Hozirgi vaqtda CS
-    Discoveries -ning har bir darsida tegishli 2017 CSTA standartlari bo'yicha xaritalar
-    mavjud. [Standartlar xaritalarining qisqacha mazmunini bu erda topishingiz mumkin]
-    (%{mappings_url}). Standartlarning Google Sheets versiyasini [CSD standartlari]
-    (%{csd_standards_url}) da topish mumkin.
-  csd_page_faq_question_02: Ushbu kurs uchun kasbiy rivojlanishni qanday qilib/qayerdan
-    olishim mumkin?
-  csd_page_faq_answer_02: Bizning Professional ta'lim dasturimiz yil davomida yordam
-    beradi. Dastur besh kunlik yozgi seminar bilan boshlanadi, unda siz o'quv dasturi
-    bilan amaliy ishlash va mintaqangizdagi boshqa o'qituvchilar bilan uchrashish
-    imkoniyatiga ega bo'lasiz. Yil davomida biz keyingi seminarlar va forumlarni qo'llab-quvvatlashni
-    taklif qilamiz. Boshlash uchun sizga kompyuter fanlari bo'yicha oldingi tajriba
-    kerak emas. Va o'qituvchilar buni yaxshi ko'radilar! 90% bu eng yaxshi kasbiy
-    rivojlanish darajasiga ega. [Ariza berish va ko'proq ma'lumot olish uchun shu
-    erni bosing] (%{apply_url}).
-  csd_page_faq_question_03: Men CS Discoveries -dan dars beraman, lekin talabalarim
-    bilan bir semestrdan kam vaqt o'tkazaman. Siz nimani tavsiya qilasiz?
-  csd_page_faq_answer_03_01: Cheklangan jadvalga ega bo'lgan, o'quv yili davomida
-    CS kashfiyotlarining barcha bo'limlarini o'rgata olmaydigan o'qituvchilar endi
-    diqqatni jamlamoqchi bo'lgan narsalarga asoslanib, CS Discoveries birliklarining
-    ma'lum bir to'plamini osongina tayinlashlari mumkin. Ushbu to'plamlar hali ham
-    CS Discoveries -da topilgan bir xil aniq birliklar bo'lib, ular CS kashfiyotlarining
-    ma'lum bir sohasiga chuqur sho'ng'ish uchun quyida keltirilgan tavsiyalarimiz
-    asosida birlashtirilgan. Har bir to'plam taxminan bir semestr yoki bir semestrdan
-    biroz kamroq. [To'plamlarimiz variantlarini ko'rish uchun shu erni bosing] (%{collections_url}).
-  csd_page_faq_answer_03_02: Jadvalni yanada cheklangan o'qituvchilar uchun ular butun
-    kursni tayinlamasdan CS Discoveries -dan bir vaqtning o'zida faqat bitta birlikni
-    tayinlash imkoniyatiga ega. Umid qilamizki, bu katta kurslarning bir qismi sifatida
-    yoki cheklangan jadval bo'yicha informatika fanini o'qitishda o'rnatilgan CS Discoveries
-    bo'limlarini o'rgatadigan sinflarni qo'llab -quvvatlashga yordam beradi. [Moslashuvchan
-    birliklarimizni ko'rish uchun shu erni bosing] (%).
-  csd_page_faq_question_04: CS kashfiyotlari uchun qanday materiallar va materiallar
-    talab qilinadi?
+  csd_page_pick_a_course_heading: Sinfingiz uchun mos keluvchi Kompyuter Fanlari Kashfiyotlari
+    kursini tanlash
+  csd_page_pick_a_course_desc: Kompyuter Fanlari Kashfiyotlari uchun taqdim etilgan
+    turli xil variantlar to'plami bilan birga har xil ehtiyojlar uchun kurslar mavjud.
+  csd_page_pick_a_course_heading_02: 'Kurs tarkibini qanday tanlamoqchisiz? '
+  csd_page_courses_year_desc: 7 ta bo'lim orqali o'quvchilar turli qamrovdagi mavzularni
+    o'rganib chiqadilar.
+  csd_page_courses_year_action_block_desc: 'O''quvchilarni haqiqiy san''at asarini
+    yaratish va ijodkorlik, muloqot, muammolarni yechish va qqiziqarli muhiti sifatida
+    kompyuter fanlari bilan shug''ullanishga undovchi kompyuter fanlariga kirish kursi. '
+  csd_page_courses_flexible_units_desc: Kompyuter fanlari kashfiyotlarining har bir
+    bo'limi oldindan tajriba talab qilinmasdan mustaqil ravishda ishlatilishi mumkin,
+    bu sizning sinfingiz uchun mos keladigan aniq bo'limlarni tanlash imkonini beradi.
+  csd_page_courses_collections_desc: Muayyan mavzuga qaratilgan bo'limlar to'plami
+    bilan bitta sohaga chuqurroq sho'ng'ing.
+  csd_page_faq_question_01: Kompyuter Fanlari Kashfiyotlari standartlarga muvofiqmi?
+  csd_page_faq_answer_01: Kompyuter Fanlari Kashfiyotlari K-12 Kompyuter fanlari uchun
+    Umumiy Tamoillar va 2017 CSTA standartlaridan yo'riqnoma sifatida foydalangan
+    holda yozilgan. Hozirgi vaqtda Kompyuter Fanlari Kashfiyotlarining har bir darsida
+    2017 CSTA standartlariga mos xaritalar mavjud. [Standartlar xaritalarining qisqacha
+    mazmunini bu yerdan topishingiz mumkin] (%{mappings_url}). Standartlarning Google
+    Sheets versiyasini [CSD standartlari] (%{csd_standards_url}) dan topish mumkin.
+  csd_page_faq_question_02: Ushbu kurs uchun professional rivojlantirishni qanday
+    qilib/qayerdan olishim mumkin?
+  csd_page_faq_answer_02: Bizning Professional Ta'lim Dasturimiz yil davomida qo'llab-quvvatlanadi.
+    Dastur besh kunlik yozgi seminar bilan boshlanadi, unda siz o'quv dasturi bilan
+    amaliy ishlash va hududingizdagi boshqa o'qituvchilar bilan uchrashish imkoniyatiga
+    ega bo'lasiz. Yil davomida biz seminarlar va forumlarni qo'llab-quvvatlashni taklif
+    qilamiz. Boshlash uchun sizga kompyuter fanlari bo'yicha oldindan tajribaga ega
+    bo'lish shart emas. O'qituvchilar buni yaxshi ko'radilar! Ularning 90% bu eng
+    yaxshi kasbiy rivojlantirish deb baholaydilar. [Ariza berish va ko'proq ma'lumot
+    olish uchun shu erni bosing] (%{apply_url}).
+  csd_page_faq_question_03: Men Kompyuter Fanlari Kashfiyotlari bo'yicha dars beryapman,
+    lekin talabalarim bilan bir semestrdan kamroq vaqtim bor. Siz nimani tavsiya qilgan
+    bo'lardingiz?
+  csd_page_faq_answer_03_01: Cheklangan jadvalga ega bo'lgan va o'quv yili davomida
+    Kompyuter Fanlari Kashfiyotlarining barcha bo'limlarini o'rgatib tugata olmaydigan
+    o'qituvchilar endi e'tibor qaratmoqchi bo'lgan narsalarga asoslanib, Kompyuter
+    Fanlari Kashfiyotlari bo'limlarining ma'lum bir to'plamini osongina ajratishlari
+    mumkin. Ushbu to'plamlar Kompyuter Fanlari Kashfiyotlaridagi bo'limlar bilan bir
+    xil bo'limlar bo'lib, Kompyuter Fanlari Kashfiyotlarining ma'lum bir sohasiga
+    chuqur kirish uchun quyidagi tavsiyalarimiz asosida birlashtirilgan. Har bir to'plam
+    taxminan bir semestr yoki bir semestrdan kamroq davom etadi. [Toʻplamlar variantlarini
+    koʻrish uchun shu yerni bosing](%{collections_url}).
+  csd_page_faq_answer_03_02: Bundan ham cheklangan jadvalga ega bo'lgan o'qituvchilar
+    uchun butun kursni tayinlamasdan, Kompyuter Fanlari Kashfiyotlaridan bir vaqtning
+    o'zida faqat bitta bo'limni tayinlash imkoniyatiga ega. Umid qilamizki, bu kattaroq
+    kurslarning bir qismi sifatida qamrab olingan Kompyuter Fanlari Kashfiyotlari
+    bo'limlarini o'rgatadigan sinflarga yoki cheklangan jadval bilan kompyuter fanlarini
+    o'rgatishda yordam beradi. [Moslashuvchan bo'limlarimizni koʻrish uchun shu yerni
+    bosing](%).
+  csd_page_faq_question_04: Kompyuter Fanlari Kashfiyotlari uchun qanday materiallar
+    va yordam kerak bo'ladi?
   csd_page_faq_answer_04_01: Ushbu kursni o'qitishda e'tiborga olish kerak bo'lgan
-    xarajatlardan biri bu bosib chiqarishdir. Ko'pgina darslarda o'quvchilarni mashg'ulotlar
+    xarajatlardan biri bu chop qilish. Ko'pgina darslarning o'quvchilarni mashg'ulotlar
     orqali yo'naltirish uchun mo'ljallangan tarqatma materiallar mavjud. Ushbu tarqatma
     materiallarning barchasini chop etish talab qilinmasa ham, ko'plari chop etish
     uchun mo'ljallangan va iloji bo'lsa chop etishni tavsiya etamiz.
-  csd_page_faq_answer_04_02: 'Bosib chiqarishdan tashqari, ba''zi darslar odatiy sinf
-    materiallari va manipulyatsiyalarni talab qiladi, masalan: talabalar jurnallari,
-    plakat qog''ozi, markerlar/rangli qalamlar, qaychi, hurda qog''oz, elim yoki lenta,
-    post-it yozuvlari yoki indeks kartalari (yoki shunga o''xshash o''lchamdagi hurda
-    qog''oz), va hukmdorlar yoki qandaydir tekis chekka.'
+  csd_page_faq_answer_04_02: 'Chop qilishdan tashqari, ba''zi darslar odatiy sinf
+    materiallari va rivojlantiruvchi materiallarni talab qiladi, masalan: Talabalar
+    jurnallari, plakat qog''ozi, markerlar/rangli qalamlar, qaychi, izoh qog''ozi,
+    yelim yoki skotch, stikerlar yoki hisobga olish kartochkalari (yoki shunga o''xshash
+    o''lchamdagi izoh qog''ozi), va jazvarlar yoki shunga o''hshash tekis chekkaga
+    ega narsalar.'
   csd_page_faq_answer_04_03: 'Umumiy kurs materiallariga qo''shimcha ravishda, ma''lum
-    birliklarda quyidagi elementlar chaqiriladi:'
-  csd_page_faq_answer_04_04: Muammolarni hal qilish va hisoblash
-  csd_page_faq_answer_04_05: Alyuminiy folga, suv uchun idish, pennies (penniesni
-    bir xil o'lchamdagi boshqa turdagi og'irlik bilan almashtirish mumkinligiga e'tibor
-    bering). Agar siz ushbu materiallarga kirish imkoniga ega bo'lmasangiz, muqobil
-    tadbirlar mavjud.
-  csd_page_faq_answer_04_06: Qurilmalar bilan ilovalarni yaratish (Variant A va B
+    bo''limlarda quyidagi narsalar kerak bo''ladi:'
+  csd_page_faq_answer_04_04: Muammolarni Yechish va Hisoblash
+  csd_page_faq_answer_04_05: Alyumin folga, suv uchun idish, tangalar (tangalar bir
+    xil o'lchamdagi boshqa turdagi yuk bo'luvchi narsalarga almashtirilishi mumkinligiga
+    e'tibor bering). Agar siz ushbu materiallarni topish imkoniga ega bo'lmasangiz,
+    muqobil mashg'ulotlar ham mavjud.
+  csd_page_faq_answer_04_06: Qurilmalar bilan Ilovalarni Yaratish (A Variant va B
     variant)
-  csd_page_faq_answer_04_07: 'A Variant: Circuit Playground (Sxema o''yin maydonchasi)lari
+  csd_page_faq_answer_04_07: 'A Variant: Circuit Playground (Sxema o''yin maydonchasi)
     uchun sinf to''plami. Batafsil ma’lumot olish uchun [code.org/maker/circuitplayground](%{url})
     sahifasini tekshirib ko''ring.'
-  csd_page_faq_answer_04_08: 'B Variant: Mikro:bit qurilmalari sinf to''plami. Batafsil
-    ma’lumot olish uchun [code.org/maker/microbit](%{url}) sahifasini tekshirib ko''ring.'
-  csd_page_faq_answer_04_09: Bo'sh to'qima qutilari yoki karton rulolar yoki tirnalgan
-    qog'oz kabi ishlab chiqaruvchi materiallari
-  csd_page_faq_answer_04_10: "* Eslatma: Qurilmalar bilan ilovalarni yaratish blokida
-    ikkita amalga oshirish imkoniyati mavjud - biri elektron o'yin maydonchalaridan
-    foydalanadiganlar uchun va biri mikro: bitdan foydalanadiganlar uchun. O'qituvchilar
-    ikkala qurilma to'plamini sotib olmasliklari yoki ikkala birlik variantini ham
-    o'rgatmasliklari kerak, chunki ular ekvivalent va bir xil tarkibni qamrab oladi."
-  csd_page_faq_question_06: CS Discoveries boshqa Code.org kurslariga qanday mos keladi?
-  csd_page_faq_answer_06_01: CS Discoveries bizning [CS asoslari] (%{csf_url}) kurslarimiz
-    va [CS tamoyillari] (%{csp_url}) kursimiz o'rtasida tabiiy ravishda mos kelish
-    uchun mo'ljallangan. Ushbu kurslarning har biri informatika faniga yoshga mos
-    kirish nuqtasi bo'lishi uchun mo'ljallangan bo'lsa-da, oldingi tajribaga ega bo'lgan
-    talabalar o'rganish uchun ko'plab yangi mavzularni topadilar va ular yangi va
-    qiyinroq kontekstlarda tanish mavzularni qayta ko'rib chiqadilar.
-  csc_page_top_desc: Informatika (CS) va matematika, til san'ati, fan va ijtimoiy
+  csd_page_faq_answer_04_08: 'B Variant: Mikro:bit qurilmalari uchun sinf to''plami.
+    Batafsil ma’lumot olish uchun [code.org/maker/microbit](%{url}) sahifasini tekshirib
+    ko''ring.'
+  csd_page_faq_answer_04_09: Bo'sh to'qima qutilari yoki karton rulonlar yoki izoh
+    qog'ozi kabi yasash uchun materiallar
+  csd_page_faq_answer_04_10: "* Eslatma: Qurilmalar bilan Ilovalarni Yaratish bo'limida
+    ikkita amalga oshirish imkoniyati mavjud - biri Circuit Playground (Sxema o'yin
+    maydonchasi)dan foydalanadiganlar uchun va biri mikro: bitdan foydalanadiganlar
+    uchun. O'qituvchilar ikkala qurilma to'plamlarini sotib olmasliklari yoki ikkala
+    bo'lim variantlarini ham o'rgatmasliklari kerak, chunki ular bir-biri bilan bir
+    hil va bir xil narsalarni qamrab oladi."
+  csd_page_faq_question_06: Kompyuter Fanlari Kashfiyotlari boshqa Code.org kurslari
+    bilan qanday mos keladi?
+  csd_page_faq_answer_06_01: Kompyuter Fanlari Kashfiyotlari bizning [Kompyuter Fanlari
+    Asoslari](%{csf_url}) va [Kompyuter Fanlari Tamoyillari](%{csp_url}) kurslarimiz
+    o‘rtasida tabiiy ravishda moslashish uchun yaratilgan. Ushbu kurslarning har biri
+    kompyuter fanlariga yoshga mos kirish nuqtasi bo'lishi uchun mo'ljallangan bo'lsa-da,
+    oldindan tajribaga ega bo'lgan o'quvchilar o'rganish uchun ko'plab yangi mavzularni
+    topadilar va ular yangi va qiyinroq kontekstlardagi tanish mavzularni qayta ko'rib
+    chiqadilar.
+  csc_page_top_desc: Kompyuter Fanlari (CS) va matematika, til fani, fan va ijtimoiy
     fanlar kabi boshqa fanlar o'rtasida aloqa o'rnating.
-  csc_page_intro_heading: Asosiy fan standartlarini qamrab olgan holda CSni o'rgating
-  csc_page_intro_list_01: CSni boshqa fanlarga qo'shing
-  csc_page_intro_list_02: Boshqa fanlardan o'rganishni kuchaytirish
-  csc_page_intro_list_03: Asosiy mavzu standartlariga javob berish
-  csc_page_intro_list_04: Talabalarga informatika fanini o'rgatishning qiziqarli usuli
+  csc_page_intro_heading: Kompyuter Fanlarini (CS) asosiy fan standartlarini qamrab
+    olgan holda o'rgating
+  csc_page_intro_list_01: Kompyuter Fanlarini (CS)ni boshqa fanlar bilan birlashtiring
+  csc_page_intro_list_02: Boshqa fanlarni o'rganishi mustahkamlang
+  csc_page_intro_list_03: Asosiy fan standartlariga rioya qiling
+  csc_page_intro_list_04: O'quvchilarga kompyuter fanlarini o'rgatishning qiziqarli
+    usuli
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: Har qanday ma'lumotga ega bo'lgan har qanday o'qituvchi
-    uchun oson
+  csc_page_intro_list_06: Har qanday ma'lumotga ega bo'lgan istalgan o'qituvchi uchun
+    oson
   csc_page_curriculum_glance_topics: Fanlararo
-  csc_page_curriculum_glance_devices: Noutbuk, Chromebook, Tablet
-  csc_page_curriculum_glance_tools: Sprite laboratoriyasi
-  csc_page_curriculum_glance_professional_learning: O'z-o'zidan ishlaydigan modullar
+  csc_page_curriculum_glance_devices: Noutbuk, Xrombuk, Planshet
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Mustaqil ravishda o'rganish modullari
   csc_page_curriculum_glance_professional_languages: Ingliz
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: Men darslarning qanchalik puxta va yaxshi sur'atlarda ekanligini
-    juda qadrlayman. Men informatika bilan tanish emasman, lekin siz bergan darslar
-    bilan o'quvchilarimga tushunchalarni tushunishga va ularni o'quv dasturimizga
-    bog'lashga yordam berishga ishonaman.
-  csc_page_find_a_module_desc: Bizning joriy CS Connections takliflarimiz 3-5-sinf
-    sinflari uchun mo'ljallangan va har kuni 1 haftalik 45 daqiqalik darslarni olish
-    uchun mo'ljallangan.
-  csc_page_faq_question_01: CS Connections standartlarga mos keladimi?
-  csc_page_faq_answer_01: Ha! CS Connections ELA va Math, Keyingi avlod fan standartlari
-    (NGSS) va kompyuter fanlari o'qituvchilari assotsiatsiyasi standartlari (CSTA)
-    uchun umumiy asosiy davlat standartlari (CCSS) bilan xaritada keltirilgan.
-  csc_page_faq_question_02: CS Connections-ni o'rgatish qancha turadi?
+  csc_page_quote: Men darslar qanchalik puxta va yaxshi sur'atda o'tishini juda qadrlayman.
+    Men kompyuter fanlari bilan tanish emasman, lekin siz taqdim etgan darslar bilan
+    o'quvchilarimga tushunchalarni tushunishga va ularni o'quv dasturimizga bog'lashga
+    yordam berishga ishonaman.
+  csc_page_find_a_module_desc: Bizning joriy Komyuter Fanlari Aloqalari takliflarimiz
+    3-5-sinf sinflar uchun mo'ljallangan va 1 haftalik har kuni 45 daqiqalik darslarni
+    olish uchun mo'ljallangan.
+  csc_page_faq_question_01: KF Aloqalari standartlarga mos keladimi?
+  csc_page_faq_answer_01: Ha! KF Aloqalari Ingliz tili va Matematika uchun Umumiy
+    Asosiy Shtat Standartlari (CCSS), Keyingi Avlod Fan Standartlari (NGSS) va Kompyuter
+    Fanlari O'qituvchilari Assotsiatsiyasi Standartlari (CSTA)ga mos keladi.
+  csc_page_faq_question_02: KF Aloqalarini o'rgatish qancha turadi?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: CS Connections uchun kasbiy rivojlanishni qanday qilib/qaerdan
-    olishim mumkin?
-  csc_page_faq_answer_03: Biz CS Connections uchun o'z-o'zidan professional rivojlanishni
+  csc_page_faq_question_03: KF Aloqalari uchun professional rivojlantirishni qanday
+    qilib/qayerdan olishim mumkin?
+  csc_page_faq_answer_03: Biz KF Aloqalari uchun mustaqil professional rivojlantirishni
     taklif qilamiz. O'qish, videolarni ko'rish, interaktiv jumboqlarni to'ldirish
-    va o'rganishingizni aks ettirish orqali siz sinfingizdagi CS Connections modullaridan
+    va o'rganishingizni aks ettirish orqali siz sinfingizga KF Aloqalari modullaridan
     birini o'qitishga tayyorgarlik ko'rayotganda o'z tushunchangizni rivojlantirasiz.
     [Bu yerdan boshlang] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Tez orada CS Connections uchun professional
-    ta'lim keladi!
-  csc_page_faq_question_04: CS Connections o'qitish uchun tavsiya etilgan vaqt nima?
-  csc_page_faq_answer_04: Har bir CS Connections moduli bir hafta davom etishi uchun
-    mo'ljallangan.
-  csc_page_faq_question_05: CS Connections uchun qanday materiallar kerak?
-  csc_page_faq_answer_05: Ideal holda, har bir talabaning o'z kompyuterlari bo'ladi
-    va o'qituvchilar har bir darsga mos keladigan slayd-shouni namoyish qilish uchun
-    proektorga ega bo'lishadi.
-  csf_page_top_desc: Talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradigan
-    va hisoblash va texnologiya dunyoga qanday ta'sir qilishi mumkinligini o'rganishga
-    chorlaydigan bir yillik bepul o'quv dasturi.
-  csf_page_intro_heading: Har bir sinf uchun bepul va qiziqarli boshlang'ich kurslar
-  csf_page_intro_list_01: Oltita kurs, har bir boshlang'ich sinf uchun bittadan
-  csf_page_intro_list_02: Equitable kirish CS kurslari
+  csc_page_faq_answer_03_coming_soon: Tez orada KF Aloqalari uchun professional o'rganish
+    tez kunda mavjud bo'ladi!
+  csc_page_faq_question_04: KF Aloqalarini o'qitish uchun tavsiya etilgan vaqt qanday?
+  csc_page_faq_answer_04: Har bir KF Aloqalari modulini o'rganishga bir hafta vaqt
+    ajratilgan.
+  csc_page_faq_question_05: KF Aloqalari uchun qanday materiallar kerak?
+  csc_page_faq_answer_05: Ideal holatda, har bir o'quvchining o'z kompyuteri bo'ladi
+    va o'qituvchilar har bir darsga mos keladigan slaydni namoyish qilish uchun proyektorga
+    ega bo'ladilar.
+  csf_page_top_desc: O'quvchilarni kompyuter fanlarining asosiy tushunchalari bilan
+    tanishtiruvchi va kompyuter va texnologiya dunyoga qanday ta'sir ko'rsatishini
+    o'rganishga undaydigan bepul boshlang'ich o'quv dasturlari to'plami.
+  csf_page_intro_heading: 'Har bir sinf uchun bepul va qiziqarli boshlang''ich kurslar '
+  csf_page_intro_list_01: 'Oltita kurs, har bir boshlang''ich sinf uchun bittadan '
+  csf_page_intro_list_02: Kompyuter Fanlari kurslariga to'laqonli kirish
   csf_page_intro_list_03: Tajribasidan qat'i nazar, bir sinfdagi barcha talabalar
     uchun bir xil kursdan foydalaning
-  csf_page_intro_list_04: Barcha kurslar talabalar uchun mos kirish ballarini beradi
-  csf_page_quote: Men seminardan keyingi dushanbadan beri kursni o'rgatyapman. Talabalar
-    va men buni yaxshi ko'ramiz (va ularning sinf o'qituvchilari ham!!!)
-  csf_page_curriculum_glance_topics: Dasturlash, Internet, O'yinlar va animatsiya,
-    San'at va dizayn, App Design
-  csf_page_curriculum_glance_devices: Noutbuk, Chromebook, Tablet
-  csf_page_curriculum_glance_tools: Sprite laboratoriyasi, Play Lab
+  csf_page_intro_list_04: Barcha kurslar o'quvchilar uchun mos kirish nuqtalarini
+    yaratib beradi
+  csf_page_quote: Men seminardan keyingi dushanbadan beri kursni o'rgatyapman. O'quvchilar
+    va men buni YAHSHI KO'RAMIZ (va ularning sinf o'qituvchilari ham yahshi ko'radilar!!!)
+  csf_page_curriculum_glance_topics: Dasturlash, Internet, O'yinlar va Animatsiya,
+    San'at va Dizayn, Ilova Dizayni
+  csf_page_curriculum_glance_devices: Noutbuk, Xrombuk, Planshet
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: arab, Indoneziya, Kataloniya, Xitoy soddalashtirilgan,
-    Xitoy an'anaviy, Chexiya, Frantsiya, Germaniya, Hind, Italiya, Yaponiya, Koreya,
-    Kannada, Malay, Marathi, Mo'g'ul, sayqal bermoq, Portugaliya-br, Ruminiya, Rossiya,
-    Slovakiya, Tagalog, Tamil, Tailand, Turkiya, Ukraina, Ispaniya Latam, Urdu, Ispaniya-es,
-    O'zbek, Vetnam
+  csf_page_curriculum_glance_languages: Arab, indoneziya, katalon, soddalashtirilgan
+    xitoy, anʼanaviy xitoy, chex, frantsuz, nemis, hind, italyan, yapon, koreys, kannada,
+    malay, maratxi, moʻgʻul, polyak, portugal-BR, rumin, rus, slovak, tagalog, tamil
+    , tay, turk, ukrain, ispan latam, urdu, ispan-ES, o‘zbek, vetnam
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: Sinfingiz uchun to'g'ri CS asoslari kursini tanlash
-  csf_page_pick_a_course_desc: CS Fundamentals uchun taqdim etilgan turli xil variantlar
+  csf_page_pick_a_course_heading: Sinfingiz uchun to'g'ri KF Asoslari kursini tanlash
+  csf_page_pick_a_course_desc: KF Asoslari uchun taqdim etilgan turli xil variantlar
     to'plami bilan har xil ehtiyojlar uchun kurs mavjud.
-  csf_page_pick_a_course_heading_02: Sizning o'quvchilaringiz tarkib bilan qanday
+  csf_page_pick_a_course_heading_02: Sizning o'quvchilaringiz kontent bilan qanday
     shug'ullanishadi?
-  csf_page_courses_heading: Boshlang'ich sinfingiz uchun maxsus mo'ljallangan kurslar
+  csf_page_courses_heading: 'Kurslar boshlang''ich sinfingiz uchun maxsus loyihalangan '
   csf_page_courses_desc: O'zingiz o'rgatadigan sinf uchun kursni toping. Har bir kurs
     taxminan bir oy davom etadi.
-  csf_page_courses_self_paced_heading: O'z-o'zidan boshlang'ich o'quv dasturlari
-  csf_page_courses_self_paced_desc: O'qituvchilar o'quvchilarni o'rganishda muhim
-    rol o'ynaydi, bu bizning uzilib qolgan mashg'ulotlarimizni o'rgatish va butun
-    sinf muhokamalarini olib borish orqali, ammo biz CS Fundamentals har doim ham
-    an'anaviy sinf sharoitida o'qitilmasligini tan olamiz. Biz A-F kurslari bilan
-    bir qatorda ikkita mustaqil ekspress kurslarni taqdim etamiz. Ushbu ekspress kurslar
-    o'qituvchilar har bir o'quvchiga mustaqil ravishda o'z tezligida ishlashga imkon
-    beradigan holatlar uchun mo'ljallangan.
-  csf_page_faq_question_01: CS Fundamentals standartlarga mos keladimi?
-  csf_page_faq_answer_01_01: 'CS Fundamentals K-12 Kompyuter fanlari uchun Framework
-    va CSTA standartlari yordamida ko''rsatma sifatida yozilgan. Hozirgi vaqtda CS
-    Fundamentals-ning har bir darsida tegishli CSTA standartlari bo''yicha xaritalar
-    mavjud. Har bir kurs uchun barcha CSTA xaritalarining qisqacha mazmunini quyidagi
-    manzilda topish mumkin:'
-  csf_page_faq_answer_01_list_01: "[Kurs A standartlari] (%{course_a_url})"
+  csf_page_courses_self_paced_heading: Mustaqil o'rganiluvchi boshlang'ich o'quv dasturlari
+  csf_page_courses_self_paced_desc: O'qituvchilar bizning kompyutersiz (oflayn) mashg'ulotlarimizni
+    o'rgatish va butun sinf muhokamalarini olib borish orqali o'quvchilarni o'rgatishda
+    muhim rol o'ynaydi, ammo biz KF Asoslari har doim ham an'anaviy sinf sharoitida
+    o'qitilmasligini tushunamiz. Biz A-F Kurslari bilan bir qatorda ikkita mustaqil
+    o'rganish uchun ekspress kurslarni taqdim etamiz. Ushbu ekspress kurslar o'qituvchilar
+    har bir o'quvchiga mustaqil ravishda o'z tezligida ishlashga imkon beradigan vaziyatlar
+    uchun tuzilgan.
+  csf_page_faq_question_01: KF Asoslari standartlarga moslashtirilganmi?
+  csf_page_faq_answer_01_01: 'KF Asoslari K-12 Kompyuter fanlari uchun Umumiy Tamoillar
+    va 2017 CSTA standartlaridan yo''riqnoma sifatida foydalangan holda yozilgan.
+    Hozirda KF Asoslarining har bir darsida tegishli CSTA standartlari bo''yicha jadvallar
+    mavjud. Har bir kurs uchun barcha CSTA jadvallarining qisqacha mazmunini quyidagi
+    manzildan topish mumkin:'
+  csf_page_faq_answer_01_list_01: "[A Kursi standartlari] (%{course_a_url})"
   csf_page_faq_answer_01_list_02: "[B kursi standartlari] (%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[Kurs C standartlari] (%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[Kurs D standartlari] (%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[Kurs E standartlari] (%{course_e_url})"
+  csf_page_faq_answer_01_list_03: "[C Kursi standartlari] (%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[D Kursi standartlari] (%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[E Kursi standartlari] (%{course_e_url})"
   csf_page_faq_answer_01_list_06: "[F kursi standartlari] (%{course_f_url})"
-  csf_page_faq_answer_01_02: Standartlarning Google Sheets versiyasini [CSF standartlari]
-    (%{csf_standards_url}) da topish mumkin.
-  csf_page_faq_question_02: Qanday qilib CS Fundamentals-ni butun maktabimga olib
-    kelishim mumkin?
-  csf_page_faq_answer_02: Amerika Qo'shma Shtatlaridagi etakchi K-12 CS o'quv dasturi,
+  csf_page_faq_answer_01_02: Standartlarning Google Sheets versiyasini [CSF Standartlari](%{csf_standards_url})
+    sahifasidan topish mumkin.
+  csf_page_faq_question_02: Qanday qilib KF Asoslarini butun maktabimda amalga kiritishim
+    mumkin?
+  csf_page_faq_answer_02: Qo'shma Shtatlardagi yetakchi K-12 KF o'quv dasturi bo'lgan
     bizning boshlang'ich dasturimiz Dallas kabi yirik shahar maktab tumanlarida, shuningdek
-    Ayova shtatidagi kichik qishloq tumanlarida samarali ekanligi isbotlangan. CSni
-    o'qitish uchun mutaxassislarni yollashning hojati yo'q. Bizning dasturimiz CS
-    uchun yangi o'qituvchilarni qo'llab-quvvatlash uchun noyob tarzda ishlab chiqilgan
-    bo'lib, talabalar ehtiyojlariga mos ravishda darslarni ishlab chiqish uchun moslashuvchanlikni
-    taklif qiladi. [Ushbu risolani baham ko'ring] (%{brochure_url}) maktabingiz va
-    tuman ma'murlari bilan yoki [bizning ma'murlar sahifamizni ko'rib chiqishni taklif
-    qiling] (%{admins_url}) ma'murlarning eng keng tarqalgan savollariga javob berish
-    uchun maxsus ishlab chiqilgan.
-  csf_page_faq_question_03: CS asoslarini o'qitish qancha turadi?
-  csf_page_faq_question_04: CS Fundamentals uchun kasbiy rivojlanishni qanday qilib/qaerdan
-    olishim mumkin?
-  csf_page_faq_answer_04_01: Informatika fanini o'qitishda yangimi? Xavotir olmang!
-    Aksariyat o'qituvchilarimiz ilgari hech qachon informatika fanidan dars bermagan.
-    Sinfingizda informatika fanini tatbiq etish uchun ilhomlantiruvchi va amaliy yordam
-    uchun mahalliy o'qituvchilarga qo'shiling. Bizning mintaqaviy hamkorlarimiz individual
-    o'qituvchilar yoki maktab bo'ylab PD uchun yuqori sifatli, bir kunlik Code.org
-    seminarlarini taklif qilishadi. [Sizga yaqin bo'lgan kasbiy rivojlanish ustaxonasiga
-    yoziling] (%{sign_up_url})!
+    Ayova shtatidagi kichik qishloq tumanlarida samarali ekanligi isbotlangan. KFni
+    o'rgatish uchun mutaxassislarni yollashning hojati yo'q. Bizning dasturimiz KFda
+    hali yangi o'qituvchilarni qo'llab-quvvatlash uchun noyob tarzda ishlab chiqilgan
+    bo'lib, o'quvchilar ehtiyojlariga mos ravishda darslarni rivojlantirish uchun
+    moslashuvchanlikni taklif qiladi. [Ushbu broshurani](%{brochure_url}) maktabingiz
+    va tuman maʼmuriyatingiz bilan baham koʻring yoki administratorlarning eng koʻp
+    uchraydigan savollariga javob berish uchun maxsus moʻljallangan [bizning administratorlarimiz
+    sahifasini koʻrib chiqishni tavsiya qiling](%{admins_url}) .
+  csf_page_faq_question_03: KF Asoslarini o'rgatish qancha turadi?
+  csf_page_faq_question_04: KF Asoslari uchun professional rivojlantirishni qanday
+    qilib/qayerdan olishim mumkin?
+  csf_page_faq_answer_04_01: Kompyuter fanlarini o'qitishda yangimisiz? Xavotir olmang!
+    Aksariyat o'qituvchilarimiz ilgari hech qachon kompyuter fanlaridan dars bermagan.
+    Sinfingizda kompyuter fanlarini tatbiq etish uchun ilhomlantiruvchi va amaliy
+    yordam uchun mahalliy o'qituvchilarga qo'shiling. Bizning Mintaqaviy Hamkorlarimiz
+    individual o'qituvchilar yoki maktab bo'ylab PD (professional rivojlantirish)
+    uchun yuqori sifatli, bir kunlik Code.org seminarlarini taklif qilishadi. [Sizga
+    yaqin bo'lgan professional rivojlantirish seminariga yoziling] (%{sign_up_url})!
   csf_page_faq_answer_04_02: 'Seminarlarimizda qatnashgan 100 000 dan ortiq o''qituvchilarga
     qo''shiling. Seminarimiz ishtirokchilarining aksariyati: “Bu men hozirgacha qatnashgan
     eng yaxshi pofessional rivojlantirish seminari”, - deydi. Umuman olganda, [ishtirokchilarning
     90% dasturimizni boshqa o‘qituvchilarga tavsiya qiladi](%{rec_url})!'
-  csf_page_faq_question_05: CS asoslarini o'qitish uchun tavsiya etilgan vaqt qancha?
-  csf_page_faq_answer_05: Har bir CSF kursi 45 daqiqalik davrlarga mo'ljallangan 13-17
-    darslarni o'z ichiga oladi. Barcha o'quvchilarga darsdan darsga o'qituvchi tomonidan
-    belgilangan sur'atda o'tishni tavsiya etamiz. O'qituvchilar boshchiligidagi ko'plab
-    loyiha darajalari bir ovozdan tajribaga ega bo'lish uchun mo'ljallangan, shu bilan
-    birga mahoratni oshirish darslari talabalar tomonidan o'z tezligida yakunlanishi
-    mumkin.
-  csf_page_faq_question_06: CS Fundamentals uchun qanday materiallar kerak?
+  csf_page_faq_question_05: KF Asoslarini o'rgatish uchun tavsiya etilgan tayming
+    (vaqtni belgilash) qanday?
+  csf_page_faq_answer_05: Har bir KF Asoslari kursi 45 daqiqalik davrlarga mo'ljallangan
+    13-17 darslarni o'z ichiga oladi. Barcha o'quvchilarga darsdan darsga o'qituvchi
+    tomonidan belgilangan sur'atda o'tishni tavsiya etamiz. O'qituvchi boshchiligidagi
+    ko'plab loyiha darajalari mavjud bo'lib, ular birgalikda tajribaga ega bo'lishlari
+    mumkin, shu bilan birga ko'nikmalarni rivojlantirish darslarini o'quvchilar o'z
+    tezligida bajarishlari mumkin.
+  csf_page_faq_question_06: KF Asoslari uchun qanday materiallar kerak?
   csf_page_faq_answer_06: Ko'pgina darslarda o'quvchilarni mashg'ulotlarga yo'naltiruvchi
     tarqatma materiallar mavjud. Ushbu manbalar chop etilishi yoki raqamli ravishda
     tayinlanishi mumkin. Ba'zi darslar odatdagi sinf jihozlari va rivojlantiruvchi
@@ -1725,6 +1878,7 @@ uz:
   not_found_desc: Soʻralgan sahifa topilmadi
   not_found_instructions: Veb manzilni tekshiring va qayta yuboring yoki quyidagi
     roʻyxatdan linklardan birini tanlang.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1777,6 +1931,7 @@ uz:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1798,6 +1953,7 @@ uz:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -12553,8 +12709,10 @@ uz:
   tutorial_ai4alldance_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_ai4allneural_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_spheroinout_string_platforms: Kompyutersiz
-  tutorial_edisonblueprint_string_platforms: Barcha zamonaviy brauzerlar
-  tutorial_edisonmaze_string_platforms: Barcha zamonaviy brauzerlar
+  tutorial_edisonblueprint_string_platforms: Barcha zamonaviy brauzerlar, Android
+    planshetlari, iPad
+  tutorial_edisonmaze_string_platforms: Barcha zamonaviy brauzerlar, Android planshetlari,
+    iPad
   tutorial_milnefunctions_string_platforms: Barcha zamonaviy brauzerlar, Screen reader
   tutorial_sasmap_string_platforms: Barcha zamonaviy brauzerlar, iPad, Ekran o'quvchi
   tutorial_firstrobotics_string_platforms: Barcha zamonaviy brauzerlar
@@ -13775,97 +13933,119 @@ uz:
     ushlab turib tabassum qiladilar. Org markali kamalak banneri. Ularning orqasida
     bir necha kishi Code.org ko'ylaklarini kiyib, kamalak bayroqlarini silkitib, ko'p
     rangli Volkswagen xatosi bilan birga yurishadi.
-  accessibility_hero_heading: Code.org saytida foydalanish imkoniyati
-  accessibility_hero_desc: Biz nogiron talabalar va o'qituvchilarning inklyuzivligi
+  accessibility_hero_heading: Code.org saytini imkoniyati chegaralanganlar tomonidan
+    foydalanish imkoniyatlari
+  accessibility_hero_desc: Biz nogiron o'quvchilar va o'qituvchilarning inklyuzivligi
     va to'liq ishtirok etishiga to'sqinlik qiladigan to'siqlarni bartaraf etishga
-    bag'ishlanganmiz, har bir o'quvchining informatika fanidan foydalanish imkoniyatini
+    yo'naltirilgan holda, HAR BIR o'quvchining informatika fanidan foydalanish imkoniyatini
     ta'minlaymiz.
-  accessibility_efforts_title: 2023 yilgi sa'y-harakatlarimiz
-  accessibility_efforts_desc: 'To''liq kirish mumkin bo''lgan platforma maqsadimizga
+  accessibility_efforts_title: '2023 yilgi sa''y-harakatlarimiz '
+  accessibility_efforts_desc: 'To''liq foydalanish imkoniyatga ega platformaning maqsadiga
     erishish uchun biz quyidagilarni o''z ichiga olgan keng qamrovli harakatlar rejasini
     amalga oshirmoqdamiz:'
-  accessibility_efforts_card_title_1: Ichki kirish imkoniyati bo'yicha trening
-  accessibility_efforts_card_desc_1: Bizning mahsulot va muhandislik guruhlarimiz
-    2023 yil dekabriga qadar keng qamrovli kirish bo'yicha treningni yakunlaydilar.
-  accessibility_efforts_card_title_2: VPAT tahlili
-  accessibility_efforts_card_desc_2: Har yili boshlang'ich ko'rsatkichni o'rnatish
-    va taraqqiyotni o'lchash uchun [Mahsulotga ixtiyoriy kirish shablonini] (%{voluntary_url})
-    to'ldirish. Natijalar ushbu sahifada 2023 yil sentyabrgacha mavjud.
-  accessibility_efforts_card_title_3: Mavjud dizaynni qo'llab-quvvatlaydigan vositalar
-  accessibility_efforts_card_desc_3: 'Jamoa a''zolari barcha yangi xususiyatlar mavjudligini
-    hisobga olgan holda ishlab chiqilgan va qurilganligini ta''minlaydigan vositalardan
-    foydalanishlari mumkin. '
-  accessibility_efforts_card_title_4: Mavjud o'quv dasturi
-  accessibility_efforts_card_desc_4: Biz 2023 yil dekabrgacha kompyuter fanlari tamoyillari
-    va informatika kashfiyotlarining dastlabki bir necha birliklari uchun [WCAG Level
-    AA muvofiqligi] (%{wcag_url}) ga erishamiz.
-  accessibility_explore_title: Code.org saytining kirish manbalarini o'rganing
-  accessibility_explore_text: Bizning mavjudlik resurslari sahifamiz funksiyalarimiz
-    va vositalarimiz uchun keng qamrovli hujjatlar va ko'rsatmalarni taqdim etadi,
-    jumladan, “Kod soati” darslari, immersiv o'quvchilar, klaviatura navigatsiyasi
-    va sozlash imkoniyatlari.
-  accessibility_explore_button: Accessibility resurslari sahifasini ko'rish
-  accessibility_help_us_title: Bizni yaxshilashga yordam bering
-  accessibility_help_us_text: Code.org saytida biz tezkor va fikr-mulohazalarga javob
-    beramiz. Agar sizda vositalarimiz va resurslarimizdan foydalanish imkoniyatini
-    yaxshilashga yordam beradigan tavsiyalaringiz bo'lsa, iltimos, murojaat qiling.
-    Informatika fanini barcha talabalar uchun taqdim etishda yordam berganingiz uchun
-    tashakkur!
-  accessibility_help_us_button: Qanday qilib yaxshilashimiz mumkinligini bizga ayting
-  accessibility_commit_title: Code.org saytining kirish imkoniyatiga sodiqligi
-  accessibility_commit_text_1: Code.org informatika barcha talabalar uchun asos deb
-    hisoblaydi va biz platformamizda va o'quv dasturimizda tenglik, kirish va imkoniyatlarni
-    ta'minlashga intilamiz.
+  accessibility_efforts_card_title_1: Ichki umumiy foydalanish imkoniyati bo'yicha
+    trening
+  accessibility_efforts_card_desc_1: Bizning mahsulot va muhandislik jamoalarimiz
+    2023-yil dekabriga qadar keng qamrovli foydalanish imkoniyati bo'yicha treningni
+    yakunlaydilar.
+  accessibility_efforts_card_title_2: VPAT (mahsulotlarni nogironlar tomonidan foydalanish
+    imkoniyati uchun ixtiyoriy sinovdan o'tkazish) tahlili
+  accessibility_efforts_card_desc_2: Yillik boshlang'ich ko'rsatkichni o'rnatish va
+    rivojlanishni o'lchash uchun [mahsulotlarni nogironlar tomonidan foydalanish imkoniyati
+    uchun ixtiyoriy sinovdan o'tkazish shablonini] (%{voluntary_url}) to'ldirish.
+    2023-yil sentyabrgacha bo'lgan natijalar ushbu sahifada mavjud.
+  accessibility_efforts_card_title_3: Umumiy foydalanish dizaynini qo'llab-quvvatlovchi
+    vositalar
+  accessibility_efforts_card_desc_3: Jamoa a'zolari barcha yangi xususiyatlar imkoniyati
+    cheklangan shaxslar umumiy foydalanish imkoniyati mavjudligini hisobga olgan holda
+    ishlab chiqilgan va qurilganligini ta'minlaydigan vositalardan foydalanish imkoniyatlari
+    mavjud.
+  accessibility_efforts_card_title_4: Imkoniyati cheklangan shaxslarning foydalanish
+    imkoniyati mavjud o'quv dasturi
+  accessibility_efforts_card_desc_4: Biz 2023-yil dekabrgacha Kompyuter Fanlari tamoyillari
+    va Kompyuter Fanlari Kashfiyotlarining dastlabki bir necha bo'limlari uchun [WCAG
+    (Veb-kontentga imkoniyati cheklangan shaxslarning cheklovsiz kirish bo'yicha qo'llanma)
+    AA Darajasiga muvofiqligi] (%{wcag_url}) ga erishamiz.
+  accessibility_explore_title: Code.orgning imkoniyati cheklangan shaxslarga mo'ljallangan
+    manbalarini o'rganib chiqing
+  accessibility_explore_text: Bizning imkoniyati cheklangan shaxslar uchun mo'ljallangan
+    manbalarimiz sahifasi funksiyalarimiz va vositalarimiz uchun keng qamrovli hujjatlar
+    va ko'rsatmalarni taqdim etadi, jumladan, imkoniyati cheklangan shaxslar uchun
+    foydalanish imkoniyatga ega bo'lgan “Dasturlash soati” darslari, immersiv o'qigichlar,
+    klaviatura navigatsiyasi va o'zi uchun sozlash imkoniyatlari.
+  accessibility_explore_button: Imkoniyati cheklangan shaxslar uchun mo'ljallangan
+    manbalar sahifasini ko'rib chiqing
+  accessibility_help_us_title: Yaxshilashga yordam bering
+  accessibility_help_us_text: Code.orgda, biz tezkormiz va fikr-mulohazalarga javob
+    beramiz. Agar sizda vositalarimiz va resurslarimizdan imkkoniyati cheklangan shaxslar
+    foydalanish imkoniyatini yaxshilashga yordam beradigan tavsiyalaringiz bo'lsa,
+    iltimos, murojaat qiling. Kompyuter fanlarini barcha o'quvchilar uchun mavjud
+    qilishga yordam berganingiz uchun tashakkur!
+  accessibility_help_us_button: Bizga qanday qilib rivojlanishimiz mumkinligi haqida
+    aytib bering
+  accessibility_commit_title: Code.orgning imkoniyati cheklangan shaxslar tomonidan
+    foydalanish imkoniyatiga sodiqligi
+  accessibility_commit_text_1: Code.org kompyuter fanlarini barcha o'quvchilar uchun
+    fundamental deb hisoblaydi va biz platformamizda va o'quv dasturimizda tenglik,
+    imkoniyati cheklangan shaxslarning foydalanishi va imkoniyatlarini ta'minlashga
+    intilamiz.
   accessibility_commit_text_2: Biz barcha o'quvchilarning o'quv ehtiyojlarini qo'llab-quvvatlash
-    uchun yaxlit yondashuvni qo'llaymiz va nogiron talabalar uchun informatika ta'limidan
-    foydalanishdagi bo'shliqlarni bartaraf etish ustida ishlamoqdamiz.
+    uchun yaxlit yondashuvni qo'llaymiz va nogiron o'quvchilar uchun kompyuter fanlari
+    ta'limidan foydalanishdagi bo'shliqlarni bartaraf etish ustida ishlamoqdamiz.
   accessibility_commit_text_3: Biz kichikdan boshlaymiz, lekin bizning taraqqiyotimizni
-    o'lchaymiz va hatto eng murakkab kirish muammolarini hal qila olmagunimizcha doimiy
-    ravishda takrorlaymiz.
-  accessibility_commit_text_4: Code.org saytida biz vositalarimizning mavjudligini
-    doimiy ravishda yaxshilashga intilamiz va barcha talabalar va o'qituvchilar uchun
-    katta tenglik, kirish va imkoniyatlar sari ushbu muhim qadamni qo'yishdan xursandmiz.
+    o'lchaymiz va hatto eng murakkab imkoniyati cheklangan shaxslarning foydalanishi
+    muammolarini hal qila olmagunimizgacha doimiy ravishda qayta harakat qilamiz.
+  accessibility_commit_text_4: Code.orgda biz vositalarimizning imkoniyati cheklangan
+    shaxslar tomonidan foydalanish imkoniyati mavjudligini doimiy ravishda yaxshilashga
+    intilamiz va barcha o'quvchilar va o'qituvchilar uchun bundanda kattaroq tenglik,
+    imkoniyati cheklangan shaxslar tomonidan foydalanish va imkoniyatlar sari ushbu
+    muhim qadamni qo'yishdan xursandmiz.
   accessibility_partner_title: Hamkorlarimiz va tavsiyalarimiz
-  accessibility_partner_desc: Informatika fanidan yanada qulayroq tarkibni qidirayotgan
-    talabalar va o'qituvchilar uchun quyidagi manbalarni tavsiya qilamiz.
-  accessibility_card_title_1: AccessForAll
-  accessibility_card_text_1: O'qituvchilar uchun o'rta maktablarga kompyuter kompyuterlarini
-    olib kelish va nogiron o'rta maktab o'quvchilari uchun texnologiya maydonida murabbiylar
-    bilan bog'lanish uchun manbalar.
-  accessibility_card_title_2: Bloklar4All
-  accessibility_card_text_2: Dash roboti yordamida asosiy dasturlash tushunchalarini
-    o'rgatadigan iPad uchun blokga asoslangan dasturlash muhiti. VoiceOver, Switch
-    Control va Voice Control bilan kirish mumkin.
-  accessibility_card_title_3: Jumper kodi
-  accessibility_card_text_3: Vizual nuqsoni bo'lgan talabalar uchun jismoniy kodlash
-    yordami/manbai.
-  accessibility_card_title_4: CsForAll
-  accessibility_card_text_4: Qo'shma Shtatlar bo'ylab turli tashkilotlar bilan loyihalar
-    va dasturlarni muvofiqlashtiruvchi tashkilot.
-  accessibility_card_title_5: Kar bolalar kodi
-  accessibility_card_text_5: Kar yoki eshitish qobiliyatiga ega bo'lmagan talabalarga
-    imkoniyat berish uchun informatika va texnologiya ta'limini targ'ib qiladi.
-  accessibility_card_title_6: Hamma kodlashi mumkin
+  accessibility_partner_desc: Kompyuter fanlaridan yanada ko'proq foydalanish imkoniyati
+    bo'lgan kontentni qidirayotgan o'quvchilar va o'qituvchilar uchun quyidagi manbalarni
+    tavsiya qilamiz.
+  accessibility_card_title_1: AccessCSForAll (Barcha uchun KFdan foydalanish imkoniyati
+    )
+  accessibility_card_text_1: O'qituvchilar uchun o'rta maktablarga foydalanish imkoniyati
+    bo'lgan hisoblashni olib kirish va nogiron bo'lgan yuqori sinf o'quvchilari uchun
+    texnologiya maydonidagi murabbiylar bilan bog'lanish uchun manbalar.
+  accessibility_card_title_2: Blocks4All (Barcha uchun bloklar)
+  accessibility_card_text_2: Dash robot yordamida asosiy dasturlash tushunchalarini
+    o'rgatadigan iPad uchun blokga asoslangan dasturlash muhiti. VoiceOver (Ovozli),
+    Switch Control (boshqaruvhi) va Voice Control (ovoz yordamida boshqarish) bilan
+    undan foydalanish mumkin.
+  accessibility_card_title_3: 'Code Jumper
+
+    '
+  accessibility_card_text_3: Vizual nuqsoni bo'lgan o'quvchilar uchun jismoniy dasturlash
+    yordamchisi/manbai.
+  accessibility_card_title_4: CsForAll (Barcha uchun KF)
+  accessibility_card_text_4: 'Qo''shma Shtatlar bo''ylab turli tashkilotlar bilan
+    loyihalar va dasturlarni muvofiqlashtiruvchi tashkilot. '
+  accessibility_card_title_5: Kar bolalar kodi (dasturi)
+  accessibility_card_text_5: Kar yoki eshitish qiyinchiligiga ega bo'lgan o'quvchilarga
+    imkoniyat berish uchun kompyuter fanlari va texnologiya ta'limini targ'ib qiladi.
+  accessibility_card_title_6: Hamma dasturlay oladi
   accessibility_card_text_6: Apple tomonidan Swift o'yin maydonchalari uchun ishlab
-    chiqilgan o'quv dasturi VoiceOver (o'zgartirilgan TTS) va kirish imkoniyati bo'lgan
-    talabalar uchun moslashtirilgan o'quv dasturini taqdim etadi.
+    chiqilgan o'quv dasturi VoiceOver (o'zgartirilgan TTS) va imkoniyati cheklangan
+    o'quvchilar uchun moslashtirilgan o'quv dasturini taqdim etadi.
   accessibility_card_title_7: Xan Akademiyasi
-  accessibility_card_text_7: Turli xil turar joylarga ega o'quv dasturi provayderi,
+  accessibility_card_text_7: Turli xil qurilmalarga ega o'quv dasturi provayderi,
     shu jumladan taglavhalar, transkriptlar va animatsiya harakatini kamaytirish va
-    ko'rishga bog'liq tarkibni yashirish qobiliyati. Ba'zi Code.org o'quv dasturlari,
-    shuningdek, qo'shimcha hisoblash o'quv dasturlari mavjud.
-  accessibility_card_title_8: Snap davrlari
-  accessibility_card_text_8: Elektronikani lehimsiz biriktiradigan elektron komponentlar
+    ko'rish bilan bog'liq kontentni ozaytirish qobiliyati. Ba'zi Code.org o'quv dasturlari,
+    shuningdek, qo'shimcha hisoblash o'quv dasturlarini o'tkazadi.
+  accessibility_card_title_8: Snap Circuits (Lahzali sxemalar)
+  accessibility_card_text_8: Elektronikani yahlit biriktiradigan elektron komponentlar
     bilan o'rgatadigan o'quv mahsuloti. Ko'rish qobiliyati past bo'lgan talabalar
     uchun kirish paketini o'z ichiga olishi mumkin.
   accessibility_card_title_9: Sphero
-  accessibility_card_text_9: Intellektual nogiron talabalar uchun interaktiv kodlovchi
-    robot to'pi va STEM ta'lim to'plami. Tegishli dastur bilan bog'lanishi kerak.
-  accessibility_card_title_10: 'Kvorum '
-  accessibility_card_text_10: Code.org's AP Computer Science Principles o'quv dasturini
-    Kvorum yordamida moslashtirish, dastlab ko'r yoki ko'rish qobiliyati zaif talabalar
-    uchun foydalanish imkoniyatini ta'minlash uchun mo'ljallangan dalillarga asoslangan
-    til.
+  accessibility_card_text_9: Intellektual nogiron o'quvchilar uchun interaktiv dasturlovchi
+    robot to'pi va STEM ta'lim to'plami. Tegishli ilova bilan bog'lanishi kerak.
+  accessibility_card_title_10: Kvorum
+  accessibility_card_text_10: Code.orgning Kompyuter Fanlari Tamoyillarini chuqurlashtirib
+    o'rganish o'quv dasturini Kvorum yordamida moslashtirish, dastlab ko'zi ojiz yoki
+    ko'rish qobiliyati zaif o'quvchilar uchun foydalanish imkoniyatini ta'minlash
+    uchun mo'ljallangan ilmiy dalillarga asoslangan til.
   language_code:
     ar: Arab
     az: Ozarbayjoncha

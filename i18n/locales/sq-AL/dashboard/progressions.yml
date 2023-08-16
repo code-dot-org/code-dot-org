@@ -24,13 +24,17 @@ sq:
       Overview: Përmbledhja
       Pair Programming: Programim në çift
       Practice: Ushtrime
+      Prediction: Parashikimi
+      Project: Projekt
       Quarter Notes: Quarter Notes
       Reflection: Reflektim
       Skill Building: Ndërtimi i shkathtësive
       Speed it Up, Slow it Down: Shpejtoje, Ngadalesoje
       Variables: variabla
+      Video: Video
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programimi me blloqe'
       'Video:  Debugging with the Step Button': 'Video: Korigjimi me butonin Hapi'
+      'Video: Code Your Own Flappy Game': 'Video: Kodoni lojën tuaj Flappy'
       'Video: Debugging with the Step Button': 'Video: Korigjimi me butonin e hapit'
       'Video: Follow The Digital Trail': 'Video: Ndiqni rrugën digjitale'
       'Video: Introduction to Play Lab': 'Video: Hyrje në Play Lab'
@@ -38,6 +42,7 @@ sq:
       'Video: Pair Programming': 'Video- Programimi në çift'
       'Video: Programming with Rey and BB-8': 'Video: Programimi me Rey dhe BB-8'
       'Video: Repeat Blocks': 'Video: Përsëritni blloqet'
+      'Video: Repeat Blocks with BB-8': 'Video: Përsëritni blloqet me BB-8'
       'Video: The Collector': 'Video: Mbledhësi'
       'Video: The Harvester': 'Video: Korrësi'
       'Video: Using the Repeat Block': 'Video: Përdorimi i bllokut të përsëritur'

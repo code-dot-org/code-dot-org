@@ -181,6 +181,8 @@ tg:
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  students_label: Хонандагон
+  teachers_label: Муаллимон
   teacher_label_csf: CS Fundamentals Teacher
   teacher_label_csd: CS Discoveries Teacher
   teacher_label_csp: CS Principles Teacher
@@ -194,7 +196,9 @@ tg:
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
   call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_lessons: Explore lessons
   call_to_action_explore_modules: Explore modules
+  call_to_action_explore_module: Explore module
   call_to_action_explore_workshops: Explore workshops
   call_to_action_explore_course: Explore course
   call_to_action_explore_courses: Explore courses
@@ -241,8 +245,10 @@ tg:
   call_to_action_see_module_details: See module details
   call_to_action_start_modules: Start modules
   call_to_action_see_course_details: See course details
+  call_to_action_see_lesson_details: See lesson details
   call_to_action_learn_about_approach: Learn more about our approach
   call_to_action_try_java_lab: Try Java Lab
+  call_to_action_notify_available: Notify me when available
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -315,6 +321,23 @@ tg:
   aria_label_call_to_action_csf_course_d: See Course D details
   aria_label_call_to_action_csf_course_e: See Course E details
   aria_label_call_to_action_csf_course_f: See Course F details
+  aria_label_call_to_action_ai_pl_101_videos: Watch AI 101 for Teachers videos
+  aria_label_call_to_action_ai_teaching_module: Explore the Teaching AI and Machine
+    Learning module
+  aria_label_call_to_action_how_ai_works_lesson_01: See the Introduction to Machine
+    Learning lesson details
+  aria_label_call_to_action_how_ai_works_lesson_02: See the Computer Vision lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_03: See the Neural Networks lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_04: See the Chatbots and Large Language
+    Models lesson details
+  aria_label_call_to_action_how_ai_works_lesson_05: See the Generative Images lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_06: See the Algorithmic Bias lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_07: See the Our AI Code of Ethics
+    lesson details
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
@@ -424,6 +447,10 @@ tg:
   module_label_student_tool: Student tool
   module_label_student_product: Product
   module_label_student_content_resources: Content & resources
+  module_label_new: New
+  module_label_coming_soon: Coming soon
+  module_label_video_series: Video series
+  module_label_self_paced: Self-paced module
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -446,9 +473,13 @@ tg:
   module_grade_9_12_teachers: 9-12 Teachers
   module_level_beginner: Beginner
   module_level_intermediate: Intermediate
+  module_duration_45_mins: 45 minutes
+  module_duration_1_hr: 1 hour
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
+  module_duration_5_hrs: 5 hours
   module_duration_8_hrs: 8 hours
+  module_duration_20_hrs: 20 hours
   module_duration_35_hrs: 35 hours
   module_duration_lesson: Lesson
   module_duration_week: Week
@@ -517,6 +548,7 @@ tg:
   heading_no_devices: No devices? We have you covered
   heading_java_lab: Java Lab
   heading_objects_first: Objects first
+  heading_these_lessons_will: 'These lessons will:'
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -592,9 +624,14 @@ tg:
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
   ai_pl_callout_title: AI 101 for Teachers
-  ai_pl_callout_desc_01: Discover the groundbreaking world of artificial intelligence
-    (AI) and its transformative potential in education with our comprehensive online
-    learning series for teachers.
+  ai_pl_callout_desc_01: This is a free, foundational online learning series for any
+    teacher and educator interested in the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE
+    and Khan Academy are offering engaging sessions with renowned experts that will
+    demystify AI, explore responsible implementation, address bias, and showcase how
+    AI-powered learning can revolutionize student outcomes. Join us on this journey
+    of exploration and empowerment, and unlock the future of teaching with and about
+    AI.
   ai_pl_callout_desc_02: Code.org, ETS, ISTE and Khan Academy are partnering to bring
     educators a professional learning series that supports teachers as they adapt
     to AI’s impacts on the classroom.
@@ -641,6 +678,11 @@ tg:
   ai_curriculum_grades_03: 'Grade Levels: 3-12'
   ai_curriculum_duration_03: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_curriculum_title_04: How AI Works
+  ai_curriculum_desc_04: These lessons supplement the How AI Works video series. Each
+    lesson is paired with a single video from the series, diving-deeper into the concepts
+    introduced in the videos.
+  ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -657,11 +699,14 @@ tg:
   ai_pl_list_04: Consider real-world implications of AI and machine learning.
   ai_pl_list_05: Explore end of chapter projects.
   ai_pl_duration: 'Duration: 2 hours'
+  ai_pl_title: Teaching AI and Machine Learning
+  ai_pl_desc: Introduction to artificial intelligence and machine learning. Train
+    a machine learning model using AI Lab. and engage with machine learning apps.
+    Consider real-world implications of AI and machine learning.
   ai_video_series_title: How AI Works
-  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
-    series of short videos will introduce you to how artificial intelligence works
-    and why it matters. Then delve into issues like algorithmic bias and the ethics
-    of AI decision-making.
+  ai_video_series_desc: This series of short videos will introduce you to how artificial
+    intelligence works and why it matters. Then delve into issues like algorithmic
+    bias and the ethics of AI decision-making.
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -681,8 +726,10 @@ tg:
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
   ai_pl_101_hero_heading: AI 101 for Teachers
-  ai_pl_101_hero_desc: Discover the transformative potential of artificial intelligence
-    (AI) in education with our free online learning series for educators.
+  ai_pl_101_hero_desc: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our foundational online
+    learning series for teachers.
+  ai_pl_101_hero_desc_02: A comprehensive online learning series for teachers.
   ai_pl_101_hero_presented: Presented by
   ai_pl_101_intro_heading: What is AI 101 for Teachers?
   ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
@@ -706,25 +753,111 @@ tg:
     to stop spending time on prep tasks they don’t love, and focus on what they do
     love—teaching.
   ai_pl_101_explore__button_1: Try Khanmigo
-  ai_pl_101_explore_title_2: Artificial Intelligence Explorations for Educators
-  ai_pl_101_explore__desc_2: For six years, this 15-hour online course from ISTE has
-    been guiding K-12 educators on the essentials of AI for teaching and learning.
-    The course is offered three times per year and is fully asynchronous with the
-    ongoing support of an expert instructor.
+  ai_pl_101_explore_title_2: AI Explorations for Educators
+  ai_pl_101_explore__desc_2: This 15-hour online course from ISTE guides K-12 educators
+    on the essentials of AI for teaching and learning. The course is offered three
+    times per year and is fully asynchronous with the ongoing support of an expert
+    instructor.
   ai_pl_101_explore__button_2: Start the course
-  ai_pl_101_explore_title_3: AI Curriculum
-  ai_pl_101_explore__desc_3: In Code.org’s AI Curriculum for grades 3-12, students
-    use fun activities to see how computers learn from data. The curriculum also invites
-    students to investigate machine learning and data while reflecting on the ethical
-    implications of AI.
+  ai_pl_101_explore_title_3: AI Curricula
+  ai_pl_101_explore__desc_3: In Code.org’s How AI Works videos and lessons for grades
+    6-12, students learn basic principles about AI and use fun activities to see how
+    computers learn from data, while reflecting on the ethical implications of AI.
   ai_pl_101_explore__button_3: Explore curricula
   ai_pl_101_explore_title_4: ETS’s Criterion Interactive
-  ai_pl_101_explore__desc_4: 'This guided five-paragraph writing platform coaches
-    learners through five critical phases of the writing process: Prepare/Plan, Write,
-    Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge
-    scoring models and AI, assisting teachers in providing iterative feedback and
-    formative assessment throughout the writing experience.'
+  ai_pl_101_explore__desc_4: 'This AI-powered writing platform coaches learners through
+    five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit,
+    Reflect, providing iterative feedback throughout the writing experience.'
   ai_pl_101_explore__button_4: Explore tool
+  ai_pl_101_video_title_1: Fireside Chat with Sal Khan and Hadi Partovi
+  ai_pl_101_video_desc_1: "Join Sal Khan (Khan Academy) and Hadi Partovi (Code.org)
+    for a fireside chat on embracing artificial intelligence in the classroom. Expect
+    a lively discussion including some of the most controversial topics \tsurrounding
+    AI today."
+  ai_pl_101_video_title_2: Demystifying AI for Educators
+  ai_pl_101_video_desc_2: Introduction to the fundamentals of Artificial Intelligence
+    which will equip you with the foundational knowledge to understand the profound
+    impact of AI in our society and its increasing relevance to the field of education.
+    You will gain practical insights into leveraging AI for tasks in the classroom,
+    and saving time on administrative tasks.
+  ai_pl_101_video_title_3: Transforming Learning with AI
+  ai_pl_101_video_desc_3: Explore the intersection of AI and education. This session
+    explores how AI can be combined with pedagogy to enhance student learning. It
+    is a must-attend for educators seeking to leverage AI to transform their teaching
+    practices to enrich their students’ learning experiences.
+  ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
+  ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
+    incorporating artificial intelligence in educational environments. This session
+    will provide concrete strategies, resources, and real-world examples, all aimed
+    at understanding the potential biases of AI, and the ethical considerations that
+    come with it.
+  ai_pl_101_video_title_5: Bringing AI to the Classroom
+  ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
+    utilizing AI educational tools, and leveraging AI for student assessment. With
+    a rich blend of theory, practical examples, and resources, it aims to empower
+    educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
+    in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
+    AI. Hear how these new technologies work directly from the experts: Mira Murati,
+    CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  how_ai_works_hero_heading: How AI Works
+  how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
+    series and accompanying lessons!
+  how_ai_works_intro_desc: This series of short videos and accompanying in-classroom
+    lessons will introduce you and your students to how artificial intelligence works
+    and why it matters. You can choose individual lessons based on topic, explore
+    the whole series of topics in one class or teach all 7 lessons to give a deeper
+    dive.
+  how_ai_works_intro_list_01: Introduce you to artificial intelligence and machine
+    learning
+  how_ai_works_intro_list_02: Dive into how generative AI works, including large language
+    models (LLMs) and image generation
+  how_ai_works_intro_list_03: Explore bias, ethics, privacy and the responsible use
+    of AI
+  how_ai_works_intro_list_04: Touch on real world applications of AI, including computer
+    vision
+  how_ai_works_lessons_heading: AI lessons for your class
+  how_ai_works_lesson_title_01: Introduction to Machine Learning
+  how_ai_works_lesson_desc_01: Learn about a form of artificial intelligence called
+    machine learning and how they can use the Problem Solving Process to help train
+    a robot to solve problems. Participate in machine learning activities where a
+    robot is learning how to detect patterns in fish.
+  how_ai_works_lesson_title_02: Computer Vision
+  how_ai_works_lesson_desc_02: Learn how computer vision works. Watch a video explaining
+    computer vision and how a computer "sees". Then design an algorithm that uses
+    a network to decide what number the seven segment display is displaying and test
+    it.
+  how_ai_works_lesson_title_03: Neural Networks
+  how_ai_works_lesson_desc_03: Learn how neural networks work. Use a widgets to explore
+    neural networks in a hands on way. Watch a video explaining neural networks. Finally
+    discuss the need for diverse perspectives when creating recommendation systems.
+  how_ai_works_lesson_title_04: Chatbots and Large Language Models
+  how_ai_works_lesson_desc_04: Learn what an Large Language Model (LLM) is and how
+    it works, then use an LLM to co-create a text with AI. Finally, discuss about
+    whether or not LLMs are intelligent or creative.
+  how_ai_works_lesson_title_05: Generative Images
+  how_ai_works_lesson_desc_05: Learn how AI can generate images, then explore a diffusion
+    AI widget and discuss whether or not these models are creative.
+  how_ai_works_lesson_title_06: Algorithmic Bias
+  how_ai_works_lesson_desc_06: Practice cropping images to uncover the bias underlying
+    the Twitter cropping algorithm, then read and watch a video about the discovery
+    of this biased algorithm. Finally, discuss ways to recognize and reduce bias in
+    algorithms.
+  how_ai_works_lesson_title_07: Our AI Code of Ethics
+  how_ai_works_lesson_desc_07: Conduct research using articles and videos that expose
+    ethical pitfalls in an artificial intelligence area of their choice. Assemble
+    a class-wide "Our AI Code of Ethics" resource for AI creators and legislators
+    everywhere.
+  how_ai_works_lessons_in_a_day_title: How AI Works in a Day
+  how_ai_works_lessons_in_a_day_desc: Only have a day? There's also the option to
+    introduce the whole series to students in a single day. Perfect for any subject-area
+    teacher looking to introduce students to AI, or even for as a lesson for a guest
+    teacher.
+  how_ai_works_lessons_in_a_day_desc_02: Introduce all of the "How AI Works" videos
+    in one day. Students follow along with each video by matching vocabulary from
+    the video, then answering a reflection question about each video.
+  how_ai_works_resources_desc: Interested in learning more about AI? Here are some
+    additional resources that can help extend you and your students' learning.
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -1050,10 +1183,10 @@ tg:
   teach_page_additional_materials_list_heading_03: Classroom Posters
   teach_page_additional_materials_list_desc_03: Print these posters of diverse role
     models to hang in your school and inspire your students to try computer science.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1311,9 +1444,9 @@ tg:
   csc_page_faq_question_05: What materials do I need for CS Connections?
   csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
     will have a projector to display the slideshow that corresponds with each lesson.
-  csf_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world.
+  csf_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world.
   csf_page_intro_heading: Free, and fun, elementary courses for each grade
   csf_page_intro_list_01: Six courses, one for each elementary grade
   csf_page_intro_list_02: Equitable introductory CS courses
@@ -1603,6 +1736,7 @@ tg:
   not_found_desc: The requested page was not found
   not_found_instructions: Check the web address and resubmit or choose a link from
     the list below.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1655,6 +1789,7 @@ tg:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1676,6 +1811,7 @@ tg:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -2931,7 +3067,7 @@ tg:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Play, Design, & Code with MakeCode Arcade
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Discover Python with Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
@@ -2950,7 +3086,7 @@ tg:
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: Facetracker
   tutorial_educodemaze_name: Design Your Own Maze!
   tutorial_educoderace_name: Code your own racing game!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
@@ -3050,7 +3186,8 @@ tg:
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: Choose between making a basketball game or mix
@@ -4208,10 +4345,11 @@ tg:
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: Choose between making a basketball game or mix
@@ -10839,7 +10977,7 @@ tg:
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
   tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
-  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_microsoftforest_name: Save the Forest with MakeCode Arcade
   tutorial_blackbirdscreen_name: Screen Saver
   tutorial_toxicodecompute2_name: Discover Python with Compute it
   tutorial_minecrafttimecraft_name: Minecraft Timecraft
@@ -11365,7 +11503,7 @@ tg:
   tutorial_cacloud_string_detail_grades: Grades 6+
   tutorial_blocksmithbot_string_detail_grades: Grades 2-8
   tutorial_hatchmario_string_detail_grades: Grades 2+
-  tutorial_microsoftforest_string_detail_grades: Grades 2+
+  tutorial_microsoftforest_string_detail_grades: Grades 5+
   tutorial_blackbirdscreen_string_detail_grades: Grades 6+
   tutorial_toxicodecompute2_string_detail_grades: Grades 2+
   tutorial_minecrafttimecraft_string_detail_grades: Grades 2+
@@ -11526,8 +11664,9 @@ tg:
   tutorial_ai4alldance_string_platforms: All modern browsers
   tutorial_ai4allneural_string_platforms: All modern browsers
   tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: All modern browsers
-  tutorial_edisonmaze_string_platforms: All modern browsers
+  tutorial_edisonblueprint_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_edisonmaze_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: All modern browsers, Screen reader
   tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
   tutorial_firstrobotics_string_platforms: All modern browsers

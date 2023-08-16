@@ -160,6 +160,8 @@ th:
   grade_level_label_elementary: โรงเรียนประถมศึกษา
   grade_level_label_middle: ระดับมัธยมศึกษาตอนต้น
   grade_level_label_high: โรงเรียนมัธยม
+  students_label: นักเรียน
+  teachers_label: ครู
   teacher_label_csf: ผู้สอนพื้นฐานด้านวิทยาการคอมพิวเตอร์
   teacher_label_csd: ผู้สอนการค้นพบของวิทยาการคอมพิวเตอร์
   teacher_label_csp: ผู้สอนหลักด้านวิทยาการคอมพิวเตอร์
@@ -173,7 +175,9 @@ th:
   call_to_action_explore_unit: สำรวจหน่วย
   call_to_action_explore_curriculum: สำรวจหลักสูตร
   call_to_action_explore_curriculum_options: สำรวจตัวเลือกหลักสูตร
+  call_to_action_explore_lessons: สำรวจบทเรียน
   call_to_action_explore_modules: สำรวจโมดูล
+  call_to_action_explore_module: สำรวจโมดูล
   call_to_action_explore_workshops: สำรวจเวิร์กช็อป
   call_to_action_explore_course: สำรวจหลักสูตร
   call_to_action_explore_courses: สำรวจรายวิชา
@@ -220,8 +224,10 @@ th:
   call_to_action_see_module_details: ดูรายละเอียดโมดูล
   call_to_action_start_modules: โมดูลเริ่มต้น
   call_to_action_see_course_details: ดูรายละเอียดหลักสูตร
+  call_to_action_see_lesson_details: ดูรายละเอียดบทเรียน
   call_to_action_learn_about_approach: เรียนรู้เพิ่มเติมเกี่ยวกับแนวทางของเรา
   call_to_action_try_java_lab: ทดลองใช้ Java Lab
+  call_to_action_notify_available: แจ้งให้ฉันทราบเมื่อพร้อมใช้งาน
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
@@ -268,6 +274,15 @@ th:
   aria_label_call_to_action_csf_course_d: ดูรายละเอียดหลักสูตร D
   aria_label_call_to_action_csf_course_e: ดูรายละเอียดหลักสูตร E
   aria_label_call_to_action_csf_course_f: ดูรายละเอียดหลักสูตร F
+  aria_label_call_to_action_ai_pl_101_videos: ดูวิดีโอ AI 101 สำหรับครู
+  aria_label_call_to_action_ai_teaching_module: สำรวจโมดูลการสอน AI และแมชชีนเลิร์นนิง
+  aria_label_call_to_action_how_ai_works_lesson_01: ดูรายละเอียดบทเรียนบทนำสู่การเรียนรู้ของเครื่อง
+  aria_label_call_to_action_how_ai_works_lesson_02: ดูรายละเอียดบทเรียน Computer Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: ดูรายละเอียดบทเรียนเกี่ยวกับเครือข่ายประสาทเทียม
+  aria_label_call_to_action_how_ai_works_lesson_04: ดูรายละเอียดบทเรียนของแชตบอทและแบบจำลองภาษาขนาดใหญ่
+  aria_label_call_to_action_how_ai_works_lesson_05: ดูรายละเอียดบทเรียนเกี่ยวกับภาพกำเนิด
+  aria_label_call_to_action_how_ai_works_lesson_06: ดูรายละเอียดบทเรียนอคติอัลกอริทึม
+  aria_label_call_to_action_how_ai_works_lesson_07: ดูรายละเอียดบทเรียนจรรยาบรรณปัญญาปัญญาประดิษฐ์ของเรา
   video_title_professional_learning_program: โปรแกรมการเรียนรู้ระดับมืออาชีพของ Code.org
   curriculum_name_csf: ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   curriculum_name_csf_02: ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์ (หลักสูตร A-F)
@@ -364,6 +379,10 @@ th:
   module_label_student_tool: เครื่องมือนักเรียน
   module_label_student_product: ผลิตภัณฑ์
   module_label_student_content_resources: เนื้อหาและแหล่งข้อมูล
+  module_label_new: ใหม่
+  module_label_coming_soon: เร็ว ๆ นี้
+  module_label_video_series: วีดีโอชุด
+  module_label_self_paced: โมดูลที่ปรับได้เอง
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -386,9 +405,13 @@ th:
   module_grade_9_12_teachers: ผู้สอน 9-12
   module_level_beginner: ผู้เริ่มต้น
   module_level_intermediate: ระดับกลาง
+  module_duration_45_mins: 45 นาที
+  module_duration_1_hr: 1 ชั่วโมง
   module_duration_2_hrs: 2 ชั่วโมง
   module_duration_3_hrs: 3 ชั่วโมง
+  module_duration_5_hrs: 5 ชั่วโมง
   module_duration_8_hrs: 8 ชั่วโมง
+  module_duration_20_hrs: 20 ชั่วโมง
   module_duration_35_hrs: 35 ชั่วโมง
   module_duration_lesson: บทเรียน
   module_duration_week: สัปดาห์
@@ -456,6 +479,7 @@ th:
   heading_no_devices: ไม่มีอุปกรณ์? เรามีให้คุณ
   heading_java_lab: จาวาแลป
   heading_objects_first: วัตถุก่อน
+  heading_these_lessons_will: 'บทเรียนเหล่านี้จะ:'
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -557,6 +581,10 @@ th:
   ai_curriculum_grades_03: 'ระดับเกรด: 3-12'
   ai_curriculum_duration_03: 'ระยะเวลา: 1 ชั่วโมง'
   ai_curriculum_btn_aria_label_03: ลองใช้กิจกรรม AI for Oceans
+  ai_curriculum_title_04: AI ทำงานอย่างไร
+  ai_curriculum_desc_04: บทเรียนเหล่านี้เสริมชุดวิดีโอ How AI Worksแต่ละบทเรียนจะจับคู่กับวิดีโอเดียวจากซีรีส์,
+    เจาะลึกเข้าไปในแนวคิดที่แนะนำในวิดีโอ.
+  ai_curriculum_btn_aria_label_04: เรียนรู้วิธีการทำงานของ AI
   ai_carousel_heading: 'สิ่งที่ครูพูดเกี่ยวกับ AI ด้วย Code.org:'
   ai_carousel_quote_01: บทเรียนนี้ยังทำให้นักเรียนของฉันมีโอกาสที่จะเห็นว่ามีองค์ประกอบของความเห็นในระบบการจัดหมวดหมู่ต่อมาเมื่อเราเริ่มเห็นว่าอคติสามารถจบลงใน
     AI ผมก็สามารถดึงพวกเขากลับมาและเตือนพวกเขาว่าข้อมูลที่ใช้ในการฝึกอบรมแบบจำลองของพวกเขาขึ้นอยู่กับทางเลือก
@@ -569,6 +597,10 @@ th:
   ai_pl_list_04: พิจารณาผลกระทบของโลกแห่งความเป็นจริงของ AI และการเรียนรู้ของเครื่อง
   ai_pl_list_05: สำรวจตอนท้ายของโครงการบท
   ai_pl_duration: 'ระยะเวลา: 2 ชั่วโมง'
+  ai_pl_title: การสอน AI และแมชชีนเลิร์นนิง
+  ai_pl_desc: ความรู้เบื้องต้นเกี่ยวกับปัญญาประดิษฐ์และการเรียนรู้ของเครื่องฝึกโมเดลการเรียนรู้ของแมชชีนโดยใช้
+    AI Lab. และมีส่วนร่วมกับแอพแมชชีนเลิร์นนิงพิจารณาผลกระทบของโลกแห่งความเป็นจริงของ
+    AI และการเรียนรู้ของเครื่อง
   ai_video_series_title: AI ทำงานอย่างไร
   ai_video_series_desc: ด้วยการแนะนำโดยซีอีโอของ Microsoft Satya Nadella ชุดวิดีโอสั้น
     ๆ นี้จะแนะนำคุณถึงวิธีการทำงานของปัญญาประดิษฐ์และทำไมมันสำคัญจากนั้นเจาะลึกปัญหาเช่นอคติอัลกอริทึมและจริยธรรมของ
@@ -589,6 +621,7 @@ th:
   ai_resources_btn_aria_label_03: สำรวจเว็บไซต์ AI สำหรับครู
   ai_pl_101_hero_heading: เข้าร่วม AI EmpowerED กับเรา!
   ai_pl_101_hero_desc: ค้นพบศักยภาพการเปลี่ยนแปลงของปัญญาประดิษฐ์ (AI) ในการศึกษาด้วยชุดการเรียนรู้ออนไลน์ฟรีสำหรับผู้ที่ต้องการศึกษา
+  ai_pl_101_hero_desc_02: ชุดการเรียนรู้ออนไลน์ที่ครอบคลุมสำหรับครู
   ai_pl_101_hero_presented: นำเสนอโดย
   ai_pl_101_intro_heading: AI 101 สำหรับผู้สอนคืออะไร?
   ai_pl_101_intro_text: AI 101 สำหรับผู้สอน เป็นชุดการเรียนรู้ทางวิชาชีพพื้นฐานทางออนไลน์ฟรีสำหรับครูและนักการศึกษาที่สนใจในโลกของปัญญาประดิษฐ์
@@ -623,6 +656,65 @@ th:
     เตรียมความพร้อม/วางแผน เขียน ปรับปรุง แก้ไข ไตร่ตรอง ETS ปรับแต่งประสบการณ์การเขียนให้เป็นส่วนตัวโดยใช้ประโยชน์จากโมเดลการให้คะแนนที่ทันสมัยและ
     AI ที่ช่วยเหลือผู้สอนในการให้ข้อเสนอแนะซ้ำๆ และการประเมินเชิงโครงสร้างตลอดประสบการณ์การเขียน'
   ai_pl_101_explore__button_4: สำรวจเครื่องมือ
+  ai_pl_101_video_title_1: สนทนา Fireside กับ ซาล ข่าน และ ฮาดี ปารโตวี
+  ai_pl_101_video_desc_1: เข้าร่วม Sal Khan (Khan Academy) และ Hadi Partovi (Code.org)
+    เพื่อสนทนา Fireside เกี่ยวกับการใช้ปัญญาประดิษฐ์ในห้องเรียนคาดหวังการอภิปรายที่มีชีวิตชีวารวมถึงบางส่วนของหัวข้อที่ถกเถียงกันมากที่สุดโดยรอบ
+    AI ในวันนี้.
+  ai_pl_101_video_title_2: AI ที่สร้างความลึกลับสำหรับนักการศึกษา
+  ai_pl_101_video_desc_2: ความรู้เบื้องต้นเกี่ยวกับปัญญาประดิษฐ์ ที่จะทำให้คุณเข้าใจถึงผลกระทบอันลึกซึ้งของ
+    AI ในสังคมของเรา และความเกี่ยวข้องที่เพิ่มมากขึ้นในด้านการศึกษาคุณจะได้รับข้อมูลเชิงลึกในทางปฏิบัติในการใช้ประโยชน์จาก
+    AI สำหรับงานในห้องเรียน และช่วยประหยัดเวลาในการดูแลระบบ
+  ai_pl_101_video_title_3: เปลี่ยนการเรียนรู้ด้วย AI
+  ai_pl_101_video_desc_3: สำรวจจุดตัดของ AI และการศึกษาเซสชั่นนี้จะสำรวจว่า AI สามารถนำมารวมกับการเรียนการสอนเพื่อยกระดับการเรียนรู้ของนักเรียนได้อย่างไรนักการศึกษาที่ต้องการใช้ประโยชน์จากปัญญาประดิษฐ์เพื่อเปลี่ยนแปลงแนวทางปฏิบัติในการสอนเพื่อเสริมสร้างประสบการณ์การเรียนรู้ของนักเรียนให้ดียิ่งขึ้น
+  ai_pl_101_video_title_4: การสร้างความมั่นใจในแนวทางที่มีความรับผิดชอบต่อ AI
+  ai_pl_101_video_desc_4: สำรวจข้อควรพิจารณาด้านจริยธรรมและแนวทางปฏิบัติที่ดีที่สุดในการรวมปัญญาประดิษฐ์เข้ากับสภาพแวดล้อมทางการศึกษาเซสชั่นนี้จะให้กลยุทธ์ที่เป็นรูปธรรมทรัพยากรและตัวอย่างโลกแห่งความจริงทั้งหมดมุ่งเป้าไปที่การทำความเข้าใจอคติที่อาจเกิดขึ้นของ
+    AI และการพิจารณาทางจริยธรรมที่มาพร้อมกับมัน
+  ai_pl_101_video_title_5: นำ AI มาสู่ชั้นเรียน
+  ai_pl_101_video_desc_5: เซสชั่นนี้มุ่งเน้นไปที่การสอนเกี่ยวกับ AI การประเมินและการใช้เครื่องมือการศึกษาของ
+    AI และการใช้ประโยชน์จากปัญญาประดิษฐ์ในการประเมินนักเรียนด้วยการผสมผสานกันอย่างลงตัวของทฤษฎี
+    ตัวอย่างในทางปฏิบัติ และทรัพยากร โดยมีจุดมุ่งหมายที่จะช่วยให้นักการศึกษาสามารถสำรวจภูมิทัศน์ของ
+    AI และเพิ่มประสบการณ์การเรียนรู้ของนักเรียน
+  ai_pl_101_video_desc_6: 'เรียนรู้เพิ่มเติมเกี่ยวกับเทคโนโลยีใหม่ที่ขับเคลื่อนการเปลี่ยนแปลงครั้งใหญ่ใน
+    AI โดยมีวิดีโอใหม่สองเรื่องเกี่ยวกับโมเดลภาษาขนาดใหญ่ (เช่น ChatGPT) และ Generative
+    AIรับฟังวิธีที่เทคโนโลยีใหม่เหล่านี้ทำงานโดยตรงจากผู้เชี่ยวชาญ: Mira Murati, CTO
+    ของ OpenAI และ Cristóbal Valenzuela CEO ของ RunwayML'
+  how_ai_works_hero_heading: AI ทำงานอย่างไร
+  how_ai_works_hero_desc: ดำดิ่งสู่โลกของ AI ด้วย “วิธีการทำงานของ AI” วิดีโอซีรี่ส์และบทเรียนประกอบของเรา!
+  how_ai_works_intro_desc: ชุดวิดีโอสั้นและบทเรียนในชั้นเรียนนี้จะแนะนำคุณและนักเรียนของคุณถึงวิธีการทำงานของปัญญาประดิษฐ์
+    และเหตุผลสำคัญคุณสามารถเลือกบทเรียนแต่ละบทเรียนตามหัวข้อสำรวจทั้งชุดหัวข้อในชั้นเรียนเดียวหรือสอนบทเรียนทั้งหมด
+    7 บทเรียนเพื่อให้การดำน้ำลึก
+  how_ai_works_intro_list_01: แนะนำคุณเกี่ยวกับปัญญาประดิษฐ์และการเรียนรู้ของเครื่อง
+  how_ai_works_intro_list_02: เจาะลึกถึงการทำงานของ AI ที่สร้างขึ้น รวมถึงโมเดลภาษาขนาดใหญ่
+    (LLM) และการสร้างภาพ
+  how_ai_works_intro_list_03: สำรวจอคติ จริยธรรม ความเป็นส่วนตัว และการใช้ AI อย่างรับผิดชอบ
+  how_ai_works_intro_list_04: สัมผัสการใช้งานจริงของ AI รวมถึงคอมพิวเตอร์วิชั่น
+  how_ai_works_lessons_heading: บทเรียน AI สำหรับชั้นเรียนของคุณ
+  how_ai_works_lesson_title_01: ความรู้เบื้องต้นเกี่ยวกับการเรียนรู้ของเครื่อง
+  how_ai_works_lesson_desc_01: เรียนรู้เกี่ยวกับรูปแบบของปัญญาประดิษฐ์ที่เรียกว่า
+    Machine Learning และวิธีการใช้กระบวนการแก้ปัญหาเพื่อช่วยในการฝึกอบรมหุ่นยนต์ในการแก้ปัญหามีส่วนร่วมในกิจกรรมการเรียนรู้ของเครื่องที่หุ่นยนต์กำลังเรียนรู้วิธีการตรวจจับรูปแบบในปลา
+  how_ai_works_lesson_title_02: วิสัยทัศน์คอมพิวเตอร์
+  how_ai_works_lesson_desc_02: เรียนรู้วิธีการทำงานของคอมพิวเตอร์วิทัศน์ดูวิดีโออธิบายคอมพิวเตอร์วิสัยทัศน์และวิธีการที่คอมพิวเตอร์
+    “เห็น”จากนั้นออกแบบอัลกอริทึมที่ใช้เครือข่ายเพื่อตัดสินใจว่าจำนวนการแสดงส่วนเจ็ดจะแสดงและทดสอบ
+  how_ai_works_lesson_title_03: โครงข่ายประสาท
+  how_ai_works_lesson_desc_03: เรียนรู้วิธีการทำงานของเครือข่ายประสาทใช้เครื่องมือในการสำรวจเครือข่ายประสาทในมือเกี่ยวกับวิธีการที่ดูวิดีโออธิบายเครือข่ายประสาทสุดท้ายหารือเกี่ยวกับความจำเป็นในการมุมมองที่หลากหลายเมื่อมีการสร้างระบบข้อเสนอแนะ
+  how_ai_works_lesson_title_04: Chatbots และรูปแบบภาษาขนาดใหญ่
+  how_ai_works_lesson_desc_04: เรียนรู้ว่า Large Language Model (LLM) คืออะไรและทำงานอย่างไร
+    จากนั้นใช้ LLM เพื่อสร้างข้อความร่วมกับ AIสุดท้ายหารือเกี่ยวกับหรือไม่ LLMs มีความฉลาดหรือความคิดสร้างสรรค์
+  how_ai_works_lesson_title_05: ภาพกำเนิด
+  how_ai_works_lesson_desc_05: เรียนรู้วิธีที่ AI สามารถสร้างภาพ จากนั้นสำรวจวิดเจ็ต
+    Diffusion AI และหารือว่าโมเดลเหล่านี้มีความสร้างสรรค์หรือไม่
+  how_ai_works_lesson_title_06: อคติอัลกอริทึม
+  how_ai_works_lesson_desc_06: ฝึกการครอบตัดภาพเพื่อค้นพบอคติที่อยู่เบื้องหลังอัลกอริทึมการครอบตัดทวิตเตอร์
+    จากนั้นอ่านและดูวิดีโอเกี่ยวกับการค้นพบอัลกอริทึมลำเอียงนี้สุดท้ายหารือถึงวิธีการรับรู้และลดความลำเอียงในอัลกอริทึม
+  how_ai_works_lesson_title_07: จรรยาบรรณ AI ของเรา
+  how_ai_works_lesson_desc_07: ดำเนินการวิจัยโดยใช้บทความและวิดีโอที่เปิดเผยข้อผิดพลาดทางจริยธรรมในพื้นที่ปัญญาประดิษฐ์ที่พวกเขาเลือกรวบรวมทรัพยากร
+    “จรรยาบรรณ AI ของเรา” สำหรับผู้สร้าง AI และสมาชิกสภานิติบัญญัติในทุกที่
+  how_ai_works_lessons_in_a_day_title: AI ทำงานอย่างไรในแต่ละวัน
+  how_ai_works_lessons_in_a_day_desc: มีแค่วันเดียวเหรอนอกจากนี้ยังมีตัวเลือกในการแนะนำทั้งชุดให้กับนักเรียนในวันเดียวเหมาะอย่างยิ่งสำหรับครูผู้สอนวิชาที่ต้องการแนะนำนักเรียนให้รู้จักกับ
+    AI หรือแม้แต่เป็นบทเรียนสำหรับครูรับเชิญ
+  how_ai_works_lessons_in_a_day_desc_02: แนะนำวิดีโอ “วิธีการทำงานของ AI” ทั้งหมดในหนึ่งวันนักเรียนจะติดตามวิดีโอแต่ละรายการโดยจับคู่คำศัพท์จากวิดีโอ
+    จากนั้นตอบคำถามสะท้อนเกี่ยวกับวิดีโอแต่ละรายการ
+  how_ai_works_resources_desc: สนใจเรียนรู้เพิ่มเติมเกี่ยวกับ AI?ต่อไปนี้เป็นแหล่งข้อมูลเพิ่มเติมที่สามารถช่วยขยายการเรียนรู้ของคุณและนักเรียนของคุณ
   ai_vid_intro_caption: แนะนำวิธีการทำงานของ AI
   ai_vid_chatbots_caption: วิธีการทำงานของ Chatbots และรูปแบบภาษาขนาดใหญ่
   ai_vid_creativity_caption: AI มีความคิดสร้างสรรค์และจินตนาการหรือไม่
@@ -879,10 +971,10 @@ th:
     ทั้งทางออนไลน์หรือในห้องเรียน เป้าหมายของเราคือการเพิ่มพูนความพยายามของเราให้เกินขอบเขตของหลักสูตรของเรา
   teach_page_additional_materials_list_heading_03: โปสเตอร์ในห้องเรียน
   teach_page_additional_materials_list_desc_03: พิมพ์โปสเตอร์แบบอย่างที่หลากหลายเหล่านี้เพื่อแขวนในโรงเรียนของคุณและสร้างแรงบันดาลใจให้นักเรียนลองใช้วิทยาการคอมพิวเตอร์
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1379,6 +1471,7 @@ th:
   not_found_title: ไม่พบหน้าที่ต้องการ
   not_found_desc: ไม่พบหน้าที่คุณต้องการ
   not_found_instructions: ตรวจสอบอยู่เว็บ และส่งอีกครั้ง หรือเลือกการเชื่อมโยงจากรายการด้านล่าง
+  company_code_dot_org: รหัส.org
   company_4-H: การพัฒนาเยาวชน 4-H
   company_asa: พันธมิตรอาฟเตอร์สคูล
   company_asos: ASOS
@@ -1431,6 +1524,7 @@ th:
   company_evsd: เขตโรงเรียนอีสต์วัลเลย์
   company_eastonvilleschooldistrict: เขตการศึกษาอีตองวิลล์
   company_enumclawschooldistrict: เขตโรงเรียนเอนุมคลอว์
+  company_ets: ETS
   company_everettsd: โรงเรียนรัฐบาลเอเวอเรตต์
   company_fsusd: Fairfield-โรงเรียนแบบครบวงจรเขตสุยซัน
   company_fayettecountypublicschools: โรงเรียนเทศมณฑลฟาแยตต์
@@ -1452,6 +1546,7 @@ th:
   company_houstonisd: เขตโรงเรียนอิสระฮูสตัน
   company_hcpss: โรงเรียนรัฐฮาวเวิร์ดเคาน์ตี
   company_idla: สถาบันการเรียนรู้ดิจิทัลไอดาโฮ
+  company_iste: ISTE
   company_janesvilleschooldistrict: เขตโรงเรียนแจนสวิลล์
   company_johnstoncountyschools: โรงเรียนจอห์นสตันเคาน์ตี
   company_lps: โรงเรียนรัฐลินคอล์น
@@ -9458,8 +9553,10 @@ th:
   tutorial_ai4alldance_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_ai4allneural_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_spheroinout_string_platforms: ถอดปลั๊ก
-  tutorial_edisonblueprint_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
-  tutorial_edisonmaze_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
+  tutorial_edisonblueprint_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต
+    Android, iPad
+  tutorial_edisonmaze_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
+    iPad
   tutorial_milnefunctions_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดโปรแกรมอ่านหน้าจอ
   tutorial_sasmap_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, iPad, โปรแกรมอ่านหน้าจอ
   tutorial_firstrobotics_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด

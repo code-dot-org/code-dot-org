@@ -4530,6 +4530,9 @@
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
           "type": "Javob kaliti"
         },
+        "2022_change_log/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_resources/coursec/2022": {
           "url": "/s/kurs-2022/resurslari"
         },
@@ -4550,7 +4553,8 @@
           "type": "Manba"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "O‘quv qo‘llanma"
+          "name": "O‘quv qo‘llanma",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
@@ -5126,6 +5130,9 @@
         "end_of_course_project_guide/coursee/2022": {
           "name": "Kurs oxiri loyihasi bo'yicha qo'llanma"
         },
+        "2022_change_log/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
         "all_standards/coursef/2022": {
           "name": "Barcha standartlar"
         },
@@ -5144,6 +5151,7 @@
         },
         "curriculum_guide/coursef/2022": {
           "name": "O‘quv qo‘llanma",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
           "type": "Manba"
         },
         "debugging_guide/coursef/2022": {

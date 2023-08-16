@@ -173,6 +173,8 @@ he:
   grade_level_label_elementary: בית ספר יסודי
   grade_level_label_middle: חטיבת ביניים
   grade_level_label_high: בית ספר תיכון
+  students_label: סטודנטים
+  teachers_label: מורים
   teacher_label_csf: מורה יסודות במדעי המחשב
   teacher_label_csd: מורה לתגליות במדעי המחשב
   teacher_label_csp: מורה לעקרונות CS
@@ -186,7 +188,9 @@ he:
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
   call_to_action_explore_curriculum_options: חקור אפשרויות תכנית לימודים
+  call_to_action_explore_lessons: חקור שיעורים
   call_to_action_explore_modules: חקור מודולים
+  call_to_action_explore_module: חקור מודול
   call_to_action_explore_workshops: חקור סדנאות
   call_to_action_explore_course: חקור את הקורס
   call_to_action_explore_courses: חקור קורסים
@@ -233,8 +237,10 @@ he:
   call_to_action_see_module_details: ראה פרטי מודול
   call_to_action_start_modules: התחל מודולים
   call_to_action_see_course_details: ראה פרטי הקורס
+  call_to_action_see_lesson_details: ראה פרטי השיעור
   call_to_action_learn_about_approach: למידע נוסף על הגישה שלנו
   call_to_action_try_java_lab: נסה את מעבדת ג'אווה
+  call_to_action_notify_available: הודע לי כאשר זמין
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -299,6 +305,18 @@ he:
   aria_label_call_to_action_csf_course_d: ראה פרטי קורס D
   aria_label_call_to_action_csf_course_e: ראה פרטי קורס E
   aria_label_call_to_action_csf_course_f: ראה פרטי קורס F
+  aria_label_call_to_action_ai_pl_101_videos: צפה ב- AI 101 לסרטוני מורים
+  aria_label_call_to_action_ai_teaching_module: חקור את מודול הוראת AI ולמידת מכונה
+  aria_label_call_to_action_how_ai_works_lesson_01: עיין בפרטי השיעור מבוא ללמידה
+    חישובית
+  aria_label_call_to_action_how_ai_works_lesson_02: עיין בפרטי שיעור ראיית המחשב
+  aria_label_call_to_action_how_ai_works_lesson_03: עיין בפרטי השיעור ברשתות עצביות
+  aria_label_call_to_action_how_ai_works_lesson_04: עיין בפרטי השיעור של צ'אטבוטים
+    ומודלים בשפה גדולה
+  aria_label_call_to_action_how_ai_works_lesson_05: עיין בפרטי השיעור של תמונות גנראטיביות
+  aria_label_call_to_action_how_ai_works_lesson_06: עיין בפרטי שיעור ההטיה האלגוריתמית
+  aria_label_call_to_action_how_ai_works_lesson_07: עיין בפרטי השיעור שלנו בקוד האתיקה
+    של AI
   video_title_professional_learning_program: תוכנית הלמידה המקצועית של Code.org
   curriculum_name_csf: יסודות מדעי המחשב
   curriculum_name_csf_02: כל יסודות CS (קורס A-F)
@@ -404,6 +422,10 @@ he:
   module_label_student_tool: כלי סטודנטים
   module_label_student_product: מוצר
   module_label_student_content_resources: תוכן ומשאבים
+  module_label_new: חדש
+  module_label_coming_soon: בקרוב
+  module_label_video_series: סדרת וידאו
+  module_label_self_paced: מודול בקצב עצמי
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -426,9 +448,13 @@ he:
   module_grade_9_12_teachers: 9-12 מורים
   module_level_beginner: למתחילים
   module_level_intermediate: ביניים
+  module_duration_45_mins: 45 דקות
+  module_duration_1_hr: 1 שעה
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
+  module_duration_5_hrs: 5 שעות
   module_duration_8_hrs: 8 שעות
+  module_duration_20_hrs: 20 שעות
   module_duration_35_hrs: 35 שעות
   module_duration_lesson: שיעור
   module_duration_week: שבוע
@@ -496,6 +522,7 @@ he:
   heading_no_devices: אין מכשירים? יש לנו אותך מכוסה
   heading_java_lab: מעבדת ג'אווה
   heading_objects_first: אובייקטים ראשונים
+  heading_these_lessons_will: 'שיעורים אלה יהיו:'
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -611,6 +638,10 @@ he:
   ai_curriculum_grades_03: 'רמות כיתה: 3-12'
   ai_curriculum_duration_03: 'משך הפעילות: שעה'
   ai_curriculum_btn_aria_label_03: נסה את פעילות ה- AI לאוקיינוסים
+  ai_curriculum_title_04: איך AI עובד
+  ai_curriculum_desc_04: שיעורים אלה משלימים את סדרת הווידיאו כיצד AI עובד. כל שיעור
+    משויך לסרטון יחיד מהסדרה, צולל עמוק יותר לתוך המושגים שהוצגו בסרטונים.
+  ai_curriculum_btn_aria_label_04: גלה כיצד AI עובד שיעורים
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -625,6 +656,9 @@ he:
   ai_pl_list_04: שקול השלכות בעולם האמיתי של AI ולמידת מכונה.
   ai_pl_list_05: חקור פרויקטים של סוף הפרק.
   ai_pl_duration: 'משך הפעילות: שעתיים'
+  ai_pl_title: הוראת AI ולמידת מכונה
+  ai_pl_desc: מבוא לבינה מלאכותית ולמידת מכונה. הכשר מודל למידת מכונה באמצעות מעבדת
+    AI. ולעסוק באפליקציות למידת מכונה. שקול השלכות בעולם האמיתי של AI ולמידת מכונה.
   ai_video_series_title: איך AI עובד
   ai_video_series_desc: עם הקדמה של מנכ"ל מיקרוסופט, סטיה נדלה, סדרת הסרטונים הקצרים
     הזו תציג בפניכם כיצד בינה מלאכותית עובדת ומדוע היא חשובה. לאחר מכן התעמק בנושאים
@@ -647,6 +681,7 @@ he:
   ai_pl_101_hero_heading: AI 101 למורים
   ai_pl_101_hero_desc: גלה את הפוטנציאל הטרנספורמטיבי של בינה מלאכותית (AI) בחינוך
     עם סדרת הלמידה המקוונת החינמית שלנו למחנכים.
+  ai_pl_101_hero_desc_02: סדרת למידה מקוונת מקיפה למורים.
   ai_pl_101_hero_presented: מוצג על ידי
   ai_pl_101_intro_heading: מהו AI 101 למורים?
   ai_pl_101_intro_text: AI 101 למורים היא סדרת למידה מקצועית מקוונת בחינם לכל מורה
@@ -682,6 +717,82 @@ he:
     ETS מתאימה אישית את חווית הכתיבה על ידי מינוף מודלים מתקדמים של ניקוד ובינה מלאכותית,
     ומסייעת למורים במתן משוב איטרטיבי והערכה מעצבת לאורך כל חווית הכתיבה.'
   ai_pl_101_explore__button_4: כלי חקור
+  ai_pl_101_video_title_1: צ'אט ליד האש עם סאל חאן והאדי פרטובי
+  ai_pl_101_video_desc_1: הצטרף לסאל חאן (אקדמיית חאן) והאדי פרטובי (Code.org) לשיחה
+    על חיבוק בינה מלאכותית בכיתה. צפו לדיון ער הכולל כמה מהנושאים השנויים במחלוקת
+    ביותר סביב AI כיום.
+  ai_pl_101_video_title_2: ביטול מיסטיפיקציה של AI למחנכים
+  ai_pl_101_video_desc_2: היכרות עם היסודות של בינה מלאכותית אשר יצייד אותך עם הידע
+    הבסיסי כדי להבין את ההשפעה העמוקה של AI בחברה שלנו ואת הרלוונטיות הגוברת שלה לתחום
+    החינוך. תוכלו לקבל תובנות מעשיות על מינוף AI למשימות בכיתה, ולחסוך זמן במשימות
+    ניהוליות.
+  ai_pl_101_video_title_3: שינוי למידה עם AI
+  ai_pl_101_video_desc_3: חקור את הצומת של AI וחינוך. מפגש זה בוחן כיצד ניתן לשלב
+    AI עם פדגוגיה כדי לשפר את למידת התלמידים. זהו חובה להשתתף עבור אנשי חינוך המבקשים
+    למנף AI כדי לשנות את שיטות ההוראה שלהם כדי להעשיר את חוויות הלמידה של תלמידיהם.
+  ai_pl_101_video_title_4: הבטחת גישה אחראית ל- AI
+  ai_pl_101_video_desc_4: חקור את השיקולים האתיים ושיטות העבודה המומלצות לשילוב בינה
+    מלאכותית בסביבות חינוכיות. מפגש זה יספק אסטרטגיות קונקרטיות, משאבים ודוגמאות בעולם
+    האמיתי, כולן מכוונות להבנת ההטיות הפוטנציאליות של AI, ואת השיקולים האתיים הנלווים
+    לכך.
+  ai_pl_101_video_title_5: הבאת AI לכיתה
+  ai_pl_101_video_desc_5: מפגש זה מתמקד בהוראה על AI, הערכה ושימוש בכלים חינוכיים
+    של AI, ומינוף AI להערכת תלמידים. עם שילוב עשיר של תיאוריה, דוגמאות מעשיות ומשאבים,
+    היא שואפת להעצים אנשי חינוך לנווט בנוף הבינה המלאכותית ולשפר את חוויות הלמידה
+    של התלמידים.
+  ai_pl_101_video_desc_6: 'למידע נוסף על הטכנולוגיה החדשה המניעה את השינויים הגדולים
+    ב- AI, הכוללת שני סרטונים חדשים במודלים של שפה גדולה (כמו ChatGPT) ו- AI Generative.
+    שמע כיצד הטכנולוגיות החדשות הללו עובדות ישירות מהמומחים: מירה מוראטי, CTO של OpenAI,
+    וכריסטובל ולנצואלה, מנכ"ל RunwayML.'
+  how_ai_works_hero_heading: איך AI עובד
+  how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
+    ושיעורים נלווים!
+  how_ai_works_intro_desc: סדרה זו של סרטונים קצרים ושיעורים נלווים בכיתה תציג בפניכם
+    ולתלמידיכם כיצד פועלת בינה מלאכותית ומדוע היא חשובה. אתה יכול לבחור שיעורים פרטניים
+    על בסיס נושא, לחקור את כל סדרת הנושאים בכיתה אחת או ללמד את כל 7 השיעורים כדי
+    לצלול עמוק יותר.
+  how_ai_works_intro_list_01: הכירו לכם בינה מלאכותית ולמידת מכונה
+  how_ai_works_intro_list_02: צלול כיצד פועל AI גנראטיבי, כולל מודלים בשפה גדולה (LLM)
+    ויצירת תמונות
+  how_ai_works_intro_list_03: חקור הטיה, אתיקה, פרטיות ושימוש אחראי ב- AI
+  how_ai_works_intro_list_04: גע ביישומי AI בעולם האמיתי, כולל ראייה ממוחשבת
+  how_ai_works_lessons_heading: שיעורי AI לשיעור שלך
+  how_ai_works_lesson_title_01: מבוא ללמידת מכונה
+  how_ai_works_lesson_desc_01: למד על צורה של בינה מלאכותית הנקראת למידת מכונה וכיצד
+    הם יכולים להשתמש בתהליך פתרון הבעיות כדי לסייע באימון רובוט לפתרון בעיות. השתתף
+    בפעילויות למידת מכונה בהן רובוט לומד כיצד לזהות דפוסים בדגים.
+  how_ai_works_lesson_title_02: ראייה ממוחשבת
+  how_ai_works_lesson_desc_02: למד כיצד פועלת ראיית מחשב. צפה בסרטון המסביר ראיית
+    מחשב וכיצד מחשב "רואה". לאחר מכן תכנן אלגוריתם המשתמש ברשת כדי להחליט איזה מספר
+    תצוגת שבעת הקטעים מציגה ולבדוק אותו.
+  how_ai_works_lesson_title_03: רשתות עצביות
+  how_ai_works_lesson_desc_03: למד כיצד פועלות רשתות עצביות. השתמש בווידג'טים כדי
+    לחקור רשתות עצביות בידיים בדרך. צפו בסרטון המסביר רשתות עצביות. לבסוף דנו בצורך
+    בפרספקטיבות מגוונות בעת יצירת מערכות המלצות.
+  how_ai_works_lesson_title_04: צ'אטבוטים ומודלים בשפה גדולה
+  how_ai_works_lesson_desc_04: למד מהו מודל שפה גדולה (LLM) וכיצד הוא פועל, ולאחר
+    מכן השתמש ב- LLM כדי ליצור טקסט משותף עם AI. לבסוף, דנו בשאלה האם LLMs הם אינטליגנטים
+    או יצירתיים או לא.
+  how_ai_works_lesson_title_05: תמונות גנראטיביות
+  how_ai_works_lesson_desc_05: למד כיצד AI יכול ליצור תמונות, ואז חקור יישומון AI
+    דיפוזיה ודון אם המודלים הללו יצירתיים או לא.
+  how_ai_works_lesson_title_06: הטיה אלגוריתמית
+  how_ai_works_lesson_desc_06: תרגל חיתוך תמונות כדי לחשוף את ההטיה העומדת בבסיס אלגוריתם
+    החיתוך בטוויטר, ואז קרא וצפה בסרטון על גילוי האלגוריתם המוטה הזה. לבסוף, דון בדרכים
+    לזהות ולהפחית הטיה באלגוריתמים.
+  how_ai_works_lesson_title_07: קוד האתיקה של AI
+  how_ai_works_lesson_desc_07: ערכו מחקר באמצעות מאמרים וסרטונים החושפים מלכודות אתיות
+    בתחום בינה מלאכותית לפי בחירתם. הרכיב משאב "קוד האתיקה של AI שלנו" לכל הכיתה עבור
+    יוצרי AI ומחוקקים בכל מקום.
+  how_ai_works_lessons_in_a_day_title: איך AI עובד ביום אחד
+  how_ai_works_lessons_in_a_day_desc: יש לך רק יום? יש גם אפשרות להציג את כל הסדרה
+    לסטודנטים ביום אחד. מושלם עבור כל מורה בתחום הנושא המעוניין להכיר לתלמידים AI,
+    או אפילו כשיעור למורה אורח.
+  how_ai_works_lessons_in_a_day_desc_02: הציגו את כל סרטוני "איך AI עובד" ביום אחד.
+    התלמידים עוקבים אחר כל סרטון על ידי התאמת אוצר המילים מהסרטון, ואז עונים על שאלת
+    השתקפות לגבי כל סרטון.
+  how_ai_works_resources_desc: מעוניינים ללמוד עוד על AI? להלן כמה משאבים נוספים שיכולים
+    לעזור להרחיב את הלמידה שלך ואת התלמידים שלך.
   ai_vid_intro_caption: היכרות עם אופן הפעולה של AI
   ai_vid_chatbots_caption: כיצד פועלים צ'אטבוטים ומודלים בשפה גדולה
   ai_vid_creativity_caption: האם ל- AI יש יצירתיות ודמיון?
@@ -965,10 +1076,10 @@ he:
   teach_page_additional_materials_list_heading_03: כרזות כיתה
   teach_page_additional_materials_list_desc_03: הדפס פוסטרים אלה של מודלים לחיקוי
     מגוונים לתלייה בבית הספר שלך ולעורר את התלמידים שלך לנסות מדעי המחשב.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1484,6 +1595,7 @@ he:
   not_found_title: הדף לא נמצא
   not_found_desc: הדף המבוקש לא נמצא
   not_found_instructions: בדוק את כתובת העמוד או בחר קישור מהרשימה הבאה.
+  company_code_dot_org: קוד.org
   company_4-H: פיתוח נוער 4-H
   company_asa: ברית אחה"צ
   company_asos: אסוס
@@ -1536,6 +1648,7 @@ he:
   company_evsd: מחוז בית הספר איסט ואלי
   company_eastonvilleschooldistrict: מחוז בית הספר איטונוויל
   company_enumclawschooldistrict: מחוז בית הספר אנומקלו
+  company_ets: ETS
   company_everettsd: בתי ספר ציבוריים של אוורט
   company_fsusd: מחוז בית הספר המאוחד פיירפילד-סויסון
   company_fayettecountypublicschools: בתי ספר ציבוריים במחוז פייט
@@ -1557,6 +1670,7 @@ he:
   company_houstonisd: מחוז בית הספר העצמאי של יוסטון
   company_hcpss: בתי ספר ציבוריים במחוז הווארד
   company_idla: האקדמיה ללמידה דיגיטלית באיידהו
+  company_iste: ISTE
   company_janesvilleschooldistrict: מחוז בית הספר ג'נסוויל
   company_johnstoncountyschools: בתי ספר במחוז ג'ונסטון
   company_lps: בית הספר הציבורי לינקולן
@@ -10735,8 +10849,10 @@ he:
   tutorial_ai4alldance_string_platforms: כל הדפדפנים המודרניים
   tutorial_ai4allneural_string_platforms: כל הדפדפנים המודרניים
   tutorial_spheroinout_string_platforms: מנותק
-  tutorial_edisonblueprint_string_platforms: כל הדפדפנים המודרניים
-  tutorial_edisonmaze_string_platforms: כל הדפדפנים המודרניים
+  tutorial_edisonblueprint_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_edisonmaze_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_milnefunctions_string_platforms: כל הדפדפנים המודרניים, קורא מסך
   tutorial_sasmap_string_platforms: כל הדפדפנים המודרניים, iPad, קורא מסך
   tutorial_firstrobotics_string_platforms: כל הדפדפנים המודרניים
