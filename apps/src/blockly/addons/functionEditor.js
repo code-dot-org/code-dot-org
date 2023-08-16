@@ -71,8 +71,32 @@ export default class FunctionEditor {
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
       .addEventListener('click', () => {
-        // TODO: Handle deletion
-        console.log('in delete click handler');
+        // delete all caller blocks from the procedure workspace
+        Blockly.Procedures.getCallers(
+          this.block.getProcedureModel().getName(),
+          this.procedureWorkspace
+        ).forEach(block => {
+          block.dispose();
+        });
+
+        // delete all caller blocks from the main workspace
+        Blockly.Procedures.getCallers(
+          this.block.getProcedureModel().getName(),
+          this.mainWorkspace
+        ).forEach(block => {
+          block.dispose();
+        });
+
+        // delete the block from the editor workspace's procedure map
+        // this will also cause it to be deleted from the main and procedure
+        // workspaces' map
+        this.editorWorkspace
+          .getProcedureMap()
+          .delete(this.block.getProcedureModel().getId());
+
+        // delete the block from the editor workspace and hide the modal
+        this.block.dispose();
+        this.hide();
       });
 
     this.mainWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
@@ -119,11 +143,11 @@ export default class FunctionEditor {
     // Mirror events from editor workspace to procedure workspace.
     this.editorWorkspace.addChangeListener(e => {
       if (e.isUiEvent) return;
-      console.log(
-        'sending event to procedure workspace, e.toJson()',
-        e.toJson()
-      );
       var json = e.toJson();
+      // console.log(
+      //   'sending event to procedure workspace, e.toJson()',
+      //   e.toJson()
+      // );
       // Convert JSON back into an event, then execute it.
       var secondaryEvent = Blockly.Events.fromJson(
         json,
@@ -224,10 +248,6 @@ export default class FunctionEditor {
   }
 
   newProcedureCallback() {
-    console.log(
-      'this.editorWorkspace.getProcedureMap() before new procedure is added',
-      this.editorWorkspace.getProcedureMap()
-    );
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       this.procedureWorkspace,
