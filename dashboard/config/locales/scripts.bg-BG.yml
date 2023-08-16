@@ -2556,6 +2556,11 @@ bg:
               display_name: Събития
             lessonGroup-7:
               display_name: Проект за Края на Курса
+            lessonGroup-8:
+              display_name: Данни
+          lessons:
+            lesson-1:
+              name: Данни
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:

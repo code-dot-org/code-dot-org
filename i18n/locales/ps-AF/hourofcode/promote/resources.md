@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: سرچینې
 ---
 
 {{ signup_button }}

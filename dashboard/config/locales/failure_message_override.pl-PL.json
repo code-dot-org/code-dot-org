@@ -1,0 +1,27 @@
+{
+  "pl-PL": {
+    "data": {
+      "failure_message_override": {
+        "Course 4 Playlab For Loops 4b": "Zapamiętaj, obie postacie powinny dotrzeć do swoich flag w tej samej liczbie ruchów!",
+        "Course 4 Playlab For Loops 5b": "Pamiętaj, że obie postacie muszą zatrzymać się w tym samym miejscu.",
+        "Eval Strings Images .2": "Upewnij się, że dołączyłeś łańcuch „Universe”, aby kod utworzył „Hello, Universe”",
+        "MC HOC 2016 Level 2-2": "Użyj bloków \"idź do przodu\" i \"skręć\", aby wprawić swojego kurczaka w ruch.",
+        "MC HOC 2016 Level 3": "Użyj bloków \"na zawsze\", \"idź do przodu\" i \"skręć\", by twój kurczak nadal wędrował.",
+        "MC HOC 2016 Level 4": "Jeśli wszystkie kurczaki poruszają się w tym samym kierunku, użyj \"skręć losowo\", by skłonić je do losowego skręcania w prawo lub w lewo.",
+        "MC HOC 2016 Level 5": "Spróbuj użyć \"na zawsze\" z \"zrób krok w kierunku gracza\".",
+        "MC HOC 2016 Level 6": "Użyj polecenia \"wykluj zombie\" pod \"kiedy noc\", by wykluć co najmniej trzy zombie. Potem dodaj \"zrób krok w stronę gracza\" do ich zdarzenia \"kiedy wyklute\" z pętlą, aby pomóc im gonić cię. Jeśli są zbyt szybkie, dodaj polecenie  \"czekaj\", by je spowolnić.",
+        "MC HOC 2016 Level 8": "Musisz użyć wybuchającego Creepera, żeby wysadzić ścianę, by dosięgnąć swoją owcę.",
+        "MC HOC 2016 New Drop": "Użyj klawiszy strzałek, by przejść do owcy i naciśnij spację lub kliknij planszę gry, aby użyć owcy. I nie zapomnij dodać do swego kodu bloku \"Upuść\".",
+        "MC HOC 2016 New Spawn": "Umieść \"wykluj owcę\" pod \"podczas uruchomienia\".",
+        "MC HOC 2016 New Walk": "Aby otworzyć drzwi, naciśnij spację lub dotknij planszę stojąc twarzą do niej. Wejdź do niej, by kontynuować.",
+        "MC HOC 2016 SCORE LEVEL": "Jeśli masz kłopot z oznaczeniem 5 Golemów, spróbuj zmienić wynik na 2 na oznaczenie.",
+        "MC HOC 2016 Village Test": "Musisz sprawić, by Żelazny Golem gonił i atakował zombie, by wygrać.",
+        "courseC19_playLab_EOC3": "Musisz dodać dwie lub więcej nowych postaci do swojej gry i zaprogramować je, by poruszały się.",
+        "courseC19_playLab_EOC32022": "Musisz dodać dwie lub więcej nowych postaci do swojej gry i zaprogramować je, by poruszały się.",
+        "courseC19_playLab_EOC3_2020": "Musisz dodać dwie lub więcej nowych postaci do swojej gry i zaprogramować je, by poruszały się.",
+        "courseC19_playLab_EOC3_2021": "Musisz dodać dwie lub więcej nowych postaci do swojej gry i zaprogramować je, by poruszały się.",
+        "courseE_playLab_scaffold3": "Musisz dodać dwie lub więcej nowych postaci do swojej gry i zaprogramować je, by poruszały się."
+      }
+    }
+  }
+}

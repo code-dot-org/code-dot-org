@@ -1,8 +1,8 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+title: Go raibh maith agat as síniú suas a óstáil Uair an Chóid!
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# Go raibh maith agat as síniú suas a óstáil Uair an Chóid!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

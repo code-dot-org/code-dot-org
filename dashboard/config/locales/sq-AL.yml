@@ -62,6 +62,7 @@ sq:
     already_linked: Llogaria juaj %{provider} është tashmë e lidhur me llogarinë tuaj
       në Code.org account.
     already_signedup: Jeni regjistruar?
+    clever: Të zgjuar
     continue_with: Hyr me %{provider}
     demigration_success: Përvoja e llogarisë së re tani është çaktivizuar në llogarinë
       tuaj.
@@ -82,7 +83,7 @@ sq:
     google_oauth2: Llogaria e Google
     invalid_provider: Na vjen keq, %{provider} llogaria nuk mund të lidhet me llogarinë
       e Code.org.
-    microsoft_v2_auth: Llogaria e Microsoft
+    microsoft_v2_auth: Microsoft
     migration_required: Na vjen keq, ne nuk mund të lidhim ose shkëputim llogaritë
       që janë ende duke përdorur përvojën e vjetër të llogarisë. Ju lutemi përditësoni
       përvojën e re të llogarisë.
@@ -260,6 +261,7 @@ sq:
     privacy: Rregullat e Privatësisë
     report_abuse: Raporto abuzimin
     secure: Versioni i Sigurtë
+    store: Dyqani
     support: Ndihma dhe Komuniteti
     support_url: http://support.code.org
     thank_you: Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a
@@ -433,6 +435,7 @@ sq:
       learn: Mëso
       legal_privacy: Rregullat e Privatësisë
       legal_tos: Kushtet e shërbimit
+      my_dashboard: Paneli im
       project_gallery: Projektet
       report_bug: Raporto një problem
       sections: Seksionet
@@ -482,6 +485,8 @@ sq:
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
   next_stage: Përfundoi! Vazhdo tek hapi tjetër
+  no_script_access_student: Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin
+    tuaj se në cilën njësi duhet të jeni.
   of: i
   okay: Në rregull
   or: ose
@@ -990,6 +995,7 @@ sq:
   video:
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
+    label: Video
     notes: Asnjë video? Shfaq shënimet.
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     tab: Video.
