@@ -155,3 +155,28 @@ $container-width: 960px;
 .videoContainer {
   height: 246.5px;
 }
+
+.arrowContainer {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #fff;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.arrowContainer::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  top: 100%;
+  left: 54.5%;
+  margin-left: -25px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -9px;
+  background: #fff;
+  z-index: 1;
+}
