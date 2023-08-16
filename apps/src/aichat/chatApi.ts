@@ -1,6 +1,7 @@
 import {Role, Status, ChatCompletionMessage} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
+import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
@@ -9,6 +10,7 @@ async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {messages: messagesToSend};
+
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
@@ -47,8 +49,15 @@ export async function getChatCompletionMessage(
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: newMessage},
   ];
-
-  const response = await postOpenaiChatCompletion(messagesToSend);
+  let response;
+  try {
+    response = await postOpenaiChatCompletion(messagesToSend);
+  } catch (error) {
+    Lab2MetricsReporter.logError(
+      'Error in chat completion request',
+      error as Error
+    );
+  }
 
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
