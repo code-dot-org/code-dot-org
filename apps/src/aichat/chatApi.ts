@@ -8,7 +8,6 @@ import {CHAT_COMPLETION_URL} from './constants';
 async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
-  // Send request to chat completion backend controller.
   const payload = {messages: messagesToSend};
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
