@@ -101,6 +101,9 @@ ro:
         virtual-pl-csd-summer-2023: {}
         self-paced-pl-csp-2023: {}
         self-paced-pl-aiml-2023: {}
+        vpl-csp-2023: {}
+        vpl-csa-2023: {}
+        vpl-csd-2023: {}
     resources:
       curriculum/csd/2017:
         name: Curriculum

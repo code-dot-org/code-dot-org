@@ -15,7 +15,6 @@
 
 # Scripts controlling the internationalization sync
 /bin/i18n/                  @code-dot-org/i18n
-/bin/i18n-codeorg/          @code-dot-org/i18n
 
 
 ############

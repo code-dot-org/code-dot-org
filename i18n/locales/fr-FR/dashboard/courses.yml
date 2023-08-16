@@ -67,6 +67,8 @@ fr:
           description_short: Apprenez les concepts fondamentaux de l’Informatique.
         csd-2023:
           title: Les Découvertes de l’Informatique
+        vpl-csa-2023:
+          title: Formation professionnelle virtuelle CSA
     resources:
       curriculum/csd/2017:
         name: Programme

@@ -198,6 +198,8 @@ hu:
   grade_level_label_elementary: Általános Iskola
   grade_level_label_middle: Középiskola
   grade_level_label_high: Gimnázium
+  students_label: Diákok
+  teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
   teacher_label_csd: CS felfedezések tanár
   teacher_label_csp: CS alapelvek tanár
@@ -211,7 +213,9 @@ hu:
   call_to_action_explore_unit: Fedezze fel az egységet
   call_to_action_explore_curriculum: Fedezze fel a tantervet
   call_to_action_explore_curriculum_options: Fedezze fel a tantervi lehetőségeket
+  call_to_action_explore_lessons: Fedezze fel az órákat
   call_to_action_explore_modules: Fedezze fel a modulokat
+  call_to_action_explore_module: Fedezze fel a modult
   call_to_action_explore_workshops: Fedezze fel a műhelyeket
   call_to_action_explore_course: Fedezze fel a tanfolyamot
   call_to_action_explore_courses: Fedezze fel a tanfolyamokat
@@ -258,8 +262,10 @@ hu:
   call_to_action_see_module_details: Lásd a modul részleteit
   call_to_action_start_modules: Indító modulok
   call_to_action_see_course_details: Lásd a tanfolyam részleteit
+  call_to_action_see_lesson_details: Lásd a lecke részleteit
   call_to_action_learn_about_approach: Tudjon meg többet megközelítésünkről
   call_to_action_try_java_lab: Próbálja ki a Java Lab-ot
+  call_to_action_notify_available: Értesítsen, ha elérhető
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -332,6 +338,20 @@ hu:
   aria_label_call_to_action_csf_course_d: Lásd a D tanfolyam részleteit
   aria_label_call_to_action_csf_course_e: Lásd az E tanfolyam részleteit
   aria_label_call_to_action_csf_course_f: Lásd az F tanfolyam részleteit
+  aria_label_call_to_action_ai_pl_101_videos: Nézze meg az AI 101 tanároknak videókat
+  aria_label_call_to_action_ai_teaching_module: Fedezze fel a Teaching AI és a Machine
+    Learning modult
+  aria_label_call_to_action_how_ai_works_lesson_01: Lásd a Bevezetés a gépi tanulásba
+    lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_02: Lásd a Computer Vision lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_03: Lásd a Neural Networks lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_04: Tekintse meg a Chatbots és a Large
+    Language Models lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_05: Lásd a Generatív képek lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_06: Lásd az Algoritmikus torzítás
+    lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_07: Lásd az AI Etikai Kódex lecke
+    részleteit
   video_title_professional_learning_program: A Code.org szakmai tanulási programja
   curriculum_name_csf: Számítástechnika alapjai
   curriculum_name_csf_02: Bármely CS alapismeretek (A-F tanfolyam)
@@ -451,6 +471,10 @@ hu:
   module_label_student_tool: Hallgatói eszköz
   module_label_student_product: Termék
   module_label_student_content_resources: Tartalom és források
+  module_label_new: Új
+  module_label_coming_soon: Hamarosan
+  module_label_video_series: Videó sorozat
+  module_label_self_paced: Saját tempójú modul
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -473,9 +497,13 @@ hu:
   module_grade_9_12_teachers: 9-12 Tanárok
   module_level_beginner: Kezdő
   module_level_intermediate: Közbenső
+  module_duration_45_mins: 45 percek
+  module_duration_1_hr: 1 óra
   module_duration_2_hrs: 2 óra
   module_duration_3_hrs: 3 óra
+  module_duration_5_hrs: 5 óra
   module_duration_8_hrs: 8 óra
+  module_duration_20_hrs: 20 óra
   module_duration_35_hrs: 35 óra
   module_duration_lesson: Lecke
   module_duration_week: Hét
@@ -552,6 +580,7 @@ hu:
   heading_no_devices: Nincs eszköz? Mi fedeztük
   heading_java_lab: Java Lab
   heading_objects_first: Objektumok először
+  heading_these_lessons_will: 'Ezek a leckék:'
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -684,6 +713,11 @@ hu:
   ai_curriculum_grades_03: 'Fokozat szintek: 3-12'
   ai_curriculum_duration_03: 'Időtartam: 1 óra'
   ai_curriculum_btn_aria_label_03: Próbálja ki az AI for Oceans tevékenységet
+  ai_curriculum_title_04: Hogyan működik az AI
+  ai_curriculum_desc_04: Ezek a leckék kiegészítik a How AI Works videósorozatot.
+    Minden lecke a sorozat egyetlen videójával párosul, mélyebben belemerülve a videókban
+    bemutatott fogalmakba.
+  ai_curriculum_btn_aria_label_04: Fedezze fel, hogyan működik az AI leckéi
   ai_carousel_heading: 'Amit a tanárok mondanak az AI-ról a Code.org segítségével:'
   ai_carousel_quote_01: Ez a lecke lehetőséget adott hallgatóimnak is, hogy lássák,
     van-e véleményelem az osztályozási rendszerekben. Később, amikor elkezdtük látni,
@@ -700,6 +734,10 @@ hu:
   ai_pl_list_04: Vegye figyelembe az AI és a gépi tanulás valós következményeit.
   ai_pl_list_05: Fedezze fel a fejezet végi projekteket.
   ai_pl_duration: 'Időtartam: 2 óra'
+  ai_pl_title: AI és gépi tanulás tanítása
+  ai_pl_desc: Bevezetés a mesterséges intelligenciába és a gépi tanulásba. Képezzen
+    gépi tanulási modellt az AI Lab. segítségével, és vegyen részt a gépi tanulási
+    alkalmazásokkal. Vegye figyelembe az AI és a gépi tanulás valós következményeit.
   ai_video_series_title: Hogyan működik az AI
   ai_video_series_desc: A Microsoft vezérigazgatója, Satya Nadella bevezetésével ez
     a rövid videósorozat bemutatja, hogyan működik a mesterséges intelligencia és
@@ -725,6 +763,7 @@ hu:
   ai_pl_101_hero_heading: AI 101 tanároknak
   ai_pl_101_hero_desc: Fedezze fel a mesterséges intelligencia (AI) átalakító potenciálját
     az oktatásban az oktatóknak szóló ingyenes online tanulási sorozatunkkal.
+  ai_pl_101_hero_desc_02: Átfogó online tanulási sorozat tanárok számára.
   ai_pl_101_hero_presented: Által bemutatott
   ai_pl_101_intro_heading: Mi az AI 101 a tanárok számára?
   ai_pl_101_intro_text: Az AI 101 for Teachers egy ingyenes, alapvető online szakmai
@@ -769,6 +808,100 @@ hu:
     pontozási modellek és az AI kihasználásával, segítve a tanárokat abban, hogy iteratív
     visszajelzést és formatív értékelést nyújtsanak az írási élmény során.'
   ai_pl_101_explore__button_4: Fedezze fel az eszközt
+  ai_pl_101_video_title_1: Tűzparti csevegés Sal Khannal és Hadi Partovival
+  ai_pl_101_video_desc_1: Csatlakozzon Sal Khanhoz (Khan Akadémia) és Hadi Partovi
+    (Code.org) egy tűzparti beszélgetéshez a mesterséges intelligencia befogadásáról
+    az osztályteremben. Várjon egy élénk vitát, amely magában foglalja az AI körüli
+    legvitatottabb témákat.
+  ai_pl_101_video_title_2: Az AI demisztifikálása oktatók számára
+  ai_pl_101_video_desc_2: Bevezetés a mesterséges intelligencia alapjaiba, amely felkészíti
+    Önt az alapvető ismeretekre, hogy megértse az AI mély hatását társadalmunkban
+    és annak növekvő jelentőségét az oktatás területén. Gyakorlati betekintést nyerhet
+    az AI kiaknázásába az osztálytermi feladatokhoz, és időt takaríthat meg az adminisztratív
+    feladatokon.
+  ai_pl_101_video_title_3: A tanulás átalakítása AI-vel
+  ai_pl_101_video_desc_3: Fedezze fel az AI és az oktatás metszéspontját. Ez a foglalkozás
+    azt vizsgálja, hogyan lehet az AI kombinálni a pedagógiával a hallgatók tanulásának
+    fokozása érdekében. Kötelező részvétel azoknak az oktatóknak, akik az AI kihasználására
+    törekednek, hogy átalakítsák tanítási gyakorlatukat, hogy gazdagítsák diákjaik
+    tanulási tapasztalatait.
+  ai_pl_101_video_title_4: A mesterséges intelligencia felelősségteljes megközelítésének
+    biztosítása
+  ai_pl_101_video_desc_4: Fedezze fel a mesterséges intelligencia oktatási környezetbe
+    történő beépítésének etikai megfontolásait és bevált gyakorlatait. Ez az ülés
+    konkrét stratégiákat, erőforrásokat és valós példákat tartalmaz, amelyek mindegyike
+    az AI lehetséges elfogultságainak és az ezzel járó etikai megfontolásoknak a megértését
+    célozza.
+  ai_pl_101_video_title_5: Az AI bevezetése az osztályterembe
+  ai_pl_101_video_desc_5: Ez a foglalkozás az AI oktatására, az AI oktatási eszközök
+    értékelésére és felhasználására, valamint az AI kiaknázására összpontosít a hallgatók
+    értékeléséhez. Az elmélet gazdag keverékével, gyakorlati példák, és források,
+    célja, hogy felhatalmazza az oktatókat az AI tájon való eligazodásra és a diákok
+    tanulási tapasztalatainak javítására.
+  ai_pl_101_video_desc_6: 'Tudjon meg többet az AI nagy változásait előidéző új technológiáról,
+    amely két új videót tartalmaz a nagy nyelvi modelleken (például a ChatGPT) és
+    a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
+    a szakértőktől: Mira Murati, az OpenAI műszaki igazgatója és Cristóbal Valenzuela,
+    a RunwayML vezérigazgatója.'
+  how_ai_works_hero_heading: Hogyan működik az AI
+  how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
+    videósorozatunkkal és a kísérő leckékkel!
+  how_ai_works_intro_desc: Ez a rövid videósorozat és az azt kísérő osztálytermi órák
+    bemutatják Önt és diákjait a mesterséges intelligencia működéséről és miért számít.
+    Választhat egyéni órákat a téma alapján, felfedezheti a témák teljes sorozatát
+    egy osztályban, vagy megtaníthatja mind a 7 órát, hogy mélyebb merülést nyújtson.
+  how_ai_works_intro_list_01: Bemutatjuk a mesterséges intelligenciát és a gépi tanulást
+  how_ai_works_intro_list_02: Merüljön el a generatív AI működésében, beleértve a
+    nagy nyelvi modelleket (LLM) és a képgenerálást
+  how_ai_works_intro_list_03: Fedezze fel az elfogultságot, az etikát, az adatvédelmet
+    és az AI felelősségteljes használatát
+  how_ai_works_intro_list_04: Érintse meg az AI valós alkalmazásait, beleértve a számítógépes
+    látást
+  how_ai_works_lessons_heading: AI órák az osztályod számára
+  how_ai_works_lesson_title_01: Bevezetés a gépi tanulásba
+  how_ai_works_lesson_desc_01: Ismerje meg a mesterséges intelligencia egyik formáját,
+    az úgynevezett gépi tanulást, és hogyan használhatják a problémamegoldási folyamatot
+    egy robot kiképzéséhez a problémák megoldására. Vegyen részt gépi tanulási tevékenységekben,
+    ahol egy robot megtanulja, hogyan kell észlelni a halak mintáit.
+  how_ai_works_lesson_title_02: Számítógépes látás
+  how_ai_works_lesson_desc_02: Ismerje meg, hogyan működik a számítógépes látás. Nézzen
+    meg egy videót, amely elmagyarázza a számítógépes látást és azt, hogy a számítógép
+    hogyan „lát”. Ezután tervezzen egy algoritmust, amely hálózatot használ annak
+    eldöntésére, hogy a hét szegmenses kijelző hány számot jelenít meg, és tesztelje
+    azt.
+  how_ai_works_lesson_title_03: Neurális hálózatok
+  how_ai_works_lesson_desc_03: Ismerje meg, hogyan működnek a neurális hálózatok.
+    Használjon kütyüket a neurális hálózatok felfedezéséhez. Nézzen meg egy videót,
+    amely elmagyarázza a neurális hálózatokat. Végül beszélje meg a különféle perspektívák
+    szükségességét az ajánlási rendszerek létrehozásakor.
+  how_ai_works_lesson_title_04: Chatbotok és nagy nyelvi modellek
+  how_ai_works_lesson_desc_04: Ismerje meg, mi az a nagy nyelvi modell (LLM) és hogyan
+    működik, majd egy LLM segítségével hozzon létre egy szöveget az AI-vel. Végül,
+    beszélje meg, hogy az LLM-ek intelligensek vagy kreatívak-e vagy sem.
+  how_ai_works_lesson_title_05: Generatív képek
+  how_ai_works_lesson_desc_05: Ismerje meg, hogyan hozhat létre képeket az AI, majd
+    fedezze fel a diffúziós AI widgetet, és vitassa meg, hogy ezek a modellek kreatívak-e
+    vagy sem.
+  how_ai_works_lesson_title_06: Algoritmikus torzítás
+  how_ai_works_lesson_desc_06: Gyakorolja a képek kivágását, hogy feltárja a Twitter
+    vágási algoritmus alapjául szolgáló torzítást, majd olvassa el és nézzen meg egy
+    videót ennek az elfogult algoritmusnak a felfedezéséről. Végül beszélje meg az
+    algoritmusok elfogultságának felismerésének és csökkentésének módjait.
+  how_ai_works_lesson_title_07: AI Etikai Kódexünk
+  how_ai_works_lesson_desc_07: Végezzen kutatást olyan cikkek és videók felhasználásával,
+    amelyek etikai buktatókat tárnak fel az általuk választott mesterséges intelligencia
+    területén. Szerelje össze az egész osztályra kiterjedő „AI etikai kódexünk” erőforrást
+    az AI alkotói és törvényhozói számára mindenhol.
+  how_ai_works_lessons_in_a_day_title: Hogyan működik az AI egy nap alatt
+  how_ai_works_lessons_in_a_day_desc: Csak egy napod van? Lehetőség van arra is, hogy
+    az egész sorozatot egyetlen nap alatt bemutassák a hallgatóknak. Tökéletes minden
+    tantárgyi tanár számára, aki meg akarja ismertetni a diákokat az AI-vel, vagy
+    akár vendégtanár órájaként.
+  how_ai_works_lessons_in_a_day_desc_02: Mutassa be az összes „Hogyan működik az AI”
+    videót egy nap alatt. A diákok követik az egyes videókat a videó szókincsének
+    egyeztetésével, majd válaszolnak az egyes videókkal kapcsolatos reflexiós kérdésre.
+  how_ai_works_resources_desc: Szeretne többet megtudni az AI-ről? Íme néhány további
+    forrás, amelyek segíthetnek Önnek és diákjainak tanulásának kiterjesztésében.
   ai_vid_intro_caption: Bemutatjuk, hogyan működik az AI
   ai_vid_chatbots_caption: Hogyan működnek a chatbotok és a nagy nyelvi modellek
   ai_vid_creativity_caption: Van-e mesterséges intelligenciája és kreativitása?
@@ -1105,10 +1238,10 @@ hu:
   teach_page_additional_materials_list_desc_03: Nyomtassa ki ezeket a különféle példaképek
     plakátjait, hogy lógjon az iskolában, és inspirálja diákjait a számítástechnika
     kipróbálására.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1678,6 +1811,7 @@ hu:
   not_found_desc: A kért oldal nem található
   not_found_instructions: Ellenőrizze a web-címet és töltse újra, vagy válasszon egy
     linket az alábbi listából.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Ifjúság fejlesztés
   company_asa: Posztgraduális szövetség
   company_asos: ASOS
@@ -1730,6 +1864,7 @@ hu:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1751,6 +1886,7 @@ hu:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -11976,8 +12112,10 @@ hu:
   tutorial_ai4alldance_string_platforms: Minden modern böngésző
   tutorial_ai4allneural_string_platforms: Minden modern böngésző
   tutorial_spheroinout_string_platforms: Kihúzva
-  tutorial_edisonblueprint_string_platforms: Minden modern böngésző
-  tutorial_edisonmaze_string_platforms: Minden modern böngésző
+  tutorial_edisonblueprint_string_platforms: Minden modern böngésző, Android táblagép,
+    iPad
+  tutorial_edisonmaze_string_platforms: Minden modern böngésző, Android táblagép,
+    iPad
   tutorial_milnefunctions_string_platforms: Minden modern böngésző
   tutorial_sasmap_string_platforms: Minden modern böngésző, iPad, Képernyőolvasó
   tutorial_firstrobotics_string_platforms: Minden modern böngésző
