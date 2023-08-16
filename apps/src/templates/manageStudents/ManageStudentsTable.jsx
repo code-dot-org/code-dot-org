@@ -11,6 +11,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
@@ -490,7 +491,7 @@ class ManageStudentsTable extends Component {
     columns.push(this.ageColumn(sortable));
 
     if (
-      !window.GENDER_FEATURE_ENABLED ||
+      !experiments.isEnabled(experiments.GENDER_FEATURE_ENABLED) ||
       LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
     ) {
       columns.push(this.genderColumn(sortable));
@@ -596,7 +597,7 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (window.GENDER_FEATURE_ENABLED) {
+    if (experiments.isEnabled(experiments.GENDER_FEATURE_ENABLED)) {
       return {
         property: 'genderTeacherInput',
         header: {
