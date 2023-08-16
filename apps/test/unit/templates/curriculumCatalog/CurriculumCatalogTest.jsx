@@ -30,6 +30,7 @@ import {
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,
   noPathCurriculum,
+  selfPacedPlCurrciulum,
 } from './CurriculumCatalogTestHelper';
 import teacherSections, {
   setSections,
@@ -42,6 +43,7 @@ describe('CurriculumCatalog', () => {
     isEnglish: false,
     languageNativeName: 'sampleLanguageNativeName',
     isSignedOut: true,
+    selfPacedPlCourseOfferings: selfPacedPlCurrciulum,
   };
   let store;
 
