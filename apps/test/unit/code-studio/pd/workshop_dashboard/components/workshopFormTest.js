@@ -75,6 +75,7 @@ describe('WorkshopForm test', () => {
   });
 
   it('creates and publishes new workshop form', () => {
+    const clock = sinon.useFakeTimers();
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -117,11 +118,13 @@ describe('WorkshopForm test', () => {
     // Publish workshop
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
+    clock.tick(50);
 
     expect(onPublish).to.have.been.calledOnce;
   });
 
   it('edits form and can save', () => {
+    const clock = sinon.useFakeTimers();
     const onSave = sinon.spy();
 
     const wrapper = mount(
@@ -146,8 +149,10 @@ describe('WorkshopForm test', () => {
 
     expect(onSave).not.to.have.been.called;
 
+    // Save workshop
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
     saveButton.simulate('click');
+    clock.tick(50);
 
     expect(onSave).to.have.been.calledOnce;
     expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
