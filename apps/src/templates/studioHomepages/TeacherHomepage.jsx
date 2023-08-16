@@ -91,8 +91,7 @@ export const UnconnectedTeacherHomepage = ({
     if (queryStringOpen === 'rosterDialog') {
       beginGoogleImportRosterFlow();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [beginGoogleImportRosterFlow, queryStringOpen]);
 
   const handleCensusBannerSubmit = () => {
     if (censusBanner.current.isValid()) {

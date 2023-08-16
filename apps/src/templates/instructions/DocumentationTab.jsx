@@ -48,8 +48,7 @@ export const UnconnectedDocumentationTab = forwardRef(
         setFallbackKey(firstKey);
       }
       setClassMap(classes);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
+    }, [data, defaultClassKey]);
 
     const getDropdownOptions = function () {
       const options = [];

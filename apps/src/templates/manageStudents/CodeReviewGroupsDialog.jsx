@@ -113,8 +113,7 @@ export default function CodeReviewGroupsDialog({
         setLoadingStatus(LOADING_STATES.LOADED);
       })
       .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dataApi]);
 
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
