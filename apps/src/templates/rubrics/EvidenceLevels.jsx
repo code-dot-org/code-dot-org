@@ -35,13 +35,10 @@ export default function EvidenceLevels({
               label={UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
               name={radioGroupName}
               value={evidenceLevel.id}
-              size={'s'}
+              size="s"
             />
             <BodyThreeText
-              className={classNames(
-                style.evidenceLevelDescription,
-                style.evidenceLevelDescriptionIndented
-              )}
+              className={classNames(style.evidenceLevelDescriptionIndented)}
             >
               {evidenceLevel.teacherDescription}
             </BodyThreeText>
@@ -54,12 +51,11 @@ export default function EvidenceLevels({
       <div className={style.evidenceLevelSet}>
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
+            {/*TODO: [DES-321] Label-two styles here*/}
             <BodyTwoText className={style.evidenceLevelLabel}>
               {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
             </BodyTwoText>
-            <BodyThreeText className={style.evidenceLevelDescription}>
-              {evidenceLevel.teacherDescription}
-            </BodyThreeText>
+            <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
           </div>
         ))}
       </div>

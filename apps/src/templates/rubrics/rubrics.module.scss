@@ -114,17 +114,17 @@
 
 .learningGoalExpanded {
   border-bottom: 1px solid $neutral_dark40;
-  padding: 20px 16px;
+  padding: 1.25rem 1rem;
 
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   align-self: stretch;
 }
 
 .learningGoalTips {
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   border: 1px solid $neutral_dark50;
   background: $neutral_dark10;
 
@@ -142,7 +142,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   align-self: stretch;
 }
 
@@ -150,29 +150,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
   align-self: stretch;
 
   span {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: $gotham-bold;
     line-height: 154%;
   }
 }
 
+
 .evidenceLevelLabel {
   font-family: $gotham-bold;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
 }
 
-.evidenceLevelDescription {
-  font-family: $gotham-regular;
-  font-size: 14px;
-  line-height: 154%;
-}
-
 .evidenceLevelDescriptionIndented {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
