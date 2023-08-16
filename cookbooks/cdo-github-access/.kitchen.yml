@@ -1,0 +1,15 @@
+---
+driver:
+  name: docker
+  chef_version: 17.6.18
+  docker_platform: linux/amd64
+transport:
+  name: docker
+verifier:
+  name:  inspec
+platforms:
+  - name: ubuntu-18.04
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-github-access]

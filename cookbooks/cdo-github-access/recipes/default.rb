@@ -2,6 +2,7 @@
 # Cookbook Name:: cdo-github-access
 # Recipe:: default
 #
+apt_package 'gnupg'
 
 apt_repository 'git-core' do
   uri          'ppa:git-core/ppa'
@@ -15,6 +16,8 @@ apt_package 'git'
 packagecloud_repo "github/git-lfs" do
   type "deb"
 end
+
+apt_package 'git-lfs'
 
 cookbook_file "#{node[:home]}/.gitconfig" do
   source 'gitconfig'
