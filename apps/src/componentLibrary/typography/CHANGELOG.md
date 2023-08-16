@@ -2,7 +2,7 @@
 
 All notable changes to this component will be documented in this file.
 
-## [2.0.1]()
+## [2.0.1](https://github.com/code-dot-org/code-dot-org/pull/53337)
 * add ```ExtraStrong``` typography element
 
 ## [2.0.0](https://github.com/code-dot-org/code-dot-org/pull/52531)

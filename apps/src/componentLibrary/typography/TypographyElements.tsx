@@ -135,5 +135,6 @@ export const {
   OverlineThreeText,
   EmText,
   StrongText,
+  ExtraStrongText,
   Figcaption,
 } = generateComponents(typographyElementsToGenerate);

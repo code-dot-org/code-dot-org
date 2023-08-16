@@ -7,6 +7,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
   BodyFourText,
+  ExtraStrongText,
 } from '@cdo/apps/componentLibrary/typography';
 
 export default function LearningGoal({
@@ -64,7 +65,9 @@ LearningGoal.propTypes = {
 const AiToken = () => {
   return (
     <BodyFourText className={style.aiToken}>
-      {i18n.artificialIntelligenceAbbreviation()}
+      <ExtraStrongText>
+        {i18n.artificialIntelligenceAbbreviation()}
+      </ExtraStrongText>
       <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
     </BodyFourText>
   );
