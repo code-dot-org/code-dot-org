@@ -161,7 +161,17 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
-    puts @script_level.lesson.localized_name
+    if @rubric && view_as_other
+      student_user_level = @view_as_user.user_levels.find_by(script: @script, level: @level)
+      @student_level_info = {
+        name: @view_as_user.name,
+        timeSpent: student_user_level&.time_spent,
+        attempts: student_user_level&.attempts,
+        lastAttempt: student_user_level&.updated_at,
+        submitted: !!student_user_level&.submitted?,
+      }
+      puts @student_level_info.inspect
+    end
 
     present_level
   end

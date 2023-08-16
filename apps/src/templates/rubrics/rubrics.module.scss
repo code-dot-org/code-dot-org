@@ -19,14 +19,14 @@
   left: 10px;
   bottom: 116px;
   z-index: 400;
-  width: 760px;
+  width: 47.5rem;
 }
 
 .studentInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
   align-self: stretch;
 
   h2 {
@@ -37,29 +37,28 @@
 .studentMetadata {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
+  gap: 1.5rem;
   align-self: stretch;
 
   .singleMetadata {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
   }
 }
 
 .rubricContent {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 .25rem .25rem;
   border: 1px solid $neutral_dark;
   background: $neutral_light;
   box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
-  //width: 726px;
-  height: 408px;
+  height: 25.5rem;
 
   overflow-x: hidden;
   overflow-y: auto;
 
   display: flex;
-  padding: 16px 40px 16px 16px;
+  padding: 1rem 2.5rem 1rem 1rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -67,18 +66,16 @@
 
 .learningGoalContainer {
   display: flex;
-  // padding: 0px 1px;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
 
-  border-radius: 4px;
-  border: 1px solid var(--light-gray-400, #a9acaf);
-  background: var(--light-white, #fff);
+  border-radius: .25rem;
+  border: 1px solid $light_gray_400;
+  background: $white;
 }
 
 .rubricHeader {
-  //width: 730px;
   height: 21px;
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
@@ -95,7 +92,7 @@
   display: flex;
   align-self: stretch;
   border-bottom: 1px solid $neutral_dark40;
-  min-height: 40px;
+  min-height: 2.5rem;
   summary:hover {
     background: none;
   }
@@ -157,6 +154,5 @@
 
 .learningGoalExpanded {
   border-top: 1px solid $neutral_dark40;
-  // border-bottom: 1px solid $neutral_dark40;
   padding: 20px 16px;
 }
