@@ -80,4 +80,13 @@ class I18nScriptUtilsTest < Minitest::Test
 
     refute I18nScriptUtils.unit_directory_change?(expected_file_name, expected_file_path)
   end
+
+  def test_yml_file_fixing
+    provided_yaml_file_path = 'provided_yaml_file_path'
+
+    File.expects(:read).with(provided_yaml_file_path).returns("---\nen-US:\n  data\n")
+    File.expects(:write).with(provided_yaml_file_path, %Q["en-US":\n  data\n])
+
+    I18nScriptUtils.fix_yml_file(provided_yaml_file_path)
+  end
 end
