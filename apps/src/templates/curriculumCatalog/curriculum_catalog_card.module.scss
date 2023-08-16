@@ -181,14 +181,18 @@ $container-width: 309px;
   display: flex;
 }
 
-.selector:nth-child(3n + 1) > .centerExpandedCard {
+.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
   justify-content: flex-start;
 }
 
-.selector:nth-child(3n + 2) > .centerExpandedCard {
+.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
   justify-content: center;
 }
 
-.selector:nth-child(3n + 3) > .centerExpandedCard {
+.cardsContainer:nth-child(3n + 3) .centerExpandedCard {
   justify-content: flex-end;
+}
+
+.cardsContainer:nth-child(3n + 3) .arrowContainer:before {
+  background: #f7f8fa;
 }

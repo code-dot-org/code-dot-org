@@ -25,6 +25,7 @@ const CurriculumCatalog = ({
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardIndex, setExpandedCardIndex] = useState(null);
 
   const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
@@ -59,6 +60,14 @@ const CurriculumCatalog = ({
     return null;
   };
 
+  const handleExpandedCardChange = index => {
+    if (expandedCardIndex === index) {
+      setExpandedCardIndex(null);
+    } else {
+      setExpandedCardIndex(index);
+    }
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -71,30 +80,33 @@ const CurriculumCatalog = ({
                 !!curriculum.grade_levels && !!curriculum.course_version_path
             )
             .map(
-              ({
-                key,
-                image,
-                display_name,
-                display_name_with_latest_year,
-                grade_levels,
-                duration,
-                school_subject,
-                cs_topic,
-                course_version_path,
-                course_version_id,
-                course_id,
-                course_offering_id,
-                script_id,
-                is_standalone_unit,
-                is_translated,
-                //Expanded Card Props
-                device_compatibility,
-                description,
-                professional_learning_program,
-                video,
-                published_date,
-                self_paced_pl_course_offering_id,
-              }) => (
+              (
+                {
+                  key,
+                  image,
+                  display_name,
+                  display_name_with_latest_year,
+                  grade_levels,
+                  duration,
+                  school_subject,
+                  cs_topic,
+                  course_version_path,
+                  course_version_id,
+                  course_id,
+                  course_offering_id,
+                  script_id,
+                  is_standalone_unit,
+                  is_translated,
+                  //Expanded Card Props
+                  device_compatibility,
+                  description,
+                  professional_learning_program,
+                  video,
+                  published_date,
+                  self_paced_pl_course_offering_id,
+                },
+                index
+              ) => (
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
@@ -124,6 +136,8 @@ const CurriculumCatalog = ({
                   selfPacedPlCourseOfferingPath={getSelfPacedPlPath(
                     self_paced_pl_course_offering_id
                   )}
+                  isExpanded={expandedCardIndex === index}
+                  onQuickViewClick={() => handleExpandedCardChange(index)}
                   {...props}
                 />
               )
