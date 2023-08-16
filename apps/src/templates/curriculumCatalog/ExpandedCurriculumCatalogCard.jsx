@@ -61,6 +61,7 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
+
   return (
     <div>
       <div className={style.expandedCardContainer}>
