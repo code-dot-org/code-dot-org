@@ -18,7 +18,6 @@ const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
-  selfPacedPlCourseOfferings,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -179,14 +178,6 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferings: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      key: PropTypes.string,
-      display_name: PropTypes.string,
-      course_version_path: PropTypes.string,
-    })
-  ),
 };
 
 export default CurriculumCatalog;
