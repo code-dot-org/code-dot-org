@@ -1,13 +1,14 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import {
   BodyTwoText,
-  Heading4,
+  Heading3,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
@@ -27,27 +28,17 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
 }) => {
-  const subjectsRef = useRef(null);
-  const [topics, setTopics] = useState(
-    i18n.topic() + ': ' + subjectsAndTopics.join(', ')
-  );
   const icons = {
     ideal: 'circle-check',
     not_recommended: 'triangle-exclamation',
     incompatible: 'circle-xmark',
   };
-  const compatibilities = {
-    'circle-check': '#3ea33e',
-    'triangle-exclamation': '#eed202',
-    'circle-xmark': '#e5311a',
-  };
 
-  useEffect(() => {
-    const subjects = subjectsRef.current;
-    if (subjects.scrollWidth > 410) {
-      setTopics(i18n.topic() + ': ' + i18n.multiple());
-    }
-  }, []);
+  const iconColor = {
+    'circle-check': style.circleCheck,
+    'triangle-exclamation': style.triangleExclamation,
+    'circle-xmark': style.circleXmark,
+  };
 
   const getDeviceCompatibility = deviceCompatibility => {
     const devices = JSON.parse(deviceCompatibility);
@@ -62,10 +53,6 @@ const ExpandedCurriculumCatalogCard = ({
     return compatibilityIcons;
   };
 
-  const getIconColor = compatibility => {
-    return compatibilities[compatibility];
-  };
-
   const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
 
   return (
@@ -77,9 +64,9 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading4 style={{marginBottom: '8px'}}>
+              <Heading3 style={{marginBottom: '8px'}}>
                 {courseDisplayName}
-              </Heading4>
+              </Heading3>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
@@ -91,8 +78,8 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="book" className="fa-solid" />
-                  <BodyTwoText ref={subjectsRef} className={style.subjectsText}>
-                    {topics}
+                  <BodyTwoText className={style.subjectsText}>
+                    {i18n.topic() + ': ' + subjectsAndTopics.join(', ')}
                   </BodyTwoText>
                 </div>
               </div>
@@ -100,7 +87,9 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <div className={style.bodyText}>{description}</div>
+                    <BodyTwoText className={style.descriptionText}>
+                      {description}
+                    </BodyTwoText>
                   </div>
                   <div className={style.videoContainer}>
                     <iframe
@@ -118,50 +107,41 @@ const ExpandedCurriculumCatalogCard = ({
                   <div className={style.resourcesContainer}>
                     <Heading6>{i18n.availableResources()}</Heading6>
                     <hr className={style.thickDivider} />
-                    <a className={style.bodyText} href="#">
-                      {i18n.lessonPlans()}
-                    </a>
+                    <TextLink text={i18n.lessonPlans()} href="#" />
+
                     <hr className={style.horizontalDivider} />
-                    <a className={style.bodyText} href="#">
-                      {i18n.slideDecks()}
-                    </a>
+                    <TextLink text={i18n.slideDecks()} href="#" />
                     <hr className={style.horizontalDivider} />
-                    <a className={style.bodyText} href="#">
-                      {i18n.activityGuides()}
-                    </a>
+                    <TextLink text={i18n.activityGuides()} href="#" />
                     <hr className={style.horizontalDivider} />
-                    <a className={style.bodyText} href="#">
-                      {i18n.answerKeysExemplars()}
-                    </a>
+                    <TextLink text={i18n.answerKeysExemplars()} href="#" />
                     <hr className={style.horizontalDivider} />
-                    <a className={style.bodyText} href="#">
-                      {i18n.projectRubrics()}
-                    </a>
+                    <TextLink text={i18n.projectRubrics()} href="#" />
                   </div>
-                  <div className={style.professionalLearning}>
+                  <div className={style.professionalLearningContainer}>
                     <Heading6>{i18n.professionalLearning()}</Heading6>
                     <hr className={style.thickDivider} />
-                    <a
-                      className={style.professionalLearningText}
+                    <TextLink
+                      text={i18n.facilitatorLedWorkshops()}
                       href={professionalLearningProgram}
-                    >
-                      {i18n.facilitatorLedWorkshops()}
-                      <FontAwesome
-                        icon="arrow-up-right-from-square"
-                        className="fa-solid"
-                      />
-                    </a>
+                      icon={
+                        <FontAwesome
+                          icon="arrow-up-right-from-square"
+                          className="fa-solid"
+                        />
+                      }
+                    />
                     <hr className={style.horizontalDivider} />
-                    <a
-                      className={style.professionalLearningText}
+                    <TextLink
+                      text={i18n.selfPacedPl()}
                       href={selfPacedPlCourseOfferingPath}
-                    >
-                      {i18n.selfPacedPl()}
-                      <FontAwesome
-                        icon="arrow-up-right-from-square"
-                        className="fa-solid"
-                      />
-                    </a>
+                      icon={
+                        <FontAwesome
+                          icon="arrow-up-right-from-square"
+                          className="fa-solid"
+                        />
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -171,10 +151,11 @@ const ExpandedCurriculumCatalogCard = ({
                   <div className={style.iconWithDescription}>
                     <FontAwesome
                       icon={compatibilityIcons[key]}
-                      className="fa-solid"
-                      style={{color: getIconColor(compatibilityIcons[key])}}
+                      className={`fa-solid ${
+                        iconColor[compatibilityIcons[key]]
+                      }`}
                     />
-                    <p>{key}</p>
+                    <BodyTwoText>{key}</BodyTwoText>
                   </div>
                 ))}
               </div>
