@@ -1,3 +1,5 @@
+/** @file Top-level view for AI Chat Lab */
+
 import React from 'react';
 import moduleStyles from './aichatView.module.scss';
 import ChatWorkspace from './ChatWorkspace';
