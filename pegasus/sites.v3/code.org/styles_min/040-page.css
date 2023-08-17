@@ -1,11 +1,21 @@
+/* Uses color variables from 050-theme.css */
+
 /* for homepage 2.0.. */
 #homepage .clear {
   clear: both;
 }
 /* ..end homepage 2.0 */
 
+body {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  color: var(--neutral_dark);
+  margin: 0;
+}
+
 h1 {
-  color: #7665a0;
   font-size: 32px;
   font-family: 'Gotham 7r', sans-serif;
   margin-top: 50px;
@@ -14,7 +24,6 @@ h1 {
 }
 
 h2 {
-  color: #00adbc;
   font-size: 22px;
   font-family: 'Gotham 5r', sans-serif;
   margin-top:45px;
@@ -23,7 +32,6 @@ h2 {
 }
 
 h3 {
-  color: #5b6770;
   font-size: 18px;
   font-family: 'Gotham 4r', sans-serif;
   margin-top:25px;
@@ -32,7 +40,6 @@ h3 {
 }
 
 h4 {
-  color: #5b6770;
   font-size: 14px;
   font-family: 'Gotham 5r', sans-serif;
   line-height: 1.2em;
@@ -47,18 +54,17 @@ a {
 }
 
 a:link {
-  color: #7665a0;
-  text-decoration: none;
+  color: var(--brand_secondary_default);
+  text-decoration: underline;
+  transition: color ease-in-out .2s;
 }
 
 a:visited {
-  color: #7665a0;
-  text-decoration: none;
+  color: var(--brand_secondary_default);
 }
 
 a:hover, a:active {
-  text-decoration: underline;
-  color: #5b6770;
+  color: var(--brand_secondary_dark);
 }
 
 strong {
@@ -69,15 +75,6 @@ strong {
 em {
   font-family: 'Gotham 4i', sans-serif;
   font-style: normal;
-}
-
-body {
-  font-family: 'Gotham 4r', sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
-  color: dimgray;
-  margin: 0;
 }
 
 li > ul {
@@ -98,7 +95,7 @@ ul li {
 
 ul li:before {
   content: "• ";
-  color: rgb(0, 161, 230);
+  color: var(--neutral_dark);
 }
 
 .invisiblelist li:before {
@@ -110,16 +107,16 @@ img {
 }
 
 th {
-  background-color: rgb(0, 178, 192);
-  color: white;
+  background-color: var(--brand_primary_default);
+  color: var(--neutral_white);
   padding: 15px;
-  border-color: white;
+  border-color: var(--neutral_white);
   border-width: 1px;
   border-style: solid;
 
-  border-top-color: rgb(0, 178, 192);
-  border-left-color: rgb(0, 178, 192);
-  border-right-color: rgb(0, 178, 192);
+  border-top-color: var(--brand_primary_default);
+  border-left-color: var(--brand_primary_default);
+  border-right-color: var(--brand_primary_default);
 }
 
 td {
@@ -136,7 +133,7 @@ td {
   border: 0;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #00adbc;
+  border-top-color: var(--neutral_dark20);
 }
 
 .grey_input {
@@ -159,6 +156,7 @@ td {
   color: #dcdcdc;
   text-decoration: none;
 }
+
 #petition_form a:hover, #petition_form a:active {
   color: #fff;
   text-decoration: underline;
@@ -167,11 +165,14 @@ td {
 .listed_supporter{
   font-family: 'Gotham 7r', sans-serif;
   font-weight: normal;
-  color: #7665a0;
 }
 
 .greybox {
-  background-color: rgb(88, 103, 113); color: white; padding: 20px; text-align: center; overflow:hidden;
+  background-color: var(--neutral_dark80);
+  color: var(--neutral_white);
+  padding: 20px;
+  text-align: center;
+  overflow:hidden;
 }
 
 #about_nav {
@@ -179,19 +180,23 @@ td {
 }
 
 .about_list_item_selected {
-  color: #ff8a00;
+  color: var(--brand_secondary_default);
   font-family: 'Gotham 7r', sans-serif;
 }
 
 a.about_list_item {
-  color: #999c9f;
+  color: var(--neutral_dark60);
   font-family: 'Gotham 5r', sans-serif;
+  text-decoration: none;
 }
 
+a.about_list_item:hover {
+  color: var(--brand_secondary_default);
+}
 
 .button-color-share {
-  background-color: rgb(126, 92, 162);
-  border-color: rgb(126, 92, 162);
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
 }
 
 button {
@@ -199,8 +204,8 @@ button {
   -webkit-user-select: none;
   -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 164, 0) ;
-  border-color: rgb(255, 164, 0) ;
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
   background-image: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -220,7 +225,7 @@ button {
   border-top-style: solid;
   border-top-width: 1px;
   box-sizing: border-box;
-  color: rgb(255, 255, 255);
+  color: var(--neutral_white);
   cursor: pointer;
   display: inline-block;
   font-family: 'Gotham 4r', sans-serif;
@@ -245,13 +250,13 @@ button {
   white-space: nowrap;
   word-spacing: 0px;
   writing-mode: lr-tb;
+  transition: all ease-in-out .2s;
 }
 
 .btn-white:hover{
   background-color:#E6E6F3;
   border-color:#adadad;
 }
-
 
 .dropdown {
   border-color: rgb(204, 204, 204);
@@ -265,10 +270,10 @@ button {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_primary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {
@@ -297,7 +302,6 @@ label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
-
 
 .video_caption_link {
   font-family: 'Gotham 4r', sans-serif;

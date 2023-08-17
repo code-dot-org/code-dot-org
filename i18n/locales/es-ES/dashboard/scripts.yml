@@ -7601,6 +7601,10 @@ es:
             -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
 
             **Tiempo sugerido**: 70 minutos
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configuración
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -7670,6 +7674,9 @@ es:
           description_short: Una introducción a la informática para pre-lectores.
           description: El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Datos
           lesson_groups:
             lessonGroup-2:
               display_name: Ciudadanía Digital
@@ -7683,10 +7690,15 @@ es:
               display_name: Eventos
             lessonGroup-7:
               display_name: Proyecto de fin de curso
+            lessonGroup-8:
+              display_name: Datos
           description_audience: De 5 a 8 años
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistemas Informáticos
           lesson_groups:
             lessonGroup-2:
               display_name: Ciudadanía Digital
@@ -7698,6 +7710,8 @@ es:
               display_name: Eventos
             lessonGroup-6:
               display_name: Datos
+            lessonGroup-8:
+              display_name: Sistemas Informáticos
           description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -7754,3 +7768,53 @@ es:
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        how-ai-works-2023:
+          title: Cómo funciona la Inteligencia Artificial
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8

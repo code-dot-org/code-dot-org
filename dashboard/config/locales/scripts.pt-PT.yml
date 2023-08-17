@@ -5683,6 +5683,11 @@ pt:
               display_name: Impacto da computação
             lessonGroup-6:
               display_name: Eventos
+            lessonGroup-8:
+              display_name: Dados
+          lessons:
+            lesson-1:
+              name: Dados
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: De 8 a 12 anos
           lesson_groups:
@@ -5719,6 +5724,11 @@ pt:
               display_name: Eventos
             lessonGroup-6:
               display_name: Dados
+            lessonGroup-8:
+              display_name: Sistemas de computação
+          lessons:
+            lesson-1:
+              name: Sistemas de computação
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Idades: 7-11'
           description_short: Aprenda sobre declarações condicionais. Crie sua própria
@@ -6297,6 +6307,22 @@ pt:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '
           title: Simulação de uma epidemia
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -6315,6 +6341,22 @@ pt:
               display_name: Módulo 7
             CSD_Module 8:
               display_name: Módulo 8
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8
         vpl-csd-ci-1:
           description: |-
             Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
@@ -6607,6 +6649,22 @@ pt:
 
             **Duração sugerida:** 120 minutos
           title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

@@ -2875,6 +2875,9 @@ nl:
           description_audience: 'Leeftijden: 4-7'
           description_short: Een inleiding tot informatica voor pre-readers.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digitaal Burgerschap
@@ -2882,6 +2885,8 @@ nl:
               display_name: Lussen
             lessonGroup-6:
               display_name: Gebeurtenissen
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Leeftijden: 5-8'
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
@@ -2925,3 +2930,53 @@ nl:
               display_name: Variabelen
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Hoe AI werkt
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8

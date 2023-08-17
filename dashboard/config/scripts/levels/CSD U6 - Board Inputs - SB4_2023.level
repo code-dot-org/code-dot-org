@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:12:22.000Z",
   "level_num": "custom",
@@ -57,7 +58,7 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//1) When the switch is flipped to closed, change the background-color to black\r\n\r\n//2) When the switch is flipped to open, change the background-color to white\r\n",
@@ -66,7 +67,8 @@
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/circuit-playground",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
@@ -76,12 +78,10 @@
     "ai_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: white;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: black; background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 20px; padding: 2px 15px; width: 290px; height: 50px; position: absolute; left: 15px; top: 185px;\" id=\"label1\">Nothing to see here...</label><img data-canonical-image-url=\"icon://fa-lock\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"eye1\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 45px; top: 240px; margin: 0px;\"><img data-canonical-image-url=\"icon://fa-unlock\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"eye2\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 175px; top: 240px; margin: 0px;\" data-icon-color=\"#ffffff\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 20px; padding: 2px 15px; width: 305px; height: 50px; position: absolute; left: 10px; top: 365px;\" id=\"secretLabel\">The Password is \"Sushi\"</label></div></div>",
     "encrypted_examples": "ys6m+sz5OKTK+kEX8NbqKFYvcBN8NpeZPjMuLWevHe6bkHW80JufMFSgQVoV\n14ELyGiN41qU00z62vzeTRoHpw==\n",
-    "palette_category_at_start": "Circuit",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:22.095+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - SB4_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:22.095+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - SB4_2222\"},{\"changed_at\":\"2023-08-16 17:07:28 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"palette_category_at_start\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

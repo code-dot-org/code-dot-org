@@ -94,7 +94,6 @@ const ExpandedCurriculumCatalogCard = ({
                   <Heading6>{i18n.availableResources()}</Heading6>
                   <hr className={style.thickDivider} />
                   <TextLink text={i18n.lessonPlans()} href="#" />
-
                   <hr className={style.horizontalDivider} />
                   <TextLink text={i18n.slideDecks()} href="#" />
                   <hr className={style.horizontalDivider} />

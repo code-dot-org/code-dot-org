@@ -1929,6 +1929,11 @@ et:
               display_name: Tsüklid
             lessonGroup-6:
               display_name: Sündmused
+            lessonGroup-8:
+              display_name: Andmed
+          lessons:
+            lesson-1:
+              name: Andmed
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:

@@ -1562,6 +1562,9 @@ si:
             lessonGroup-6:
               display_name: දත්ත
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: දත්ත
           lesson_groups:
             lessonGroup-2:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -1569,6 +1572,8 @@ si:
               display_name: ලූපයන්
             lessonGroup-6:
               display_name: වැඩසටහන්
+            lessonGroup-8:
+              display_name: දත්ත
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
