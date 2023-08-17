@@ -26,17 +26,6 @@ $default-spacing: 2px;
   flex-direction: row;
   max-height: calc(100% - $timeline-area-height);
   gap: $default-spacing;
-
-  .topButtonsContainer {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 10;
-
-    &.topButtonsContainerWithHeaders {
-      top: 35px;
-    }
-  }
 }
 
 .playArea {

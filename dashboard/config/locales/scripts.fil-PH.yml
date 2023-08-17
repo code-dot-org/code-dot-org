@@ -1362,6 +1362,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         csd1-dlp:
           description: 'Ito ang Yunit 1 ng Plano sa Mas Malalim na Pag-aaral para
             sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries ng Code.org.
@@ -3555,6 +3557,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3574,6 +3578,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3593,6 +3599,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-data2:
           description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter
             para malutas ang mga problem sa mga datos.
@@ -3639,6 +3647,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3669,6 +3679,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         focus-on-hardware2-2023:
           description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter
             para malutas ang mga problem sa mga datos.
@@ -3700,6 +3712,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3833,6 +3847,8 @@ fil:
             gamit ang mga karakter mula sa Angry Birds, Plants vs. Zombies, at Scrat
             mula sa Ice Age!
           title: Klasiko na Maze
+        how-ai-works-2023:
+          title: Paano Gumagana ang AI
         iceage:
           description: Maglikha ng kuwento o gumawa ng laro gamit ang Ice Age na Play
             Lab!
@@ -3948,9 +3964,11 @@ fil:
               display_name: Epekto ng Pag-Compute
             lessonGroup-6:
               display_name: Mga event
-          student_description: Alamin ang mga pangunahing alituntunin sa computer
-            science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
-            iyong sariling laro o istorya na maaari mong ibahagi.
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Mga Edad: 8-12'
           lesson_groups:
@@ -3969,9 +3987,11 @@ fil:
               display_name: Mga loop
             lessonGroup-5:
               display_name: Epekto ng Pag-Compute
-          student_description: Alamin ang mga pangunahing alituntunin sa computer
-            science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng
-            iyong sariling laro o istorya na maaari mong ibahagi.
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3982,11 +4002,6 @@ fil:
               display_name: Mga event
             lessonGroup-6:
               display_name: Data
-          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga
-            loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin
-            ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung
-            paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong
-            laro o istorya na maaari mong ibahagi!
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:

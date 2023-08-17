@@ -393,6 +393,9 @@ uk:
         csd_gamelab_animation_tab: Анімація
         csd_gamelab_draw_1: Малювання в Ігровій Лабораторії - Частина 1
         csd_gamelab_draw_2: Малювання в Ігровій Лабораторії - Частина 2
+        csd_gamelab_drawloop: Знайомство з циклом малювання
+        csd_gamelab_sprites_1: Знайомство зі спрайтами
+        csd_gamelab_sprites_2: Анімація спрайтів
         csd_gamelab_variables_1: Вступ до змінних - Частина 1
         csd_gamelab_velocity: Швидкість
         csd_weblab_intro_1: Представляємо Веб лабораторію - частина 1
@@ -498,9 +501,9 @@ uk:
         CSF_ifelse_allskins: Використання Якщо/Ще Блоків
         CSF_ifelseifelse_allskins: Використання Якщо/Інше/Ще Блоків
         CSF_loops_AB: Цикли
-        csd_gamelab_booleans: Булеві вирази
-        csd_gamelab_conditional_statements: Умовні твердження
-        csd_gamelab_if_else: Якщо/Інші Твердження
+        csd_gamelab_booleans: Логічні вирази
+        csd_gamelab_conditional_statements: Умовні конструкції
+        csd_gamelab_if_else: Команди Якщо/Інакше
         CSF_SpriteLabIntro_CDEF: Це Спрайт Лаб
         CSF_Spritelab_MakeSprite_CDEF: Як створити спрайт у Спрайт Лабораторії
         CDEF_Video_SpritesInAction: Спрайти в роботі
@@ -524,7 +527,7 @@ uk:
         what_is_an_event: Що таке подія?
         teaching_cs_pair_programming: 'Вивчаємо Основи інформатики: Програмування в парах'
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати проблеми'
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія додатків - Режим дизайну'
+        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим дизайну'
         csd_pair_programming: Парне програмування
         csd_gamelab_functions: Виклик та визначення функцій
         csd_applab_parameters: Функції з параметрами
@@ -535,7 +538,7 @@ uk:
         CSF_Spritelab_MakeSprite_v2: Як створити спрайт
         CSF_SpriteLab_SpritesInAction_v2: Спрайти в роботі
         csd_debugging: Налагодження
-        csd_applab_designmode_short: Режим дизайну Лабораторії додатків
+        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
         csp-pd-welcome: Ласкаво просимо до родини!
         CSF-Teaching-Problem-Solving: 'Основи інформатики: Навчаємось вирішувати проблеми'
         oceans_machine_learning: Машинне навчання
@@ -551,10 +554,13 @@ uk:
         csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
         csf21pilot_prompts: 'Спрайт Лабораторія: Текст і питання'
+        csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
         playlab_2021: Представляємо Ігрову студію
         playlab_2021_reader: Представляємо Ігрову студію
+        csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
+        csd_ml_numerical_ai_lab: Числові дані в Лабораторії ШІ
         PL_CSD_TeacherTips_Debugging: Поради для вчителя - налагодження
-        csd_u6_circuit_playground: Фізична інформатика
+        csd_u6_circuit_playground: Програмування пристроїв
         csd_u6_input_output: Вхідні та вихідні дані
         PL_CS_Journeys_Overview: Інформатичні подорожі
         csp_applab_parameters: Функції з параметрами

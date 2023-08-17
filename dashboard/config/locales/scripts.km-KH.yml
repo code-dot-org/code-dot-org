@@ -319,16 +319,20 @@ km:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2020:
           lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2021:
@@ -338,9 +342,11 @@ km:
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
         coursee-2022:
           lesson_groups:
             csf_functions:
@@ -348,9 +354,11 @@ km:
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
         coursee-2023:
           lesson_groups:
             csf_functions:
@@ -358,9 +366,11 @@ km:
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
         coursee-draft:
           lesson_groups:
             end_of_course_project:
@@ -394,7 +404,7 @@ km:
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -404,7 +414,7 @@ km:
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -420,7 +430,7 @@ km:
             lessonGroup-9:
               display_name: ដក​ចេញ
             ramp_up:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         coursef-2022:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -430,7 +440,7 @@ km:
             lessonGroup-8:
               display_name: អ​ថេរ
             ramp_up:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         coursef-2022-pilot:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -440,13 +450,13 @@ km:
             lessonGroup-8:
               display_name: អ​ថេរ
             ramp_up:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         coursef-2023:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             lessonGroup-3:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             lessonGroup-4:
               display_name: អ​ថេរ
             lessonGroup-6:
@@ -467,6 +477,10 @@ km:
           lessons:
             lesson-4:
               name: អ​ថេរ
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: ចៃដន្យ
         csd-apprentice-18:
           lesson_groups:
             required:
@@ -526,7 +540,7 @@ km:
         csf-2021-pilot:
           lesson_groups:
             Sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             lessonGroup-3:
               display_name: អ​ថេរ
             variables:
@@ -534,7 +548,7 @@ km:
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-2:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             lessonGroup-3:
               display_name: អ​ថេរ
             lessonGroup-4:
@@ -816,7 +830,7 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         dance-2019:
-          title: Dance Party
+          title: កម្មវិធីរាំ
         dance-extras:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
@@ -914,7 +928,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
           name: អុិចប្រេស-2019
@@ -931,7 +945,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -949,7 +963,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -969,7 +983,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -990,7 +1004,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -1038,7 +1052,7 @@ km:
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             lessonGroup-2:
-              display_name: អាង(Sprites)
+              display_name: Sprites
             lessonGroup-3:
               display_name: លក្ខខណ្ឌ
             lessonGroup-5:
@@ -1050,7 +1064,7 @@ km:
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             lessonGroup-2:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1063,6 +1077,8 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             lessonGroup-4:
               display_name: អនុ​គមន៍
             lessonGroup-6:
@@ -1207,13 +1223,15 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         time4cs-control-unit-2:
           lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
               display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         time4cs-experiment-unit-1:
@@ -1227,8 +1245,8 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites
         time4csdemo:
           lesson_groups:
             csf_sprites:
-              display_name: អាង(Sprites)
+              display_name: Sprites

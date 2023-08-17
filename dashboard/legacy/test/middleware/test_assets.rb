@@ -1,5 +1,3 @@
-# coding: utf-8
-
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require_relative '../../middleware/helpers/asset_bucket'

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Kod Tədbirinin Saatı Necə Edilir
 ---
 
 {{ signup_button }}

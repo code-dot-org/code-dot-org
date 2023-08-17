@@ -3671,6 +3671,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         csd2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd4-2023:
@@ -3966,6 +3968,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-creativity2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-creativity3-2023:
@@ -3986,6 +3990,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4003,6 +4009,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4025,6 +4033,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-design-with-purpose2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-design-with-purpose3-2023:
@@ -4043,6 +4053,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-coding2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-coding3-2023:
@@ -4061,6 +4073,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4243,6 +4257,9 @@ uz:
               display_name: Kompyuterlar ta'siri
           description_audience: 'Yosh: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
           lesson_groups:
             lessonGroup-2:
               display_name: Raqamli Fuqarolik
@@ -4252,10 +4269,14 @@ uz:
               display_name: Sikllar
             lessonGroup-5:
               display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Maʼlumotlar
           description_audience: 'Yosh: 4-7'
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
-          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
           lesson_groups:
             lessonGroup-2:
               display_name: Raqamli Fuqarolik
@@ -4269,10 +4290,14 @@ uz:
               display_name: Hodisalar
             lessonGroup-7:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Maʼlumotlar
           description_audience: 'Yosh: 5-8'
           description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
-          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Hisoblash tizimlari
           lesson_groups:
             lessonGroup-2:
               display_name: Raqamli Fuqarolik
@@ -4284,7 +4309,8 @@ uz:
               display_name: Hodisalar
             lessonGroup-6:
               display_name: Maʼlumotlar
-          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+            lessonGroup-8:
+              display_name: Hisoblash tizimlari
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4330,3 +4356,53 @@ uz:
               display_name: End of Course Project
           description_audience: 'Yosh: 9-13'
           description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: SI (AI) qanday ishlaydi
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

@@ -1126,6 +1126,10 @@ export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
 }
 
+export function sectionUnitName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).courseVersionName;
+}
+
 export function selectedSection(state) {
   const selectedSectionId = getRoot(state).selectedSectionId;
   if (selectedSectionId) {

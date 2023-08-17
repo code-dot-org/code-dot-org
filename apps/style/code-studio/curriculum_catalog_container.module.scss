@@ -2,50 +2,6 @@
 
 $container-width: 309px;
 
-.catalogFiltersContainer {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 1em 0;
-
-  button {
-    margin: 0;
-  }
-}
-
-.catalogLanguageFilterRow {
-  display: flex;
-  justify-content: space-between;
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 0 0 1em 0;
-
-  p {
-    margin: 1em 0;
-  }
-
-  i {
-    margin: auto 0.25em;
-    font-size: 1.75em;
-  }
-
-  span {
-    font-size: 16px;
-  }
-}
-
-.catalogLanguageFilterRowNumAvailable {
-  display: flex;
-  flex: start;
-}
-
-button.catalogClearFiltersButton {
-  font-size: 16px;
-  margin-left: auto;
-}
-
 .catalogContentContainer {
   max-width: 60em;
   margin: 0 auto 1em auto;
@@ -108,10 +64,4 @@ button.catalogClearFiltersButton {
 .assignSuccessMessage {
   margin: 16px;
   color: color.$bootstrap_success_text;
-}
-
-.fixedFiltersTop {
-  position: sticky;
-  top: 0;
-  background-color: white;
 }

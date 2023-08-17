@@ -1882,8 +1882,6 @@
               "name": "Şəkil"
             },
             "functions": {
-              "expressions": {
-              },
               "name": "Funksiyalar"
             },
             "game_lab": {
@@ -2501,10 +2499,6 @@
           "categories": {
             "css_properties": {
               "expressions": {
-                "Text-Dec": {
-                  "examples": {
-                  }
-                },
                 "background-color": {
                   "examples": {
                     "Background Color in Hex": {
@@ -2517,14 +2511,6 @@
                     }
                   }
                 },
-                "border": {
-                  "examples": {
-                  }
-                },
-                "border-bottom": {
-                  "examples": {
-                  }
-                },
                 "border-color": {
                   "examples": {
                     "Different Border Colors": {
@@ -2535,31 +2521,11 @@
                     }
                   }
                 },
-                "border-left": {
-                  "examples": {
-                  }
-                },
-                "border-radius": {
-                  "examples": {
-                  }
-                },
-                "border-right": {
-                  "examples": {
-                  }
-                },
                 "border-style": {
                   "examples": {
                     "Different Border Styles": {
                       "name": "Müxtəlif sərhəd üslubları"
                     }
-                  }
-                },
-                "border-top": {
-                  "examples": {
-                  }
-                },
-                "border-width": {
-                  "examples": {
                   }
                 },
                 "color": {
@@ -2575,31 +2541,11 @@
                     }
                   }
                 },
-                "float": {
-                  "examples": {
-                  }
-                },
-                "font-family": {
-                  "examples": {
-                  }
-                },
-                "font-size": {
-                  "examples": {
-                  }
-                },
                 "height": {
                   "examples": {
                     " Height in pixels": {
                       "name": "Pikseldəki hündürlük"
                     }
-                  }
-                },
-                "margin": {
-                  "examples": {
-                  }
-                },
-                "pad": {
-                  "examples": {
                   }
                 },
                 "pseudo-classes": {
@@ -2661,34 +2607,6 @@
                   "short_description": "Paraqraf\n\\<p> teqi mətnin paraqrafını təyin etmək üçün istifadə olunur.",
                   "tips": "-   Bir neçə abzas yazmaq üçün `<p>` teqindən istifadə edə bilərik.\n-   Çox sətirdən ibarət abzas yazmaq üçün `<p>` teqindən istifadə edə bilərik."
                 },
-                "body": {
-                  "examples": {
-                  }
-                },
-                "comment": {
-                  "examples": {
-                  }
-                },
-                "div": {
-                  "examples": {
-                  }
-                },
-                "doctype": {
-                  "examples": {
-                  }
-                },
-                "h": {
-                  "examples": {
-                  }
-                },
-                "head": {
-                  "examples": {
-                  }
-                },
-                "html": {
-                  "examples": {
-                  }
-                },
                 "img": {
                   "examples": {
                     " Local Image": {
@@ -2745,14 +2663,6 @@
                     "Steps to Make Horchata": {
                       "name": "Horchata etmək üçün addımlar"
                     }
-                  }
-                },
-                "style": {
-                  "examples": {
-                  }
-                },
-                "title": {
-                  "examples": {
                   }
                 },
                 "ul": {

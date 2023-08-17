@@ -65,7 +65,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 
 1. fix your database charset and collation to match our servers
-    - `bin/dashboard-sql`
+    - `bin/mysql-client-admin`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 

@@ -171,6 +171,7 @@ nn:
           description_short: Lag ei historie eller eit spel med Gumball spel-lab!
           student_description: Lag ei historie eller eit spel med Gumball spel-lab!
         starwars:
+          title: 'Star Wars: Bygg ein galakse med kode(JavaScript)'
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
@@ -2569,6 +2570,8 @@ nn:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2795,6 +2798,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2811,6 +2816,8 @@ nn:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2825,6 +2832,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2839,6 +2848,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2853,6 +2864,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2867,6 +2880,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:

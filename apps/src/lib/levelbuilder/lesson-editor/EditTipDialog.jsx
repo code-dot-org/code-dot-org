@@ -102,7 +102,7 @@ export default class EditTipDialog extends Component {
           <Button
             text={i18n.saveAndClose()}
             onClick={this.handleCloseAndSave}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>

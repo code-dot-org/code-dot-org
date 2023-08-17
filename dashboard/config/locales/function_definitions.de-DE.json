@@ -1317,42 +1317,42 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "langen Pfad in Ordnung bringen\n"
+            "name": "langen Pfad in Ordnung bringen"
           },
           "fix short path": {
-            "name": "kurzen Pfad in Ordnung bringen\n"
+            "name": "kurzen Pfad in Ordnung bringen"
           }
         },
         "MC_HOC_2017_Ali": {
@@ -3827,7 +3827,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3840,13 +3840,13 @@
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "suchen und pflücken"
+            "name": "suchen und pflücken\n"
           },
           "find pumpkin": {
             "name": "finde Kürbis"
           },
           "wander path": {
-            "name": "Weg entlanggehen"
+            "name": "Weg entlanggehen\n"
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -3928,7 +3928,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -4001,7 +4001,7 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           }
         },
         "courseE_farmer_functions1a2022": {
@@ -4156,7 +4156,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln\n"
+            "name": "am Weg sammeln"
           }
         },
         "courseE_farmer_functions3c2022": {

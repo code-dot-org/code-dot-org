@@ -120,6 +120,7 @@ se:
           description_short: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
           student_description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
         starwars:
+          title: 'Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)'
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
@@ -1635,6 +1636,8 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1763,6 +1766,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1775,14 +1780,20 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1793,6 +1804,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1803,6 +1816,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:

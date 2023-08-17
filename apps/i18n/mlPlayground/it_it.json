@@ -614,7 +614,8 @@
           "description": "Quali di questi animali domestici possiedi?",
           "id": "animali che possiedi"
         }
-      }
+      },
+      "name": "Il sondaggio di Kim"
     },
     "cookies_toy": {
       "card": {

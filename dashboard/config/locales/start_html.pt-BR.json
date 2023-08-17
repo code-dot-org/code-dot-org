@@ -301,10 +301,12 @@
           "public domain image": "imagem de domínio público"
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Voltar"
+          "Back": "Voltar",
+          "Friend Finder": "Localizador de Amigos"
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Voltar"
+          "Back": "Voltar",
+          "Friend Finder": "Localizador de Amigos"
         },
         "CSD U1 storage movies_2021": {
           "No": "Não",
@@ -320,6 +322,7 @@
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Limpar",
+          "Outfit Picker": "Selecionador de Look",
           "black": "preto",
           "green": "verde",
           "pink": "rosa",
@@ -328,6 +331,7 @@
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Limpar",
+          "Outfit Picker": "Selecionador de Look",
           "black": "preto",
           "green": "verde",
           "pink": "rosa",
@@ -1303,6 +1307,7 @@
           "Red": "Vermelho",
           "Save": "Salvar",
           "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
           "Yes": "Sim"
         },
         "CSDU4 Crowdsource App Demo_2018": {
@@ -1316,6 +1321,7 @@
           "Red": "Vermelho",
           "Save": "Salvar",
           "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
           "Yes": "Sim"
         },
         "CSDU4 Crowdsource App Demo_2019": {
@@ -1329,6 +1335,7 @@
           "Red": "Vermelho",
           "Save": "Salvar",
           "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
           "Yes": "Sim"
         },
         "CSDU4 Decision App Demo": {
@@ -1893,11 +1900,13 @@
         },
         "ml-customize-raspado-2021": {
           "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
           "yes": "sim"
         },
         "ml-customize-raspado_2022": {
           "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
           "yes": "sim"
         },
@@ -2032,6 +2041,7 @@
           "Shoe Recommender": "Recomendador de sapato"
         },
         "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Sistema de alerta de motorista",
           "Predict": "Previsão",
           "cloudy": "nublado",
           "dusk": "Crepúsculo",
@@ -2040,6 +2050,7 @@
           "snow": "neve"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Sistema de alerta de motorista",
           "Predict": "Previsão",
           "cloudy": "nublado",
           "dusk": "Crepúsculo",

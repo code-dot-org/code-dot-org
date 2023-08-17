@@ -4,21 +4,14 @@
 dashboard_enable_pegasus: true
 
 db_cluster_id: localhost
-
 db_endpoint_writer: localhost
 db_endpoint_proxy_writer: localhost
 db_endpoint_proxy_reader: localhost
 db_endpoint_proxy_reporting: localhost
 
 db_credential_admin: {"username":"root", "password":""}
-db_admin_user: root
-db_admin_password: ''
 db_credential_writer: {"username":"root", "password":""}
-db_writer_user: root
-db_writer_password: ''
 db_credential_reader: {"username":"root", "password":""}
-db_reader_user: root
-db_reader_password: ''
 db_writer: 'mysql://root@localhost/'
 
 firebase_name: cdo-v3-dev
@@ -76,3 +69,6 @@ jwks_data:
 jwk_private_key_data:
 
 openai_chat_completion_api_key: ''
+
+# Mapbox
+mapbox_upload_tileset:    'censustiles-dev'

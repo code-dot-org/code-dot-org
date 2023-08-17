@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:27.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20376,
     "name_suffix": "_2023",
@@ -89,20 +90,22 @@
       "onBoardEvent": null,
       "getText": null,
       "getProperty": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null
     },
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:27.589+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - template_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:27.589+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - template_2222\"},{\"changed_at\":\"2023-08-15 16:57:14 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

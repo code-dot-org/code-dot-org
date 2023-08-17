@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:11.000Z",
   "level_num": "custom",
@@ -28,11 +29,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -76,7 +77,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Motorcycle Movement\r\n\r\nCreate an app that moves a motorcycle left and right on the screen using the buttons on the circuit playground. The app has already been started for you: pressing the left button will move the motorcycle to the left by 10 units. This app uses the [Counter Pattern](/docs/concepts/app-lab/the-counter-pattern/) to move the motorcycle.\r\n\r\n# Do This\r\n\r\n* Using the working left button as an example, program the right button to make the motorcycle go to the right.",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "Motorcycle Movement",
     "thumbnail_url": "https://images.code.org/3f3c1010a959a4503137b0fc5e613c20-image-1648843153015.8.b-preview.gif",
@@ -105,9 +107,8 @@
     "encrypted_examples": "aRXff2fDt7V6jck5B7byYCDtr0Of3L9mzVXB5FKmqLMb4iiSIFGthK0W4k31\n5QR+77KP6Lz1BegLtTycwzSwqA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.394+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.394+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"},{\"changed_at\":\"2023-08-15 16:55:28 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:55:35 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

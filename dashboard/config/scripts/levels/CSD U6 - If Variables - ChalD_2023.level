@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:13:07.000Z",
   "level_num": "custom",
@@ -74,7 +75,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/e28b3e9c8a10af207db2ec4b2ca178ca-image-1650059987366.13.d-finished.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Age Recommender\r\n\r\nCreate an app that recommends something based on somebody's age. For example, you could recommend a PG or PG-13 or R rated movie based on how old someone is. Or, you could recommend baby food vs soft food vs spicy food based on someone's age.\r\n\r\nThe home screen has already been started for you, but the app still needs 4 recommendations and the code needs to be added.\r\n\r\n## Do This\r\n**Planning**\r\n1) Decide what 4 things you would like to recommend based on someone's age. It can be music or movies or books or foods or places to visit - whatever you decide.\r\n\r\n**In Design Mode:**\r\n2) Change to one of the other choice screens (for example: `choice1Screen`), then add labels or images representing this choice\r\n3) Repeat this process for each of the four screens\r\n\r\n**In Code Mode:**\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n4) ::: details [When the + button is pressed: have it increase the age on the screen by 1]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to add 1 to the age variable\r\n\t- Use [`setText()`(#fff176)](/docs/applab/setText/) to update the `ageLabel`\r\n    :::\r\n5) ::: details [When the - button is pressed: have it decrease the age on the screen by 1]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to subtract 1 to the age variable\r\n\t- Use [`setText()`(#fff176)](/docs/applab/setText/) to update the `ageLabel`\r\n    :::\r\n6) ::: details [When the \"Recommend\" button is pressed: have it go to a certain screen based on the user's age]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check the value of the age variable\r\n    - Use the [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) block to change to a specific screen based on their age\r\n    - Repeat this four times for each screen\r\n    :::",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -91,7 +92,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Age Recommender",
@@ -102,9 +104,8 @@
     "encrypted_examples": "MyUlkY3QSypmjz4/Nmil9hBKmnpKnYS7xZmoEvbsFaNTZBNxIRLFC2RLWMw9\nRSkjMzAUi113c8OjyP0YpEn7XQ==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:07.893+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:07.893+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalD_2222\"},{\"changed_at\":\"2023-08-16 17:34:54 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

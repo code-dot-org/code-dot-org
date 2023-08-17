@@ -1235,9 +1235,9 @@
   page_not_found_button: "Återvänd hem"
   hoc2018_mc_thank_microsoft: "  Vi tackar Microsoft som stöttar vår vision och målsättnng att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får de färdigheter som behövs för att lyckas på 2000-talet.  "
   page_not_available_button: "Återvänd hem"
-  hoc2021_mc_mee_description: 'Res bakåt i tiden och lär dig koda! Den nya självstudien Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows, Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar och videor.'
-  hoc2021_mc_mee_villages_description: 'Lär dig grundläggande kodning och utforska mångfald och inkludering med dina elever i Minecraft: Utbildningsversion.'
-  hoc2021_mc_mee_ai_description: 'Utforska AI med dina elever och lär dig koda i Minecraft: Utbildningsversion.'
+  hoc2021_mc_mee_description: "Res bakåt i tiden och lär dig koda! Den nya självstudien Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows, Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar och videor."
+  hoc2021_mc_mee_villages_description: "Lär dig grundläggande kodning och utforska mångfald och inkludering med dina elever i Minecraft: Utbildningsversion."
+  hoc2021_mc_mee_ai_description: "Utforska AI med dina elever och lär dig koda i Minecraft: Utbildningsversion."
   footer_powered_by_aws: "Drivs av Amazon Web Services"
   footer_privacy_policy: "Sekretesspolicy"
   footer_about: "Om"

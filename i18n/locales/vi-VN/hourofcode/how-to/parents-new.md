@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Hướng dẫn cách làm cho cha mẹ
 ---
 
 # Cách thực hiện Giờ lập trình với trẻ

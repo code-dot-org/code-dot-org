@@ -56,7 +56,7 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2023-07-03 04:03:03 UTC",
+    "serialized_at": "2023-08-01 22:53:25 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -105,6 +105,7 @@
       "key": "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -118,6 +119,7 @@
       "key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
@@ -820,6 +822,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

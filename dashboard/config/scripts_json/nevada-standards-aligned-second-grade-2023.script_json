@@ -16,12 +16,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-second-grade",
-    "serialized_at": "2023-07-24 17:13:45 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-09 22:30:06 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,9 +44,22 @@
       }
     },
     {
-      "key": "lessonGroup-3",
+      "key": "lessonGroup-8",
       "user_facing": true,
       "position": 2,
+      "properties": {
+        "display_name": "Computing Systems",
+        "description": "Students will describe basic hardware and software problems using accurate terminology.  See: codenv.org/lessons/grade-2-lesson-3"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "nevada-standards-aligned-second-grade-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
       "properties": {
         "display_name": "Sequencing"
       },
@@ -57,7 +71,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Loops"
       },
@@ -69,7 +83,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Events"
       },
@@ -81,7 +95,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Data"
       },
@@ -93,7 +107,7 @@
     {
       "key": "lessonGroup-7",
       "user_facing": true,
-      "position": 6,
+      "position": 7,
       "properties": {
         "display_name": "End of Group Project"
       },
@@ -146,12 +160,28 @@
       }
     },
     {
-      "key": "My Robotic Friends Jr",
-      "name": "My Robotic Friends Jr.",
+      "key": "lesson-1",
+      "name": "Computing Systems",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+        "overview": "Students will describe basic hardware and software problems using accurate terminology.  See: codenv.org/lessons/grade-2-lesson-3"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "nevada-standards-aligned-second-grade-2023"
+      }
+    },
+    {
+      "key": "My Robotic Friends Jr",
+      "name": "My Robotic Friends Jr.",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
@@ -168,10 +198,10 @@
     {
       "key": "Programming with Angry Birds",
       "name": "Programming with Angry Birds",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
@@ -188,10 +218,10 @@
     {
       "key": "Debugging in Maze",
       "name": "Debugging in Maze",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.",
@@ -208,10 +238,10 @@
     {
       "key": "Collecting Treasure with Laurel",
       "name": "Collecting Treasure with Laurel",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will continue to develop their understanding of algorithms and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get _Laurel_ to pick up treasure as she walks along a path.",
@@ -228,10 +258,10 @@
     {
       "key": "My Loopy Robotic Friends Jr",
       "name": "My Loopy Robotic Friends Jr.",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
@@ -248,10 +278,10 @@
     {
       "key": "Loops with Rey and BB-8",
       "name": "Loops with Rey and BB-8",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson has students using loops to help BB-8 efficiently traverse a maze.",
@@ -268,10 +298,10 @@
     {
       "key": "Harvesting Crops with Loops",
       "name": "Harvesting Crops with Loops",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students loop new actions to help the harvester collect multiple veggies growing in large bunches in this **skill-building** lesson.",
@@ -288,10 +318,10 @@
     {
       "key": "The Big Event",
       "name": "The Big Event",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
@@ -308,10 +338,10 @@
     {
       "key": "Build a Flappy Game",
       "name": "Build a Flappy Game",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own Flappy Bird game. At the end of the lesson, students will be able to customize their game by changing the visuals or rules.",
@@ -328,10 +358,10 @@
     {
       "key": "Mini-Project: Chase Game",
       "name": "Mini-Project: Chase Game",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own animated game.",
@@ -348,10 +378,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
@@ -368,10 +398,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through designing, developing, and showcasing new Play Lab projects.",
@@ -547,6 +577,18 @@
         "lesson_activity.key": "3423add4-34f1-426e-aa03-8bbc1e4f6ee4",
         "lesson.key": "Putting a STOP to Online Meanness",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "nevada-standards-aligned-second-grade-2023"
+      }
+    },
+    {
+      "key": "99385e3c-0724-42e0-9f86-c0398503bbc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99385e3c-0724-42e0-9f86-c0398503bbc3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "nevada-standards-aligned-second-grade-2023"
       }
     },
@@ -1460,6 +1502,16 @@
       "seeding_key": {
         "activity_section.key": "554fde30-4273-42a3-9aa8-e1781e47494e",
         "lesson_activity.key": "3423add4-34f1-426e-aa03-8bbc1e4f6ee4"
+      }
+    },
+    {
+      "key": "ef4dfc52-9d89-436e-bf5d-b12e5334bef6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef4dfc52-9d89-436e-bf5d-b12e5334bef6",
+        "lesson_activity.key": "99385e3c-0724-42e0-9f86-c0398503bbc3"
       }
     },
     {
@@ -7787,6 +7839,16 @@
       }
     },
     {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nv_cs_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "nv_cs_standards"
+      }
+    },
+    {
       "name": "Open-ended Programming Levels",
       "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
       "key": "open-ended_programming_levels",
@@ -8338,6 +8400,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-second-grade-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nv_cs_standards",
         "script.name": "nevada-standards-aligned-second-grade-2023"
       }
     },
@@ -9249,5 +9317,14 @@
         "opportunity_standard.shortcode": "2.MD.10"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

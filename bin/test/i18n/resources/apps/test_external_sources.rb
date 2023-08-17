@@ -2,14 +2,22 @@ require_relative '../../../test_helper'
 require_relative '../../../../i18n/resources/apps/external_sources'
 
 class I18n::Resources::Apps::ExternalSourcesTest < Minitest::Test
+  def setup
+    FileUtils.stubs(:mkdir_p)
+    FileUtils.stubs(:cp)
+    File.stubs(:write)
+  end
+
   def test_sync_in
     exec_seq = sequence('execution')
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/external-sources')).in_sequence(exec_seq)
+    expected_blockly_core_dir = CDO.dir('i18n/locales/source/blockly-core')
+    expected_blockly_core_file_path = CDO.dir('apps/node_modules/@code-dot-org/blockly/i18n/locales/en-US/core.json')
+    FileUtils.expects(:mkdir_p).with(expected_blockly_core_dir).in_sequence(exec_seq)
+    Dir.expects(:[]).with(CDO.dir('apps/node_modules/@code-dot-org/blockly/i18n/locales/en-US/*.json')).in_sequence(exec_seq).returns([expected_blockly_core_file_path])
+    FileUtils.expects(:cp).with(expected_blockly_core_file_path, expected_blockly_core_dir).in_sequence(exec_seq)
 
-    expected_labs_dir = CDO.dir('i18n/locales/source/blockly-mooc')
-    FileUtils.expects(:mkdir_p).with(expected_labs_dir).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(expected_labs_dir, 'fish.json')).in_sequence(exec_seq)
+    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/external-sources')).in_sequence(exec_seq)
 
     expected_ml_playground_dir = CDO.dir('i18n/locales/source/external-sources/ml-playground')
     FileUtils.expects(:mkdir_p).with(expected_ml_playground_dir).in_sequence(exec_seq)
@@ -18,7 +26,7 @@ class I18n::Resources::Apps::ExternalSourcesTest < Minitest::Test
     expected_datasets_dir = CDO.dir('i18n/locales/source/external-sources/ml-playground/datasets')
     expected_dataset_file_path = CDO.dir('i18n/locales/source/external-sources/ml-playground/datasets/test.json')
     FileUtils.expects(:mkdir_p).with(expected_datasets_dir).in_sequence(exec_seq)
-    Dir.stubs(:[]).with(CDO.dir('apps/node_modules/@code-dot-org/ml-playground/public/datasets/*.json')).returns([expected_dataset_file_path])
+    Dir.expects(:[]).with(CDO.dir('apps/node_modules/@code-dot-org/ml-playground/public/datasets/*.json')).returns([expected_dataset_file_path])
     FileUtils.expects(:cp).with(expected_dataset_file_path, expected_datasets_dir).in_sequence(exec_seq)
 
     JSON.stubs(:load_file).with(CDO.dir('apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json')).returns(

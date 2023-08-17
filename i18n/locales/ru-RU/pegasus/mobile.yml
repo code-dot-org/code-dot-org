@@ -1494,6 +1494,7 @@
   header_stats: "Посмотреть статистику"
   header_help_us: "Помогите нам"
   header_about: "О разработчике"
+  header_incubator: "Инкубатор"
   header_teacher_community: "Сообщество учителей"
   header_help_support: 'Помощь и поддержка '
   header_report_bug: "Сообщить об ошибке"
@@ -1608,7 +1609,7 @@
   hoc2018_mc_download_adventurer: "Загрузить оффлайн версию тренажера Minecraft приключение."
   hoc2018_mc_educators: "Для преподавателей"
   hoc2018_mc_educators_box1_title: "Программируй с Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition предоставляет соответствующую стандартам учебную программу, обучение и программирование в Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition предоставляет соответствующую стандартам учебную программу, обучение и программирование в Minecraft."
   hoc2018_mc_educators_box1_button: "Начало работы"
   hoc2018_mc_educators_box2_title: "Скачать руководство для фасилитатора"
   hoc2018_mc_educators_box2_desc: "Этот набор инструментов поможет вам организовать Час кода и заинтересовать учащихся компьютерными науками."
@@ -1716,7 +1717,7 @@
   hoc2018_mc_with_microsoft: "В партнерстве с"
   hoc2018_mc_thank_microsoft: "Благодарим компанию Microsoft за поддержку нашего видения и миссии предоставить каждому ребенку возможность изучить компьютерные науки и приобрести навыки, необходимые для преуспевания в XXI веке."
   hoc2019_mc_mee_title: "Minecraft: ИИ во благо"
-  hoc2019_mc_mee_description1: 'Новый урок Часа кода по Minecraft доступен теперь в Minecraft: Education Edition для Windows, Mac, и iPad. Изучите со своими учениками основы программирования и искусственного интеллекта!'
+  hoc2019_mc_mee_description1: "Новый урок Часа кода по Minecraft доступен теперь в Minecraft: Education Edition для Windows, Mac, и iPad. Изучите со своими учениками основы программирования и искусственного интеллекта!"
   hoc2019_mc_mee_description2: "Получите доступ к бесплатным ресурсам, включая план урока, ролики, программу обучения компьютерным наукам и тренинги для учителей."
   hoc2019_mc_more_coding_resources: "Больше ресурсов по программированию"
   hoc2019_dance_previous_versions: "Ищете предыдущую версию Танцевальной вечеринки?  \nНажмите здесь, чтобы запустить [Часть 1](%{dance_2018_link}) и [Часть 2](%{dance_extras_2018_link}) из прошлого года."
@@ -1729,18 +1730,18 @@
   page_not_available_description: "К сожалению, запрошенная Вами страница больше не доступна по этому адресу. Если вам всё ещё нужен доступ, пожалуйста, напишите нам по электронной почте [support@code.org](%{support_email_link})."
   page_not_available_button: "Вернуться на домашнюю страницу"
   hoc2020_mc_available_code_org: "Доступно на Code.org"
-  hoc2020_mc_available_mee: 'Доступно в Майнкрафт: Education Edition'
+  hoc2020_mc_available_mee: "Доступно в Майнкрафт: Education Edition"
   hoc2020_mc_mee_title: "Майнкрафт История о Двух Деревнях"
-  hoc2020_mc_mee_description: 'Новый учебник Час Кода в Майнкрафт теперь доступен в Майнкрафт: Education Edition для Windows, Mac, Chromebook и iPad. Изучите основы программирования и исследуйте разнообразие и инклюзивность вместе со своими студентами! Получите доступ к бесплатным ресурсам, включая план урока, видеоролики, учебную программу по информатике, уроки равноправия и подготовки для преподавателей.'
+  hoc2020_mc_mee_description: "Новый учебник Час Кода в Майнкрафт теперь доступен в Майнкрафт: Education Edition для Windows, Mac, Chromebook и iPad. Изучите основы программирования и исследуйте разнообразие и инклюзивность вместе со своими студентами! Получите доступ к бесплатным ресурсам, включая план урока, видеоролики, учебную программу по информатике, уроки равноправия и подготовки для преподавателей."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Возвращайтесь вовремя и изучайте программирование! Новое руководство «Minecraft Hour of Code» теперь доступно в Minecraft: Education Edition для Windows, Mac, Chromebook и iPad. Начните с бесплатных ресурсов, обучающих курсов и видеороликов для преподавателей.'
+  hoc2021_mc_mee_description: "Возвращайтесь вовремя и изучайте программирование! Новое руководство «Minecraft Hour of Code» теперь доступно в Minecraft: Education Edition для Windows, Mac, Chromebook и iPad. Начните с бесплатных ресурсов, обучающих курсов и видеороликов для преподавателей."
   hoc2021_mc_mee_villages_title: "Сказка о двух деревнях"
-  hoc2021_mc_mee_villages_description: 'Изучите основы программирования и узнайте о разнообразии и вовлеченности учащихся в Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Изучите основы программирования и узнайте о разнообразии и вовлеченности учащихся в Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "ИИ навсегда!"
-  hoc2021_mc_mee_ai_description: 'Изучайте ИИ со своими учениками и учитесь программировать код в Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Изучайте ИИ со своими учениками и учитесь программировать код в Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Майнкрафт Побег из Особняка"
   hoc2022_mc_mee_description: 'Сбегите из таинственного особняка к рассвету и заработайте миллион изумрудов! Новое учебное пособие по Часу Кода Майнкрафт теперь доступно в Майнкрафт: обучающий выпуск для Windows, Mac, Chromebook, Ipad и мобильных устройств. Начните с бесплатных ресурсов для преподавателей, тренингов и видеороликов. '
-  hoc2022_mc_mee_timecraft_description: 'Путешествуйте в прошлое, чтобы спасти будущее в этом бесплатном уроке программирования Minecraft: обучающий выпуск.'
+  hoc2022_mc_mee_timecraft_description: "Путешествуйте в прошлое, чтобы спасти будущее в этом бесплатном уроке программирования Minecraft: обучающий выпуск."
   footer_powered_by_aws: "Создано с помощью Amazon Web Services"
   footer_built_on_github: "Построен на GitHub от Microsoft"
   codebytes_skinny_banner_title: "Присоединяйтесь к нам 7-11 декабря к нашим мини-урокам БайтыКода в реальном времени!"
@@ -1788,7 +1789,7 @@
   ai_zooniverse: "Зоовселенная (Zooniverse) - Снимок Горной зебры"
   ai_zooniverse_description: "Помогите защитить находящуюся под угрозой исчезновения горную зебру Кап, определяя различных животных на изображениях."
   ai_audience: "Аудитория"
-  ai_minecraft_description: 'Получите доступ к бесплатным ресурсам, включая план урока, видео, учебную программу по информатике и подготовку для преподавателей. (Требуется Minecraft: Education Edition)'
+  ai_minecraft_description: "Получите доступ к бесплатным ресурсам, включая план урока, видео, учебную программу по информатике и подготовку для преподавателей. (Требуется Minecraft: Education Edition)"
   ai_k_12_audience: "Возраст 12+ (необходимо уметь Читать)"
   ai_microsoft_workshop: "Бесплатные виртуальные семинары от Microsoft"
   ai_microsoft_workshop_description: "Разожгите любопытство с помощью бесплатных семинаров по STEM и программированию."

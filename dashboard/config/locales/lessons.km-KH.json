@@ -9,7 +9,7 @@
           "name": "អ​ថេរ"
         },
         "csd3-2017/Sprites": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "csd3-2017/The Draw Loop": {
           "name": "ការគូររង្វិលជុំដដែលៗ"
@@ -83,6 +83,9 @@
         "coursed-2017/Introduction": {
           "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
         },
+        "coursed-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
+        },
         "coursed-2017/Nested Loops Project in Artist": {
           "name": "សំបុករង្វិលជុំនៅទឹកកក"
         },
@@ -112,6 +115,9 @@
         },
         "coursee-2017/Loops in Artist": {
           "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
         },
         "coursee-2017/Nested Loops with Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
@@ -179,6 +185,9 @@
         "express-2017/Loops in Artist": {
           "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
         },
+        "express-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
+        },
         "express-2017/Nested Loops Project in Frozen": {
           "name": "សំបុករង្វិលជុំនៅទឹកកក"
         },
@@ -240,7 +249,7 @@
           "name": "អ​ថេរ"
         },
         "csd3-2018/Sprites": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "csd3-2018/The Draw Loop": {
           "name": "ការគូររង្វិលជុំដដែលៗ"
@@ -323,6 +332,9 @@
         "coursed-2018/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
         },
+        "coursed-2018/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursed-2018/Nested Loops in Frozen": {
           "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
         },
@@ -332,6 +344,9 @@
         "coursed-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
+        "coursed-2018/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
         "coursee-2018/Programming: My Robotic Friends": {
           "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
@@ -340,6 +355,9 @@
         },
         "coursee-2018/Programming in Artist": {
           "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursee-2018/Nested Loops": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursee-2018/Nested Loops with Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
@@ -358,6 +376,9 @@
         },
         "coursef-2018/Programming in Artist": {
           "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursef-2018/Nested Loops in Bee/Zombie": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursef-2018/Nested Loops with Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
@@ -385,6 +406,9 @@
         },
         "express-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "express-2018/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "express-2018/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
@@ -429,7 +453,7 @@
           "name": "អ​ថេរ"
         },
         "csd3-2019/Sprites": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "csd3-2019/The Draw Loop": {
           "name": "ការគូររង្វិលជុំដដែលៗ"
@@ -512,17 +536,26 @@
         "coursed-2019/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
         },
+        "coursed-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursed-2019/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursed-2019/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "coursed-2019/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
         "coursed-2019/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "coursee-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursee-2019/Nested Loops in Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
@@ -530,17 +563,23 @@
         "coursee-2019/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
+        "coursef-2019/Nested Loops in the Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursef-2019/For Loops in Artist": {
           "name": "For loops ជាមួយវិចិត្រករ"
         },
         "coursef-2019/Internet": {
           "name": "អ៊ីនធឺណិត"
         },
+        "coursef-2019/Virtual Pet": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
+        },
         "coursef-2019/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "express-2019/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "express-2019/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
@@ -557,8 +596,14 @@
         "express-2019/Loops with Rey and BB-8": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
         },
+        "express-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "express-2019/Nested Loops in Frozen": {
           "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
+        },
+        "express-2019/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
@@ -570,7 +615,10 @@
           "name": "For loops ជាមួយវិចិត្រករ"
         },
         "express-2019/Learning Sprites with Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុងអាង( Sprite​) "
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2019/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2019/Build A Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
@@ -669,13 +717,19 @@
           "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
         },
         "coursed-2020/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "coursed-2020/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
         },
+        "coursed-2020/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursed-2020/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursed-2020/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "coursed-2020/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
@@ -686,11 +740,17 @@
         "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
         },
+        "coursee-2020/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursee-2020/Nested Loops in Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
         },
         "coursee-2020/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursef-2020/Nested Loops in the Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursef-2020/Internet": {
           "name": "អ៊ីនធឺណិត"
@@ -698,11 +758,14 @@
         "coursef-2020/For Loops in Artist": {
           "name": "For loops ជាមួយវិចិត្រករ"
         },
+        "coursef-2020/Virtual Pet": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
+        },
         "coursef-2020/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "express-2020/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "express-2020/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
@@ -719,8 +782,14 @@
         "express-2020/Loops with Rey and BB-8": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
         },
+        "express-2020/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "express-2020/Snowflakes with Anna and Elsa": {
           "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
+        },
+        "express-2020/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
@@ -732,7 +801,10 @@
           "name": "For loops ជាមួយវិចិត្រករ"
         },
         "express-2020/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុងអាង( Sprite​) "
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2020/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2020/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
@@ -774,7 +846,7 @@
           "name": "លេខចៃដន្យ"
         },
         "csd3-2021/Sprites": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "csd3-2021/Sprite Properties": {
           "name": "លក្ខណៈសម្បត្តិនៃ sprite"
@@ -897,12 +969,13 @@
           "student_overview": "ត្រៀមកម្លាំងរបស់អ្នកដោយ អ្នកនឹងបង្កើតហ្គេម Start Wars​ ដោយខ្លួនអ្នកនៅក្នុងមេរៀននេះ។"
         },
         "coursed-2021/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "coursed-2021/Loops in Ice Age": {
           "name": "រង្វិលជុំក្នុងយុគសម័យទឹកកក"
         },
         "coursed-2021/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
         "coursed-2021/Conditionals with Cards": {
@@ -910,6 +983,7 @@
           "student_overview": "វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!"
         },
         "coursed-2021/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
@@ -950,7 +1024,13 @@
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "coursef-2021/lesson-6": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
+        },
+        "coursef-2021/lesson-7": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
         "coursef-2021/lesson-2": {
           "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
@@ -995,10 +1075,19 @@
           "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
         },
         "express-2021/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុងអាង( Sprite​) "
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2021/lesson-2": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "express-2021/lesson-3": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "express-2021/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2021/lesson-1": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "express-2021/Loops with Rey and BB-8": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
@@ -1007,12 +1096,14 @@
           "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
         },
         "express-2021/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
         },
         "express-2021/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
@@ -1098,7 +1189,7 @@
           "name": "លេខចៃដន្យ"
         },
         "csd3-2022/Sprites": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "csd3-2022/Sprite Properties": {
           "name": "លក្ខណៈសម្បត្តិនៃ sprite"
@@ -1221,12 +1312,13 @@
           "student_overview": "ត្រៀមកម្លាំងរបស់អ្នកដោយ អ្នកនឹងបង្កើតហ្គេម Start Wars​ ដោយខ្លួនអ្នកនៅក្នុងមេរៀននេះ។"
         },
         "coursed-2022/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "coursed-2022/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
         },
         "coursed-2022/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
         "coursed-2022/Conditionals with Cards": {
@@ -1234,6 +1326,7 @@
           "student_overview": "វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!"
         },
         "coursed-2022/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
@@ -1277,7 +1370,16 @@
           "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
         },
         "coursef-2022/Introducing Sprite Lab": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
+        },
+        "coursef-2022/Making Sprites": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "coursef-2022/[New] Counting with Variables": {
+          "name": "ការរាប់ជាមួយអថេរ"
         },
         "coursef-2022/The Internet": {
           "name": "អ៊ីនធឺណិត",
@@ -1300,10 +1402,19 @@
           "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
         },
         "express-2022/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុងអាង( Sprite​) "
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2022/Making Sprites": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "express-2022/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2022/Dance Party": {
-          "name": "Dance Party"
+          "name": "សរសេរកម្មវិធី បង្កើតក្បាច់រាំក្នុងពិធីជប់លៀង"
         },
         "express-2022/Loops with Rey and BB-8": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
@@ -1312,12 +1423,14 @@
           "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
         },
         "express-2022/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
         "express-2022/Snowflakes with Anna and Elsa": {
           "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
         },
         "express-2022/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
@@ -1339,6 +1452,9 @@
         },
         "express-2022/Functions with Artist": {
           "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
+        },
+        "express-2022/[New] Counting with Variables": {
+          "name": "ការរាប់ជាមួយអថេរ"
         },
         "express-2022/Using Variables with the Artist": {
           "name": "ការប្រើប្រាស់អថេរជាមួយសិល្បករ",
@@ -1401,7 +1517,7 @@
           "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
         },
         "dance-2019/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "flappy/Flappy Code": {
           "name": "Flappy កូដ"

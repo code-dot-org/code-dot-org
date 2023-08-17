@@ -4048,6 +4048,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous vous entraînerez
@@ -5647,15 +5649,6 @@ fr:
               display_name: Anciennes leçons
             lessonGroup-6:
               display_name: Nouvelles leçons
-          student_description: Cette unité explore le rôle des plateformes matérielles
-            dans l'informatique et explique comment différents capteurs peuvent fournir
-            des entrées et des sorties plus efficaces que le clavier, la souris et
-            le moniteur traditionnels. À l'aide d'App Lab et de Circuit Playground
-            d'Adafruit, vous développerez des programmes qui utilisent les mêmes entrées
-            et sorties matérielles que celles des appareils intelligents, en étudiant
-            comment un simple prototype peut mener à un produit fini. L'unité se termine
-            par un défi de conception consistant à utiliser le Circuit Playground
-            comme base pour une innovation de votre propre conception.
           title: "(Option A) Création d'applications avec des appareils - Circuit
             Playground (23-24)"
         csd6-dlp:
@@ -9638,6 +9631,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur le codage 1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9730,6 +9725,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la créativité1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9822,6 +9819,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: focus sur les données-1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9951,6 +9950,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la conception avec un but1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -10094,6 +10095,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           name: concentrez-vous sur le matériel1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -10208,6 +10211,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: se concentrer sur l'impact dans la société1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -10510,6 +10515,8 @@ fr:
             aux personnages de Angry Birds, de Plantes vs Zombies et Scrat de l'Âge
             de glace !
           title: Labyrinthe classique
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
         iceage:
           description: Crée une histoire ou fais un jeu avec le Labo de jeux Âge de
             Glace !
@@ -10784,10 +10791,6 @@ fr:
               display_name: L'impact de l'informatique
             lessonGroup-7:
               display_name: Projet de fin de cours
-          student_description: Apprenez à coder avec des sprites et des variables,
-            et discutez des impacts sociétaux de l'informatique et d'Internet. À la
-            fin de ce cours, concevez et créez un projet que vous pourrez partager
-            avec vos amis et votre famille.
         nevada-standards-aligned-fifth-grade-2023-2023:
           description: Nous avons créé le cours F pour les élèves de cinquième année.
             Le cours commence par examiner comment les utilisateurs font leurs choix
@@ -10834,9 +10837,11 @@ fr:
               display_name: Événements
             lessonGroup-7:
               display_name: Projet de fin de cours
-          student_description: Apprends les bases de l'informatique et de la sécurité
-            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
-            que tu peux partager.
+            lessonGroup-8:
+              display_name: Données
+          lessons:
+            lesson-1:
+              name: Données
         nevada-standards-aligned-fourth-grade-2023:
           description: Nous avons créé le cours E pour des élèves de CM1. Le cours
             commence par une introduction à l'outil de programmation Labo des Sprites.
@@ -10859,18 +10864,14 @@ fr:
               display_name: Données et Simulations
             lessonGroup-6:
               display_name: Projet de fin de cours
-          student_description: Mets-toi à coder avec les algorithmes, les événements,
-            les boucles, les instructions conditionnelleset les fonctions ! À la fin
-            de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
-            partager avec tes amis et ta famille.
         nevada-standards-aligned-kindergarten-2023:
-          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+          description: Le Cours A propose un programme d'informatique pour les lecteurs
             débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
             en utilisant des commandes telles que les boucles et les événements. Les
             leçons qui se trouvent dans ce cours enseigneront également aux élèves
             à collaborer sérieusement les uns avec les autres, différentes techniques
             de résolution de problèmes, à persister face aux tâches plus exigeantes,
-            et comment naviguer l''internet en toute sécurité. '
+            et comment naviguer l'internet en toute sécurité.
           description_audience: 'Âges : 4 à 7 ans'
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           lesson_groups:
@@ -10882,9 +10883,11 @@ fr:
               display_name: Boucles
             lessonGroup-5:
               display_name: L'impact de l'informatique
-          student_description: Apprends les bases de l'informatique et de la sécurité
-            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
-            que tu peux partager.
+            lessonGroup-6:
+              display_name: Données
+          lessons:
+            lesson-1:
+              name: Données
         nevada-standards-aligned-second-grade-2023:
           description: Nous avons développé le Cours C pour des élèves de CE1. Les
             élèves créeront des programmes avec du séquençage, des boucles et des
@@ -10903,10 +10906,11 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Données
-          student_description: Crée des programmes avec séquençage, boucles et événements.
-            Traduis tes initiales en binaire, étudie différentes techniques de résolution
-            de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
-            crée ton propre jeu ou ta propre histoire que tu peux partager !
+            lessonGroup-8:
+              display_name: Systèmes informatiques
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
         nevada-standards-aligned-third-grade-2023:
           description: Nous avons créé le cours D pour les élèves de CE2. Le cours
             commence par un examen des notions abordées dans les cours précédents,
@@ -10929,8 +10933,6 @@ fr:
               display_name: Données
             lessonGroup-8:
               display_name: Projet de fin de cours
-          student_description: Découvre les boucles, les instructions conditionnelles
-            et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
         new-d:
           title: Script du Nouveau Cours D
         new-e:
@@ -12469,6 +12471,22 @@ fr:
               name: 'Suite du module 6 : Méthodes de chaîne dans l''unité 6'
           name: vpl-csa-2022
           title: Formation professionnelle virtuelle CSA
+        vpl-csa-2023-m1:
+          title: Module 1
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Apprentissage professionnel virtuel CS Discoveries 2020 - 21
@@ -12496,6 +12514,22 @@ fr:
           title: Apprentissage professionnel virtuel CS Discoveries 2021 - 22
         vpl-csd-2022:
           title: Apprentissage professionnel virtuel CS Discoveries 2022 - 23
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
         vpl-csd-ci-1:
           description: "Ce module de formation professionnelle est conçu pour vous
             aider à vous préparer à enseigner aux élèves la résolution de problèmes
@@ -12986,6 +13020,22 @@ fr:
           title: Principes CS Apprentissage professionnel virtuel 21 - 22
         vpl-csp-2022:
           title: CS Principles Apprentissage professionnel virtuel 22 - 23
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

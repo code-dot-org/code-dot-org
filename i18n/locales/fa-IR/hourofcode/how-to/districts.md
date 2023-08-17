@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: ساعت کد نحوه کار برای مناطق
 ---
 
 {{ signup_button }}

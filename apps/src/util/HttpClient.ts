@@ -4,7 +4,7 @@ import {
 } from './AuthenticityTokenStore';
 
 export type ResponseValidator<ResponseType> = (
-  bodyJson: object
+  bodyJson: Record<string, unknown>
 ) => ResponseType;
 
 export type GetResponse<ResponseType> = {
@@ -54,13 +54,11 @@ async function post(
     const token = await getAuthenticityToken();
     headers[AUTHENTICITY_TOKEN_HEADER] = token;
   }
-
   const response = await fetch(endpoint, {
     method: 'POST',
     body,
     headers,
   });
-
   if (!response.ok) {
     throw new Error(response.status + ' ' + response.statusText);
   }

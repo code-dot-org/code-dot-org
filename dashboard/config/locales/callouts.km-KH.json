@@ -634,7 +634,7 @@
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
         },
         "CourseD_Dance_2020_022022": {
-          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
+          "arrow_buttons": "អ្នកអាចចុចលើប៊ូតុងសញ្ញាព្រួញ ដើម្បីបញ្ជាអ្នករបាំរបស់អ្នក។",
           "dance_callout_11_a": "ចូរដាក់ប្លុកនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n"
         },
         "CourseD_Dance_2020_02_2021": {
@@ -659,6 +659,18 @@
         },
         "Dance_2019_05": {
           "dance_callout_05": "ចូរបន្ថែមព្រឹត្តិការណ៍ថ្មីមួយទៀតទៅក្នុងកម្មវិធីរបស់អ្នក។"
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "ពាក្យបញ្ជាបន្តិចបន្តួចនេះប្រាប់កុំព្យូទ័រឲដំណើរការកូដដ៏ច្រើនដែលមានឈ្មោះដូចគ្នានៅក្នុងកន្លែងសរសេរកូដ។"
@@ -753,11 +765,41 @@
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "ប្រើប្លុកនេះដើម្បីកំណត់ចំណាំ ខ្លួនឯង ឬសម្រាប់គ្រូ ដើម្បីប្រាប់ពីរបៀបដែលកូដរបស់អ្នកដំណើរការ។"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "ចុច \"ដំណើរការ\" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!"
+        },
         "Robot Doodle": {
           "4-5_Artist_Patterns_Free_Play_2": "ព្យាយាមប្រើប្លុក `អត្ថាធិប្បាយ‍ថ្មី` នៅក្រោមស្លាកនេះដើម្បីទុកកំណត់ចំណាំនៅក្នុងកម្មវិធីរបស់អ្នក!"
         },
         "Robot Doodle_2018": {
           "4-5_Artist_Patterns_Free_Play_2": "ព្យាយាមប្រើប្លុក `អត្ថាធិប្បាយ‍ថ្មី` នៅក្រោមស្លាកនេះដើម្បីទុកកំណត់ចំណាំនៅក្នុងកម្មវិធីរបស់អ្នក!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "ចុចទីនេះដើម្បីបន្ថែមការរចនាថ្មីៗ (costumes) ទៅក្នុងគម្រោងរបស់អ្នក!"
         },
         "course3_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "រក្សាប្រូក្រាមនេះឱ្យនៅដដែលដោយបន្ថែមកូដនៅក្រោម។",
@@ -1014,6 +1056,18 @@
         "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "ប្លុកនេះមានសារៈសំខាន់ខ្លាំងណាស់សម្រាប់គម្រោងនេះ។ ត្រូវប្រាកដថាប្រើវា!"
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "តើអ្នកឃើញប្លុកថ្មីក្នុងប្រអប់ឧបករណ៍ដែរឬទេ? កំុបារម្ភអី យើងនឹងបង្ហាញអ្នករបៀបប្រើវានៅដំណាក់កាលក្រោយ។"
         },
@@ -1188,6 +1242,12 @@
         },
         "courseD_bee_debugging_challenge1a": {
           "courseD_bee_debugging_challenge1_callout1": "ប្រើប្រាស់ពាក្យបញ្ជានេះ ដើម្បីរំកិលសត្វឃ្មុំថយក្រោយ។"
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "ព្យាយាម ពិនិត្យមើលដំណើរការកូដរបស់អ្នកម្តងមួយប្លុកៗ"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "ព្យាយាម ពិនិត្យមើលដំណើរការកូដរបស់អ្នកម្តងមួយប្លុកៗ"
         },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "ប្រើប្លុកនេះដើម្បីជីកយកកំណប់មួយដុំ។"
@@ -1525,40 +1585,82 @@
           "courseE_playLab_scaffold3_1": "ដាក់តួអង្គនឺងទង់ជាតិដើម្បីផ្លាស់ប្តូរទៅកម្រិតបន្ទាប់។"
         },
         "courseF_apps_aquarium": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_aquarium2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_aquarium_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_chatbot_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_collector_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet2022": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_apps_pet_-2022-2": {
-          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!"
+          "run_button": "ចុចប៊ូតុងដំណើរការជាមុនសិន!",
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
         },
         "courseF_artist_for1": {
           "courseF_artist_for1_1": "ប្លុកត្រូវបានចែកជាផ្នែកៗ ហើយដាក់ជា \"ក្រុម\" ដើម្បីមានកន្លែងទូលាយសម្រាប់ការសរសេរកូដ។ អ្នកអាចរកប្លុក \"for loops\" នៅទីនេះ។"
@@ -1604,6 +1706,36 @@
         },
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "មុខងារនេះនឹងធ្វើការបានល្អជាមួយពោត, ប៉ុន្តែចុះធ្វើយ៉ាងណាចំពោះបន្លែផ្សេងទៀត?"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "អូសចំនុច ចុចៗ 3 ដើម្បីប្តូរទំហំកន្លែងលេង។"
+        },
+        "courseF_events_time": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
+        },
+        "courseF_text_events": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "ចុចទីនេះដើម្បីប្រើកូដ ព្រឹត្តិការណ៍។"
         },
         "coursee_helloworld_say": {
           "hello_world_make_sprite": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite."

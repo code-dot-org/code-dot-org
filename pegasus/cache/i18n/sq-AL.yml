@@ -58,7 +58,7 @@ sq-AL:
   arduino_beyond_name: Arduino me Sparkfun
   arduino_beyond_platformtext: Shfletues i faqeve të internetit, më pas bli Kit
   arduino_beyond_shortdescription: Mëso Arduino me Sparkfun's Digital Sandbox.
-  are_you_teacher: A jeni një mësues?
+  are_you_teacher: A jeni një mësimdhënës?
   artist_gradelevel: Moshat 8+
   artist_name: Artisti
   artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
@@ -122,7 +122,7 @@ sq-AL:
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_webpages: Mëso të bësh faqe interneti
-  cded_sign_up: Rregjistrohu
+  cded_sign_up: Regjistrohu
   cded_try_it: Provoje
   city: Qyteti
   class_submission_in_school: Në shkollë
@@ -356,6 +356,7 @@ sq-AL:
   courseb-2019_gradelevel: Moshat 5-8
   courseb-2020_gradelevel: Moshat 5-8
   courseb-2021_gradelevel: Moshat 5-8
+  courseb-2021_name: Kursi B (2021)
   courseb-2022_gradelevel: Moshat 5-8
   courseb-2022_name: Kursi B (2022)
   courseb_gradelevel: Moshat 5-8
@@ -365,6 +366,7 @@ sq-AL:
   coursec-2020_gradelevel: Moshat 6-10
   coursec-2021_gradelevel: Moshat 6-10
   coursec-2022_gradelevel: Moshat 6-10
+  coursec-2022_name: Kursi C (2022)
   coursec_gradelevel: Moshat 6-10
   coursed-2017_gradelevel: Klasat 8+
   coursed-2018_gradelevel: Klasat 8+
@@ -372,6 +374,7 @@ sq-AL:
   coursed-2020_gradelevel: Klasat 8+
   coursed-2021_gradelevel: Klasat 8+
   coursed-2022_gradelevel: Klasat 8+
+  coursed-2022_name: Kursi D (2022)
   coursed_gradelevel: Klasat 8+
   coursee-2017_gradelevel: Moshat 8-12
   coursee-2018_gradelevel: Moshat 8-12
@@ -379,6 +382,7 @@ sq-AL:
   coursee-2020_gradelevel: Moshat 8-12
   coursee-2021_gradelevel: Moshat 8-12
   coursee-2022_gradelevel: Moshat 8-12
+  coursee-2022_name: Kursi E (2022)
   coursee_gradelevel: Moshat 8-12
   coursef-2017_gradelevel: Moshat 9-13
   coursef-2018_gradelevel: Moshat 9-13
@@ -386,6 +390,7 @@ sq-AL:
   coursef-2020_gradelevel: Moshat 9-13
   coursef-2021_gradelevel: Moshat 9-13
   coursef-2022_gradelevel: Moshat 9-13
+  coursef-2022_name: Kursi F (2022)
   coursef_gradelevel: Moshat 9-13
   coursera_beyond_gradelevel: Universiteti
   coursera_beyond_longdescription: 'Klasa CS 101 e Stanford i shpjeguar nga Nick Parlante
@@ -414,7 +419,7 @@ sq-AL:
   csedweek_map_legend_event: Ngjarje e Orës së Kodimit
   csedweek_map_legend_title: Legjend
   csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
-  csedweek_map_search_reset: Rivendosn
+  csedweek_map_search_reset: Rifillo
   csedweek_map_search_search: Kërko
   csedweek_map_signup: Regjistro ngjarjen tënde
   csedweek_og_description: 'Ora e Kodimit është një lëvizje globale që i përfshin
@@ -672,6 +677,7 @@ sq-AL:
   enter_country: Vendos shtetin nëse jeni nga jashtë Shteteve të Bashkuara
   enter_valid_age: Të lutem zgjidh një moshë të vlefshme
   enter_valid_email: Ju lutem shkruani një adresë email-i të vlefshme
+  express-2022_name: Kursi Express (2022)
   finch_beyond_gradelevel: Moshat 8+
   finch_beyond_longdescription: Finchi është një robot i ri për edukimin në shkencën
     kompjuterike. Dizenjimi i tij është rezultati i 4 viteve studimi tek labortori
@@ -695,9 +701,11 @@ sq-AL:
   flappy_text: Code.org sapo mbushi një vit.<br/><br/> Festo me ne duke krijuar lojën
     tuaj <b>Flappy</b>. Kodo rregullat e tua dhe ndaji ato me shoket e tu!
   footer_about: Rreth
+  footer_built_on_github: E ndërtuar në GitHub nga Microsoft
   footer_donate: Dhuro
   footer_powered_by_aws: Mundësuar nga Amazon Web Services
   footer_privacy_policy: Rregullat e Privatësisë
+  footer_store: Dyqani
   footer_support: Ndihma dhe Komuniteti
   footer_terms: Termat
   frozen_gradelevel: Moshat 8+
@@ -754,12 +762,14 @@ sq-AL:
   hacketyhack_beyond_platformtext: Instalim desktopi
   hacketyhack_beyond_shortdescription: Mëso Ruby nga fillimi
   header_about: Rreth
+  header_course_catalog: Katalogu i kursit
   header_courses: Kurset
   header_educate_hoc: Ora e Kodimit
   header_help_us: Na Ndihmo
   header_learn: Mëso
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
+  header_my_dashboard: Paneli im
   header_project_gallery: Projekte
   header_report_bug: Raporto një problem
   header_sections: Seksionet
@@ -823,7 +833,7 @@ sq-AL:
   homepage_action_text_join_us: Na u bashko!
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_num_served: "# e dorëzuar"
-  homepage_action_text_sign_up: Rregjistrohu
+  homepage_action_text_sign_up: Regjistrohu
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_action_text_teachervideo: Ndiq videon
   homepage_action_text_try_it: Provoje
@@ -1071,7 +1081,7 @@ sq-AL:
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_now: Meso tani
   learn_online: Provo kurse të tjera online
-  learn_sign_up_button: Rregjistrohu
+  learn_sign_up_button: Regjistrohu
   learn_sign_up_description: Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë
     Javës së Mësimdhënies së Shkencave Kompjuterike
   lego_beyond_gradelevel: Shkolla tetë vjeçare +
@@ -1349,7 +1359,7 @@ sq-AL:
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_blocks_title: Blloqe
+  starwars_blocks_title: Blloqet
   starwars_gradelevel: Moshat 4-104
   starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
   starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+

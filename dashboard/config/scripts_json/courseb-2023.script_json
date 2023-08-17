@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2023-07-25 23:06:11 UTC",
+    "serialized_at": "2023-08-16 15:24:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6413,7 +6413,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/courseb-2022/resources",
+      "url": "/s/courseb-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6424,7 +6424,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/courseb-2022/standards",
+      "url": "/s/courseb-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6435,7 +6435,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/courseb-2022/vocab",
+      "url": "/s/courseb-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6491,6 +6491,19 @@
       },
       "seeding_key": {
         "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "name": "CSF Course B Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/template/preview",
+      "key": "csf_course_b_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -6966,6 +6979,12 @@
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
         "resource.key": "digital_trails_animal_tracks"
       }
     },
@@ -6996,6 +7015,12 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
         "resource.key": "feeling_faces_emotion_image"
       }
     },
@@ -7008,6 +7033,12 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
         "resource.key": "play_lab_project_planning_guide"
       }
     },
@@ -7015,6 +7046,12 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "play_lab_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Loopy",
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -7050,6 +7087,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Harvester",
         "resource.key": "feeling_faces_emotion_image"
       }
     },
@@ -7068,6 +7111,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
         "resource.key": "feeling_faces_emotion_image"
       }
     },
@@ -7075,6 +7124,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: A Royal Battle with Events",
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -7093,6 +7148,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -7134,6 +7195,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
         "resource.key": "feeling_faces_-_emotion_image"
       }
     },
@@ -7164,6 +7231,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Harvester",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
         "resource.key": "feeling_faces"
       }
     },
@@ -7183,6 +7256,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Angry Birds",
         "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Angry Birds",
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -7230,6 +7309,12 @@
     {
       "seeding_key": {
         "lesson.key": "The Big Event Jr",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
         "resource.key": "feeling_faces"
       }
     },
@@ -7255,6 +7340,12 @@
       "seeding_key": {
         "lesson.key": "The Big Event Jr",
         "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "resource.key": "csf_course_b_lesson_slides"
       }
     },
     {
@@ -8248,5 +8339,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

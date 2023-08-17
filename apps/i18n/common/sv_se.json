@@ -564,6 +564,7 @@
   "nextStage": "Grattis! Du har klarat {stageName}.",
   "nextStageTrophies": "Grattis! Du klarade {stageName} och har fått {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "no": "Nej",
+  "noEvidence": "Inga bevis",
   "noIconsFound": "Inga ikoner hittades",
   "noMenuItemsAvailable": "Inga menyalternativ tillgängliga.",
   "none": "Ingen",

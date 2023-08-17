@@ -6516,6 +6516,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
         csd2-2023:
@@ -6568,7 +6570,6 @@ cs:
               display_name: Nové lekce
           title: "(Možnost A) Vytváření aplikací se zařízeními - Circuit Playground ('23-'24)"
           description_short: Naučte se programovat s fyzickými zařízeními.
-          student_description: Tato jednotka zkoumá roli hardwarových platforem ve výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí App Lab a Adafruit's Circuit Playground, budete vyvíjet programy, které využívají stejné hardwarové vstupy a výstupy, jaké vidíte v inteligentních zařízeních, při pohledu na to, jak jednoduchý hrubý prototyp může vést k hotovému produktu. Jednotka končí konstrukční výzvou použít Circuit Playground jako základ pro inovaci vašeho vlastního designu.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7255,6 +7256,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kreativitu1-2023
           title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7299,6 +7302,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           name: zaměřit se na hardware1-2023
           title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7331,6 +7336,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na data1-2023
           title: Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7384,6 +7391,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na design-s-účelu-1-2023
           title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7428,6 +7437,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kódování1-2023
           title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7467,6 +7478,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na dopad ve společnosti1-2023
           title: Řešení problémů a výpočetní technika ('23-'24)
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte, jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
@@ -7979,6 +7992,9 @@ cs:
               display_name: Dopady počítačů
           description_audience: 'Věk: 4-7 let'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digitální občanství
@@ -7988,11 +8004,15 @@ cs:
               display_name: Cykly
             lessonGroup-5:
               display_name: Dopady počítačů
+            lessonGroup-6:
+              display_name: Data
           description_audience: 'Věk: 4-7 let'
           description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
-          description: 'Kurz A nabízí osnovy informatiky pro začínající čtenáře, včetně studentů mateřských škol. Studenti se naučí programovat pomocí příkazů, jako jsou smyčky a události. Lekce uvedené v tomto kurzu také učí studenty smysluplně spolupracovat s ostatními, zkoumat různé techniky řešení problémů, přetrvávat tváří v tvář náročným úkolům, a dozvědět se o bezpečnosti internetu. '
-          student_description: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+          description: Kurz A nabízí osnovy informatiky pro začínající čtenáře, včetně studentů mateřských škol. Studenti se naučí programovat pomocí příkazů, jako jsou smyčky a události. Lekce uvedené v tomto kurzu také učí studenty smysluplně spolupracovat s ostatními, zkoumat různé techniky řešení problémů, přetrvávat tváří v tvář náročným úkolům, a dozvědět se o bezpečnosti internetu.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digitální občanství
@@ -8006,11 +8026,15 @@ cs:
               display_name: Události
             lessonGroup-7:
               display_name: Projekt na zakončení kurzu
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Věk: 5-8 let'
           description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. Obdoba kurzu A, ale s větší hloubkou probíraných koncepcí.
           description: Vyvinuli jsme kurz B s ohledem na první srovnávače. Zatímco koncepty v kurzu B paralelní s těmi v kurzu A, studenti se učí sofistikovanější odpojené aktivity a pracují prostřednictvím větší škály hádanek. Studenti se naučí základy programování, techniky spolupráce, dovednosti vyšetřování a kritického myšlení, vytrvalost tváří v tvář obtížnosti, a bezpečnost internetu. Na konci tohoto kurzu studenti vytvoří hry v programovacím prostředí Play Lab.
-          student_description: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Výpočetní systémy
           lesson_groups:
             lessonGroup-2:
               display_name: Digitální občanství
@@ -8022,8 +8046,9 @@ cs:
               display_name: Události
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Výpočetní systémy
           description: Vyvinuli jsme kurz C pro studenty ve druhém ročníku. Studenti budou vytvářet programy se sekvenováním, smyčky, a události. Budou zkoumat techniky řešení problémů a vyvinout strategie pro budování pozitivních komunit online i offline. Na konci kurzu budou studenti vytvářet interaktivní hry, které mohou sdílet.
-          student_description: Vytvářejte programy s posloupnostmi, cykly a událostmi. Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -8040,8 +8065,7 @@ cs:
               display_name: Projekt na zakončení kurzu
           description_audience: 'Věk: 7-11 let'
           description_short: Naučte se něco o podmíněných příkazech. Vytvořte své vlastní umění, hry a dokonce i taneční večírek.
-          description: 'Vytvořili jsme kurz D pro studenty ve třetím ročníku. Kurz začíná přehledem konceptů nalezených v dřívějších kurzech, včetně smyček a událostí. Později, studenti budou rozvíjet své chápání algoritmů, vnořené smyčky, zatímco smyčky, podmíněné, a více. '
-          student_description: Další informace o smyčkách, podmíněných událostech a událostech. Kromě kódování, dozvědět se o digitálním občanství.
+          description: Vytvořili jsme kurz D pro studenty ve třetím ročníku. Kurz začíná přehledem konceptů nalezených v dřívějších kurzech, včetně smyček a událostí. Později, studenti budou rozvíjet své chápání algoritmů, vnořené smyčky, zatímco smyčky, podmíněné, a více.
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -8055,7 +8079,6 @@ cs:
           description_audience: 'Věk: 8-12 let'
           description_short: Naučte se základy skřítků, vnořených smyček a funkcí.
           description: Vytvořili jsme kurz E pro studenty ve čtvrtém ročníku. Kurz začíná úvodem do programovacího nástroje Sprite Lab. Studenti se naučí dělat si legraci, interaktivní projekty, které posilují to, co se dozví o online bezpečnosti. Po těchto lekcích, studenti se zapojí do složitějšího kódování. Studenti se seznámí s vnořenými smyčkami, funkcemi a podmíněnými funkcemi. Na konci kurzu budou studenti kombinovat tyto koncepty k řešení náročných hádanek. Kurz je zakončen otevřeným projektem, kde studenti vytvoří hru nebo kresbu.
-          student_description: Začněte kódovat pomocí algoritmů, událostí, smyček, podmíněných a funkcí! Na konci tohoto kurzu navrhněte a vytvořte hru nebo kresbu, kterou můžete sdílet se svými přáteli a rodinou.
         nevada-standards-aligned-fifth-grade-2023-2023:
           lesson_groups:
             lessonGroup-2:
@@ -8081,4 +8104,53 @@ cs:
           description_audience: 'Věk: 9-13 let'
           description_short: Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru.
           description: Vytvořili jsme kurz F pro studenty v páté třídě. Kurz začíná tím, že se podíváme na to, jak se uživatelé rozhodují v aplikacích, které používají. Studenti se pak naučí vytvářet různé aplikace Sprite Lab, které také nabízejí možnosti pro uživatele. V pozdějších hodinách kurzu se studenti seznámí s proměnnými v různých kontextech. Studenti mají v průběhu tohoto kurzu větší samostatnost a více možností. Na konci kurzu budou studenti vytvářet interaktivní projekty, které budou sdílet se svými přáteli a rodinou.
-          student_description: Naučte se kódovat pomocí skřítků a proměnných, a diskutovat o společenských dopadech výpočetní techniky a internetu. Na konci tohoto kurzu navrhněte a vytvořte projekt, který můžete sdílet s přáteli a rodinou.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Jak funguje umělá inteligence
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

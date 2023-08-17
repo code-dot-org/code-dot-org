@@ -2944,6 +2944,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3202,6 +3204,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3219,6 +3223,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3236,6 +3242,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3262,6 +3270,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3278,6 +3288,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3293,6 +3305,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3545,6 +3559,9 @@ fil:
               display_name: Epekto ng Pag-Compute
           description_audience: 'Mga Edad: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
@@ -3552,10 +3569,14 @@ fil:
               display_name: Mga loop
             lessonGroup-5:
               display_name: Epekto ng Pag-Compute
+            lessonGroup-6:
+              display_name: Data
           description_audience: 'Mga Edad: 4-7'
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
-          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
@@ -3565,8 +3586,9 @@ fil:
               display_name: Epekto ng Pag-Compute
             lessonGroup-6:
               display_name: Mga event
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Mga Edad: 5-8'
-          student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3577,7 +3599,6 @@ fil:
               display_name: Mga event
             lessonGroup-6:
               display_name: Data
-          student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3614,3 +3635,5 @@ fil:
               display_name: Epekto ng Pag-Compute
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+        how-ai-works-2023:
+          title: Paano Gumagana ang AI

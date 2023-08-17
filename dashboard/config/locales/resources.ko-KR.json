@@ -543,14 +543,14 @@
           "name": "교사용 포럼"
         },
         "csd_curriculum_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "자료",
-          "name": "CSD 커리큘럼 가이드",
-          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
+          "name": "CSD 커리큘럼 가이드"
         },
         "csd_implementation_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "자료",
-          "name": "CSD 구현 가이드",
-          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview"
+          "name": "CSD 구현 가이드"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "type": "슬라이드"
@@ -605,6 +605,14 @@
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "자료"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+          "name": "CSD 디버깅 가이드"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+          "name": "차별화를 위한 CSD 가이드"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "웹 페이지 탐구"
@@ -1233,14 +1241,6 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "프로젝트 가이드"
-        },
-        "csd_guide_to_debugging/csd/2021": {
-          "name": "CSD 디버깅 가이드",
-          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
-        },
-        "csd_guide_to_differentiation/csd/2021": {
-          "name": "차별화를 위한 CSD 가이드",
-          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "all_code_5/csd/2021": {
           "name": "모든 코드",
@@ -3319,6 +3319,12 @@
         },
         "exploring_problem_solving_games_/csd/2022": {
           "type": "슬라이드"
+        },
+        "csd_guide_to_debugging/csd/2022": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2022": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "exploring_web_pages/csd/2022": {
           "name": "웹 페이지 탐구"

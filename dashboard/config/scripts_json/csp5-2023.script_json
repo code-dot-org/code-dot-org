@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:54:25 UTC",
+    "serialized_at": "2023-08-06 18:11:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2088,15 +2088,16 @@
       }
     },
     {
-      "key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+      "key": "dd5c2030-7b15-4193-b063-0c8d5a7d89ca",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide.",
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
         "duration": "10",
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+        "activity_section.key": "dd5c2030-7b15-4193-b063-0c8d5a7d89ca",
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
@@ -2104,9 +2105,21 @@
       "key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Five in order to generate clues for the students.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
+        "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
+      }
+    },
+    {
+      "key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
@@ -3293,6 +3306,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Five",
+      "url": "https://drive.google.com/file/d/1xJhhRnad5IqXy8AnNkuS5WzflVj6SeF1/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_five",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1xJhhRnad5IqXy8AnNkuS5WzflVj6SeF1",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_five"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
       "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
       "key": "csp_data_-_lesson_2_-_learning_from_data",
@@ -3832,6 +3870,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Tell a Data Story Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_five"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
         "resource.key": "csp_u9_project_guide_-_tell_a_data_story"
       }
     },
@@ -3920,10 +3970,136 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "citizen_science",
+      "word": "Citizen Science",
+      "definition": "scientific research conducted in whole or part by distributed individuals, many of whom may not be scientists, who contribute relevant data to research using their own computing devices.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "key": "cleaning_data",
+      "word": "Cleaning Data",
+      "definition": "a process that makes the data uniform without changing its meaning (e.g., replacing all equivalent abbreviations, spellings, and capitalizations with the same word).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "key": "correlation",
+      "word": "Correlation",
+      "definition": "a relationship between two pieces of data, typically referring to the amount that one varies in relation to the other.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "key": "crowdsourcing",
+      "word": "Crowdsourcing",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "key": "data_bias",
+      "word": "Data Bias",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "key": "data_filtering",
+      "word": "Data Filtering",
+      "definition": "choosing a smaller subset of a data set to use for analysis, for example by eliminating / keeping only certain rows in a table",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "key": "information",
+      "word": "Information",
+      "definition": "the collection of facts and patterns extracted from data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "key": "metadata",
+      "word": "Metadata",
+      "definition": "data about data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4600,6 +4776,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
