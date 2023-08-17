@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/fc98550cba1ccadb982d9f6130651b59-WebDevelopment.png",
@@ -15,6 +15,6 @@
   "description": "Students learn problem solving, creative expression, and teamwork as they work to create and share content on their very own web pages.",
   "professional_learning_program": "code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/itx0RYOnoBs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=itx0RYOnoBs&wmode=transparent",
-  "published_date": null,
+  "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 443
 }

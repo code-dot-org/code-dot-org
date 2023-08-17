@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:18:28.000Z",
   "level_num": "custom",
@@ -64,7 +65,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Using Functions for Repeated Code\r\n\r\nThis app has the same aliens from before, but they are easily frightened - any loud noises or bright lights will make the aliens jump around on the screen. In the code, this is accomplished with two [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks.\r\n\r\nWhen we look at those two blocks, a lot of the code is repeated in both places. This is really inefficient! It would be much clearer if all of this code was **defined** in its own function in one place, and then we **call** that function every place we want to use it. This makes our code shorter and easier to read.\r\n\r\n## Do This\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/42f15b108e5afddc8916d1d73ec6d8f8-image-1649886617478.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n**1) Defining Your Functions**\r\n\r\n- At the bottom of the code, **define** a new function called `moveAliens` [(**Show Me Where**)](#triggercallout=define)\r\n- Find the sections of the code that is repeated in multiple places. Move that code into the function you just created\r\n\r\n**2) Calling Your Functions**\r\n\r\n- Replace the original code by **calling** the `moveAliens` function\r\n\r\n**Check Yourself:** By now, your code should be _shorter_ and still work the same as before. You can run your code and make sure the aliens scatter when a bright light or loud sound is made.",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -79,7 +80,8 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/functions",
     "starter_assets": {
@@ -96,9 +98,8 @@
     "encrypted_examples": "e1jginS3LaAl2VjxyG2JbJ8vmWVKoNAL1H8bd3BOaAwk1UK/rghtyvPydXqd\niHoE6Klh8iKGzbj7D7BUr6Gi4Q==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:28.652+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:28.652+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB3_2222\"},{\"changed_at\":\"2023-08-16 19:36:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
