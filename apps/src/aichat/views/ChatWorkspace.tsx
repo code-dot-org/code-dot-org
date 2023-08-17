@@ -24,7 +24,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
   // This function is called when the user submits a chat message.
   // It sends the user message to the backend and retrieves the assistant response.
-  const onSubmit = async (message: string) => {
+  const onSubmit = async (message: string, systemPrompt: string) => {
     const newMessageId =
       storedMessages.length === 0
         ? 1
@@ -34,9 +34,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
     // TODO: Filter inappropriate and too personal messages.
     const appropriateChatMessages = [...storedMessages];
-    // Retrieve system prompt from levebuilder - assign for now.
-    const systemPrompt =
-      'You are a chatbot for a middle school classroom where they can chat with a historical figure. You must answer only questions about the formation of America and the founding fathers. You will act as George Washington; every question you answer must be from his perspective. Wait for the student to ask a question before responding.';
 
     // Send user message to backend and retrieve assistant response.
     const chatApiResponse = await getChatCompletionMessage(
@@ -97,7 +94,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
   );
 };
 
-type ChatUtils = {onSubmit: (message: string) => void};
+type ChatUtils = {onSubmit: (message: string, systemPrompt: string) => void};
 export const ChatWorkspaceContext: React.Context<ChatUtils | null> =
   React.createContext<ChatUtils | null>(null);
 

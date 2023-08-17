@@ -96,6 +96,9 @@ export interface LevelProperties {
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
+  systemPrompt?: string;
+  botTitle?: string;
+  botDescription?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
