@@ -1,0 +1,86 @@
+.carousel-wrapper#flexible_units_carousel
+  .carousel.carousel--flexible_units{style: "height: 515px"}
+    .slides
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_month)
+            %h3=hoc_s(:curriculum_name_problem_solving_computing)
+            %img{src: "/images/csd-unit-problem-solving-computing.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_problem_solving_computing)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/problem-solving-computing-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_problem_solving_computing)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_quarter)
+            %h3=hoc_s(:curriculum_name_interactive_animations_games)
+            %img{src: "/images/csd-unit-interactive-animations-games.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_interactive_animations_games)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/interactive-games-animations-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_quarter)
+            %h3=hoc_s(:curriculum_name_web_development)
+            %span.action-block__space
+            %img{src: "/images/csd-unit-web-development.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_web_development)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/web-development-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_web_development)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_month)
+            %h3=hoc_s(:curriculum_name_design_process)
+            %img{src: "/images/csd-unit-design-process.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_design_process)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/design-process-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_design_process)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_month)
+            %h3=hoc_s(:curriculum_name_data_society)
+            %img{src: "/images/csd-unit-data-society.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_data_society)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/data-society-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_data_society)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_quarter)
+            %h3=hoc_s(:curriculum_name_creating_apps_with_devices)
+            %img{src: "/images/maker/maker-graphic.png", alt: ""}
+            %p=hoc_s(:curriculum_desc_creating_apps_with_devices)
+          .content-footer
+            %a.link-button{href: "/maker/pick-a-device", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_creating_apps_with_devices)}}
+              =hoc_s(:call_to_action_explore_unit)
+      .slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline=hoc_s(:module_duration_month)
+            %h3=hoc_s(:curriculum_name_ai)
+            %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+            %p=hoc_s(:ai_curriculum_desc_01)
+          .content-footer
+            %a.link-button{href: CDO.studio_url("/s/aiml-2023?viewAs=Instructor"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+              =hoc_s(:call_to_action_explore_unit)
+
+  .pagination
+    #flexible_units_carousel-pagination
+  .dd__buttons
+    %button.carousel__prev#prev_1
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_1
+      %img{src: "/images/carousel/next.svg", alt: "next"}
+
+
+
