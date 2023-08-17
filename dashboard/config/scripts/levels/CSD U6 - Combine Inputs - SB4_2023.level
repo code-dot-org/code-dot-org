@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:08.000Z",
   "level_num": "custom",
@@ -62,14 +63,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20441,
     "name_suffix": "_2023",
     "encrypted_examples": "04eC4RCQF6pNU/wepe1TOzxGrNviFEci0zK+6atQ7/G2zbCU1M7YJPJgcKjJ\nGUDwmfxwFsBC14Wokofr3RXJsA==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty"
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
@@ -79,9 +81,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:08.827+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB4_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:08.827+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB4_2222\"},{\"changed_at\":\"2023-08-15 16:52:46 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:53:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

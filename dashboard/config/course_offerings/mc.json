@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"incompatible\"}",
   "description": null,
-  "self_paced_professional_learning": null,
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "video": "https://www.youtube-nocookie.com/embed/Fzwa6Pm03Zk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Fzwa6Pm03Zk&wmode=transparent",
+  "published_date": "2016-11-17 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

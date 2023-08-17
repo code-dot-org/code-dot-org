@@ -21,10 +21,10 @@ import styles from './video.module.scss';
 const StandaloneVideo: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const levelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelData
+    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
   );
   const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.appName
+    (state: {lab: LabState}) => state.lab.levelProperties?.appName
   );
 
   const [levelVideo, setLevelVideo] = React.useState<VideoLevelData | null>(

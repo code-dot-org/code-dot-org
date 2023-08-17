@@ -137,15 +137,20 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'teacher can update gender, name, age, and password info for their student' do
+  test 'teacher can update gender, name, family name, age, and password info for their student' do
     sign_in @teacher
-    put :update, params: {section_id: @section.id, id: @student.id, student: {gender_teacher_input: 'f', age: 9, name: 'testname', password: 'testpassword'}}
+    DCDO.stubs(:get)
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender_teacher_input: 'f', age: 9, name: 'testname', family_name: 'testfamname', password: 'testpassword'}}
     assert_response :success
     assert_equal 'f', JSON.parse(@response.body)['gender']
     assert_equal 9, JSON.parse(@response.body)['age']
     assert_equal 'testname', JSON.parse(@response.body)['name']
+    assert_equal 'testfamname', JSON.parse(@response.body)['family_name']
+    DCDO.unstub(:get)
 
     assert_equal 'testname', @student.reload.name
+    assert_equal 'testfamname', @student.family_name
     assert_equal 9, @student.age
     assert_equal 'f', @student.gender
     assert @student.valid_password?('testpassword')
@@ -218,7 +223,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can add one student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name', family_name: 'famname'}]}
     assert_response :success
 
     parsed_response = JSON.parse(@response.body)
@@ -229,6 +234,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     new_student = User.find_by_id(parsed_response[0]['id'])
 
     assert_equal 'name', new_student.name
+    assert_equal 'famname', new_student.family_name
     assert_equal 9, new_student.age
     assert_equal 'f', new_student.gender
   end

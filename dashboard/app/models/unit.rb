@@ -122,6 +122,7 @@ class Unit < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
+            {rubric: {learning_goals: :learning_goal_evidence_levels}},
             :standards,
             :opportunity_standards
           ]
@@ -280,6 +281,10 @@ class Unit < ApplicationRecord
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
   #   unit is being updated, so we can regenerate PDFs.
+  # is_deprecated - true if the unit is deprecated. If this flag is set, we will redirect
+  #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
+  #   We don't use published_state here because some courses in the deprecated published state
+  #   are not ready to be redirected. In the future we should unify these two states.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -307,6 +312,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit

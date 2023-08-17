@@ -1214,6 +1214,7 @@ en:
         israel: 'Israel'
         jamaica: 'Jamaica'
         kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaysia'
         maldives: 'Maldives'
         mexico: 'Mexico'
@@ -1338,6 +1339,7 @@ en:
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
       confirm_login: 'Select "Confirm" to log in with your Google account.'
+    setup_page_title: 'Maker Setup'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1373,3 +1375,7 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
+    button: "View new curriculum"
+

@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -34,12 +35,14 @@ export interface MusicState {
   showInstructions: boolean;
   /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
-  /** If the headers are showing */
-  isHeadersShowing: boolean;
+  /** If the headers should be hidden */
+  hideHeaders: boolean;
   /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The current ordered functions */
+  orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
   lastMeasure: number;
   /** The current sound loading progress, from 0-1 inclusive, representing the
@@ -48,6 +51,10 @@ export interface MusicState {
   soundLoadingProgress: number;
   /** The 1-based playhead position to start playback from, scaled to measures */
   startingPlayheadPosition: number;
+  undoStatus: {
+    canUndo: boolean;
+    canRedo: boolean;
+  };
 }
 
 const initialState: MusicState = {
@@ -57,12 +64,17 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isHeadersShowing: true,
+  hideHeaders: false,
   isBeatPadShowing: true,
   playbackEvents: [],
+  orderedFunctions: [],
   lastMeasure: 0,
   soundLoadingProgress: 0,
   startingPlayheadPosition: 1,
+  undoStatus: {
+    canUndo: false,
+    canRedo: false,
+  },
 };
 
 const musicSlice = createSlice({
@@ -118,13 +130,13 @@ const musicSlice = createSlice({
         ];
     },
     showHeaders: state => {
-      state.isHeadersShowing = true;
+      state.hideHeaders = false;
     },
     hideHeaders: state => {
-      state.isHeadersShowing = false;
+      state.hideHeaders = true;
     },
     toggleHeaders: state => {
-      state.isHeadersShowing = !state.isHeadersShowing;
+      state.hideHeaders = !state.hideHeaders;
     },
     showBeatPad: state => {
       state.isBeatPadShowing = true;
@@ -139,12 +151,21 @@ const musicSlice = createSlice({
       state.playbackEvents = [];
       state.lastMeasure = 0;
     },
+    clearOrderedFunctions: state => {
+      state.orderedFunctions = [];
+    },
     addPlaybackEvents: (
       state,
       action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
     ) => {
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
+    },
+    addOrderedFunctions: (
+      state,
+      action: PayloadAction<{orderedFunctions: FunctionEvents[]}>
+    ) => {
+      state.orderedFunctions.push(...action.payload.orderedFunctions);
     },
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
@@ -163,6 +184,12 @@ const musicSlice = createSlice({
         1,
         state.startingPlayheadPosition - 1
       );
+    },
+    setUndoStatus: (
+      state,
+      action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
+    ) => {
+      state.undoStatus = action.payload;
     },
   },
 });
@@ -218,9 +245,12 @@ export const {
   hideBeatPad,
   toggleBeatPad,
   clearPlaybackEvents,
+  clearOrderedFunctions,
   addPlaybackEvents,
+  addOrderedFunctions,
   setSoundLoadingProgress,
   setStartPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
+  setUndoStatus,
 } = musicSlice.actions;

@@ -1,0 +1,29 @@
+name 'vpl-csa-module-7-overview_-f_2023'
+editor_experiment ''
+display_name 'CSA Module 1 Overview'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Module 7: CSA Virtual Professional Learning
+
+(Estimated time: ~5 minutes)
+
+## Module 7 Overview
+
+Welcome to Module 7. In this Module you will focus on the project students work on throughout Unit 7 and how the project is connected to the work of software engineering. 
+
+**During this asynchronous work you will:**
+
+* Review the structure and format of the Unit 7 project
+* Learn about the project management strategies used in Unit 7 to support students.
+
+
+
+**After this asynchronous work you will:**
+
+* Have a plan for implementing the Unit 7 project in your class.
+
+
+**Let's get started!**
+
+MARKDOWN

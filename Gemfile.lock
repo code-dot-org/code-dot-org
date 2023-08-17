@@ -208,7 +208,7 @@ GEM
       aws-sdk-core (~> 3.130)
       google-apis-core
       launchy (~> 2)
-    aws-partitions (1.686.0)
+    aws-partitions (1.793.0)
     aws-sdk-acm (1.44.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -224,7 +224,7 @@ GEM
     aws-sdk-cloudwatchlogs (1.43.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-core (3.168.4)
+    aws-sdk-core (3.180.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
@@ -260,7 +260,7 @@ GEM
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.5.2)
+    aws-sigv4 (1.6.0)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
     bcrypt (3.1.13)
@@ -533,6 +533,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    minitest-stub-const (0.6)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     msgpack (1.7.0)
@@ -999,6 +1000,7 @@ DEPENDENCIES
   minitest (~> 5.15)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
+  minitest-stub-const (~> 0.6)
   mocha
   mysql2 (>= 0.4.1)
   nakayoshi_fork

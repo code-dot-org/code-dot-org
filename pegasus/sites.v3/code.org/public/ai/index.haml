@@ -20,11 +20,10 @@ theme: responsive_full_width
     .text-wrapper.col-60
       %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p.body-one{style: "color: white"}=hoc_s(:ai_hero_desc)
-      -# Hiding this button that links to the blur banner section below as of 7/7/23
-      -# %a.link-button.has-icon{href: "#ai-pl-callout"}
-      -#   %div.flex-wrapper
-      -#     %i{class: "#{icon_megaphone}"}
-      -#     =hoc_s(:call_to_action_special_announcement)
+      %a.link-button.has-icon{href: "#ai-pl-callout"}
+        %div.flex-wrapper
+          %i{class: "#{icon_megaphone}"}
+          =hoc_s(:call_to_action_learning_opportunity)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -59,16 +58,15 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
--# Hiding this section s of 7/7/23
--# %section.bg-primary-light.blog-post-callout{id: "ai-pl-callout"}
--#   .wrapper
--#     %i{class: "#{icon_megaphone}"}
--#     .text-wrapper
--#       %h2.heading-lg=hoc_s(:ai_pl_callout_title)
--#       %p
--#         %strong=hoc_s(:ai_pl_callout_desc_01)
--#       %p.body-three=hoc_s(:ai_pl_callout_desc_02)
--#       %a.link-button{href: "https://code.zoom.us/webinar/register/8616874889915/WN_TGKpfOD8Rw-z5Q-D3ZiuLQ", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:signup_submit_label)
+%section#ai-pl-callout.bg-primary-light.blog-post-callout
+  .wrapper
+    %i{class: "#{icon_megaphone}"}
+    .text-wrapper
+      %h2.heading-lg=hoc_s(:ai_pl_callout_title)
+      %p
+        %strong=hoc_s(:ai_pl_callout_desc_02)
+      %p.body-three=hoc_s(:ai_pl_callout_desc_01)
+      %a.link-button{href: "/ai/pl/101"}=hoc_s(:signup_submit_explore)
 
 %section.bg-neutral-light
   .wrapper
@@ -85,40 +83,66 @@ theme: responsive_full_width
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
-%section{id: "ai-curricula"}
+%section#ai-curricula
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
-    .action-block__wrapper.action-block__wrapper--three-col
+    .action-block__wrapper.action-block__wrapper--two-col
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_01)
+          %p.overline
+            =hoc_s(:ai_curriculum_grades_01)
+          %h3=hoc_s(:ai_curriculum_title_04)
+          %img{src: "/images/ai/ai-curriculum-how-ai-works.png", alt: ""}
+          %p=hoc_s(:ai_curriculum_desc_04)
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_8_hrs)
+        .content-footer
+          %a.link-button{href: "/ai/how-ai-works", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_04)}}
+            =hoc_s(:call_to_action_explore_lessons)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:ai_curriculum_grades_01)
           %h3=hoc_s(:ai_curriculum_title_01)
           %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
           %p=hoc_s(:ai_curriculum_desc_01)
-          %p=hoc_s(:ai_curriculum_duration_01)
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_20_hrs)
         .content-footer
-          %a{href: CDO.studio_url("/s/aiml"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+          %a.link-button{href: CDO.studio_url("/s/aiml"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
             =hoc_s(:call_to_action_explore_unit)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_02)
+          %p.overline
+            =hoc_s(:ai_curriculum_grades_02)
           %h3=hoc_s(:ai_curriculum_title_02)
           %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
           %p=hoc_s(:ai_curriculum_desc_02)
-          %p=hoc_s(:ai_curriculum_duration_02)
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_1_hr)
         .content-footer
-          %a{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
+          %a.link-button{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
             =hoc_s(:call_to_action_view_lesson_plan)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_03)
+          %p.overline
+            =hoc_s(:ai_curriculum_grades_03)
           %h3=hoc_s(:ai_curriculum_title_03)
           %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
           %p=hoc_s(:ai_curriculum_desc_03)
-          %p=hoc_s(:ai_curriculum_duration_03)
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_1_hr)
         .content-footer
-          %a{href: CDO.studio_url("/s/oceans"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
+          %a.link-button{href: CDO.studio_url("/s/oceans"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
             =hoc_s(:call_to_action_try_activity)
 
 %section.bg-neutral-light
@@ -127,33 +151,49 @@ theme: responsive_full_width
     .quotes-wrapper
       = view :ai_carousel
 
-%section{id: "ai-pl"}
+%section#ai-pl
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
-    .action-block.action-block--two-col
-      .text-wrapper.col-50
-        %h3.heading-sm=hoc_s(:ai_pl_subheading)
-        %ul{style: "margin-top: 1.5em;"}
-          %li=hoc_s(:ai_pl_list_01)
-          %li=hoc_s(:ai_pl_list_02)
-          %li=hoc_s(:ai_pl_list_03)
-          %li=hoc_s(:ai_pl_list_04)
-          %li=hoc_s(:ai_pl_list_05)
-        %a{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023"), class: "link-button"}
-          =hoc_s(:call_to_action_self_paced_pl)
-      %img{src: "/images/ai/ai-professional-learning.png", alt: "", class: "col-50"}
-    .clear
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_video_series)
+          %h3=hoc_s(:ai_pl_101_hero_heading)
+          %img{src: "/shared/images/announcement/announcement_ai_pl_2023.png", alt: ""}
+          %p=hoc_s(:ai_pl_101_hero_desc)
+        .content-footer
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_5_hrs)
+          %a.link-button{href: "/ai/pl/101"}
+            =hoc_s(:call_to_action_watch_videos)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_self_paced)
+          %h3=hoc_s(:ai_pl_title)
+          %img{src: "/images/ai/ai-professional-learning.png", alt: ""}
+          %p=hoc_s(:ai_pl_desc)
+        .content-footer
+          %p
+            %strong
+              =hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_2_hrs)
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023")}
+            =hoc_s(:call_to_action_self_paced_pl)
 
 = view :section_divider_line
 
-%section{id: "ai-videos"}
+%section#ai-videos
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
-    %p=hoc_s(:ai_video_series_desc)
+    %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
     .video-series
+      = view :ai_vid_chatbots
+      = view :ai_vid_creativity
       = view :ai_vid_intro
-      -# = view :ai_vid_chatbots
-      -# = view :ai_vid_creativity
       = view :ai_vid_mlintro
       = view :ai_vid_trainingdata
       = view :ai_vid_neuralnetworks
@@ -174,7 +214,7 @@ theme: responsive_full_width
           %img{src: "/images/ai//ai-resources-ethics-panel.png", alt: ""}
           %p=hoc_s(:ai_resources_desc_01)
         .content-footer
-          %a{href: "https://youtu.be/3oqxjPXbynE", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button{href: "https://youtu.be/3oqxjPXbynE", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:call_to_action_watch_panel)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -182,7 +222,7 @@ theme: responsive_full_width
           %img{src: "/images/ai/ai-resources-imagine-cup.png", alt: ""}
           %p=hoc_s(:ai_resources_desc_02)
         .content-footer
-          %a{href: "https://imaginecup.microsoft.com/en-us/junior", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
+          %a.link-button{href: "https://imaginecup.microsoft.com/en-us/junior", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_02)}}
             =hoc_s(:call_to_action_learn_about_challenge)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -190,7 +230,7 @@ theme: responsive_full_width
           %img{src: "/images/ai/ai-resources-for-teachers.png", alt: ""}
           %p=hoc_s(:ai_resources_desc_03)
         .content-footer
-          %a{href: "https://aiforteachers.org/", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
+          %a.link-button{href: "https://aiforteachers.org/", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_03)}}
             =hoc_s(:call_to_action_explore_website)
 
 = view :section_divider_line
@@ -198,3 +238,5 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :ai_microsoft_block
+
+= view :visit_partial_event_logger

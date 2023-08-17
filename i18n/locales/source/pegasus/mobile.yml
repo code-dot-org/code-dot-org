@@ -1532,7 +1532,7 @@
   header_home: "Home"
   header_my_dashboard: "My Dashboard"
   header_courses: "Courses"
-  header_course_catalog: "Curriculum Catalog"
+  header_course_catalog: "Course Catalog"
   header_project_gallery: "Projects"
   header_sections: "Sections"
   header_professional_learning: "Professional Learning"
@@ -1562,6 +1562,7 @@
   header_stats: "Stats"
   header_help_us: "Help Us"
   header_about: "About"
+  header_incubator: "Incubator"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
   header_report_bug: "Report a problem"
@@ -1676,7 +1677,7 @@
   hoc2018_mc_download_adventurer: "Download the offline version of Minecraft Adventurer."
   hoc2018_mc_educators: "For Educators"
   hoc2018_mc_educators_box1_title: "Code with Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft Education provides standards-aligned curriculum, training and coding in Minecraft."
   hoc2018_mc_educators_box1_button: "Get started"
   hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
   hoc2018_mc_educators_box2_desc: "This toolkit will help you host an Hour of Code and engage your students in computer science."
@@ -1784,7 +1785,7 @@
   hoc2018_mc_with_microsoft: "In partnership with"
   hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description1: "The new Minecraft Hour of Code tutorial is now available in Minecraft Education for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!"
   hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
   hoc2019_mc_more_coding_resources: "More Coding Resources"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from 2018."
@@ -1797,18 +1798,18 @@
   page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
   page_not_available_button: "Return home"
   hoc2020_mc_available_code_org: "Available on Code.org"
-  hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Available in Minecraft Education"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings.'
+  hoc2020_mc_mee_description: "The new Minecraft Hour of Code tutorial is now available in Minecraft Education for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Travel back in time and learn to code! The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Get started with free educator resources, trainings, and videos.'
+  hoc2021_mc_mee_description: "Travel back in time and learn to code! The new Minecraft Hour of Code tutorial is now available in Minecraft Education for Windows, Mac, Chromebook, and iPad. Get started with free educator resources, trainings, and videos."
   hoc2021_mc_mee_villages_title: "Tale of Two Villages"
-  hoc2021_mc_mee_villages_description: 'Learn coding basics and explore diversity and inclusion with your students in Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Learn coding basics and explore diversity and inclusion with your students in Minecraft Education."
   hoc2021_mc_mee_ai_title: "AI For Good"
-  hoc2021_mc_mee_ai_description: 'Explore AI with your students and learn to code in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Explore AI with your students and learn to code in Minecraft Education."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
-  hoc2022_mc_mee_description: 'Escape the mysterious mansion by dawn and earn a million emeralds! The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, Ipad and Mobile. Get started with free educator resources, trainings, and videos. '
-  hoc2022_mc_mee_timecraft_description: 'Travel back in time to save the future in this free coding lesson in Minecraft: Education Edition.'
+  hoc2022_mc_mee_description: 'Escape the mysterious mansion by dawn and earn a million emeralds! The new Minecraft Hour of Code tutorial is now available in Minecraft Education for Windows, Mac, Chromebook, Ipad and Mobile. Get started with free educator resources, trainings, and videos. '
+  hoc2022_mc_mee_timecraft_description: "Travel back in time to save the future in this free coding lesson in Minecraft Education."
   footer_powered_by_aws: "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries."
   footer_built_on_github: "Built on GitHub from Microsoft"
   codebytes_skinny_banner_title: "Join us December 7-11 for our CodeBytes live mini-lessons!"
@@ -1857,7 +1858,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images."
   ai_audience: "Audience"
-  ai_minecraft_description: 'Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft: Education Edition)'
+  ai_minecraft_description: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft Education)"
   ai_k_12_audience: "K-12 (Reading required)"
   ai_microsoft_workshop: "Free virtual workshops from Microsoft"
   ai_microsoft_workshop_description: "Spark curiosity with free STEM and coding workshops."
