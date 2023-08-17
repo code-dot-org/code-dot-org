@@ -704,8 +704,6 @@ class TopInstructions extends Component {
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
-          csrfToken={token}
-          teacherCanLeaveFeedback={teacherCanLeaveFeedback}
           {...passThroughHeaderProps}
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
