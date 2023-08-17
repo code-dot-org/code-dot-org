@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:12.000Z",
   "level_num": "custom",
@@ -85,7 +86,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20562,
     "name_suffix": "_2023",
     "text_mode_at_start": "false",
@@ -93,7 +94,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/accelerometer-events",
       "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -109,9 +111,8 @@
     "video_key": "csd_debugging",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:12.034+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:12.034+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PA_2222\"},{\"changed_at\":\"2023-08-16 19:24:09 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
