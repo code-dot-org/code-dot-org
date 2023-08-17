@@ -76,10 +76,13 @@
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L10.2 - add_code\",\r\n  \"callout_text\": \"Add your code here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"add_code\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Add your code here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]\r\n",
     "encrypted_examples": "fOGcDWAVjHSIsQvuD4fIWS5CaUEA29YOSi+tYkRsVskvpIBSSLz1PvyTz4xn\nvZ3+VeTXVxv5T0MazxfbZ1wbtg==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:08.281+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB1_2222\"},{\"changed_at\":\"2023-08-15 16:52:23 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:08.281+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB1_2222\"},{\"changed_at\":\"2023-08-15 16:52:23 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:53:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
