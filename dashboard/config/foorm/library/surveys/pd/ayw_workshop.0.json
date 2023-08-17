@@ -700,11 +700,12 @@
                 },
                 {
                   "value": "ability_impact_barriers",
+                  "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
                   "text": "Through my participation in this workshop I am better able to impact the barriers to access, diversity, and inclusion that students face in my CS classroom."
                 },
                 {
                   "value": "diversity_recruitment_plan",
-                  "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'",
+                  "visibleIf": "({workshop_course}='CS Principles' or {workshop_course}='Computer Science A') and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
                   "text": "After attending this workshop I have developed a recruitment plan to influence the diversity of the students in my current or future {workshop_course} classroom."
                 }
               ]
@@ -714,7 +715,7 @@
         {
           "type": "panel",
           "name": "teaching_ap_panel",
-          "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'",
+          "visibleIf": "{workshop_course}='CS Principles' ",
           "elements": [
             {
               "type": "html",
@@ -797,10 +798,6 @@
                   "text": "I feel better prepared to teach my {workshop_course} class after attending this workshop."
                 },
                 {
-                  "value": "share_with_peers",
-                  "text": "I had the opportunity to share my challenges, solutions, and ideas with peers during this workshop."
-                },
-                {
                   "value": "content_appropriate_timing",
                   "text": "The content of this workshop effectively supports me at what I plan to teach at this time of the year."
                 }
@@ -825,7 +822,7 @@
             {
               "type": "radiogroup",
               "name": "postwork_complete",
-              "visibleIf": "{workshop_agenda}<>'module1'",
+              "visibleIf": "{workshop_agenda}<>'module1' and {workshop_agenda}<>'in_person'",
               "title": "After the prior module, you received some post-work. Did you complete it? ",
               "choices": [
                 {
@@ -845,7 +842,7 @@
             {
               "type": "comment",
               "name": "postwork_comment",
-              "visibleIf": "{workshop_agenda}<>'module1'",
+              "visibleIf": "{workshop_agenda}<>'module1' and {workshop_agenda}<>'in_person'",
               "title": "If you have any thoughts on how we can improve the post-work to be more helpful to participants in future workshops, please use this space to share them.",
               "maxLength": 4000,
               "cols": 60,

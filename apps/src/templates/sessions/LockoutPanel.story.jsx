@@ -12,6 +12,7 @@ const Template = args => (
   <LockoutPanel
     apiURL="/permissions"
     deleteDate={new Date(Date.now() + 6 * DAYS)}
+    studentEmail="student@test.com"
     {...args}
   />
 );

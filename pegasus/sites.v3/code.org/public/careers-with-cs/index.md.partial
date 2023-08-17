@@ -163,7 +163,7 @@ social:
 <br>
 
 <a id="explore"></a>
-<h2 style="color:#7665a0; margin-top:0; margin-bottom:20px">View careers that match your interests with one of these interactive tools</h2>
+<h2 style="margin-top:0; margin-bottom:20px">View careers that match your interests with one of these interactive tools</h2>
 
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
@@ -172,10 +172,10 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The Roadmap from Roadtrip Nation</strong></h3>
-        <div class="smalltext" style="color: dimgray;">With the Roadmap, view career paths that align with your interests. Features video interviews with more than 1,000 professionals and steps for getting started.</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>The Roadmap from Roadtrip Nation</strong></h3>
+        <div class="smalltext">With the Roadmap, view career paths that align with your interests. Features video interviews with more than 1,000 professionals and steps for getting started.</div>
         <br>
-        <div class="smalltext" style="color: dimgray;">3-question assessment takes just a moment or two. Great for middle school and up.</div>
+        <div class="smalltext">3-question assessment takes just a moment or two. Great for middle school and up.</div>
         <br>
         <a class="linktag" id="roadmap" href="https://roadtripnation.com/roadmap" target="_blank"><button>View the Roadmap</button></a>
     </span>
@@ -190,10 +190,10 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Career Girls: Career Quiz</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CareerGirls.org is a video-based career exploration tool for girls. Contains the largest online collection of career guidance videos focusing on diverse and accomplished women.</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Career Girls: Career Quiz</strong></h3>
+        <div class="smalltext">CareerGirls.org is a video-based career exploration tool for girls. Contains the largest online collection of career guidance videos focusing on diverse and accomplished women.</div>
         <br>
-        <div class="smalltext" style="color: dimgray;">1-question assessment takes just a moment or two. Great for middle school and up.</div>
+        <div class="smalltext">1-question assessment takes just a moment or two. Great for middle school and up.</div>
         <br>
         <a class="linktag" id="career-girls" href="https://www.careergirls.org/explore-careers/career-quiz/" target="_blank"><button>View the Career Quiz</button></a>
     </span>
@@ -208,10 +208,10 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The O*NET Interest Profiler</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">The O*NET Interest Profiler can help you find out what your interests are and what kinds of careers you might want to explore.</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>The O*NET Interest Profiler</strong></h3>
+        <div class="smalltext" style="">The O*NET Interest Profiler can help you find out what your interests are and what kinds of careers you might want to explore.</div>
         <br>
-        <div class="smalltext" style="color: dimgray; ">60-question assessment takes 15-20 minutes. Great for high school and up.</div>
+        <div class="smalltext" style="">60-question assessment takes 15-20 minutes. Great for high school and up.</div>
         <br>
         <br>
         <a class="linktag" id="o-net" href="https://www.mynextmove.org/explore/ip" target="_blank"><button>View the Interest Profiler</button></a>
@@ -228,7 +228,7 @@ social:
 <br>
 
 <a id="apply"></a>
-<h2 style="color:#0094ca; margin-top:0; margin-bottom:20px">Apply your new CS knowledge outside the classroom</h2>
+<h2 style="margin-top:0; margin-bottom:20px">Apply your new CS knowledge outside the classroom</h2>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
   <div style="width: 87%; float: left">
@@ -267,7 +267,7 @@ social:
 <br>
 
 <a id="connect"></a>
-<h2 style="color:#b9bf15; margin-top:0; margin-bottom:20px">Connect with college students and professionals in fields and roles that interest you</h2>
+<h2 style="margin-top:0; margin-bottom:20px">Connect with college students and professionals in fields and roles that interest you</h2>
 
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
@@ -276,8 +276,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Career Village</strong></h3>
-        <div class="smalltext" style="color: dimgray;">Get your questions, about any role or industry, answered by real professionals on Career Village. <i>Account creation is required.</i></div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Career Village</strong></h3>
+        <div class="smalltext">Get your questions, about any role or industry, answered by real professionals on Career Village. <i>Account creation is required.</i></div>
         <br>
         <a class="linktag" id="career-village" href="https://www.careervillage.org/" target="_blank"><button>Get connected</button></a>
     </span>
@@ -292,8 +292,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>College Confidential</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Connect with college students on College Confidential to ask questions about college majors. <i>Account creation is required.</i></div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>College Confidential</strong></h3>
+        <div class="smalltext" style="">Connect with college students on College Confidential to ask questions about college majors. <i>Account creation is required.</i></div>
         <br>
         <a class="linktag" id="college-conf" href="https://www.collegeconfidential.com/" target="_blank"><button>Get connected</button></a>
     </span>

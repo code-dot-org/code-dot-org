@@ -1,0 +1,452 @@
+{
+  "script": {
+    "name": "vpl-csa-2023-m6",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 00:14:01 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2023-m6"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 6 post-work: String methods in Unit 6",
+      "name": "Module 6 post-work: String methods in Unit 6",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f2db9acb-8659-480c-aa70-d4bafd32f137",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2db9acb-8659-480c-aa70-d4bafd32f137",
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3032f2bd-f0e9-44d9-becc-3010308158a1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1",
+        "lesson_activity.key": "f2db9acb-8659-480c-aa70-d4bafd32f137"
+      }
+    },
+    {
+      "key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51",
+      "position": 2,
+      "properties": {
+        "progression_name": "Strings in Unit 6 (~50 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51",
+        "lesson_activity.key": "f2db9acb-8659-480c-aa70-d4bafd32f137"
+      }
+    },
+    {
+      "key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2",
+        "lesson_activity.key": "f2db9acb-8659-480c-aa70-d4bafd32f137"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 6 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-overview_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-ap-subset_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-substring-method-video_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-compareto-method-video_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Strings in Unit 6 (~50 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2"
+      },
+      "level_keys": [
+        "vpl-csa-module-6-wrap-up_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-overview_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-overview_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "3032f2bd-f0e9-44d9-becc-3010308158a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-ap-subset_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-ap-subset_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l7-level1-clone_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-reflection_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-substring-method-video_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-u6l8-level1-clone_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-compareto-method-video_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "5ef5297b-1c4e-42b3-8e8a-98872bcfcf51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-6-wrap-up_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-6-wrap-up_2023"
+        ],
+        "lesson.key": "Module 6 post-work: String methods in Unit 6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m6",
+        "activity_section.key": "a32052e4-b51a-4e56-b480-6d62bb05d2c2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

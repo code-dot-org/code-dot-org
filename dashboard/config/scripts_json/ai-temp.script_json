@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-07-26 20:43:31 UTC",
+    "serialized_at": "2023-08-01 21:31:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -171,7 +171,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How AI Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How AI Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom.",
+        "preparation": "* Print out the activity guide\n* Project the slides on a video projector\n"
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -2487,7 +2488,6 @@
       "key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?"
       },
       "seeding_key": {
         "activity_section.key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
@@ -2495,25 +2495,8 @@
       }
     },
     {
-      "key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
-      "position": 22,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This might be a good place to use the [Whip Around Discussion Protocol](https://k12teacherstaffdevelopment.com/tlb/what-is-the-whip-around-strategy/), giving each student a chance to rapid-fire share their answers."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
-        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
-      }
-    },
-    {
       "key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
-      "position": 23,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  LLMs are learning from every word on the internet. What is a benefit of using the entire internet as input? What is a drawback?\n"
       },
@@ -2524,7 +2507,7 @@
     },
     {
       "key": "808eacba-cd56-4608-9090-2d4e48cfdef8",
-      "position": 24,
+      "position": 23,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Learning from every word on the internet gives Large Language Models a ton of information to learn from, but not all of that information is factual, and not all the wording will be kind or appropriate. \n\nAlso encourage students to consider how people with access to writing on the internet tend to be more privileged voices, and therefore voices from more marginalized communities may not be as prevalent, which only further marginalizes these groups."
       },
@@ -2535,7 +2518,7 @@
     },
     {
       "key": "161cb423-7bdb-4eb8-8516-036184133d91",
-      "position": 25,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -2547,7 +2530,13 @@
       "key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  Is a Large Language Model Creative? Intelligent? Why or why not? "
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This might be a good discussion to use the Whip Around Protocol for. https://www.theteachertoolkit.com/index.php/tool/whip-around"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
@@ -2558,6 +2547,7 @@
       "key": "b29030bc-1552-4c02-9862-5a3d01188070",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate."
       },
       "seeding_key": {
         "activity_section.key": "b29030bc-1552-4c02-9862-5a3d01188070",
@@ -2568,7 +2558,6 @@
       "key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students may have very different answers to this question. Some may think LLMs are intelligent because they come up with intelligent sounding responses, but others should notice that the LLM does not understand what it is saying, just what words tend to go together. Intelligence itself is a hard to define concept. "
       },
       "seeding_key": {
         "activity_section.key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
@@ -2605,7 +2594,7 @@
       "key": "fb24f924-99a8-44ff-9702-6eed190fd78d",
       "position": 2,
       "properties": {
-        "progression_name": "Eliza Widget"
+        "progression_name": "(Optional) Eliza Widget"
       },
       "seeding_key": {
         "activity_section.key": "fb24f924-99a8-44ff-9702-6eed190fd78d",
@@ -2706,7 +2695,7 @@
       "key": "81ce4cc2-9017-449e-a699-0b2ddccc0870",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Debrief with the students what they found while comparing images. Feel free to take only 1-2 responses and not dwell on this as a class; students should have already discussed with each other"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Debrief with the students what they found while comparing images. Feel free to take only 1-2 responses and not dwell on this as a class; students should have already discussed with each other\n<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discussion Goal:** The lesson will be about how AI creates new images based on details in words. This activity has students doing something similar, to get them warmed up for the lesson itself. They can see what people created with the same prompt that was different, and think about these things as they work through the lesson."
       },
       "seeding_key": {
         "activity_section.key": "81ce4cc2-9017-449e-a699-0b2ddccc0870",
@@ -3905,7 +3894,7 @@
         "level_keys": [
           "LLM - Eliza"
         ],
-        "progression": "Eliza Widget"
+        "progression": "(Optional) Eliza Widget"
       },
       "bonus": false,
       "seeding_key": {
@@ -4236,6 +4225,7 @@
       "key": "does_ai_have_creativity_and_imagination_",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4255,6 +4245,18 @@
       }
     },
     {
+      "name": "GAN Game Activity Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1pn0eptWyWC0zkX9DtV5fR7qTCw0h9AokkGgLt-8JNkY/",
+      "key": "gan_game_activity_guide_exemplar",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "gan_game_activity_guide_exemplar"
+      }
+    },
+    {
       "name": "Generative Images",
       "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
       "key": "generative_images",
@@ -4264,6 +4266,18 @@
       },
       "seeding_key": {
         "resource.key": "generative_images"
+      }
+    },
+    {
+      "name": "Generative Images Activity Guide",
+      "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+      "key": "generative_images_activity_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "generative_images_activity_guide"
       }
     },
     {
@@ -4323,6 +4337,7 @@
       "key": "how_chatbots_and_large_language_models_work",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_llm_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -4499,6 +4514,18 @@
       }
     },
     {
+      "name": "LLM Vocab And Video Guide Answer Key",
+      "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+      "key": "llm_vocab_and_video_guide_answer_key",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "llm_vocab_and_video_guide_answer_key"
+      }
+    },
+    {
       "name": "Neural Networks",
       "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
       "key": "neural_networks",
@@ -4523,6 +4550,19 @@
       }
     },
     {
+      "name": "Noisy Image Activity Exemplar",
+      "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
+      "key": "noisy_image_activity_exemplar",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "noisy_image_activity_exemplar"
+      }
+    },
+    {
       "name": "Noisy Image Widget Activity Guide",
       "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
       "key": "noisy_image_widget_activity_guide",
@@ -4540,7 +4580,7 @@
       "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
       "key": "optional_gan_game_activity_slides",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -4668,6 +4708,18 @@
       },
       "seeding_key": {
         "resource.key": "what_a_neural_network_sees"
+      }
+    },
+    {
+      "name": "Written Voice Simulator Activity Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
+      "key": "written_voice_simulator_activity_guide_exemplar",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "written_voice_simulator_activity_guide_exemplar"
       }
     },
     {
@@ -4927,7 +4979,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "llm_vocab_and_video_guide_answer_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "video_and_vocabulary_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "written_voice_simulator_activity_guide_exemplar"
       }
     },
     {
@@ -4945,13 +5009,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "gan_game_activity_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "generative_images"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "generative_images_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "how_ai_works_creativity_and_imagination"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "noisy_image_activity_exemplar"
       }
     },
     {
@@ -5316,6 +5398,55 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Blockchain In a Day",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-A-ii.3-5"
@@ -5512,6 +5643,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

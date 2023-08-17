@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-07-25 23:06:53 UTC",
+    "serialized_at": "2023-08-16 16:08:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8931,7 +8931,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursec-2022/resources",
+      "url": "/s/coursec-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8942,7 +8942,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursec-2022/standards",
+      "url": "/s/coursec-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8953,7 +8953,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursec-2022/vocab",
+      "url": "/s/coursec-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9507,18 +9507,6 @@
       "seeding_key": {
         "resource.key": "values_and_philosophy"
       }
-    },
-    {
-      "name": "Values and Philosophy",
-      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
-      "key": "values_and_philosophy_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "values_and_philosophy_1"
-      }
     }
   ],
   "lessons_resources": [
@@ -9947,12 +9935,6 @@
     {
       "seeding_key": {
         "resource.key": "values_and_philosophy",
-        "script.name": "coursec-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "values_and_philosophy_1",
         "script.name": "coursec-2023"
       }
     }
@@ -10987,5 +10969,14 @@
         "opportunity_standard.shortcode": "2.MD.10"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }
