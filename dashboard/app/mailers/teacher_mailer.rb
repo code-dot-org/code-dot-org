@@ -1,4 +1,4 @@
-class TeacherMailer < ActionMailer::Base
+class TeacherMailer < ApplicationMailer
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
   default reply_to: 'Code.org <support@code.org>'
 

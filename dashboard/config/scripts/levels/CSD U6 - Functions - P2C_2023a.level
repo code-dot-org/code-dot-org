@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:39.000Z",
   "level_num": "custom",
@@ -113,11 +114,13 @@
     "bubble_choice_description": "Use functions to help choose different colors for the app screen and LEDs",
     "thumbnail_url": "https://images.code.org/4a6e0da38b1991737c212a8bf935dfef-image-1649198421391.gif",
     "encrypted_examples": "HOAoxKRFC16n6lOq4EnmSixj2Y+2C03N1pKr0viUquotH1bbcxgSXsYcOeyu\nRCuDMhJvWD36EnSHg2+64h5LqQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.256+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2C_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2C_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.256+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2C_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2C_2222\"},{\"changed_at\":\"2023-08-16 19:40:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

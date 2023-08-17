@@ -8619,6 +8619,12 @@
         "courseF_sprites_clouds_-2022-2": {
           "behavior_list": "សាកល្បងប្រើឥរិយាបទដូចជា \"ផ្លាស់ទីទៅទិសខាងកើតនិង loop\" \"បង្វិលស្តាំ\" និង \"វង្វេង\" ។"
         },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "សាកល្បងផ្លាស់ប្តូរឈ្មោះរបស់អថេរនៅក្នុងកូដប្លុក `when answered` ។ ដោយសារតែមាន `prompt` ច្រើន សូមប្រើឈ្មោះរបស់ `prompt` (ឈ្មោះអថេរ) ដែលត្រូវបានវាយបញ្ចូលចុងក្រោយគេ។\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "when_answered_var": "សាកល្បងផ្លាស់ប្តូរឈ្មោះរបស់អថេរនៅក្នុងកូដប្លុក `when answered` ។ ដោយសារតែមាន `prompt` ច្រើន សូមប្រើឈ្មោះរបស់ `prompt` (ឈ្មោះអថេរ) ដែលត្រូវបានវាយបញ្ចូលចុងក្រោយគេ។\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "courseF_variables2_set_-2022-2": {
           "say_variable_hint": "អ្នកអាចមាន sprite និយាយតម្លៃនៃអថេរដូចនេះ៖\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>",
           "set_block_hint": "អ្នកអាចកំណត់អថេរដូចនេះ៖\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>"

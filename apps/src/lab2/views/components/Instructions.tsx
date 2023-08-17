@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import classNames from 'classnames';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
@@ -11,15 +11,22 @@ import {
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
+import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
-  /** Base asset URL for images */
-  baseUrl: string;
-  /** If the instructions panel should be rendered vertically. Defaults to false */
-  vertical?: boolean;
-  /** If the instructions panel should be rendered on the right side of the screen. Defaults to false. */
-  right?: boolean;
+  /**
+   * Base asset URL for images. Note: this is currently unused but may be needed in the future if we support
+   * instructions images.
+   * */
+  baseUrl?: string;
+  /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
+  layout?: 'vertical' | 'horizontal';
+  /**
+   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
+   * are currently unsupported. Defaults to right.
+   */
+  imagePopOutDirection?: 'right' | 'left';
 }
 
 /**
@@ -30,11 +37,7 @@ interface InstructionsProps {
  * present on the legacy instructions panel, such as Help & Tips, Documentation, Code Review,
  * For Teachers Only, etc.
  */
-const Instructions: React.FunctionComponent<InstructionsProps> = ({
-  baseUrl, // Currently unused, but may be needed in the future if we support instructions images.
-  vertical = false,
-  right = false,
-}) => {
+const Instructions: React.FunctionComponent<InstructionsProps> = props => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
     (state: {lab: LabState}) =>
@@ -51,6 +54,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     validationState.satisfied && levelIndex + 1 < currentLevelCount;
   const dispatch = useAppDispatch();
 
+  const {theme} = useContext(ThemeContext);
+
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
@@ -62,8 +67,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       message={validationState.message || undefined}
       showNextButton={showNextButton}
       onNextPanel={() => dispatch(navigateToNextLevel())}
-      vertical={vertical}
-      right={right}
+      theme={theme}
+      {...props}
     />
   );
 };
@@ -79,10 +84,15 @@ interface InstructionsPanelProps {
   showNextButton?: boolean;
   /** Callback to call when clicking the next button. */
   onNextPanel?: () => void;
-  /** If the instructions panel should be rendered vertically. Defaults to false */
-  vertical?: boolean;
-  /** If the instructions panel should be rendered on the right side of the screen. Defaults to false. */
-  right?: boolean;
+  /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
+  layout?: 'vertical' | 'horizontal';
+  /**
+   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
+   * are currently unsupported. Defaults to right.
+   */
+  imagePopOutDirection?: 'right' | 'left';
+  /** Display theme. Defaults to dark. */
+  theme?: 'dark' | 'light';
 }
 
 /**
@@ -95,8 +105,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imageUrl,
   showNextButton,
   onNextPanel,
-  vertical,
-  right,
+  layout = 'vertical',
+  imagePopOutDirection = 'right',
+  theme = 'dark',
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
 
@@ -104,11 +115,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setShowBigImage(!showBigImage);
   };
 
+  const vertical = layout === 'vertical';
+
   return (
     <div
       id="instructions"
       className={classNames(
-        moduleStyles.instructions,
+        moduleStyles['instructions-' + theme],
         vertical && moduleStyles.vertical
       )}
     >
@@ -138,7 +151,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               <div
                 className={classNames(
                   moduleStyles.bigImage,
-                  right && moduleStyles.bigImageRight
+                  imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
                 )}
               >
                 <img src={imageUrl} onClick={() => imageClicked()} />
@@ -147,7 +160,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           </div>
         )}
         {text && (
-          <div key={text} id="instructions-text" className={moduleStyles.text}>
+          <div
+            key={text}
+            id="instructions-text"
+            className={moduleStyles['text-' + theme]}
+          >
             <SafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
@@ -159,7 +176,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             <div
               key={message}
               id="instructions-feedback-message"
-              className={moduleStyles.message}
+              className={moduleStyles['message-' + theme]}
             >
               <SafeMarkdown
                 markdown={message}

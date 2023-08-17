@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Kompüter Elmləri Təhsili Həftəsi və Kod Saatı Dəstəkləyən Nümunə Qətnamə
 ---
 
 {{ signup_button }}

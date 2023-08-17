@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
@@ -190,11 +191,11 @@ describe('ManageStudentsTable', () => {
 
     describe('Gender field feature flag', () => {
       before(() => {
-        window.GENDER_FEATURE_ENABLED = 'true';
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, true);
       });
 
       after(() => {
-        window.GENDER_FEATURE_ENABLED = undefined;
+        experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, false);
       });
 
       it('does render the gender column if loginType is secret picture', () => {

@@ -194,6 +194,8 @@ pl:
   grade_level_label_elementary: Szkoła podstawowa
   grade_level_label_middle: Gimnazjum
   grade_level_label_high: liceum
+  students_label: Uczniowie
+  teachers_label: Nauczyciele
   teacher_label_csf: Nauczyciel CS Fundamentals
   teacher_label_csd: Nauczyciel CS Discovery
   teacher_label_csp: Nauczyciel zasad CS
@@ -207,7 +209,9 @@ pl:
   call_to_action_explore_unit: Poznaj jednostkę
   call_to_action_explore_curriculum: Poznaj program nauczania
   call_to_action_explore_curriculum_options: Poznaj opcje programu nauczania
+  call_to_action_explore_lessons: Przeglądaj lekcje
   call_to_action_explore_modules: Poznaj moduły
+  call_to_action_explore_module: Eksploruj moduł
   call_to_action_explore_workshops: Poznaj warsztaty
   call_to_action_explore_course: Poznaj kurs
   call_to_action_explore_courses: Przeglądaj kursy
@@ -254,8 +258,10 @@ pl:
   call_to_action_see_module_details: Zobacz szczegóły modułu
   call_to_action_start_modules: Moduły startowe
   call_to_action_see_course_details: Zobacz szczegóły kursu
+  call_to_action_see_lesson_details: Zobacz szczegóły lekcji
   call_to_action_learn_about_approach: Dowiedz się więcej o naszym podejściu
   call_to_action_try_java_lab: Wypróbuj Java Lab
+  call_to_action_notify_available: Powiadom mnie, gdy będzie dostępny
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program nauczania
     nauczania podstaw informatyki
@@ -323,6 +329,23 @@ pl:
   aria_label_call_to_action_csf_course_d: Zobacz szczegóły kursu D
   aria_label_call_to_action_csf_course_e: Zobacz szczegóły kursu E
   aria_label_call_to_action_csf_course_f: Zobacz szczegóły kursu F
+  aria_label_call_to_action_ai_pl_101_videos: Obejrzyj filmy AI 101 for Teachers
+  aria_label_call_to_action_ai_teaching_module: Poznaj moduł Teaching AI i Machine
+    Learning
+  aria_label_call_to_action_how_ai_works_lesson_01: Zobacz szczegóły lekcji Wprowadzenie
+    do uczenia maszynowego
+  aria_label_call_to_action_how_ai_works_lesson_02: Zobacz szczegóły lekcji Computer
+    Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Zobacz szczegóły lekcji Sieci
+    neuronowe
+  aria_label_call_to_action_how_ai_works_lesson_04: Zobacz szczegóły lekcji Chatbots
+    i Large Language Models
+  aria_label_call_to_action_how_ai_works_lesson_05: Zobacz szczegóły lekcji Obrazy
+    generatywne
+  aria_label_call_to_action_how_ai_works_lesson_06: Zobacz szczegóły lekcji Algorytmiczne
+    odchylenie
+  aria_label_call_to_action_how_ai_works_lesson_07: Zobacz szczegóły lekcji Our AI
+    Code of Ethics
   video_title_professional_learning_program: Profesjonalny program nauczania Code.org
   curriculum_name_csf: Podstawy informatyki
   curriculum_name_csf_02: Wszelkie podstawy CS (kurs A-F)
@@ -438,6 +461,10 @@ pl:
   module_label_student_tool: Narzędzie studenckie
   module_label_student_product: Produkt
   module_label_student_content_resources: Treść i zasoby
+  module_label_new: Nowość
+  module_label_coming_soon: Już wkrótce
+  module_label_video_series: Seria wideo
+  module_label_self_paced: Moduł we własnym tempie
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -460,9 +487,13 @@ pl:
   module_grade_9_12_teachers: 9-12 Nauczycieli
   module_level_beginner: Początkujący
   module_level_intermediate: Pośredniozaawansowany
+  module_duration_45_mins: 45 minut
+  module_duration_1_hr: 1 godzina
   module_duration_2_hrs: 2 godzin
   module_duration_3_hrs: 3 godzin
+  module_duration_5_hrs: 5 godzin
   module_duration_8_hrs: 8 godzin
+  module_duration_20_hrs: 20 godzin
   module_duration_35_hrs: 35 godzin
   module_duration_lesson: Lekcja
   module_duration_week: Tydzień
@@ -536,6 +567,7 @@ pl:
   heading_no_devices: Żadnych urządzeń? Mamy cię pod ochroną
   heading_java_lab: Laboratorium Java
   heading_objects_first: Najpierw obiekty
+  heading_these_lessons_will: 'Te lekcje będą:'
   professional_learning_section_desc: Uzyskaj wsparcie, którego potrzebujesz, przygotowując
     się do nauczania. Nauczyciele to uwielbiają, a ponad 90% uplasuje go za najlepszy
     rozwój zawodowy w historii!
@@ -668,6 +700,11 @@ pl:
   ai_curriculum_grades_03: 'Poziomy ocen: 3-12'
   ai_curriculum_duration_03: 'Czas trwania: 1 godzina'
   ai_curriculum_btn_aria_label_03: Wypróbuj sztuczną inteligencję dla oceanów
+  ai_curriculum_title_04: Jak działa sztuczna inteligencja
+  ai_curriculum_desc_04: Lekcje te uzupełniają serię filmów How AI Works. Każda lekcja
+    jest połączona z jednym filmem z serii, zanurzając się głębiej w koncepcje wprowadzone
+    w filmach.
+  ai_curriculum_btn_aria_label_04: Poznaj lekcje Jak działa sztuczna inteligencja
   ai_carousel_heading: 'Co nauczyciele mówią o sztucznej inteligencji z Code.org:'
   ai_carousel_quote_01: Ta lekcja dała również moim uczniom możliwość zobaczenia,
     że w systemach klasyfikacji istnieje element opinii. Później, kiedy zaczęliśmy
@@ -686,6 +723,10 @@ pl:
   ai_pl_list_04: Rozważ rzeczywiste implikacje sztucznej inteligencji i uczenia maszynowego.
   ai_pl_list_05: Przeglądaj projekty na końcu rozdziału.
   ai_pl_duration: 'Czas trwania: 2 godziny'
+  ai_pl_title: Nauczanie sztucznej inteligencji i uczenia maszynowego
+  ai_pl_desc: Wprowadzenie do sztucznej inteligencji i uczenia maszynowego. Trenuj
+    model uczenia maszynowego za pomocą AI Lab. i angażuj się w aplikacje do uczenia
+    maszynowego. Rozważ rzeczywiste implikacje sztucznej inteligencji i uczenia maszynowego.
   ai_video_series_title: Jak działa sztuczna inteligencja
   ai_video_series_desc: Dzięki wprowadzeniu przez CEO Microsoft Satyę Nadellę, ta
     seria krótkich filmów przedstawi Ci, jak działa sztuczna inteligencja i dlaczego
@@ -712,6 +753,7 @@ pl:
   ai_pl_101_hero_heading: Dołącz do nas w AI EmpowerED!
   ai_pl_101_hero_desc: Odkryj transformacyjny potencjał sztucznej inteligencji (AI)
     w edukacji dzięki naszej bezpłatnej serii szkoleń online dla nauczycieli.
+  ai_pl_101_hero_desc_02: Kompleksowa seria nauczania online dla nauczycieli.
   ai_pl_101_hero_presented: Prezentowane przez
   ai_pl_101_intro_heading: Czym jest AI 101 dla nauczycieli?
   ai_pl_101_intro_text: AI 101 for Teachers to bezpłatna, podstawowa seria nauczania
@@ -756,6 +798,100 @@ pl:
     modele punktacji i sztuczną inteligencję, pomagając nauczycielom w dostarczaniu
     iteracyjnej informacji zwrotnej i oceny kształtującej podczas pisania.'
   ai_pl_101_explore__button_4: Eksploruj narzędzie
+  ai_pl_101_video_title_1: Czat przy kominku z Salem Khanem i Hadi Partovi
+  ai_pl_101_video_desc_1: Dołącz do Sal Khana (Khan Academy) i Hadi Partovi (Code.org)
+    na pogawędce przy kominku na temat sztucznej inteligencji w klasie. Spodziewaj
+    się ożywionej dyskusji obejmującej niektóre z najbardziej kontrowersyjnych tematów
+    związanych z dzisiejszą sztuczną inteligencją.
+  ai_pl_101_video_title_2: Demistyfikacja sztucznej inteligencji dla nauczycieli
+  ai_pl_101_video_desc_2: Wprowadzenie do podstaw sztucznej inteligencji, która zapewni
+    Ci podstawową wiedzę, aby zrozumieć głęboki wpływ sztucznej inteligencji na nasze
+    społeczeństwo i jej rosnące znaczenie w dziedzinie edukacji. Zyskasz praktyczny
+    wgląd w wykorzystanie sztucznej inteligencji do zadań w klasie i oszczędność czasu
+    na zadaniach administracyjnych.
+  ai_pl_101_video_title_3: Przekształcanie uczenia się za pomocą sztucznej inteligencji
+  ai_pl_101_video_desc_3: Poznaj skrzyżowanie sztucznej inteligencji i edukacji. Ta
+    sesja bada, w jaki sposób sztuczną inteligencję można połączyć z pedagogiką, aby
+    poprawić uczenie się uczniów. Jest to pozycja obowiązkowa dla nauczycieli, którzy
+    chcą wykorzystać sztuczną inteligencję do przekształcenia swoich praktyk nauczania,
+    aby wzbogacić doświadczenia edukacyjne swoich uczniów.
+  ai_pl_101_video_title_4: Zapewnienie odpowiedzialnego podejścia do sztucznej inteligencji
+  ai_pl_101_video_desc_4: Poznaj względy etyczne i najlepsze praktyki dotyczące włączania
+    sztucznej inteligencji do środowisk edukacyjnych. Ta sesja przedstawi konkretne
+    strategie, zasoby, i przykłady ze świata rzeczywistego, wszystkie mające na celu
+    zrozumienie potencjalnych uprzedzeń sztucznej inteligencji, i względy etyczne,
+    które się z tym związane.
+  ai_pl_101_video_title_5: Wprowadzanie sztucznej inteligencji do klasy
+  ai_pl_101_video_desc_5: Ta sesja koncentruje się na nauczaniu o sztucznej inteligencji,
+    ocenianiu i wykorzystywaniu narzędzi edukacyjnych AI oraz wykorzystaniu sztucznej
+    inteligencji do oceny uczniów. Dzięki bogatej mieszance teorii, praktycznych przykładów
+    i zasobów, ma na celu umożliwienie nauczycielom poruszania się po krajobrazie
+    sztucznej inteligencji i ulepszania doświadczeń edukacyjnych uczniów.
+  ai_pl_101_video_desc_6: 'Dowiedz się więcej o nowej technologii, która napędza duże
+    zmiany w sztucznej inteligencji, zawiera dwa nowe filmy na temat modeli dużych
+    języków (takich jak ChatGPT) i Generative AI. Posłuchaj, jak te nowe technologie
+    działają bezpośrednio od ekspertów: Miry Murati, CTO OpenAI i Cristóbal Valenzuela,
+    CEO RunWayML.'
+  how_ai_works_hero_heading: Jak działa sztuczna inteligencja
+  how_ai_works_hero_desc: Zanurz się w świecie sztucznej inteligencji dzięki „How
+    AI Works”, naszej serii filmów i towarzyszącym lekcjom!
+  how_ai_works_intro_desc: Ta seria krótkich filmów i towarzyszących im lekcji w klasie
+    przedstawi Tobie i Twoim uczniom, jak działa sztuczna inteligencja i dlaczego
+    ma to znaczenie. Możesz wybrać indywidualne lekcje na podstawie tematu, zbadać
+    całą serię tematów w jednej klasie lub uczyć wszystkich 7 lekcji, aby głębiej
+    zanurzyć się.
+  how_ai_works_intro_list_01: Zapoznaj się ze sztuczną inteligencją i uczeniem maszynowym
+  how_ai_works_intro_list_02: Dowiedz się, jak działa generatywna sztuczna inteligencja,
+    w tym modele dużych języków (LLM) i generowanie obrazów
+  how_ai_works_intro_list_03: Poznaj uprzedzenia, etykę, prywatność i odpowiedzialne
+    wykorzystanie sztucznej inteligencji
+  how_ai_works_intro_list_04: Dotknij rzeczywistych zastosowań sztucznej inteligencji,
+    w tym wizji komputerowej
+  how_ai_works_lessons_heading: Lekcje AI dla Twojej klasy
+  how_ai_works_lesson_title_01: Wprowadzenie do uczenia maszynowego
+  how_ai_works_lesson_desc_01: Dowiedz się o formie sztucznej inteligencji zwanej
+    uczeniem maszynowym i o tym, jak mogą wykorzystać proces rozwiązywania problemów,
+    aby pomóc wyszkolić robota w rozwiązywaniu problemów. Weź udział w zajęciach uczenia
+    maszynowego, w których robot uczy się, jak wykrywać wzorce u ryb.
+  how_ai_works_lesson_title_02: Wizja komputerowa
+  how_ai_works_lesson_desc_02: Dowiedz się, jak działa wizja komputerowa. Obejrzyj
+    film wyjaśniający wizję komputerową i sposób, w jaki komputer „widzi”. Następnie
+    zaprojektuj algorytm wykorzystujący sieć, aby zdecydować, jaką liczbę wyświetla
+    wyświetlacz siedmiosegmentowy i przetestować go.
+  how_ai_works_lesson_title_03: Sieci neuronowe
+  how_ai_works_lesson_desc_03: Dowiedz się, jak działają sieci neuronowe. Użyj widżetów
+    do eksploracji sieci neuronowych w drodze. Obejrzyj film wyjaśniający sieci neuronowe.
+    Na koniec omówić potrzebę różnorodnych perspektyw podczas tworzenia systemów rekomendacji.
+  how_ai_works_lesson_title_04: Chatboty i duże modele językowe
+  how_ai_works_lesson_desc_04: Dowiedz się, czym jest Large Language Model (LLM) i
+    jak działa, a następnie użyj LLM, aby współtworzyć tekst z AI. Na koniec przedyskutuj,
+    czy LLM są inteligentne czy kreatywne.
+  how_ai_works_lesson_title_05: Obrazy generatywne
+  how_ai_works_lesson_desc_05: Dowiedz się, jak sztuczna inteligencja może generować
+    obrazy, a następnie zbadaj widżet sztucznej inteligencji i przedyskutuj, czy te
+    modele są kreatywne.
+  how_ai_works_lesson_title_06: Algorytmiczne odchylenie
+  how_ai_works_lesson_desc_06: Ćwicz kadrowanie obrazów, aby odkryć stronniczość leżącą
+    u podstaw algorytmu przycinania Twittera, a następnie przeczytaj i obejrzyj film
+    o odkryciu tego stronniczego algorytmu. Na koniec omów sposoby rozpoznawania i
+    zmniejszania stronniczości w algorytmach.
+  how_ai_works_lesson_title_07: Nasz Kodeks Etyki AI
+  how_ai_works_lesson_desc_07: Przeprowadzaj badania przy użyciu artykułów i filmów,
+    które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji.
+    Zbierz ogólnoklasowe źródło „Nasz kodeks etyki AI” dla twórców sztucznej inteligencji
+    i ustawodawców na całym świecie.
+  how_ai_works_lessons_in_a_day_title: Jak sztuczna inteligencja działa w ciągu jednego
+    dnia
+  how_ai_works_lessons_in_a_day_desc: Masz tylko jeden dzień? Istnieje również możliwość
+    przedstawienia całej serii uczniom w ciągu jednego dnia. Idealny dla każdego nauczyciela
+    tematu, który chce wprowadzić uczniów w sztuczną inteligencję, a nawet jako lekcja
+    dla nauczyciela-gościa.
+  how_ai_works_lessons_in_a_day_desc_02: Przedstaw wszystkie filmy „Jak działa sztuczna
+    inteligencja” w ciągu jednego dnia. Uczniowie śledzą każdy film, dopasowując słownictwo
+    z filmu, następnie odpowiadając na pytanie refleksyjne dotyczące każdego filmu.
+  how_ai_works_resources_desc: Chcesz dowiedzieć się więcej o sztucznej inteligencji?
+    Oto kilka dodatkowych zasobów, które mogą pomóc rozszerzyć naukę Ciebie i Twoich
+    uczniów.
   ai_vid_intro_caption: Przedstawiamy, jak działa sztuczna inteligencja
   ai_vid_chatbots_caption: Jak działają chatboty i modele dużych języków
   ai_vid_creativity_caption: Czy AI ma kreatywność i wyobraźnię?
@@ -1096,10 +1232,10 @@ pl:
   teach_page_additional_materials_list_desc_03: Wydrukuj te plakaty z różnymi wzorami
     do naśladowania, aby powiesić je w swojej szkole i zainspiruj uczniów do spróbowania
     informatyki.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1664,6 +1800,7 @@ pl:
   not_found_desc: Żądana strona nie została znaleziona
   not_found_instructions: Sprawdź adres strony i wyślij ponownie lub wybierz link
     z listy poniżej.
+  company_code_dot_org: Code.org
   company_4-H: Rozwój młodzieży 4-H
   company_asa: Sojusz po szkole
   company_asos: ASOS
@@ -1716,6 +1853,7 @@ pl:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1737,6 +1875,7 @@ pl:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -12230,8 +12369,10 @@ pl:
   tutorial_ai4alldance_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_ai4allneural_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_spheroinout_string_platforms: Bez komputera
-  tutorial_edisonblueprint_string_platforms: Wszystkie współczesne przeglądarki
-  tutorial_edisonmaze_string_platforms: Wszystkie współczesne przeglądarki
+  tutorial_edisonblueprint_string_platforms: Wszystkie współczesne przeglądarki, tablet
+    z systemem Android, iPad
+  tutorial_edisonmaze_string_platforms: Wszystkie współczesne przeglądarki, tablet
+    z systemem Android, iPad
   tutorial_milnefunctions_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_sasmap_string_platforms: Wszystkie nowoczesne przeglądarki, iPad, czytnik
     ekranu

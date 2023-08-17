@@ -195,6 +195,8 @@ id:
   grade_level_label_elementary: Sekolah Dasar
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: SMA
+  students_label: Murid-murid
+  teachers_label: Guru-guru
   teacher_label_csf: Guru CS Fundamentals
   teacher_label_csd: Guru CS Discoveries
   teacher_label_csp: Guru CS Principles
@@ -208,7 +210,9 @@ id:
   call_to_action_explore_unit: Jelajahi unit
   call_to_action_explore_curriculum: Jelajahi kurikulum
   call_to_action_explore_curriculum_options: Telusuri opsi kurikulum
+  call_to_action_explore_lessons: Jelajahi pelajaran
   call_to_action_explore_modules: Jelajahi modul
+  call_to_action_explore_module: Jelajahi modul
   call_to_action_explore_workshops: Telusuri workshop
   call_to_action_explore_course: Telusuri kursus
   call_to_action_explore_courses: Telusuri kursus
@@ -255,8 +259,10 @@ id:
   call_to_action_see_module_details: Lihat detail modul
   call_to_action_start_modules: Mulai modul
   call_to_action_see_course_details: Lihat detail kursus
+  call_to_action_see_lesson_details: Lihat detail pelajaran
   call_to_action_learn_about_approach: Ketahui selengkapnya tentang pendekatan kami
   call_to_action_try_java_lab: Coba Java Lab
+  call_to_action_notify_available: Beri tahu saya bila tersedia
   aria_label_call_to_action_afe: Pelajari selengkapnya tentang Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Mulai program pembelajaran profesional Pengajaran
     Ilmu Komputer Dasar-dasar
@@ -324,6 +330,22 @@ id:
   aria_label_call_to_action_csf_course_d: Lihat detail Kursus D
   aria_label_call_to_action_csf_course_e: Lihat detail Kursus E
   aria_label_call_to_action_csf_course_f: Lihat detail Kursus F
+  aria_label_call_to_action_ai_pl_101_videos: Tonton video AI 101 untuk Guru
+  aria_label_call_to_action_ai_teaching_module: Jelajahi modul Teaching AI dan Machine
+    Learning
+  aria_label_call_to_action_how_ai_works_lesson_01: Lihat detail pelajaran Pengantar
+    Pembelajaran Mesin
+  aria_label_call_to_action_how_ai_works_lesson_02: Lihat detail pelajaran Computer
+    Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Lihat detail pelajaran Neural
+    Networks
+  aria_label_call_to_action_how_ai_works_lesson_04: Lihat detail pelajaran Chatbots
+    dan Large Language Models
+  aria_label_call_to_action_how_ai_works_lesson_05: Lihat detail pelajaran Gambar
+    Generatif
+  aria_label_call_to_action_how_ai_works_lesson_06: Lihat detail pelajaran Bias Algoritma
+  aria_label_call_to_action_how_ai_works_lesson_07: Lihat detail pelajaran Kode Etik
+    AI Kami
   video_title_professional_learning_program: Program Pembelajaran Profesional Code.org
   curriculum_name_csf: Dasar-dasar Ilmu Komputer
   curriculum_name_csf_02: Dasar-dasar CS apa pun (Kursus A-F)
@@ -437,6 +459,10 @@ id:
   module_label_student_tool: Alat bagi siswa
   module_label_student_product: Produk
   module_label_student_content_resources: Konten & sumber daya
+  module_label_new: Baru
+  module_label_coming_soon: Segera hadir
+  module_label_video_series: Seri video
+  module_label_self_paced: Modul mandiri
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -459,9 +485,13 @@ id:
   module_grade_9_12_teachers: Guru 9-12
   module_level_beginner: Pemula
   module_level_intermediate: Menengah
+  module_duration_45_mins: 45 menit
+  module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
+  module_duration_5_hrs: 5 jam
   module_duration_8_hrs: 8 jam
+  module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
   module_duration_lesson: Pelajaran
   module_duration_week: Minggu
@@ -536,6 +566,7 @@ id:
   heading_no_devices: Tidak punya perangkat? Kami siap membantu Anda
   heading_java_lab: Java Lab
   heading_objects_first: Utamakan objek
+  heading_these_lessons_will: 'Pelajaran ini akan:'
   professional_learning_section_desc: Dapatkan dukungan yang Anda butuhkan saat Anda
     bersiap untuk mengajar. Para guru menyukainya, dan lebih dari 90% memberinya peringkat
     sebagai pengembangan profesi terbaik yang pernah ada!
@@ -667,6 +698,11 @@ id:
   ai_curriculum_grades_03: 'Tingkat Kelas: 3-12'
   ai_curriculum_duration_03: 'Durasi: 1 jam'
   ai_curriculum_btn_aria_label_03: Coba aktivitas AI for Oceans
+  ai_curriculum_title_04: Bagaimana AI Bekerja
+  ai_curriculum_desc_04: Pelajaran ini melengkapi seri video How AI Works. Setiap
+    pelajaran dipasangkan dengan satu video dari seri, menyelami lebih dalam konsep
+    yang diperkenalkan dalam video.
+  ai_curriculum_btn_aria_label_04: Jelajahi pelajaran Bagaimana AI Bekerja
   ai_carousel_heading: 'Apa yang dikatakan guru tentang AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi siswa saya kesempatan untuk melihat
     bahwa ada unsur opini dalam sistem klasifikasi. Kemudian, ketika kami mulai melihat
@@ -684,6 +720,10 @@ id:
   ai_pl_list_04: Pertimbangkan implikasi dunia nyata dari AI dan pembelajaran mesin.
   ai_pl_list_05: Jelajahi proyek akhir chapter.
   ai_pl_duration: 'Durasi: 2 jam'
+  ai_pl_title: Mengajar AI dan Pembelajaran Mesin
+  ai_pl_desc: Pengantar kecerdasan buatan dan pembelajaran mesin. Latih model pembelajaran
+    mesin menggunakan AI Lab. dan terlibat dengan aplikasi pembelajaran mesin. Pertimbangkan
+    implikasi dunia nyata dari AI dan pembelajaran mesin.
   ai_video_series_title: Bagaimana AI Bekerja
   ai_video_series_desc: Dengan pengenalan oleh CEO Microsoft Satya Nadella, rangkaian
     video pendek ini akan memperkenalkan Anda tentang cara kerja kecerdasan buatan
@@ -710,6 +750,7 @@ id:
   ai_pl_101_hero_desc: Temukan potensi transformatif dari kecerdasan buatan (Artificial
     Intelligence, AI) dalam pendidikan dengan seri pembelajaran online gratis kami
     bagi para pendidik.
+  ai_pl_101_hero_desc_02: Seri pembelajaran online yang komprehensif untuk guru.
   ai_pl_101_hero_presented: Disajikan oleh
   ai_pl_101_intro_heading: Apa itu AI 101 untuk Guru?
   ai_pl_101_intro_text: AI 101 untuk Guru adalah seri pembelajaran profesional online
@@ -755,6 +796,96 @@ id:
     memanfaatkan model penilaian canggih dan AI, membantu guru dalam memberikan umpan
     balik berulang serta penilaian formatif dalam seluruh proses pengalaman menulis.'
   ai_pl_101_explore__button_4: Telusuri alat
+  ai_pl_101_video_title_1: Obrolan Fireside dengan Sal Khan dan Hadi Partovi
+  ai_pl_101_video_desc_1: Bergabunglah dengan Sal Khan (Khan Academy) dan Hadi Partovi
+    (Code.org) untuk obrolan api unggun tentang merangkul kecerdasan buatan di kelas.
+    Harapkan diskusi yang hidup termasuk beberapa topik paling kontroversial seputar
+    AI saat ini.
+  ai_pl_101_video_title_2: Mengungkap AI untuk Pendidik
+  ai_pl_101_video_desc_2: Pengantar dasar-dasar Kecerdasan Buatan yang akan membekali
+    Anda dengan pengetahuan dasar untuk memahami dampak mendalam AI di masyarakat
+    kita dan relevansinya yang meningkat dengan bidang pendidikan. Anda akan mendapatkan
+    wawasan praktis untuk memanfaatkan AI untuk tugas-tugas di kelas, dan menghemat
+    waktu untuk tugas-tugas administratif.
+  ai_pl_101_video_title_3: Mengubah Pembelajaran dengan AI
+  ai_pl_101_video_desc_3: Jelajahi persimpangan AI dan pendidikan. Sesi ini mengeksplorasi
+    bagaimana AI dapat dikombinasikan dengan pedagogi untuk meningkatkan pembelajaran
+    siswa. Ini adalah keharusan bagi pendidik yang ingin memanfaatkan AI untuk mengubah
+    praktik mengajar mereka untuk memperkaya pengalaman belajar siswa mereka.
+  ai_pl_101_video_title_4: Memastikan Pendekatan yang Bertanggung Jawab terhadap AI
+  ai_pl_101_video_desc_4: Jelajahi pertimbangan etis dan praktik terbaik untuk menggabungkan
+    kecerdasan buatan dalam lingkungan pendidikan. Sesi ini akan memberikan strategi
+    konkret, sumber daya, dan contoh dunia nyata, semuanya bertujuan untuk memahami
+    potensi bias AI, dan pertimbangan etis yang menyertainya.
+  ai_pl_101_video_title_5: Membawa AI ke Kelas
+  ai_pl_101_video_desc_5: Sesi ini berfokus pada pengajaran tentang AI, mengevaluasi
+    dan memanfaatkan alat pendidikan AI, dan memanfaatkan AI untuk penilaian siswa.
+    Dengan perpaduan teori, contoh praktis, dan sumber daya yang kaya, ini bertujuan
+    untuk memberdayakan pendidik untuk menavigasi lanskap AI dan meningkatkan pengalaman
+    belajar siswa.
+  ai_pl_101_video_desc_6: 'Pelajari lebih lanjut tentang teknologi baru yang mendorong
+    perubahan besar dalam AI, menampilkan dua video baru pada Model Bahasa Besar (seperti
+    ChatGPT) dan Generative AI. Dengarkan bagaimana teknologi baru ini bekerja langsung
+    dari para ahli: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela, CEO RunwayMLL.'
+  how_ai_works_hero_heading: Bagaimana AI Bekerja
+  how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” serial video kami
+    dan pelajaran yang menyertainya!
+  how_ai_works_intro_desc: Rangkaian video pendek dan pelajaran di kelas yang menyertainya
+    akan memperkenalkan Anda dan siswa Anda tentang cara kerja kecerdasan buatan dan
+    mengapa itu penting. Anda dapat memilih pelajaran individual berdasarkan topik,
+    menjelajahi seluruh rangkaian topik dalam satu kelas atau mengajarkan semua 7
+    pelajaran untuk memberikan penyelaman yang lebih dalam.
+  how_ai_works_intro_list_01: Memperkenalkan Anda pada kecerdasan buatan dan pembelajaran
+    mesin
+  how_ai_works_intro_list_02: Selami cara kerja AI generatif, termasuk model bahasa
+    besar (LLM) dan pembuatan gambar
+  how_ai_works_intro_list_03: Jelajahi bias, etika, privasi, dan penggunaan AI yang
+    bertanggung jawab
+  how_ai_works_intro_list_04: Sentuh aplikasi AI dunia nyata, termasuk visi komputer
+  how_ai_works_lessons_heading: Pelajaran AI untuk kelas Anda
+  how_ai_works_lesson_title_01: Pengantar Pembelajaran Mesin
+  how_ai_works_lesson_desc_01: Pelajari tentang bentuk kecerdasan buatan yang disebut
+    pembelajaran mesin dan bagaimana mereka dapat menggunakan Proses Pemecahan Masalah
+    untuk membantu melatih robot memecahkan masalah. Berpartisipasi dalam kegiatan
+    pembelajaran mesin di mana robot belajar bagaimana mendeteksi pola pada ikan.
+  how_ai_works_lesson_title_02: Visi Komputer
+  how_ai_works_lesson_desc_02: Pelajari cara kerja visi komputer. Tonton video yang
+    menjelaskan visi komputer dan bagaimana komputer “melihat”. Kemudian rancang algoritme
+    yang menggunakan jaringan untuk memutuskan nomor apa yang ditampilkan oleh layar
+    tujuh segmen dan mengujinya.
+  how_ai_works_lesson_title_03: Jaringan Saraf
+  how_ai_works_lesson_desc_03: Pelajari cara kerja jaringan saraf. Gunakan widget
+    untuk menjelajahi jaringan saraf secara langsung. Tonton video yang menjelaskan
+    jaringan saraf. Akhirnya diskusikan perlunya beragam perspektif saat membuat sistem
+    rekomendasi.
+  how_ai_works_lesson_title_04: Chatbots dan Model Bahasa Besar
+  how_ai_works_lesson_desc_04: Pelajari apa itu Large Language Model (LLM) dan cara
+    kerjanya, lalu gunakan LLM untuk membuat teks bersama dengan AI. Akhirnya, diskusikan
+    tentang apakah LLM cerdas atau kreatif.
+  how_ai_works_lesson_title_05: Gambar Generatif
+  how_ai_works_lesson_desc_05: Pelajari bagaimana AI dapat menghasilkan gambar, lalu
+    jelajahi widget AI difusi dan diskusikan apakah model ini kreatif atau tidak.
+  how_ai_works_lesson_title_06: Bias Algoritmik
+  how_ai_works_lesson_desc_06: Berlatihlah memotong gambar untuk mengungkap bias yang
+    mendasari algoritme pemotongan Twitter, lalu baca dan tonton video tentang penemuan
+    algoritme bias ini. Terakhir, diskusikan cara untuk mengenali dan mengurangi bias
+    dalam algoritme.
+  how_ai_works_lesson_title_07: Kode Etik AI Kami
+  how_ai_works_lesson_desc_07: Lakukan penelitian menggunakan artikel dan video yang
+    mengekspos jebakan etika di bidang kecerdasan buatan pilihan mereka. Kumpulkan
+    sumber daya “Kode Etik AI Kami” di seluruh kelas untuk pembuat dan legislator
+    AI di mana pun.
+  how_ai_works_lessons_in_a_day_title: Bagaimana AI Bekerja dalam Sehari
+  how_ai_works_lessons_in_a_day_desc: Hanya punya satu hari? Ada juga pilihan untuk
+    memperkenalkan seluruh seri kepada siswa dalam satu hari. Sempurna untuk setiap
+    guru bidang mata pelajaran yang ingin memperkenalkan siswa pada AI, atau bahkan
+    sebagai pelajaran untuk guru tamu.
+  how_ai_works_lessons_in_a_day_desc_02: Perkenalkan semua video “How AI Works” dalam
+    satu hari. Siswa mengikuti setiap video dengan mencocokkan kosakata dari video,
+    kemudian menjawab pertanyaan refleksi tentang setiap video.
+  how_ai_works_resources_desc: Tertarik untuk mempelajari lebih lanjut tentang AI?
+    Berikut adalah beberapa sumber daya tambahan yang dapat membantu memperluas pembelajaran
+    Anda dan siswa Anda.
   ai_vid_intro_caption: Memperkenalkan Cara Kerja AI
   ai_vid_chatbots_caption: Cara Kerja Chatbots dan Model Bahasa Besar
   ai_vid_creativity_caption: Apakah AI Memiliki Kreativitas dan Imajinasi?
@@ -1100,10 +1231,10 @@ id:
   teach_page_additional_materials_list_desc_03: Cetaklah berbagai poster karakter
     ini untuk dipajang di sekolah Anda dan berikan inspirasi kepada siswa Anda untuk
     mencoba ilmu komputer.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1368,12 +1499,12 @@ id:
   csc_page_faq_answer_03_coming_soon: Pembelajaran profesional untuk CS Connections
     segera hadir!
   csc_page_faq_question_04: Kapan waktu yang disarankan untuk mengajarkan CS Connections?
-  csc_page_faq_answer_04: Tiap modul CS Connections dirancang waktu seminggu.
+  csc_page_faq_answer_04: Tiap modul CS Connections dirancang menghabiskan waktu seminggu.
   csc_page_faq_question_05: Materi apa yang saya butuhkan untuk CS Connections?
   csc_page_faq_answer_05: Idealnya, tiap siswa memiliki komputer sendiri dan guru
     menggunakan proyektor untuk menampilkan tayangan slide yang sesuai dengan pelajaran.
-  csf_page_top_desc: Kurikulum gratis sepanjang tahun yang mengenalkan siswa pada
-    konsep dasar ilmu komputer dan menantang mereka untuk mengeksplorasi dampak komputasi
+  csf_page_top_desc: Kumpulan kurikulum dasar gratis yang mengenalkan siswa pada konsep
+    dasar ilmu komputer dan menantang mereka untuk mengeksplorasi dampak komputasi
     dan teknologi pada dunia.
   csf_page_intro_heading: Kursus dasar gratis dan menyenangkan untuk tiap kelas
   csf_page_intro_list_01: Enam kursus, satu untuk tiap kelas dasar
@@ -1381,7 +1512,7 @@ id:
   csf_page_intro_list_03: Gunakan kursus yang sama untuk semua siswa di kelas yang
     sama, apapun tingkat pengalaman mereka
   csf_page_intro_list_04: Semua kursus membuat titik masuk yang cocok untuk siswa
-  csf_page_quote: Saya telah mengajarkan kursus ini sejak Senin setelah workshop.
+  csf_page_quote: Saya telah mengajarkan kursus ini sejak hari Senin setelah workshop.
     Para siswa dan saya MENYUKAINYA (begitu pula dengan guru kelas mereka!!!)
   csf_page_curriculum_glance_topics: Pemrograman, Internet, Game dan Animasi, Seni
     dan Desain, Desain Aplikasi
@@ -1400,63 +1531,66 @@ id:
     kelas Anda
   csf_page_pick_a_course_desc: Dengan beragam opsi CS Fundamentals yang ditawarkan,
     ada kursus untuk semua kebutuhan yang berbeda.
-  csf_page_pick_a_course_heading_02: Bagaimana siswa Anda akan terlibat dengan konten?
-  csf_page_courses_heading: Kursus yang dirancang khusus untuk kelas dasar Anda
-  csf_page_courses_desc: Temukan kursus untuk kelas yang Anda ajarkan. Setiap kursus
-    kira-kira satu bulan.
+  csf_page_pick_a_course_heading_02: Bagaimana cara siswa dalam mengikuti kontennya?
+  csf_page_courses_heading: Kursusnya dirancang secara khusus untuk kelas dasar Anda
+  csf_page_courses_desc: Temukan kursus untuk kelas yang Anda ajar. Tiap kursus membutuhkan
+    waktu kurang lebih satu bulan.
   csf_page_courses_self_paced_heading: Kurikulum dasar mandiri
   csf_page_courses_self_paced_desc: Guru memainkan peran penting dalam pembelajaran
-    siswa dengan mengajarkan kegiatan yang tidak terhubung dan memimpin diskusi seluruh
-    kelas, namun, kami menyadari bahwa CS Fundamentals tidak selalu diajarkan dalam
-    pengaturan kelas tradisional. Kami menyediakan dua kursus ekspres mandiri bersama
-    Kursus A-F. Kursus ekspres ini dirancang untuk situasi di mana guru memungkinkan
-    setiap siswa untuk bekerja dengan kecepatan mereka sendiri secara mandiri.
-  csf_page_faq_question_01: Apakah CS Fundamentals dipetakan ke standar?
+    siswa dengan mengajarkan kegiatan tanpa komputer dan memimpin diskusi dalam kelas,
+    namun, kami menyadari bahwa CS Fundamentals tidak selalu diajarkan dalam kelas
+    konvensional. Kami menyediakan dua ekspres mandiri bersama Kursus A-F. Kursus
+    ekspres ini dirancang untuk situasi di mana guru memungkinkan tiap siswa untuk
+    belajar sesuai kecepatan mereka sendiri secara mandiri.
+  csf_page_faq_question_01: Apakah CS Fundamentals dipetakan sesuai standar?
   csf_page_faq_answer_01_01: 'CS Fundamentals ditulis menggunakan K-12 Framework for
-    Computer Science dan standar CSTA sebagai panduan. Saat ini, setiap pelajaran
-    di CS Fundamentals berisi pemetaan dengan standar CSTA yang relevan. Ringkasan
-    semua pemetaan CSTA untuk setiap kursus dapat ditemukan di:'
-  csf_page_faq_answer_01_list_01: "[Kursus A Standar] (%{course_a_url})"
-  csf_page_faq_answer_01_list_02: "[Standar Kursus B] (%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[Standar Kursus C] (%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[Kursus D Standar] (%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[Kursus E Standar] (%{course_e_url})"
-  csf_page_faq_answer_01_list_06: "[Kursus F Standar] (%{course_f_url})"
-  csf_page_faq_answer_01_02: Versi standar Google Spreadsheet dapat ditemukan di [Standar
-    CSF] (%{csf_standards_url}).
-  csf_page_faq_question_02: Bagaimana saya bisa membawa CS Fundamentals ke seluruh
+    Computer Science dan standar CSTA sebagai panduan. Saat ini, tiap pelajaran dalam
+    CS Fundamentals berisi pemetaan sesuai standar CSTA yang relevan. Ringkasan dari
+    semua pemetaan CSTA untuk tiap kursus dapat dilihat di:'
+  csf_page_faq_answer_01_list_01: "[Standar Kursus A](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Standar Kursus B](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Standar Kursus C](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Standar Kursus D](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Standar Kursus E](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Standar Kursus F](%{course_f_url})"
+  csf_page_faq_answer_01_02: Versi Google Sheets dari standar tersebut dapat dilihat
+    di [Standar CSF](%{csf_standards_url}).
+  csf_page_faq_question_02: Bagaimana cara menghadirkan CS Fundamentals ke seluruh
     sekolah saya?
-  csf_page_faq_answer_02: Kurikulum K-12 CS terkemuka di Amerika Serikat, program
-    dasar kami telah terbukti efektif di distrik sekolah perkotaan besar seperti Dallas,
-    serta distrik pedesaan kecil di Iowa. Tidak perlu menyewa spesialis untuk mengajar
-    CS. Program kami dirancang secara unik untuk mendukung guru yang baru mengenal
-    CS sambil menawarkan fleksibilitas untuk mengembangkan pelajaran agar sesuai dengan
-    kebutuhan siswa. [Bagikan brosur ini] (%{brochure_url}) dengan administrator sekolah
-    dan distrik Anda, atau [sarankan mereka melihat halaman administrator kami] (%{admins_url})
-    dirancang khusus untuk menjawab pertanyaan paling umum administrator.
-  csf_page_faq_question_03: Berapa biaya untuk mengajar CS Fundamentals?
-  csf_page_faq_question_04: Bagaimana/Di mana saya bisa mendapatkan pengembangan profesional
+  csf_page_faq_answer_02: Sebagai kurikulum Ilmu Komputer K-12 terkemuka di Amerika
+    Serikat, program dasar kami terbukti efektif di distrik sekolah perkotaan besar
+    seperti Dallas, serta distrik pedesaan kecil di Iowa. Tidak perlu membayar ahli
+    untuk mengajarkan ilmu komputer. Program kami dirancang secara unik untuk mendukung
+    guru yang baru mengenal ilmu komputer sambil menawarkan fleksibilitas untuk mengembangkan
+    pelajaran agar sesuai dengan kebutuhan siswa. [Bagikan brosur ini](%{brochure_url})
+    kepada administrator sekolah dan distrik Anda, atau [sarankan kepada mereka untuk
+    melihat halaman administrator kami](%{admins_url}) yang dirancang khusus untuk
+    menjawab pertanyaan umum para administrator.
+  csf_page_faq_question_03: Berapa biaya untuk mengajarkan CS Fundamentals?
+  csf_page_faq_question_04: Bagaimana/Di mana saya bisa mendapatkan pengembangan profesi
     untuk CS Fundamentals?
   csf_page_faq_answer_04_01: Baru mengajar ilmu komputer? Jangan khawatir! Sebagian
-    besar guru kami belum pernah mengajar ilmu komputer sebelumnya. Bergabunglah dengan
-    guru lokal untuk dukungan inspiratif dan langsung untuk menerapkan ilmu komputer
-    di kelas Anda. Mitra Regional kami menawarkan lokakarya Code.org satu hari berkualitas
-    tinggi untuk guru individu atau untuk PD di seluruh sekolah. [Mendaftar untuk
-    lokakarya pengembangan profesional di dekat Anda] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
-  csf_page_faq_question_05: Apa waktu yang disarankan untuk mengajar CS Fundamentals?
-  csf_page_faq_answer_05: Setiap kursus CSF mencakup 13-17 pelajaran yang dirancang
-    untuk periode 45 menit. Kami merekomendasikan semua siswa berpindah dari pelajaran
-    ke pelajaran dengan kecepatan yang ditetapkan oleh guru. Ada banyak tingkat proyek
-    yang dipimpin guru yang dirancang untuk dialami secara serempak sementara pelajaran
-    membangun keterampilan dapat diselesaikan oleh siswa dengan kecepatan mereka sendiri.
+    besar guru kami belum pernah mengajar ilmu komputer. Bergabunglah dengan guru
+    lokal untuk mendapatkan dukungan langsung dan inspiratif dalam menerapkan ilmu
+    komputer di kelas Anda. Mitra Regional kami menawarkan workshop Code.org sehari
+    yang berkualitas bagi tiap guru atau untuk PD di seluruh sekolah. [Daftarkan diri
+    Anda untuk mengikuti workshop pengembangan profesi di sekitar Anda](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Bergabunglah dengan lebih dari 100.000 guru yang telah
+    mengikuti workshop kami. Mayoritas peserta workshop kami berkata, 'Ini merupakan
+    pengembangan profesi terbaik yang pernah saya hadiri.' Bahkan, [90% peserta akan
+    merekomendasikan program kami kepada guru lain](%{rec_url})!
+  csf_page_faq_question_05: Kapan waktu yang disarankan untuk mengajarkan CS Fundamentals?
+  csf_page_faq_answer_05: Tiap kursus CSF mencakup 13-17 pelajaran yang dirancang
+    menghabiskan waktu 45 menit. Kami sarankan agar semua siswa beralih dari satu
+    pelajaran ke pelajaran lain dengan kecepatan yang ditetapkan oleh guru. Ada banyak
+    level proyek yang dipimpin oleh guru yang dirancang untuk diikuti secara serempak
+    sementara pelajaran mengembangkan keterampilan dapat diselesaikan oleh siswa sesuai
+    kecepatan mereka sendiri.
   csf_page_faq_question_06: Materi apa yang saya butuhkan untuk CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Banyak pelajaran yang memiliki handout yang memandu siswa
+    dalam melewati kegiatan. Sumber daya ini dapat dicetak atau digunakan secara digital.
+    Sejumlah pelajaran membutuhkan perlengkapan kelas khusus dan media manipulatif.
+    [Buka Silabus CSF untuk mengetahui selengkapnya](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1672,6 +1806,7 @@ id:
   not_found_desc: Halaman yang diminta tidak ditemukan
   not_found_instructions: Periksa alamat web lalu kirim kembali atau pilih tautan
     dari daftar di bawah.
+  company_code_dot_org: Code.org
   company_4-H: Pengembangan kaum muda 4-H
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1724,6 +1859,7 @@ id:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Sekolah Umum Everette
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1745,6 +1881,7 @@ id:
   company_houstonisd: Distrik Sekolah Independen Houston
   company_hcpss: Howard County Public Schools
   company_idla: Akademi Pembelajaran Digital Idaho
+  company_iste: ISTE
   company_janesvilleschooldistrict: Distrik Sekolah Janesville
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -12073,8 +12210,9 @@ id:
   tutorial_ai4alldance_string_platforms: Semua browser modern
   tutorial_ai4allneural_string_platforms: Semua browser modern
   tutorial_spheroinout_string_platforms: Dicabut
-  tutorial_edisonblueprint_string_platforms: Semua browser modern
-  tutorial_edisonmaze_string_platforms: Semua browser modern
+  tutorial_edisonblueprint_string_platforms: Semua browser modern, tablet Android,
+    iPad
+  tutorial_edisonmaze_string_platforms: Semua browser modern, tablet Android, iPad
   tutorial_milnefunctions_string_platforms: Semua peramban modern
   tutorial_sasmap_string_platforms: Semua browser modern, iPad, Pembaca layar
   tutorial_firstrobotics_string_platforms: Semua browser modern
@@ -13263,91 +13401,91 @@ id:
     orang mengenakan kemeja Code.org dan melambaikan bendera pelangi sambil berjalan
     bersama bug Volkswagen multi-warna.
   accessibility_hero_heading: Aksesibilitas di Code.org
-  accessibility_hero_desc: Kami berdedikasi untuk menghilangkan hambatan yang mencegah
-    inklusi dan partisipasi penuh siswa dan pendidik penyandang cacat, memastikan
-    bahwa SETIAP siswa memiliki akses ke ilmu komputer.
-  accessibility_efforts_title: Upaya Kami untuk 2023
-  accessibility_efforts_desc: 'Untuk mencapai tujuan kami dari platform yang dapat
-    diakses sepenuhnya, kami menerapkan rencana tindakan komprehensif yang mencakup:'
+  accessibility_hero_desc: Kami berkomitmen untuk menghilangkan hambatan yang menghalangi
+    inklusi dan partisipasi penuh siswa dan pendidik yang difabel, serta memastikan
+    bahwa TIAP siswa dapat mempelajari ilmu komputer.
+  accessibility_efforts_title: Upaya Kami di Tahun 2023
+  accessibility_efforts_desc: 'Untuk mencapai tujuan platform yang dapat diakses sepenuhnya,
+    kami menerapkan rencana tindakan komprehensif yang mencakup:'
   accessibility_efforts_card_title_1: Pelatihan aksesibilitas internal
   accessibility_efforts_card_desc_1: Tim produk dan teknik kami akan menyelesaikan
     pelatihan aksesibilitas komprehensif pada Desember 2023.
   accessibility_efforts_card_title_2: Analisis VPAT
-  accessibility_efforts_card_desc_2: Melengkapi [Templat Aksesibilitas Produk Sukarela]
-    (%{voluntary_url}) untuk menetapkan garis dasar dan mengukur kemajuan setiap tahun.
-    Hasil tersedia di halaman ini pada September 2023.
+  accessibility_efforts_card_desc_2: Melengkapi [Templat Aksesibilitas Produk Sukarela](%{voluntary_url})
+    untuk menetapkan garis dasar dan mengukur kemajuan setiap tahun. Hasilnya akan
+    tersedia di halaman ini pada September 2023.
   accessibility_efforts_card_title_3: Alat yang mendukung desain yang dapat diakses
-  accessibility_efforts_card_desc_3: 'Anggota tim akan memiliki akses ke alat yang
-    memastikan semua fitur baru dirancang dan dibangun dengan mempertimbangkan aksesibilitas. '
+  accessibility_efforts_card_desc_3: 'Anggota tim dapat mengakses alat yang memastikan
+    semua fitur baru dirancang dan dikembangkan dengan mempertimbangkan aksesibilitas. '
   accessibility_efforts_card_title_4: Kurikulum yang dapat diakses
-  accessibility_efforts_card_desc_4: Kami akan mencapai [kepatuhan AA Tingkat WCAG]
-    (%{wcag_url}) untuk beberapa unit pertama Prinsip Ilmu Komputer dan Penemuan Ilmu
-    Komputer pada Desember 2023.
-  accessibility_explore_title: Jelajahi sumber daya aksesibilitas Code.org
+  accessibility_efforts_card_desc_4: Kami akan mencapai [kepatuhan Level AA WCAG](%{wcag_url})
+    untuk beberapa unit pertama dari Computer Science Principles dan Computer Science
+    Discoveries pada Desember 2023.
+  accessibility_explore_title: Telusuri sumber daya aksesibilitas Code.org
   accessibility_explore_text: Halaman sumber daya aksesibilitas kami menyediakan dokumentasi
-    dan panduan komprehensif untuk fitur dan alat kami, termasuk pelajaran Hour of
-    Code yang dapat diakses, pembaca imersif, navigasi keyboard, dan opsi penyesuaian.
+    dan panduan yang komprehensif untuk fitur dan alat kami, termasuk pelajaran Hour
+    of Code yang dapat diakses, pembaca imersif, navigasi keyboard, dan opsi penyesuaian.
   accessibility_explore_button: Lihat halaman sumber daya aksesibilitas
-  accessibility_help_us_title: Bantu Kami Meningkatkan
-  accessibility_help_us_text: Di Code.org, kami gesit dan responsif terhadap umpan
-    balik. Jika Anda memiliki rekomendasi untuk membantu kami meningkatkan aksesibilitas
-    alat dan sumber daya kami, silakan hubungi kami. Terima kasih telah membantu kami
-    membuat ilmu komputer tersedia untuk semua siswa!
-  accessibility_help_us_button: Beri tahu kami bagaimana kami dapat meningkatkan
+  accessibility_help_us_title: Bantu Kami Lebih Baik
+  accessibility_help_us_text: Di Code.org, kami gesit dan responsif terhadap masukan.
+    Jika Anda memiliki rekomendasi untuk membantu memperbaiki aksesibilitas alat dan
+    sumber daya kami, silakan hubungi kami. Terima kasih telah membantu menyediakan
+    ilmu komputer untuk semua siswa!
+  accessibility_help_us_button: Beri tahu kami cara agar lebih baik
   accessibility_commit_title: Komitmen Code.org terhadap Aksesibilitas
   accessibility_commit_text_1: Code.org percaya bahwa ilmu komputer adalah dasar bagi
-    semua siswa dan kami berkomitmen untuk memastikan kesetaraan, akses, dan peluang
-    di platform kami dan dalam kurikulum kami.
+    semua siswa dan kami berkomitmen untuk memastikan kesetaraan, akses, dan kesempatan
+    di platform dan dalam kurikulum kami.
   accessibility_commit_text_2: Kami mengambil pendekatan holistik untuk mendukung
-    kebutuhan belajar semua siswa dan bekerja untuk menutup kesenjangan dalam akses
-    ke pendidikan ilmu komputer bagi siswa penyandang disabilitas.
-  accessibility_commit_text_3: Kami memulai dari yang kecil, tetapi akan mengukur
-    kemajuan kami dan terus melakukan iterasi sampai kami dapat mengatasi tantangan
-    aksesibilitas yang paling kompleks sekalipun.
+    kebutuhan belajar semua siswa dan berupaya menutup kesenjangan dalam akses terhadap
+    pendidikan ilmu komputer bagi siswa difabel.
+  accessibility_commit_text_3: Kami memulai dari yang kecil, namun akan mengukur kemajuan
+    kami dan terus mengulangnya hingga kami dapat mengatasi tantangan aksesibilitas
+    yang paling rumit sekalipun.
   accessibility_commit_text_4: Di Code.org, kami berkomitmen untuk terus meningkatkan
-    aksesibilitas alat kami, dan kami senang untuk mengambil langkah penting ini menuju
-    kesetaraan, akses, dan peluang yang lebih besar bagi semua siswa dan pendidik.
+    aksesibilitas alat kami, dan kami senang mengambil langkah penting ini untuk menuju
+    kesetaraan, akses, dan kesempatan yang lebih besar bagi semua siswa dan pendidik.
   accessibility_partner_title: Mitra dan Rekomendasi Kami
   accessibility_partner_desc: Kami merekomendasikan sumber daya berikut untuk siswa
     dan guru yang mencari konten ilmu komputer yang lebih mudah diakses.
   accessibility_card_title_1: AccessCSForAll
-  accessibility_card_text_1: Sumber daya bagi guru untuk membawa komputasi yang dapat
-    diakses ke sekolah menengah dan untuk siswa sekolah menengah penyandang cacat
-    untuk terhubung dengan mentor di ruang teknologi.
-  accessibility_card_title_2: Blok4Semua
-  accessibility_card_text_2: Lingkungan pemrograman berbasis blok untuk iPad yang
+  accessibility_card_text_1: Sumber daya bagi guru untuk menghadirkan komputasi yang
+    dapat diakses ke sekolah menengah dan untuk siswa sekolah menengah difabel agar
+    terhubung dengan mentor di ruang teknologi.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: Lingkungan pemrograman berbasis block untuk iPad yang
     mengajarkan konsep pemrograman dasar menggunakan robot Dash. Dapat diakses dengan
-    VoiceOver, Kontrol Sakelar, dan Kontrol Suara.
-  accessibility_card_title_3: Kode Jumper
-  accessibility_card_text_3: Bantuan pengkodean fisik/sumber daya untuk siswa dengan
+    VoiceOver, Switch Control, dan Voice Control.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: Alat bantu/sumber daya coding fisik bagi siswa yang mengalami
     gangguan penglihatan.
   accessibility_card_title_4: CSForAll
-  accessibility_card_text_4: Organisasi yang mengoordinasikan proyek dan program dengan
-    berbagai organisasi di seluruh Amerika Serikat.
-  accessibility_card_title_5: Kode Anak Tunarungu
+  accessibility_card_text_4: Sebuah organisasi yang mengatur proyek dan program dengan
+    berbagai organisasi lain di seluruh Amerika Serikat.
+  accessibility_card_title_5: Deaf Kids Code
   accessibility_card_text_5: Mempromosikan pendidikan ilmu komputer dan teknologi
-    untuk memberdayakan siswa yang tuli atau sulit mendengar.
-  accessibility_card_title_6: Semua Orang Bisa Kode
+    untuk memberdayakan siswa yang tuna rungu atau sulit mendengar.
+  accessibility_card_title_6: Everyone Can Code
   accessibility_card_text_6: Kurikulum yang dirancang oleh Apple untuk Swift Playgrounds
     yang menyediakan VoiceOver (TTS yang dimodifikasi) dan kurikulum yang disesuaikan
-    untuk siswa dengan kebutuhan aksesibilitas.
+    bagi siswa dengan kebutuhan aksesibilitas.
   accessibility_card_title_7: Khan Academy
   accessibility_card_text_7: Penyedia kurikulum dengan berbagai akomodasi, termasuk
-    teks, transkrip, dan kemampuan untuk mengurangi gerakan animasi dan menyembunyikan
-    konten yang bergantung secara visual. Menyelenggarakan beberapa kurikulum Code.org,
-    ditambah kurikulum komputasi tambahan.
-  accessibility_card_title_8: Sirkuit Snap
+    caption, transkrip, dan kemampuan untuk mengurangi gerakan animasi dan menyembunyikan
+    konten yang bergantung secara visual. Menyelenggarakan sejumlah kurikulum Code.org,
+    dan kurikulum komputasi tambahan.
+  accessibility_card_title_8: Snap Circuits
   accessibility_card_text_8: Produk pendidikan yang mengajarkan elektronik dengan
     komponen elektronik snap-together tanpa solder. Dapat menyertakan paket akses
     untuk siswa tunanetra.
   accessibility_card_title_9: Sphero
-  accessibility_card_text_9: Bola robot pengkodean interaktif dan kit pendidikan STEM
-    untuk siswa penyandang disabilitas intelektual. Perlu dipasangkan dengan aplikasi
+  accessibility_card_text_9: Bola robot coding interaktif dan kit pendidikan STEM
+    bagi siswa penyandang disabilitas intelektual. Perlu disandingkan dengan aplikasi
     yang sesuai.
-  accessibility_card_title_10: 'Kuorum '
-  accessibility_card_text_10: Adaptasi kurikulum Prinsip Ilmu Komputer AP Code.org
-    menggunakan Quorum, bahasa berbasis bukti yang awalnya dirancang untuk memberikan
-    aksesibilitas bagi siswa tunanetra atau tunanetra.
+  accessibility_card_title_10: Quorum
+  accessibility_card_text_10: Adaptasi dari kurikulum AP Computer Science Principles
+    Code.org menggunakan Quorum, bahasa berbasis bukti yang awalnya dirancang untuk
+    memberikan aksesibilitas bagi siswa tunanetra atau yang mengalami gangguan penglihatan.
   language_code:
     ar: Arab
     az: Orang Azerbaijan

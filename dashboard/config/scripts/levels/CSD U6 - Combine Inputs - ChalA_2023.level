@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:11.000Z",
   "level_num": "custom",
@@ -28,11 +29,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -76,7 +77,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/cce9c3a7723586f2fc4d590843dc1d2a-image-1648843035099.8.a-finished.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# LED Mood Ring\r\n\r\nA [Mood Ring](https://en.wikipedia.org/wiki/Mood_ring) is a piece of jewelry with a stone that can change color based on your \"mood\" (but really, it changes color based on temperature). These were popular gift items in the 1980's since the ring could change color based on the user.\r\n\r\nCreate an app that lets the user select a mood from a dropdown, then updates the ring of lights to match the mood. You can use some [suggested colorings based on actual Mood Rings](https://upload.wikimedia.org/wikipedia/commons/8/87/Mood_Stone_User_Guide.png), or make your own decisions about which colors or designs represent certain moods.\r\n\r\nYour app should have 4 moods. Two moods - `relaxed` and `excited` have already been created for you, and you need to add two more moods. You can also add more options to the dropdown and make as many moods as you want!\r\n\r\n## Do This\r\n\r\n**Planning:**\r\n- Decide the other moods you would like to include in your app\r\n- Decide which colors or designs you would like to use to represent each mood\r\n\r\n**Design Mode:**\r\n- Add your other moods to the dropdown menu so there are at least four options\r\n\r\n**Code Mode:**\r\n- Add [`if statements`(#64B5F6)](/docs/applab/ifBlock/) to check the value of the dropdown and update the color LEDs. You will need at least four if-statements for each mood.\r\n\r\n**Run Your Code!**\r\n- Have a partner try out your app. They can pick a mood without you seeing the app and only looking at the Circuit Playground. See if you can tell their mood based only on the lights and design of the LEDs.",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "LED Mood Ring",
     "thumbnail_url": "https://images.code.org/614397ffb356db0b0df85b7dcf77e020-image-1650060225659.png",
@@ -105,9 +107,8 @@
     "encrypted_examples": "vcZPYGWO76DTmGInqrS2RBYDiqa/DG41O2ZX+W0GKNmqv1vazypkZ2REw8cX\nuuR93Hv5GxcFY81ySLCd7eA7nw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.198+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.198+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"},{\"changed_at\":\"2023-08-15 16:55:21 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:55:29 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

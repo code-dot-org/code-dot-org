@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:16:47.000Z",
   "level_num": "custom",
@@ -36,11 +37,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -86,7 +87,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Automatic Windows\r\n\r\nCreate an app prototype that simulates a device that automatically opens and closes window blinds based on the sunlight outside. The app should use the light sensor to detect the light level in the room: if there is a lot of light, open the blinds to let in the sunlight through the window. If there is not a lot of light, close the blinds to turn on other lights inside the house.\r\n\r\nThis app simulates this effect by using images on the app screen. This app has an image element named `blindsImage` that displays window blinds. If we want to open the window, we need to hide the `blindsImage` element; if we want to close the window, we need to show the `blindsImage` element.\r\n\r\n## Do This\r\n1) Use a `setScale` block to set the scale of the lightSensor from 0-100\r\n2) Use an `onBoardEvent` to detect the data from the lightSensor\r\n3) If the lightSensor value is greater than 50: hide the `blindsImage` element, which simulates opening the window\r\n4) If the lightSensor value is less than 50: show the `blindsImage` element, which simulates closing the window",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -100,7 +101,8 @@
       "/courses/csd-2022/guides/analog-sensors",
       "/courses/csd-2022/guides/changing-sensor-scale",
       "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/maker/setup"
     ],
     "display_name": "Automatic Windows",
     "thumbnail_url": "https://images.code.org/b9fd0d16ad4a323a25c6fe2ec609a90c-image-1649457779121.png",
@@ -111,11 +113,13 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); background-size: 320px 450px; background-image: url(&quot;https://levelbuilder-studio.code.org/level_starter_assets/CSD%20U6%20-%20Sensors%20-%20ChalE_2022/DiningRoom.png&quot;);\" data-canonical-image-url=\"image://DiningRoom.png\" data-image-type=\"file\"><img src=\"/level_starter_assets/CSD U6 - Sensors - ChalE_2022/roller-shutter-8497_640.jpg\" data-canonical-image-url=\"image://roller-shutter-8497_640.jpg\" data-image-type=\"file\" data-object-fit=\"cover\" id=\"blindsImage\" style=\"height: 180px; width: 115px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 105px; top: 35px; margin: 0px;\"></div></div>",
     "start_blocks": "//1) Use a `setScale` block to set the scale of the lightSensor from 0-100\r\n\r\n//2) Use an `onBoardEvent` to detect the data from the lightSensor\r\n\r\n//3) If the lightSensor value is greater than 50: hide the `blindsImage` element, which simulates opening the window\r\n\r\n//4) If the lightSensor value is less than 50: show the `blindsImage` element, which simulates closing the window",
     "bubble_choice_description": "Create an app prototype that simulates a device that automatically opens and closes window blinds based on the sunlight outside.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.381+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.381+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"},{\"changed_at\":\"2023-08-15 23:00:28 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 19:17:01 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

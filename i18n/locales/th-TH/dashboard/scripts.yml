@@ -2850,6 +2850,9 @@ th:
           description_audience: 'อายุ: 4-7 ปี'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ข้อมูล
           lesson_groups:
             lessonGroup-2:
               display_name: พลเมืองดิจิทัล
@@ -2863,9 +2866,14 @@ th:
               display_name: เหตุการณ์
             lessonGroup-7:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            lessonGroup-8:
+              display_name: ข้อมูล
           description_audience: 'อายุ: 5-8 ปี'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้ จะมีความคล้ายคลึงกับหลักสูตร A แต่จะมีการเพิ่มเติมแนวคิดที่ลงลึกยิ่งขึ้น
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: ระบบคอมพิวเตอร์
           lesson_groups:
             lessonGroup-2:
               display_name: พลเมืองดิจิทัล
@@ -2877,6 +2885,8 @@ th:
               display_name: เหตุการณ์
             lessonGroup-6:
               display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: ระบบคอมพิวเตอร์
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2917,3 +2927,5 @@ th:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
           description_audience: 'อายุ: 9-13 ปี'
           description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        how-ai-works-2023:
+          title: AI ทำงานอย่างไร
