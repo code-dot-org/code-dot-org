@@ -21,6 +21,7 @@ class LearningGoalEvidenceLevel < ApplicationRecord
 
   def summarize
     {
+      id: id,
       understanding: understanding,
       teacherDescription: teacher_description
     }

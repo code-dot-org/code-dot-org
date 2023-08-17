@@ -34,7 +34,7 @@
   overflow-y: auto;
 
   display: flex;
-  padding: 16px 40px 16px 16px;
+  padding: 16px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -127,10 +127,19 @@
 
   border-radius: 30px;
   border: 1px solid $product_affirmative_default;
-  color: $product_affirmative_default;
   background: $light_affirmative_100;
 
   font-family: $gotham-extra-bold;
+  color: $product_affirmative_default;
+
+  p {
+    color: $product_affirmative_default;
+  }
+}
+
+.aiTokenText {
+  font-family: $gotham-extra-bold;
+  color: $product_affirmative_default;
 }
 
 .learningGoalExpanded {
@@ -179,6 +188,10 @@
     font-size: 0.875rem;
     font-family: $gotham-bold;
     line-height: 154%;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
