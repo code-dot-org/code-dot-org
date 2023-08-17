@@ -114,23 +114,34 @@ const ExpandedCurriculumCatalogCard = ({
                   <Heading6>{i18n.availableResources()}</Heading6>
                   <hr className={style.thickDivider} />
                   <a href="#">
-                    <BodyTwoText>{i18n.lessonPlans()}</BodyTwoText>
+                    <BodyTwoText className={style.bodyText}>
+                      {i18n.lessonPlans()}
+                    </BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a href="#">
-                    <BodyTwoText>{i18n.slideDecks()}</BodyTwoText>
+                    <BodyTwoText className={style.bodyText}>
+                      {i18n.slideDecks()}
+                    </BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a href="#">
-                    <BodyTwoText> {i18n.activityGuides()}</BodyTwoText>
+                    <BodyTwoText className={style.bodyText}>
+                      {' '}
+                      {i18n.activityGuides()}
+                    </BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a href="#">
-                    <BodyTwoText>{i18n.answerKeysExemplars()}</BodyTwoText>
+                    <BodyTwoText className={style.bodyText}>
+                      {i18n.answerKeysExemplars()}
+                    </BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a href="#">
-                    <BodyTwoText>{i18n.projectRubrics()}</BodyTwoText>
+                    <BodyTwoText className={style.bodyText}>
+                      {i18n.projectRubrics()}
+                    </BodyTwoText>
                   </a>
                 </div>
                 <div className={style.professionalLearning}>
