@@ -7,7 +7,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
   BodyFourText,
+  Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import EvidenceLevels from './EvidenceLevels';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default function LearningGoal({
   learningGoal,
@@ -49,7 +52,19 @@ export default function LearningGoal({
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
-        Learning Goal Evidence Levels will be here.
+        <EvidenceLevels
+          learningGoalKey={learningGoal.key}
+          evidenceLevels={learningGoal.evidenceLevels}
+          canProvideFeedback={canProvideFeedback}
+        />
+        {learningGoal.tips && (
+          <div>
+            <Heading6>{i18n.tipsForEvaluation()}</Heading6>
+            <div className={style.learningGoalTips}>
+              <SafeMarkdown markdown={learningGoal.tips} />
+            </div>
+          </div>
+        )}
       </div>
     </details>
   );

@@ -9,6 +9,8 @@ import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
+import experiments from '@cdo/apps/util/experiments';
+import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -49,5 +51,10 @@ function initPage() {
       <UnversionedScriptRedirectDialog />,
       unversionedRedirectDialogMountPoint
     );
+  }
+
+  const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
+  if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
+    ReactDOM.render(<RubricFloatingActionButton />, rubricFabMountPoint);
   }
 }
