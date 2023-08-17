@@ -7988,6 +7988,8 @@ en:
               name: Pulse Survey to Clone
             lesson-12:
               name: AI Playground
+            lesson-13:
+              name: Gen AI Blocks Playground
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -9056,6 +9058,12 @@ en:
               name: Data for Social Good Project [1-Day Version]
             lesson-14:
               name: Unit 3 Survey
+            lesson-15:
+              name: 'Sandbox: Console'
+            lesson-16:
+              name: 'Sandbox: The Neighborhood'
+            lesson-17:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9065,6 +9073,8 @@ en:
               display_name: Alternate Lessons
             lessonGroup-5:
               display_name: End of Unit Survey
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa3-2023
           title: Arrays and Algorithms
           description_audience: ''
@@ -9103,6 +9113,12 @@ en:
               name: Multi-Selection Statements
             lesson-15:
               name: Unit 4 Survey
+            lesson-16:
+              name: 'Sandbox: Console'
+            lesson-17:
+              name: 'Sandbox: The Neighborhood'
+            lesson-18:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9112,6 +9128,8 @@ en:
               display_name: Alternate Lessons
             lessonGroup-5:
               display_name: End of Unit Survey
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa4-2023
           title: Conditions and Logic
           description_audience: ''
@@ -9148,6 +9166,12 @@ en:
               name: Personal Narrative Project [1-Day Version]
             lesson-14:
               name: Unit 5 Survey
+            lesson-15:
+              name: 'Sandbox: Console'
+            lesson-16:
+              name: 'Sandbox: The Neighborhood'
+            lesson-17:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9157,6 +9181,8 @@ en:
               display_name: Alternate Lessons
             lessonGroup-5:
               display_name: End of Unit Survey
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa5-2023
           title: Two-Dimensional Arrays
           description_audience: ''
@@ -9193,6 +9219,12 @@ en:
               name: Natural Language Processing Project [1-Day Version]
             lesson-14:
               name: Unit 6 Survey
+            lesson-15:
+              name: 'Sandbox: Console'
+            lesson-16:
+              name: 'Sandbox: The Neighborhood'
+            lesson-17:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9202,6 +9234,8 @@ en:
               display_name: Alternate Lessons
             lessonGroup-5:
               display_name: End of Unit Survey
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa6-2023
           title: ArrayLists and String Methods
           description_audience: ''
@@ -9238,6 +9272,12 @@ en:
               name: Unit 7 Survey
             lesson-14:
               name: Creative Coding with The Theater Project [1-Day Version]
+            lesson-15:
+              name: 'Sandbox: Console'
+            lesson-16:
+              name: 'Sandbox: The Neighborhood'
+            lesson-17:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9247,6 +9287,8 @@ en:
               display_name: End of Unit Survey
             lessonGroup-5:
               display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa7-2023
           title: Method Decomposition and Recursion
           description_audience: ''
@@ -9281,6 +9323,12 @@ en:
               name: Unit 8 Assessment
             lesson-13:
               name: Creative Coding with the Console Project [1-Day Version]
+            lesson-14:
+              name: 'Sandbox: Console'
+            lesson-15:
+              name: 'Sandbox: The Neighborhood'
+            lesson-16:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -9290,6 +9338,8 @@ en:
               display_name: Survey
             lessonGroup-5:
               display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
           name: csa8-2023
           title: Searching and Sorting
           description_audience: ''
@@ -11409,12 +11459,20 @@ en:
           lessons: {}
           name: csd6a-2023
         csa9-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Sandbox: Console'
+            lesson-2:
+              name: 'Sandbox: The Neighborhood'
+            lesson-3:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
               display_name: Review and Practice
             lessonGroup-3:
               display_name: Mock Exams
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa9-2023
           title: AP Exam Review and Practice
           description_audience: ''

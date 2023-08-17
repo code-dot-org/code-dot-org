@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:40.000Z",
   "level_num": "custom",
@@ -46,7 +47,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Frequency and Music\r\n\r\nUsing carefully-chosen frequencies, we can use the [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to create a musical instrument like a piano.\r\n\r\nIn this app, when you play the piano, the note and the frequency will appear. Using these frequencies in your code will let you simulate musical instruments and play songs\r\n\r\n# New Block: Note\r\n\r\nInstead of remembering each frequency, you can also use the new [`buzzer.note()`(#f78183)](/docs/applab/buzzer.note/) block to play a specific note. For example, playing a \"C\" Note on the piano for one second can be coded using:\r\n\r\n[`buzzer.note(\"C4\", 1000)`(#f78183)](/docs/applab/buzzer.note/)\r\n\r\nThe \"4\" indicates which octave the note is in - \"C5\" and \"C6\" would be higher versions of the same note, and \"C3\" and \"C2\" would be lower versions.\r\n\r\n# Do this\r\n\r\n* Try to play a song on the piano! Click below to see some examples\r\n\r\n::: details [Mary had a Little Lamb]\r\nE - D - C - D - E - E - E\r\n\r\nD - D - D\r\n\r\nE - E - E\r\n\r\nE - D - C - D - E - E - E\r\n\r\nE - D - D - E - D - C\r\n:::\r\n\r\n::: details [Twinkle Twinkle Little Star]\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n\r\nG - G - F - F - E - E - D\r\n\r\nG - G - F - F - E - E - D\r\n\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n:::\r\n\r\n<hr />\r\n\r\n<!--\r\n::: details [**(Optional): Wait - why does this work?!**]\r\n[[images and explanation about speaker vibrations + string vibrations + getting to be the same frequency = the note]]\r\n:::\r\n\r\n-->",
     "code_functions": {
       "onEvent": null,
@@ -58,7 +59,8 @@
     "parent_level_id": 20524,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/producing-output"
+      "/courses/csd-2022/guides/producing-output",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/playing-notes",
     "mini_rubric": "false",
@@ -69,9 +71,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.154+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - Piano_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - Piano_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.154+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - Piano_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - Piano_2222\"},{\"changed_at\":\"2023-08-16 19:33:03 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
