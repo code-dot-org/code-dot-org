@@ -7,6 +7,7 @@ import {
   Heading3,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
@@ -26,27 +27,17 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
 }) => {
-  //const subjectsRef = useRef(null);
-  // const [topics, setTopics] = useState(
-  //   i18n.topic() + ': ' + subjectsAndTopics.join(', ')
-  // );
   const icons = {
     ideal: 'circle-check',
     not_recommended: 'triangle-exclamation',
     incompatible: 'circle-xmark',
   };
-  const compatibilities = {
-    'circle-check': '#3ea33e',
-    'triangle-exclamation': '#eed202',
-    'circle-xmark': '#e5311a',
-  };
 
-  // useEffect(() => {
-  //   const subjects = subjectsRef.current;
-  //   if (subjects.scrollWidth > 410) {
-  //     setTopics(i18n.topic() + ': ' + i18n.multiple());
-  //   }
-  // }, []);
+  const iconColor = {
+    'circle-check': style.circleCheck,
+    'triangle-exclamation': style.triangleExclamation,
+    'circle-xmark': style.circleXmark,
+  };
 
   const getDeviceCompatibility = deviceCompatibility => {
     const devices = JSON.parse(deviceCompatibility);
@@ -59,10 +50,6 @@ const ExpandedCurriculumCatalogCard = ({
       ] = icons[devices[device]];
     }
     return compatibilityIcons;
-  };
-
-  const getIconColor = compatibility => {
-    return compatibilities[compatibility];
   };
 
   const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
@@ -95,7 +82,9 @@ const ExpandedCurriculumCatalogCard = ({
             <div className={style.centerContentContainer}>
               <div className={style.descriptionVideoContainer}>
                 <div className={style.descriptionContainer}>
-                  <BodyTwoText>{description}</BodyTwoText>
+                  <BodyTwoText className={style.descriptionText}>
+                    {description}
+                  </BodyTwoText>
                 </div>
                 <div className={style.videoContainer}>
                   <iframe
@@ -113,61 +102,41 @@ const ExpandedCurriculumCatalogCard = ({
                 <div className={style.resourcesContainer}>
                   <Heading6>{i18n.availableResources()}</Heading6>
                   <hr className={style.thickDivider} />
-                  <a href="#">
-                    <BodyTwoText className={style.bodyText}>
-                      {i18n.lessonPlans()}
-                    </BodyTwoText>
-                  </a>
+                  <TextLink text={i18n.lessonPlans()} href="#" />
+
                   <hr className={style.horizontalDivider} />
-                  <a href="#">
-                    <BodyTwoText className={style.bodyText}>
-                      {i18n.slideDecks()}
-                    </BodyTwoText>
-                  </a>
+                  <TextLink text={i18n.slideDecks()} href="#" />
                   <hr className={style.horizontalDivider} />
-                  <a href="#">
-                    <BodyTwoText className={style.bodyText}>
-                      {' '}
-                      {i18n.activityGuides()}
-                    </BodyTwoText>
-                  </a>
+                  <TextLink text={i18n.activityGuides()} href="#" />
                   <hr className={style.horizontalDivider} />
-                  <a href="#">
-                    <BodyTwoText className={style.bodyText}>
-                      {i18n.answerKeysExemplars()}
-                    </BodyTwoText>
-                  </a>
+                  <TextLink text={i18n.answerKeysExemplars()} href="#" />
                   <hr className={style.horizontalDivider} />
-                  <a href="#">
-                    <BodyTwoText className={style.bodyText}>
-                      {i18n.projectRubrics()}
-                    </BodyTwoText>
-                  </a>
+                  <TextLink text={i18n.projectRubrics()} href="#" />
                 </div>
-                <div className={style.professionalLearning}>
+                <div className={style.professionalLearningContainer}>
                   <Heading6>{i18n.professionalLearning()}</Heading6>
                   <hr className={style.thickDivider} />
-                  <a
-                    className={style.professionalLearningText}
+                  <TextLink
+                    text={i18n.facilitatorLedWorkshops()}
                     href={professionalLearningProgram}
-                  >
-                    {i18n.facilitatorLedWorkshops()}
-                    <FontAwesome
-                      icon="arrow-up-right-from-square"
-                      className="fa-solid"
-                    />
-                  </a>
+                    icon={
+                      <FontAwesome
+                        icon="arrow-up-right-from-square"
+                        className="fa-solid"
+                      />
+                    }
+                  />
                   <hr className={style.horizontalDivider} />
-                  <a
-                    className={style.professionalLearningText}
+                  <TextLink
+                    text={i18n.selfPacedPl()}
                     href={selfPacedPlCourseOfferingPath}
-                  >
-                    {i18n.selfPacedPl()}
-                    <FontAwesome
-                      icon="arrow-up-right-from-square"
-                      className="fa-solid"
-                    />
-                  </a>
+                    icon={
+                      <FontAwesome
+                        icon="arrow-up-right-from-square"
+                        className="fa-solid"
+                      />
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -177,8 +146,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <div className={style.iconWithDescription}>
                   <FontAwesome
                     icon={compatibilityIcons[key]}
-                    className="fa-solid"
-                    style={{color: getIconColor(compatibilityIcons[key])}}
+                    className={`fa-solid ${iconColor[compatibilityIcons[key]]}`}
                   />
                   <BodyTwoText>{key}</BodyTwoText>
                 </div>
