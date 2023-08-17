@@ -6,7 +6,6 @@ $container-width: 960px;
 .bodyText {
   font-size: 14px;
   text-decoration: none;
-  color: black;
 }
 
 .buttonsContainer {
@@ -36,10 +35,11 @@ $container-width: 960px;
 
   a {
     text-decoration: none;
-    color: #54595e;
+    color: $neutral_dark80;
+    font-size: 20px;
   }
   a:hover {
-    cursor: pointer; /* Change cursor to a pointer on hover */
+    cursor: pointer;
   }
 }
 
@@ -59,19 +59,34 @@ $container-width: 960px;
   margin-bottom: 20px;
 }
 
+.descriptionText {
+  font-size: 0.875em;
+}
+
 .descriptionVideoContainer {
   width: 440px;
 }
 
 .expandedCardContainer {
   position: relative;
-  background-color: #fff;
+  background-color: $neutral_white;
   color: #333;
-  border: 1px solid #ccc;
-  border-color: #333;
+  border: 1px solid $neutral_dark;
   border-radius: 4px;
   width: $container-width;
   box-sizing: border-box;
+}
+
+.circleCheck {
+  color: $product_affirmative_default;
+}
+
+.circleXmark {
+  color: $product_negative_default;
+}
+
+.triangleExclamation {
+  color: $product_caution_default;
 }
 
 .flexDivider {
@@ -79,7 +94,7 @@ $container-width: 960px;
 }
 
 .horizontalDivider {
-  border-top: 1px solid #d4d5d7;
+  border-top: 1px solid $neutral_dark20;
 }
 
 .iconWithDescription {
@@ -115,8 +130,11 @@ $container-width: 960px;
   }
 }
 
-.professionalLearningText {
-  font-size: 14px;
+.professionalLearningContainer {
+  a {
+    color: $brand_secondary_default !important;
+    text-decoration: underline !important;
+  }
 }
 
 .relatedContainer {
@@ -129,7 +147,7 @@ $container-width: 960px;
 }
 
 .relatedCurriculaContainer {
-  background-color: #f7f8fa;
+  background-color: $neutral_light;
   width: 224px;
   padding: 16px;
 }
@@ -141,6 +159,15 @@ $container-width: 960px;
   hr {
     margin: 8px 0;
   }
+
+  a {
+    text-decoration: none;
+    color: $neutral_dark !important;
+  }
+
+  a:hover {
+    color: $brand_secondary_default !important;
+  }
 }
 
 .subjectsText {
@@ -149,7 +176,7 @@ $container-width: 960px;
 }
 
 .thickDivider {
-  border-top: 2px solid #d4d5d7;
+  border-top: 2px solid $neutral_dark20;
 }
 
 .videoContainer {
