@@ -139,9 +139,9 @@
 
 .message-light {
   @extend %message;
-  background-color: $neutral_dark;
-  color: $neutral_light;
-  border: dashed $neutral_dark 2px;
+  background-color: $neutral_white;
+  color: $neutral_dark;
+  border: dashed $neutral_white 2px;
 }
 
 .buttonNext {
