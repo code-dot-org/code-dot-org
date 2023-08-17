@@ -75,7 +75,12 @@ describe('WorkshopForm test', () => {
   });
 
   it('creates and publishes new workshop form', () => {
-    const clock = sinon.useFakeTimers();
+    const server = sinon.fakeServer.create();
+    server.respondWith('POST', '/api/v1/pd/workshops', [
+      200,
+      {'Content-Type': 'application/json'},
+      '',
+    ]);
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -116,15 +121,22 @@ describe('WorkshopForm test', () => {
     expect(onPublish).not.to.have.been.called;
 
     // Publish workshop
+    server.respond();
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
-    clock.tick(50);
 
     expect(onPublish).to.have.been.calledOnce;
+
+    server.restore();
   });
 
   it('edits form and can save', () => {
-    const clock = sinon.useFakeTimers();
+    const server = sinon.fakeServer.create();
+    server.respondWith('PATCH', `/api/v1/pd/workshops/${fakeWorkshop.id}`, [
+      200,
+      {'Content-Type': 'application/json'},
+      '',
+    ]);
     const onSave = sinon.spy();
 
     const wrapper = mount(
@@ -150,14 +162,16 @@ describe('WorkshopForm test', () => {
     expect(onSave).not.to.have.been.called;
 
     // Save workshop
+    server.respond();
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
     saveButton.simulate('click');
-    clock.tick(50);
 
     expect(onSave).to.have.been.calledOnce;
     expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
       newCapacity
     );
+
+    server.restore();
   });
 
   it('inputs disabled in readonly', () => {
