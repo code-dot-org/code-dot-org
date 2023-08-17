@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:16:19.000Z",
   "level_num": "custom",
@@ -189,7 +190,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
+    "long_instructions": "# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?\r\n\r\n_Device not connecting? Go to the Help and Tips section and click \"Maker Setup\" to help re-connect your device._",
     "instructions_important": "false",
     "display_name": "Sensor Experiment",
     "submittable": "false",
@@ -228,7 +229,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20450,
     "name_suffix": "_2023",
     "encrypted": "false",
@@ -239,11 +240,16 @@
     "validation_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\r\n\r\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:19.320+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:19.320+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2222\"},{\"changed_at\":\"2023-08-16 19:03:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
