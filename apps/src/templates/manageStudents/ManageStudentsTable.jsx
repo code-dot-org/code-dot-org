@@ -491,7 +491,9 @@ class ManageStudentsTable extends Component {
     columns.push(this.ageColumn(sortable));
 
     if (
-      !experiments.isEnabled(experiments.GENDER_FEATURE_ENABLED) ||
+      !experiments.isEnabledAllowingQueryString(
+        experiments.GENDER_FEATURE_ENABLED
+      ) ||
       LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
     ) {
       columns.push(this.genderColumn(sortable));
@@ -597,7 +599,11 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (experiments.isEnabled(experiments.GENDER_FEATURE_ENABLED)) {
+    if (
+      experiments.isEnabledAllowingQueryString(
+        experiments.GENDER_FEATURE_ENABLED
+      )
+    ) {
       return {
         property: 'genderTeacherInput',
         header: {
