@@ -1,10 +1,10 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import {
   BodyTwoText,
-  Heading4,
+  Heading3,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
@@ -26,10 +26,10 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
 }) => {
-  const subjectsRef = useRef(null);
-  const [topics, setTopics] = useState(
-    i18n.topic() + ': ' + subjectsAndTopics.join(', ')
-  );
+  //const subjectsRef = useRef(null);
+  // const [topics, setTopics] = useState(
+  //   i18n.topic() + ': ' + subjectsAndTopics.join(', ')
+  // );
   const icons = {
     ideal: 'circle-check',
     not_recommended: 'triangle-exclamation',
@@ -41,12 +41,12 @@ const ExpandedCurriculumCatalogCard = ({
     'circle-xmark': '#e5311a',
   };
 
-  useEffect(() => {
-    const subjects = subjectsRef.current;
-    if (subjects.scrollWidth > 410) {
-      setTopics(i18n.topic() + ': ' + i18n.multiple());
-    }
-  }, []);
+  // useEffect(() => {
+  //   const subjects = subjectsRef.current;
+  //   if (subjects.scrollWidth > 410) {
+  //     setTopics(i18n.topic() + ': ' + i18n.multiple());
+  //   }
+  // }, []);
 
   const getDeviceCompatibility = deviceCompatibility => {
     const devices = JSON.parse(deviceCompatibility);
@@ -72,9 +72,9 @@ const ExpandedCurriculumCatalogCard = ({
       <div className={style.expandedCardContainer}>
         <div className={style.flexDivider}>
           <div className={style.courseOfferingContainer}>
-            <Heading4 style={{marginBottom: '8px'}}>
+            <Heading3 style={{marginBottom: '8px'}}>
               {courseDisplayName}
-            </Heading4>
+            </Heading3>
             <div className={style.infoContainer}>
               <div className={style.iconWithDescription}>
                 <FontAwesome icon="user" className="fa-solid" />
@@ -86,8 +86,8 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <div className={style.iconWithDescription}>
                 <FontAwesome icon="book" className="fa-solid" />
-                <BodyTwoText ref={subjectsRef} className={style.subjectsText}>
-                  {topics}
+                <BodyTwoText className={style.subjectsText}>
+                  {i18n.topic() + ': ' + subjectsAndTopics.join(', ')}
                 </BodyTwoText>
               </div>
             </div>
@@ -95,7 +95,7 @@ const ExpandedCurriculumCatalogCard = ({
             <div className={style.centerContentContainer}>
               <div className={style.descriptionVideoContainer}>
                 <div className={style.descriptionContainer}>
-                  <div className={style.bodyText}>{description}</div>
+                  <BodyTwoText>{description}</BodyTwoText>
                 </div>
                 <div className={style.videoContainer}>
                   <iframe
@@ -113,24 +113,24 @@ const ExpandedCurriculumCatalogCard = ({
                 <div className={style.resourcesContainer}>
                   <Heading6>{i18n.availableResources()}</Heading6>
                   <hr className={style.thickDivider} />
-                  <a className={style.bodyText} href="#">
-                    {i18n.lessonPlans()}
+                  <a href="#">
+                    <BodyTwoText>{i18n.lessonPlans()}</BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
-                  <a className={style.bodyText} href="#">
-                    {i18n.slideDecks()}
+                  <a href="#">
+                    <BodyTwoText>{i18n.slideDecks()}</BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
-                  <a className={style.bodyText} href="#">
-                    {i18n.activityGuides()}
+                  <a href="#">
+                    <BodyTwoText> {i18n.activityGuides()}</BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
-                  <a className={style.bodyText} href="#">
-                    {i18n.answerKeysExemplars()}
+                  <a href="#">
+                    <BodyTwoText>{i18n.answerKeysExemplars()}</BodyTwoText>
                   </a>
                   <hr className={style.horizontalDivider} />
-                  <a className={style.bodyText} href="#">
-                    {i18n.projectRubrics()}
+                  <a href="#">
+                    <BodyTwoText>{i18n.projectRubrics()}</BodyTwoText>
                   </a>
                 </div>
                 <div className={style.professionalLearning}>
@@ -169,7 +169,7 @@ const ExpandedCurriculumCatalogCard = ({
                     className="fa-solid"
                     style={{color: getIconColor(compatibilityIcons[key])}}
                   />
-                  <p>{key}</p>
+                  <BodyTwoText>{key}</BodyTwoText>
                 </div>
               ))}
             </div>
