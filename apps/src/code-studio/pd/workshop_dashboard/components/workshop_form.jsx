@@ -825,6 +825,7 @@ export class WorkshopForm extends React.Component {
   };
 
   save(notify = false) {
+    console.log('Save called');
     const workshop_data = {
       facilitators: this.prepareFacilitatorsForApi(this.state.facilitators),
       location_name: this.state.location_name,
@@ -860,6 +861,9 @@ export class WorkshopForm extends React.Component {
       url = '/api/v1/pd/workshops';
     }
 
+    console.log(`Method: ${method}`);
+    console.log(`Url: ${url}`);
+
     this.saveRequest = $.ajax({
       method: method,
       url: url,
@@ -868,18 +872,23 @@ export class WorkshopForm extends React.Component {
       data: JSON.stringify({pd_workshop: workshop_data, notify}),
     })
       .done(data => {
+        console.log(`Save successful: ${data}`);
         if (this.props.onSaved) {
           this.props.onSaved(data);
+          console.log('ONSAVED CALLED!');
         }
       })
       .fail(data => {
+        console.log(`Save failed: ${data}`);
         if (data.responseJSON.errors) {
+          console.log(`Errors: ${data.responseJSON.errors}`);
           this.setState({
             errors: data.responseJSON.errors,
             showSaveConfirmation: false,
           });
         }
       });
+    console.log(`Save request: ${JSON.stringify(this.saveRequest)}`);
   }
 
   handleCancelClick = () => {

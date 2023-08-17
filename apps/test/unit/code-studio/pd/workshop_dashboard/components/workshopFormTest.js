@@ -75,12 +75,12 @@ describe('WorkshopForm test', () => {
   });
 
   it('creates and publishes new workshop form', () => {
-    const server = sinon.fakeServer.create();
-    server.respondWith('POST', '/api/v1/pd/workshops', [
-      200,
-      {'Content-Type': 'application/json'},
-      '',
-    ]);
+    // const server = sinon.fakeServer.create();
+    // server.respondWith('POST', '/api/v1/pd/workshops', [
+    //   200,
+    //   {'Content-Type': 'application/json'},
+    //   '',
+    // ]);
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -121,13 +121,13 @@ describe('WorkshopForm test', () => {
     expect(onPublish).not.to.have.been.called;
 
     // Publish workshop
-    server.respond();
+    //server.respond();
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
 
     expect(onPublish).to.have.been.calledOnce;
 
-    server.restore();
+    //server.restore();
   });
 
   it('edits form and can save', () => {
