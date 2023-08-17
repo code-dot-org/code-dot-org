@@ -67,9 +67,7 @@
             "name": "desenhar uma cabeça"
           },
           "draw body and arms": {
-            "name": "desenhar corpo e braços",
-            "parameters": {
-            }
+            "name": "desenhar corpo e braços"
           },
           "draw left leg": {
             "name": "desenhar perna esquerda"
@@ -161,14 +159,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "desenhe um floco de neve"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {

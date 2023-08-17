@@ -96,7 +96,7 @@
   "halloween": "halloween",
   "step": "krok",
   "pl-playground": "pl-hřiště",
-  "kodea-pd-2021": "kodea-pd-2021",
+  "kodea-pd-2021": "CSF Online PD - Kodea",
   "csa-backpack-2022": "csa-batoh-2022",
   "csa-u6-dev": "csa-u6-dev",
   "kaitie-test-script": "kaitie-test-script",
@@ -131,5 +131,6 @@
   "self-paced-pl-csc": "Výuka CS připojení",
   "design-process": "Proces návrhu",
   "web-development": "Vývoj webových aplikací",
-  "ai-temp": "AI-temp"
+  "ai-temp": "AI-temp",
+  "how-ai-works": "Jak funguje umělá inteligence"
 }

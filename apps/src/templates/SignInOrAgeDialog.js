@@ -97,7 +97,7 @@ class SignInOrAgeDialog extends Component {
                 __useDeprecatedTag
                 href={pegasus('/hourofcode/overview')}
                 text="See all tutorials"
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>
           </div>

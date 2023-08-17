@@ -1442,6 +1442,46 @@ lt:
           title: Minecraft „Programavimo valandos“ projektavimo aplinka
         netsim:
           title: Interneto simuliatorius
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sąlyginiai sakiniai
+            lessonGroup-5:
+              display_name: Kintamieji
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-6:
+              display_name: Įvykiai
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kartojimas kartojime
+            lessonGroup-4:
+              display_name: Komandų kūrimas
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-5:
+              display_name: Įvykiai
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-6:
+              display_name: Kartojimas
         new-express:
           lesson_groups:
             content:
@@ -1503,6 +1543,7 @@ lt:
             žaidimą tolimoje galaktikoje.
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių
             Karų žaidimą tolimoje galaktikoje.
+          title: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)'
         starwarsblocks:
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
@@ -1523,6 +1564,12 @@ lt:
               display_name: Mokymo praktikos
             required:
               display_name: Peržiūra
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

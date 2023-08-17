@@ -147,6 +147,8 @@ pl:
           lessons:
             lesson-49:
               name: Muzyka
+            lesson-50:
+              name: Czat AI
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -5483,6 +5485,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6143,6 +6147,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-creativity1-2023
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6181,6 +6187,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
           name: focus-on-hardware1-2023
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6206,6 +6214,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-data1-2023
         focus-on-data2:
           lesson_groups:
@@ -6243,6 +6253,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-design-with-purpose1-2023
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
@@ -6280,6 +6292,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-coding1-2023
         focus-on-coding2-2023:
           lesson_groups:
@@ -6313,6 +6327,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-impact-in-society1-2023
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -6878,6 +6894,8 @@ pl:
           lessons:
             lesson-1:
               name: Remiksuj projekty
+            lesson-2:
+              name: SNAP - Rosa Linn
           name: musiclab
           title: Lekcje testowe w laboratorium muzycznym
           description: |-
@@ -6903,6 +6921,8 @@ pl:
               display_name: 'Rozdział 1: GitHub i Copilot'
             lessonGroup-3:
               display_name: 'Rozdział 2: Wizja komputerowa'
+            lessonGroup-4:
+              display_name: Ankieta wstępna
           name: csa-software-engineering
           title: Inżynieria oprogramowania i wizja komputerowa
         csa-frq-practice:
@@ -7090,3 +7110,263 @@ pl:
             -   Opracujesz plan realizacji jednostki ze swoimi uczniami.
 
             **Sugerowany czas:** 100 minut
+        musiclab-pilot:
+          lessons:
+            lesson-1:
+              name: Laboratorium muzyczne
+          name: musiclab-pilot
+          title: Laboratorium muzyczne
+          description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+        tesspltest23:
+          name: tesspltest23
+          title: 'Testowanie PL '
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+          name: test-nv-coursea-2023
+          title: 'Nevada Kurs A '
+          description_audience: W wieku 4-7
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Dane
+          name: nevada-standards-aligned-kindergarten-2023
+          description_audience: W wieku 4-7
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Zdarzenia
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Dane
+          name: nevada-standards-aligned-first-grade-2023
+          description_audience: W wieku 5-8
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Systemy komputerowe
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Dane
+            lessonGroup-8:
+              display_name: Systemy komputerowe
+          name: nevada-standards-aligned-second-grade-2023
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Wplywy informatyki
+            lessonGroup-5:
+              display_name: Zdarzenia i zmienne
+            lessonGroup-6:
+              display_name: Pętle
+            lessonGroup-7:
+              display_name: Dane
+            lessonGroup-8:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-third-grade-2023
+          description_audience: W wieku 7-11
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną grafikę, gry, a nawet potańcówkę.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Zdarzenia i duszki
+            lessonGroup-3:
+              display_name: Zagnieżdżające się  pętle
+            lessonGroup-4:
+              display_name: Funkcje
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fourth-grade-2023
+          title: Kurs dla czwartej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 8-12
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+          name: nevada-standards-aligned-fifth-grade-2023-2023
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+            lessonGroup-3:
+              display_name: Zdania z warunkami
+            lessonGroup-5:
+              display_name: Zmienne
+            lessonGroup-6:
+              display_name: Wplywy informatyki
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fifth-grade-2023
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
+        vpl-csp-2023-m1:
+          name: vpl-csp-2023-m1
+          title: Moduł 1
+        vpl-csp-2023-m2:
+          name: vpl-csp-2023-m2
+          title: Moduł 2
+        vpl-csp-2023-m3:
+          name: vpl-csp-2023-m3
+          title: Moduł 3
+        vpl-csp-2023-m4:
+          name: vpl-csp-2023-m4
+          title: Moduł 4
+        vpl-csp-2023-m5:
+          name: vpl-csp-2023-m5
+          title: Moduł 5
+        vpl-csp-2023-m6:
+          name: vpl-csp-2023-m6
+          title: Moduł 6
+        vpl-csp-2023-m7:
+          name: vpl-csp-2023-m7
+          title: Moduł 7
+        vpl-csp-2023-m8:
+          name: vpl-csp-2023-m8
+          title: Moduł 8
+        vpl-csa-2023-m1:
+          name: vpl-csa-2023-m1
+          title: Moduł 1
+        how-ai-works-2023:
+          name: how-ai-works-2023
+          title: Jak działa AI
+          student_description: |-
+            Dowiedz się, jak działa sztuczna inteligencja, uczestnicząc w różnych doświadczeniach i oglądając serię filmów [Jak działa AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) !
+
+            \*\*Chcesz uczyć tych lekcji? \*\* [Kliknij tutaj, aby wyświetlić plany lekcji dla tych lekcji](/s/how-ai-works-2023?viewAs=Instructor)
+        vpl-csa-2023-m2:
+          name: vpl-csa-2023-m2
+          title: Moduł 2
+        vpl-csa-2023-m3:
+          name: vpl-csa-2023-m3
+          title: Moduł 3
+        vpl-csa-2023-m4:
+          name: vpl-csa-2023-m4
+          title: Moduł 4
+        vpl-csa-2023-m5:
+          name: vpl-csa-2023-m5
+          title: Moduł 5
+        vpl-csa-2023-m6:
+          name: vpl-csa-2023-m6
+          title: Moduł 6
+        vpl-csa-2023-m7:
+          name: vpl-csa-2023-m7
+          title: Moduł 7
+        vpl-csa-2023-m8:
+          name: vpl-csa-2023-m8
+          title: Moduł 8
+        pl-csd-2023-m1:
+          name: pl-csd-2023-m1
+          title: 'Moduł 1 '
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 1 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-4:
+              name: 'Sesja synchroniczna 3: Podsumowanie'
+          name: vpl-csd-2023-m1
+          title: Moduł 1
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 2 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 5: Przegląd badan dotyczących programu nauczania'
+            lesson-4:
+              name: 'Sesja synchroniczna 6: Ocenianie'
+            lesson-5:
+              name: 'Sesja synchroniczna 7: Scenariusze włączenia'
+            lesson-6:
+              name: 'Sesja synchroniczna 8: Podsumowanie'
+          name: vpl-csd-2023-m2
+          title: Moduł 2
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 3 Synchroniczny
+          name: vpl-csd-2023-m3
+          title: Moduł 3
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 4 Synchroniczny
+          name: vpl-csd-2023-m4
+          title: Moduł 4
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 5 Synchroniczny
+          name: vpl-csd-2023-m5
+          title: Moduł 5
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 6 Synchroniczny
+          name: vpl-csd-2023-m6
+          title: Moduł 6
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 7 Synchroniczny
+          name: vpl-csd-2023-m7
+          title: Moduł 7
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 8 Synchroniczny
+          name: vpl-csd-2023-m8
+          title: Moduł 8

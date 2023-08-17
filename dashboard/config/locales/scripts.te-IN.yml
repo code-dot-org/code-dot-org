@@ -810,6 +810,65 @@ te:
             మరియు ఇతర Minecraft జీవులు.
         netsim:
           title: ఇంటర్నెట్ సిమ్యులేటర్
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: షరతులు
+            lessonGroup-5:
+              display_name: వేరియబుల్స్
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: ఈవెంట్లు
+            lessonGroup-8:
+              display_name: డేటా
+          lessons:
+            lesson-1:
+              name: డేటా
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: సమూహ ఉచ్చులు
+            lessonGroup-4:
+              display_name: విధులు
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: డేటా
+          lessons:
+            lesson-1:
+              name: డేటా
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-5:
+              display_name: ఈవెంట్లు
+            lessonGroup-6:
+              display_name: డేటా
+            lessonGroup-8:
+              display_name: కంప్యూటింగ్ సిస్టమ్స్
+          lessons:
+            lesson-1:
+              name: కంప్యూటింగ్ సిస్టమ్స్
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-6:
+              display_name: ఉచ్చులు
+            lessonGroup-7:
+              display_name: డేటా
         oceans:
           title: AI ఫర్ ఓషన్స్
         outbreak:
@@ -1184,6 +1243,12 @@ te:
           title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (బ్లాక్‌లీ)'
         step:
           title: దశ
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
         testing-focus-on-creativity2:
           title: వెబ్ అభివృద్ధి
         text-compression:

@@ -348,6 +348,7 @@ export default class MusicBlocklyWorkspace {
       Lab2MetricsReporter.logWarning('workspace not initialized.');
       return;
     }
+    this.workspace.clearUndo();
     Blockly.serialization.workspaces.load(code, this.workspace);
   }
 
@@ -357,5 +358,37 @@ export default class MusicBlocklyWorkspace {
     } catch (e) {
       Lab2MetricsReporter.logError('Error running user generated code', e);
     }
+  }
+
+  undo() {
+    this.undoRedo(false);
+  }
+
+  redo() {
+    this.undoRedo(true);
+  }
+
+  canUndo() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return false;
+    }
+    return this.workspace.getUndoStack().length > 0;
+  }
+
+  canRedo() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return false;
+    }
+    return this.workspace.getRedoStack().length > 0;
+  }
+
+  undoRedo(redo) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
+    this.workspace.undo(redo);
   }
 }

@@ -33,6 +33,8 @@ sk:
           title: 'Informatika v Algebre: Kurz B'
         CSDU1-Draft:
           description_short: Riešenie problémov
+        CSDU2-Draft:
+          description_short: Vývoj webových stránok
         CSDU3-Draft:
           description_short: Programovanie
         CSDU5-Draft:
@@ -1687,6 +1689,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -1832,6 +1836,8 @@ sk:
               display_name: Obsah
             required:
               display_name: Prehľad
+        csd2-old:
+          description_short: Vývoj webových stránok
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -3637,6 +3643,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3674,6 +3682,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3711,6 +3721,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3744,6 +3756,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3783,6 +3797,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3814,6 +3830,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3941,6 +3959,8 @@ sk:
           student_description: Vyskúšaj si základy informatiky s postavičkami ako
             sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
           title: Klasické bludisko
+        how-ai-works-2023:
+          title: Ako funguje umelá inteligencia
         iceage:
           description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
           description_short: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
@@ -4032,6 +4052,110 @@ sk:
           title: Hodina kódu Minecraft dizajnér
         netsim:
           title: Simulátor Internetu
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
+            vytvor vlastné umelecké dielo, príbeh alebo hru.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+            lessonGroup-3:
+              display_name: Podmienené príkazy
+            lessonGroup-5:
+              display_name: Premenné
+            lessonGroup-6:
+              display_name: Vplyv Informatiky
+            lessonGroup-7:
+              display_name: Záverečný projekt
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
+            vytvor vlastné umelecké dielo, príbeh alebo hru.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: Vek 5-8
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať.
+            Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Udalosti
+            lessonGroup-7:
+              display_name: Záverečný projekt
+            lessonGroup-8:
+              display_name: Dáta
+          lessons:
+            lesson-1:
+              name: Dáta
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: Vek 8-12
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vnorené cykly
+            lessonGroup-4:
+              display_name: Funkcie
+            lessonGroup-6:
+              display_name: Záverečný projekt
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Vek: 4-7'
+          description_short: Predstavenie informatiky pre predškolákov.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Dáta
+          lessons:
+            lesson-1:
+              name: Dáta
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Udalosti
+            lessonGroup-6:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Výpočtové systémy
+          lessons:
+            lesson-1:
+              name: Výpočtové systémy
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: Vek 7-11
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Cykly
+            lessonGroup-7:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Záverečný projekt
         new-d:
           title: Nový Kurz D Scenár
         new-e:
@@ -4082,6 +4206,8 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        pixelation:
+          title: Pixelácia
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -4117,6 +4243,8 @@ sk:
         poetry:
           name: poézia
           title: Informatika a poézia
+        poetry-2021:
+          title: Programovanie s poéziou
         poetry-hoc:
           description_short: 'Aktivita projektu Hodina kódu – V2 '
           name: poetry-hoc
@@ -4258,6 +4386,7 @@ sk:
             Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
+          title: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
         starwarsblocks:
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
             v ďalekej galaxii.
@@ -4265,6 +4394,7 @@ sk:
             Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
+          title: 'Star Wars: Budovanie galaxie pomocou kódu (Blockly)'
         step:
           description: Návod po krokoch
           description_short: Návod po krokoch
@@ -4285,6 +4415,17 @@ sk:
             lessonGroup-3:
               display_name: Kapitola 2
           title: Riešenie problémov
+        test-nv-coursea-2023:
+          description_audience: 'Vek: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -4304,6 +4445,7 @@ sk:
               display_name: 'Kapitola 1: Tvorba webových stránok'
             lessonGroup-4:
               display_name: 'Kapitola 2: Viacstránkové weby'
+          title: Vývoj webových stránok
         text-compression:
           title: Kompresia textu
         time4cs-control-unit-1:

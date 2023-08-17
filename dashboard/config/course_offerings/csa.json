@@ -5,16 +5,16 @@
   "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSA",
   "grade_levels": "9,10,11,12",
   "header": "year_long",
   "image": "https://images.code.org/6586350ded8474b1b0b9caca45f89c17-CSA (1).png",
   "cs_topic": "art_and_design,data,games_and_animations,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "description": "Introduce students to software engineering and design as they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA).",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/lFkFi2jGs70/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=lFkFi2jGs70&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

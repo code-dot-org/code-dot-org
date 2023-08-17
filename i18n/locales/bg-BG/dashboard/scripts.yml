@@ -296,6 +296,7 @@ bg:
           description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
           student_description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
         starwars:
+          title: 'Междузвездни войни: Изграждане на галактика с код (JavaScript)'
           description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
@@ -2352,6 +2353,10 @@ bg:
               display_name: Съдържание
             lessonGroup-4:
               display_name: Проучване
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2520,24 +2525,48 @@ bg:
             lessonGroup-5:
               display_name: Проучване
           title: AI и Машинно Обучение
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         focus-on-hardware3a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-data3-2023:
           title: AI и Машинно Обучение
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-impact-in-society4-2023:
           title: AI и Машинно Обучение
         csd6a-2023:
@@ -2586,3 +2615,82 @@ bg:
           lessons:
             lesson-4:
               name: Данни
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Данни
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Данни
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Данни
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Събития
+            lessonGroup-7:
+              display_name: Проект за Края на Курса
+            lessonGroup-8:
+              display_name: Данни
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-5:
+              display_name: Събития
+            lessonGroup-6:
+              display_name: Данни
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-6:
+              display_name: Повторения
+            lessonGroup-7:
+              display_name: Данни
+            lessonGroup-8:
+              display_name: Проект за Края на Курса
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вмъкнати цикли
+            lessonGroup-4:
+              display_name: Функции
+            lessonGroup-5:
+              display_name: Данни и Симулации
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+            lessonGroup-3:
+              display_name: Условия
+            lessonGroup-4:
+              display_name: Данни и Симулации
+            lessonGroup-5:
+              display_name: Променливи
+            lessonGroup-7:
+              display_name: Проект за Края на Курса

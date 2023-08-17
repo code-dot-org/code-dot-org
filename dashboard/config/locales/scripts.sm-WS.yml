@@ -364,6 +364,44 @@ sm:
               display_name: events
         hero:
           name: toa
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Fuainumera lasi
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+            lessonGroup-6:
+              display_name: events
+            lessonGroup-8:
+              display_name: Faamaumauga
+          lessons:
+            lesson-1:
+              name: Faamaumauga
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+            lessonGroup-6:
+              display_name: Faamaumauga
+          lessons:
+            lesson-1:
+              name: Faamaumauga
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+            lessonGroup-5:
+              display_name: events
+            lessonGroup-6:
+              display_name: Faamaumauga
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: taamiloga
+            lessonGroup-7:
+              display_name: Faamaumauga
         pre-express-2019:
           lesson_groups:
             csf_events:
@@ -400,6 +438,10 @@ sm:
           name: taaloga
         step:
           title: sitepu
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
         time4cs-control-unit-1:
           lesson_groups:
             csf_events:

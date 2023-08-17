@@ -689,6 +689,8 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         csd1-dlp:
           lesson_groups:
             content:
@@ -1649,6 +1651,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1665,6 +1669,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1681,12 +1687,16 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose-post-survey-2023:
           title: Maŋŋil Kurssa Iskkadeapmi
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1705,6 +1715,8 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1715,6 +1727,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1830,6 +1844,34 @@ se:
             du iežat Minecraft-veršuvnnas.
           student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
             du iežat Minecraft-veršuvnnas.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-6:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-5:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
         new-express:
           lesson_groups:
             content:
@@ -1896,6 +1938,7 @@ se:
             spealu galaksii mii lea guhkkin, guhkkin eret.
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
             spealu galaksii mii lea guhkkin, guhkkin eret.
+          title: 'Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)'
         starwarsblocks:
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
             galaksii mii lea guhkkin, guhkkin eret.
@@ -1913,6 +1956,10 @@ se:
               display_name: Sisdoallu
             practice:
               display_name: OahpahanHárjehallamat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

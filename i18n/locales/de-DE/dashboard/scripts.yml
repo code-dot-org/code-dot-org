@@ -4787,6 +4787,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         csd2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
@@ -5163,6 +5165,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-creativity2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
@@ -5185,6 +5189,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5202,6 +5208,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -5228,6 +5236,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         self-paced-pl-k5-getting-started: {}
         focus-on-design-with-purpose2-2023:
           title: Webentwicklung
@@ -5249,6 +5259,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-coding2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
@@ -5268,6 +5280,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5543,3 +5557,168 @@ de:
               display_name: Klassen
         self-paced-pl-aiml1: {}
         self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+          description_audience: 'Alter: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Daten
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Daten
+          description_audience: 'Alter: 4-7'
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Daten
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Ereignisse
+            lessonGroup-7:
+              display_name: Projekt am Ende des Kurses
+            lessonGroup-8:
+              display_name: Daten
+          description_audience: 'Alter: 5-8'
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Computersysteme
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Daten
+            lessonGroup-8:
+              display_name: Computersysteme
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Schleifen
+            lessonGroup-7:
+              display_name: Daten
+            lessonGroup-8:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 7-11'
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verschachtelte Schleifen
+            lessonGroup-4:
+              display_name: Funktionen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 8-12'
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested Loops und Funktionen.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Bedingungen
+            lessonGroup-5:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-7:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: So funktioniert KI
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

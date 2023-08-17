@@ -4427,6 +4427,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         csd4-2023:
@@ -4763,6 +4765,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-creativity3-2023:
@@ -4783,6 +4787,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4800,6 +4806,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4826,6 +4834,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-design-with-purpose3-2023:
@@ -4844,6 +4854,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-coding3-2023:
@@ -4862,6 +4874,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5293,3 +5307,164 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Kelas
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+          description_audience: 'Usia: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Usia: 4-7'
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: kegiatan
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Usia: 5-8'
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Komputasi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Komputasi
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Loop
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 7-11'
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loop
+            lessonGroup-4:
+              display_name: fungsi
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kondisi
+            lessonGroup-5:
+              display_name: variabel
+            lessonGroup-6:
+              display_name: Dampak dari Komputasi
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Bagaimana AI bekerja
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

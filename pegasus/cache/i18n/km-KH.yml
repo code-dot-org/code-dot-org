@@ -1016,10 +1016,10 @@ km-KH:
   hoc2018_dance_measure: វាស់កម្រិត
   hoc2018_dance_measure_colon: វាស់កំរិត៖
   hoc2018_dance_party_box_description: សរសេរកូដ Dance Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្កិ
-  hoc2018_dance_party_box_title: Dance Party
+  hoc2018_dance_party_box_title: កម្មវិធីរាំ
   hoc2018_dance_party_button: ចាប់​ផ្ដើម
   hoc2018_dance_party_landing_title: រាំ
-  hoc2018_dance_party_main_heading: Dance Party
+  hoc2018_dance_party_main_heading: កម្មវិធីរាំ
   hoc2018_dance_party_specs: ភាសា | ទម្រង់ | អាយុ ៦-១០៦
   hoc2018_dance_party_subheading: ជួយបកប្រែ Dance Party
   hoc2018_dance_teacher_resources_tile1_description: ផែនការមេរៀន វិញ្ញាបនបត្រ និងតន្ត្រី។
@@ -1029,8 +1029,8 @@ km-KH:
   hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
   hoc2018_dance_teacher_resources_title: ធនធានសម្រាប់គ្រូ
   hoc2018_dance_video1: កាណែនាំ - Dance Party
-  hoc2018_dance_video2: ព្រឹត្ដិការណ៍ - Dance Party
-  hoc2018_dance_video3: លក្ខណៈសម្បត្តិ - Dance Party
+  hoc2018_dance_video2: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+  hoc2018_dance_video3: 'ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ '
   hoc2018_dance_video4: សូមអបអរសារទរ - Dance Party
   hoc2018_dance_video_title_what_is_creativity: តើការច្នៃប្រឌិតគឺជាអ្វី?
   hoc2018_dance_videos_section_heading: ទទួលបានការបំផុសគំនិត
@@ -1138,7 +1138,7 @@ km-KH:
   hoc_overview_dance_subtitle: សរសេរកូដបង្កើត Dace Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្តិ
     ដោយមានតួអង្គសម្ដែង Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara និង
     ២៥ រូបផ្សេងទៀត!
-  hoc_overview_dance_title: Dance Party
+  hoc_overview_dance_title: កម្មវិធីរាំ
   hoc_overview_more_resources: សម្រាប់ធនធានបន្ថែមអំពី របៀបទាក់ទងជាមួយថ្នាក់រៀនពីចម្ងាយរបស់អ្នក
     សូមមើលការណែនាំរបស់យើងសម្រាប់ការបង្ហោះ  [virtual Hour of Code](https://hourofcode.com/us/how-to/virtual)។
     សម្រាប់សិស្សដែលមានកម្រិត ឬគ្មានបច្ចេកវិទ្យា ឬការតភ្ជាប់អ៊ិនធើណែត សូមចែករំលែកកញ្ចប់ព័ត៌មាននេះតាម
@@ -1838,7 +1838,7 @@ km-KH:
   students_and_lines: "%{students} សិស្សដែលបានបញ្ចប់ Hour of Code ហើយបានសរសេរកូដ %{lines}
     ជួរ។"
   studiobar_dance_body: បង្កើត និងចែករំលែកពិធីរាំរែកផ្ទាល់ខ្លួនរបស់អ្នក
-  studiobar_dance_title: Dance Party
+  studiobar_dance_title: កម្មវិធីរាំ
   studiobar_donate_body: កុមារម្នាក់នឹងបានសិក្សាតាមរយៈ១ដុល្លារ ដែលបានមកពីការបរិច្ចាគរបស់អ្នក
   studiobar_donate_title: បរិច្ចាគ
   studiobar_elementary_body: មេរៀនថ្មីទាំងបីរបស់យើងសម្រាប់ថ្នាក់មត្តេយ្យទី&#8209;៥
@@ -2083,7 +2083,7 @@ km-KH:
   user_header_applab: App Lab
   user_header_artist: សិល្បករ
   user_header_create: បង្កើត
-  user_header_dance: Dance Party
+  user_header_dance: កម្មវិធីរាំ
   user_header_gamelab: មន្ទីរពិសោធន៍ហ្គេម
   user_header_label: សួស្តី%{username}
   user_header_logout: ចាកចេញពីគណនី

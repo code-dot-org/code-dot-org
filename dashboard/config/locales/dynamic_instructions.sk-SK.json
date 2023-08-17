@@ -2,61 +2,9 @@
   "sk-SK": {
     "data": {
       "dynamic_instructions": {
-        "allthethings AI Lab 1": {
-        },
-        "ml-bad data-club investigations": {
-        },
-        "ml-bad data-club investigations_2022": {
-        },
-        "ml-bad data-loneliness all": {
-        },
-        "ml-bad data-loneliness all_2022": {
-        },
-        "ml-data decisions-zoo1-2021": {
-        },
-        "ml-data decisions-zoo1_2022": {
-        },
-        "ml-data decisions-zoo2-2021": {
-        },
-        "ml-data decisions-zoo2_2022": {
-        },
-        "ml-data decisions-zoo3-2021": {
-        },
-        "ml-data decisions-zoo3_2022": {
-        },
-        "ml-final project-ai lab-2021": {
-        },
-        "ml-final project-ai lab_2022": {
-        },
-        "ml-good data-upload csv": {
-        },
-        "ml-good data-upload csv_2022": {
-        },
-        "ml-good data-upload isaac csv": {
-        },
-        "ml-good data-upload isaac csv_2022": {
-        },
         "ml-intro ai lab-shapes v1": {
           "results": "Na tejto obrazovke môžeš vidieť, aké presné sú predpovede AI Bota pri porovnaní s testovacími údajmi, na ktoré už poznáme odpovede. \n\n**Urob toto:** Vytrénuj svoj model, kým nedosiahne aspoň 100 % presnosť.",
           "selectedFeatureCategorical": "Keď vyberieš stĺpec, na pravom paneli sa zobrazia ďalšie informácie. To ti môže pomôcť rozhodnúť sa, či je to užitočná vlastnosť na predpovedanie označenia. Viac informácií sa dozvieš v časti Pomoc a tipy v týchto pokynoch.\n\n**Urob toto:** Rozhodni sa, či chceš tento stĺpec použiť ako vlastnosť. Ak áno, stlač tlačidlo „Add Feature“ (Pridať vlastnosť). Ak nie, vyber si nový stĺpec, ktorý chceš preskúmať. Tento postup opakuj, kým si nevyberieš niekoľko stĺpcov, ktoré sa použijú ako vlastnosti."
-        },
-        "ml-intro ai lab-shapes v1_2022": {
-        },
-        "ml-intro categorical-food choices-2021": {
-        },
-        "ml-intro categorical-food choices_2022": {
-        },
-        "ml-intro categorical-pizza-2021": {
-        },
-        "ml-intro categorical-pizza_2022": {
-        },
-        "ml-mini project-ai lab 2": {
-        },
-        "ml-mini project-ai lab 2_2022": {
-        },
-        "ml-numerical ai lab-safari 1-2021": {
-        },
-        "ml-numerical ai lab-safari 1_2022": {
         }
       }
     }

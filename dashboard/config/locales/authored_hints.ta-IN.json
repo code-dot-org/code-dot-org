@@ -2,112 +2,8 @@
   "ta-IN": {
     "data": {
       "authored_hints": {
-        "2-3 Artist 1 new": {
-        },
-        "2-3 Artist 11": {
-        },
-        "2-3 Artist 12": {
-        },
-        "2-3 Artist 2 new": {
-        },
-        "2-3 Artist 3new": {
-        },
-        "2-3 Artist 4": {
-        },
-        "2-3 Artist 6": {
-        },
-        "2-3 Artist 7": {
-        },
-        "2-3 Artist 8": {
-        },
-        "2-3 Artist 9 NEW": {
-        },
-        "2-3 Artist Debugging 10": {
-        },
-        "2-3 Artist Debugging 2": {
-        },
-        "2-3 Artist Debugging 3": {
-        },
-        "2-3 Artist Debugging 7": {
-        },
-        "2-3 Artist Debugging 8": {
-        },
-        "2-3 Artist Debugging 9": {
-        },
-        "2-3 Artist Functions 1": {
-        },
-        "2-3 Artist Functions 11": {
-        },
-        "2-3 Artist Functions 12": {
-        },
-        "2-3 Artist Functions 2": {
-        },
-        "2-3 Artist Functions 3": {
-        },
-        "2-3 Artist Functions 4": {
-        },
-        "2-3 Artist Loops New 11": {
-        },
-        "2-3 Artist Loops New 12": {
-        },
-        "2-3 Artist Loops New 13": {
-        },
-        "2-3 Artist Loops New 9": {
-        },
-        "2-3 Artist Nested Loops 1": {
-        },
-        "2-3 Artist Nested Loops 3": {
-        },
-        "2-3 Artist Nested Loops 4": {
-        },
         "2-3 Artist Nested Loops 5": {
           "2-3_Artist_Nested_Loops_5_a": "ஒரு சதுரத்தின் மேலிருந்து அடுத்ததைத் தொடங்கும் இடத்திற்குச் செல்ல \\`முன்னோக்கிச் செல்லவும்' பிளாக்கைப் பயன்படுத்தவும்.\n\nஉங்கள் சதுரங்கள் 20 பிக்சல்கள் உயரம் மற்றும் 20 பிக்சல்கள் இடைவெளியில் இருந்தால், நீங்கள் எவ்வளவு தூரம் குதிக்க வேண்டும்? "
-        },
-        "2-3 Artist Nested Loops 7": {
-        },
-        "2-3 Artist Nested Loops 9": {
-        },
-        "2-3 Bee Conditionals 14": {
-        },
-        "2-3 Bee Conditionals 15": {
-        },
-        "2-3 Bee Conditionals 3": {
-        },
-        "2-3 Bee Conditionals 6": {
-        },
-        "2-3 Bee Debugging 1": {
-        },
-        "2-3 Bee Debugging 2": {
-        },
-        "2-3 Bee Debugging 4": {
-        },
-        "2-3 Bee Functions 4": {
-        },
-        "2-3 Bee Functions 6": {
-        },
-        "2-3 Bee Functions 8": {
-        },
-        "2-3 Bee Functions 9": {
-        },
-        "2-3 Bee Loops 2": {
-        },
-        "2-3 Bee Loops 3": {
-        },
-        "2-3 Bee Loops 3B": {
-        },
-        "2-3 Bee Loops 4": {
-        },
-        "2-3 Bee Loops 4A": {
-        },
-        "2-3 Bee Loops 5": {
-        },
-        "2-3 Bee Loops 6": {
-        },
-        "2-3 Bee Loops 7": {
-        },
-        "2-3 Maze 1": {
-        },
-        "2-3 Maze 16": {
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "இந்த புதிர் தீர்க்க இரண்டு வழிகள் உள்ளன!"
@@ -115,129 +11,23 @@
         "2-3 Maze 6": {
           "2-3_Maze_6_a": "இந்த புதிர் தீர்க்க இரண்டு வழிகள் உள்ளன!"
         },
-        "2-3 Maze Loops 17": {
-        },
-        "2-3 Maze Loops 18": {
-        },
-        "2-3 Maze Loops 19": {
-        },
-        "2-3 Maze Loops 20": {
-        },
-        "2-3 Maze Loops 21": {
-        },
-        "4-5 Artist 1": {
-        },
-        "4-5 Artist 11": {
-        },
-        "4-5 Artist 3": {
-        },
-        "4-5 Artist 4": {
-        },
-        "4-5 Artist 5": {
-        },
-        "4-5 Artist 7": {
-        },
-        "4-5 Artist 8": {
-        },
-        "4-5 Artist 9": {
-        },
-        "4-5 Artist Assessment 1": {
-        },
-        "4-5 Artist Patterns 11": {
-        },
-        "4-5 Artist Patterns 2": {
-        },
-        "4-5 Artist Patterns 3": {
-        },
-        "4-5 Artist Patterns 5": {
-        },
         "4-5 Bee Conditionals 4": {
           "remember_quantum": "**நினைவில் கொள்ளுங்கள்:** இந்தப் புதிர் ஒவ்வொரு முறை இயங்கும் போதும் மாறும்.\n\nசவாலைத் தீர்க்க, நிபந்தனை பிளாக் (`if` அல்லது `if/else`) பயன்படுத்த வேண்டும்."
         },
         "4-5 Bee Conditionals 5": {
           "remember_quantum": "**நினைவில் கொள்ளுங்கள்:** இந்தப் புதிர் ஒவ்வொரு முறை இயங்கும் போதும் மாறும்.\n\nசவாலைத் தீர்க்க, நிபந்தனை பிளாக் (`if` அல்லது `if/else`) பயன்படுத்த வேண்டும்."
         },
-        "4-5 Bee Conditionals 6": {
-        },
-        "4-5 Bee Debugging 1": {
-        },
-        "4-5 Bee Nested Loops Rows": {
-        },
-        "4-5 Maze 10": {
-        },
-        "4-5 Maze 4": {
-        },
-        "4-5 Maze 5": {
-        },
-        "4-5 Maze 6": {
-        },
-        "4-5 Maze 7": {
-        },
-        "4-5 Nested Loops 12": {
-        },
-        "4-5 Nested Loops 6": {
-        },
-        "4-5 Nested Loops 7": {
-        },
-        "4-5 Nested Loops 8": {
-        },
-        "4-5 While Loops 8": {
-        },
-        "Artist Autorun Test": {
-        },
-        "Course 4 Artist 11": {
-        },
         "Course 4 Artist 12": {
           "Course_4_Artist_12_d": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
-        },
-        "Course 4 Artist 6": {
-        },
-        "Course 4 Artist 8a": {
-        },
-        "Course 4 Artist 9": {
         },
         "Course 4 Artist Binary Free Play 2b": {
           "Course_4_Artist_Binary_Free_Play_2b_d": "**தீர்வு:** \n\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml> "
         },
-        "Course 4 Artist For Loops 11": {
-        },
-        "Course 4 Artist For Loops 11a": {
-        },
-        "Course 4 Artist For Loops 3": {
-        },
-        "Course 4 Artist For Loops 4": {
-        },
-        "Course 4 Artist For Loops Challenge": {
-        },
-        "Course 4 Artist For Loops inspire": {
-        },
         "Course 4 Artist Functions Inspiration": {
           "Course_4_Artist_Functions_Inspiration_c": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">14</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a square 20\"></mutation>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">20</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">3</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"draw_turn_by_constant\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <title name=\"VALUE\">100</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
-        "Course 4 Artist Functions challenge": {
-        },
         "Course 4 Artist Inspire": {
           "Course_4_Artist_Inspire_d": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\">\n            <title name=\"VAR\">sides</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">4</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">length</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">200</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">sides</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">sides</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">sides</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                            <value name=\"TIMES\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">sides</title>\n                              </block>\n                            </value>\n                            <statement name=\"DO\">\n                              <block type=\"draw_move\" inline=\"true\">\n                                <title name=\"DIR\">moveForward</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_turn\" inline=\"true\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                        <title name=\"OP\">DIVIDE</title>\n                                        <value name=\"A\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">360</title>\n                                          </block>\n                                        </value>\n                                        <value name=\"B\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">sides</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </next>\n                              </block>\n                            </statement>\n                            <next>\n                              <block type=\"jump\" inline=\"true\">\n                                <title name=\"DIR\">jumpForward</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                    <title name=\"OP\">DIVIDE</title>\n                                    <value name=\"A\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">length</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"B\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">2</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_turn\" inline=\"true\">\n                                    <title name=\"DIR\">turnLeft</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                        <title name=\"OP\">DIVIDE</title>\n                                        <value name=\"A\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">360</title>\n                                          </block>\n                                        </value>\n                                        <value name=\"B\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">sides</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                    <title name=\"OP\">DIVIDE</title>\n                                    <value name=\"A\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">360</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"B\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">sides</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
-        },
-        "Course 4 Artist Vars 13": {
-        },
-        "Course 4 Artist Vars 6": {
-        },
-        "Course 4 Artist Vars 8": {
-        },
-        "Course 4 Bee Params 7": {
-        },
-        "Course 4 Bee Params 8": {
-        },
-        "Course 4 Play Lab Params 2": {
-        },
-        "Course 4 Play Lab Vars 2": {
-        },
-        "Course 4 Play Labs For Loops 2": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 Playlab For Loops 5b": {
         },
         "Course 4 SCF 1": {
           "Course_4_SCF_1_e": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a line of hexagons\"></mutation>\n            <next>\n              <block type=\"procedures_callnoreturn\">\n              <mutation name=\"shift down/forward\"></mutation>\n                <next>\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a line of hexagons\"></mutation>\n                    <next>\n                      <block type=\"procedures_callnoreturn\">\n                      <mutation name=\"shift down/backward\"></mutation>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a hexagon</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_move\" inline=\"true\">\n            <title name=\"DIR\">moveForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnRight</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/backward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">440</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a line of hexagons</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a hexagon\"></mutation>\n            <next>\n              <block type=\"jump\" inline=\"true\">\n                <title name=\"DIR\">jumpForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">120</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/forward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">320</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml> "
@@ -673,10 +463,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "மாற்று தொகுதி \"நடனக் கலைஞர்கள்\" பிரிவில் உள்ளது."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "உங்கள் நிரலின் உள்ளே ஒரு செயல்பாட்டை பல முறை அழைக்கலாம்! இந்த புதிரை தீர்க்க இரண்டு முறை அழைக்க முயற்சிக்கவும்.",
           "Function_intro_Ryan_b": "நீங்கள் செயல்பாடுகளை சரியாக அழைத்தால், நீங்கள் பயணிக்கும் பாதை இதுதான் ..."
@@ -954,32 +740,12 @@
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "முகவர் சில மின்கார்ட் தடங்களை உருவாக்க முயற்சிக்கவும், இதன் மூலம் நீங்கள் உலகை ஆராயலாம்!"
         },
-        "NEW Course 4 Artist Functions 13": {
-        },
-        "NEW Course 4 Artist Functions 4": {
-        },
-        "NEW Course 4 Artist Functions 9": {
-        },
-        "NEW Course 4 Artist Params 11": {
-        },
-        "NEW Course 4 Artist Params 13": {
-        },
-        "NEW Course 4 Artist Params 14": {
-        },
-        "NEW Course 4 Artist Params inspire": {
-        },
         "NEW Course 4 Bee For Loops 10a": {
           "NEW_Course_4_Bee_For_Loops_10a_a": "நீங்கள் எடுக்க வேண்டிய படிகளின் எண்ணிக்கைக்கும் சேகரிக்க வேண்டிய அமிர்தங்களின் எண்ணிக்கைக்கும் இடையே ஒரு வடிவத்தைக் கண்டுபிடிக்க முடியுமா? ",
           "NEW_Course_4_Bee_For_Loops_10a_b": "நீங்கள் 2 மறுபடியும் செய்ய வேண்டும், ஒருவர் கணிதத் தொகுதியைப் பயன்படுத்துவார். "
         },
         "NEW Course 4 Bee For Loops 7": {
           "NEW_Course_4_Bee_For_Loops_7_a": "எதிர் மாறியைக் கொண்டு சில கணிதத்தைச் செய்ய முயற்சிக்கவும்.\n\nநீங்கள் சேகரிக்க வேண்டிய தேன் அளவை சமமாக ஒவ்வொரு பூவிலும் உள்ள கவுண்டருக்கு என்ன செய்ய வேண்டும்? "
-        },
-        "NEW Course 4 Bee For Loops 8": {
-        },
-        "New Minecraft Hero Project": {
-        },
-        "OPD-K5-events-2": {
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "நீங்கள் சேர்க்க வேண்டிய தொகுதி `செட் ஸ்பீட்` எனப்படும். ",
@@ -1028,16 +794,8 @@
         "OPD-K5-projects-5": {
           "courseE_playLab_scaffold4_a": "ஒரு புள்ளியைச் சேர்க்க `மதிப்பெண் புள்ளி` ஐப் பயன்படுத்தவும், ஒன்றைக் கழிக்க`புள்ளியை அகற்றவும்`."
         },
-        "OPD-K5-variables-1": {
-        },
-        "OPD-K5-variables-2": {
-        },
-        "OPD-K5-variables-5": {
-        },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_b": "[blockly block][0] "
-        },
-        "OPD-K5-variables-7": {
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "நீங்கள் எடுக்கக்கூடிய சில பாதைகள் உள்ளன. எது குறுகியது?",
@@ -1339,36 +1097,6 @@
           "mc_9_b": "சுவரில் உள்ள கருப்பு புள்ளிகள் நிலக்கரி! நிலக்கரியைச் சுரங்கப்படுத்த இவற்றில் \\`அழிக்கும் தொகுதி 'பயன்படுத்தவும்.",
           "mc_9_c": "நீங்கள் நிற்கும் இடத்தில் ஒரு டார்ச் வைக்க `பிளேஸ் டார்ச்` ஐப் பயன்படுத்தவும்."
         },
-        "behaviors 2": {
-        },
-        "behaviors 2_2020": {
-        },
-        "behaviors 3": {
-        },
-        "behaviors 3_2020": {
-        },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors 6": {
-        },
-        "behaviors 6_2020": {
-        },
-        "behaviors 7": {
-        },
-        "behaviors 7_2020": {
-        },
-        "comment_intro_maze_2018": {
-        },
-        "course1_artist_loops_challenge1": {
-        },
-        "course1_artist_loops_challenge2": {
-        },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "இது போன்ற தொகுதிகள்: <xml>  <block type=\"simple_move_up_left\"/></xml> உங்கள் கலைஞரை ஒரு சாய்வில் நகர்த்த அனுமதிக்கும்!"
         },
@@ -1380,15 +1108,9 @@
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_b": "நீங்கள் ஒரு முறை ஏதாவது செய்கிறீர்கள் என்றால் நீங்கள் ஒரு வளையத்தைப் பயன்படுத்தத் தேவையில்லை."
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "ஒவ்வொரு பாதைக்கும் இடையில் இரண்டு முறை கிழக்கு நோக்கி நகரவும்.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nநீங்கள் இதை 14 தொகுதிகளுடன் மட்டுமே செய்ய முடியும். ஒரு தீர்வைக் காண மேலும் ஒரு குறிப்பைக் கிளிக் செய்யவும்.",
           "courseB_collector_loops_challenge1_d": "இதை முயற்சித்து பார்!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course1_collector_loops_challenge4": {
-        },
-        "course1_maze_debugging_challenge1": {
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_a": "இந்த புதிரைத் தீர்க்க நீங்கள் தொகுதிகளைச் சேர்க்கவோ நீக்கவோ தேவையில்லை."
@@ -1410,29 +1132,15 @@
           "courseA_playlab_events_challenge2_b": "நீங்கள் ஒரு ரோபோ பீப் செய்யலாம்.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "நீங்கள் ஒரு கோபமான அசுரன் கூச்சலிடலாம்.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "course2_artist_nestedLoops_challenge1": {
-        },
         "course2_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "வழக்கமான எண்கோணத்தை வரைய, கலைஞர் 45 டிகிரி 8 முறை திரும்ப வேண்டும்.",
           "courseD_artist_nestedLoops_challenge2_b": "ஒரு சதுரத்தை வரைய, கலைஞர் 90 டிகிரி 4 முறை திரும்ப வேண்டும்."
         },
-        "course2_artist_prog_challenge1": {
-        },
-        "course2_artist_prog_challenge2": {
-        },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "இந்த புதிரில், ஒவ்வொரு இடத்திலும் ஒரு பூ, ஒரு தேன் சீப்பு அல்லது எதுவும் இருக்க முடியாது. அதாவது, ஒவ்வொரு சதுரத்திலும் உங்களின் `if/else` நிபந்தனையை மீண்டும் செய்யலாம். "
         },
-        "course2_bee_conditionals_challenge2": {
-        },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "சுழல்களைப் பயன்படுத்துங்கள், அதனால் நீங்கள் \\`சேகரிக்கும் 'தொகுதிகள் தீர்ந்துவிடாது!"
-        },
-        "course2_collector_prog_challenge1": {
-        },
-        "course2_collector_prog_challenge2": {
-        },
-        "course2_harvester_loops_challenge1": {
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "இதைத் தீர்க்க ஒரு வழி ஜிக்-ஜாக் போல் தெரிகிறது. மற்றொரு வழி சுழல் போல் தெரிகிறது! இது போன்ற புதிருக்கு பல்வேறு தீர்வுகள் உள்ளன. விடாமுயற்சியுடன் இருங்கள்!",
@@ -1440,62 +1148,26 @@
           "courseC_harvester_loops_challenge2_c": "இந்த ஜிக்-ஜாக் வடிவத்தை 20 தொகுதிகளுடன் புதிர் முடிக்க இரண்டு முறை மீண்டும் செய்யலாம்!",
           "courseC_harvester_loops_challenge2_d": "இந்த சுழல் வடிவத்தை வெறும் 18 தொகுதிகளால் குறியிட முடியும்!"
         },
-        "course2_maze_loops_challenge1": {
-        },
-        "course2_maze_programming_challenge2": {
-        },
-        "course3_artist_functions_challenge1": {
-        },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nஇந்த `ஜம்ப் டு` பிளாக், ஜாம்பி கலைஞரை எப்போது வேண்டுமானாலும் கட்டத்தின் எந்த பிக்சலுக்கும் நகர்த்த அனுமதிக்கிறது. பல பிக்சல்களை வலதுபுறமாகவும், பல பிக்சல்களை கீழே நகர்த்துவதன் மூலம் இது செயல்படுகிறது. இது எப்போதும் மேல் இடது மூலையில் இருந்து கணக்கிடப்படும், அதாவது ஜாம்பி கலைஞர் எங்கே இருக்கிறார் என்பது முக்கியமில்லை _முன்_ கட்டளை இயக்கப்படும்!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
-        },
-        "course3_bee_debugging_challenge1": {
-        },
-        "course3_bee_functions_challenge1": {
-        },
-        "course3_bee_functions_challenge2": {
-        },
-        "course3_bee_functions_challenge3": {
         },
         "course3_bee_functions_challenge4": {
           "courseF_bee_functions_challenge2_b": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml> "
         },
-        "course3_collector_debugging_challenge2": {
-        },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_b": "பொதுவாக நீங்கள் பூசணிக்காயில் இருந்தால் \\`பூசணிக்காயை எடுப்பீர்கள்'. நீங்கள் பூசணிக்காயில் இருந்தால் வேறு என்ன செய்ய வேண்டும்? "
-        },
-        "course3_farmer_condLoops_challenge2": {
         },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "இடது அல்லது வலது? அது உங்களுடையது!"
         },
-        "course3_maze_debugging_challenge2": {
-        },
-        "course3_playLab_challenge1": {
-        },
-        "course4_artist_binary_challenge2": {
-        },
-        "course4_artist_concept_challenge2": {
-        },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nஇந்த `ஜம்ப் டு` பிளாக், ஜாம்பி கலைஞரை எப்போது வேண்டுமானாலும் கட்டத்தின் எந்த பிக்சலுக்கும் நகர்த்த அனுமதிக்கிறது. பல பிக்சல்களை வலதுபுறமாகவும், பல பிக்சல்களை கீழே நகர்த்துவதன் மூலம் இது செயல்படுகிறது. இது எப்போதும் மேல் இடது மூலையில் இருந்து கணக்கிடப்படும், அதாவது ஜாம்பி கலைஞர் எங்கே இருக்கிறார் என்பது முக்கியமில்லை _முன்_ கட்டளை இயக்கப்படும்!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
-        },
-        "course4_artist_variables_challenge1": {
-        },
-        "course4_bee_fwp_challenge1": {
-        },
-        "course4_bee_fwp_challenge2": {
         },
         "course4_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "நீங்கள் ஒற்றை கட்டளை அல்லது நீண்ட வடிவத்தை `மீண்டும்` செய்யலாம் என்பதை மறந்துவிடாதீர்கள். நீங்கள் ஒரு `மீண்டும்` தடுப்பை `மீண்டும்` செய்யலாம்! ",
           "courseD_bee_nested_loops_challenge2_b": "அனைத்து 4 ரத்தினங்களையும் பெற, முதலில் ஒரு வளையத்தைப் பயன்படுத்தி மையத்திலிருந்து நகர்த்தவும். இடது அல்லது வலது பக்கம் திரும்பவும், பின்னர் புதையலின் முதல் குவியலில் இருந்து இரண்டாவது இடத்திற்கு நகர்த்த ஒரு உள்ளமை வளையத்தைப் பயன்படுத்தவும். உள்ளமைக்கப்பட்ட வளையத்தை நீங்கள் போதுமான முறை திரும்பத் திரும்பச் செய்தால், சேகரிப்பான் _முழு_குகையைச் சுற்றி வருவார்! ",
           "courseD_bee_nested_loops_challenge2_c": "எல்லா புதையலையும் அடையும் குறுகிய நிரல் ஒரே ஒரு \\`சேகரிப்பு' தொகுதி மற்றும் இரண்டு திருப்பங்களைப் பயன்படுத்துகிறது. ",
           "courseD_bee_nested_loops_challenge2_d": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
-        },
-        "course4_harvester_nested_loops_challenge1": {
-        },
-        "course4_playlab_variables_challenge1": {
         },
         "courseA_artist_loops2": {
           "courseA_artist_loops2_a": "ஒரு கோட்டை எப்படி வரைய வேண்டும் என்று கண்டுபிடிக்க முடியவில்லையா? என்ன நடக்கிறது என்று பார்க்க <xml><block type=\"when_run\"/></xml> block உடன் தொகுதிகளை இணைக்கத் தொடங்குங்கள்.",
@@ -2001,8 +1673,6 @@
           "courseA_collector_loops_challenge1_c": "நீங்கள் தொடங்கும் போது குகையின் வலது பக்கத்தில் 6 ரத்தினங்கள் உள்ளன, ஆனால் நீங்கள் புதையலை 5 முறை தெற்கு நோக்கி நகர்த்த வேண்டும். ஏனென்று உனக்கு தெரியுமா?",
           "courseA_collector_loops_challenge1_d": "தொடக்க திட்டம் கடைசி 2 கற்களை சேகரிக்கவில்லை. இந்த குறியீட்டை இறுதியில் சேர்க்க முயற்சிக்கவும்:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
-        "courseA_collector_loops_challenge2": {
-        },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_a": "இந்த புதிரைத் தீர்க்க நீங்கள் சுழல்களைப் பயன்படுத்தலாமா?",
           "courseA_collector_loops_challenge2kp_b": "நீங்கள் ஒரு தீர்வை பெற இந்த பாதையை முயற்சிக்கவும்."
@@ -2026,12 +1696,6 @@
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_a": "இந்த புதிரைத் தீர்க்க நீங்கள் சுழல்களைப் பயன்படுத்தலாமா?",
           "courseA_collector_loops_challenge2kp_b": "நீங்கள் ஒரு தீர்வை பெற இந்த பாதையை முயற்சிக்கவும்."
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "நீங்கள் புதையலுடன் ஒரு சதுரத்திற்கு சென்ற பிறகு, அதைத் எடுக்க இந்த தொகுதியைப் பயன்படுத்தவும்.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
@@ -2626,12 +2290,6 @@
           "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால்,<xml>\n  <block type=\"when_run\"/>\n</xml>கள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
           "courseA_maze_seq1_b": "பறவை பன்றிக்குச் செல்ல 3 முறை மேற்கு நோக்கி நகர வேண்டும். இந்தத் தொகுதியைப் பயன்படுத்தவும்:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
-        "courseA_maze_seq2": {
-        },
-        "courseA_maze_seq3": {
-        },
-        "courseA_maze_seq4": {
-        },
         "courseA_maze_seq5": {
           "courseA_maze_seq5_a": "ஒரு தீர்வைக் கண்டுபிடிக்க காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்!"
         },
@@ -2708,12 +2366,6 @@
           "courseA_maze_seq6_a": "உங்கள் இறுதி குறியீடு 3 இயக்கத் தொகுதிகளைக் கொண்டிருக்க வேண்டும்.",
           "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி."
         },
-        "courseA_maze_seq7": {
-        },
-        "courseA_maze_seq7_copy": {
-        },
-        "courseA_maze_seq7_dani": {
-        },
         "courseA_maze_seq8": {
           "courseA_maze_seq8_a": "நீங்கள் சிக்கிக்கொண்டால், பறவை எப்படி நகர வேண்டும் என்பதை அறிய காகிதத்தில் படத்தை வரைய முயற்சிக்கவும்."
         },
@@ -2737,8 +2389,6 @@
         },
         "courseA_maze_seq8_dani": {
           "courseA_maze_seq8_a": "நீங்கள் சிக்கிக்கொண்டால், பறவை எப்படி நகர வேண்டும் என்பதை அறிய காகிதத்தில் படத்தை வரைய முயற்சிக்கவும்."
-        },
-        "courseA_maze_seq9": {
         },
         "courseA_maze_seq_challenge1": {
           "courseA_maze_seq_challenge1_a": "இந்த புதிருக்கு இரண்டு தீர்வுகள் உள்ளன."
@@ -3163,8 +2813,6 @@
           "courseB_artist_loops4_a": "ஜம்ப் பிளாக் ஒரு கோட்டை வரையாமல் முன்னோக்கி செல்ல உங்களை அனுமதிக்கிறது.",
           "courseB_artist_loops4_b": "இந்த புதிரைத் தீர்க்க நீங்கள் மீண்டும் மீண்டும் வளையத்தின் உள்ளே ஒரு தொகுதியைச் சேர்க்க வேண்டும்.",
           "courseB_artist_loops4_c": "லூப் எத்தனை முறை திரும்புகிறது என்பதை மாற்ற மறக்காதீர்கள்."
-        },
-        "courseB_artist_loops5": {
         },
         "courseB_artist_loops52022": {
           "courseB_artist_loops5_a": "ஒரு `ரிபீட்` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> லூப்பை இழுத்து, அதன் உள்ளே மற்ற தொகுதிகளை வைக்கவும். நீங்கள் எத்தனை முறை மீண்டும் செய்ய வேண்டும்?"
@@ -3611,8 +3259,6 @@
           "courseB_collector_loops_challenge1_c": "ஒவ்வொரு பாதைக்கும் இடையில் இரண்டு முறை கிழக்கு நோக்கி நகரவும்.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nநீங்கள் இதை 14 தொகுதிகளுடன் மட்டுமே செய்ய முடியும். ஒரு தீர்வைக் காண மேலும் ஒரு குறிப்பைக் கிளிக் செய்யவும்.",
           "courseB_collector_loops_challenge1_d": "இதை முயற்சித்து பார்!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
-        "courseB_collector_loops_challenge2": {
-        },
         "courseB_collector_loops_challenge2a": {
           "courseB_collector_loops_challenge2a_a": "ஏதேனும் தவறு நடந்தால், அதை பிழைத்திருத்த முயற்சிக்கவும். விட்டுக் கொடுக்காதே!",
           "courseB_collector_loops_challenge2a_b": "பிரமை வழியாக செல்ல இந்த விருப்பத்தைப் பாருங்கள். நீங்கள் மீண்டும் செய்யக்கூடிய ஒரு வடிவத்தை நீங்கள் பார்க்கிறீர்களா?",
@@ -3852,12 +3498,6 @@
           "courseB_iceage_loops9_b": "உங்கள் இறுதி குறியீட்டில் \\*\\* 4 \\*\\* சுழல்கள் இருக்க வேண்டும்.",
           "courseB_iceage_loops9_c": "ஸ்க்ராட் ஏகோர்னைப் பெற இந்த வழியைப் பின்பற்ற வேண்டும்."
         },
-        "courseB_maze_seq1": {
-        },
-        "courseB_maze_seq10": {
-        },
-        "courseB_maze_seq11": {
-        },
         "courseB_maze_seq12022": {
           "courseB_maze_seq1_a": "ஸ்க்ராட் நகர்த்துவதற்கு தொகுதிகளை <xml><block type=\"when_run\"/></xml> block ஐ இணைக்கவும்!",
           "courseB_maze_seq1_b": "ஸ்க்ராட்டை ஏகோர்னுக்குப் பெற இந்த மூன்று<xml><block type=\"maze_moveSouth\"/></xml> அம்புகளை வெளியே இழுத்து <xml><block type=\"when_run\"/></xml>க்கு இணைக்கவும்."
@@ -3877,10 +3517,6 @@
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "ஸ்க்ராட் நகர்த்துவதற்கு தொகுதிகளை <xml><block type=\"when_run\"/></xml> block ஐ இணைக்கவும்!",
           "courseB_maze_seq1_b": "ஸ்க்ராட்டை ஏகோர்னுக்குப் பெற இந்த மூன்று<xml><block type=\"maze_moveSouth\"/></xml> அம்புகளை வெளியே இழுத்து <xml><block type=\"when_run\"/></xml>க்கு இணைக்கவும்."
-        },
-        "courseB_maze_seq2": {
-        },
-        "courseB_maze_seq3": {
         },
         "courseB_maze_seq4": {
           "courseB_maze_seq4_b": "இந்த புதிரைத் தீர்க்க <xml><block type=\"maze_moveEast\"/></xml> blockயைப் பயன்படுத்த விரும்புவீர்கள்."
@@ -4942,14 +4578,6 @@
           "courseC_PlayLab_events_challenge_b": "மற்ற நடிகர்களில் ஒருவரைத் தொடும்போது `நடு நடிகர் 1 -ஐ நடுத்தர இடது நிலைக்கு` பயன்படுத்தவும். இது விளையாட்டை மீட்டமைக்கும், அதனால் வீரர் தொடர்ந்து முயற்சி செய்யலாம்!",
           "courseC_PlayLab_events_challenge_c": "விளையாட்டை எளிதாக்க அல்லது சவாலாக மாற்ற வெவ்வேறு நடிகர்களின் வேகத்தை மாற்ற முயற்சிக்கவும் நீங்கள் விரும்பலாம்!\n\n[தடுப்பு தொகுதி] [0]"
         },
-        "courseC_artist_loop1": {
-        },
-        "courseC_artist_loop1_2018": {
-        },
-        "courseC_artist_loop1_2019": {
-        },
-        "courseC_artist_loop1_2020": {
-        },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "உங்களுக்குத் தேவைப்படும் முதல் தொகுதி இது:\n\n[தடுப்பு தொகுதி] [0]",
           "courseC_artist_loops1a_b": "ஸ்டிக்கரை வரைய இந்த தொகுதியைப் பயன்படுத்தவும்!\n\n[தடுப்பு தொகுதி] [0]"
@@ -5008,13 +4636,9 @@
           "courseC_artist_loops2a_a": "உங்கள் வளையத்தின் உள்ளே, நீங்கள் நடுவில் குதிக்க விரும்புவீர்கள், பின்னர் திரும்பவும், பின்னர் ஒரு ஸ்டிக்கரை வரையவும்.",
           "courseC_artist_loops2a_b": "எத்தனை முறை திரும்பத் திரும்ப 'ரிப்பீட்' லூப்பின் மேல் உள்ள எண்ணைக் கிளிக் செய்யவும்."
         },
-        "courseC_artist_loops3a": {
-        },
         "courseC_artist_loops3a2022": {
           "courseC_artist_loops3a_a": "முதல் ஸ்டிக்கருக்குப் பிறகு உங்கள் வளையத்தின் உள்ளே ஒரு தொகுதியைச் சேர்க்க வேண்டும்.",
           "courseC_artist_loops3a_b": "உங்கள் திட்டம் இப்படி இருக்க வேண்டும்!\n\n[தடுப்பு தொகுதி] [0]\n\nநீங்கள் விரும்பும் எந்த ஸ்டிக்கர்களையும் பயன்படுத்தலாம்!"
-        },
-        "courseC_artist_loops3a_2018": {
         },
         "courseC_artist_loops3a_2019": {
           "courseC_artist_loops3a_a": "முதல் ஸ்டிக்கருக்குப் பிறகு உங்கள் வளையத்தின் உள்ளே ஒரு தொகுதியைச் சேர்க்க வேண்டும்.",
@@ -5049,14 +4673,6 @@
         "courseC_artist_loops4a_2021": {
           "courseC_artist_loops4a_a": "முன்னோக்கி செல்ல இந்த தொகுதியைப் பயன்படுத்தவும்:\n\n[தடுப்பு தொகுதி] [0]\n\nஎவ்வளவு தூரம் என்பதை மாற்ற மறக்காதீர்கள்!",
           "courseC_artist_loops4a_b": "உங்கள் திட்டம் இப்படி இருக்க வேண்டும்!\n\n[தடுப்பு தொகுதி] [0]"
-        },
-        "courseC_artist_loops5a": {
-        },
-        "courseC_artist_loops5a_2018": {
-        },
-        "courseC_artist_loops5a_2019": {
-        },
-        "courseC_artist_loops5a_2020": {
         },
         "courseC_artist_loops5b": {
           "courseC_artist_loops5b_a": "உங்கள் வரிகளின் அமைப்பை அமைக்க இந்த தொகுதியைப் பயன்படுத்தவும்:\n\n[தடுப்பு தொகுதி] [0]",
@@ -5107,8 +4723,6 @@
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "ஒரு வட்டம் 360 டிகிரி கொண்டது. நீங்கள் திரும்பத் திரும்ப திரும்பும் முறைகளின் எண்ணிக்கையில் டிகிரிகளை பெருக்கவும். இது 360க்கு சமமா?\nஇது செயல்படுகிறதா என்பதைப் பார்க்க, பரிந்துரைக்கப்பட்ட சுழற்சிகளைச் சரிபார்க்கவும்!"
         },
-        "courseC_artist_loops7a2022": {
-        },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "ஒரு வட்டம் 360 டிகிரி கொண்டது. நீங்கள் திரும்பத் திரும்ப திரும்பும் முறைகளின் எண்ணிக்கையில் டிகிரிகளை பெருக்கவும். இது 360க்கு சமமா?\nஇது செயல்படுகிறதா என்பதைப் பார்க்க, பரிந்துரைக்கப்பட்ட சுழற்சிகளைச் சரிபார்க்கவும்!"
         },
@@ -5120,22 +4734,6 @@
         },
         "courseC_artist_loops7a_2021": {
           "courseC_artist_loops7a_a": "ஒரு வட்டம் 360 டிகிரி கொண்டது. நீங்கள் திரும்பத் திரும்ப திரும்பும் முறைகளின் எண்ணிக்கையில் டிகிரிகளை பெருக்கவும். இது 360க்கு சமமா?\nஇது செயல்படுகிறதா என்பதைப் பார்க்க, பரிந்துரைக்கப்பட்ட சுழற்சிகளைச் சரிபார்க்கவும்!"
-        },
-        "courseC_artist_loopsPre1a": {
-        },
-        "courseC_artist_loopsPre1a_2018": {
-        },
-        "courseC_artist_loopsPre1a_2019": {
-        },
-        "courseC_artist_loopsPre1a_2020": {
-        },
-        "courseC_artist_loopsPrePre1a": {
-        },
-        "courseC_artist_loopsPrePre1a_2018": {
-        },
-        "courseC_artist_loopsPrePre1a_2019": {
-        },
-        "courseC_artist_loopsPrePre1a_2020": {
         },
         "courseC_artist_prog2": {
           "courseC_artist_prog2_a": "\\_ \"நீங்கள் [பிளாக்லி ப்ளாக்] [0] ப்ளாக் பயன்படுத்தினால், நான் ஒரு கோட்டை வரைவேன்.\" \\_",
@@ -5622,16 +5220,6 @@
         "courseC_collector_prog_challenge2_2021": {
           "courseC_collector_prog_challenge1_a": "ஒவ்வொரு இடத்திலும் ஒன்றுக்கு மேற்பட்ட \\`சேகரிக்கும் 'தொகுதியை நீங்கள் பயன்படுத்தலாம்.",
           "courseC_collector_prog_challenge1_b": "உங்கள் வழியை இழந்தீர்களா? புதிரைத் தீர்க்க இந்தப் பாதையை முயற்சிக்கவும்!"
-        },
-        "courseC_flappy_events1": {
-        },
-        "courseC_flappy_events12022": {
-        },
-        "courseC_flappy_events1_2018": {
-        },
-        "courseC_flappy_events1_2019": {
-        },
-        "courseC_flappy_events1_2020": {
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif) "
@@ -6916,76 +6504,6 @@
         "courseD_artist_5_2021": {
           "1": "நீங்கள் உங்கள் வடிவங்களை மாற்றினால், அவற்றின் கோணங்களையும் மாற்ற வேண்டும் என்பதை மறந்துவிடாதீர்கள்!"
         },
-        "courseD_artist_binary1": {
-        },
-        "courseD_artist_binary1_2018": {
-        },
-        "courseD_artist_binary1_2019": {
-        },
-        "courseD_artist_binary1_2020": {
-        },
-        "courseD_artist_binary2": {
-        },
-        "courseD_artist_binary2_2018": {
-        },
-        "courseD_artist_binary2_2019": {
-        },
-        "courseD_artist_binary2_2020": {
-        },
-        "courseD_artist_binary3": {
-        },
-        "courseD_artist_binary3_2018": {
-        },
-        "courseD_artist_binary3_2019": {
-        },
-        "courseD_artist_binary3_2020": {
-        },
-        "courseD_artist_binary4": {
-        },
-        "courseD_artist_binary4_2018": {
-        },
-        "courseD_artist_binary4_2019": {
-        },
-        "courseD_artist_binary4_2020": {
-        },
-        "courseD_artist_binary5": {
-        },
-        "courseD_artist_binary5_2018": {
-        },
-        "courseD_artist_binary5_2019": {
-        },
-        "courseD_artist_binary5_2020": {
-        },
-        "courseD_artist_binary6": {
-        },
-        "courseD_artist_binary6_2018": {
-        },
-        "courseD_artist_binary6_2019": {
-        },
-        "courseD_artist_binary6_2020": {
-        },
-        "courseD_artist_binary7": {
-        },
-        "courseD_artist_binary7_2018": {
-        },
-        "courseD_artist_binary7_2019": {
-        },
-        "courseD_artist_binary7_2020": {
-        },
-        "courseD_artist_binary8": {
-        },
-        "courseD_artist_binary8_2018": {
-        },
-        "courseD_artist_binary8_2019": {
-        },
-        "courseD_artist_binary8_2020": {
-        },
-        "courseD_artist_binary_challenge2_2018": {
-        },
-        "courseD_artist_binary_challenge2_2019": {
-        },
-        "courseD_artist_binary_challenge2_2020": {
-        },
         "courseD_artist_nestedLoops1": {
           "courseD_artist_nestedLoops1_a": "இதை வரைவதற்கான எளிதான வழி, முன்னோக்கி நகர்ந்து வலது திருப்பங்களைப் பயன்படுத்துவதாகும்.",
           "courseD_artist_nestedLoops1_b": "இந்த முக்கோணத்தை உள்ளே இரண்டு தொகுதிகள் கொண்ட `ரிபீட்` லூப் மூலம் வரையலாம். உங்களுக்கு எந்த தொகுதிகள் தேவை? ",
@@ -7521,8 +7039,6 @@
         "courseD_artist_project5_2021": {
           "courseD_artist_project4_a": "2 அறுகோணங்கள் மற்றும் 4 முக்கோணங்களின் கோடுகள்:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
-        "courseD_artist_ramp11": {
-        },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_c": "உங்களுக்கு எந்தக் கோணம் தேவை என்பதைப் பார்க்க, `டர்ன்` பிளாக்குகளில் உள்ள கீழ்தோன்றும் மெனுவைப் பயன்படுத்தலாம்! "
         },
@@ -7646,13 +7162,9 @@
           "courseD_bee_conditionals4_a": "நீங்கள் முழு பாதையையும் பார்க்க முடியும் என்றாலும், ஒவ்வொரு இடத்தையும் அதன் மேல் ஒரு மேகம் இருப்பதைப் போல நீங்கள் இன்னும் கருதலாம். ",
           "courseD_bee_conditionals4_b": "ஒவ்வொரு இடத்தையும் தேன் உள்ளதா எனச் சரிபார்க்க, உங்கள் லூப்பில் உள்ள `if` அறிக்கையைப் பயன்படுத்தவும். "
         },
-        "courseD_bee_conditionals5": {
-        },
         "courseD_bee_conditionals52022": {
           "courseD_bee_conditionals5_a": "நீங்கள் `if at flower` பிளாக்கைப் பயன்படுத்தினால், உள்ளமைக்கப்பட்ட வளையத்தைப் பயன்படுத்தி இதைத் தீர்க்கலாம். இடது மற்றும் கீழ் பாதைகளுக்கு ஒரு நிரலை எழுதவும், பின்னர் எல்லாவற்றையும் இரண்டு முறை செய்யவும்! ",
           "courseD_bee_conditionals5_c": "பாதையில் தொடர்ந்து செல்ல, தேனீ `முன்னோக்கி நகர வேண்டும்'. அது நகரும் போது, தேனீ ஒரு பூவை சரிபார்க்க வேண்டும்.`பூ இருந்தால்`தேனீ`அமிர்தம் பெற வேண்டும்\\`. "
-        },
-        "courseD_bee_conditionals5_2018": {
         },
         "courseD_bee_conditionals5_2019": {
           "courseD_bee_conditionals5_a": "நீங்கள் `if at flower` பிளாக்கைப் பயன்படுத்தினால், உள்ளமைக்கப்பட்ட வளையத்தைப் பயன்படுத்தி இதைத் தீர்க்கலாம். இடது மற்றும் கீழ் பாதைகளுக்கு ஒரு நிரலை எழுதவும், பின்னர் எல்லாவற்றையும் இரண்டு முறை செய்யவும்! ",
@@ -7665,10 +7177,6 @@
         "courseD_bee_conditionals5_2021": {
           "courseD_bee_conditionals5_a": "நீங்கள் `if at flower` பிளாக்கைப் பயன்படுத்தினால், உள்ளமைக்கப்பட்ட வளையத்தைப் பயன்படுத்தி இதைத் தீர்க்கலாம். இடது மற்றும் கீழ் பாதைகளுக்கு ஒரு நிரலை எழுதவும், பின்னர் எல்லாவற்றையும் இரண்டு முறை செய்யவும்! ",
           "courseD_bee_conditionals5_c": "பாதையில் தொடர்ந்து செல்ல, தேனீ `முன்னோக்கி நகர வேண்டும்'. அது நகரும் போது, தேனீ ஒரு பூவை சரிபார்க்க வேண்டும்.`பூ இருந்தால்`தேனீ`அமிர்தம் பெற வேண்டும்\\`. "
-        },
-        "courseD_bee_conditionals5_copy": {
-        },
-        "courseD_bee_conditionals5_dani": {
         },
         "courseD_bee_conditionals6": {
           "courseD_bee_conditionals6_a": "ஒவ்வொரு மேகத்தின் கீழும் தேன்கூடு உள்ளதா எனச் சரிபார்க்க `if` அறிக்கையைப் பயன்படுத்துவதை உறுதிசெய்யவும். ",
@@ -7807,10 +7315,6 @@
         },
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge1_b": "`if at flower` தொகுதிகள் போல், தேனீ ஒரு பூவில் இருந்தால் மட்டுமே `while Nectar > 0` உள்ளே இருக்கும் குறியீடு இயங்கும். வித்தியாசம் என்னவென்றால், அமிர்தம் இல்லாத வரை உள்ளே உள்ள குறியீடு மீண்டும் மீண்டும் இயங்கும். இந்த வடிவத்தை முயற்சிக்கவும்:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
-        },
-        "courseD_bee_debugging_challenge1": {
-        },
-        "courseD_bee_debugging_challenge1a": {
         },
         "courseD_bee_nestedLoops1": {
           "courseD_bee_nestedLoops1_a": "வேலை செய்யவில்லை? வரிக்கு வரி என்ன நடக்கிறது என்பதைப் பார்க்க, \"படி\" பொத்தானைப் பயன்படுத்தி முயற்சிக்கவும்.",
@@ -8070,8 +7574,6 @@
           "courseD_collector_debugging1_a": "முதல் படியில் எல்லாம் சரியாக இருக்கிறதா என்று பார்க்க \"படி\" பொத்தானைப் பயன்படுத்தவும்.\n\nஇரண்டாவது எப்படி?\n\nஎங்கே தவறு நடக்கிறது? ",
           "courseD_collector_debugging1_c": "புதையலுக்குச் சென்றவுடன் அதை எடுக்க `சேகரிப்பு` பிளாக்கைப் பயன்படுத்த நினைவில் கொள்ளுங்கள்."
         },
-        "courseD_collector_debugging10_predict1": {
-        },
         "courseD_collector_debugging1a2022": {
           "courseD_collector_debugging1_a": "முதல் படியில் எல்லாம் சரியாக இருக்கிறதா என்று பார்க்க \"படி\" பொத்தானைப் பயன்படுத்தவும்.\n\nஇரண்டாவது எப்படி?\n\nஎங்கே தவறு நடக்கிறது? ",
           "courseD_collector_debugging1_c": "புதையலுக்குச் சென்றவுடன் அதை எடுக்க `சேகரிப்பு` பிளாக்கைப் பயன்படுத்த நினைவில் கொள்ளுங்கள்."
@@ -8157,8 +7659,6 @@
           "courseD_collector_debugging4_a": "பிழைத்திருத்த செயல்முறையை தொடர்ச்சியாக இரண்டு முறை பயன்படுத்தி முயற்சிக்கவும்.\n\nமுதல் பிரச்சனைக்கு என்ன காரணம்?\n\nஅந்தச் சிக்கலைச் சரிசெய்தவுடன், என்ன தவறு? ",
           "courseD_collector_debugging4_b": "படிக்கட்டுப் படியை எவ்வாறு உருவாக்குவது என்பதைக் கண்டுபிடிப்பதில் உங்களுக்கு சிரமம் இருந்தால், அதை உங்கள் விரலால் கண்டுபிடித்து, கட்டளைகளை உரக்கச் சொல்ல முயற்சிக்கவும். "
         },
-        "courseD_collector_debugging5": {
-        },
         "courseD_collector_debugging5a2022": {
           "courseD_collector_debugging5a_a": "அது என்ன செய்யும்?\n\nஅது என்ன செய்ய வேண்டும்?\n\nஅது உங்களுக்கு என்ன சொல்கிறது? ",
           "courseD_collector_debugging5a_b": "பொக்கிஷத்தின் முதல் வரியை நீங்கள் சேகரித்தவுடன், உங்கள் குறியீட்டில் என்ன மீதம் இருக்கும்? "
@@ -8202,12 +7702,6 @@
           "courseD_collector_debugging6_a": "\"படி\" பொத்தானைப் பயன்படுத்தி குறியீட்டை இயக்க முயற்சிக்கவும். முதல் படியில் எல்லாம் நன்றாக இருக்கிறதா?\n\nஇரண்டாவது எப்படி?\n\nஎங்கே விஷயங்கள் தவறாக நடக்கின்றன?",
           "courseD_collector_debugging6_b": "உங்களுக்கு தேவையான அனைத்து தொகுதிகளும் பணியிடத்தில் இருப்பது போல் தெரிகிறது. விஷயங்கள் மிகவும் குழப்பமாக இருந்தால் \"தொடங்கு\" என்பதைக் கிளிக் செய்யவும்."
         },
-        "courseD_collector_debugging8": {
-        },
-        "courseD_collector_debugging9": {
-        },
-        "courseD_collector_debugging_challenge2": {
-        },
         "courseD_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "நீங்கள் ஒற்றை கட்டளை அல்லது நீண்ட வடிவத்தை `மீண்டும்` செய்யலாம் என்பதை மறந்துவிடாதீர்கள். நீங்கள் ஒரு `மீண்டும்` தடுப்பை `மீண்டும்` செய்யலாம்! ",
           "courseD_bee_nested_loops_challenge2_b": "அனைத்து 4 ரத்தினங்களையும் பெற, முதலில் ஒரு வளையத்தைப் பயன்படுத்தி மையத்திலிருந்து நகர்த்தவும். இடது அல்லது வலது பக்கம் திரும்பவும், பின்னர் புதையலின் முதல் குவியலில் இருந்து இரண்டாவது இடத்திற்கு நகர்த்த ஒரு உள்ளமை வளையத்தைப் பயன்படுத்தவும். உள்ளமைக்கப்பட்ட வளையத்தை நீங்கள் போதுமான முறை திரும்பத் திரும்பச் செய்தால், சேகரிப்பான் _முழு_குகையைச் சுற்றி வருவார்! ",
@@ -8247,12 +7741,8 @@
         "courseD_collector_nested_loops_challenge2a": {
           "courseD_collector_nested_loops_challenge2a_a": "நீங்கள் ஒற்றை கட்டளை அல்லது நீண்ட வடிவத்தை `மீண்டும்` செய்யலாம் என்பதை மறந்துவிடாதீர்கள். நீங்கள் ஒரு `மீண்டும்` தடுப்பை `மீண்டும்` செய்யலாம்! "
         },
-        "courseD_collector_ramp10": {
-        },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_b": "உங்கள் குறியீட்டை மேலும் எளிமைப்படுத்த விரும்பினால், நீங்கள் உண்மையில் ஒரு `ரிபீட்` லூப்பை இன்னொன்றின் உள்ளே வைக்கலாம்! இது **நெஸ்ட் லூப்** எனப்படும்."
-        },
-        "courseD_collector_ramp9": {
         },
         "courseD_farmer_condLoops1": {
           "courseD_farmer_condLoops1_a": "நீங்கள் மீண்டும் மீண்டும் வளையத்தைப் பயன்படுத்தி சோளத்தை 5 முறை பார்க்க வேண்டும். ",
@@ -8384,8 +7874,6 @@
         "courseD_farmer_condLoops5_2021": {
           "courseD_farmer_condLoops5_a": "ஒரு புதிய வளையம் உள்ளது: `பூசணிக்காய் வரை மீண்டும் செய்யவும்`. இந்த புதிரில் அதை எப்படி பயன்படுத்துவது என்று பார்க்க முடியுமா?",
           "courseD_farmer_condLoops5_b": "ஒவ்வொரு இடத்திலும் ஒன்றுக்கு மேற்பட்ட சோளம் அல்லது கீரை செடிகள் இருக்கலாம். அவை அனைத்தையும் சேகரிக்க `while` லூப்பைப் பயன்படுத்தவும்! "
-        },
-        "courseD_farmer_condLoops6": {
         },
         "courseD_farmer_condLoops62022": {
           "courseD_farmer_condLoops6_a": "சுழலின் ஒவ்வொரு துண்டின் கீழும் விவசாயியை நகர்த்த, `எப்போது பாதை முன்னோக்கி' வளையத்தையோ அல்லது`முன்னோக்கிச் சென்றால் / வேறு' பிளாக்கையோ பயன்படுத்தவும். ",
@@ -9176,10 +8664,6 @@
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nஉங்கள் குறியீட்டின் நடுவில் உள்ள ஒரு தொகுதியை நீக்க, அதன் அடியில் உள்ள அனைத்து பிளாக்குகளையும் வலதுபுறமாக இழுத்து, அவற்றை சிறிது நேரம் பணியிடத்தில் உட்கார வைக்கவும்.\n\nநீங்கள் நீக்க விரும்பும் தொகுதியைக் கிளிக் செய்து, அதை மீண்டும் கருவிப்பெட்டிக்கு இழுக்கவும்.\n\nஇறுதியாக, உங்களின் மற்ற தொகுதிகளை அவை இருக்கும் இடத்தில் மீண்டும் வைக்கவும்."
         },
-        "courseD_maze_ramp4": {
-        },
-        "courseD_maze_ramp4_2018": {
-        },
         "courseD_maze_ramp4_2019": {
           "courseC_maze_programming4_b": "பாதையைப் பின்தொடர, முன்னோக்கிச் சென்று ஒரு வழியில் திரும்பவும், பின்னர் மீண்டும் நகர்த்தி எதிர் திசையைத் திருப்பவும். ஏகோர்னை அடைய இன்னும் ஒரு முறை முன்னோக்கி செல்லவும். "
         },
@@ -9421,8 +8905,6 @@
           "courseD_maze_until7_a": "பிரமை இருப்பதால், உங்கள் குறியீடு கடந்த நேரத்தை விட நீண்டதாக இருக்க வேண்டியதில்லை! ",
           "courseD_maze_until7_b": "கடைசி புதிரை விட இங்கு அதிக திருப்பங்கள் இருந்தாலும், `ரிப்பீட் அன்டில்` பிளாக் இருப்பதால் உங்கள் குறியீடு கிட்டத்தட்ட ஒரே மாதிரியாக இருக்கலாம்! "
         },
-        "courseD_maze_until8": {
-        },
         "courseD_maze_until9": {
           "courseD_maze_until8_c": "உங்களை சூரியகாந்திக்கு அழைத்துச் செல்ல `ரிப்பீட் அன்டில்` பிளாக்கைப் பயன்படுத்த நினைவில் கொள்ளுங்கள்!"
         },
@@ -9441,38 +8923,6 @@
         "courseD_maze_until9_2021": {
           "courseD_maze_until8_c": "உங்களை சூரியகாந்திக்கு அழைத்துச் செல்ல `ரிப்பீட் அன்டில்` பிளாக்கைப் பயன்படுத்த நினைவில் கொள்ளுங்கள்!"
         },
-        "courseD_playLab_cond1": {
-        },
-        "courseD_playLab_cond1_2018": {
-        },
-        "courseD_playLab_cond2": {
-        },
-        "courseD_playLab_cond2_2018": {
-        },
-        "courseD_playLab_cond3": {
-        },
-        "courseD_playLab_cond3_2018": {
-        },
-        "courseD_playLab_cond3a": {
-        },
-        "courseD_playLab_cond3a_2018": {
-        },
-        "courseD_playLab_cond4": {
-        },
-        "courseD_playLab_cond4_2018": {
-        },
-        "courseD_playLab_cond5": {
-        },
-        "courseD_playLab_cond5_2018": {
-        },
-        "courseD_playLab_cond6": {
-        },
-        "courseD_playLab_cond6_2018": {
-        },
-        "courseD_playLab_cond6a": {
-        },
-        "courseD_playLab_cond6a_2018": {
-        },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_b": "தவறு செய்ய பயப்பட வேண்டாம்! தொகுதிகளைச் சேர்க்கவும் மற்றும் குறியீட்டை இயக்கவும், என்ன நடக்கும் என்று பார்க்கவும், நீங்கள் இன்னும் புதிரைத் தீர்த்துவிட்டீர்கள் என்று நீங்கள் நினைக்காவிட்டாலும் கூட."
         },
@@ -9489,8 +8939,6 @@
         "courseD_scrat_ramp5": {
           "courseC_maze_programming5_a": "உங்கள் குறியீடு வரியை வரிசையில் இயக்க \"படி\" பொத்தானைப் பயன்படுத்த முயற்சிக்கவும். அடுத்து என்ன செய்ய வேண்டும் என்று உங்களால் கண்டுபிடிக்க முடியுமா?"
         },
-        "courseD_scrat_ramp6": {
-        },
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "இந்த புதிர் தீர்க்க இரண்டு வழிகள் உள்ளன!",
           "courseD_scrat_programming6_c": "தவறு செய்ய பயப்பட வேண்டாம்! தொகுதிகளைச் சேர்க்கவும் மற்றும் குறியீட்டை இயக்கவும், என்ன நடக்கும் என்று பார்க்கவும், நீங்கள் இன்னும் புதிரைத் தீர்த்துவிட்டீர்கள் என்று நீங்கள் நினைக்காவிட்டாலும் கூட."
@@ -9501,24 +8949,6 @@
         },
         "courseD_video_nestedLoopsArtist": {
           "courseD_artist_ramp12_b": "உங்களுக்கு எந்தக் கோணம் தேவை என்பதைப் பார்க்க, `டர்ன்` பிளாக்குகளில் உள்ள கீழ்தோன்றும் மெனுவைப் பயன்படுத்தலாம்! "
-        },
-        "courseE_artist_concept1": {
-        },
-        "courseE_artist_concept1_2018": {
-        },
-        "courseE_artist_concept4": {
-        },
-        "courseE_artist_concept4_2018": {
-        },
-        "courseE_artist_concept_challenge1": {
-        },
-        "courseE_artist_concept_challenge1_2018": {
-        },
-        "courseE_artist_concept_challenge2": {
-        },
-        "courseE_artist_concept_challenge2_2018": {
-        },
-        "courseE_artist_functions1": {
         },
         "courseE_artist_functions10": {
           "courseD_artist_functions10_a": "பல `முன்னோக்கி நகர்த்து` தொகுதிகளைப் பயன்படுத்துவதைத் தவிர்க்க, `டிரா அறுகோண` செயல்பாட்டை உருவாக்கி அதை பலமுறை அழைக்கவும்.",
@@ -9550,12 +8980,6 @@
           "courseD_artist_functions10_b": "இந்த வரைதல் கடந்ததைப் போலவே உள்ளது, ஆனால் \\`டிரா லைன்' செயல்பாடு இப்போது வேறு வடிவத்தை வரைகிறது.",
           "courseD_artist_functions10_c": "CS இணைப்புகளில் உள்ள Coding with Poetry தொகுதியில், மாணவர்கள் இரண்டு பாடங்களை - கணினி அறிவியல் மற்றும் கவிதை - ஒரு புதிய வழியில் பார்க்க முடியும்."
         },
-        "courseE_artist_functions1_copy": {
-        },
-        "courseE_artist_functions1_dani": {
-        },
-        "courseE_artist_functions2": {
-        },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_a": "உங்கள் திட்டம் கண்டிப்பாக:\n\n-   உங்கள் செயல்பாட்டைப் பயன்படுத்தவும்\n-   100 + 75 பிக்சல்கள் முன்னோக்கி நகர்த்தவும்\n-   உங்கள் செயல்பாட்டை மீண்டும் பயன்படுத்தவும்",
           "courseD_artist_functions2_b": "100 பிக்சல் பக்கங்களைக் கொண்ட ஒரு சதுரத்தை வரையும் பகுதி மட்டுமே, செயல்பாட்டில் உங்கள் முழு நிரலையும் கொண்டிருக்கக்கூடாது.",
@@ -9580,22 +9004,6 @@
           "courseD_artist_functions2_a": "உங்கள் திட்டம் கண்டிப்பாக:\n\n-   உங்கள் செயல்பாட்டைப் பயன்படுத்தவும்\n-   100 + 75 பிக்சல்கள் முன்னோக்கி நகர்த்தவும்\n-   உங்கள் செயல்பாட்டை மீண்டும் பயன்படுத்தவும்",
           "courseD_artist_functions2_b": "100 பிக்சல் பக்கங்களைக் கொண்ட ஒரு சதுரத்தை வரையும் பகுதி மட்டுமே, செயல்பாட்டில் உங்கள் முழு நிரலையும் கொண்டிருக்கக்கூடாது.",
           "courseD_artist_functions2_c": "உங்கள் செயல்பாட்டை \"அழைக்க\" பச்சை நிற \\`டிரா எ ஸ்கொயர்' பிளாக்கைப் பயன்படுத்துவதை உறுதிசெய்யவும். இல்லையெனில், உங்கள் செயல்பாட்டில் உள்ள குறியீடு இயங்காது. "
-        },
-        "courseE_artist_functions2_copy": {
-        },
-        "courseE_artist_functions2_dani": {
-        },
-        "courseE_artist_functions3": {
-        },
-        "courseE_artist_functions3_copy": {
-        },
-        "courseE_artist_functions3_dani": {
-        },
-        "courseE_artist_functions4": {
-        },
-        "courseE_artist_functions4_copy": {
-        },
-        "courseE_artist_functions4_dani": {
         },
         "courseE_artist_functions5": {
           "courseD_artist_functions5_a": "கைவிடாதே! நீங்கள் கற்றுக்கொண்டதை நினைவில் கொள்ளுங்கள்.",
@@ -9836,67 +9244,11 @@
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nஇந்த `ஜம்ப் டு` பிளாக், ஜாம்பி கலைஞரை எப்போது வேண்டுமானாலும் கட்டத்தின் எந்த பிக்சலுக்கும் நகர்த்த அனுமதிக்கிறது. பல பிக்சல்களை வலதுபுறமாகவும், பல பிக்சல்களை கீழே நகர்த்துவதன் மூலம் இது செயல்படுகிறது. இது எப்போதும் மேல் இடது மூலையில் இருந்து கணக்கிடப்படும், அதாவது ஜாம்பி கலைஞர் எங்கே இருக்கிறார் என்பது முக்கியமில்லை _முன்_ கட்டளை இயக்கப்படும்!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
-        "courseE_artist_ramp8": {
-        },
-        "courseE_artist_ramp8_2": {
-        },
         "courseE_artist_ramp9": {
           "courseD_artist_ramp12_b": "உங்களுக்கு எந்தக் கோணம் தேவை என்பதைப் பார்க்க, `டர்ன்` பிளாக்குகளில் உள்ள கீழ்தோன்றும் மெனுவைப் பயன்படுத்தலாம்! "
         },
-        "courseE_bee_concept1": {
-        },
-        "courseE_bee_concept1_2018": {
-        },
-        "courseE_bee_concept2": {
-        },
-        "courseE_bee_concept2_2018": {
-        },
-        "courseE_bee_concept3": {
-        },
-        "courseE_bee_concept3_2018": {
-        },
-        "courseE_bee_concept4": {
-        },
-        "courseE_bee_concept4_2018": {
-        },
-        "courseE_bee_concept5": {
-        },
-        "courseE_bee_concept5_2018": {
-        },
-        "courseE_bee_functions1": {
-        },
-        "courseE_bee_functions10": {
-        },
-        "courseE_bee_functions2": {
-        },
-        "courseE_bee_functions3": {
-        },
-        "courseE_bee_functions4": {
-        },
-        "courseE_bee_functions5": {
-        },
-        "courseE_bee_functions6": {
-        },
-        "courseE_bee_functions7": {
-        },
-        "courseE_bee_functions8": {
-        },
-        "courseE_bee_functions9": {
-        },
-        "courseE_bee_functions_challenge1": {
-        },
-        "courseE_bee_functions_challenge2": {
-        },
         "courseE_bee_ramp14": {
           "courseE_farmer_ramp12d_b": "இந்தப் புதிரைத் தீர்க்க, உங்கள் `வரை` மற்றும் `while` லூப்களை `ரிபீட்` லூப்பின் உள்ளே நீங்கள் இன்னும் வைக்க வேண்டும்! "
-        },
-        "courseE_farmer_concept1": {
-        },
-        "courseE_farmer_concept1_2018": {
-        },
-        "courseE_farmer_concept2": {
-        },
-        "courseE_farmer_concept2_2018": {
         },
         "courseE_farmer_concept3": {
           "grade3_robotFarmer_ConditionalsIntro_8_a": "ஒரு பாதையில் எத்தனை சதுரங்கள் உள்ளன என்பது உங்களுக்குத் தெரியாவிட்டாலும், \\`முன்னோக்கி செல்லும் பாதை' பிளாக் உங்களைத் தொடர அனுமதிக்கிறது. "
@@ -9907,8 +9259,6 @@
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_a": "கருவிப்பெட்டி இந்த முறை சற்று வித்தியாசமாக ஏற்பாடு செய்யப்பட்டுள்ளது! உங்களிடம் உள்ள தொகுதிகளைக் காண வெவ்வேறு வகைகளைக் கிளிக் செய்யவும். ",
           "courseE_farmer_functions1_b": "நீங்கள் ஒரு பூசணிக்காயை மட்டுமே எடுக்க வேண்டும், ஆனால் அதைப் பெற ஒரு வளையத்தைப் பயன்படுத்த முடியுமா? "
-        },
-        "courseE_farmer_functions10b": {
         },
         "courseE_farmer_functions12022": {
           "courseE_farmer_functions1_a": "கருவிப்பெட்டி இந்த முறை சற்று வித்தியாசமாக ஏற்பாடு செய்யப்பட்டுள்ளது! உங்களிடம் உள்ள தொகுதிகளைக் காண வெவ்வேறு வகைகளைக் கிளிக் செய்யவும். ",
@@ -9982,8 +9332,6 @@
           "courseE_farmer_functions2b_b": "இணைக்கும் பாதையில் சோளம் இல்லை, எனவே நீங்கள் அதை நகர்த்தி திரும்பலாம். ",
           "courseE_farmer_functions2b_c": "அனைத்து பயிர்களையும் பெற இரண்டு தனித்தனியான `ரிப்பீட் அன்டில்` தொகுதிகள் தேவைப்படும்."
         },
-        "courseE_farmer_functions2ba": {
-        },
         "courseE_farmer_functions2ba2022": {
           "courseE_farmer_functions2ba_a": "நீங்கள் பூசணிக்காய்கள் அனைத்தையும் பெறுவதை உறுதிசெய்ய, பச்சை நிறமான \\`அனைத்து பூசணிக்காயையும் பெறுங்கள்' தொகுதியைப் பயன்படுத்தவும்! "
         },
@@ -9998,8 +9346,6 @@
         },
         "courseE_farmer_functions2ba_2021": {
           "courseE_farmer_functions2ba_a": "நீங்கள் பூசணிக்காய்கள் அனைத்தையும் பெறுவதை உறுதிசெய்ய, பச்சை நிறமான \\`அனைத்து பூசணிக்காயையும் பெறுங்கள்' தொகுதியைப் பயன்படுத்தவும்! "
-        },
-        "courseE_farmer_functions3c": {
         },
         "courseE_farmer_functions3c12022": {
           "coursee_farmer_functions3c1_2018_a": "இந்தப் புதிரைத் தீர்க்க, \\`பாதையில் எடு' செயல்பாட்டை மூன்று முறை பயன்படுத்த வேண்டும். ",
@@ -10027,8 +9373,6 @@
         "courseE_farmer_functions5c": {
           "courseE_farmer_functions5c_b": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரைத் தீர்க்காவிட்டாலும், என்ன நடக்கும் என்பதைப் பார்க்க தொகுதிகளைச் சேர்த்து குறியீட்டை இயக்கவும்."
         },
-        "courseE_farmer_functions6c": {
-        },
         "courseE_farmer_functions7a12022": {
           "courseE_farmer_functions7a1_2018_a": "கருவிப்பெட்டியில் உள்ள \\`செயல்பாடுகள்' பிரிவின் கீழ் உங்கள் செயல்பாட்டை உருவாக்கவும். ",
           "courseE_farmer_functions7a1_2018_b": "நீங்கள் செய்து முடித்ததும் உங்கள் செயல்பாட்டைப் பயன்படுத்த மறக்காதீர்கள்! "
@@ -10049,8 +9393,6 @@
           "courseE_farmer_functions7a1_2018_a": "கருவிப்பெட்டியில் உள்ள \\`செயல்பாடுகள்' பிரிவின் கீழ் உங்கள் செயல்பாட்டை உருவாக்கவும். ",
           "courseE_farmer_functions7a1_2018_b": "நீங்கள் செய்து முடித்ததும் உங்கள் செயல்பாட்டைப் பயன்படுத்த மறக்காதீர்கள்! "
         },
-        "courseE_farmer_functions7b": {
-        },
         "courseE_farmer_functions8a12022": {
           "courseE_farmer_functions8a1_2018a": "கடந்த புதிரில் நீங்கள் செய்த அதே செயல்பாட்டைக் குறியிடுவதன் மூலம் இந்தப் புதிரைத் தொடங்கவும்.",
           "courseE_farmer_functions8a1_2018b": "செயல்பாடு முதல் முறையாக இயங்கிய பிறகு, அதை மீண்டும் இயக்குவதற்கு முன், நீங்கள் ஒரு கூடுதல் திருப்பத்தை மேற்கொள்ள வேண்டும். "
@@ -10070,8 +9412,6 @@
         "courseE_farmer_functions8a1_2021": {
           "courseE_farmer_functions8a1_2018a": "கடந்த புதிரில் நீங்கள் செய்த அதே செயல்பாட்டைக் குறியிடுவதன் மூலம் இந்தப் புதிரைத் தொடங்கவும்.",
           "courseE_farmer_functions8a1_2018b": "செயல்பாடு முதல் முறையாக இயங்கிய பிறகு, அதை மீண்டும் இயக்குவதற்கு முன், நீங்கள் ஒரு கூடுதல் திருப்பத்தை மேற்கொள்ள வேண்டும். "
-        },
-        "courseE_farmer_functions8b": {
         },
         "courseE_farmer_functions9a12022": {
           "courseE_farmer_functions9a1_2018a": "கடந்த இரண்டு புதிர்களில் நீங்கள் செய்த அதே செயல்பாட்டைப் பயன்படுத்துவீர்கள். ",
@@ -10097,8 +9437,6 @@
           "courseE_farmer_functions9a1_2018a": "கடந்த இரண்டு புதிர்களில் நீங்கள் செய்த அதே செயல்பாட்டைப் பயன்படுத்துவீர்கள். ",
           "courseE_farmer_functions9a1_2018b": "இந்தப் புதிரின் முதல் பாதியைத் தீர்க்க முந்தைய புதிரின் அதே படிகளைப் பயன்படுத்தவும். ",
           "courseE_farmer_functions9a1_2018c": "உங்கள் செயல்பாட்டை மீண்டும் அழைப்பதற்கு முன், கீரையின் கடைசிப் பயிரைப் பெற, நீங்கள் சில முறை `திரும்பி` \\`முன்னோக்கிச் செல்ல வேண்டும். "
-        },
-        "courseE_farmer_functions9b": {
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "இந்தப் புதிருக்கான தீர்வு, கடைசிப் புதிருக்கான தீர்வைப் போலவே தோற்றமளிக்கும், ஆனால் வேறு திசையில் திரும்பும். "
@@ -10247,8 +9585,6 @@
         "courseE_farmer_while1_2021": {
           "courseE_farmer_ramp12G_b": "விவசாயி வலது அல்லது இடதுபுறம் திரும்ப வேண்டுமா என்பதைத் தீர்மானிக்க உதவ, `if/else` பிளாக்கைப் பயன்படுத்தவும்."
         },
-        "courseE_playLab_challenge1": {
-        },
         "courseE_playLab_scaffold1": {
           "courseE_playLab_scaffold1_a": "`நடிகர் 1 ஆக அமைக்கப்பட்டாரா ??? மேடையில் ஒரு நடிகரைச் சேர்க்க image` block ஐப் பயன்படுத்தலாம்.",
           "courseE_playLab_scaffold1_b": "நிகழ்ச்சியின் தொடக்கத்தில் உங்கள் நடிகர் தோன்றுவதற்கு `செட் நடிகர்` தொகுதியை`எப்போது ஓடு` என்பதன் கீழ் வைக்கவும்.",
@@ -10260,8 +9596,6 @@
         },
         "courseE_playLab_scaffold4": {
           "courseE_playLab_scaffold4_a": "ஒரு புள்ளியைச் சேர்க்க `மதிப்பெண் புள்ளி` ஐப் பயன்படுத்தவும், ஒன்றைக் கழிக்க`புள்ளியை அகற்றவும்`."
-        },
-        "courseE_playLab_scaffold5": {
         },
         "courseF_artist_for1": {
           "courseF_artist_for1_a": "இது போன்ற ஒன்றை நீங்கள் வரைய முடியுமா: \n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
@@ -10311,14 +9645,6 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_a": "இது போன்ற ஒன்றை நீங்கள் வரைய முடியுமா: \n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
         },
-        "courseF_artist_for2": {
-        },
-        "courseF_artist_for2_2018": {
-        },
-        "courseF_artist_for2_2019": {
-        },
-        "courseF_artist_for2_2020": {
-        },
         "courseF_artist_for3": {
           "courseF_artist_for3_b": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரைத் தீர்க்காவிட்டாலும், என்ன நடக்கும் என்பதைப் பார்க்க தொகுதிகளைச் சேர்த்து குறியீட்டை இயக்கவும்."
         },
@@ -10342,14 +9668,6 @@
         },
         "courseF_artist_for4_2020": {
           "courseF_artist_for4_c": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரைத் தீர்க்காவிட்டாலும், என்ன நடக்கும் என்பதைப் பார்க்க தொகுதிகளைச் சேர்த்து குறியீட்டை இயக்கவும்."
-        },
-        "courseF_artist_for5": {
-        },
-        "courseF_artist_for5_2018": {
-        },
-        "courseF_artist_for5_2019": {
-        },
-        "courseF_artist_for5_2020": {
         },
         "courseF_artist_for6": {
           "courseF_artist_for6_a": "உங்கள் `for` லூப் 15ல் இருந்து 300 ஆல் 15 ஆக கணக்கிடப்படும். ",
@@ -10537,28 +9855,6 @@
           "courseF_artist_for_challenge2_c": "`ஃபோர் லூப்` 5 முதல் 250 ஆல் 2 வரை செல்கிறது. ",
           "courseF_artist_for_challenge2_d": "**தீர்வு:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp2": {
-        },
-        "courseF_artist_fwp3": {
-        },
-        "courseF_artist_fwp4": {
-        },
-        "courseF_artist_fwp5": {
-        },
-        "courseF_artist_fwp6": {
-        },
-        "courseF_artist_fwp7": {
-        },
-        "courseF_artist_fwp8": {
-        },
-        "courseF_artist_fwp9": {
-        },
-        "courseF_artist_fwp_challenge1": {
-        },
-        "courseF_artist_fwp_challenge2": {
-        },
         "courseF_artist_variables10": {
           "courseF_artist_variables10_a": "இந்த நிலையில் மகிழுங்கள்! உங்கள் குறியீட்டில் என்ன சிறிய மாற்றங்கள் செய்ய முடியும் என்பதைப் பார்க்கவும். ",
           "courseF_artist_variables10_b": "நீங்கள் பல விஷயங்களை முயற்சி செய்யலாம் மற்றும் உங்கள் குறியீட்டை பல முறை இயக்கலாம். "
@@ -10583,24 +9879,6 @@
           "courseF_artist_variables10_a": "இந்த நிலையில் மகிழுங்கள்! உங்கள் குறியீட்டில் என்ன சிறிய மாற்றங்கள் செய்ய முடியும் என்பதைப் பார்க்கவும். ",
           "courseF_artist_variables10_b": "நீங்கள் பல விஷயங்களை முயற்சி செய்யலாம் மற்றும் உங்கள் குறியீட்டை பல முறை இயக்கலாம். "
         },
-        "courseF_artist_variables2": {
-        },
-        "courseF_artist_variables2_2018": {
-        },
-        "courseF_artist_variables2_2019": {
-        },
-        "courseF_artist_variables2_2020": {
-        },
-        "courseF_artist_variables3": {
-        },
-        "courseF_artist_variables3_2018": {
-        },
-        "courseF_artist_variables3_2019": {
-        },
-        "courseF_artist_variables3_2020": {
-        },
-        "courseF_artist_variables4": {
-        },
         "courseF_artist_variables4_2018": {
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
         },
@@ -10609,30 +9887,6 @@
         },
         "courseF_artist_variables4_2020": {
           "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
-        },
-        "courseF_artist_variables5": {
-        },
-        "courseF_artist_variables5_2018": {
-        },
-        "courseF_artist_variables5_2019": {
-        },
-        "courseF_artist_variables5_2020": {
-        },
-        "courseF_artist_variables6": {
-        },
-        "courseF_artist_variables6_2018": {
-        },
-        "courseF_artist_variables6_2019": {
-        },
-        "courseF_artist_variables6_2020": {
-        },
-        "courseF_artist_variables6a": {
-        },
-        "courseF_artist_variables6a_2018": {
-        },
-        "courseF_artist_variables6a_2019": {
-        },
-        "courseF_artist_variables6a_2020": {
         },
         "courseF_artist_variables7": {
           "courseF_artist_variables7_a": "`செட் லென்த்` தொகுதியைப் பயன்படுத்தி உங்கள் குறியீட்டைத் தொடங்கவும். நீள மாறியை 150 ஆக அமைக்கவும்.",
@@ -10710,37 +9964,11 @@
           "courseF_artist_variables9_a": "இந்தப் புதிருக்கு, லூப் எத்தனை முறை மீண்டும் நிகழ்கிறது என்பதை மாற்றினால் போதும். ",
           "courseF_artist_variables9_b": "'லென்த்' மாற்றும் பிளாக் உங்கள் லூப்பில் இருப்பதை உறுதிசெய்யவும், அதனால் கோடுகள் நீண்டு கொண்டே இருக்கும். "
         },
-        "courseF_artist_variablesFP": {
-        },
         "courseF_artist_variablesFP2022": {
           "polygon_table": "மற்ற பலகோணங்களை முயற்சிக்க வேண்டுமா?\n\nஉங்கள் `ரிபீட்`ல் உள்ள பக்கங்களின் எண்ணிக்கையையும் `டர்ன்` பிளாக்கில் உள்ள கோணத்தையும் பயன்படுத்தவும்.\nஇவற்றை முயற்சிக்கவும்:\n\n|   வடிவம்  | பக்கங்கள் | கோணம் |\n| :-------: | :-------: | :---: |\n| முக்கோணம் |     3     |  120° |\n|   சதுரம்  |     4     |  90°  |\n|  ஐங்கோணம் |     5     |  72°  |\n|  அறுகோணம் |     6     |  60°  |\n|  எண்கோணம் |     8     |  45°  |\n|  நோனாகாண் |     9     |  40°  |\n|  தசமகோணம் |     10    |  36°  |"
         },
-        "courseF_artist_variablesFP_2018": {
-        },
-        "courseF_artist_variablesFP_2019": {
-        },
-        "courseF_artist_variablesFP_2020": {
-        },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "மற்ற பலகோணங்களை முயற்சிக்க வேண்டுமா?\n\nஉங்கள் `ரிபீட்`ல் உள்ள பக்கங்களின் எண்ணிக்கையையும் `டர்ன்` பிளாக்கில் உள்ள கோணத்தையும் பயன்படுத்தவும்.\nஇவற்றை முயற்சிக்கவும்:\n\n|   வடிவம்  | பக்கங்கள் | கோணம் |\n| :-------: | :-------: | :---: |\n| முக்கோணம் |     3     |  120° |\n|   சதுரம்  |     4     |  90°  |\n|  ஐங்கோணம் |     5     |  72°  |\n|  அறுகோணம் |     6     |  60°  |\n|  எண்கோணம் |     8     |  45°  |\n|  நோனாகாண் |     9     |  40°  |\n|  தசமகோணம் |     10    |  36°  |"
-        },
-        "courseF_artist_variables_challenge1": {
-        },
-        "courseF_artist_variables_challenge1_2018": {
-        },
-        "courseF_artist_variables_challenge1_2019": {
-        },
-        "courseF_artist_variables_challenge1_2020": {
-        },
-        "courseF_artist_variables_challenge2": {
-        },
-        "courseF_artist_variables_challenge2_2018": {
-        },
-        "courseF_artist_variables_challenge2_2019": {
-        },
-        "courseF_artist_variables_challenge2_2020": {
-        },
-        "courseF_bee_conditionals10": {
         },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_a": "சில நேரங்களில் ஒரு பூ இருக்கும், சில நேரங்களில் அது இருக்காது. இரண்டு சந்தர்ப்பங்களிலும் உங்கள் குறியீடு இயங்க வேண்டுமெனில், `if` அறிக்கையைப் பயன்படுத்துவதை உறுதிசெய்யவும். "
@@ -10751,8 +9979,6 @@
         "courseF_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "நீங்கள் முழு பாதையையும் பார்க்க முடியும் என்றாலும், ஒவ்வொரு இடத்தையும் அதன் மேல் ஒரு மேகம் இருப்பதைப் போல நீங்கள் இன்னும் கருதலாம். ",
           "courseF_bee_conditionals4_b": "ஒவ்வொரு இடத்தையும் தேன் உள்ளதா எனச் சரிபார்க்க, உங்கள் லூப்பில் உள்ள `if` அறிக்கையைப் பயன்படுத்தவும். "
-        },
-        "courseF_bee_conditionals5": {
         },
         "courseF_bee_conditionals8": {
           "courseF_bee_conditionals8_a": "**நினைவில் கொள்ளுங்கள்:** இந்தப் புதிர் ஒவ்வொரு முறை இயங்கும் போதும் மாறும்.\n\nசவாலைத் தீர்க்க, நிபந்தனை பிளாக் (`if` அல்லது `if/else`) பயன்படுத்த வேண்டும்.",
@@ -11070,54 +10296,8 @@
           "courseF_bee_for_challenge2_c": "ஒரு `ஃபார்` லூப்புக்கு உள்ளே பல வழக்கமான சுழல்கள் தேவை என்பதைக் கவனியுங்கள், அது அதிகரித்து வரும் படிக்கட்டு வடிவத்தை உருவாக்க `எதிர்` முறைகளை மீண்டும் மீண்டும் செய்கிறது.\n\nமற்ற `ஃபார்` லூப்பிற்கு `கவுண்டர்` அளவு தேனை உருவாக்க ஒரு வழக்கமான வளையம் மட்டுமே தேவை. ",
           "courseF_bee_for_challenge2_d": "**தீர்வு:**\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
-        "courseF_bee_functions2": {
-        },
-        "courseF_bee_functions3": {
-        },
-        "courseF_bee_functions3a": {
-        },
-        "courseF_bee_functions4": {
-        },
-        "courseF_bee_functions5a": {
-        },
-        "courseF_bee_functions6": {
-        },
-        "courseF_bee_functions7": {
-        },
-        "courseF_bee_functions8a": {
-        },
-        "courseF_bee_functionsPre7": {
-        },
-        "courseF_bee_functions_challenge1": {
-        },
         "courseF_bee_functions_challenge2": {
           "courseF_bee_functions_challenge2_b": "**தீர்வு:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                      <mutation name=\"move and check\"></mutation>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n  <mutation></mutation>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"check nectar or honey\"></mutation>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n  <mutation></mutation>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_whileNectarAmount\">\n        <title name=\"ARG1\">nectarRemaining</title>\n        <title name=\"OP\">&gt;</title>\n        <title name=\"ARG2\">0</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\"/>\n        </statement>\n        <next>\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml> "
-        },
-        "courseF_bee_fwp1": {
-        },
-        "courseF_bee_fwp2": {
-        },
-        "courseF_bee_fwp3": {
-        },
-        "courseF_bee_fwp4": {
-        },
-        "courseF_bee_fwp5": {
-        },
-        "courseF_bee_fwp6": {
-        },
-        "courseF_bee_fwp7": {
-        },
-        "courseF_bee_fwp8": {
-        },
-        "courseF_bee_fwp_challenge1": {
-        },
-        "courseF_bee_fwp_challenge2": {
-        },
-        "courseF_bee_variables_3_2018": {
-        },
-        "courseF_bee_variables_3_2019": {
-        },
-        "courseF_bee_variables_3_2020": {
         },
         "courseF_bee_variables_3a2022": {
           "courseF_bee_variables_3_2021_1": "பேட்டர்னைத் தொடர, மீண்டும் மீண்டும் எண்ணிக்கையை அதிகரிக்கவும்: \n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -11131,23 +10311,11 @@
         "courseF_bee_variables_3aa_2021": {
           "courseF_bee_variables_3_2021_1": "மாறியில் ஒன்றைச் சேர்க்க, உங்கள் நிரலில் இந்தக் குறியீட்டைப் பயன்படுத்தலாம்:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
         },
-        "courseF_bee_variables_4_2019": {
-        },
-        "courseF_bee_variables_4_2020": {
-        },
         "courseF_bee_variables_4a2022": {
           "courseF_bee_variables_4_2021_1": "மாறியில் 1ஐச் சேர்ப்பதற்குப் பதிலாக, ஒவ்வொரு முறையும் 2ஐச் சேர்க்கவும். "
         },
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "மாறியில் 1ஐச் சேர்ப்பதற்குப் பதிலாக, ஒவ்வொரு முறையும் 2ஐச் சேர்க்கவும். "
-        },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
         },
         "courseF_events_choice_pufferfish": {
           "changeProp": "உங்களுக்கு இந்தத் தொகுதியும் தேவைப்படும்:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -11160,36 +10328,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "உங்களுக்கு இந்தத் தொகுதியும் தேவைப்படும்:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
-        },
-        "courseF_playlab_variables1a": {
-        },
-        "courseF_playlab_variables2b": {
-        },
-        "courseF_playlab_variables3b_josh": {
-        },
-        "courseF_playlab_variables4b": {
-        },
-        "courseF_playlab_variables5c": {
-        },
-        "courseF_playlab_variables6c": {
-        },
-        "courseF_playlab_variables7b": {
-        },
-        "courseF_playlab_variables7c": {
-        },
-        "courseF_playlab_variables8c": {
-        },
-        "courseF_playlab_variables_challenge1": {
         },
         "courseF_playlab_variables_challenge2": {
           "courseF_playlab_variables_challenge2_c": "**தீர்வு:** \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml> "
@@ -11211,10 +10349,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml> "
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "உங்கள் முதல் `பதிலளிக்கும் போது` நிகழ்வில் புதிய ப்ராம்ட் பிளாக்கை வேறொரு மாறியுடன் இணைப்பதன் மூலம் இரண்டாவது (அல்லது மூன்றாவது அல்லது நான்காவது) ப்ராம்ட்டைச் சேர்க்கலாம்.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">உன் பிறந்தநாளுக்கு என்ன வேண்டும்?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
@@ -11273,14 +10407,6 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "பீட்சா ஏதாவது சொல்ல, இது போன்ற குறியீடு தொகுதிகளை இணைக்கவும்: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml> "
-        },
-        "grade5_artist_variables_triangles1": {
-        },
-        "grade5_artist_variables_triangles1_2018": {
-        },
-        "grade5_artist_variables_triangles1_2019": {
-        },
-        "grade5_artist_variables_triangles1_2020": {
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "`கிளிக் செய்தபோது` நிகழ்வுத் தொகுதியின் கீழ் `செட் பேக்ரவுண்ட்` பிளாக்கை இணைப்பதன் மூலம் பின்னணியை மாற்றலாம்: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml> "

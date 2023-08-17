@@ -1730,6 +1730,8 @@ mr:
             आणि आईस एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून
             पहा!
           title: क्लासिक मेझ
+        how-ai-works-2023:
+          title: AI कसे कार्य करते
         iceage:
           name: हिमयुग
         infinity:
@@ -1762,6 +1764,80 @@ mr:
             प्राणी प्रोग्राम करा.
           student_description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट
             प्राणी प्रोग्राम करा.
+        nevada-standards-aligned-fifth-grade-2023:
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: कंडीशनल्स
+            lessonGroup-5:
+              display_name: व्हेरीएबल्स
+            lessonGroup-7:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-3:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-4:
+              display_name: लूप्स
+            lessonGroup-6:
+              display_name: ईव्हेंट्स
+            lessonGroup-7:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+            lessonGroup-8:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: नेस्टेड लूप्स
+            lessonGroup-6:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+        nevada-standards-aligned-kindergarten-2023:
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-3:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-4:
+              display_name: लूप्स
+            lessonGroup-6:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-3:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-4:
+              display_name: लूप्स
+            lessonGroup-5:
+              display_name: ईव्हेंट्स
+            lessonGroup-6:
+              display_name: डेटा
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-3:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-6:
+              display_name: लूप्स
+            lessonGroup-7:
+              display_name: डेटा
+            lessonGroup-8:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         new-e:
           lesson_groups:
             end_of_course_project:
@@ -2149,6 +2225,14 @@ mr:
             lessonGroup-3:
               display_name: प्रकरण 2
           title: समस्या सोडवणे
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजिटल सिटीझनशिप
+            lessonGroup-3:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-4:
+              display_name: लूप्स
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

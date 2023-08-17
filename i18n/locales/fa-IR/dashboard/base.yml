@@ -612,7 +612,7 @@ fa:
     download: 'دانلود ویدیو'
     show_notes: 'نمایش یادداشتها'
     show_video: 'نمایش ویدئو'
-    label: 'ویدیو'
+    label: 'ویدئو'
   compatibility:
     upgrade:
       unsupported_message: "مرورگر شما پشتیبانی نمیشود. لطفا مرورگر خود را به [یکی از مرورگرهای تحت پشتیبانی ما] [one of our supported browsers] %{supported_browsers_url} بروزرسانی کنید. میتوانید محتویات صفحه را مشاهده کنید، اما عملکرد آن مطلوب نخواهد بود."
@@ -1168,3 +1168,4 @@ fa:
     binary: "دو دویی"
     hexadecimal: "سیستم شانزده شانزدهی"
     pixel_format_header: "قالب پیکسل"
+

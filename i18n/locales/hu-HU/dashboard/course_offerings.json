@@ -21,6 +21,7 @@
   "minecraft": "Minecraft Kódolás Órája tervező",
   "oceans": "AI óceánok",
   "playlab": "Játéklabor",
+  "starwars": "Star Wars: Egy galaxis építése kóddal (JavaScript)",
   "text-compression": "Szöveg tömörítése",
   "csa-self-paced-pl": "Navigálás a Code.org platformon a CSA kísérletben résztvevő tanárok számára",
   "poem-art": "Versművészet",
@@ -37,5 +38,6 @@
   "soccer": "foci",
   "hello-world-space": "Helló Világ: Space",
   "hello-world-soccer": "Helló Világ: Labdarúgás",
-  "playground": "játszótér"
+  "playground": "játszótér",
+  "how-ai-works": "Hogyan működik az MI?"
 }

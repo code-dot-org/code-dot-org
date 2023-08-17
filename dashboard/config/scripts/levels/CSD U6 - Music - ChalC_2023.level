@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:44.000Z",
   "level_num": "custom",
@@ -96,7 +97,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "display_name": "Alarm Clock Version 3",
     "parent_level_id": 20537,
     "name_suffix": "_2023",
@@ -110,7 +111,8 @@
     "ai_enabled": "false",
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes",
-      "/courses/csd-2022/guides/arrays"
+      "/courses/csd-2022/guides/arrays",
+      "/maker/setup"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; padding: 2px 15px; width: 320px; height: 50px; position: absolute; left: 0px; top: 0px; font-size: 25px; text-align: center;\" id=\"titleLabel\">Alarm Clock Settings</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; padding: 2px 15px; width: 320px; height: 40px; position: absolute; left: 0px; top: 55px; text-align: center;\" id=\"descriptionLabel\">Choose an alarm preference from the dropdown below</label><select id=\"alarmDropdown\" style=\"width: 200px; height: 30px; margin: 0px; border-style: solid; background-color: rgb(255, 255, 255); color: rgb(77, 87, 95); background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%234d575f%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E&quot;); border-color: rgb(0, 0, 0); border-radius: 4px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 0px 30px 0px 15px; position: absolute; left: 60px; top: 155px;\"><option>Alert</option><option>[Add your own style here]</option><option>[Add your own style here]</option></select><button id=\"testButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 35px; width: 160px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 80px; top: 295px;\">Test the Alarm</button></div></div>",
     "start_blocks": "onEvent(\"testButton\", \"click\", function() {\r\n  //1) Get the value from the dropdown and store it in a variable\r\n  \r\n  //2) Play a song depending on what the user selected\r\n  \r\n});\r\n",
@@ -118,9 +120,8 @@
     "encrypted_examples": "v7IpwEMDQhdhZUqQfHl1r6Vdl6oDOxkIwnokDXK8ojohb78JuQdZK3hXU9kL\n670G8eOE0fMcfy1bPkEUEKbQAw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:44.395+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:44.395+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2222\"},{\"changed_at\":\"2023-08-16 19:34:56 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

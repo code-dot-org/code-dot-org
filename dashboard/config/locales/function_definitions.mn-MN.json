@@ -67,9 +67,7 @@
             "name": "толгой зурах"
           },
           "draw body and arms": {
-            "name": "их бие, гарыг зурах",
-            "parameters": {
-            }
+            "name": "их бие, гарыг зурах"
           },
           "draw left leg": {
             "name": "зүүн хөлийг зурах"
@@ -161,14 +159,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "цасан ширхэг зурах"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {
@@ -455,37 +445,27 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "3 шүүс цуглуулах",
-            "parameters": {
-            }
+            "name": "3 шүүс цуглуулах"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "3 шүүс цуглуулах",
-            "parameters": {
-            }
+            "name": "3 шүүс цуглуулах"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "5 шүүс цуглуулах",
-            "parameters": {
-            }
+            "name": "5 шүүс цуглуулах"
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "5 шүүс цуглуулах",
-            "parameters": {
-            }
+            "name": "5 шүүс цуглуулах"
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "олон шүүс цуглуулах",
-            "parameters": {
-            }
+            "name": "олон шүүс цуглуулах"
           }
         },
         "Course 4 Bee Params 8": {
@@ -624,9 +604,7 @@
             "name": "найман өнцөгт зурах"
           },
           "draw octagons": {
-            "name": "найман өнцөгт зурах",
-            "parameters": {
-            }
+            "name": "найман өнцөгт зурах"
           },
           "shift down": {
             "name": "доош шилжих"
@@ -657,16 +635,8 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -705,21 +675,11 @@
             "parameters": {
               "length": "урт"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -758,8 +718,6 @@
             "parameters": {
               "length": "урт"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Play Lab Project": {
@@ -769,9 +727,7 @@
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -814,9 +770,7 @@
         },
         "CourseD_EOC_artist": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -859,9 +813,7 @@
         },
         "CourseD_EOC_artist2022": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -904,9 +856,7 @@
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -949,9 +899,7 @@
         },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -994,9 +942,7 @@
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -1037,18 +983,6 @@
             }
           }
         },
-        "CourseF_app_computer": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-          }
-        },
         "Find the Wizard": {
           "check guess": {
             "name": "таамаглалаа шалгаарай"
@@ -1066,26 +1000,6 @@
             "parameters": {
               "points": "цэгүүд"
             }
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
           }
         },
         "Geometric Sun": {
@@ -1154,9 +1068,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "таамаглалаа шалгаарай",
-            "parameters": {
-            }
+            "name": "таамаглалаа шалгаарай"
           }
         },
         "InspirationalArtwork": {
@@ -1209,122 +1121,6 @@
         "K-1 Artist2 5": {
           "draw rectangle": {
             "name": "тэгш өнцөгт зураарай"
-          }
-        },
-        "MC Agent Freeplay": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-          },
-          "fix short path": {
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-          },
-          "fix short path": {
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-          },
-          "fix short path": {
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-          },
-          "fix short path": {
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-          },
-          "fix short path": {
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build long bridge": {
-          },
-          "build short bridge": {
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build long bridge": {
-          },
-          "build short bridge": {
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build long bridge": {
-          },
-          "build short bridge": {
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build long bridge": {
-          },
-          "build short bridge": {
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build long bridge": {
-          },
-          "build short bridge": {
-          }
-        },
-        "MC_HOC_2017_FP20x20": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x20_2019": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x20_2020": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-          },
-          "function 2": {
           }
         },
         "NEW Course 4 Artist Functions 11": {
@@ -1463,9 +1259,7 @@
         },
         "NEW Course 4 Artist Params 15": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -1615,9 +1409,7 @@
         },
         "New Artist Project": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -1656,12 +1448,6 @@
             "parameters": {
               "length": "урт"
             }
-          }
-        },
-        "New Minecraft Hero Project": {
-          "function 1": {
-          },
-          "function 2": {
           }
         },
         "New Play Lab Project": {
@@ -1835,9 +1621,7 @@
             "name": "ямар нэг юм хийх"
           },
           "draw a polygon": {
-            "name": "олон өнцөгт зурах",
-            "parameters": {
-            }
+            "name": "олон өнцөгт зурах"
           },
           "draw a square 20": {
             "name": "квадрат 20-г зураарай"
@@ -2580,12 +2364,6 @@
             "name": "бит зурах"
           }
         },
-        "courseE_Dogger_2": {
-          "lose": {
-          },
-          "stop_everything": {
-          }
-        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "ямар нэг юм хийх"
@@ -2925,8 +2703,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2018": {
@@ -2938,8 +2714,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2019": {
@@ -2951,8 +2725,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2020": {
@@ -2964,8 +2736,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2021": {
@@ -2977,8 +2747,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8a2022": {
@@ -3085,8 +2853,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -3098,8 +2864,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -3111,8 +2875,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -3124,8 +2886,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -3137,8 +2897,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions9": {
@@ -3219,8 +2977,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -3235,8 +2991,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -3251,8 +3005,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -3267,8 +3019,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -3283,8 +3033,6 @@
           },
           "draw square": {
             "name": "квадрат -г зураарай"
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -3612,56 +3360,6 @@
             "name": "ямар нэг юм хийх"
           }
         },
-        "courseE_farmer_functions10a12022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "залуурдах"
@@ -3678,264 +3376,14 @@
             "name": "замаар яв"
           }
         },
-        "courseE_farmer_functions11_predict2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-          }
-        },
         "courseE_farmer_functions2ba": {
           "corn and pumpkin": {
             "name": "эрдэнэ шиш, хулуу"
           }
         },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
         "courseE_farmer_functions3c": {
           "corn and pumpkin": {
             "name": "эрдэнэ шиш, хулуу"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
           }
         },
         "courseE_farmer_functions4b": {
@@ -3953,69 +3401,9 @@
             "name": "эрдэнэ шиш, хулуу"
           }
         },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-          }
-        },
         "courseE_farmer_functions8b": {
           "navigate": {
             "name": "залуурдах"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
           }
         },
         "courseE_farmer_functions9b": {
@@ -4205,9 +3593,7 @@
         },
         "courseF_artist_fwp9": {
           "draw a circle": {
-            "name": "тойрог зурах",
-            "parameters": {
-            }
+            "name": "тойрог зурах"
           },
           "draw a house": {
             "name": "байшин зурах",
@@ -4260,9 +3646,7 @@
             "name": "ямар нэг юм хийх"
           },
           "draw a polygon": {
-            "name": "олон өнцөгт зурах",
-            "parameters": {
-            }
+            "name": "олон өнцөгт зурах"
           },
           "draw a square 20": {
             "name": "квадрат 20-г зураарай"
@@ -4476,78 +3860,6 @@
             }
           }
         },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "цуглуулах"
@@ -4566,22 +3878,16 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "цуглуулах"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "цуглуулах"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "цуглуулах"
-          },
-          "move and increment": {
           }
         },
         "grade5_artist_binary11": {

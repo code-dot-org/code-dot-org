@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
@@ -15,6 +17,9 @@ class StudentTable extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
     unitName: PropTypes.string,
+
+    // provided by redux
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   getRowLink = studentId => {
@@ -38,8 +43,18 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
-      this.props;
+    const {
+      students,
+      onSelectUser,
+      selectedUserId,
+      levelsWithProgress,
+      isSortedByFamilyName,
+    } = this.props;
+
+    // Sort students, in-place.
+    isSortedByFamilyName
+      ? students.sort((a, b) => a.familyName.localeCompare(b.familyName))
+      : students.sort((a, b) => a.name.localeCompare(b.name));
 
     return (
       <table style={styles.table} className="student-table">
@@ -70,6 +85,8 @@ class StudentTable extends React.Component {
                   )}
                   <div style={styles.name}>
                     {student.name}
+                    {!!DCDO.get('family-name-features', false) &&
+                      ` ${student.familyName}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
@@ -130,4 +147,7 @@ const styles = {
   },
 };
 
-export default Radium(StudentTable);
+export const UnconnectedStudentTable = Radium(StudentTable);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+}))(UnconnectedStudentTable);

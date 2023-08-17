@@ -578,17 +578,6 @@ ko-KR:
           # 바이너리 이미지
 
           단지 간단한 두 개의 값 만을 사용하여 이미지를 재창조하는 방법을 소통하세요.
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -611,22 +600,10 @@ ko-KR:
         display_name: 스프라이트 속성
       CSD Games Properties practice_2022:
         display_name: 스프라이트 속성
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: 변수 연습
       CSD Games variables practice_2022:
         display_name: 변수 연습
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -699,13 +676,6 @@ ko-KR:
           &lt;h1&gt; 베이컨 &lt;/h1&gt;
           &lt;h6&gt; 와플 &lt;/h6&gt;
           </pre>
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -796,7 +766,6 @@ ko-KR:
           * [앱과 문제해결 - 프로젝트 가이드](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [앱과 문제해결 - 동료검토](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [앱과 문제해결 - 채점표](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -881,10 +850,6 @@ ko-KR:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: CSS로 텍스트 스타일링
       CSD U2 CSS practice_pilot_2022:
@@ -1018,8 +983,6 @@ ko-KR:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: 이미지 추가
       CSD U2 Image challenge_pilot_2022:
@@ -1035,7 +998,6 @@ ko-KR:
         teacher_markdown: |-
           *[웹 사이트의 목적 - 모범]
           (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: 설명 입력
       CSD U2 L3 Overview:
@@ -1046,10 +1008,8 @@ ko-KR:
         content1: 설명 입력
       CSD U2 L6 Overview:
         content1: 설명 입력
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: 설명 입력
-      CSD U2 Lesson 9 Overview: {}
       CSD U2 PSP Programming:
         markdown: |+
           # 프로그래밍을 위한 문제해결 프로세스
@@ -1167,12 +1127,6 @@ ko-KR:
           # 문제해결 프로세스 검토
 
           문제해결 프로세스의 네 가지 단계를 전체 학급이 함께 검토합니다.
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1386,8 +1340,6 @@ ko-KR:
           * Facebook.com - 사용자가 친구와 정보를 공유하는 소셜 미디어 커뮤니티* Amazon.com - 모든 종류의 상품을 위한 온라인 쇼핑 사이트
           * Yahoo.com - 검색 엔진, 이메일 사업자, 뉴스 소스
           * Wikipedia.org - 사용자가 생성한 컨텐츠로 구성된 무료 백과사전
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: 설명 입력
         markdown: |
@@ -1502,12 +1454,6 @@ ko-KR:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1560,8 +1506,6 @@ ko-KR:
         content1: 설명 입력
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: 설명 입력
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1627,11 +1571,6 @@ ko-KR:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1700,9 +1639,6 @@ ko-KR:
           * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1767,14 +1703,6 @@ ko-KR:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |+
           # 개요
@@ -1808,13 +1736,6 @@ ko-KR:
           ## 리소스
 
           * [변수에 대한 소개](https://youtu.be/G41G_PEWFjE) - 비디오 ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -2047,7 +1968,6 @@ ko-KR:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: 설명 입력
       CSD U3 combining rep_2018:
@@ -2098,8 +2018,6 @@ ko-KR:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: 연습
       CSD U3 drawing practice choice_2022:
@@ -2269,22 +2187,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: 설명 입력
       CSD U5 Encryption 1_2018:
@@ -2317,7 +2219,6 @@ ko-KR:
         content1: 설명 입력
       CSD U5 student record_2018_2019:
         content1: 설명 입력
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2459,43 +2360,30 @@ ko-KR:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: 도전 레벨
       CSD U6 - Music - Chal_2222:
         display_name: 도전 레벨
       CSD U6 - Physical Input - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: 도전 레벨
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: 설명 입력
       CSD U6 LED create intro_2018:
@@ -2536,10 +2424,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: 설명 입력
       CSD U6 final intro_2018:
@@ -2548,10 +2432,6 @@ ko-KR:
         content1: 설명 입력
       CSD U6 final intro_2021:
         content1: 설명 입력
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2723,112 +2603,34 @@ ko-KR:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: 도전
       CSD games cake challenge choice_2022:
         display_name: 도전
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: 함수 연습
       CSD games functions practice choice_2022:
         display_name: 함수 연습
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: 도전
       CSD games platform challenge choice_2022:
         display_name: 도전
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: 조건 연습
       CSD web conditionals practice choice_2022:
         display_name: 조건 연습
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: 연습
       CSD web draw loop practice choice_2022:
         display_name: 연습
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: 연습
       CSD web movement practice choice_2022:
         display_name: 연습
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: 연습
       CSD web text practice choice_2022:
         display_name: 연습
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2841,7 +2643,6 @@ ko-KR:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2850,7 +2651,6 @@ ko-KR:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: "# 카드 조건문\n\n카드 게임을 하고 \"빨간 카드를 뽑으면 내가 1 포인트를 얻기\"와 \"검정색 카드를 뽑으면
           상대방이 1 포인트 얻기\"등과 같은 규칙을 만드세요. "
@@ -3082,10 +2882,6 @@ ko-KR:
           src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\n속도를 높여요, 속도는
           낮춰요 \n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # 접근가능성을 위한 설계
@@ -3156,8 +2952,6 @@ ko-KR:
           # 디지털 공유
 
           이 레슨에서는 특히 디지털 환경에서 소유권과 저작권을 존중하는 것의 도전과 이점에 대해 생각해 볼 것입니다.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# 봉투 변수\n\n변수는 컴퓨터 과학에서 많은 자유를 가능하게 해 줍니다. 이 레슨에서는 변수란 무엇이며 그것이
           여러 방식으로 어떻게 사용되는지 배울 수 있습니다. "
@@ -3177,8 +2971,6 @@ ko-KR:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |-
           # For 루프 펀
@@ -3637,7 +3429,6 @@ ko-KR:
           * 임의적 치환으로 암호화된 메시지를 풀 수 있는지 알아 내세요.\n \n### 힌트\n\n* **E**가 영어에서 가장 흔한 글자인거
           알아요?\n\n### 재소집 및 토론\n 혼자 풀어 보는 시간을 가진 후, 파트너 또는 소그룹, 전체 학급과 함께 각자 알아낸 내용을
           토론하며 툴 사용 시 어떻게 될지 또한 툴의 다양한 사용법을 알고 있는지 검증해야 합니다.\n\n\n"
-      OPD-K5 About: {}
       OPD-K5 About_copy:
         markdown: "# '컴퓨터 과학 기초 교육'에 오신 걸 환영합니다.\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
           class=\"level-image\">\n\n## 이 온라인 과정의 목적은? \n이 온라인 과정은 교사들에게 Code.org의
@@ -3657,8 +3448,6 @@ ko-KR:
           작은 크기로 나올 수 있다는 점을 인지합니다! \n\n폰트 크기를 더 크게 만들려면:\n- 맥에서, \"명령어\"와 \"+\"를
           클릭하세요.\n- 윈도우즈에서, \"컨트롤\"과 \"+\"를 클릭하세요\n\n폰트 크기를 더 적게 만들려면: \n- 맥에서, \"명령어\"와
           \"-\"를 클릭하세요.\n- 윈도우즈에서, \"컨트롤\"과 \"-\"를 클릭하세요.\n"
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
       OPD-K5 Assessment_copy:
         markdown: "# 기타 리소스\n\nCode.org에 교사로서 로그인하면 학생들은 접근할 수 없는 많은 요소에 접근할 수 있습니다.
           여러분은 이미 과정 찾는 법과 섹션 생성하는 법, 수업을 그 섹션에 배정하는 법을 보았습니다. 하지만, 다음과 같은 일 역시 할
@@ -3677,7 +3466,6 @@ ko-KR:
           support.code.org에 접속할 수 있으며 또한 Code.org 홈페이지 우측 상단에 있는 드롭다운 메뉴를 통해 교사 포럼으로
           들어 갈 수 있습니다.\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03
           PM.png)\n\n"
-      OPD-K5 Assessment_dani: {}
       OPD-K5 CS Courses:
         markdown: "# 계획 > Code.org 시작하기\n\n\n## 1단계: 과정 선택\n미취학 아동부터 고등학생까지, Code.org의
           모든 과정은 **[수업 과정 카탈로그](https://studio.code.org/courses)**에서 확인할 수 있습니다. 연습한
@@ -3791,7 +3579,6 @@ ko-KR:
           4단계: 가르쳐 봅시다! \n컴퓨터 과학 개념을 학생들이 배울 수 있도록 첫 수업부터 시작해 보세요. 컴퓨터 과학에 대한 학생들의
           열정이 느껴진다면 일일 수업 계획으로 학생들의 학습을 안내하고, 컴퓨터 없이도 가능한 언플러그드 활동을 하고, 포럼을 진행해 다른
           교사들과도 의견을 나눠 보세요."
-      OPD-K5 CS Tips: {}
       OPD-K5 CS Tips_copy:
         markdown: |+
           # 이 온라인 과정 탐색
@@ -3818,14 +3605,6 @@ ko-KR:
           <br/>
 
 
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
       OPD-K5 Connect_copy:
         markdown: "# 다음 단계 \n\n\n## 사후 설문조사\n\n과정 전체를 순서대로 할지 또는 그렇지 않을지 상관 없이, 우리는
           여러분의 피드백을 듣길 원합니다. 과정의 계속적인 향상을 위해, 이 짧은 설문조사를 제출하여 주십시오! \n\n<a class=\"btn
@@ -3847,10 +3626,6 @@ ko-KR:
           target=\"blank\">CSTA</a>는 전국 각지의 교사들로 구성된 커뮤니티로 학생들에게 컴퓨터 과학을 교육 받을 기회를
           주는 한편 이 과목에 대한 대중의 인식을 높입니다. 이 협회는 연례 총회를 주최하고 또한 지부를 두어 지역 총회를 개최합니다.\n\n\n>
           참가해 주셔서 감사합니다! 우리는 컴퓨터 과학과 코드 스튜디오를 교실에서 어떻게 실행했는지 여러분의 사례와 의견을 듣고 싶습니다!\n\n"
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
-      OPD-K5 Outline: {}
       OPD-K5 Outline_copy:
         markdown: "# 과정 개관\n\n과정은 네 가지 개념으로 나눠지며 각각은 그에 관한 레슨을 담고 있습니다. 레슨은 학생과 교사가
           회화체로 버블 또는 단계, 퍼즐로 지칭하는 여러 \"레벨\"로 구성되어 있습니다. 여기, 전체 과정을 완료하면 배우게 될 내용의
@@ -3884,8 +3659,6 @@ ko-KR:
           공유\n\n> **비고**: 위의 제안 시간은 학습을 계획하는 데 도움을 주고자 제공하였습니다. 사전 지식과 관심, 능력에 따라,
           주어진 단계에서 더 많은 또는 더 적은 시간을 들일 수 있습니다. 이 과정은 완전히 자기 진도에 맞춰 학습할 수 있으며, 항상 과정에서
           나갔다가 다시 돌아오거나 또는 언제든 어느 단계 또는 레벨을 재방문할 수 있습니다. \n\n"
-      OPD-K5 Outline_dani: {}
-      OPD-K5 Pair: {}
       OPD-K5 Pair_copy:
         markdown: "# 학습지도: 페어 프로그래밍\n\n많은 교사들이 사용하는 한 가지 중요한 교실 관리 전략은 전략적 그룹 만들기입니다.
           Code.org에서 우리는 상위 테크 기업의 실제 세상 사무실에서 사용하는 전략적 그룹 만들기 전략: 페어 프로그래밍을 시도해 볼
@@ -3901,8 +3674,6 @@ ko-KR:
           페어 프로그래밍을 소개하는 방법에 관해 배워 보세요.\n\n<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\"
           target=\"blank\">![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16
           PM.png)</a>\n\n[동영상을 볼 수 없어요? 여기를 클릭하세요](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)\n<br/>\n\n\n\n\n"
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
       OPD-K5 Participation_copy:
         markdown: |
           # 참가 계획
@@ -3928,20 +3699,12 @@ ko-KR:
           ## 자신에게 맞는 학습 경험 찾기
 
           마지막으로 온라인 학습은 모두에게 적합한 것은 아닙니다. 이 과정에는 교사도 없으며 친구와 실시간으로 소통하기 위한 메커니즘도 없습니다. 1대 1 관심 및 주목이 필요하다고 느끼면 또는 실제 세상 교실에서 즉, 협력하고 참여할 기회가 더 많은 곳에서 학습하는 것이 더 나으면, 우리의 <a href="http://code.org/professional-development-workshops" target="blank">대면 전문성 개발 기회</a> 중 하나를 추구해 보길 권합니다.
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: 설명 입력
         markdown: "# 개관: 성찰 검토\n\n축하합니다! 여러분은 기초 코딩 개념에 익숙해졌고 그러한 개념을 연습할 기회를 가졌습니다.
           \n\n다음 레슨으로 넘어가기 전 이 레슨에서 여러분은 온라인 과정 동안 작성했던 성찰 몇 편을 검토할 기회를 가질 것입니다. 원하면
           자유롭게 그것을 변경하거나 업데이트할 수 있습니다! \n\n과정 E와 F의 선택사항 섹션을 작성하지 않았으면, 그 레벨은 건너 뛸
           수 있습니다. \n"
-      OPD-K5 Stage10Start: {}
       OPD-K5 Stage10Start_copy:
         markdown: "# 개관: 다음 단계\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\"
           class=\"level-image\">\n\n## 지금까지 한 일\n\n - 컴퓨터 과학 기초 커리큘럼의 구조와 컨텐츠에 친숙해
@@ -3950,10 +3713,6 @@ ko-KR:
           학급 섹션을 설정하는 방법 학습\n - 컴퓨터 과학 기초를 교실에서 가르치기 위한 계획 수립\n - 계속 학습하기 위해 취할 수
           있는 다음 단계를 위한 계획\n - 컴퓨터 과학 교육에 관심 있는 동료 교사로 구성된 세계적 커뮤니티와 연결\n - 사후조사를 통해
           피드백 제공\n - 완료 인증서 인쇄\n\n"
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
       OPD-K5 Stage2Go_copy:
         markdown: "# 성찰\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\"
           class=\"level-image\">\n\n## 잠시 정지 및 성찰\n지금 까지 이 과정을 통해 컴퓨터 과학이란 무엇이며, 왜
@@ -3967,12 +3726,6 @@ ko-KR:
           법을 배우는데는 시간이 걸리지만 누구나 할 수 있는 일입니다!**\n\n<br/>\n\n> **주요 느낀점:** 다음의 서너 개의
           레슨의 목표는 여러분을 컴퓨터 과학자로 만들어 주는 것이 아니라 대신, 주요 개념을 그에 관한 지식을 친구들과 신이 나서 나눌 정도로
           충분히 편안하게 느끼도록 도와주는 것입니다.\n"
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
       OPD-K5 Stage3Start_copy:
         markdown: |+
           # 개관: 시퀸싱
@@ -3989,7 +3742,6 @@ ko-KR:
           - 레슨 실행 계획 가이드를 보고 그것으로 연습할 기회를 갖게 될 것입니다.
 
 
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: 설명 입력
       OPD-K5 Stage3aGo_copy:
@@ -4011,7 +3763,6 @@ ko-KR:
           PM.png)</a>\n"
       OPD-K5 Stage3aGo_dani:
         content1: 설명 입력
-      OPD-K5 Stage4Go: {}
       OPD-K5 Stage4Go_copy:
         markdown: |+
           # 언플러그드 레슨: 게팅 루피(Getting Loopy)
@@ -4028,10 +3779,6 @@ ko-KR:
           ***
           <a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>
 
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
       OPD-K5 Stage4Start_copy:
         markdown: |+
           # 개관: 루프
@@ -4044,8 +3791,6 @@ ko-KR:
           ## 학습지도: 페어 프로그래밍
           - 페어 프로그래밍의 이점과 실제 세상에서 사용하는 방법 이해
 
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
       OPD-K5 Stage5Go_copy:
         markdown: "# 언플러그드 레슨: 카드 조건문\n\n> **조건문**은 if 문입니다.\n****\n\n## **1.과정 D의
           \"<a href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\">카드
@@ -4056,10 +3801,6 @@ ko-KR:
           지원하려는 의도를 가졌습니다. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
           target=\"blank\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>\n\n"
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
       OPD-K5 Stage5Start_copy:
         markdown: |
           # 개관: 조건문
@@ -4073,8 +3814,6 @@ ko-KR:
 
           ## 학습지도: 저널 작성
           - 저널 프롬프트를 사용해 학생들이 자신들이 배운 내용을 처리 및 반영함은 물론 문제를 풀어 나갈 수 있게 도와 줍니다.
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
       OPD-K5 Stage6Go_copy:
         markdown: "# 언플러그드 레슨: 작사\n\n> **함수**는 쉽게 계속해서 다시 호출할 수 있는 코드 부분입니다.\n\n프로그래머는
           항상 코드를 더 효율적으로 만드는 방법을 찾고 있습니다. 그들이 하는 한 가지 방법은 코드 부분을 재사용하도록 허용하는 **함수**를
@@ -4086,10 +3825,6 @@ ko-KR:
           관한 팁을 찾고 있는 중이라면 이 동영상은 교사로서 여러분을 지원하려는 의도를 가졌습니다. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursee/14/\"
           target=\"blank\">![](https://images.code.org/c961585a0e79fc2934530d251dd84f53-image-1573080971047.55.58
           PM.png)</a>\n\n"
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
       OPD-K5 Stage6Start_copy:
         markdown: |+
           # 개관: 함수
@@ -4099,8 +3834,6 @@ ko-KR:
           ## 코딩 개념: 함수
           - 간단한 함수 코딩 연습
 
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
       OPD-K5 Stage7Go_copy:
         markdown: |+
           # 언플러그드 레슨: 빅 이벤트
@@ -4119,8 +3852,6 @@ ko-KR:
           ***
           <a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank">![](https://images.code.org/37ab92bffc396c3b60f83123b44a0552-image-1573080011247.39.43 PM.png)</a>
 
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
       OPD-K5 Stage7Start_copy:
         markdown: |+
           # 개관: 이벤트
@@ -4133,14 +3864,6 @@ ko-KR:
           ## 학습지도: 디버깅
           - 알고림즘 또는 프로그램에서 문제를 찾고 고침
 
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
-      OPD-K5 Stage9Go: {}
-      OPD-K5 Stage9Go_dani: {}
-      OPD-K5 Stage9Start: {}
       OPD-K5 Stage9Start_copy:
         markdown: "# 교사 리소스 탐구\n\n수업 계획을 시작할 시간입니다. 이 단계에서는 Code.org 플랫폼의 다른 영역과 **<a
           href=\"http://studio.code.org/\" target=\"blank\">교사 대시보드</a>**를 탐구할 것입니다.
@@ -4148,12 +3871,6 @@ ko-KR:
           Code.org 웹사이트에서 보는 기본 화면이 나와야 합니다. 교사 계정이 없으면, **<a href=\"https://studio.code.org/users/sign_up\"
           target=\"blank\">여기서 가입하십시오</a>**.\n\n<a href=\"http://studio.code.org/\"
           target=\"blank\">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>\n"
-      OPD-K5 Stage9Start_dani: {}
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
       OPD-K5 Welcome 2_copy:
         markdown: |+
           # 컴퓨터 과학 기초 과정
@@ -4264,8 +3981,6 @@ ko-KR:
 
 
 
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
       OPD-K5 What is Mastery_copy:
         markdown: "# 미리 준비\n\n## 학습 지도\n다음 개념 청크에서는 다음과 같은 학습 지도에 괸해 배우게 될 것입니다:\n\n-
           레슨 플랜 찾기 및 활용\n- 페어 프로그래밍\n- 디버깅\n- 저널 작성\n\n## 기본 코딩 개념\n다음 개념 청크에서는 컴퓨터
@@ -4277,8 +3992,6 @@ ko-KR:
           간단한 퍼즐을 성공적으로 완료할 수 있는가?\n- 이것을 교실에서 사용하는 방법에 관한 몇 가지 아이디어를 갖고 있는가?\n\n각
           질문에 대한 답이 네이면, 다음 단계로 넘어 가세요. 만약 아니요이면, 이동하기 전 레슨을 다시 살펴보거나 또는 컴퓨터 과학 기초
           과정 중 하나에 있는 주제를 더 탐구할지 고려하세요.\n"
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
       OPD-K5 Why teach CS_copy:
         markdown: "# 컴퓨터 과학을 가르쳐야 하는 이유는?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
           class=\"level-image\">\n\n### **중요한 기량 개발**\n연구에 따르면, 컴퓨터 과학은 비판적 사고와 창의력,
@@ -4296,10 +4009,6 @@ ko-KR:
           target=\"blank\"><button class=\"default\">영감을 주는 동영상 탐구 >></button></a>\n\n>
           <a href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">연구
           탐구 >></button></a>\n\n<img src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">\n"
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
       OPD-K5 Your Plan_copy:
         markdown: |
           # 계획
@@ -4316,7 +4025,6 @@ ko-KR:
           초기 계획을 게시한 후, 향후 언제든 편안한 마음으로 <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank">이 트레드</a> 를 방문하여 일의 진행 과정 등을 업데이트해 주세요! 더 큰 영감을 받을 수 있도록 다른 이들이 게시한 글 역시 볼 것을 권장합니다!
 
           > <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">계획을 게시하세요 >></button></a>
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: 설명 입력
         markdown: |
@@ -4723,16 +4431,6 @@ ko-KR:
           |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![배고픈 다람쥐 (플레이 랩)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "배고픈 다람쥐 (플레이 랩")]</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![외계인 이야기 (플레이 랩)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "외계인 이야기 (플레이 랩")</a>|
           | 사운드를 이 게임에 추가해 보세요! | 또 다른 장면을 이 스토리에 추가해 보세요! |
 
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -4891,8 +4589,6 @@ ko-KR:
           # 릴레이 프로그래밍
 
           팀으로 나누고 그림을 그리는 프로그램을 함께 작성하세요.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # 비열한 짓 차단
@@ -4913,7 +4609,6 @@ ko-KR:
           # 알고리즘 따라가기
 
           게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           # 작사
@@ -4934,11 +4629,6 @@ ko-KR:
           # 작사
 
           학생들은 노래 내 코러스의 개념을 사용하여 함수를 정의하고 호출하는 것에 대해 배웁니다.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
       Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
         teacher_markdown: |
           **교사 단원말 설문조사: ** 학생들이 설문조사를 완료하는 동안 간단한 교사 설문조사를 작성해 주시면 감사하겠습니다.
@@ -4964,12 +4654,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: 파랑
@@ -5098,11 +4782,6 @@ ko-KR:
           ## Resources
 
           * [컴퓨터는 무엇인가? - 활동가이드](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -5384,8 +5063,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: 설명 입력
       allthethings_external_not_displayed_as_unplugged:
@@ -7593,8 +7270,6 @@ ko-KR:
           사용하는 한 가지 좋은 방법...즉 상수로서 사용하는 법을 배웠습니다!  \n변수를 상수로서 사용할 때, 값을 한 번 설정하고 그
           다음, 클릭한 후에 그 *동일한* 값을 프로그램 안에서 변경하지 않고 여러 번 사용합니다.  </h3>\n<br/><hr/>\n<h3>다음
           시리즈 부분에서는 프로그램 내에서  *변경 되는* 변수로 코드를 작성할 것입니다.</h3>\n\n"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -8443,12 +8118,6 @@ ko-KR:
           text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
         questions:
         - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8783,8 +8452,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -8957,11 +8624,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -9131,55 +8793,6 @@ ko-KR:
         title: CS 발견 학생 과정 전 설문 조사
       csd-pre-survey-levelgroup_21_22_2022:
         title: CS 발견 학생 과정 전 설문 조사
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -11655,15 +11268,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: 설명 입력
         markdown: |
@@ -11793,8 +11397,6 @@ ko-KR:
           # 나의 온라인 마을
 
           ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -12209,7 +11811,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: 설명 입력
       csp-post-survey-2018-unit-feedback-preamble:
@@ -12238,30 +11839,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -13013,8 +12590,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -13792,9 +13367,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -14149,8 +13721,6 @@ ko-KR:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

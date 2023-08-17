@@ -64,6 +64,8 @@ sk:
           name: nekonečno
         netsim:
           title: Simulátor Internetu
+        pixelation:
+          title: Pixelácia
         20-hour:
           title: Zrýchlený Úvod do Informatiky (zastaralý)
           description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
@@ -143,10 +145,12 @@ sk:
           description_short: Vytvor príbeh alebo hru s Gumball Play Labom!
           student_description: Vytvor príbeh alebo hru s Gumball Play Labom!
         starwars:
+          title: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         starwarsblocks:
+          title: 'Star Wars: Budovanie galaxie pomocou kódu (Blockly)'
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
@@ -227,6 +231,8 @@ sk:
           student_description: úvod k internetovému simulátoru a diskusia o tom ako pomocou neho učíme o fungovaní internetu
         CSDU1-Draft:
           description_short: Riešenie problémov
+        CSDU2-Draft:
+          description_short: Vývoj webových stránok
         CSDU5-Draft:
           description_short: Dáta
         CSF_Secret_Sample_Story:
@@ -456,6 +462,8 @@ sk:
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
+        csd2-old:
+          description_short: Vývoj webových stránok
         coursea-2017:
           title: Kurz A
           assignment_family_title: Kurz A
@@ -2692,6 +2700,8 @@ sk:
           description_audience: Ročníky 6-9
         poem-art-2021:
           title: Básnické umenie
+        poetry-2021:
+          title: Programovanie s poéziou
         hello-world-food-2021:
           title: 'Ahoj svet: Jedlo'
         hello-world-emoji-2021:
@@ -3389,6 +3399,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-2023:
           lesson_groups:
@@ -3552,6 +3564,7 @@ sk:
               display_name: 'Kapitola 1: Tvorba webových stránok'
             lessonGroup-4:
               display_name: 'Kapitola 2: Viacstránkové weby'
+          title: Vývoj webových stránok
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -3721,6 +3734,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -3745,6 +3760,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -3761,6 +3778,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-data2:
           lesson_groups:
@@ -3785,6 +3804,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -3807,6 +3828,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-coding2-2023:
           lesson_groups:
@@ -3829,6 +3852,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -4146,3 +4171,116 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: Triedy
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+          description_audience: 'Vek: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Dáta
+          description_audience: 'Vek: 4-7'
+          description_short: Predstavenie informatiky pre predškolákov.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Udalosti
+            lessonGroup-7:
+              display_name: Záverečný projekt
+            lessonGroup-8:
+              display_name: Dáta
+          description_audience: Vek 5-8
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať. Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Výpočtové systémy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Udalosti
+            lessonGroup-6:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Výpočtové systémy
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitálne občianstvo
+            lessonGroup-3:
+              display_name: Postupnosť
+            lessonGroup-4:
+              display_name: Vplyv Informatiky
+            lessonGroup-6:
+              display_name: Cykly
+            lessonGroup-7:
+              display_name: Dáta
+            lessonGroup-8:
+              display_name: Záverečný projekt
+          description_audience: Vek 7-11
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh, hru, či tanečnú party.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vnorené cykly
+            lessonGroup-4:
+              display_name: Funkcie
+            lessonGroup-6:
+              display_name: Záverečný projekt
+          description_audience: Vek 8-12
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprajty
+            lessonGroup-3:
+              display_name: Podmienené príkazy
+            lessonGroup-5:
+              display_name: Premenné
+            lessonGroup-6:
+              display_name: Vplyv Informatiky
+            lessonGroup-7:
+              display_name: Záverečný projekt
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        how-ai-works-2023:
+          title: Ako funguje umelá inteligencia

@@ -2746,3 +2746,92 @@ ta:
           lessons:
             lesson-4:
               name: தகவல்கள்
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-3:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-4:
+              display_name: சுழற்சிகள்
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-3:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-4:
+              display_name: சுழற்சிகள்
+            lessonGroup-6:
+              display_name: தகவல்கள்
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-3:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-4:
+              display_name: சுழற்சிகள்
+            lessonGroup-6:
+              display_name: நிகழ்வுகள்
+            lessonGroup-7:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+            lessonGroup-8:
+              display_name: தகவல்கள்
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-3:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-4:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
+              display_name: நிகழ்வுகள்
+            lessonGroup-6:
+              display_name: தகவல்கள்
+            lessonGroup-8:
+              display_name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-3:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-6:
+              display_name: சுழற்சிகள்
+            lessonGroup-7:
+              display_name: தகவல்கள்
+            lessonGroup-8:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: உள்ளமை சுழல்கள்
+            lessonGroup-4:
+              display_name: செயல்பாடுகள்
+            lessonGroup-6:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: நிபந்தனைகள்
+            lessonGroup-5:
+              display_name: மாறிலிகள்
+            lessonGroup-7:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
+        how-ai-works-2023:
+          title: AI எவ்வாறு இயங்குகிறது

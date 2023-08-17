@@ -1,0 +1,355 @@
+{
+  "script": {
+    "name": "vpl-csp-2023-m6",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 20:00:37 UTC",
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2023-m6"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 6: Introduction to the Create Performance Task",
+      "name": "Module 6: Introduction to the Create Performance Task",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c",
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "bb727cb2-bfe9-4245-872f-dc18c421ce17",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb727cb2-bfe9-4245-872f-dc18c421ce17",
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c"
+      }
+    },
+    {
+      "key": "66a7ff69-255c-43bd-ba5a-30c73b8628de",
+      "position": 2,
+      "properties": {
+        "progression_name": "Requirements of the Create Performance Task (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "66a7ff69-255c-43bd-ba5a-30c73b8628de",
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c"
+      }
+    },
+    {
+      "key": "b38be80a-8550-4378-945f-bc561a73fcc1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Digging into the Create Performance Task Survival Guide (~40 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b38be80a-8550-4378-945f-bc561a73fcc1",
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c"
+      }
+    },
+    {
+      "key": "08fc1a45-91f8-48a2-a335-d282f4c9de71",
+      "position": 4,
+      "properties": {
+        "progression_name": "Role of the teacher during the Create Performance Task (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "08fc1a45-91f8-48a2-a335-d282f4c9de71",
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c"
+      }
+    },
+    {
+      "key": "33db3cf0-0914-49fb-9a36-0a7132150aa6",
+      "position": 5,
+      "properties": {
+        "name": "Module 6 Asynchronous Wrap Up (~10 minutes)",
+        "progression_name": "Module 6 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "33db3cf0-0914-49fb-9a36-0a7132150aa6",
+        "lesson_activity.key": "3612a38f-c2ca-4a88-a9aa-8e62fb3a568c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview_2023"
+        ],
+        "progression": "Module 6 overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 6 - Workshop Overview_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "bb727cb2-bfe9-4245-872f-dc18c421ce17"
+      },
+      "level_keys": [
+        "CSP-PL Module 6 - Workshop Overview_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2023"
+        ],
+        "progression": "Requirements of the Create Performance Task (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "66a7ff69-255c-43bd-ba5a-30c73b8628de"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Create PT Reqs_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide_2023"
+        ],
+        "progression": "Digging into the Create Performance Task Survival Guide (~40 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Survival Guide_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "b38be80a-8550-4378-945f-bc561a73fcc1"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Survival Guide_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher_2023"
+        ],
+        "progression": "Role of the teacher during the Create Performance Task (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Role of teacher_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "08fc1a45-91f8-48a2-a335-d282f4c9de71"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Role of teacher_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Module 6 Wrap Up_2023"
+        ],
+        "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 6 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "33db3cf0-0914-49fb-9a36-0a7132150aa6"
+      },
+      "level_keys": [
+        "CSP - Module 6 Wrap Up_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 6 - Workshop Overview_2023",
+        "script_level.level_keys": [
+          "CSP-PL Module 6 - Workshop Overview_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "bb727cb2-bfe9-4245-872f-dc18c421ce17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Create PT Reqs_2023",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "66a7ff69-255c-43bd-ba5a-30c73b8628de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Survival Guide_2023",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Survival Guide_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "b38be80a-8550-4378-945f-bc561a73fcc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Role of teacher_2023",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Role of teacher_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "08fc1a45-91f8-48a2-a335-d282f4c9de71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 6 Wrap Up_2023",
+        "script_level.level_keys": [
+          "CSP - Module 6 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 6: Introduction to the Create Performance Task",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m6",
+        "activity_section.key": "33db3cf0-0914-49fb-9a36-0a7132150aa6"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

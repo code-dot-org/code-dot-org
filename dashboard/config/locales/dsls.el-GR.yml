@@ -459,27 +459,6 @@ el-GR:
         content1: περιγραφή εδώ
       Begin planning your project_2018_2019_2020:
         content1: περιγραφή εδώ
-      BigEvent-Unplugged: {}
-      BigEvent-Unplugged2022: {}
-      BigEvent-Unplugged_2020: {}
-      BigEvent-Unplugged_2021: {}
-      BinaryBracelets-Unplugged: {}
-      BinaryBracelets-Unplugged2022: {}
-      BinaryBracelets-Unplugged_2020: {}
-      BinaryBracelets-Unplugged_2021: {}
-      BinaryImages-Unplugged: {}
-      BinaryImages-Unplugged_2020: {}
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -502,20 +481,6 @@ el-GR:
         display_name: Ιδιότητες Χαρακτήρα
       CSD Games Properties practice_2022:
         display_name: Ιδιότητες Χαρακτήρα
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
-      CSD Games variables practice_2021: {}
-      CSD Games variables practice_2022: {}
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -546,12 +511,6 @@ el-GR:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
       CSD Student End of Unit Survey - Unit 1_2022:
         title: 'Ανακαλύψετε την Επιστήμη Υπολογιστών:  Έρευνα κατά το τέλος της ενότητας!'
       CSD U1 IOSP match:
@@ -596,12 +555,6 @@ el-GR:
         - {}
         - {}
         - {}
-      CSD U1 Lesson 5 Overview: {}
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -686,23 +639,12 @@ el-GR:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
-      CSD U2 CSS practice_pilot_2021: {}
-      CSD U2 CSS practice_pilot_2022: {}
       CSD U2 Design Project:
         content1: περιγραφή εδώ
       CSD U2 Design Project_2018:
         content1: περιγραφή εδώ
       CSD U2 Design Project_2018_2019:
         content1: περιγραφή εδώ
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Προσθέτοντας Εικόνας
       CSD U2 Image challenge_pilot_2022:
@@ -713,7 +655,6 @@ el-GR:
         display_name: Προσθέτοντας Εικόνας
       CSD U2 L1 Overview:
         content1: περιγραφή εδώ
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: περιγραφή εδώ
       CSD U2 L3 Overview:
@@ -724,19 +665,8 @@ el-GR:
         content1: περιγραφή εδώ
       CSD U2 L6 Overview:
         content1: περιγραφή εδώ
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: περιγραφή εδώ
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -914,11 +844,6 @@ el-GR:
         - correct: true
         - {}
         - {}
-      CSD U2 Top Websites: {}
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: περιγραφή εδώ
       CSD U2 expand project_2018:
@@ -964,12 +889,6 @@ el-GR:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1019,8 +938,6 @@ el-GR:
         content1: περιγραφή εδώ
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: περιγραφή εδώ
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1086,11 +1003,6 @@ el-GR:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1142,10 +1054,6 @@ el-GR:
         content1: περιγραφή εδώ
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: περιγραφή εδώ
-      CSD U3 Collisions SFLP: {}
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1176,7 +1084,6 @@ el-GR:
         - {}
         - correct: true
         - {}
-      CSD U3 Functions SFLP: {}
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1204,23 +1111,6 @@ el-GR:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
-      CSD U3 Lesson Overview 4: {}
-      CSD U3 Lesson Overview 5: {}
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1453,7 +1343,6 @@ el-GR:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: περιγραφή εδώ
       CSD U3 combining rep_2018:
@@ -1504,8 +1393,6 @@ el-GR:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Εξάσκηση
       CSD U3 drawing practice choice_2022:
@@ -1675,22 +1562,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: περιγραφή εδώ
       CSD U5 Encryption 1_2018:
@@ -1723,7 +1594,6 @@ el-GR:
         content1: περιγραφή εδώ
       CSD U5 student record_2018_2019:
         content1: περιγραφή εδώ
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -1865,43 +1735,30 @@ el-GR:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Επίπεδα πρόκλησης
       CSD U6 - Music - Chal_2222:
         display_name: Επίπεδα πρόκλησης
       CSD U6 - Physical Input - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Επίπεδα πρόκλησης
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: περιγραφή εδώ
       CSD U6 LED create intro_2018:
@@ -1942,10 +1799,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: περιγραφή εδώ
       CSD U6 final intro_2018:
@@ -1954,10 +1807,6 @@ el-GR:
         content1: περιγραφή εδώ
       CSD U6 final intro_2021:
         content1: περιγραφή εδώ
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2129,108 +1978,26 @@ el-GR:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Προκλήσεις
       CSD games cake challenge choice_2022:
         display_name: Προκλήσεις
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
-      CSD games functions practice choice_2021: {}
-      CSD games functions practice choice_2022: {}
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Προκλήσεις
       CSD games platform challenge choice_2022:
         display_name: Προκλήσεις
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
-      CSD web conditionals practice choice_2021: {}
-      CSD web conditionals practice choice_2022: {}
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Εξάσκηση
       CSD web draw loop practice choice_2022:
         display_name: Εξάσκηση
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Εξάσκηση
       CSD web movement practice choice_2022:
         display_name: Εξάσκηση
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Εξάσκηση
       CSD web text practice choice_2022:
         display_name: Εξάσκηση
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2243,7 +2010,6 @@ el-GR:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2252,12 +2018,6 @@ el-GR:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
-      ConditionalsWithCards-Unplugged: {}
-      ConditionalsWithCards-Unplugged2022: {}
-      ConditionalsWithCards-Unplugged_2020: {}
-      ConditionalsWithCards-Unplugged_2021: {}
-      CourseE_Artist_Practice_2022: {}
       CourseE_Lesson_11_Artist_Practice_2022:
         description: Σπουδαία δουλειά μέχρι τώρα! Επιλέξτε την επόμενη δραστηριότητά
           σας. Ολοκλήρωσε όσα περισσότερα μπορείς. Συνεχίστε την εξάσκηση με τους
@@ -2444,7 +2204,6 @@ el-GR:
           με άλλους, ή να μοιράσετε ένα μήνυμα σχετικά με το τι νομίζετε ότι μπορούμε
           να κάνουμε να διατηρήσουμε τους άλλους υγιείς όταν ένας ιός έρχεται στην
           πόλη.\n\n"
-      Crowdsourcing-Unplugged: {}
       Dance_Party_extras_intro:
         markdown: "#Συνεχίστε να \n\nχορεύετε! Για το μέρος 2, θα δημιουργήσετε το
           δικό σας έργο. Δεν υπάρχουν παζλ εδώ - αντ 'αυτού υπάρχει μια δέσμη έργων
@@ -2554,38 +2313,9 @@ el-GR:
           <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
 
           </div>"
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
-      DesigningForAccessibilityMarkdownLevel2022: {}
-      DesigningForAccessibilityMarkdownLevel_2019: {}
-      DesigningForAccessibilityMarkdownLevel_2019_2020: {}
-      DesigningForAccessibilityMarkdownLevel_2021: {}
-      DigitalCitizenship-Unplugged: {}
-      DigitalFootprint-Unplugged: {}
-      DigitalSharing-Unplugged: {}
-      DigitalSharing-Unplugged2022: {}
-      DigitalSharing-Unplugged_2020: {}
-      DigitalSharing-Unplugged_2021: {}
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
-      EnvelopeVariables-Unplugged: {}
-      EnvelopeVariables-Unplugged_2020: {}
-      EnvelopeVariables-Unplugged_2021_2: {}
-      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2: {}
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
-      ForLoopFun-Unplugged: {}
-      ForLoopFun-Unplugged_2020: {}
-      ForLoopFun-Unplugged_2021: {}
-      GettingLoopy-Unplugged: {}
-      GettingLoopy-Unplugged2022: {}
-      GettingLoopy-Unplugged_2020: {}
-      GettingLoopy-Unplugged_2021: {}
       GoingPlacesSafely-unplugged:
         markdown: |
           # Πηγαίνοντας σε μέρη με ασφάλεια
@@ -2613,8 +2343,6 @@ el-GR:
           # Graph Paper Programming
 
           Γράψτε αλγορίθμους που οι συμμαθητές σας μπορούν να χρησιμοποιήσουν για να σχεδιάσουν εικόνες.
-      HappyLoops-Unplugged: {}
-      HappyLoops-Unplugged_2020: {}
       HappyMaps-Unplugged:
         markdown: |
           # Χαρούμενοι Χάρτες
@@ -2752,10 +2480,6 @@ el-GR:
 
           #### Οι μαθητές μου δεν μπορούν να δουν ο ένας τον άλλον όταν πάνε στο URL που τους δίνω για τον Προσομοιωτή Διαδικτύου. Τι να κάνω
           Για να δουν οι μαθητές ο ένας τον άλλον στην υποδοχή του Προσομοιωτή Διαδικτύου, θα χρειαστεί να είναι στο ίδιο τμήμα. Ελέγξτε ξανά αν έχετε ολοκληρώσει τις οδηγίες εγκατάστασης/ρύθμισης του τμήματος από την προηγούμενη σελίδα, και οι εν λόγω μαθητές συμμετέχουν στον συγκεκριμένο κώδικα τμήματος. Επίσης, μερικοί μαθητές ενδέχεται να είναι σε πολλαπλά τμήματα αν έχουν κάνει εργασία με τον Code.org πριν, συνεπώς βεβαιωθείτε ότι ξέρουν την ονομασία του τμήματός σας και ότι την έχουν επιλέξει από την αναδυόμενη λίστα πριν από την είσοδό τους στην υποδοχή.
-      Internet-Unplugged: {}
-      Internet-Unplugged2022_2022_pilot_-2022-2: {}
-      Internet-Unplugged_2020: {}
-      Internet-Unplugged_2021: {}
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -2951,9 +2675,6 @@ el-GR:
         questions:
         - text: Ποια λέξη σχηματίζεται;
         title: Πολλαπλή Επιλογή
-      MoveItMoveIt-Unplugged: {}
-      MoveItMoveIt-Unplugged2022: {}
-      MoveItMoveIt-Unplugged_2020: {}
       MoveItMoveIt-Unplugged_2021:
         markdown: |
           # Κινήσου, Κινήσου
@@ -2971,39 +2692,8 @@ el-GR:
         - {}
       Multi-Screen Apps:
         content1: περιγραφή εδώ
-      MyLoopyRoboticFriends-Unplugged: {}
-      MyLoopyRoboticFriends-Unplugged2022: {}
-      MyLoopyRoboticFriends-Unplugged_2020: {}
-      MyLoopyRoboticFriends-Unplugged_2021: {}
-      MyRoboticFriends-Unplugged: {}
-      MyRoboticFriends-Unplugged2022: {}
-      MyRoboticFriends-Unplugged_2020: {}
-      MyRoboticFriends-Unplugged_2021: {}
       New Challenge Introduction:
         content1: περιγραφή εδώ
-      OPD-K5 About: {}
-      OPD-K5 About_copy: {}
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
-      OPD-K5 Assessment_copy: {}
-      OPD-K5 Assessment_dani: {}
-      OPD-K5 CS Courses: {}
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
-      OPD-K5 CS Tips_copy: {}
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
-      OPD-K5 Connect_copy: {}
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
       OPD-K5 Outline:
         markdown: |
           # Ξεκινώντας > Επισκόπηση μαθήματος
@@ -3096,7 +2786,6 @@ el-GR:
           - Μοιραστείτε αυτά που μάθατε και τα σχόλιά σας σχετικά με αυτό το μάθημα
 
           > **Σημείωση**: Οι προτεινόμενες ώρες παρέχονται παραπάνω για να σας βοηθήσουν να προγραμματίσετε τη μάθησή σας. Λάβετε υπόψη ότι μπορεί να θέλετε να αφιερώσετε περισσότερο ή λιγότερο χρόνο σε κάποιο στάδιο, ανάλογα με τις προηγούμενες γνώσεις, το ενδιαφέρον και τις δυνατότητές σας. Να θυμάστε ότι εσείς ορίζετε το ρυθμό μάθησης σε αυτό το μάθημα, μπορείτε ανά πάσα στιγμή να εγκαταλείψετε το μάθημα και αργότερα να επιστρέψετε ή να επισκεφθείτε ξανά οποιοδήποτε στάδιο ή επίπεδο.
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: |
           # Ξεκινώντας > Επισκόπηση μαθήματος
@@ -3189,75 +2878,14 @@ el-GR:
           - Μοιραστείτε αυτά που μάθατε και τα σχόλιά σας σχετικά με αυτό το μάθημα
 
           > **Σημείωση**: Οι προτεινόμενες ώρες παρέχονται παραπάνω για να σας βοηθήσουν να προγραμματίσετε τη μάθησή σας. Λάβετε υπόψη ότι μπορεί να θέλετε να αφιερώσετε περισσότερο ή λιγότερο χρόνο σε κάποιο στάδιο, ανάλογα με τις προηγούμενες γνώσεις, το ενδιαφέρον και τις δυνατότητές σας. Να θυμάστε ότι εσείς ορίζετε το ρυθμό μάθησης σε αυτό το μάθημα, μπορείτε ανά πάσα στιγμή να εγκαταλείψετε το μάθημα και αργότερα να επιστρέψετε ή να επισκεφθείτε ξανά οποιοδήποτε στάδιο ή επίπεδο.
-      OPD-K5 Pair: {}
-      OPD-K5 Pair_copy: {}
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
-      OPD-K5 Participation_copy: {}
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: περιγραφή εδώ
-      OPD-K5 Stage10Start: {}
-      OPD-K5 Stage10Start_copy: {}
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
-      OPD-K5 Stage2Go_copy: {}
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
-      OPD-K5 Stage3Start_copy: {}
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: περιγραφή εδώ
       OPD-K5 Stage3aGo_copy:
         content1: περιγραφή εδώ
       OPD-K5 Stage3aGo_dani:
         content1: περιγραφή εδώ
-      OPD-K5 Stage4Go: {}
-      OPD-K5 Stage4Go_copy: {}
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
-      OPD-K5 Stage4Start_copy: {}
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
-      OPD-K5 Stage5Start_copy: {}
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
-      OPD-K5 Stage6Go_copy: {}
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
-      OPD-K5 Stage6Start_copy: {}
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
-      OPD-K5 Stage7Go_copy: {}
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
-      OPD-K5 Stage7Start_copy: {}
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
       OPD-K5 Stage9Go:
         markdown: |
           # Σχεδιασμός > Ανασκόπηση
@@ -3334,24 +2962,6 @@ el-GR:
           λογαριασμό καθηγητή σας στο Code.org για να τον δείτε. Μόλις συνδεθείτε,
           θα πρέπει να είναι η προεπιλεγμένη οθόνη που βλέπετε στον ιστότοπο Code.org.
           Εάν δεν έχετε λογαριασμό καθηγητή, μπορείτε να **[εγγραφείτε για έναν εδώ](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
-      OPD-K5 Welcome 2_copy: {}
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
-      OPD-K5 What is Mastery_copy: {}
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
-      OPD-K5 Why teach CS_copy: {}
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
-      OPD-K5 Your Plan_copy: {}
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: περιγραφή εδώ
       OPD-K5 debugging:
@@ -3406,16 +3016,6 @@ el-GR:
         content1: περιγραφή εδώ
       OPD-K5-projects-1:
         content1: περιγραφή εδώ
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -3480,20 +3080,8 @@ el-GR:
         - {}
         questions:
         - {}
-      PicturingData-Unplugged: {}
-      PicturingData-Unplugged_2020: {}
-      PowerOfWords-Unplugged: {}
-      PowerOfWords-Unplugged2022_2022_pilot_-2022-2: {}
-      PowerOfWords-Unplugged_2020: {}
-      PowerOfWords-Unplugged_2021: {}
-      PowerfulPasswords-Unplugged: {}
       Prepare for your presentation:
         content1: περιγραφή εδώ
-      Prepare for your presentation_2018: {}
-      PrivatePersonalInformation-Unplugged: {}
-      PrivatePersonalInformation-Unplugged2022: {}
-      PrivatePersonalInformation-Unplugged_2020: {}
-      PrivatePersonalInformation-Unplugged_2021: {}
       RelayProgramming-Unplugged:
         markdown: |
           # Προγραμματισμός Relay
@@ -3514,23 +3102,6 @@ el-GR:
           # Προγραμματισμός Relay
 
           Χωριστείτε σε ομάδες και συνεργαστείτε για να γράψετε προγράμματα που σχεδιάζουν εικόνες.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
-      ScreenOutTheMean-Unplugged: {}
-      SimonSays-Unplugged: {}
-      SimonSays-Unplugged_2020: {}
-      SimonSays-Unplugged_2021: {}
-      Social Sleuth_2018_2019: {}
-      Songwriting-Unplugged: {}
-      Songwriting-Unplugged2022: {}
-      Songwriting-Unplugged_2020: {}
-      Songwriting-Unplugged_2021: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -3551,12 +3122,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: μπλε
@@ -3589,19 +3154,6 @@ el-GR:
         - text: '4'
         questions:
         - {}
-      TheRightAppMarkdownLevel2022: {}
-      TheRightAppMarkdownLevel_2019: {}
-      TheRightAppMarkdownLevel_2019_2020: {}
-      TheRightAppMarkdownLevel_2021: {}
-      Unit 1 Lesson 1 Overview: {}
-      Unit 1 Lesson 2 Overview: {}
-      Unit 1 Lesson 3 Overview: {}
-      Unit 1 Lesson 4 Overview: {}
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -3712,8 +3264,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -3808,9 +3358,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -3866,8 +3413,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: περιγραφή εδώ
       allthethings_external_not_displayed_as_unplugged:
@@ -5337,7 +4882,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseD_project_exemplars_2020_2021: {}
       courseE_EOC2022:
         display_name: Έργο Λήξη Μαθήματος
       courseE_EOC_2020:
@@ -5483,8 +5027,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      courseE_project_exemplars_2019: {}
-      courseE_project_exemplars_2019_2020: {}
       courseE_swim_fish_behavior_predict12022:
         answers:
         - text: Τίποτα δε θα συμβεί.
@@ -5507,7 +5049,6 @@ el-GR:
             κλικ στο κουμπί «Εκτέλεση»;
       courseExpress_EOC_2020:
         display_name: Έργο Λήξη Μαθήματος
-      courseExpress_project_exemplars_2019_2020: {}
       courseF_EOC_2020:
         display_name: Έργο Λήξη Μαθήματος
       courseF_EOC_2021:
@@ -5524,10 +5065,6 @@ el-GR:
         description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
           αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
         display_name: Έργο Λήξη Μαθήματος
-      courseF_artist_practice: {}
-      courseF_beeFor_practice: {}
-      courseF_beeVar_practice: {}
-      courseF_bee_practice: {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -5555,11 +5092,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_collector_samples_2022_pilot_-2022-2: {}
-      courseF_events_freeplay: {}
-      courseF_events_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_events_practice: {}
-      courseF_events_practice2022_2022_pilot_-2022-2: {}
       courseF_events_predict_multi:
         answers:
         - {}
@@ -5576,12 +5108,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_external_variableConstant: {}
-      courseF_external_variableConstant_2018: {}
-      courseF_external_variableConstant_2018_2019: {}
-      courseF_external_variableConstant_2018_2019_2020: {}
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -5596,7 +5122,6 @@ el-GR:
         questions:
         - text: 'Κάντε μία πρόβλεψη: Αφού πατήσετε Εκτέλεση, τί θα συμβεί όταν κάνετε
             κλικ σε έναν χαρακτήρα;'
-      courseF_intro_apps: {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
         description: Όλα αυτά τα έργα δημιουργήθηκαν με το Εργαστήριο Χαρακτήρων.
           Δοκίμασέ τα τώρα για να δείς τί είναι δυνατό. Με την ολοκλήρωση αυτού του
@@ -5620,28 +5145,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_markdown_algorithms_end: {}
-      courseF_markdown_algorithms_intro: {}
-      courseF_markdown_conditionals_end: {}
-      courseF_markdown_conditionals_intro: {}
-      courseF_markdown_debugging_end: {}
-      courseF_markdown_debugging_intro: {}
-      courseF_markdown_forloops_end: {}
-      courseF_markdown_forloops_end_2019: {}
-      courseF_markdown_forloops_end_2019_2020: {}
-      courseF_markdown_forloops_intro: {}
-      courseF_markdown_forloops_intro_2019: {}
-      courseF_markdown_forloops_intro_2019_2020: {}
-      courseF_markdown_loops_end: {}
-      courseF_markdown_loops_intro: {}
-      courseF_markdown_nestedloops_end: {}
-      courseF_markdown_nestedloops_intro: {}
-      courseF_markdown_variables_end: {}
-      courseF_markdown_variables_end_2019: {}
-      courseF_markdown_variables_end_2019_2020: {}
-      courseF_markdown_variables_intro: {}
-      courseF_markdown_variables_intro_2019: {}
-      courseF_markdown_variables_intro_2019_2020: {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
@@ -5838,12 +5341,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_project_exemplars_2019: {}
-      courseF_project_exemplars_2019_2020: {}
-      courseF_sprites_freeplay: {}
-      courseF_sprites_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_sprites_practice: {}
-      courseF_sprites_practice2022_2022_pilot_-2022-2: {}
       courseF_sprites_predict_multi:
         answers:
         - {}
@@ -5860,8 +5357,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_text_practice: {}
-      courseF_text_practice2022_2022_pilot_-2022-2: {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -5914,10 +5409,6 @@ el-GR:
         - {}
         questions:
         - {}
-      courseF_variables_projects: {}
-      courseF_variables_projects2022_2022_pilot_-2022-2: {}
-      courseF_variables_samples: {}
-      courseF_variables_samples2022_2022_pilot_-2022-2: {}
       courseF_variables_stop:
         content1: περιγραφή εδώ
       courseF_variables_stop2022_2022_pilot_-2022-2:
@@ -5976,12 +5467,6 @@ el-GR:
         - {}
         questions:
         - {}
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -6517,11 +6002,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -6673,60 +6153,6 @@ el-GR:
         content1: περιγραφή εδώ
       csd-post-survey-unit6-preamble:
         content1: περιγραφή εδώ
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -9202,15 +8628,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: περιγραφή εδώ
       csf_be_a_super_digital_citizen2022:
@@ -9250,15 +8667,11 @@ el-GR:
         content1: περιγραφή εδώ
         markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
           με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
-      csf_safety_in_my_online_neighborhood: {}
-      csf_safety_in_my_online_neighborhood2022: {}
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |
           # Η Διαδικτυακή μου Γειτονιά
 
           ## Πώς μπορείτε να πάτε σε μέρη με ασφάλεια στο διαδίκτυο;
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -9673,7 +9086,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: περιγραφή εδώ
       csp-post-survey-2018-unit-feedback-preamble:
@@ -9702,30 +9114,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -10481,8 +9869,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -10957,7 +10343,6 @@ el-GR:
         questions:
         - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
             το πρόγραμμα τρέξει;
-      gradek1_activity_beNice: {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
@@ -11094,34 +10479,10 @@ el-GR:
         display_name: Προσαρμόστε την Εφαρμογή Σας
       ml-club app-choice parent_2022:
         display_name: Προσαρμόστε την Εφαρμογή Σας
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Προσαρμόστε την Εφαρμογή Σας
       ml-intro app lab-book recommender 5_2022:
         display_name: Προσαρμόστε την Εφαρμογή Σας
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -11268,9 +10629,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -11643,8 +11001,6 @@ el-GR:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:38.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Functions with Parameters\r\n\r\nThis app has a new set of aliens with all new colors. We can use a function with **parameters** to make it easier to change colors. \r\n\r\nThe `colorLEDs` function has already been defined with a **parameter** called `color`. One alien has already been setup - it calls `colorLEDs(\"cyan\")` to turn all the LEDs cyan to match the alien. We need to make the other aliens work too!\r\n\r\n## Do This\r\n1) Inside each [`onEvent()`(#fff176)](/docs/applab/onEvent/): drag out a [`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/) block\r\n2) Replace the function name with `colorLEDs`\r\n3) Replace the **parameter** with the color you want to change to. For example: `\"orange\"`, `\"purple\"`, etc.\r\n\t- You can try any of the colors listed on this [Color Name website](https://www.w3schools.com/colors/colors_names.asp).\r\n\r\n**Run Your Code!** Verify that the LEDs change colors to match the alien!",
     "parent_level_id": 20595,
     "name_suffix": "_2023a",
@@ -66,7 +67,8 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/functions",
     "starter_assets": {
@@ -83,9 +85,8 @@
     "encrypted_examples": "FcjgGVdCT5UMYFMmA4XYiVlbYL/ZImKSIhHYXUwthiXbJ8fSdWLZrHnF2x0E\nfltcx0ky5KOMfL2F8chDomdizw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:38.140+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB5_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:38.140+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB5_2222\"},{\"changed_at\":\"2023-08-16 19:39:41 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -6531,6 +6531,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
         csd2-2023:
@@ -6583,7 +6585,6 @@ fr:
               display_name: Nouvelles leçons
           title: "(Option A) Création d'applications avec des appareils - Circuit Playground (23-24)"
           description_short: Apprend à programmer des objets.
-          student_description: Cette unité explore le rôle des plateformes matérielles dans l'informatique et explique comment différents capteurs peuvent fournir des entrées et des sorties plus efficaces que le clavier, la souris et le moniteur traditionnels. À l'aide d'App Lab et de Circuit Playground d'Adafruit, vous développerez des programmes qui utilisent les mêmes entrées et sorties matérielles que celles des appareils intelligents, en étudiant comment un simple prototype peut mener à un produit fini. L'unité se termine par un défi de conception consistant à utiliser le Circuit Playground comme base pour une innovation de votre propre conception.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6761,7 +6762,7 @@ fr:
             lessonGroup-3:
               display_name: Suivi d'après cours
           title: Cybersécurité et impacts mondiaux (23-24)
-          description: "Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent constituer une menace pour notre confidentialité et notre sécurité et comment le cryptage et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence sur « l'école du futur » au cours de laquelle vous et une équipe soumettez une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.\n\n : : détails [**\\U0001unité F9D0 Philosophie et pédagogie**]\n\n#### Apprendre grâce à la simulation en classe complète\n\nLe projet de simulation qui sous-tend cette unité répond à plusieurs objectifs importants. Il permet de contextualiser ce que les élèves apprennent en passant d'idées abstraites de confidentialité ou de sécurité à des innovations potentielles concrètes. La simulation étant basée sur la modernisation des écoles, les élèves peuvent envisager les conséquences des innovations informatiques dans un environnement familier. En assumant un rôle assigné et en interagissant avec un groupe de coéquipiers qui ont fait de même, les élèves doivent prendre en compte un large éventail d'intérêts et d'objectifs qui dépassent les leurs lorsqu'il s'agit d'innover dans les écoles. \n\n#### Terminer l'année en tant que « décideurs »\n\nL'un des principaux thèmes abordés par les élèves tout au long de cette unité est la nécessité de prendre en compte les deux aspects de l'innovation technologique. La technologie informatique a apporté des avantages et des inconvénients à la culture, à l'économie et à la société dans son ensemble. Pour répondre aux questions importantes auxquelles notre monde est confronté, il faut comprendre la technologie et être capable d'identifier et d'interpréter les impacts qu'elle provoque. Cette unité n'est pas conçue pour défendre un point de vue particulier sur l'impact de la technologie. Néanmoins, cela devrait permettre aux étudiants de voir et d'évaluer habilement les conséquences de la technologie qui les entoure. Bien que le projet Create PT puisse sembler être le projet le plus important de ce cours, l'exigence Explore Curricular et les questions abordées dans cette unité sont sans doute plus cruciales. La plupart des jeunes qui suivent CS Principles peuvent poursuivre des études ou des carrières dans le cadre desquelles ils sont des « créateurs » dans le domaine de la technologie, mais ils devront tous être des « décideurs » réfléchis dans un monde profondément façonné par l'informatique. \n : : :\n\n : : détails [** ⭐️ Évaluation et projets principaux**]\n\nLes élèves participent à la simulation Future School Convention tout au long de cette unité. Travaillant en équipes d'environ cinq personnes, les étudiants se voient attribuer un rôle et un ensemble d'intérêts qu'ils devront étudier. Ils recherchent des innovations concrètes qui pourraient améliorer les écoles et répondre aux intérêts de leur personnage. Tout au long de l'unité, ils ont la possibilité d'affiner leurs propositions en équipe et de débattre des avantages et des risques des différentes innovations informatiques. Finalement, leur équipe soumet une proposition globale pour la Future School, et tous les étudiants votent pour l'équipe et l'innovation qu'ils considèrent comme les meilleures. Les étudiants effectueront également une évaluation de fin d'unité alignée sur les objectifs du cadre CS Principles abordés dans cette unité.\n : : :\n\n : : détails [** ✅ Connexions AP**]\n\nCette unité et ce projet d'unité contribuent à la réalisation des connaissances durables énumérées ci-dessous. Pour une cartographie détaillée des unités par rapport aux objectifs d'apprentissage et aux EK, veuillez consulter la page « Normes » de cette unité.\n\n-   IOC-1 : Bien que les innovations informatiques soient généralement conçues pour atteindre un objectif précis, elles peuvent avoir des conséquences imprévues.\n-   IOC-2 : L'utilisation d'innovations informatiques peut présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette unité inclut du contenu des rubriques suivantes du cadre de principes AP CS. Pour plus d'informations sur la couverture des sujets, consultez la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n-   5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n## Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte enquête\\*\\*](<>) pour informer l'équipe du programme de Code.org du déroulement de l'unité."
+          description: "Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent constituer une menace pour notre confidentialité et notre sécurité et comment le cryptage et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence sur « l'école du futur » au cours de laquelle vous et une équipe soumettez une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.\n\n : : détails [**\\U0001unité F9D0 Philosophie et pédagogie**]\n\n#### Apprendre grâce à la simulation en classe complète\n\nLe projet de simulation qui sous-tend cette unité répond à plusieurs objectifs importants. Il permet de contextualiser ce que les élèves apprennent en passant d'idées abstraites de confidentialité ou de sécurité à des innovations potentielles concrètes. La simulation étant basée sur la modernisation des écoles, les élèves peuvent envisager les conséquences des innovations informatiques dans un environnement familier. En assumant un rôle assigné et en interagissant avec un groupe de coéquipiers qui ont fait de même, les élèves doivent prendre en compte un large éventail d'intérêts et d'objectifs qui dépassent les leurs lorsqu'il s'agit d'innover dans les écoles. \n\n#### Terminer l'année en tant que « décideurs »\n\nL'un des principaux thèmes abordés par les élèves tout au long de cette unité est la nécessité de prendre en compte les deux aspects de l'innovation technologique. La technologie informatique a apporté des avantages et des inconvénients à la culture, à l'économie et à la société dans son ensemble. Pour répondre aux questions importantes auxquelles notre monde est confronté, il faut comprendre la technologie et être capable d'identifier et d'interpréter les impacts qu'elle provoque. Cette unité n'est pas conçue pour défendre un point de vue particulier sur l'impact de la technologie. Néanmoins, cela devrait permettre aux étudiants de voir et d'évaluer habilement les conséquences de la technologie qui les entoure. Bien que le projet Create PT puisse sembler être le projet le plus important de ce cours, l'exigence Explore Curricular et les questions abordées dans cette unité sont sans doute plus cruciales. La plupart des jeunes qui suivent CS Principles peuvent poursuivre des études ou des carrières dans le cadre desquelles ils sont des « créateurs » dans le domaine de la technologie, mais ils devront tous être des « décideurs » réfléchis dans un monde profondément façonné par l'informatique. \n : : :\n\n : : détails [** ⭐️ Évaluation et projets principaux**]\n\nLes élèves participent à la simulation Future School Convention tout au long de cette unité. Travaillant en équipes d'environ cinq personnes, les étudiants se voient attribuer un rôle et un ensemble d'intérêts qu'ils devront étudier. Ils recherchent des innovations concrètes qui pourraient améliorer les écoles et répondre aux intérêts de leur personnage. Tout au long de l'unité, ils ont la possibilité d'affiner leurs propositions en équipe et de débattre des avantages et des risques des différentes innovations informatiques. Finalement, leur équipe soumet une proposition globale pour la Future School, et tous les étudiants votent pour l'équipe et l'innovation qu'ils considèrent comme les meilleures. Les étudiants effectueront également une évaluation de fin d'unité alignée sur les objectifs du cadre CS Principles abordés dans cette unité.\n : : :\n\n : : détails [** ✅ Connexions AP**]\n\nCette unité et ce projet d'unité contribuent à la réalisation des connaissances durables énumérées ci-dessous. Pour une cartographie détaillée des unités par rapport aux objectifs d'apprentissage et aux EK, veuillez consulter la page « Normes » de cette unité.\n\n-   IOC-1 : Bien que les innovations informatiques soient généralement conçues pour atteindre un objectif précis, elles peuvent avoir des conséquences imprévues.\n-   IOC-2 : L'utilisation d'innovations informatiques peut présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette unité inclut du contenu des rubriques suivantes du cadre de principes AP CS. Pour plus d'informations sur la couverture des sujets, consultez la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing).\n\n-   5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n## Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte enquête\\*\\*](<>) pour informer l'équipe du programme de Code.org du déroulement de l'unité."
           student_description: Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent représenter une menace pour notre confidentialité et notre sécurité et comment le chiffrement et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence « l'école du futur » au cours de laquelle vous et une équipe faites une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.
           description_short: 'Faites des recherches et débattez de l''actualité à l''intersection des données, des politiques publiques, du droit, de l''éthique et de l''impact sociétal. '
         csp9-2023:
@@ -7253,6 +7254,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la créativité1-2023
           title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -7297,6 +7300,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           name: concentrez-vous sur le matériel1-2023
           title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -7329,6 +7334,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: focus sur les données-1-2023
           title: Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -7382,6 +7389,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la conception avec un but1-2023
           title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -7427,6 +7436,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur le codage 1-2023
           title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -7466,6 +7477,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: se concentrer sur l'impact dans la société1-2023
           title: Résolution de problèmes et informatique ('23-'24)
           student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
@@ -8033,3 +8046,177 @@ fr:
               display_name: Classes
             lessonGroup-5:
               display_name: Tableaux 2D
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
+          description_audience: 'Âges : 4 à 7 ans'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Données
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Données
+          description_audience: 'Âges : 4 à 7 ans'
+          description_short: Une initiation à l’informatique pour les pré-lecteurs.
+          description: Le Cours A propose un programme d'informatique pour les lecteurs débutants, dont les élèves de maternelle. Les élèves apprendront à programmer en utilisant des commandes telles que les boucles et les événements. Les leçons qui se trouvent dans ce cours enseigneront également aux élèves à collaborer sérieusement les uns avec les autres, différentes techniques de résolution de problèmes, à persister face aux tâches plus exigeantes, et comment naviguer l'internet en toute sécurité.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Données
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Événements
+            lessonGroup-7:
+              display_name: Projet de fin de cours
+            lessonGroup-8:
+              display_name: Données
+          description_audience: 'Âges : 5 à 8 ans'
+          description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si les notions présentées dans le Cours B suivent de près celles du Cours A, les élèves découvriront néanmoins des activités déconnectées plus complexes et travailleront avec une plus grande variété de casse-têtes. Les élèves apprendront les bases de la programmation, des techniques de collaboration, développeront des compétences d'investigation et leur esprit critique, et apprendront à persévérer face aux difficultés et à naviguer l'internet en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres jeux dans l'environnement Labo Jeux.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: Événements
+            lessonGroup-6:
+              display_name: Données
+            lessonGroup-8:
+              display_name: Systèmes informatiques
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les élèves créeront des programmes avec du séquençage, des boucles et des événements. Ils examineront des techniques de résolution de problèmes et élaboreront des stratégies pour créer des communautés positives en ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs qu'ils pourront partager.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Boucles
+            lessonGroup-7:
+              display_name: Données
+            lessonGroup-8:
+              display_name: Projet de fin de cours
+          description_audience: 'Àges : 7 à 11 ans'
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours commence par un examen des notions abordées dans les cours précédents, dont les boucles et les événements. Par la suite, les élèves développeront leur compréhension des algorithmes, des boucles imbriquées, des boucles « tant que », des instructions conditionnelles, et bien plus encore.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Boucles Imbriquées
+            lessonGroup-4:
+              display_name: Fonctions
+            lessonGroup-5:
+              display_name: Données et Simulations
+            lessonGroup-6:
+              display_name: Projet de fin de cours
+          description_audience: 'Âge : 8 à 12 ans'
+          description_short: Découvrez les bases des sprites, des boucles imbriquées et des fonctions.
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours commence par une introduction à l'outil de programmation Labo des Sprites. Les élèves apprendront à créer des projets amusants et interactifs qui renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite de ces leçons, les élèves se mettront à faire du codage plus complexe. Les élèves découvriront les boucles imbriquées, les fonctions et les instructions conditionnelles. À la fin du cours, les élèves associeront ces notions pour résoudre des casse-têtes difficiles. Le cours se termine par un projet libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Àges : 9 à 13 ans'
+          description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+          description: Nous avons créé le cours F pour les élèves de cinquième année. Le cours commence par examiner comment les utilisateurs font leurs choix dans les applications qu'ils utilisent. Les étudiants apprennent ensuite à créer diverses applications Sprite Lab qui offrent également des choix à l'utilisateur. Au cours des dernières leçons du cours, les étudiants découvriront les variables dans divers contextes. Les étudiants bénéficient d'une plus grande autonomie et d'un plus grand choix tout au long de ce cours. À la fin du cours, les étudiants auront créé des projets interactifs à partager avec leurs amis et leur famille.
+          student_description: Apprenez à coder avec des sprites et des variables, et discutez des impacts sociétaux de l'informatique et d'Internet. À la fin de ce cours, concevez et créez un projet que vous pourrez partager avec vos amis et votre famille.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Instructions conditionnelles
+            lessonGroup-4:
+              display_name: Données et Simulations
+            lessonGroup-5:
+              display_name: Variables
+            lessonGroup-6:
+              display_name: L'impact de l'informatique
+            lessonGroup-7:
+              display_name: Projet de fin de cours
+          description_audience: 'Àges : 9 à 13 ans'
+          description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+          description: Nous avons créé le cours F pour les élèves de cinquième année. Le cours commence par examiner comment les utilisateurs font leurs choix dans les applications qu'ils utilisent. Les étudiants apprennent ensuite à créer diverses applications Sprite Lab qui offrent également des choix à l'utilisateur. Au cours des dernières leçons du cours, les étudiants découvriront les variables dans divers contextes. Les étudiants bénéficient d'une plus grande autonomie et d'un plus grand choix tout au long de ce cours. À la fin du cours, les étudiants auront créé des projets interactifs à partager avec leurs amis et leur famille.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8

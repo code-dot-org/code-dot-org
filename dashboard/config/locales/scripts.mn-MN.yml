@@ -1336,6 +1336,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         csd1-dlp:
           description: 'Энэ бол Code.org CSP-ийн сургагч багш нарт гүнзгий суралцах
             төлөвлөгөөний 1-р хэсэг юм. Эндээс Code.org CSP-ийн сургалтын хөтөлбөрийн
@@ -4296,6 +4298,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4324,6 +4328,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4352,6 +4358,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-data2:
           description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн
             ашигладаг талаар олж мэдээрэй.
@@ -4394,6 +4402,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4424,6 +4434,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         focus-on-hardware2-2023:
           description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн
             ашигладаг талаар олж мэдээрэй.
@@ -4456,6 +4468,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4698,6 +4712,102 @@ mn:
           title: Майнкрафт Кодын цаг Дизайнер
         netsim:
           title: Интернет симулятор
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 9-13 насныхан
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи
+            бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Шидтэнгүүд
+            lessonGroup-3:
+              display_name: Нөхцлүүд
+            lessonGroup-5:
+              display_name: Хувьсагчууд
+            lessonGroup-6:
+              display_name: Тооцооллын нөлөө
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 9-13 насныхан
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи
+            бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Шидтэнгүүд
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 5-8 насныхан
+          description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны
+            танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Үйл явдлууд
+            lessonGroup-8:
+              display_name: Өгөгдөл
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 8-12 насныхан
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Сараалжсан гогцоо
+            lessonGroup-4:
+              display_name: Функцүүд
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 4-7 насныхан
+          description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Өгөгдөл
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Үйл явдлууд
+            lessonGroup-6:
+              display_name: Өгөгдөл
+            lessonGroup-8:
+              display_name: Тооцооллын систем
+          lessons:
+            lesson-1:
+              name: Тооцооллын систем
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 7-11 насныхан
+          description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг,
+            тоглоом, тэр ч байтугай бүжгийн үдэшлэг зохио.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Гогцоонууд
+            lessonGroup-7:
+              display_name: Өгөгдөл
         new-d:
           title: Шинэ хичээлийн D скрипт
         new-e:
@@ -4941,6 +5051,7 @@ mn:
             дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын
             дайны тоглоомыг зохиоорой.
+          title: 'Оддын дайн: Галаксиг кодоор бүтээх (JavaScript)'
         starwarsblocks:
           description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны
             тоглоомыг зохиоорой.
@@ -4959,6 +5070,17 @@ mn:
           lesson_groups:
             required:
               display_name: Тойм
+        test-nv-coursea-2023:
+          description_audience: 4-7 насныхан
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -5112,6 +5234,22 @@ mn:
           lessons:
             lesson-3:
               name: Үнэлгээ
+        vpl-csa-2023-m1:
+          title: Модуль 1
+        vpl-csa-2023-m2:
+          title: Модуль 2
+        vpl-csa-2023-m3:
+          title: Модуль 3
+        vpl-csa-2023-m4:
+          title: Модуль 4
+        vpl-csa-2023-m5:
+          title: Модуль 5
+        vpl-csa-2023-m6:
+          title: Модуль 6
+        vpl-csa-2023-m7:
+          title: Модуль 7
+        vpl-csa-2023-m8:
+          title: Модуль 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -5130,6 +5268,38 @@ mn:
               display_name: Модуль 7
             CSD_Module 8:
               display_name: Модуль 8
+        vpl-csd-2023-m1:
+          title: Модуль 1
+        vpl-csd-2023-m2:
+          title: Модуль 2
+        vpl-csd-2023-m3:
+          title: Модуль 3
+        vpl-csd-2023-m4:
+          title: Модуль 4
+        vpl-csd-2023-m5:
+          title: Модуль 5
+        vpl-csd-2023-m6:
+          title: Модуль 6
+        vpl-csd-2023-m7:
+          title: Модуль 7
+        vpl-csd-2023-m8:
+          title: Модуль 8
+        vpl-csp-2023-m1:
+          title: Модуль 1
+        vpl-csp-2023-m2:
+          title: Модуль 2
+        vpl-csp-2023-m3:
+          title: Модуль 3
+        vpl-csp-2023-m4:
+          title: Модуль 4
+        vpl-csp-2023-m5:
+          title: Модуль 5
+        vpl-csp-2023-m6:
+          title: Модуль 6
+        vpl-csp-2023-m7:
+          title: Модуль 7
+        vpl-csp-2023-m8:
+          title: Модуль 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

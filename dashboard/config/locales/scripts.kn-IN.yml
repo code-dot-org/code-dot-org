@@ -1441,6 +1441,8 @@ kn:
           name: ಹೀರೋ
         hourofcode:
           title: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+        how-ai-works-2023:
+          title: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ
         iceage:
           name: ಐಸ್‌ಏಜ್
         infinity:
@@ -1477,6 +1479,79 @@ kn:
             ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
         netsim:
           title: ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್
+        nevada-standards-aligned-fifth-grade-2023:
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+            ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            lessonGroup-5:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-7:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+            ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-7:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            lessonGroup-8:
+              display_name: ಡೇಟಾ
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            lessonGroup-4:
+              display_name: ಕಾರ್ಯಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+        nevada-standards-aligned-kindergarten-2023:
+          description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಡೇಟಾ
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-5:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಡೇಟಾ
+            lessonGroup-8:
+              display_name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
+          lessons:
+            lesson-1:
+              name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-6:
+              display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-7:
+              display_name: ಡೇಟಾ
+            lessonGroup-8:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         new-e:
           lesson_groups:
             end_of_course_project:
@@ -1974,6 +2049,12 @@ kn:
               display_name: ಅಧ್ಯಾಯ 1
             lessonGroup-3:
               display_name: ಅಧ್ಯಾಯ 2
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            lessonGroup-4:
+              display_name: ಲೂಪ್‌ಗಳು
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

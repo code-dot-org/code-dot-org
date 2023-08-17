@@ -6113,6 +6113,9 @@
         "e5bf694c-478b-4bc2-a602-3124d9a8530b": {
           "name": "Conclusione"
         },
+        "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566": {
+          "name": "Prima della lezione"
+        },
         "3bdeb93a-6ace-48f2-940e-594eb4fa00d4": {
           "name": "Preparazione"
         },
@@ -6304,6 +6307,12 @@
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
           "name": "Presentazione riepilogativa"
+        },
+        "305d1465-9166-4ac4-a4e2-bc3bb6d1478e": {
+          "name": "Dopo la lezione"
+        },
+        "0754806a-e34d-4891-a471-399122e56ac9": {
+          "name": "Prima della lezione"
         },
         "29c29273-e188-41d0-8559-b9048c892737": {
           "name": "Preparazione"
@@ -6548,6 +6557,12 @@
         "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5": {
           "name": "Conclusione"
         },
+        "367760dc-695e-4391-acd6-d0f12787bc0e": {
+          "name": "Dopo la lezione"
+        },
+        "efd63a8a-28a5-4796-bb80-b3203ee15b9a": {
+          "name": "Prima della lezione"
+        },
         "554b4180-2899-4be8-a390-3e108705d899": {
           "name": "Preparazione"
         },
@@ -6746,8 +6761,14 @@
         "36b07898-2f7d-4b48-a979-d2f46cef659b": {
           "name": "Conclusione"
         },
+        "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795": {
+          "name": "Dopo la lezione"
+        },
         "15e4e2e5-9559-42e0-87af-f96ac932f5aa": {
           "name": "Attività di approfondimento"
+        },
+        "9299d981-71c8-4dfb-a0b7-3f994bd62bbf": {
+          "name": "Prima della lezione"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Preparazione"
@@ -6895,6 +6916,9 @@
         },
         "f8be9839-437c-4dc5-8668-54b3f62acfc3": {
           "name": "Conclusione"
+        },
+        "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee": {
+          "name": "Dopo la lezione"
         },
         "7e0487d6-0de0-461b-b6b8-bae53fff3c55": {
           "name": "Prima della lezione"
@@ -7070,8 +7094,14 @@
         "ef0f2f8a-5694-4406-9357-17f0d20037e3": {
           "name": "Conclusione"
         },
+        "d383eef2-e74d-4993-b0f3-cbd6fc216128": {
+          "name": "Dopo la lezione"
+        },
         "0e3432dd-ba1d-4c56-a446-81c419bd6db9": {
           "name": "Approfondimenti"
+        },
+        "92ecc06f-cf07-4550-9f9f-1fc435c8a453": {
+          "name": "Prima della lezione"
         },
         "af36124c-854d-449a-b766-4edfec01a4b2": {
           "name": "Preparazione"
@@ -7273,6 +7303,9 @@
         },
         "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e": {
           "name": "Giorno 5"
+        },
+        "63251396-7213-40ae-84c7-2ea28f359d4c": {
+          "name": "Dopo la lezione"
         },
         "4676cb43-a1fe-4d36-9f41-82d8516ac46a": {
           "name": "Guarda: il mio quartiere digitale"

@@ -1339,10 +1339,6 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2392,8 +2388,6 @@
           "spinning left": "spinning til venstre",
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "vokser",

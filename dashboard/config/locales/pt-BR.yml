@@ -281,13 +281,14 @@ pt:
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os
       direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
       Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos
-      os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century
+      os direitos reservados. Era do Gelo&#8482; &copy; %{current_year} 20th Century
       Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
-      Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
+      Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. DreamWorks
+      Os Bandidos &copy; %{current_year} DreamWorks Animation LLC. Todos os direitos
+      reservados.
     built_on_code_studio: Criado no Code Studio
-    built_on_github: Construído no GitHub da Microsoft
+    built_on_github: Desenvolvido no GitHub da Microsoft
     code_from_html: A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     cookie_notice: Aviso sobre Cookies
@@ -298,7 +299,7 @@ pt:
     help_from_html: Queremos especialmente reconhecer os engenheiros da Amazon, Google
       e Microsoft que ajudaram a criar estes materiais.
     help_from_html_old: Engenheiros da Amazon, Google e Microsoft ajudaram a criar
-      estes materiais.
+      esses materiais.
     how_it_works: Como funciona (Ver o Código)
     locale_select: Selecione o idioma
     make_my_own_app: Criar meu próprio aplicativo
@@ -669,7 +670,7 @@ pt:
       stats: Code Studio
       team: Equipe
       thebadguys: Os caras maus
-      view_all: Ver todos os projetos...
+      view_all: Veja todos os projetos...
       weblab: Laboratório Web
   next_level: Próximo nível
   next_page: Próxima página
@@ -1305,7 +1306,7 @@ pt:
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
   try_reloading: Tente recarregar a página
-  unit_prefix: Unidade %{n}
+  unit_prefix: Unidade 4
   unplugged_activity: Atividade off-line
   unsubmit: Cancelar envio
   upsell:

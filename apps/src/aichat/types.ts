@@ -7,3 +7,23 @@
 export type AichatLocale = {
   [key: string]: () => string;
 };
+
+export type ChatCompletionMessage = {
+  id: number;
+  role: Role;
+  chatMessageText: string;
+  status: Status;
+};
+
+export enum Role {
+  ASSISTANT = 'assistant',
+  USER = 'user',
+  SYSTEM = 'system',
+}
+
+export enum Status {
+  OK = 'ok',
+  PERSONAL = 'personal',
+  INAPPROPRIATE = 'inappropriate',
+  UNKNOWN = 'unknown',
+}

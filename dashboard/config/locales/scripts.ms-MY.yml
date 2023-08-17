@@ -2225,6 +2225,8 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry
             Birds, Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
           title: Pagar Sesat Klasik
+        how-ai-works-2023:
+          title: Cara AI Berfungsi
         iceage:
           name: zaman ais
         infinity:
@@ -2265,6 +2267,110 @@ ms:
             Minecraft anda sendiri.
         netsim:
           title: Simulator Internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta
+            seni, cerita atau permainan anda sendiri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jin
+            lessonGroup-3:
+              display_name: Bersyarat
+            lessonGroup-5:
+              display_name: Pemboleh ubah
+            lessonGroup-6:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-7:
+              display_name: Akhir Projek Kursus
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta
+            seni, cerita atau permainan anda sendiri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jin
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Umur: 5-8 tahun'
+          description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa
+            dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Acara-acara
+            lessonGroup-7:
+              display_name: Akhir Projek Kursus
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Umur: 8-12 tahun'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Gelung Bersarang
+            lessonGroup-4:
+              display_name: Fungsi
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Umur: 4-7 tahun'
+          description_short: Pengenalan kepada sains komputer untuk prapembaca.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Acara-acara
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Pengkomputeran
+          lessons:
+            lesson-1:
+              name: Sistem Pengkomputeran
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Umur: 7-11 tahun'
+          description_short: Pelajari tentang pernyataan bersyarat. Cipta seni, permainan
+            dan malah majlis tari-menari anda sendiri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Gelung
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Akhir Projek Kursus
         new-e:
           lesson_groups:
             csf_e_1:
@@ -2926,6 +3032,17 @@ ms:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 'Umur: 4-7 tahun'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

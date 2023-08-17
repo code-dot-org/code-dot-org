@@ -15,7 +15,6 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
         options:
@@ -460,26 +458,6 @@ uk:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': прибульців
             '"BEAR"': ведмеді
@@ -1006,8 +984,6 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1020,8 +996,6 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Спілкуйтеся з {VAR1} з {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1059,6 +1033,8 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"speed"': швидкість
+      gamelab_changeVarBy:
+        text: змінити {VARIABLE} на {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} торкається {SPRITE2}"
         options:
@@ -1095,6 +1071,8 @@ uk:
         text: видалити {THIS}
       gamelab_draggable:
         text: при перетягуванні
+      gamelab_drawLine:
+        text: малювати лінію {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
       gamelab_everyInterval:
@@ -1400,12 +1378,14 @@ uk:
         text: зняти колір з {THIS}
       gamelab_repeatForever:
         text: повторювати постійно
+      gamelab_resetTimer:
+        text: скинути таймер
       gamelab_setAnimation:
         text: змінити {THIS} костюм на {ANIMATION}
       gamelab_setBackground:
         text: встановити колір тла {COLOR}
       gamelab_setBackgroundImage:
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': печера
@@ -1427,7 +1407,7 @@ uk:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
       gamelab_setBackgroundImageAs:
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
       gamelab_setDefaultSpriteSize:
         text: встановити новий розмір спрайта за замовчуванням як [SIZE] [0]
         options:
@@ -1441,7 +1421,7 @@ uk:
       gamelab_setPromptWithChoices:
         text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів {A}{B}{C}
       gamelab_setProp:
-        text: встановити {SPRITE} властивість {PROPERTY} у {VAL}
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1451,7 +1431,7 @@ uk:
             '"direction"': напрямок руху
             '"speed"': швидкість
       gamelab_setProp_dropdown:
-        text: встановити {SPRITE} властивість {PROPERTY} у {SIZE}
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {SIZE}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1461,28 +1441,29 @@ uk:
             '75': середньо
             '100': великий
       gamelab_setSizes:
-        text: встановити {SPRITE} властивість {PROPERTY} у {N}%
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {N}%
         options:
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
       gamelab_setSpeed_dropdown:
+        text: встановити швидкість {SPRITE} у значення {SIZE}
         options:
           SIZE:
-            '1': extra slow
             '3': повільно
             '5': нормальний
             '7': швидко
-            '9': extra fast
       gamelab_setTint:
         text: змінити колір {THIS} на {COLOR}
+      gamelab_setupScoreboard:
+        text: "малювати табло \n{SPRITE1COSTUME}бал{VAR1}{SPRITE2COSTUME}бал{VAR2}мета{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
-          налаштування моделі з
+          налаштувати модель для
           {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
-          збирати
+          щоб зібрати
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
@@ -1816,10 +1797,10 @@ uk:
             '"direction"': напрямок руху
       Mikelab_setupSim:
         text: |-
-          налаштування моделі з
+          налаштувати модель для
           {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
-          збирати
+          щоб зібрати
           {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
@@ -1892,14 +1873,10 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1944,6 +1921,7 @@ uk:
         options:
           SOUND:
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/summer_night_loop.mp3"': ніч
             '"sound://category_background/ocean_waves.mp3"': океан
             '"sound://category_background/rainforest_ambient_sound.mp3"': тропічний ліс
@@ -1993,7 +1971,7 @@ uk:
             '"spring"': весна
             '"winter"': зима
       Poetry_setBackgroundImageAs:
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -2031,7 +2009,6 @@ uk:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2091,16 +2068,10 @@ uk:
         options:
           PORTION:
             '1': усі
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': усі
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -2260,7 +2231,6 @@ uk:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

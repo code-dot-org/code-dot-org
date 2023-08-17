@@ -242,6 +242,9 @@
         }
       }
     },
+    "club_biased_toy": {
+      "name": "Ankieta Klubu Nico"
+    },
     "club_random_toy": {
       "fields": {
         "color": {
@@ -253,7 +256,14 @@
         "music": {
           "id": "muzyka"
         }
-      }
+      },
+      "name": "Ankieta Klubu Izaaka"
+    },
+    "club_sparse_toy": {
+      "name": "Ankieta klubu Zoey"
+    },
+    "club_specific_toy": {
+      "name": "Ankieta Clubu Kima"
     },
     "cookies_toy": {
       "card": {
@@ -1396,7 +1406,8 @@
           "id": "Szarlotka"
         },
         "Blondies": {
-          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser.",
+          "id": "Blondynki"
         },
         "Brownies": {
           "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser.",
@@ -1549,42 +1560,8 @@
         }
       },
       "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
         "Aquatic": {
           "id": "Wodny"
-        },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
-        "Class": {
-        },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
-        },
-        "Milk": {
-        },
-        "Predator": {
-        },
-        "Tail": {
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       },
       "name": "Zoo"

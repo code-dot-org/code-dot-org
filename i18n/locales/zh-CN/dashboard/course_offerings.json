@@ -103,7 +103,7 @@
   "halloween": "万圣节",
   "step": "步进：",
   "pl-playground": "pl-playd",
-  "kodea-pd-2021": "kodea-pd-2021",
+  "kodea-pd-2021": "CSF Online PD-韩国",
   "csa-backpack-2022": "csa-back-2022",
   "csa-u6-dev": "csa-u6-dev",
   "kaitie-test-script": "kaitie 测试脚本",
@@ -149,5 +149,6 @@
   "focus-on-impact-in-society": "聚焦社会影响（计算机科学探索）",
   "focus-on-data": "聚焦数据（计算机科学探索）",
   "focus-on-creativity": "聚焦创造力（计算机科学探索）",
-  "ai-temp": "a-temp"
+  "ai-temp": "a-temp",
+  "how-ai-works": "AI 的工作原理"
 }

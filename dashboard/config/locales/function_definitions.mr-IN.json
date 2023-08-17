@@ -7,17 +7,7 @@
             "name": "x"
           }
         },
-        "2-3 Artist 12": {
-          "details": {
-          },
-          "draw eyebrow": {
-          },
-          "draw pupil": {
-          }
-        },
         "2-3 Artist 3.4": {
-          "draw a car": {
-          },
           "draw a circle": {
             "name": "एक वर्तुळ काढा"
           }
@@ -31,14 +21,8 @@
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {
-          },
-          "draw a button": {
-          },
           "draw a circle": {
             "name": "एक वर्तुळ काढा"
-          },
-          "draw cord": {
           },
           "draw square": {
             "name": "एक चौरस काढा",
@@ -46,55 +30,11 @@
               "height": "उंची",
               "width": "रुंदी"
             }
-          },
-          "jump to controller top left": {
-          },
-          "jump to middle": {
-          }
-        },
-        "2-3 Artist Debugging 5": {
-          "draw a head": {
-          },
-          "draw body and arms": {
-            "parameters": {
-            }
-          },
-          "draw left leg": {
-          },
-          "draw right leg": {
-          }
-        },
-        "2-3 Artist Debugging 6": {
-          "draw arms": {
-          },
-          "draw head": {
-          },
-          "draw left leg": {
-          },
-          "draw right leg": {
-          },
-          "draw sitting stick figure": {
-          },
-          "jump to neck": {
-          }
-        },
-        "2-3 Artist Debugging 7": {
-          "draw D": {
-          },
-          "draw E": {
-          },
-          "draw O": {
           }
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
             "name": "कानाच्या पाळ्या काढा"
-          }
-        },
-        "2-3 Artist Functions 10": {
-          "big gear": {
-          },
-          "small gear": {
           }
         },
         "2-3 Artist Functions 11": {
@@ -138,54 +78,6 @@
             "name": "एक हिमकण काढा"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
-        "2-3 Bee Functions 1": {
-          "get 2 nectar": {
-          }
-        },
-        "2-3 Bee Functions 10": {
-          "collect purple nectar": {
-          }
-        },
-        "2-3 Bee Functions 2": {
-          "get 5": {
-          }
-        },
-        "2-3 Bee Functions 4": {
-          "move and get nectar": {
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
-          }
-        },
-        "2-3 Bee Functions 8": {
-          "get 7 nectar make 7 honey": {
-          }
-        },
-        "2-3 Bee Functions 9": {
-          "get 7 make 7": {
-          }
-        },
-        "2-3 Bee Functions Assessment 1": {
-          "get 7": {
-          }
-        },
-        "2-3 Bee Functions Assessment 2": {
-          "move and get 3": {
-          }
-        },
         "4-5 Artist 3": {
           "draw a flower": {
             "name": "एक फूल काढा"
@@ -197,47 +89,11 @@
           }
         },
         "4-5 Artist 7": {
-          "draw a car": {
-          },
           "draw a circle": {
             "name": "एक वर्तुळ काढा"
           },
           "draw triangle": {
             "name": "एक त्रिकोण काढा"
-          }
-        },
-        "4-5 Artist 8": {
-          "draw circle": {
-          },
-          "draw goal": {
-          }
-        },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-          }
-        },
-        "4-5 Bee Debugging 7": {
-          "make 3 honey": {
-          }
-        },
-        "4-5 Bee Debugging 8": {
-          "get 5 nectar": {
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
-          }
-        },
-        "Alien Defender": {
-          "game has been won": {
           }
         },
         "Artist Autorun Test": {
@@ -255,149 +111,13 @@
           }
         },
         "Choose Your Own Adventure": {
-          "starting path": {
-          },
           "story": {
             "name": "कथा"
-          },
-          "witch ending": {
-          }
-        },
-        "Course 4 Artist Binary 1": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 2": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 3": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 4": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 5": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 6": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary 7": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary Free Play 2": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary Free Play 2a": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary Free Play 2b": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Binary pre1": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Functions Inspiration": {
-          "draw a square 20": {
           }
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a square 20": {
-          }
-        },
-        "Course 4 Bee Params 1": {
-          "get 3 nectar": {
-          }
-        },
-        "Course 4 Bee Params 2": {
-          "get 3 nectar": {
-          }
-        },
-        "Course 4 Bee Params 3": {
-          "get 3 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 4": {
-          "get 3 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 5": {
-          "get 5 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 6": {
-          "get 5 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 7": {
-          "get many nectar": {
-            "parameters": {
-            }
           }
         },
         "Course 4 Bee Params 8": {
@@ -413,8 +133,6 @@
           }
         },
         "Course 4 Play Lab Params 10": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "गुण"
@@ -438,8 +156,6 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "patrol": {
           }
         },
         "Course 4 Play Lab Params 5": {
@@ -492,14 +208,6 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "एक षटकोन काढा"
-          },
-          "draw a line of hexagons": {
-          },
-          "draw a square 20": {
-          },
-          "shift down/backward": {
-          },
-          "shift down/forward": {
           }
         },
         "Course 4 SCF 1a": {
@@ -510,27 +218,9 @@
             }
           }
         },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
-          }
-        },
-        "Course 4 SCF 2": {
-          "draw a square 20": {
-          },
-          "draw an octagon": {
-          },
-          "draw octagons": {
-            "parameters": {
-            }
-          },
-          "shift down": {
-          }
-        },
         "Course 4 SCF 3": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "draw a square 20": {
           },
           "draw an octagon": {
             "parameters": {
@@ -995,15 +685,11 @@
           }
         },
         "Find the Wizard": {
-          "check guess": {
-          },
           "do something": {
             "name": "काहीतरी करा"
           }
         },
         "FoodFight": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "गुण"
@@ -1039,58 +725,28 @@
           "diamond": {
             "name": "हिरा"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "एक घर काढा"
-          },
-          "draw grass": {
-          },
-          "draw windows": {
-          },
-          "rectangle": {
           },
           "square": {
             "name": "चौरस"
           },
           "sun": {
             "name": "सूर्य"
-          },
-          "triangle": {
-          },
-          "window": {
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
             "name": "हिरा"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "एक घर काढा"
-          },
-          "draw grass": {
-          },
-          "draw windows": {
-          },
-          "rectangle": {
           },
           "square": {
             "name": "चौरस"
           },
           "sun": {
             "name": "सूर्य"
-          },
-          "triangle": {
-          },
-          "window": {
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "parameters": {
-            }
           }
         },
         "InspirationalArtwork": {
@@ -1123,20 +779,6 @@
             "parameters": {
               "size": "आकार"
             }
-          },
-          "n-sided shape": {
-          }
-        },
-        "K-1 Artist2 3": {
-          "draw roof": {
-          }
-        },
-        "K-1 Artist2 4": {
-          "draw rectangle": {
-          }
-        },
-        "K-1 Artist2 5": {
-          "draw rectangle": {
           }
         },
         "MC Agent Freeplay": {
@@ -1293,37 +935,23 @@
           }
         },
         "NEW Course 4 Artist Functions 11": {
-          "draw a line of  squares": {
-          },
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a square 20": {
           }
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a square 20": {
           }
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a square 20": {
           }
         },
         "NEW Course 4 Artist Functions 14": {
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a square 20": {
-          },
-          "draw a square 40": {
-          },
-          "empty function": {
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1355,8 +983,6 @@
           }
         },
         "NEW Course 4 Artist Params 1": {
-          "Draw a triangle": {
-          },
           "draw a square": {
             "name": "एक चौरस काढा"
           }
@@ -1645,22 +1271,6 @@
             }
           }
         },
-        "Robot Doodle": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
-          "draw head": {
-          }
-        },
-        "Robot Doodle_2018": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
-          "draw head": {
-          }
-        },
         "Standalone_Artist_7": {
           "draw a flower": {
             "name": "एक फूल काढा"
@@ -1674,10 +1284,6 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "माझे फंक्शन"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
           }
         },
         "course1_artist_loops_challenge2": {
@@ -1704,61 +1310,11 @@
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "move and collect": {
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
-          }
-        },
-        "course4_artist_binary_challenge1": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_binary_challenge2": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1776,12 +1332,6 @@
           "draw a polygon": {
             "parameters": {
               "sides": "बाजू"
-            }
-          },
-          "draw a square 20": {
-          },
-          "draw background": {
-            "parameters": {
             }
           }
         },
@@ -1802,10 +1352,6 @@
             "parameters": {
               "length": "लांबी"
             }
-          }
-        },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
           }
         },
         "courseB_artist_loops_challenge2": {
@@ -1954,372 +1500,6 @@
             "name": "काहीतरी करा"
           }
         },
-        "courseD_artist_binary1": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary1_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary1_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary1_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary2": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary2_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary2_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary2_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary3": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary3_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary3_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary3_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary4": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary4_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary4_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary4_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary5": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary5_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary5_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary5_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary6": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary6_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary6_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary6_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary7": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary7_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary7_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary7_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_predict1": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_predict1_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_predict1_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary8_predict1_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binaryFP_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binaryFP_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binaryFP_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge1_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge1_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge1_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge2_2018": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge2_2019": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseD_artist_binary_challenge2_2020": {
-          "draw": {
-            "parameters": {
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "courseE_Dogger_2": {
-          "lose": {
-          },
-          "stop_everything": {
-          }
-        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "काहीतरी करा"
@@ -2337,8 +1517,6 @@
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
           },
-          "draw a plane of squares": {
-          },
           "draw a square": {
             "name": "एक चौरस काढा"
           }
@@ -2346,8 +1524,6 @@
         "courseE_artist_concept4_2018": {
           "draw a line of squares": {
             "name": "चौरसांची एक ओळ काढा"
-          },
-          "draw a plane of squares": {
           },
           "draw a square": {
             "name": "एक चौरस काढा"
@@ -2361,14 +1537,6 @@
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
             "name": "काहीतरी करा"
-          }
-        },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
           }
         },
         "courseE_artist_functions1": {
@@ -3249,67 +2417,19 @@
             "name": "बहुभुजाकृती काढा"
           }
         },
-        "courseE_bee_concept4": {
-          "honey nectar": {
-          }
-        },
         "courseE_bee_functions1": {
           "do something": {
             "name": "काहीतरी करा"
           }
         },
-        "courseE_bee_functions10": {
-          "move and make honey": {
-          }
-        },
-        "courseE_bee_functions11_predict1": {
-          "move and make honey": {
-          }
-        },
-        "courseE_bee_functions2": {
-          "get 2 nectar": {
-          }
-        },
-        "courseE_bee_functions3": {
-          "get 5": {
-          }
-        },
-        "courseE_bee_functions4": {
-          "move and get nectar": {
-          }
-        },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-          }
-        },
-        "courseE_bee_functions6": {
-          "get 7 nectar make 7 honey": {
-          }
-        },
-        "courseE_bee_functions7": {
-          "get 7 make 7": {
-          }
-        },
-        "courseE_bee_functions8": {
-          "collect all nectar": {
-          }
-        },
-        "courseE_bee_functions9": {
-          "get all nectar": {
-          }
-        },
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -3320,12 +2440,6 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "get pumpkin": {
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
           }
         },
         "courseE_farmer_concept3": {
@@ -3401,18 +2515,6 @@
           },
           "pumpkin square": {
             "name": "भोपळ्याचा चौरस"
-          }
-        },
-        "courseE_farmer_functions10b": {
-          "navigate": {
-          }
-        },
-        "courseE_farmer_functions11_predict": {
-          "check and pick": {
-          },
-          "find pumpkin": {
-          },
-          "wander path": {
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -3620,10 +2722,6 @@
             "name": "हार्वेस्टरला कणीस आणि भोपळे तोडायला मदत करा."
           }
         },
-        "courseE_farmer_functions2ba": {
-          "corn and pumpkin": {
-          }
-        },
         "courseE_farmer_functions2ba2022": {
           "check square for corn": {
             "name": "चौरसात कणीस आहे का तपासा"
@@ -3662,10 +2760,6 @@
           },
           "get all pumpkins": {
             "name": "सगळे भोपळे मिळवा"
-          }
-        },
-        "courseE_farmer_functions3c": {
-          "corn and pumpkin": {
           }
         },
         "courseE_farmer_functions3c12022": {
@@ -3763,18 +2857,6 @@
             "name": "सगळे भोपळे मिळवा"
           }
         },
-        "courseE_farmer_functions4b": {
-          "corn and pumpkin": {
-          }
-        },
-        "courseE_farmer_functions5c": {
-          "corn and pumpkin": {
-          }
-        },
-        "courseE_farmer_functions6c": {
-          "corn and pumpkin": {
-          }
-        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "बागेचा चौरस"
@@ -3825,10 +2907,6 @@
             "name": "बागेचा चौरस"
           }
         },
-        "courseE_farmer_functions8b": {
-          "navigate": {
-          }
-        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "बागेचा चौरस"
@@ -3852,18 +2930,6 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "बागेचा चौरस"
-          }
-        },
-        "courseE_farmer_functions9b": {
-          "navigate": {
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "courseE_playLab_scaffold1": {
@@ -4088,30 +3154,16 @@
             "parameters": {
               "sides": "बाजू"
             }
-          },
-          "draw a square 20": {
-          },
-          "draw background": {
-            "parameters": {
-            }
           }
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
             "name": "काहीतरी करा"
           },
-          "draw a square 20": {
-          },
           "draw an octagon": {
             "parameters": {
               "length": "लांबी"
             }
-          }
-        },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
           }
         },
         "courseF_bee_for_challenge1": {
@@ -4144,71 +3196,9 @@
             "name": "हालचाल करा आणि काऊंटर वापरून परागकण गोळा करा."
           }
         },
-        "courseF_bee_functions2": {
-          "get only nectar": {
-          }
-        },
-        "courseF_bee_functions3": {
-          "only make honey": {
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions6": {
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functions7": {
-          "get nectar make honey": {
-          }
-        },
         "courseF_bee_functions8a": {
           "do something": {
             "name": "काहीतरी करा"
-          },
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functionsPre7": {
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {
@@ -4267,78 +3257,6 @@
             }
           }
         },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "गोळा करा"
@@ -4357,22 +3275,16 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "गोळा करा"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "गोळा करा"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "गोळा करा"
-          },
-          "move and increment": {
           }
         }
       }

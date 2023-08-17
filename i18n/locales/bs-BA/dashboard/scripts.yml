@@ -1303,3 +1303,49 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: Razredi
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-6:
+              display_name: Petlje
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježdene Petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable

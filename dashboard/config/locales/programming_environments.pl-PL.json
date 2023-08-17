@@ -80,10 +80,15 @@
                     "[width]": {
                       "type": "liczba"
                     },
+                    "id": {
+                      "description": "Pozycja x w pikselach lewego górnego rogu obrazka do wstawienia."
+                    },
                     "x": {
+                      "description": "Pozycja x w pikselach lewego górnego rogu obrazka do wstawienia.",
                       "type": "liczba"
                     },
                     "y": {
+                      "description": "Pozycja y w pikselach lewego górnego rogu obrazka do wstawienia.",
                       "type": "liczba"
                     }
                   }
@@ -523,6 +528,7 @@
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
+                      "description": "Wartość zwracana przez funkcję setTimeout do anulowania.",
                       "type": "liczba"
                     }
                   },
@@ -585,6 +591,7 @@
                       "type": "funkcja"
                     },
                     "ms": {
+                      "description": "Ilość milisekund pomiędzy każdym wykonaniem funkcji.",
                       "type": "liczba"
                     }
                   }
@@ -595,6 +602,7 @@
                       "type": "funkcja"
                     },
                     "ms": {
+                      "description": "Liczba milisekund, która upłynie przed wykonaniem funkcji.",
                       "type": "liczba"
                     }
                   }
@@ -670,6 +678,9 @@
                     },
                     "options": {
                       "type": "obiekt"
+                    },
+                    "tableName": {
+                      "description": "Nazwa tabeli, z której pobiera rekordy."
                     }
                   }
                 },
@@ -687,6 +698,9 @@
                   "palette_params": {
                     "callback": {
                       "type": "funkcja"
+                    },
+                    "key": {
+                      "description": "Nazwa klucza, który ma być pobrany."
                     }
                   }
                 },
@@ -706,6 +720,9 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "Pobierz unikalny identyfikator dla obecnego użytkownika tej aplikacji."
+                },
                 "onRecordEvent": {
                   "palette_params": {
                     "callback": {
@@ -713,6 +730,9 @@
                     },
                     "includeAll": {
                       "type": "wartość logiczna"
+                    },
+                    "table": {
+                      "description": "Nazwa tabeli, której dotyczy ten kontroler zdarzeń."
                     }
                   }
                 },
@@ -744,12 +764,16 @@
                     "value": {
                       "description": "Dane, które mają być przechowywane."
                     }
-                  }
+                  },
+                  "short_description": "Przechowuje parę klucz/wartość w magazynie danych klucz/wartość App Lab i wywołuje funckcję zwrotną po zakończeniu akcji."
                 },
                 "startWebRequest": {
                   "palette_params": {
                     "callback": {
                       "type": "funkcja"
+                    },
+                    "url": {
+                      "description": "Adres internetowy usługi, która zwraca dane."
                     }
                   }
                 },
@@ -1369,6 +1393,7 @@
             "ui_controls": {
               "expressions": {
                 "button": {
+                  "content": "Tworzy na ekranie przycisk wyświetlający podany _text_ i do którego odwołuje się dane _id_ na domyślnej pozycji (0,0).\n\nWiele aplikacji używa przycisków, aby pozwolić użytkownikowi zainicjować niektóre działania aplikacji. Kontroler zdarzeń musi zostać stworzony na każdy rodzaj interakcji użytkownika z przyciskiem używając [`onEvent()`(#fff176)](/docs/applab/onEvent/) oraz _id_.",
                   "examples": {
                     "Example: Simple Turtle Control 1": {
                       "name": "Przykład: Proste sterowanie żółwiem 1"
@@ -1377,14 +1402,31 @@
                       "name": "Przykład: Proste sterowanie żółwiem 2"
                     }
                   },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator przycisku. id służy do odwoływania się do przycisku w kontrolerach zdarzeń lub innych funkcjach modyfikujących elementy interfejsu użytkownika. Musi zaczynać się od litery, nie zawierać spacji,  i może zawierać litery, cyfry, - oraz \\_."
+                    },
+                    "text": {
+                      "description": "Tekst wyświetlany na przycisku. "
+                    }
+                  },
                   "short_description": "Tworzy na ekranie przycisk wyświetlający podany tekst i do którego odwołuje się przez dany id, na domyślnej pozycji (0,0)."
                 },
                 "checkbox": {
                   "palette_params": {
                     "checked": {
+                      "description": "Czy pole wyboru jest początkowo zaznaczone.",
                       "type": "wartość logiczna"
                     }
                   }
+                },
+                "deleteElement": {
+                  "examples": {
+                    "Delete on Click": {
+                      "name": "Usuń po Kliknięciu"
+                    }
+                  },
+                  "short_description": "Usuwa element o podanym id."
                 },
                 "dropdown": {
                   "examples": {
@@ -1394,33 +1436,82 @@
                     "Example Two Moods": {
                       "name": "Przykład: Dwa nastroje"
                     }
+                  },
+                  "palette_params": {
+                    "option1": {
+                      "description": "Tekst wyświetlany na rozwijanym menu."
+                    },
+                    "option2": {
+                      "description": "Tekst wyświetlany na rozwijanym menu."
+                    }
                   }
                 },
                 "getChecked": {
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "examples": {
+                    "Example: Finding the Checked Item": {
+                      "name": "Przykład: Szukanie Zaznaczonego Elementu"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": " Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Pobiera stan pola wyboru lub przycisku radiowego.",
+                  "tips": "-   Pole wyboru lub przycisk radiowy można również utworzyć w trybie projektowania."
+                },
+                "getImageURL": {
+                  "examples": {
+                    "Example: Image Swap": {
+                      "description": "Wciśnij przycisk, aby zmienić obrazek postaci z psa na pszczołę i z powrotem.",
+                      "name": "Przykład: Zamiana Obrazków"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "return_value": "Zwraca ciąg znaków zawierający url obrazka dla danego id.",
+                  "tips": "-   Zwrócony ciąg zawiera URL obrazka. Na przykład zwraca http\\:// code.org/images/logo.png jako https\\:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png"
                 },
                 "getNumber": {
                   "examples": {
                     "Example: Fahrenheit to Celsius": {
                       "name": "Przykład: Stopnie Fahrenheita na Celsjusza"
                     }
-                  }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "short_description": "Pobiera liczbę z określonego elementu ekranu."
                 },
                 "getProperty": {
                   "palette_params": {
                     "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ta funkcja. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_.",
                       "type": "Łańcuch"
                     },
                     "property": {
+                      "description": "Właściwość do pobrania.",
                       "type": "Łańcuch"
                     }
-                  }
+                  },
+                  "short_description": "Obecna wartość właściwości wybranego elementu."
                 },
                 "getText": {
                   "examples": {
                     "Example Random Thoughts": {
                       "description": " Zademonstruj czytanie, a następnie czyszczenie pola TextInput.",
                       "name": "Przykład: losowe myśli"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
@@ -1528,9 +1619,17 @@
                   }
                 },
                 "radioButton": {
+                  "examples": {
+                    "Example: Finding the Checked Item": {
+                      "name": "Przykład: Szukanie Zaznaczonego Elementu"
+                    }
+                  },
                   "palette_params": {
                     "checked": {
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   }
                 },
@@ -1562,8 +1661,24 @@
                     }
                   }
                 },
+                "setImageURL": {
+                  "examples": {
+                    "Example: Image Swap": {
+                      "description": "Wciśnij przycisk, aby zmienić obrazek postaci z psa na pszczołę i z powrotem.",
+                      "name": "Przykład: Zamiana Obrazków"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  }
+                },
                 "setNumber": {
                   "palette_params": {
+                    "id": {
+                      "description": " Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    },
                     "number": {
                       "type": "liczba"
                     }
@@ -1588,6 +1703,7 @@
                 "setProperty": {
                   "palette_params": {
                     "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ta funkcja. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_.",
                       "type": "Łańcuch"
                     },
                     "property": {
@@ -1615,7 +1731,15 @@
                     "Example Random Thoughts": {
                       "name": "Przykład: losowe myśli"
                     }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
                   }
+                },
+                "showElement": {
+                  "short_description": "Pokazuje element  o podanym id."
                 },
                 "textInput": {
                   "examples": {
@@ -1644,6 +1768,9 @@
                     }
                   },
                   "return_value": "Żaden"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Zadeklaruj tablicę i przypisz ją do zmiennej"
                 },
                 "declareAssign_object": {
                   "examples": {
@@ -1837,6 +1964,7 @@
                       "type": "funkcja"
                     },
                     "ms": {
+                      "description": "Ilość milisekund pomiędzy każdym wykonaniem funkcji.",
                       "type": "liczba"
                     }
                   }
@@ -1847,6 +1975,7 @@
                       "type": "funkcja"
                     },
                     "ms": {
+                      "description": "Liczba milisekund, która upłynie przed wykonaniem funkcji.",
                       "type": "liczba"
                     }
                   }
@@ -1891,6 +2020,23 @@
                   "short_description": "// Komentarz"
                 },
                 "ellipse": {
+                  "examples": {
+                    "Animated Ellipse": {
+                      "name": "Animowana elipsa"
+                    },
+                    "Quarter of an Ellipse": {
+                      "description": "Zmień grubość obrysu elipsy wypełnionego zielonym kolorem, narysowanego w lewym górnym rogu ekranu.",
+                      "name": "Ćwierć elipsy"
+                    },
+                    "Red Line": {
+                      "description": "Zmień kolor konturu elipsy narysowanego na środku wyświetlacza.",
+                      "name": "Czerwona linia"
+                    },
+                    "Two Ellipses": {
+                      "description": "Narysuj dwie elipsy w tym samym miejscu, ale z różnymi szerokościami obrysu i bez koloru wypełnienia.",
+                      "name": "Dwie elipsy"
+                    }
+                  },
                   "palette_params": {
                     "h": {
                       "type": "Liczba"
@@ -3337,62 +3483,6 @@
           "categories": {
             "css_properties": {
               "expressions": {
-                "Text-Dec": {
-                  "examples": {
-                  }
-                },
-                "background-color": {
-                  "examples": {
-                  }
-                },
-                "border": {
-                  "examples": {
-                  }
-                },
-                "border-bottom": {
-                  "examples": {
-                  }
-                },
-                "border-color": {
-                  "examples": {
-                  }
-                },
-                "border-left": {
-                  "examples": {
-                  }
-                },
-                "border-radius": {
-                  "examples": {
-                  }
-                },
-                "border-right": {
-                  "examples": {
-                  }
-                },
-                "border-style": {
-                  "examples": {
-                  }
-                },
-                "border-top": {
-                  "examples": {
-                  }
-                },
-                "border-width": {
-                  "examples": {
-                  }
-                },
-                "color": {
-                  "examples": {
-                  }
-                },
-                "float": {
-                  "examples": {
-                  }
-                },
-                "font-family": {
-                  "examples": {
-                  }
-                },
                 "font-size": {
                   "examples": {
                     "Changing the Font Size": {
@@ -3409,22 +3499,6 @@
                       "description": "Ustaw wysokość elementu `<p>` na 100 px.",
                       "name": " Wysokość w pikselach"
                     }
-                  }
-                },
-                "margin": {
-                  "examples": {
-                  }
-                },
-                "pad": {
-                  "examples": {
-                  }
-                },
-                "pseudo-classes": {
-                  "examples": {
-                  }
-                },
-                "rgb-color": {
-                  "examples": {
                   }
                 },
                 "text-align": {
@@ -3444,76 +3518,6 @@
               }
             },
             "html_tags": {
-              "expressions": {
-                "A": {
-                  "examples": {
-                  }
-                },
-                "P": {
-                  "examples": {
-                  }
-                },
-                "body": {
-                  "examples": {
-                  }
-                },
-                "comment": {
-                  "examples": {
-                  }
-                },
-                "div": {
-                  "examples": {
-                  }
-                },
-                "doctype": {
-                  "examples": {
-                  }
-                },
-                "h": {
-                  "examples": {
-                  }
-                },
-                "head": {
-                  "examples": {
-                  }
-                },
-                "html": {
-                  "examples": {
-                  }
-                },
-                "img": {
-                  "examples": {
-                  }
-                },
-                "li": {
-                  "examples": {
-                  }
-                },
-                "link": {
-                  "examples": {
-                  }
-                },
-                "meta": {
-                  "examples": {
-                  }
-                },
-                "ol": {
-                  "examples": {
-                  }
-                },
-                "style": {
-                  "examples": {
-                  }
-                },
-                "title": {
-                  "examples": {
-                  }
-                },
-                "ul": {
-                  "examples": {
-                  }
-                }
-              },
               "name": "Tagi HTML"
             }
           },

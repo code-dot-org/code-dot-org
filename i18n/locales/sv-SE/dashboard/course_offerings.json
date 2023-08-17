@@ -25,6 +25,7 @@
   "pixelation": "Pixelering",
   "playlab": "Spel-labb",
   "sb-pt-exp": "sb-pt-exp",
+  "starwars": "Star Wars: Bygg en galax med kod i JavaScript",
   "text-compression": "Text komprimering",
   "outbreak-csc": "Utbrott",
   "peru": "peru",
@@ -33,5 +34,6 @@
   "edit-code": "Redigera kod",
   "halloween": "halloween",
   "step": "steg",
-  "soccer": "fotboll"
+  "soccer": "fotboll",
+  "how-ai-works": "Hur AI fungerar"
 }

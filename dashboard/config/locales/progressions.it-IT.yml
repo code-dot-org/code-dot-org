@@ -76,7 +76,7 @@ it:
         e operatori di confronto
       Build a Platform Jumper: Costruisci un gioco di salto tra piattaforme
       Build a Screen: Costruire una Schermata
-      Building a UI with Design Mode: Creare un'UI con la Modalità Design
+      Building a UI with Design Mode: Creare un'UI con la Modalità interfaccia
       Building an App: Creazione di un'app
       'Bunny ': Flipper
       Button Circuits: Circuiti con i pulsanti
@@ -356,7 +356,7 @@ it:
       New Shapes: Nuove Forme
       Orientation: Orientamento
       Overview: Panoramica
-      'Overview: Design Mode': 'Panoramica: Modalità Design'
+      'Overview: Design Mode': 'Panoramica: Modalità interfaccia '
       'Overview: If Statements': 'Panoramica: Istruzioni If'
       'Overview: Images': 'Panoramica: Immagini'
       'Overview: onEvent': 'Panoramica: onEvent'

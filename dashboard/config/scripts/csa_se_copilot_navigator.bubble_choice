@@ -1,0 +1,9 @@
+name 'CSA-SE-Copilot-Navigator'
+display_name 'Copilot as the Navigator'
+description 'Choose one of the following programs to use Copilot as the Navigator to implement a solution.'
+
+sublevels
+level 'CSA-SE-L2-L1a'
+level 'CSA-SE-L2-L1b'
+level 'CSA-SE-L2-L1c'
+level 'CSA-SE-L2-L1d'

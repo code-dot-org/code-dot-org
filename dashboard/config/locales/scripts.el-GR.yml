@@ -1303,6 +1303,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -2385,10 +2389,34 @@ el:
           description_short: 'Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
             λεπτά! '
           title: Κώδικας Flappy με Έρευνα
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Εισαγωγή στο App Lab
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2460,6 +2488,8 @@ el:
             με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat
             από την Εποχή των Παγετών!
           title: Κλασικός λαβύρινθος
+        how-ai-works-2023:
+          title: Πώς λειτουργεί η Τεχνητή Νοημοσύνη
         iceage:
           description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
             Lab της Εποχής των Παγετώνων!
@@ -2515,6 +2545,85 @@ el:
             δικιά σου έκδοση του Minecraft.
         netsim:
           title: Προσομοιωτής Διαδικτύου
+        nevada-standards-aligned-fifth-grade-2023:
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Χαρακτήρας
+            lessonGroup-3:
+              display_name: Συνθήκες
+            lessonGroup-5:
+              display_name: Μεταβλητές
+            lessonGroup-7:
+              display_name: Έργο Λήξη Μαθήματος
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης
+            της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Χαρακτήρας
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-6:
+              display_name: Συμβάντα
+            lessonGroup-7:
+              display_name: Έργο Λήξη Μαθήματος
+            lessonGroup-8:
+              display_name: Δεδομένα
+          lessons:
+            lesson-1:
+              name: Δεδομένα
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Εμφωλευμένοι Βρόχοι
+            lessonGroup-4:
+              display_name: Συναρτήσεις
+            lessonGroup-6:
+              display_name: Έργο Λήξη Μαθήματος
+        nevada-standards-aligned-kindergarten-2023:
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-6:
+              display_name: Δεδομένα
+          lessons:
+            lesson-1:
+              name: Δεδομένα
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Συμβάντα
+            lessonGroup-6:
+              display_name: Δεδομένα
+            lessonGroup-8:
+              display_name: Υπολογιστικά Συστήματα
+          lessons:
+            lesson-1:
+              name: Υπολογιστικά Συστήματα
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-6:
+              display_name: Βρόχοι
+            lessonGroup-7:
+              display_name: Δεδομένα
+            lessonGroup-8:
+              display_name: Έργο Λήξη Μαθήματος
         new-e:
           lesson_groups:
             end_of_course_project:
@@ -2990,6 +3099,7 @@ el:
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα (JavaScript)'
         starwarsblocks:
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου
             Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
@@ -3010,6 +3120,12 @@ el:
               display_name: Επισκόπηση
         tess-testing-problem-solving-2023:
           title: Επίλυση Προβλημάτων
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-4:
+              display_name: Βρόχοι
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

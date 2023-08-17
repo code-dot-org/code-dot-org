@@ -1354,6 +1354,10 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         csd1-dlp:
           lesson_groups:
             content:
@@ -2624,14 +2628,26 @@ nl:
           title: Flappy Code
         flappy-impact-study:
           title: Flappy Code met enquête
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2646,10 +2662,18 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-4:
               display_name: Hoofdstuk 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2658,6 +2682,10 @@ nl:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2747,6 +2775,8 @@ nl:
           student_description: Probeer de grondbeginselen van de informatica met figuren
             uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
           title: Klassiek doolhof
+        how-ai-works-2023:
+          title: Hoe AI werkt
         iceage:
           description: Maken een verhaal of een spel met de ijs tijd Speel Lab!
           description_short: Maken een verhaal of een spel met de ijs tijd Speel Lab!
@@ -2816,6 +2846,77 @@ nl:
           description_short: Leer hoe het internet werkt.
           student_description: Leer hoe het internet werkt.
           title: Internetsimulator
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Voorwaardelijke instructies
+            lessonGroup-5:
+              display_name: Variabelen
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Leeftijden: 5-8'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Gebeurtenissen
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Leeftijden: 8-12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Genestelde lussen
+            lessonGroup-4:
+              display_name: Functies
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Leeftijden: 4-7'
+          description_short: Een inleiding tot informatica voor pre-readers.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-5:
+              display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Leeftijden: 7-11'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-6:
+              display_name: Lussen
+            lessonGroup-7:
+              display_name: Data
         new-e:
           lesson_groups:
             extra_course_content:
@@ -3026,6 +3127,13 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-3:
               display_name: Hoofdstuk 2
+        test-nv-coursea-2023:
+          description_audience: 'Leeftijden: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -3139,6 +3247,22 @@ nl:
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.
           title: Een uitbraak simuleren
+        vpl-csa-2023-m1:
+          title: Module 1
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -3157,6 +3281,38 @@ nl:
               display_name: Module 7
             CSD_Module 8:
               display_name: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

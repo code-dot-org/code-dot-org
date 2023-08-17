@@ -1705,6 +1705,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         csd1-dlp:
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS
             Discoveries facilitators in training. Here you will find reflection prompts
@@ -5052,6 +5054,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-coding2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
@@ -5085,6 +5089,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-creativity2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
@@ -5118,6 +5124,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-data2:
           description_short: Learn how people use computers to solve data problems.
           lesson_groups:
@@ -5160,6 +5168,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-design-with-purpose2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
@@ -5196,6 +5206,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-hardware2-2023:
           description_short: Learn how people use computers to solve data problems.
           lesson_groups:
@@ -5228,6 +5240,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5348,6 +5362,8 @@ uz:
           student_description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi
             Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
           title: Klassik labirint
+        how-ai-works-2023:
+          title: SI (AI) qanday ishlaydi
         iceage:
           description: Muzlik Davri Play Lab yordamida hikoya yoki o‘yin yarating!
           description_short: Muzlik Davri Play Lab yordamida hikoya yoki o‘yin yarating!
@@ -5470,6 +5486,110 @@ uz:
             hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
         netsim:
           title: Internet simulyator
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
+            va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraytlar
+            lessonGroup-3:
+              display_name: Shartli bayonotlar
+            lessonGroup-5:
+              display_name: O‘zgaruvchilar
+            lessonGroup-6:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-7:
+              display_name: End of Course Project
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing
+            va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraytlar
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Yosh: 5-8'
+          description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga
+            kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Hodisalar
+            lessonGroup-7:
+              display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Maʼlumotlar
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Yosh: 8-12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ichma-ich sikllar
+            lessonGroup-4:
+              display_name: Funksiyalar
+            lessonGroup-6:
+              display_name: End of Course Project
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Yosh: 4-7'
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Maʼlumotlar
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Hodisalar
+            lessonGroup-6:
+              display_name: Maʼlumotlar
+            lessonGroup-8:
+              display_name: Hisoblash tizimlari
+          lessons:
+            lesson-1:
+              name: Hisoblash tizimlari
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Yosh: 7-11'
+          description_short: Learn about conditional statements. Create your own art,
+            games, and even a dance party.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Sikllar
+            lessonGroup-7:
+              display_name: Maʼlumotlar
+            lessonGroup-8:
+              display_name: End of Course Project
         new-d:
           title: New Course D Script
         new-e:
@@ -5803,6 +5923,17 @@ uz:
               display_name: Teaching Practices
             required:
               display_name: Overview
+        test-nv-coursea-2023:
+          description_audience: 'Yosh: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -5952,6 +6083,22 @@ uz:
           lessons:
             lesson-3:
               name: Baholash
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -5970,6 +6117,22 @@ uz:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -5982,6 +6145,22 @@ uz:
           name: vpl-csp-2020
         vpl-csp-2021:
           name: vpl-csp-2021
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

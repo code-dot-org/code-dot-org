@@ -101,7 +101,7 @@
   "halloween": "halloween",
   "step": "étape",
   "pl-playground": "pl-playground",
-  "kodea-pd-2021": "kodea-PD-2021",
+  "kodea-pd-2021": "CSF Online PC - Corée",
   "csa-backpack-2022": "sac à dos CSA - 2022",
   "csa-u6-dev": "csa-u6-dev",
   "kaitie-test-script": "script de test kaitie",
@@ -147,5 +147,6 @@
   "focus-on-impact-in-society": "L'Impact sur la société (CS Discoveries)",
   "focus-on-data": "Zoom sur les données (CS Discoveries)",
   "focus-on-creativity": "Zoom sur la créativité (CS Discoveries)",
-  "ai-temp": "ai-temp"
+  "ai-temp": "ai-temp",
+  "how-ai-works": "Comment fonctionne l'IA"
 }

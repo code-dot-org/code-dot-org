@@ -62,6 +62,7 @@ sq:
     already_linked: Llogaria juaj %{provider} është tashmë e lidhur me llogarinë tuaj
       në Code.org account.
     already_signedup: Jeni regjistruar?
+    clever: Të zgjuar
     continue_with: Hyr me %{provider}
     demigration_success: Përvoja e llogarisë së re tani është çaktivizuar në llogarinë
       tuaj.
@@ -82,7 +83,7 @@ sq:
     google_oauth2: Llogaria e Google
     invalid_provider: Na vjen keq, %{provider} llogaria nuk mund të lidhet me llogarinë
       e Code.org.
-    microsoft_v2_auth: Llogaria e Microsoft
+    microsoft_v2_auth: Microsoft
     migration_required: Na vjen keq, ne nuk mund të lidhim ose shkëputim llogaritë
       që janë ende duke përdorur përvojën e vjetër të llogarisë. Ju lutemi përditësoni
       përvojën e re të llogarisë.
@@ -93,6 +94,7 @@ sq:
     not_linked: Na vjen keq, por llogaria juaj në Code.org nuk është e lidhur me %{provider}.
       Duhet të identifikoheni duke shtypur fjalëkalimin më poshtë.
     notyet_signedup: Nuk jeni të regjistruar akoma?
+    powerschool: Shkolla e fuqizuar
     sign_in_with: Logohu me %{provider}
     sign_out_of_markdown: '#### Ju keni përdorur %{provider} për t''u kyçur. <a href="%{url}">Klikoni
       këtu për tu ç''kyçur nga %{provider}.'
@@ -179,6 +181,7 @@ sq:
     startover_cancel: Anulo
     startover_ok: 'Fillo nga fillimi '
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
+  done_with_module: Ky modul mësimor përfundojë
   download_coming_soon: Së shpejti veprime me shkarkim.
   download_pdf: Hap Planin Mësimor
   errors:
@@ -236,18 +239,21 @@ sq:
       %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy;
       %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br />
       Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të
-      gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year}
-      Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing
-      e Gumball is trademark and &copy;  %{current_year} Cartoon Network.
+      gjitha të drejtat e rezervuara <br /> Bimët vs Zombies &#8482;&copy; %{current_year}
+      Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year}
+      DreamWorks Animation LLC.Të gjitha të drejtat e rezervuara
     built_on_code_studio: Mëso në Code Studio
+    built_on_github: E ndërtuar në GitHub nga Microsoft
     code_from_html: Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU
       LGPL 2.1</a> .
     copyright: E drejta e autorit
     feedback: Jepni feedback-un tuaj
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan
       në krijimin e këtij tutoriali.
-    help_from_html_old: Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin
-      e këtyre materialeve.
+    help_from_html_old: 'Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në
+      krijimin e këtyre materialeve.
+
+      '
     how_it_works: Si funksionon
     make_my_own_app: Ndërtoj aplikacionin tim
     more: Më shumë
@@ -255,6 +261,7 @@ sq:
     privacy: Rregullat e Privatësisë
     report_abuse: Raporto abuzimin
     secure: Versioni i Sigurtë
+    store: Dyqani
     support: Ndihma dhe Komuniteti
     support_url: http://support.code.org
     thank_you: Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a
@@ -428,7 +435,8 @@ sq:
       learn: Mëso
       legal_privacy: Rregullat e Privatësisë
       legal_tos: Kushtet e shërbimit
-      project_gallery: Projekte
+      my_dashboard: Paneli im
+      project_gallery: Projektet
       report_bug: Raporto një problem
       sections: Seksionet
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
@@ -473,9 +481,12 @@ sq:
       starwars: Lufta e Yjeve
       stats: Code Studio
       team: Skuadra
+      view_all: Shiko të gjitha projektet...
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
   next_stage: Përfundoi! Vazhdo tek hapi tjetër
+  no_script_access_student: Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin
+    tuaj se në cilën njësi duhet të jeni.
   of: i
   okay: Në rregull
   or: ose
@@ -762,9 +773,9 @@ sq:
       nxënësit. Nxënësit nuk do të marrin kurrë email nga Code.org përveç rastit të
       rikthimit të fjalëkalimit. Shihni [Politikat e privatësisë] (http://code.org/privacy)
       për më shumë informacion.
-    submit: Rregjistrohu
+    submit: Regjistrohu
     taken_username: Ky emër është i zënë
-    teacher: A jeni një mësues?
+    teacher: A jeni një mësimdhënës?
     teacher_count: "%{count}  mesues janë regjistruar tashmë."
     teacher_educator_guide: Shiko guidën e edukimit
     title: Regjistrohuni për Code.org
@@ -984,6 +995,7 @@ sq:
   video:
     autoplay_option: Luaj videot automatikisht
     download: Shkarko Videon
+    label: Video
     notes: Asnjë video? Shfaq shënimet.
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     tab: Video.

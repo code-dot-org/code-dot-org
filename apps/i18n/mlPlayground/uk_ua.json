@@ -320,56 +320,10 @@
         }
       }
     },
-    "taco_toppings_toy": {
-    },
-    "thanksgiving": {
-      "card": {
-      },
-      "fields": {
-      }
-    },
     "zoo": {
-      "card": {
-        "context": {
-        }
-      },
       "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
         "Aquatic": {
           "id": "Водні"
-        },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
-        "Class": {
-        },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
-        },
-        "Milk": {
-        },
-        "Predator": {
-        },
-        "Tail": {
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       }
     }
@@ -382,6 +336,7 @@
   "navigateBack": "Назад",
   "navigateDone": "Кінець",
   "navigateForward": "Продовжити",
+  "predictButton": "Прогнозування",
   "resultsTableFeatureHeader": "Ознаки",
   "saveProgress": "Зберегти",
   "trainModelHeading": "Тренування",

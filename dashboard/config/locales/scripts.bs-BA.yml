@@ -1289,6 +1289,46 @@ bs:
           title: Sata Kodiranja Minecraft-a
         netsim:
           title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježdene Petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-6:
+              display_name: Petlje
         pixelation:
           title: Pikselizacija
         pl-csd-summer-day1:
@@ -1367,6 +1407,12 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

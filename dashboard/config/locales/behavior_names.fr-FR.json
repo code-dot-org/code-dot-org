@@ -1575,10 +1575,6 @@
           "swimming left and right": "nager de gauche à droite ",
           "wandering": "se balader"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "grandir",
           "jittering": "gigoter",
@@ -3027,8 +3023,6 @@
           "spinning right": "tournoyer à droite",
           "wandering": "se balader",
           "wobbling": "chanceler"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "grandir",

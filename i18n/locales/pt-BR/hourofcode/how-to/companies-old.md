@@ -67,7 +67,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 - Caso represente uma empresa da área de tecnologia, demonstre produtos divertidos e inovadores que estão sendo desenvolvidos.
 - Caso contrário, discuta sobre como a sua empresa usa tecnologia para solucionar problemas e alcançar objetivos.
 - Convide engenheiros de software da sua empresa para falar sobre por que decidiram estudar ciência da computação e os projetos que estão desenvolvendo.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Veja as dicas para atrair o interesse das meninas na ciência da computação [aqui]({{ urls/girls }}).
 
 ## 6. Codifique!
 **Direcione os participantes para a atividade**

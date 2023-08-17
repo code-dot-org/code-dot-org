@@ -96,6 +96,14 @@ function updateSectionCourse(updateCourse, course) {
     )?.id;
   }
 
+  // If no recommended version, fall back to the most recent stable version.
+  if (courseVersionId === undefined) {
+    const stableVersions = Object.values(courseVersions)
+      .filter(version => version.is_stable)
+      .sort((a, b) => b.key - a.key);
+    courseVersionId = stableVersions[0]?.id;
+  }
+
   const courseVersion = courseVersions[courseVersionId];
   const isStandaloneUnit = courseVersion.type === 'Unit';
 

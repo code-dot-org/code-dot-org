@@ -165,14 +165,6 @@
             "name": "teikna snjókorn"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
             "name": "sækja 2 blómasafa"
@@ -690,12 +682,6 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "teikna hring með tiltekinn radíus",
             "name": "teikna hring",
@@ -744,17 +730,9 @@
             "parameters": {
               "length": "lengd"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "teikna hring með tiltekinn radíus",
             "name": "teikna hring",
@@ -803,8 +781,6 @@
             "parameters": {
               "length": "lengd"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Play Lab Project": {
@@ -1112,18 +1088,6 @@
             }
           }
         },
-        "CourseF_app_computer": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-          }
-        },
         "Find the Wizard": {
           "check guess": {
             "name": "athuga ágiskun"
@@ -1236,9 +1200,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "athuga ágiskun",
-            "parameters": {
-            }
+            "name": "athuga ágiskun"
           }
         },
         "InspirationalArtwork": {

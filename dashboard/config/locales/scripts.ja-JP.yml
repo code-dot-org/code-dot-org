@@ -1534,6 +1534,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         csd1-dlp:
           description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット1です。ここでは、Code.org
             CS発見カリキュラムのユニット1の習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
@@ -3919,6 +3921,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3949,6 +3953,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3979,6 +3985,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-data2:
           description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
@@ -4007,6 +4015,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4038,6 +4048,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         focus-on-hardware2-2023:
           description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
@@ -4061,6 +4073,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4163,6 +4177,8 @@ ja:
           student_description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター
             サイエンスの基礎を試してみよう！
           title: 古典的な迷路
+        how-ai-works-2023:
+          title: 人工知能のしくみ
         iceage:
           description: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
           description_short: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
@@ -4257,6 +4273,108 @@ ja:
           title: Minecraft Hour of Code デザイナー
         netsim:
           title: インターネット シミュレータ
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: スプライト
+            lessonGroup-3:
+              display_name: 条件
+            lessonGroup-5:
+              display_name: 変数（へんすう）
+            lessonGroup-6:
+              display_name: コンピューティングの影響
+            lessonGroup-7:
+              display_name: コース最後のプロジェクト
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: スプライト
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 5-8 才
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: イベント
+            lessonGroup-7:
+              display_name: コース最後のプロジェクト
+            lessonGroup-8:
+              display_name: データ
+          lessons:
+            lesson-1:
+              name: データ
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: '年齢: 8～12才'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入れ子のループ
+            lessonGroup-4:
+              display_name: 関数(かんすう)
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+        nevada-standards-aligned-kindergarten-2023:
+          description: コースAでは、幼稚園生を含む初級読者向けにコンピュータサイエンスのカリキュラムを提供しています。学生はループやイベントなどのコマンドを使ったプログラミングを学びます。このコースの授業では、他の学生と有意義に協力し、さまざまな問題解決手法を研究し、困難な課題に直面しても粘り強く取り組み、インターネットの安全性について学ぶことも学びます。
+          description_audience: 4-7 才
+          description_short: 低学年向けコンピューター サイエンス入門
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: データ
+          lessons:
+            lesson-1:
+              name: データ
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: イベント
+            lessonGroup-6:
+              display_name: データ
+            lessonGroup-8:
+              display_name: コンピューティングシステム
+          lessons:
+            lesson-1:
+              name: コンピューティングシステム
+        nevada-standards-aligned-third-grade-2023:
+          description: 3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。
+          description_audience: '年齢: 7～11才'
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: くりかえし
+            lessonGroup-7:
+              display_name: データ
+            lessonGroup-8:
+              display_name: コース最後のプロジェクト
         new-d:
           title: 新しいコースD スクリプト
         new-e:
@@ -4888,6 +5006,17 @@ ja:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 4-7 才
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -5063,6 +5192,22 @@ ja:
           lessons:
             lesson-3:
               name: 評価
+        vpl-csa-2023-m1:
+          title: モジュール1
+        vpl-csa-2023-m2:
+          title: モジュール2
+        vpl-csa-2023-m3:
+          title: モジュール3
+        vpl-csa-2023-m4:
+          title: モジュール4
+        vpl-csa-2023-m5:
+          title: モジュール5
+        vpl-csa-2023-m6:
+          title: モジュール6
+        vpl-csa-2023-m7:
+          title: モジュール7
+        vpl-csa-2023-m8:
+          title: モジュール8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -5081,6 +5226,22 @@ ja:
               display_name: モジュール7
             CSD_Module 8:
               display_name: モジュール8
+        vpl-csd-2023-m1:
+          title: モジュール1
+        vpl-csd-2023-m2:
+          title: モジュール2
+        vpl-csd-2023-m3:
+          title: モジュール3
+        vpl-csd-2023-m4:
+          title: モジュール4
+        vpl-csd-2023-m5:
+          title: モジュール5
+        vpl-csd-2023-m6:
+          title: モジュール6
+        vpl-csd-2023-m7:
+          title: モジュール7
+        vpl-csd-2023-m8:
+          title: モジュール8
         vpl-csd-ci-1:
           description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。
             \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
@@ -5212,6 +5373,22 @@ ja:
             \  AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:**
             120分"
           title: 'モジュール 7: AIと機械学習を教えるための準備'
+        vpl-csp-2023-m1:
+          title: モジュール1
+        vpl-csp-2023-m2:
+          title: モジュール2
+        vpl-csp-2023-m3:
+          title: モジュール3
+        vpl-csp-2023-m4:
+          title: モジュール4
+        vpl-csp-2023-m5:
+          title: モジュール5
+        vpl-csp-2023-m6:
+          title: モジュール6
+        vpl-csp-2023-m7:
+          title: モジュール7
+        vpl-csp-2023-m8:
+          title: モジュール8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

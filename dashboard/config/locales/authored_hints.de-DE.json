@@ -344,8 +344,6 @@
         "Course 4 Artist Functions Inspiration": {
           "Course_4_Artist_Functions_Inspiration_c": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">14</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a square 20\"></mutation>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">20</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">3</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"draw_turn_by_constant\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <title name=\"VALUE\">100</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
-        "Course 4 Artist Functions challenge": {
-        },
         "Course 4 Artist Inspire": {
           "Course_4_Artist_Inspire_a": "Sobald ein Quadrat fertig ist, versuche eine halbe Seitenlänge vorwärts zu springen. Dann drehe dich um zeichne noch eines.",
           "Course_4_Artist_Inspire_b": "Jedes Quadrat und jeder Sprung wird viermal wiederholt (mit einer Linksdrehung dazwischen), um ein vollständige, windrädchenartige Einheit zu bilden.",
@@ -366,16 +364,8 @@
         "Course 4 Bee Params 7": {
           "notice_pattern": "Erkennst du ein Muster, wie sich die Anzahl der Nektare verändert? "
         },
-        "Course 4 Bee Params 8": {
-        },
-        "Course 4 Play Lab Params 2": {
-        },
         "Course 4 Play Lab Vars 2": {
           "Course_4_Play_Lab_Vars_2_a": "Achte darauf, dass die Zahl bei `Hund_Geschwindigkeit` etwas grösser ist als bei `Katze_Geschwindigkeit`."
-        },
-        "Course 4 Play Labs For Loops 2": {
-        },
-        "Course 4 Playlab For Loops 4b": {
         },
         "Course 4 Playlab For Loops 5b": {
           "Course_4_Playlab_For_Loops_5b_a": "Die Zeichen sind etwa 175 Pixel von der Mitte entfernt."
@@ -831,10 +821,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Der Baustein für Muster von Tanzbewegungen befindet sich in der Kategorie \"Tänzer\"."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Du kannst eine Funktion mehrmals in deinem Programm aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.",
           "Function_intro_Ryan_b": "Wenn du die Funktionen korrekt aufrufst, ist dies der Weg, den du gehen werden..."
@@ -1112,16 +1098,8 @@
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Versuche, den Agenten einige Brücken bauen zu lassen, damit Alex oder Steve auf der Karte weiterlaufen können."
         },
-        "NEW Course 4 Artist Functions 13": {
-        },
-        "NEW Course 4 Artist Functions 4": {
-        },
         "NEW Course 4 Artist Functions 9": {
           "NEW_Course_4_Artist_Functions_9_a": "Führe den Code aus bevor du Blöcke hinzufügst. Warum sieht das Bild falsch aus?"
-        },
-        "NEW Course 4 Artist Params 11": {
-        },
-        "NEW Course 4 Artist Params 13": {
         },
         "NEW Course 4 Artist Params 14": {
           "NEW_Course_4_Artist_Params_14_a": "Du kannst das Programm ein paar Mal ausführen, um herauszufinden, wie die Funktion mit unterschiedlichen Parametern funktioniert."
@@ -1732,8 +1710,6 @@
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Hier sind einige Dinge, die du passieren lassen kannst, wenn der Spieler das Spiel gewinnt: \n\n-   Lass den Dinosaurier verschwinden. \n-   Halte die Eichhörnchen an. \n-   Lass die Eichhörnchen und den Ritter fröhlich aussehen.\n-   Wähle einen neuen Hintergrund aus. \n-   Lass den Ritter den Spieler für seine Hilfe danken. \n-   Lass alle Figuren verschwinden und zeige eine Botschaft \"Du hast gewonnen!“ an.",
           "courseE_playLab_challenge1_b": "Hier sind einige Dinge, die du passieren lassen kannst, wenn der Spieler das Spiel verliert: \n\n-   Lass den Ritter verschwinden. \n-   Lass die Eichhörnchen traurig aussehen. \n-   Lass den Dinosaurier etwas sagen. \n-   Wähle einen neuen Hintergrund aus. \n-   Lass alle Figuren verschwinden und zeige eine Botschaft \"Game over!“ an."
-        },
-        "course4_artist_binary_challenge2": {
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Sobald du eine Funktion definiert haben, kannst du sie immer wieder aufrufen - wann und wo immer du willst!",
@@ -12245,10 +12221,6 @@
           "print_score_challenge_hint": "Du kannst anderen Text wie folgt mit deiner Variablen kombinieren:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"gamelab_textJoin\">\n      <field name=\"TEXT1\">You got </field>\n      <value name=\"TEXT2\">\n        <block type=\"gamelab_textVariableJoin\">\n          <field name=\"VAR\">score</field>\n          <value name=\"TEXT2\">\n            <block type=\"text\">\n              <field name=\"TEXT\"> points!</field>\n            </block>\n          </value>\n        </block>\n      </value>\n    </block>\n  </value>\n</block></xml>",
           "print_variable_hint": "Du kannst eine Variable wie folgt setzen:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"variables_get\">\n      <field name=\"VAR\">score</field>\n    </block>\n  </value>\n</block></xml>"
         },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12260,16 +12232,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Du musst dafür die Worte \"Was soll ich rufen?\" im grünen Block durch \"Tor!\" ersetzen."

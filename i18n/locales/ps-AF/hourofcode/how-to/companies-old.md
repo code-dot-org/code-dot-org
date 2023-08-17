@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: د کوډ ساعت کوربه کولو څرنګوالی - شرکتونه
 ---
 
 {{ signup_button }}

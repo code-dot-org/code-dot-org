@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:56:31 UTC",
+    "serialized_at": "2023-08-06 18:38:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1720,7 +1720,7 @@
       "key": "f31b53a2-d183-42e5-b58f-c99ff5f89ee6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup\n\n----"
       },
       "seeding_key": {
         "activity_section.key": "f31b53a2-d183-42e5-b58f-c99ff5f89ee6",
@@ -1728,13 +1728,13 @@
       }
     },
     {
-      "key": "8cc33b4e-f41e-4ab5-93e9-01722c10d33d",
+      "key": "fc5668f7-7044-4b6b-a700-8b063daa3b7d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.*\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
+        "description": "####CSP Vocabulary Bingo"
       },
       "seeding_key": {
-        "activity_section.key": "8cc33b4e-f41e-4ab5-93e9-01722c10d33d",
+        "activity_section.key": "fc5668f7-7044-4b6b-a700-8b063daa3b7d",
         "lesson_activity.key": "2bb4915a-c0c0-4521-8543-ee0dfb08c214"
       }
     },
@@ -1742,7 +1742,8 @@
       "key": "b8253126-ad0a-47d5-8b0d-dd79f475d2b4",
       "position": 4,
       "properties": {
-        "description": "Have students write their list, then share with a partner, and then finally discuss responses with the entire room."
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b8253126-ad0a-47d5-8b0d-dd79f475d2b4",
@@ -1753,8 +1754,7 @@
       "key": "acb2fb6f-8368-4baa-8e14-49fc89a002ba",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the speedup of this parallel solution?\r\n\r\n**Question:** In your own words, explain why the speedup of a parallel algorithm will eventually reach some limit.",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Ten in order to generate clues for the students."
       },
       "seeding_key": {
         "activity_section.key": "acb2fb6f-8368-4baa-8e14-49fc89a002ba",
@@ -2536,6 +2536,18 @@
       }
     },
     {
+      "name": "Algorithms (Unit Slides)",
+      "url": "https://docs.google.com/presentation/d/1bJ1adhM_5CfPlIHdlEZbhPITohq2PrE_byGwSZM2XqM/edit?usp=sharing",
+      "key": "algorithms_unit_slides_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp10-2023/resources",
       "key": "all_resources_19",
@@ -2577,6 +2589,31 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Ten",
+      "url": "https://drive.google.com/file/d/1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg/view?usp=drive_link",
+      "key": "csp_bingo_cards_-_unit_ten",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -2728,7 +2765,7 @@
     },
     {
       "name": "Unreasonable Time",
-      "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1JSO1e1jrlPbq7ZnI63aSkaO1Gyq_78LVJuvO6JAFlhM/edit?usp=sharing",
       "key": "unreasonable_time",
       "properties": {
         "audience": "Student",
@@ -2768,6 +2805,12 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
         "resource.key": "unit_10_journal_digital__1"
       }
     },
@@ -2781,6 +2824,18 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -2880,10 +2935,296 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "a finite set of instructions that accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "binary_search",
+      "word": "Binary Search",
+      "definition": "a search algorithm that starts at the middle of a sorted set of numbers and removes half of the data; this process repeats until the desired value is found or all elements have been eliminated",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary_search"
+      }
+    },
+    {
+      "key": "decision_problem",
+      "word": "Decision Problem",
+      "definition": "a problem with a yes/no answer  (e.g., is there a path from A to B?)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decision_problem"
+      }
+    },
+    {
+      "key": "distributed_computing",
+      "word": "Distributed Computing",
+      "definition": "a model in which programs are run by multiple devices",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "distributed_computing"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "a measure of how many steps are needed to complete an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "heuristic",
+      "word": "Heuristic",
+      "definition": "provides a \"good enough\" solution to a problem when an actual solution is impractical or impossible",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "heuristic"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "linear_search",
+      "word": "Linear Search",
+      "definition": "a search algorithm which checks each element of a list, in order, until the desired value is found or all elements in the list have been checked",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "linear_search"
+      }
+    },
+    {
+      "key": "optimization_problem",
+      "word": "Optimization Problem",
+      "definition": "a problem with the goal of finding the \"best\" solution among many (e.g., what is the shortest path from A to B?)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "optimization_problem"
+      }
+    },
+    {
+      "key": "parallel_computing",
+      "word": "Parallel Computing",
+      "definition": "a model in which programs are broken into small pieces, some of which are run simultaneously",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parallel_computing"
+      }
+    },
+    {
+      "key": "problem",
+      "word": "Problem",
+      "definition": "a general description of a task that can (or cannot) be solved with an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "key": "reasonable_time",
+      "word": "Reasonable Time",
+      "definition": "Algorithms with a polynomial efficiency or lower (constant, linear, square, cube, etc.) are said to run in a reasonable amount of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "reasonable_time"
+      }
+    },
+    {
+      "key": "selection",
+      "word": "Selection",
+      "definition": "deciding which steps to do next",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "putting steps in an order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "sequential_computing",
+      "word": "Sequential Computing",
+      "definition": "a model in which programs run in order, one command at a time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequential_computing"
+      }
+    },
+    {
+      "key": "speedup",
+      "word": "Speedup",
+      "definition": "the time used to complete a task sequentially divided by the time to complete a task in parallel",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "speedup"
+      }
+    },
+    {
+      "key": "undecidable_problem",
+      "word": "Undecidable Problem",
+      "definition": "a problem for which no algorithm can be constructed that is always capable of providing a correct yes-or-no answer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "undecidable_problem"
+      }
+    },
+    {
+      "key": "unreasonable_time",
+      "word": "Unreasonable Time",
+      "definition": "Algorithms with exponential or factorial efficiencies are examples of algorithms that run in an unreasonable amount of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unreasonable_time"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "linear_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "distributed_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "parallel_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "sequential_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "speedup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "decision_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "heuristic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "optimization_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "undecidable_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "vocabulary.key": "reasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "vocabulary.key": "unreasonable_time"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -3358,6 +3699,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

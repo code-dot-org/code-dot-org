@@ -1979,6 +1979,8 @@ sv:
           student_description: Prova grunderna i datavetenskap med figurer från Angry
             Birds, Plants vs. Zombies och Scrat från Ice Age!
           title: Klassisk labyrint
+        how-ai-works-2023:
+          title: Hur AI fungerar
         iceage:
           description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
           description_short: Skapa en berättelse eller gör ett spel med Ice Age Play
@@ -2040,6 +2042,60 @@ sv:
           title: Minecraft Hour of Code Designer
         netsim:
           title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Villkor
+            lessonGroup-5:
+              display_name: variabler
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Händelser
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapslade slingor(loopar)
+            lessonGroup-4:
+              display_name: funktioner
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Händelser
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-6:
+              display_name: loopar
+            lessonGroup-7:
+              display_name: Data
         new-express:
           lesson_groups:
             content:
@@ -2162,6 +2218,7 @@ sv:
             Wars-spel i en galax långt, långt borta.
           student_description: Lär dig att programmera droider och skapa ditt eget
             Star Wars-spel i en galax långt, långt borta.
+          title: 'Star Wars: Bygg en galax med kod i JavaScript'
         starwarsblocks:
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
             i en galax långt, långt borta.
@@ -2188,6 +2245,12 @@ sv:
               display_name: Kapitel 1
             lessonGroup-3:
               display_name: Kapitel 2
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -2278,6 +2341,22 @@ sv:
           description_short: Använd Sprite Lab för att skapa en simulering av ett
             virusutbrott.
           title: Simulera ett utbrott
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -2296,3 +2375,35 @@ sv:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8

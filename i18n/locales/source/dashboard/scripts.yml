@@ -381,6 +381,8 @@ en:
           lessons:
             lesson-49:
               name: Music
+            lesson-50:
+              name: AI Chat
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -648,7 +650,7 @@ en:
           student_description: Create a story or make a game with Gumball Play Lab!
           name: gumball
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code (Javascript)'
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_audience: ''
@@ -9052,6 +9054,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: csd1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -9126,11 +9130,19 @@ en:
             lessonGroup-6:
               display_name: New Lessons
           name: csd6-2023
-          title: "(Option A) Creating Apps with Devices - Circuit Playground ('23-'24)"
+          title: "[Do Not Use] Creating Apps with Devices"
           description_audience: ''
           description_short: Learn to program with physical devices.
-          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to Circuit Playground's - [click here][1] for more information about using Circuit Playground's in your classroom\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n-   You can view the full [Curriculum Guide][4] and [Implementation Guide][5] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][6]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][7] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description: |-
+            This is an old, unlaunched script for the Creating Apps with Devices unit used in development. When we published, we instead split this into 2 scripts:
+
+            `/s/csd6a-2023` for Circuit Playground
+            `/s/csd6b-2023` for micro:bit
+          student_description: |-
+            This is an old, unlaunched script for the Creating Apps with Devices unit used in development. When we published, we instead split this into 2 scripts:
+
+            `/s/csd6a-2023` for Circuit Playground
+            `/s/csd6b-2023` for micro:bit
         csd7-2023:
           lessons: {}
           lesson_groups:
@@ -10301,7 +10313,10 @@ en:
           description_audience: ''
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n**Goals:**\n\n-   Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n-   Understand how machine learning models make decisions from data\n\n**Big Questions:**\n\n-   How does machine learning find patterns in data to make decisions?\n-   How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n\n-   Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n**Big Questions:**\n\n-   How can machine learning be used to solve problems in our community?\n\n:::\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][4] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+          student_description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+
+            **Looking to teach this unit?** [Click here to view the lesson plans for these lessons][0]
         focus-on-creativity1-2023:
           lessons: {}
           lesson_groups:
@@ -10309,6 +10324,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-creativity1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10348,7 +10365,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [A Trapezoid is Not a Dinosaur][2] by Suzanne Morris \n-   [The Greedy Triangle][3] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][4]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][5] (50 minutes) for a basic introduction to the tool. "
+          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][2] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][3] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][4] by Suzanne Morris \n-   [The Greedy Triangle][5] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][6]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][7] (50 minutes) for a basic introduction to the tool. "
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -10377,6 +10394,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: focus-on-hardware1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10424,6 +10443,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-data1-2023
           title: Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10491,6 +10512,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-design-with-purpose1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10563,6 +10586,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-coding1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10617,6 +10642,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-impact-in-society1-2023
           title: Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10707,7 +10734,7 @@ en:
           title: Creating Apps with Devices (micro:bit) ('23-'24)
           description_audience: ''
           description_short: ''
-          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom][1]\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n    :::\n\n \n \n "
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom][1]\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][4]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n \n \n "
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
         vpl-csd-ci-1:
           lessons: {}
@@ -10978,10 +11005,10 @@ en:
             lessonGroup-2:
               display_name: Teaching Artificial Intelligence and Machine Learning
           name: self-paced-pl-csd5-2023
-          title: Preparing to Teach AI and Machine Learning
+          title: "[Hidden - Do Not Use] Preparing to Teach AI and Machine Learning"
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          description: "**Note:** This unit is hidden within the CSD Self-Paced Course. The content of this unit has instead been moved to [https://studio.code.org/courses/self-paced-pl-aiml-2023][0]\n\nThis professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
         pl-csd-summer-day1:
           lessons:
@@ -11542,6 +11569,8 @@ en:
           lessons:
             lesson-1:
               name: Remix Projects
+            lesson-2:
+              name: SNAP - Rosa Linn
           lesson_groups: {}
           name: musiclab
           title: Music Lab Test Lessons
@@ -11566,17 +11595,27 @@ en:
               name: Training Your Model
             lesson-6:
               name: Using Your Model
+            lesson-7:
+              name: Software Engineering and Computer Vision Pre-Survey
+            lesson-8:
+              name: Software Engineering and Computer Vision Post-Survey
+            lesson-9:
+              name: Setup
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: GitHub and Copilot'
             lessonGroup-3:
               display_name: 'Chapter 2: Computer Vision'
+            lessonGroup-4:
+              display_name: Pre-Survey
+            lessonGroup-5:
+              display_name: Post-Survey
           name: csa-software-engineering
           title: Software Engineering & Computer Vision
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. Students will gain practical knowledge, learn industry-standard practices, and cultivate critical thinking through discussions and problem-solving centered around AI tools and models. These lessons aim not only to bolster their understanding of AI and its applications but also foster creativity and collaboration, equipping students with the set of skills and the beginning of a software development portfolio they can take with them beyond high school.
+          student_description: This two-part module lets you explore pro-level tools like GitHub and GitHub Copilot and teaches you how to create your own computer vision program. You'll be solving real-world AI problems and tinkering with cutting-edge models, learning industry-standard practices along the way. This isn't just about understanding AI better - it's about sparking your creativity, improving your teamwork skills, and starting to build your own software development portfolio.
         csa-frq-practice:
           lessons:
             lesson-1:
@@ -11857,7 +11896,9 @@ en:
 
             Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
         nevada-standards-aligned-kindergarten-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -11867,14 +11908,18 @@ en:
               display_name: Loops
             lessonGroup-5:
               display_name: Impacts of Computing
+            lessonGroup-6:
+              display_name: Data
           name: nevada-standards-aligned-kindergarten-2023
           title: " Nevada Standards Aligned Kindergarten Course"
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
-          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
-          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
+          student_description: ''
         nevada-standards-aligned-first-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -11888,14 +11933,18 @@ en:
               display_name: Events
             lessonGroup-7:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Data
           name: nevada-standards-aligned-first-grade-2023
           title: Nevada Standards Aligned First Grade Course
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
-          description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
-          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          student_description: ''
         nevada-standards-aligned-second-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Computing Systems
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -11909,12 +11958,14 @@ en:
               display_name: Data
             lessonGroup-7:
               display_name: End of Group Project
+            lessonGroup-8:
+              display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
           title: Nevada Standards Aligned Second Grade Course
           description_audience: ''
           description_short: " Learn the basics of computer science and create your own art, stories, and games."
-          description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
-          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          student_description: ''
         nevada-standards-aligned-third-grade-2023:
           lessons: {}
           lesson_groups:
@@ -11936,8 +11987,8 @@ en:
           title: Nevada Standards Aligned Third Grade Course
           description_audience: 'Ages: 7-11'
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
-          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
-          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
+          student_description: ''
         nevada-standards-aligned-fourth-grade-2023:
           lessons: {}
           lesson_groups:
@@ -11955,8 +12006,8 @@ en:
           title: Nevada Standards Aligned Fourth Grade Course
           description_audience: 'Ages: 8-12'
           description_short: Learn the basics of sprites, nested loops, and functions.
-          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
-          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          student_description: ''
         nevada-standards-aligned-fifth-grade-2023-2023:
           lessons: {}
           lesson_groups:
@@ -11987,5 +12038,288 @@ en:
           title: Nevada Standards Aligned Fifth Grade Course
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
-          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
-          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          student_description: ''
+        vpl-csp-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        how-ai-works-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: how-ai-works-2023
+          title: How AI Works
+          description_audience: ''
+          description_short: ''
+          description: |-
+            These lessons supplement the [How AI Works][0] video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+
+            **Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series][1]. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            **Implementation Options:** Click one of the options below to expand and view more details.
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach them all!"</spa>]
+            Lessons 1-7 can be taught as a 7-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 8, which does not fit in this sequence. [Click here to learn more about hiding lesson][2]
+            :::
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach a specific lesson or integrate into another class"</span>]
+            Each lesson can stand on its own and be taught independently from the others. This is especially useful if you would like to integrate a lesson into another subject or an existing computer science, artificial intelligence, or general education class. Classrooms that go this direction should hide all lessons except the one you want to teach. [Click here to learn more about hiding lesson][3]
+            :::
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I Only Have a Day"</span>]
+            Lesson 8 is designed for classrooms that want to introduce AI to students, but only have a day to do so. This lesson provides a notetaker for students as the class watches the entire video sequence. Classrooms that go this direction should hide all lessons except for Lesson 8. [Click here to learn more about hiding lesson][4]
+            :::
+            <br />
+            <br />
+          student_description: |-
+            Learn how AI works by participating in different experiences and watching the [How AI Works][0] video series!
+
+            **Looking to teach these lessons?** [Click here to view the lesson plans for these lessons][1]
+        vpl-csa-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-csd-2023-m1
+          title: 'Module 1 '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: CSD Module 1 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Model Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: CSD Module 2 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 5: Review of the Curriculum Investigation'
+            lesson-4:
+              name: 'Synchronous Session 6: Assessment'
+            lesson-5:
+              name: 'Synchronous Session 7: Inclusion Scenarios'
+            lesson-6:
+              name: 'Synchronous Session 8: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: CSD Module 3 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: CSD Module 4 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: CSD Module 5 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: CSD Module 6 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: CSD Module 7 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: CSD Module 8 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

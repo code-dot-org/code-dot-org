@@ -24,13 +24,17 @@ import {
   translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
+import Select from 'react-select';
+import moment from 'moment';
+import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
+import 'react-select/dist/react-select.css';
 
 const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
   const updateCourseOffering = (key, value) => {
-    setCourseOffering({...courseOffering, [key]: value});
+    setCourseOffering({...courseOffering, [key]: value !== '' ? value : null});
   };
 
   return [courseOffering, updateCourseOffering];
@@ -43,6 +47,10 @@ export default function CourseOfferingEditor(props) {
   const [error, setError] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState(null);
+  const [thumbnail, setThumbnail] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(
+    courseOffering.published_date ? moment(courseOffering.published_date) : null
+  );
 
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -113,6 +121,55 @@ export default function CourseOfferingEditor(props) {
     return deviceCompatibilities
       ? JSON.parse(deviceCompatibilities)[device]
       : translatedNoneOption;
+  };
+
+  const handleVideoSelection = e => {
+    if (e) {
+      const videoUrl = e.value !== 'None' ? e.value : null;
+      setThumbnail(e.thumbnail);
+      updateCourseOffering('video', videoUrl);
+    } else {
+      //Handles clear button
+      setThumbnail(null);
+      updateCourseOffering('video', null);
+    }
+  };
+
+  const videoNoneOption = {
+    value: 'None',
+    label: (
+      <div style={styles.dropdownLabel}>
+        <div style={styles.label}>{translatedNoneOption}</div>
+      </div>
+    ),
+    name: 'None',
+    thumbnail: null,
+  };
+
+  const videoRenderedOptions = [
+    videoNoneOption,
+    ...props.videos.map(video => ({
+      value: video.youtube_url,
+      label: (
+        <div style={styles.dropdownLabel}>
+          <div style={styles.label}>{`${video.name} - ${video.locale}`}</div>
+        </div>
+      ),
+      name: `${video.name} - ${video.locale}`,
+      thumbnail: video.thumbnail,
+    })),
+  ];
+
+  //Filters the video options by name
+  const filterOption = (candidate, input) => {
+    return candidate.name === 'None'
+      ? true
+      : candidate.name.toLowerCase().includes(input.toLowerCase());
+  };
+
+  const handleDateChange = date => {
+    setSelectedDate(date);
+    updateCourseOffering('published_date', date);
   };
 
   return (
@@ -282,6 +339,26 @@ export default function CourseOfferingEditor(props) {
         showPreview={true}
         helpTipText={'Image used to market the curriculum around the site.'}
       />
+      <label style={styles.videoContainer}>
+        Video
+        <HelpTip>
+          <p>
+            Search and select the corresponding video for the course offering.
+          </p>
+        </HelpTip>
+        <div style={{width: '75%'}}>
+          <Select
+            options={videoRenderedOptions}
+            filterOption={filterOption}
+            value={
+              courseOffering.video === null ? 'None' : courseOffering.video
+            }
+            onChange={handleVideoSelection}
+            defaultValue={translatedNoneOption}
+          />
+        </div>
+        {thumbnail && <img src={thumbnail} alt="" style={styles.image} />}
+      </label>
       <label>
         CS Topic
         <HelpTip>
@@ -345,29 +422,69 @@ export default function CourseOfferingEditor(props) {
         </label>
       ))}
       <h3>Professional Learning</h3>
-      Professional Learning Program
-      <HelpTip>
-        <p>
-          Select a workshop where one can learn more about the professional
-          learning program
-        </p>
-      </HelpTip>
-      <select
-        value={courseOffering.professional_learning_program}
-        style={styles.dropdown}
-        onChange={e =>
-          updateCourseOffering('professional_learning_program', e.target.value)
-        }
-      >
-        <option value="">{translatedNoneOption}</option>
-        {Object.entries(props.professionalLearningProgramPaths).map(
-          ([key, path]) => (
-            <option key={key} value={path}>
-              {key}
+      <label>
+        Professional Learning Program
+        <HelpTip>
+          <p>
+            Select a workshop where one can learn more about the professional
+            learning program
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.professional_learning_program}
+          style={styles.dropdown}
+          onChange={e =>
+            updateCourseOffering(
+              'professional_learning_program',
+              e.target.value
+            )
+          }
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.entries(props.professionalLearningProgramPaths).map(
+            ([key, path]) => (
+              <option key={key} value={path}>
+                {key}
+              </option>
+            )
+          )}
+        </select>
+      </label>
+      <label>
+        Self-Paced Professional Learning
+        <HelpTip>
+          <p>
+            Pick the self-paced course offering that supports teachers teaching
+            the course offering.
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.self_paced_pl_course_offering_id}
+          style={styles.dropdown}
+          onChange={e => {
+            updateCourseOffering(
+              'self_paced_pl_course_offering_id',
+              e.target.value
+            );
+          }}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(props.selfPacedPLCourseOfferings).map(co => (
+            <option key={co.id} value={co.id}>
+              {co.display_name}
             </option>
-          )
-        )}
-      </select>
+          ))}
+        </select>
+      </label>
+      <label>
+        <div style={styles.flexContainer}>
+          <h3>Published Date </h3>
+          <HelpTip>
+            <p>Select the Published Date of the course offering</p>
+          </HelpTip>
+        </div>
+        <DatePicker date={selectedDate} onChange={handleDateChange} clearable />
+      </label>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -396,16 +513,26 @@ CourseOfferingEditor.propTypes = {
     device_compatibility: PropTypes.string,
     description: PropTypes.string,
     professional_learning_program: PropTypes.string,
+    self_paced_pl_course_offering_id: PropTypes.number,
+    video: PropTypes.string,
+    published_date: PropTypes.string,
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       key: PropTypes.string,
       display_name: PropTypes.string,
-      course_version_path: PropTypes.string,
     })
   ),
   professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
+  videos: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      youtube_url: PropTypes.string,
+      thumbnail: PropTypes.string,
+      locale: PropTypes.string,
+    })
+  ),
 };
 
 const styles = {
@@ -416,6 +543,27 @@ const styles = {
     width: '75%',
     height: '75px',
   },
+  dropdown: {
+    margin: '0 6px',
+  },
+  dropdownLabel: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: '10px',
+    cursor: 'pointer',
+  },
+  flexContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  image: {
+    width: 100,
+    marginLeft: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+  },
   input: {
     width: '100%',
     boxSizing: 'border-box',
@@ -425,7 +573,7 @@ const styles = {
     borderRadius: 4,
     margin: 0,
   },
-  dropdown: {
-    margin: '0 6px',
+  label: {
+    paddingLeft: 4,
   },
 };

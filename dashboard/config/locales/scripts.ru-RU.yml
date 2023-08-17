@@ -1468,6 +1468,10 @@ ru:
               display_name: Навигация по инструментам Code.org
           name: уроки-csa-в-собственном-темпе
           title: Навигация по Code.org для пилотный учителей CSA
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Настроить
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -1905,6 +1909,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         csd1-dlp:
           lesson_groups:
             content:
@@ -3985,6 +3991,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4001,6 +4009,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4017,6 +4027,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4041,6 +4053,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4059,6 +4073,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4075,6 +4091,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4192,6 +4210,8 @@ ru:
           student_description: Постигай азы программирования с персонажами Angry Birds,
             Plants vs. Zombies и белкой Скратом из Ледникового периода!
           title: Классический лабиринт
+        how-ai-works-2023:
+          title: Как ИИ Работает
         iceage:
           description: Создай сказку или игру с игровой лабораторией Ледниковый период!
           description_short: Создай сказку или игру с игровой лабораторией Ледниковый
@@ -4294,6 +4314,107 @@ ru:
           description_short: Узнайте о том, как работает Интернет.
           student_description: Узнайте о том, как работает Интернет.
           title: Интернет-симулятор
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайты
+            lessonGroup-3:
+              display_name: Условные команды
+            lessonGroup-5:
+              display_name: Переменные
+            lessonGroup-6:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-7:
+              display_name: Завершение Курсового Проекта
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайты
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Возраст: 5-8'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: События
+            lessonGroup-7:
+              display_name: Завершение Курсового Проекта
+            lessonGroup-8:
+              display_name: Данные
+          lessons:
+            lesson-1:
+              name: Данные
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Возраст: 8-12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вложенные циклы
+            lessonGroup-4:
+              display_name: функции
+            lessonGroup-6:
+              display_name: Завершение Курсового Проекта
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Возраст: 4-7'
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: Данные
+          lessons:
+            lesson-1:
+              name: Данные
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: События
+            lessonGroup-6:
+              display_name: Данные
+            lessonGroup-8:
+              display_name: Вычислительные системы
+          lessons:
+            lesson-1:
+              name: Вычислительные системы
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Возраст: 7-11'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: Циклы
+            lessonGroup-7:
+              display_name: Данные
+            lessonGroup-8:
+              display_name: Завершение Курсового Проекта
         new-e:
           lesson_groups:
             csf_e_1:
@@ -4909,6 +5030,17 @@ ru:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 'Возраст: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

@@ -1575,10 +1575,6 @@
           "swimming left and right": "înotat către stânga și către dreapta",
           "wandering": "rătăcit"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "creștere",
           "jittering": "tremurat",
@@ -3027,8 +3023,6 @@
           "spinning right": "învârtit spre dreapta",
           "wandering": "rătăcit",
           "wobbling": "clătinat"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "mărire",

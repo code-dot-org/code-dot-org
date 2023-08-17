@@ -88,7 +88,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             <Button
               __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
               style={styles.saveButton}
               disabled={isSaving}

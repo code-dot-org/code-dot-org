@@ -648,6 +648,9 @@
     },
     "loneliness_interests": {
       "fields": {
+        "History": {
+          "id": "História"
+        },
         "Internet": {
           "id": "Internet"
         },
@@ -898,6 +901,9 @@
         "Dance": {
           "id": "Dançar"
         },
+        "Empathy": {
+          "id": "Empatia"
+        },
         "Gender": {
           "description": "Gênero",
           "id": "Gênero"
@@ -905,6 +911,9 @@
         "Height": {
           "description": "Altura",
           "id": "Altura"
+        },
+        "History": {
+          "id": "História"
         },
         "Internet": {
           "id": "Internet"
@@ -915,14 +924,6 @@
         "Writing": {
           "id": "Escrevendo"
         }
-      }
-    },
-    "taco_toppings_toy": {
-    },
-    "thanksgiving": {
-      "card": {
-      },
-      "fields": {
       }
     },
     "zoo": {

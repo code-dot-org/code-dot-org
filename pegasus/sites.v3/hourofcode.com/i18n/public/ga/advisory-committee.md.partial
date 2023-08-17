@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Uair an Chóid agus Coiste Comhairleach CSEDWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Uair an Chóid agus Coiste Comhairleach CSEDWeek
 
 {{ advisory-committee/about_headshots }}
 
