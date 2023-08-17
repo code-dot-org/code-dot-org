@@ -76,12 +76,13 @@
     "encrypted_examples": "uumlJUD2djBpdOGJpvd7CMTIIpuMvOJvLiz0xrFUwYaRTehUqZdHG6UdEx69\nc2XAHB/n35z0ewD8vd6zIunz0w==\n",
     "reference_links": [
       "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/maker/setup"
     ],
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"},{\"changed_at\":\"2023-08-15 16:37:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-15 16:38:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.692+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"},{\"changed_at\":\"2023-08-15 16:37:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-15 16:38:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:38:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

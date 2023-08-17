@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:01:46.000Z",
   "level_num": "custom",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "Motorcycle Movement",
     "thumbnail_url": "https://images.code.org/3f3c1010a959a4503137b0fc5e613c20-image-1648843153015.8.b-preview.gif",
@@ -105,9 +107,8 @@
     "encrypted_examples": "aRXff2fDt7V6jck5B7byYCDtr0Of3L9mzVXB5FKmqLMb4iiSIFGthK0W4k31\n5QR+77KP6Lz1BegLtTycwzSwqA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:46.623+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:46.623+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"},{\"changed_at\":\"2023-08-16 18:58:48 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
