@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:13:08.000Z",
   "level_num": "custom",
@@ -71,7 +72,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Debugging: Infinite Scrolling\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/4a82e91b1b6ad15623620fee4383c964-image-1648759745413.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\nThis app is meant to move an arrow across the screen. When the arrow reaches the edge of the screen, it should reset back to the beginning - but, something's wrong!\r\n\r\n- **What I Expected to Happen:** When the arrow reaches the far sides, it teleports to the other side so it can keep moving\r\n- **What Actually Happens:** The arrow moves just once, sometimes off of the screen\r\n\r\n_Note: you may need to switch into text mode to fix this bug_\r\n\r\n(Optional) Even when the bug is fixed, the infinite scroll doesn't look great. Can you adjust the numbers so the scrolling effect looks smoother?",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -87,7 +88,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Debugging!",
@@ -96,11 +98,13 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-arrow-right\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"arrowImg\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 110px; top: 185px; margin: 0px;\"></div></div>",
     "teacher_markdown": "The bug is that the `>` and `<` symbols are swapped in the if-statements. For example, the top if statement checks if `xPos < 320`, which will be true while the arrow is still on the screen. We want the opposite: `xPos > 320`. This correctly checks that the arrow is off of the right-side of the screen. Similarly, the second if statement should be checking that `xPos < 0`.\r\n\r\nStudents can fix this within block mode, but it's a little tedious and requires removing the `<` and `>` blocks completely. It can be easier to switch into text mode and manually change these symbols, then switch back to block mode. For some students, this can be a good excuse to try out text mode if they've never used it before.",
     "bubble_choice_description": "The app is supposed to move an arrow across the screen and keep scrolling to the other side, but there are bugs!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:08.096+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalE_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:08.096+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalE_2222\"},{\"changed_at\":\"2023-08-16 17:35:00 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

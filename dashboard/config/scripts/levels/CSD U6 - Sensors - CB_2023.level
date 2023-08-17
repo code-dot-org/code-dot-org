@@ -92,7 +92,8 @@
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/analog-sensors"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/changing-sensor-scale",
     "mini_rubric": "false",
@@ -109,7 +110,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.006+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2222\"},{\"changed_at\":\"2023-08-15 22:59:19 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.006+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2222\"},{\"changed_at\":\"2023-08-15 22:59:19 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 19:16:48 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

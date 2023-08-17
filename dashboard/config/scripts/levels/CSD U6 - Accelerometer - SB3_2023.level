@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:10.000Z",
   "level_num": "custom",
@@ -56,7 +57,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  // 1) Get the `roll` property of the accelerometer and store it in a variable\r\n  \r\n  //2) If the board is tilted left: update the screen to say \"Left\"\r\n  \r\n  //3) If the board is tilted right: update the screen to say \"Right\"\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 200px; height: 39px; position: absolute; left: 55px; top: 190px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"direction\">????</label></div></div>",
     "encrypted_examples": "S309A04NgTlmSMKvdI3+NQwONtRSK7iHV5oQkfHv4KbcLh6Q1qEoFfEVqmr1\nX0vA7dbts0zOfU4K6BYfB8dRoA==\n",
@@ -72,13 +73,13 @@
     "reference_links": [
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2022/guides/variables",
+      "/maker/setup"
     ],
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:10.993+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:10.993+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB3_2222\"},{\"changed_at\":\"2023-08-16 19:23:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
