@@ -1,11 +1,40 @@
 @use 'sass:math';
+@import 'phase1-design-system';
+
+$container-width: 960px;
 
 .expandedCardContainer {
   position: absolute;
   background-color: #f9f9f9;
   color: #333;
   border: 1px solid #ccc;
+  border-color: #333;
   border-radius: 4px;
-  padding: 10px;
-  z-index: 1;
+  padding: 16px;
+  width: $container-width;
+  height: 25em;
+  box-sizing: border-box;
+}
+
+.iconWithDescription {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
+
+  > p {
+    font-size: 0.875em;
+    margin: 0;
+    color: $neutral_dark;
+  }
+
+  i {
+    font-size: 0.875em;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
 }

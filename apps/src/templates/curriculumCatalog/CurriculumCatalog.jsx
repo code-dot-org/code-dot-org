@@ -76,6 +76,13 @@ const CurriculumCatalog = ({
                 script_id,
                 is_standalone_unit,
                 is_translated,
+                //Expanded Card Props
+                device_compatibility,
+                description,
+                professional_learning_program,
+                video,
+                published_date,
+                self_paced_pl_course_offering_path,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -98,6 +105,14 @@ const CurriculumCatalog = ({
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   quickViewDisplayed={isQuickViewDisplayed}
+                  deviceCompatibility={device_compatibility}
+                  description={description}
+                  professionalLearningProgram={professional_learning_program}
+                  video={video}
+                  publishedDate={published_date}
+                  selfPacedPlCourseOfferingPath={
+                    self_paced_pl_course_offering_path
+                  }
                   {...props}
                 />
               )
