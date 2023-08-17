@@ -53,7 +53,18 @@ class StudentTable extends React.Component {
 
     // Sort students, in-place.
     isSortedByFamilyName
-      ? students.sort((a, b) => a.familyName.localeCompare(b.familyName))
+      ? students.sort((a, b) => {
+          if (a.familyName && b.familyName) {
+            return a.familyName.localeCompare(b.familyName);
+          } else if (a.familyName) {
+            // Sort empty family names last.
+            return -1;
+          } else if (b.familyName) {
+            return 1;
+          } else {
+            return 0;
+          }
+        })
       : students.sort((a, b) => a.name.localeCompare(b.name));
 
     return (
