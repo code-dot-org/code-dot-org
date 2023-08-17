@@ -235,6 +235,7 @@ class TopInstructions extends Component {
           .done((data, textStatus, request) => {
             this.setState({
               latestFeedback: request.status === 204 ? null : data,
+              teacherCanLeaveFeedback: true,
               token: request.getResponseHeader('csrf-token'),
             });
           })
@@ -597,6 +598,7 @@ class TopInstructions extends Component {
       rubric,
       tabSelected,
       fetchingData,
+      teacherCanLeaveFeedback,
       token,
     } = this.state;
 
@@ -636,7 +638,7 @@ class TopInstructions extends Component {
 
     const displayFeedbackTab =
       !!rubric ||
-      teacherViewingStudentWork ||
+      (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
       (this.isViewingAsStudent && !!latestFeedback);
 
     // Teacher is viewing students work and in the Feedback Tab
@@ -702,6 +704,8 @@ class TopInstructions extends Component {
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
+          csrfToken={token}
+          teacherCanLeaveFeedback={teacherCanLeaveFeedback}
           {...passThroughHeaderProps}
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
