@@ -25,7 +25,7 @@ class Pd::SessionAttendanceController < ApplicationController
       # with an enrollment in this workshop, user must switch to an account enrolled in this workshop.
       if current_user
         @safe_names = @session.workshop.unattended_enrollments.get_safe_names
-        render :match_registration
+        render :no_enrollment_match
         return
       else
         redirect_to "/users/sign_in?user_return_to=/pd/attend/#{@session.code}"
