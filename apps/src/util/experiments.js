@@ -44,6 +44,7 @@ experiments.BLOCKLY_JSON = 'blocklyJson';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
+experiments.AI_RUBRICS = 'ai-rubrics';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import 'font.scss';
+@import 'typography.scss';
 
 .floatingActionButton {
   position: fixed;
@@ -88,6 +89,10 @@
   gap: 16px;
   font-weight: 325;
   line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .aiToken {
@@ -109,5 +114,60 @@
 
 .learningGoalExpanded {
   border-bottom: 1px solid $neutral_dark40;
-  padding: 20px 16px;
+  padding: 1.25rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+.learningGoalTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark50;
+  background: $neutral_dark10;
+
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    color: $neutral-dark;
+    font-family: $gotham-regular, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.54;
+  }
+}
+
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  span {
+    font-size: 0.875rem;
+    font-family: $gotham-bold;
+    line-height: 154%;
+  }
+}
+
+
+.evidenceLevelLabel {
+  font-family: $gotham-bold;
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 2rem;
 }

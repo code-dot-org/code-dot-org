@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-03-28 22:43:16 UTC",
+    "serialized_at": "2023-08-16 20:52:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -231,6 +231,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Gen AI Blocks Playground",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -729,6 +744,18 @@
       "seeding_key": {
         "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00",
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2113,6 +2140,17 @@
       "seeding_key": {
         "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3",
         "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00"
+      }
+    },
+    {
+      "key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06",
+      "position": 1,
+      "properties": {
+        "progression_name": "Border Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06",
+        "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54"
       }
     }
   ],
@@ -4173,6 +4211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cnn widget test"
+        ],
         "progression": "CNN Widget Test"
       },
       "bonus": false,
@@ -4187,6 +4228,28 @@
       },
       "level_keys": [
         "cnn widget test"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Border Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dan - gen block test"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06"
+      },
+      "level_keys": [
+        "Dan - gen block test"
       ]
     }
   ],
@@ -5186,6 +5249,18 @@
         "script.name": "csd-playground",
         "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dan - gen block test",
+        "script_level.level_keys": [
+          "Dan - gen block test"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06"
+      }
     }
   ],
   "resources": [
@@ -5935,6 +6010,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
