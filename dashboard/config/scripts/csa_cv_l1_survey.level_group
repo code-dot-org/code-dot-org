@@ -1,0 +1,10 @@
+name 'CSA-CV-L1-Survey'
+title 'Lesson 1: Intro to AI Models Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA SE Student End of Lesson Survey'
+level 'CSA-CV-L1-Survey-Q01'
+level 'CSA-CV-L1-Survey-Q02'
+level 'CSA-CV-L1-Survey-Q03'
