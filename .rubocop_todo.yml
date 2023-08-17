@@ -247,11 +247,6 @@ Style/CommentAnnotation:
 Style/DocumentDynamicEvalDefinition:
   Enabled: false
 
-# Offense count: 6
-# This cop supports safe auto-correction (--auto-correct).
-Style/Encoding:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports safe auto-correction (--auto-correct).
 Style/EvalWithLocation:
