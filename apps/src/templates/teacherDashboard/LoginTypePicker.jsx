@@ -133,7 +133,9 @@ class LoginTypePicker extends Component {
       <div style={style.container}>
         <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
-        {experiments.isEnabled(experiments.CPA_EXPERIENCE) && (
+        {experiments.isEnabledAllowingQueryString(
+          experiments.CPA_EXPERIENCE
+        ) && (
           <p>
             <span
               className="fa fa-exclamation-triangle"

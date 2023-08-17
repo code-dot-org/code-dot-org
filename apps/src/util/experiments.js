@@ -114,7 +114,28 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
 };
 
 /**
- * Checks whether provided experiment is enabled or not
+ * Checks for the experiment while allowing for a simpler query string
+ * parameter to enable the experiment. For instance, if `key` is "foo",
+ * the experiment is allowed by any other means but also if `?foo=1` is
+ * specified in the current URL.
+ * @param {string} key - Name of experiment in question
+ * @returns {bool}
+ */
+experiments.isEnabledAllowingQueryString = function (key) {
+  const query = queryString.parse(this.getQueryString_());
+
+  // Look for ?my_experiment=1 style experiment keys
+  if (query[key]) {
+    // We enable when any query string matches, but do not
+    // set it in the session storage.
+    return true;
+  }
+
+  return experiments.isEnabled(key);
+};
+
+/**
+ * Checks whether provided experiment is enabled or not.
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */

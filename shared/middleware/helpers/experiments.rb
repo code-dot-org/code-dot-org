@@ -16,10 +16,15 @@
 # at apps/src/util/experiments.js instead of passing the value
 # through via any Haml. Specifically:
 #
-#   experiments.isEnabled("my_experiment")
+#   experiments.isEnabledAllowingQueryString("my_experiment")
 #
 # is the JavaScript equivalent for the Ruby side's:
 # `experiment_value("my_experiment", request)`
+#
+# You will need to add the experiment tag to that `util/experiments.js`
+# file along with allowing it to be pushed from DCDO to the frontend in
+# `lib/dynamic_config/dcdo.rb` by adding the flag to the
+# `frontend_config` function.
 #
 # @param name [String] the name of the experiment.
 # @param request [ActionDispatch::Request] the web request being processed
