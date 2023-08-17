@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-09-21T13:18:28.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -63,7 +68,8 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/maker/setup"
     ],
     "starter_assets": {
       "Alien_01.png": "24cea49b-e503-4ae5-8cdd-2e56ba07b6b5.png",
@@ -80,16 +86,11 @@
     "start_blocks": "//Events\r\nonEvent(\"greenAlien1\", \"click\", function() {\r\n  //Turn the LEDs green\r\n  greenLEDs();\r\n});\r\nonEvent(\"yellowAlien1\", \"click\", function() {\r\n  //Turn the LEDs yellow\r\n  yellowLEDs();\r\n});\r\n\r\n//2) When you click an alien, change the LEDs to the color of that alien\r\nonEvent(\"greenAlien2\", \"click\", function() {\r\n  //Turn the LEDs green\r\n  \r\n});\r\nonEvent(\"yellowAlien2\", \"click\", function() {\r\n  //Turn the LEDs yellow\r\n  \r\n});\r\nonEvent(\"greenAlien3\", \"click\", function() {\r\n  //Turn the LEDs green\r\n  \r\n});\r\nonEvent(\"yellowAlien3\", \"click\", function() {\r\n  //Turn the LEDs yellow\r\n  \r\n});\r\nonEvent(\"greenAlien4\", \"click\", function() {\r\n  //Turn the LEDs green\r\n  \r\n});\r\nonEvent(\"yellowAlien4\", \"click\", function() {\r\n  //Turn the LEDs yellow\r\n  \r\n});\r\n\r\n\r\n// Functions\r\nfunction greenLEDs() {\r\n  colorLeds[0].color(\"green\");\r\n  colorLeds[1].color(\"green\");\r\n  colorLeds[2].color(\"green\");\r\n  colorLeds[3].color(\"green\");\r\n  colorLeds[4].color(\"green\");\r\n  colorLeds[5].color(\"green\");\r\n  colorLeds[6].color(\"green\");\r\n  colorLeds[7].color(\"green\");\r\n  colorLeds[8].color(\"green\");\r\n  colorLeds[9].color(\"green\");\r\n}\r\nfunction yellowLEDs() {\r\n  colorLeds[0].color(\"yellow\");\r\n  colorLeds[1].color(\"yellow\");\r\n  colorLeds[2].color(\"yellow\");\r\n  colorLeds[3].color(\"yellow\");\r\n  colorLeds[4].color(\"yellow\");\r\n  colorLeds[5].color(\"yellow\");\r\n  colorLeds[6].color(\"yellow\");\r\n  colorLeds[7].color(\"yellow\");\r\n  colorLeds[8].color(\"yellow\");\r\n  colorLeds[9].color(\"yellow\");\r\n}\r\n",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - functions\",\r\n  \"callout_text\": \"This section defines two functions\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"functions\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// Functions\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - examples\",\r\n  \"callout_text\": \"This event has already been completed\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"examples\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"greenLEDs();\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "encrypted_examples": "VaYyRjySCIzpcGGKoCy7TFP/g/5RnDYPwyY7rSOJJl50Q6y0i4O5KqBbflqT\nvglWtOj6EYTtAity2BzSLwr1Ow==\n",
-    "preload_asset_list": null,
-    "video_key": "csd_u6_call_define_functions"
+    "video_key": "csd_u6_call_define_functions",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-09-21T13:18:28.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:28.275+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"},{\"changed_at\":\"2023-03-15 18:27:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 18:27:38 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:28.275+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"},{\"changed_at\":\"2023-03-15 18:27:20 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 18:27:38 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-16 19:36:22 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

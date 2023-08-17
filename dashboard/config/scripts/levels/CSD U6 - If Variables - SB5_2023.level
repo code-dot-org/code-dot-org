@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:13:04.000Z",
   "level_num": "custom",
@@ -52,7 +53,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Changing Positions\r\n\r\nThe **[Counter Pattern](https://studio.code.org/docs/concepts/patterns/counter-patterns-with-event/)** can also be used to change the position of elements on the screen. Let's make a program where pressing the left button moves the bird up, and pressing the right button moves the bird down\r\n\r\n*Note: Remember that y positions are reversed on the screen. Moving up means subtracting, and moving down means adding*\r\n\r\n## Do This\r\n1) Inside the `buttonL` event, subtract one from the `yPosition` variable\r\n\t- Run your code and test that the bird is able to move up!\r\n2) Inside the `buttonR` event, add one to the `yPosition` variable\r\n\t- Run your program and test that the bird is able to move up and down!\r\n\r\nOptional: try changing the amount that the bird changes on each button press. This can simulate moving at different speeds!\r\n\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -65,16 +66,16 @@
     "reference_links": [
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
     ],
     "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  //1) Subtract one from the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //2) Add one to the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-twitter\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"birdIcon\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 170px; margin: 0px;\" data-icon-color=\"#01cbff\"></div></div>",
     "encrypted_examples": "FZUyzjVp4Qb9kmE0yiBfpw1o2AwtKHzcYoCyLZB12TT2VHdXbY1cHcC2/3Y7\nAMOau4Uj61PUbjGbYPM9HxF+mA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:04.174+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:04.174+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_2222\"},{\"changed_at\":\"2023-08-16 17:30:43 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -10,6 +10,7 @@ class ManageStudentFamilyNameCell extends Component {
     familyName: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+    sectionId: PropTypes.number,
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,

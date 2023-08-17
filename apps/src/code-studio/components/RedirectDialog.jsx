@@ -44,7 +44,7 @@ export default class RedirectDialog extends React.Component {
             __useDeprecatedTag
             text={redirectButtonText}
             onClick={this.redirect}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>

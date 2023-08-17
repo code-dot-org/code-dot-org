@@ -189,6 +189,8 @@ ka:
   grade_level_label_elementary: დაწყებითი სკოლა
   grade_level_label_middle: საშუალო სკოლა
   grade_level_label_high: საშუალო სკოლა
+  students_label: მოსწავლეები
+  teachers_label: მასწავლებლები
   teacher_label_csf: CS საფუძვლების მასწავლებელი
   teacher_label_csd: CS აღმოჩენების მასწავლებელი
   teacher_label_csp: CS პრინციპების მასწავლებელი
@@ -202,7 +204,9 @@ ka:
   call_to_action_explore_unit: გამოიკვლიეთ ერთეული
   call_to_action_explore_curriculum: გამოიკვლიეთ სასწავლო გეგმა
   call_to_action_explore_curriculum_options: გამოიკვლიეთ სასწავლო გეგმის ვარიანტები
+  call_to_action_explore_lessons: გამოიკვლიეთ გაკვეთილები
   call_to_action_explore_modules: გამოიკვლიეთ მოდულები
+  call_to_action_explore_module: მოდულის შესწავლა
   call_to_action_explore_workshops: გამოიკვლიეთ სემინარები
   call_to_action_explore_course: გამოიკვლიეთ კურსი
   call_to_action_explore_courses: გამოიკვლიეთ კურსები
@@ -249,8 +253,10 @@ ka:
   call_to_action_see_module_details: იხილეთ მოდულის დეტალები
   call_to_action_start_modules: დაწყება მოდულები
   call_to_action_see_course_details: იხილეთ კურსის დეტალები
+  call_to_action_see_lesson_details: იხილეთ გაკვეთილის დეტალები
   call_to_action_learn_about_approach: შეიტყვეთ მეტი ჩვენი მიდგომის შესახებ
   call_to_action_try_java_lab: სცადეთ ჯავის ლაბორატორია
+  call_to_action_notify_available: შემატყობინე, როდესაც ეს შესაძლებელია
   aria_label_call_to_action_afe: შეიტყვეთ მეტი ამაზონის მომავალი ინჟინრის შესახებ
   aria_label_call_to_action_teaching_csf: დაიწყეთ კომპიუტერული მეცნიერების საფუძვლების
     სწავლების პროფესიული სასწავლო პროგრამა
@@ -324,6 +330,23 @@ ka:
   aria_label_call_to_action_csf_course_d: იხილეთ კურსის D დეტალები
   aria_label_call_to_action_csf_course_e: იხილეთ კურსის E დეტალები
   aria_label_call_to_action_csf_course_f: იხილეთ კურსის F დეტალები
+  aria_label_call_to_action_ai_pl_101_videos: უყურეთ AI 101 მასწავლებელთა ვიდეოებს
+  aria_label_call_to_action_ai_teaching_module: გამოიკვლიეთ სწავლების AI და მანქანათმცოდნეობის
+    მოდული
+  aria_label_call_to_action_how_ai_works_lesson_01: იხილეთ შესავალი მანქანათმცოდნეობის
+    გაკვეთილის დეტალებში
+  aria_label_call_to_action_how_ai_works_lesson_02: იხილეთ კომპიუტერული ხედვის გაკვეთილის
+    დეტალები
+  aria_label_call_to_action_how_ai_works_lesson_03: იხილეთ ნერვული ქსელების გაკვეთილის
+    დეტალები
+  aria_label_call_to_action_how_ai_works_lesson_04: იხილეთ ჩეთბოტებისა და დიდი ენის
+    მოდელების გაკვეთილის დეტალები
+  aria_label_call_to_action_how_ai_works_lesson_05: იხილეთ გენერაციული სურათების გაკვეთილის
+    დეტალები
+  aria_label_call_to_action_how_ai_works_lesson_06: იხილეთ ალგორითმული მიკერძოების
+    გაკვეთილის დეტალები
+  aria_label_call_to_action_how_ai_works_lesson_07: იხილეთ ჩვენი AI ეთიკის კოდექსის
+    გაკვეთილის დეტალები
   video_title_professional_learning_program: Code.org— ის პროფესიული სწავლების პროგრამა
   curriculum_name_csf: კომპიუტერული მეცნიერების საფუძვლები
   curriculum_name_csf_02: ნებისმიერი CS საფუძვლები (კურსი A-F)
@@ -439,6 +462,10 @@ ka:
   module_label_student_tool: სტუდენტური ინსტრუმენტი
   module_label_student_product: პროდუქტის
   module_label_student_content_resources: შინაარსი და რესურსები
+  module_label_new: ახალი
+  module_label_coming_soon: მალე
+  module_label_video_series: ვიდეო სერიები
+  module_label_self_paced: თვითმმართველობის paced მოდული
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -461,9 +488,13 @@ ka:
   module_grade_9_12_teachers: 9-12 პედაგოგები
   module_level_beginner: დამწყები
   module_level_intermediate: შუალედური
+  module_duration_45_mins: 45 წუთი
+  module_duration_1_hr: 1 საათი
   module_duration_2_hrs: 2 საათი
   module_duration_3_hrs: 3 საათი
+  module_duration_5_hrs: 5 საათი
   module_duration_8_hrs: 8 საათი
+  module_duration_20_hrs: 20 საათი
   module_duration_35_hrs: 35 საათი
   module_duration_lesson: გაკვეთილი
   module_duration_week: კვირეული
@@ -541,6 +572,7 @@ ka:
   heading_no_devices: მოწყობილობები არ არის? ჩვენ თქვენ დაფარული
   heading_java_lab: ჯავის ლაბორატორია
   heading_objects_first: ობიექტები პირველი
+  heading_these_lessons_will: 'ეს გაკვეთილები იქნება:'
   professional_learning_section_desc: მიიღეთ საჭირო მხარდაჭერა, როდესაც სწავლებისთვის
     ემზადებით. მასწავლებლებს უყვართ ის, 90% -ზე მეტი კი მას საუკეთესო პროფესიულ განვითარებად
     აფასებს ოდესმე!
@@ -675,6 +707,11 @@ ka:
   ai_curriculum_grades_03: 'კლასის დონეები: 3-12'
   ai_curriculum_duration_03: 'ხანგრძლივობა: 1 საათი'
   ai_curriculum_btn_aria_label_03: სცადეთ AI ოკეანეების აქტივობისთვის
+  ai_curriculum_title_04: როგორ მუშაობს AI
+  ai_curriculum_desc_04: ეს გაკვეთილები ავსებს How AI Works ვიდეო სერიებს. თითოეული
+    გაკვეთილი დაწყვილებულია სერიიდან ერთ ვიდეოსთან, რომელიც უფრო ღრმად იძირება ვიდეოებში
+    დანერგილ კონცეფციებში.
+  ai_curriculum_btn_aria_label_04: გამოიკვლიეთ როგორ მუშაობს AI გაკვეთილები
   ai_carousel_heading: 'რას ამბობენ მასწავლებლები AI— ს შესახებ Code.org— ით:'
   ai_carousel_quote_01: ამ გაკვეთილმა ასევე მისცა ჩემს სტუდენტებს შესაძლებლობა დაენახათ,
     რომ კლასიფიკაციის სისტემებში არსებობს აზრის ელემენტი. მოგვიანებით, როდესაც ჩვენ
@@ -693,6 +730,10 @@ ka:
   ai_pl_list_04: განვიხილოთ AI და მანქანური სწავლების რეალურ სამყაროში შედეგები.
   ai_pl_list_05: გამოიკვლიეთ თავების ბოლო პროექტები.
   ai_pl_duration: 'ხანგრძლივობა: 2 საათი'
+  ai_pl_title: AI და მანქანური სწავლების სწავლება
+  ai_pl_desc: ხელოვნური ინტელექტისა და მანქანათმცოდნეობის შესავალი. მოამზადეთ მანქანათმცოდნეობის
+    მოდელი AI Lab— ის გამოყენებით. და ჩაერთეთ მანქანათმცოდნეობის პროგრამებში. განვიხილოთ
+    AI და მანქანური სწავლების რეალურ სამყაროში შედეგები.
   ai_video_series_title: როგორ მუშაობს AI
   ai_video_series_desc: Microsoft-ის აღმასრულებელი დირექტორის სატია ნადელას შესავალით,
     მოკლე ვიდეოების ეს სერია გაგაცნობთ, თუ როგორ მუშაობს ხელოვნური ინტელექტი და რატომ
@@ -719,6 +760,7 @@ ka:
   ai_pl_101_hero_heading: AI 101 მასწავლებლებისთვის
   ai_pl_101_hero_desc: აღმოაჩინეთ ხელოვნური ინტელექტის (AI) ტრანსფორმაციული პოტენციალი
     განათლებაში ჩვენი უფასო ონლაინ სასწავლო სერიით პედაგოგებისთვის.
+  ai_pl_101_hero_desc_02: ყოვლისმომცველი ონლაინ სასწავლო სერია მასწავლებლებისთვის.
   ai_pl_101_hero_presented: მიერ წარმოდგენილი
   ai_pl_101_intro_heading: რა არის AI 101 მასწავლებლებისთვის?
   ai_pl_101_intro_text: AI 101 მასწავლებლებისთვის არის უფასო, ფუნდამენტური ონლაინ
@@ -763,6 +805,97 @@ ka:
     განმეორებითი გამოხმაურებისა და განმსაზღვრელი შეფასების მიწოდებაში წერის გამოცდილების
     განმავლობაში.'
   ai_pl_101_explore__button_4: გამოიკვლიეთ ინსტრუმენტი
+  ai_pl_101_video_title_1: Fireside ჩატი სალ ხანთან და ჰადი პარტოვთან
+  ai_pl_101_video_desc_1: შეუერთდით სალ ხანს (ხანის აკადემია) და ჰადი პარტოვი (Code.org)
+    ცეცხლოვანი ჩატისთვის კლასში ხელოვნური ინტელექტის ათვისების შესახებ. ველით ცოცხალ
+    დისკუსიას, მათ შორის დღეს ყველაზე საკამათო თემებს AI— ს გარშემო.
+  ai_pl_101_video_title_2: AI- ს დემისტიფიკაცია პედაგოგებისთვის
+  ai_pl_101_video_desc_2: შესავალი ხელოვნური ინტელექტის საფუძვლებში, რომელიც აღჭურვა
+    თქვენ ფუნდამენტური ცოდნით, რათა გაიგოთ ხელოვნური ინტელექტის ღრმა გავლენა ჩვენს
+    საზოგადოებაში და მისი მზარდი აქტუალობა განათლების სფეროსთან. თქვენ მიიღებთ პრაქტიკულ
+    შეხედულებებს საკლასო ოთახში დავალებების ხელოვნური ინტელექტის გამოყენებისა და ადმინისტრაციულ
+    დავალებებზე დროის დაზოგვის შესახებ.
+  ai_pl_101_video_title_3: სწავლის გარდაქმნა AI— ით
+  ai_pl_101_video_desc_3: გამოიკვლიეთ ხელოვნური ინტელექტისა და განათლების კვეთა. ეს
+    სესია იკვლევს, თუ როგორ შეიძლება AI გაერთიანდეს პედაგოგიკასთან სტუდენტების სწავლის
+    გასაუმჯობესებლად. ეს აუცილებელია მასწავლებლებისთვის, რომლებიც ცდილობენ გამოიყენონ
+    AI, რათა გარდაქმნან თავიანთი სწავლების პრაქტიკა, რათა გაამდიდრონ თავიანთი სტუდენტების
+    სწავლის გამოცდილება.
+  ai_pl_101_video_title_4: AI— ს მიმართ პასუხისმგებელი მიდგომის უზრუნველყოფა
+  ai_pl_101_video_desc_4: გამოიკვლიეთ ეთიკური მოსაზრებები და საუკეთესო პრაქტიკა საგანმანათლებლო
+    გარემოში ხელოვნური ინტელექტის ჩართვისთვის. ეს სესია მოგაწვდით კონკრეტულ სტრატეგიებს,
+    რესურსებს და რეალურ მაგალითებს, რომლებიც მიზნად ისახავს ხელოვნური ინტელექტის პოტენციური
+    მიკერძოებულობის გაგებას და მასთან დაკავშირებული ეთიკური მოსაზრებების გაგებას.
+  ai_pl_101_video_title_5: AI— ს შემოტანა საკლასო ოთახში
+  ai_pl_101_video_desc_5: ეს სესია ფოკუსირებულია ხელოვნური ინტელექტის სწავლებაზე,
+    AI საგანმანათლებლო ინსტრუმენტების შეფასებასა და გამოყენებაზე და სტუდენტების შეფასებისთვის
+    ხელოვნური ინტელექტის გამოყენებაზე. თეორიის, პრაქტიკული მაგალითებისა და რესურსების
+    მდიდარი ნაზავით, ის მიზნად ისახავს მასწავლებლების გაძლიერებას ხელოვნური ინტელექტის
+    ლანდშაფტში ნავიგაციისთვის და სტუდენტების სწავლის გამოცდილების გაღრმავებაში.
+  ai_pl_101_video_desc_6: 'შეიტყვეთ მეტი ახალი ტექნოლოგიის შესახებ, რომელიც განაპირობებს
+    AI— ს დიდ ცვლილებებს, რომელშიც წარმოდგენილია ორი ახალი ვიდეო დიდი ენის მოდელებზე
+    (როგორიცაა ChatGPT) და Generative AI. მოუსმინეთ, თუ როგორ მუშაობს ეს ახალი ტექნოლოგიები
+    უშუალოდ ექსპერტებისგან: მირა მურატი, OpenAI— ს CTO და RunwayML— ის აღმასრულებელი
+    დირექტორი კრისტობალ ვალენზუელა.'
+  how_ai_works_hero_heading: როგორ მუშაობს AI
+  how_ai_works_hero_desc: ჩაყვინთეთ ხელოვნური ინტელექტის სამყაროში „როგორ მუშაობს
+    AI“, ჩვენი ვიდეო სერიებით და თანმხლები გაკვეთილებით!
+  how_ai_works_intro_desc: მოკლე ვიდეოების ეს სერია და საკლასო გაკვეთილების თანმხლები
+    გაკვეთილები გაგაცნობთ თქვენ და თქვენს სტუდენტებს, თუ როგორ მუშაობს ხელოვნური ინტელექტი
+    და რატომ არის ეს მნიშვნელოვანი. თქვენ შეგიძლიათ აირჩიოთ ინდივიდუალური გაკვეთილები
+    თემის საფუძველზე, შეისწავლოთ თემების მთელი სერია ერთ კლასში ან ასწავლოთ 7-ვე გაკვეთილი,
+    რომ უფრო ღრმად ჩაყვინთოთ.
+  how_ai_works_intro_list_01: გაგაცნობთ ხელოვნურ ინტელექტს და მანქანათმცოდნეობას
+  how_ai_works_intro_list_02: ჩაერთეთ იმაზე, თუ როგორ მუშაობს გენერაციული AI, მათ
+    შორის დიდი ენის მოდელები (LLM) და გამოსახულების გენერირება
+  how_ai_works_intro_list_03: გამოიკვლიეთ მიკერძოება, ეთიკა, კონფიდენციალურობა და
+    ხელოვნური ინტელექტის პასუხისმგებელი გამოყენება
+  how_ai_works_intro_list_04: შეეხეთ AI— ს რეალურ სამყაროში პროგრამებს, მათ შორის
+    კომპიუტერულ ხედვას
+  how_ai_works_lessons_heading: AI გაკვეთილები თქვენი კლასისთვის
+  how_ai_works_lesson_title_01: შესავალი მანქანათმცოდნეობაში
+  how_ai_works_lesson_desc_01: შეიტყვეთ ხელოვნური ინტელექტის ფორმის შესახებ, რომელსაც
+    მანქანათმცოდნეობა ეწოდება და როგორ შეუძლიათ მათ გამოიყენონ პრობლემის გადაჭრის
+    პროცესი, რათა დაეხმარონ რობოტის მომზადებას პრობლემების გადასაჭრელად. მონაწილეობა
+    მიიღოთ მანქანათმცოდნეობის აქტივობებში, სადაც რობოტი სწავლობს თევზებში ნიმუშების
+    ამოცნობას.
+  how_ai_works_lesson_title_02: კომპიუტერული ხედვა
+  how_ai_works_lesson_desc_02: შეიტყვეთ როგორ მუშაობს კომპიუტერული ხედვა. ნახეთ ვიდეო,
+    რომელიც განმარტავს კომპიუტერულ ხედვას და როგორ „ხედავს“ კომპიუტერი. შემდეგ შეიმუშავეთ
+    ალგორითმი, რომელიც იყენებს ქსელს იმის დასადგენად, თუ რა რიცხვს აჩვენებს შვიდი
+    სეგმენტის ეკრანი და შეამოწმოთ იგი.
+  how_ai_works_lesson_title_03: ნერვული ქსელები
+  how_ai_works_lesson_desc_03: ისწავლეთ როგორ მუშაობს ნერვული ქსელები. გამოიყენეთ
+    ვიჯეტები ნერვული ქსელების შესასწავლად. უყურეთ ვიდეოს, რომელიც ხსნის ნერვულ ქსელებს.
+    საბოლოოდ განიხილეთ მრავალფეროვანი პერსპექტივების საჭიროება სარეკომენდაციო სისტემების
+    შექმნისას.
+  how_ai_works_lesson_title_04: ჩეთბოტები და დიდი ენის მოდელები
+  how_ai_works_lesson_desc_04: შეიტყვეთ რა არის დიდი ენის მოდელი (LLM) და როგორ მუშაობს
+    იგი, შემდეგ გამოიყენეთ LLM AI— სთან ტექსტის შესაქმნელად. დაბოლოს, იმსჯელეთ იმაზე,
+    არის თუ არა LLM ინტელექტუალური თუ შემოქმედებითი.
+  how_ai_works_lesson_title_05: გენერაციული სურათები
+  how_ai_works_lesson_desc_05: შეიტყვეთ, თუ როგორ შეუძლია AI- ს სურათების გენერირება,
+    შემდეგ შეისწავლეთ დიფუზიური AI ვიჯეტი და განიხილეთ არის თუ არა ეს მოდელები კრეატიული.
+  how_ai_works_lesson_title_06: ალგორითმული მიკერძოება
+  how_ai_works_lesson_desc_06: ივარჯიშეთ სურათების ამოჭრაზე, რათა აღმოაჩინოთ მიკერძოება,
+    რომელიც ემყარება Twitter cropping ალგორითმს, შემდეგ წაიკითხეთ და უყურეთ ვიდეოს
+    ამ მიკერძოებული ალგორითმის აღმოჩენის შესახებ. დაბოლოს, განიხილეთ ალგორითმებში
+    მიკერძოების ამოცნობისა და შემცირების გზები.
+  how_ai_works_lesson_title_07: ჩვენი AI ეთიკის კოდექსი
+  how_ai_works_lesson_desc_07: ჩაატარეთ კვლევა სტატიებისა და ვიდეოების გამოყენებით,
+    რომლებიც გამოავლენენ ეთიკურ პრობლემებს მათი არჩევანის ხელოვნური ინტელექტის სფეროში.
+    შეიკრიბეთ კლასის მასშტაბით „ჩვენი AI ეთიკის კოდექსი“ რესურსი AI შემქმნელებისთვის
+    და კანონმდებლებისთვის ყველგან.
+  how_ai_works_lessons_in_a_day_title: როგორ მუშაობს AI დღეში
+  how_ai_works_lessons_in_a_day_desc: მხოლოდ ერთი დღე გაქვთ? ასევე არსებობს შესაძლებლობა,
+    რომ სტუდენტებს მთელი სერია გააცნოთ ერთ დღეში. იდეალურია ნებისმიერი საგნის მასწავლებლისთვის,
+    რომელიც ცდილობს გააცნოს სტუდენტებს AI, ან თუნდაც გაკვეთილი სტუმრის მასწავლებლისთვის.
+  how_ai_works_lessons_in_a_day_desc_02: წარმოგიდგენთ ყველა „როგორ მუშაობს AI“ ვიდეო
+    ერთ დღეში. მოსწავლეები თითოეულ ვიდეოს მიჰყვებიან ვიდეოდან ლექსიკის შესატყვისი,
+    შემდეგ პასუხობენ რეფლექსიის კითხვას თითოეული ვიდეოს შესახებ.
+  how_ai_works_resources_desc: გაინტერესებთ მეტი შეიტყოთ AI— ს შესახებ? აქ მოცემულია
+    რამდენიმე დამატებითი რესურსი, რომელიც დაგეხმარებათ თქვენი და თქვენი სტუდენტების
+    სწავლის გაფართოებაში.
   ai_vid_intro_caption: წარმოგიდგენთ როგორ მუშაობს AI
   ai_vid_chatbots_caption: როგორ მუშაობს ჩეთბოტები და დიდი ენის მოდელები
   ai_vid_creativity_caption: აქვს თუ არა AI- ს კრეატიულობა და წარმოსახვა?
@@ -1105,10 +1238,10 @@ ka:
   teach_page_additional_materials_list_desc_03: დაბეჭდეთ მრავალფეროვანი მისაბაძი მოდელების
     ეს პლაკატები, რომ ჩამოიხრჩოთ თქვენს სკოლაში და გააჩინოთ თქვენი მოსწავლეები, რომ
     სცადონ კომპიუტერული მეცნიერება.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1674,6 +1807,7 @@ ka:
   not_found_desc: ეს გვერდი ვერ მოიძებნა
   not_found_instructions: შეამოწმეთ ვებმისამართი და სცადეთ თავიდან ან აირჩიეთ ბმული
     ქვემოთ მოცემული სიიდან.
+  company_code_dot_org: Code.org
   company_4-H: 4-H ახალგაზრდული განვითარება
   company_asa: კლასგარეშე ჯგუფები
   company_asos: ASOS
@@ -1726,6 +1860,7 @@ ka:
   company_evsd: ისტ ველის სასკოლო უბანი
   company_eastonvilleschooldistrict: იტონვილის სასკოლო უბანი
   company_enumclawschooldistrict: იმუნკლაუს სასკოლო უბანი
+  company_ets: ETS
   company_everettsd: ევერეტის საჯარო სკოლები
   company_fsusd: ფეირფილდ-საისანის გაერთიანებული სასკოლო უბანი
   company_fayettecountypublicschools: ფაიეტის საგრაფოს საჯარო სკოლები
@@ -1747,6 +1882,7 @@ ka:
   company_houstonisd: ჰიუსტონის დამოუკიდებელი სასკოლო უბანი
   company_hcpss: ჰოვარდის საგრაფოს საჯარო სკოლები
   company_idla: იდაჰოს ციფრული სასწავლო აკადემია
+  company_iste: ისტე
   company_janesvilleschooldistrict: ჯენესვილის სასკოლო უბანი
   company_johnstoncountyschools: ჯონსტონის საგრაფოს სკოლები
   company_lps: ლინკოლნის საჯარო სკოლა
@@ -12060,8 +12196,10 @@ ka:
   tutorial_ai4alldance_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_ai4allneural_string_platforms: ყველა თანამედროვე ბრაუზერი
   tutorial_spheroinout_string_platforms: უსადენო
-  tutorial_edisonblueprint_string_platforms: ყველა თანამედროვე ბრაუზერი
-  tutorial_edisonmaze_string_platforms: ყველა თანამედროვე ბრაუზერი
+  tutorial_edisonblueprint_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
+    iPad
+  tutorial_edisonmaze_string_platforms: ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი,
+    iPad
   tutorial_milnefunctions_string_platforms: ყველა თანამედროვე ბრაუზერი, ეკრანის წამკითხველი
   tutorial_sasmap_string_platforms: ყველა თანამედროვე ბრაუზერები, iPad, ეკრანის მკითხველი
   tutorial_firstrobotics_string_platforms: ყველა თანამედროვე ბრაუზერი

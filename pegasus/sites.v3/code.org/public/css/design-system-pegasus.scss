@@ -15,10 +15,6 @@ html {
   font-size: 100%;
 }
 
-body {
-  color: $neutral-dark;
-}
-
 p {
   @include body-two;
 }
@@ -225,11 +221,22 @@ input[type=submit] {
 a.link-button {
   &.secondary {
     background: none;
-    border-color: $neutral-dark;
-    color: $neutral-dark;
+    border-color: $neutral_dark;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
+    }
+  }
+
+  &.white {
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
+
+    &:hover {
+      background: $neutral_dark10;
+      border-color: $neutral_dark10;
     }
   }
 
@@ -629,6 +636,12 @@ form {
   &.action-block__wrapper--three-col {
     @media screen and (min-width: $width-lg) {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

@@ -1468,6 +1468,10 @@ ru:
               display_name: Навигация по инструментам Code.org
           name: уроки-csa-в-собственном-темпе
           title: Навигация по Code.org для пилотный учителей CSA
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Настроить
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -4206,6 +4210,8 @@ ru:
           student_description: Постигай азы программирования с персонажами Angry Birds,
             Plants vs. Zombies и белкой Скратом из Ледникового периода!
           title: Классический лабиринт
+        how-ai-works-2023:
+          title: Как ИИ Работает
         iceage:
           description: Создай сказку или игру с игровой лабораторией Ледниковый период!
           description_short: Создай сказку или игру с игровой лабораторией Ледниковый
@@ -4345,6 +4351,11 @@ ru:
               display_name: События
             lessonGroup-7:
               display_name: Завершение Курсового Проекта
+            lessonGroup-8:
+              display_name: Данные
+          lessons:
+            lesson-1:
+              name: Данные
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Возраст: 8-12'
           lesson_groups:
@@ -4384,6 +4395,11 @@ ru:
               display_name: События
             lessonGroup-6:
               display_name: Данные
+            lessonGroup-8:
+              display_name: Вычислительные системы
+          lessons:
+            lesson-1:
+              name: Вычислительные системы
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Возраст: 7-11'
           lesson_groups:

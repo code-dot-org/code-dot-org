@@ -63,7 +63,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2022/guides/variables",
+      "/maker/setup"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -76,7 +77,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:59.347+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Innovations - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Innovations - Review_2222\"},{\"changed_at\":\"2023-07-31 19:34:58 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:59.347+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Innovations - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Innovations - Review_2222\"},{\"changed_at\":\"2023-07-31 19:34:58 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-16 22:31:26 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

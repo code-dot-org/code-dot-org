@@ -708,6 +708,8 @@ uk-UA:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+      CSD Physical Computing Post-Project Test_2022:
+        title: Постпроектний тест з програмування пристроїв
       CSD U1 IOSP match:
         answers:
         - {}
@@ -2619,28 +2621,48 @@ uk-UA:
         - text: Що з наведеного нижче НЕ є проблемою забезпечення захисту даних?
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Accelerometer - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Board Inputs - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Завдання рівнів
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Color LEDs - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Practice Levels
+      CSD U6 - Functions - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - If Variables - Chal_2222:
         display_name: Завдання рівнів
       CSD U6 - Music - Chal_2222:
         display_name: Завдання рівнів
       CSD U6 - Physical Input - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Physical Input - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Physical Output - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Physical Output - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Practice Levels
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Screen Outputs - Prac_2222:
+        display_name: Практичні рівні
       CSD U6 - Sensors - Chal_2222:
         display_name: Завдання рівнів
+      CSD U6 - Sensors - Prac_2222:
+        display_name: Practice Levels
       CSD U6 LED create intro:
         content1: опис тут
       CSD U6 LED create intro_2018:
@@ -2774,6 +2796,7 @@ uk-UA:
             style="max-width: 100px;">'
         questions:
         - text: Переглянь код і спрогнозуй, як ця програма буде виглядати після запуску.
+        title: Зробіть прогноз
       CSD U6 test algorithms multi2:
         answers:
         - text: обробники подій
@@ -3007,10 +3030,10 @@ uk-UA:
         description: Попрактикуйся у виявленні зіткнень у цих вправах.
         display_name: Практика із зіткненнями
       CSD games movement2 challenge choice_2021:
-        description: Випробуй ці нові блоки та завдання зі швидкістю та шаблоном лічильника.
+        description: Випробуй ці нові блоки та завдання зі швидкістю та зміною лічильника.
         display_name: Додаткові завдання зі складними переміщеннями спрайтів
       CSD games movement2 challenge choice_2022:
-        description: Випробуй ці нові блоки та завдання зі швидкістю та шаблоном лічильника.
+        description: Випробуй ці нові блоки та завдання зі швидкістю та зміною лічильника.
         display_name: Додаткові завдання зі складними переміщеннями спрайтів
       CSD games movement2 practice choice_2021:
         description: Попрактикуйся у використанні нових способів переміщення спрайтів.
@@ -5004,9 +5027,12 @@ uk-UA:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - feedback: Неправильно. Скрет не дійде до жолудя, тому що він повертає не
+            в ту сторону.
         - correct: true
-        - {}
+          feedback: Правильно! Скрет повертає не в ту сторону і не дійде до жолудя.
+        - feedback: Неправильно. Скрет не дійде до жолудя, тому що він повертає не
+            в ту сторону.
         - text: Скрет не рухатиметься з першого блоку.
         questions:
         - {}

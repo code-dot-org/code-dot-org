@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Conas Uair an Chóid a óstáil - Cuideachtaí
 ---
 
 {{ signup_button }}

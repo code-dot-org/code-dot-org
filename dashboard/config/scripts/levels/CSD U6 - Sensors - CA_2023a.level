@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:04:54.000Z",
   "level_num": "custom",
@@ -90,7 +91,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
     "long_instructions": "# Change Threshold\r\n\r\nBy default a sensor's `change` event fires every time the sensor value changes at all, even by one. The light and sound sensors are constantly fluctuating, so you probably want the `change` event to be a little less responsive. \r\n\r\nThe [`threshold`(#f78183)](/docs/applab/lightSensor.threshold/) property allows you to set how much a sensor should change before considering it a `change` event. For example, setting `soundSensor.threshold = 100` would cause the sound sensor's `change` event only to trigger if its value increased or decreased by at least 100.\r\n\r\n## Do This\r\n\r\nThis app changes the background color of the screen whenever the sound sensor value changes, but we want to only respond to big changes in volume (like a loud noise). Use the [`soundSensor.threshold`(#f78183)](/docs/applab/soundSensor.threshold/) block to fix it.\r\n\r\n1) Add a [`soundSensor.threshold`(#f78183)](/docs/applab/soundSensor.threshold/) block before the event handler\r\n2) Test out how different threshold values impact the \"change\" event\r\n3) Choose a threshold value that makes the screen background change only when a loud noise is sensed.\r\n\r\n_Tip: Your threshold depends on how much ambient noise there is in the room, and how much it changes. A threshold that works in a quiet room may not work in a louder classroom._",
     "start_blocks": "//Add your code here\r\n\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  setProperty(\"screen1\", \"background-color\", rgb(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)));\r\n});\r\n",
@@ -100,7 +101,8 @@
     "name_suffix": "_2023a",
     "reference_links": [
       "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/analog-sensors"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/changing-sensor-scale",
     "mini_rubric": "false",
@@ -114,9 +116,8 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:54.171+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:54.171+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"},{\"changed_at\":\"2023-08-16 19:21:36 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

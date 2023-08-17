@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import Instructions from './Instructions';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
@@ -36,13 +36,7 @@ import {
   setUndoStatus,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
-import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import {
-  levelsForLessonId,
-  ProgressLevelType,
-  getProgressLevelType,
-  currentLevelIndex,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
@@ -69,7 +63,6 @@ import HeaderButtons from './HeaderButtons';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
 
     /**
@@ -80,7 +73,6 @@ class UnconnectedMusicView extends React.Component {
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
-    levels: PropTypes.array,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -106,7 +98,6 @@ class UnconnectedMusicView extends React.Component {
     initialSources: PropTypes.object,
     levelData: PropTypes.object,
     startingPlayheadPosition: PropTypes.number,
-    navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
@@ -296,38 +287,6 @@ class UnconnectedMusicView extends React.Component {
     this.props.setIsLoading(false);
   };
 
-  // Returns whether we just have a single level.
-  isSingleLevel = () => {
-    return this.props.progressLevelType === ProgressLevelType.LEVEL;
-  };
-
-  // Returns whether we have multiple levels.
-  isScriptLevel = () => {
-    return this.props.progressLevelType === ProgressLevelType.SCRIPT_LEVEL;
-  };
-
-  getLevelCount = () => {
-    if (!this.hasProgression()) {
-      return 0;
-    }
-
-    // Determine the level count from the external array of levels.
-    if (this.isScriptLevel()) {
-      return this.props.levels.length;
-    }
-
-    // This must be a single level.
-    return 1;
-  };
-
-  // Returns whether we have a progression.
-  // Note that even a single level has a progression in the sense that we
-  // will show instructions and feedback, but we'll only show them for that
-  // single level.
-  hasProgression = () => {
-    return this.isSingleLevel() || this.isScriptLevel();
-  };
-
   getIsPlaying = () => {
     return this.props.isPlaying;
   };
@@ -338,11 +297,6 @@ class UnconnectedMusicView extends React.Component {
 
   getCurrentPlayheadPosition = () => {
     return this.player.getCurrentPlayheadPosition();
-  };
-
-  // When the user initiates going to the next panel in the app.
-  onNextPanel = () => {
-    this.props.navigateToNextLevel();
   };
 
   updateHighlightedBlocks = () => {
@@ -357,7 +311,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (this.hasProgression() && this.props.levelData) {
+    if (!this.props.inIncubator && this.props.levelData?.startSources) {
       return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
@@ -588,10 +542,6 @@ class UnconnectedMusicView extends React.Component {
           hideHeaders={this.props.hideHeaders}
         >
           <Instructions
-            progressionStep={this.props.levelData}
-            currentLevelIndex={this.props.currentLevelIndex}
-            levelCount={this.getLevelCount()}
-            onNextPanel={this.onNextPanel}
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
@@ -709,17 +659,7 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
-    // The progress redux store tells us whether we are in a script level
-    // or a single level.
-    progressLevelType: getProgressLevelType(state),
-
     currentLevelIndex: currentLevelIndex(state),
-
-    // When we are in a lesson with multiple levels, they are here.
-    levels:
-      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
-        ? levelsForLessonId(state.progress, state.progress.currentLessonId)
-        : undefined,
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
@@ -756,7 +696,6 @@ const MusicView = connect(
       dispatch(addOrderedFunctions(orderedFunctions)),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setPageError: pageError => dispatch(setPageError(pageError)),
-    navigateToNextLevel: () => dispatch(navigateToNextLevel()),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
   })

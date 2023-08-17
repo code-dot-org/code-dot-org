@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:14:03.000Z",
   "level_num": "custom",
@@ -27,11 +28,11 @@
       "setProperty": null,
       "setText": null,
       "randomNumber_min_max": null,
-      "on": null,
-      "off": null,
-      "pulse": null,
-      "blink": null,
-      "toggle": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].pulse": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].toggle": null,
       "color": null,
       "intensity": null
     },
@@ -73,7 +74,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Debugging\r\n\r\nThe app is supposed to turn on the left and right LEDs when the user presses a button, but the app isn't working correctly\r\n\r\n## Do This\r\n\r\n- **What I Expected To Happen:** Pressing the buttons turns on each side of the circuit playground\r\n- **What Happened Instead:** I get an error and only some of the lights turn on and off",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -90,7 +91,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Debugging",
@@ -101,9 +103,8 @@
     "encrypted_examples": "4SCqg8HZuIqJV24oqy6Ifrj4ljeeBoMQOS6Ii4Kozbj6QLEp77zonGbdHjjD\nKZmYiAeGKCVDHk3IwCf6fcMN5Q==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.348+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:03.348+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracD_2222\"},{\"changed_at\":\"2023-08-15 16:39:29 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:40:27 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -90,7 +90,7 @@ class AddMultipleStudents extends Component {
               style={styles.button}
               text={i18n.done()}
               onClick={this.add}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </DialogFooter>
         </BaseDialog>

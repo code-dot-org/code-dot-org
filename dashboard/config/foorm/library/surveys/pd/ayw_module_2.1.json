@@ -120,7 +120,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11839' or {workshop_id} = '12270' or {workshop_id} = '12120' or {workshop_id} '12477' or {workshop_id} = '12592') ",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11839' or {workshop_id} = '12270' or {workshop_id} = '12120' or {workshop_id} = '12477' or {workshop_id} = '12592') ",
               "type": "rating",
               "name": "csdpilot_identity_teacher_role",
               "title": "As a result of this workshop, it is clear to me how my identity, experiences, and beliefs shape how I see my role as a CS teacher.",
