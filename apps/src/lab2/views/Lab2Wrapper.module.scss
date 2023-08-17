@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import './common.scss';
 
 // We actually fade out the block to reveal the lab underneath.
 // We will do it over 1s, and then leave it invisible.
@@ -92,17 +93,7 @@
   }
 
   .pageErrorContainer {
-    background-color: rgba(0 0 0 / 0.5);
-    color: $neutral_dark;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    z-index: 80;
+    @extend %full-container-overlay;
     animation: fadein 0.5s;
 
     .pageError {

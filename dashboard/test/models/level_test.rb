@@ -403,7 +403,7 @@ class LevelTest < ActiveSupport::TestCase
     level_xml = n.to_xml
 
     # Import level XML
-    LevelLoader.load_custom_level_xml level_xml, level
+    Services::LevelFiles.load_custom_level_xml(level_xml, level)
 
     assert_nil level.embed
   end

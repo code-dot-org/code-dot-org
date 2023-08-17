@@ -1,0 +1,23 @@
+name 'VPL - CSD - Module 7 - CI - U6L4_2023'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 4:  Board Events
+**Estimated time: 10 minutes**
+
+### Tasks
+
+* <a href="https://studio.code.org/s/csd6-2022/lessons/4" target="_blank">Read the lesson plan </a>
+* Identify how students will use onBoardEvent() in order to get input from their Circuit Playgrounds
+
+**Next up:**  Click continue to revisit how input is taken in using Game Lab and App Lab in comparison to how Circuit Playgrounds get input.
+
+
+
+
+
+
+
+MARKDOWN

@@ -28,6 +28,7 @@ import {
   sectionCode,
   sectionName,
   selectedSection,
+  sectionUnitName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -53,6 +54,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '../SafeMarkdown';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -70,6 +72,8 @@ const LOGIN_TYPES_WITH_GENDER_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
 ];
+
+const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -108,6 +112,7 @@ class ManageStudentsTable extends Component {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
+    sectionUnitName: PropTypes.string,
     participantType: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
@@ -119,6 +124,7 @@ class ManageStudentsTable extends Component {
     editAll: PropTypes.func,
     transferData: PropTypes.object,
     transferStatus: PropTypes.object,
+    setSortByFamilyName: PropTypes.func,
   };
 
   constructor(props) {
@@ -339,6 +345,7 @@ class ManageStudentsTable extends Component {
         familyName={familyName}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+        sectionId={rowData.sectionId}
       />
     );
   }
@@ -372,7 +379,7 @@ class ManageStudentsTable extends Component {
           <Button
             __useDeprecatedTag
             onClick={this.props.saveAllStudents}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.saveAll()}
           />
         )}
@@ -451,6 +458,21 @@ class ManageStudentsTable extends Component {
         selectedColumn,
       }),
     });
+    if (selectedColumn === COLUMNS.FAMILY_NAME) {
+      this.props.setSortByFamilyName(
+        true,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    } else if (selectedColumn === COLUMNS.NAME) {
+      this.props.setSortByFamilyName(
+        false,
+        this.props.sectionId,
+        this.props.sectionUnitName,
+        MANAGE_STUDENTS_TABLE
+      );
+    }
   }
 
   getColumns(sortable) {
@@ -1051,6 +1073,10 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
     sectionName: sectionName(state, state.teacherSections.selectedSectionId),
+    sectionUnitName: sectionUnitName(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
     participantType:
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .participantType,
@@ -1069,6 +1095,11 @@ export default connect(
     },
     editAll() {
       dispatch(editAll());
+    },
+    setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source) {
+      dispatch(
+        setSortByFamilyName(isSortedByFamilyName, sectionId, unitName, source)
+      );
     },
   })
 )(ManageStudentsTable);

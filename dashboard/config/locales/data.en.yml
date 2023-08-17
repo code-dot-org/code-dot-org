@@ -795,6 +795,9 @@ en:
         how-ai-works-llms-part1: Chatbots and Large Language Models Part 1
         how-ai-works-llms-part2: Chatbots and Large Language Models Part 2
         csc_bookcovers_intro: Coding Book Covers
+        llms-cobranded: 'How AI Works: Chatbots and Large Language Models'
+        generative-ai-cobranded: 'How AI Works: Generative AI'
+        csa-overview: A New Approach to AP Computer Science A
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

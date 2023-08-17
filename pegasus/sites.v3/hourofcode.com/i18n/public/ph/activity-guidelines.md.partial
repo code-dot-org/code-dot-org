@@ -15,7 +15,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -27,14 +27,14 @@ A few tips:
 
 <a id="top"></a>
 
-## Index:
+## Mga nilalaman:
 
 - [What to submit](#whatsubmit)
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
 - [How to Submit](#submit)
 - [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
+- [Mga pwedeng gawin para mapaganda pa ang mga aktibidad](#design)
+- [Mga alituntunin ukol sa pagmamay-ari](#tm)
 - [Tracking Pixel](#pixel)
 - [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
 
@@ -71,11 +71,11 @@ Examples:
 
 If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Mga general na alituntunin ukol sa paggawa ng mga aktibidad ng Hour of Code
 
 The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
 
@@ -87,25 +87,25 @@ The activities should teach a computer science concept such as loops, conditiona
 
 *Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Mas maganda kung ang mga instruction at pagtuturo ay magagamitan ng programming platform, para hindi na kailangan pang pagpalitin ang platform at ang mga instruction.
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="submit"></a>
 
 ## How to submit
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
-What you’ll need:
+Ano ang iyong kakailanganin:
 
 * Name and email of the primary contact representing the submitted activity
 * Activity Name (cannot include “Hour of Code” in the name)
 * URL link to the activity
 * An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Maaring isama sa description kung kayang gawin ng estudyante lamang o kailangan ng gabay ng guro. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
     * Kindergarten - Grade 1 (ages 4-6)
     * Grades 2-5 (ages 7-10)
@@ -138,8 +138,8 @@ What you’ll need:
         * iOS mobile Safari (mobile-optimized)
         * Android Chrome (mobile-optimized)
     * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+    * Naka-unplug
+* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. Kung hindi malalagyan ng imahe, maaring kami na lang ang kumuha ng screenshot O KAYA ay hindi ito isali sa listahan ng sumali. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
     * Share on social media that they completed the Hour of Code
@@ -161,7 +161,7 @@ What you’ll need:
 * If you submit a robotics activity, we need to know the cost per student for robotics.
 * To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="inclusion"></a>
 
@@ -199,7 +199,7 @@ Teachers and students will be able to search through and filter our list of acti
 - Require no installation
 - Are new this year
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="design"></a>
 
@@ -226,11 +226,11 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Mga alituntunin ukol sa pagmamay-ari
 
 Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
@@ -242,7 +242,7 @@ Hour of Code® and Hora del Código® are registered trademarks of Code.org. Man
 6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
 7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="pixel"></a>
 
@@ -261,7 +261,7 @@ Example tracking pixels for Dance Party:
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="promote"></a>
 
@@ -274,6 +274,6 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 - Host a local event or ask your employees to host an event at local schools or community groups.
 - See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 {{ signup_button }}

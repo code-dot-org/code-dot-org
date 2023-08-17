@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-09-21T13:19:42.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -73,7 +78,8 @@
     "parent_level_id": 20603,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/courses/csd-2022/guides/circuits-and-leds",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/circuits-and-buttons",
     "mini_rubric": "false",
@@ -91,13 +97,8 @@
 
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-09-21T13:19:42.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:42.654+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - ChalA_2222\"},{\"changed_at\":\"2023-03-17 16:49:56 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:42.654+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - ChalA_2222\"},{\"changed_at\":\"2023-03-17 16:49:56 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 22:30:12 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

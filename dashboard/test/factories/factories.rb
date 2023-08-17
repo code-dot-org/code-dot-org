@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+require 'policies/child_account'
 
 FactoryBot.define do
   factory :course_offering do
@@ -386,7 +387,12 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        child_account_compliance_state {User::ChildAccountCompliance::PERMISSION_GRANTED}
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      trait :with_pending_parent_permission do
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
@@ -395,7 +401,16 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :locked_out_student, traits: [:U13, :in_colorado]
+      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+        factory :locked_out_child do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          child_account_compliance_state_last_updated {DateTime.now}
+          child_account_compliance_lock_out_date {DateTime.now}
+          trait :expired do
+            child_account_compliance_lock_out_date {7.days.ago}
+          end
+        end
+      end
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.
@@ -1771,7 +1786,7 @@ FactoryBot.define do
   end
 
   factory :learning_goal do
-    sequence(:key) {|n| "lg_#{n}"}
+    association :rubric
     position {0}
     learning_goal {"Test Learning Goal"}
     ai_enabled {false}

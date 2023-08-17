@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-23 16:41:49 UTC",
+    "serialized_at": "2023-08-15 19:34:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -48,6 +48,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2023"
       }
     }
@@ -320,6 +332,51 @@
       "seeding_key": {
         "lesson.key": "Mock FRQ Exam – Day 3",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Sandbox: Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2023"
       }
     }
@@ -820,6 +877,42 @@
         "lesson_activity.key": "4d6804e3-fcd8-4f2c-82cf-f2749e283322",
         "lesson.key": "Mock FRQ Exam – Day 3",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "2a137148-70bc-4675-a3d7-91420d725217",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a137148-70bc-4675-a3d7-91420d725217",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "ec89f90b-798e-4d34-a50d-905ec13c8813",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2023"
       }
     }
@@ -2675,6 +2768,48 @@
         "activity_section.key": "eedb7b67-9810-4ef8-9cbc-1dd9d2f64b98",
         "lesson_activity.key": "4d6804e3-fcd8-4f2c-82cf-f2749e283322"
       }
+    },
+    {
+      "key": "f7e307df-e93f-405d-977b-bf04b8efc928",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928",
+        "lesson_activity.key": "2a137148-70bc-4675-a3d7-91420d725217"
+      }
+    },
+    {
+      "key": "5d2b2968-ada6-47db-8429-4e6219bbceaa",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa",
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813"
+      }
+    },
+    {
+      "key": "3ac0fac2-6907-4615-9628-9fe4357b2127",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127",
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813"
+      }
+    },
+    {
+      "key": "96db2239-bc4a-422a-b398-350da224ddcf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf",
+        "lesson_activity.key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8"
+      }
     }
   ],
   "script_levels": [
@@ -2702,6 +2837,92 @@
       "level_keys": [
         "CSA Curriculum Videos"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2715,6 +2936,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa9-2023",
         "activity_section.key": "3a7ec511-feb7-4c1d-9023-378b1139df87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf"
       }
     }
   ],
@@ -3659,6 +3928,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
