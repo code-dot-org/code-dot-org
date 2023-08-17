@@ -101,7 +101,8 @@
       "/courses/csd-2022/guides/analog-sensors",
       "/courses/csd-2022/guides/changing-sensor-scale",
       "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/maker/setup"
     ],
     "display_name": "Automatic Windows",
     "thumbnail_url": "https://images.code.org/b9fd0d16ad4a323a25c6fe2ec609a90c-image-1649457779121.png",
@@ -118,7 +119,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.381+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"},{\"changed_at\":\"2023-08-15 23:00:28 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:16:47.381+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalE_2222\"},{\"changed_at\":\"2023-08-15 23:00:28 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 19:17:01 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
