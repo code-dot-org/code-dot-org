@@ -19,6 +19,7 @@
   left: 10px;
   bottom: 116px;
   z-index: 400;
+  width: 760px;
 }
 
 .rubricContent {
@@ -26,13 +27,32 @@
   border: 1px solid $neutral_dark;
   background: $neutral_light;
   box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
-  width: 726px;
-  height: 108px;
-  padding: 16px;
+
+  height: 408px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  padding: 16px 40px 16px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.learningGoalContainer {
+  display: flex;
+  // padding: 0px 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  border-radius: 4px;
+  border: 1px solid var(--light-gray-400, #a9acaf);
+  background: var(--light-white, #fff);
 }
 
 .rubricHeader {
-  width: 730px;
   height: 21px;
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
@@ -46,8 +66,10 @@
 }
 
 .learningGoalRow {
+  display: flex;
+  align-self: stretch;
   border-bottom: 1px solid $neutral_dark40;
-  height: 40px;
+  min-height: 40px;
   summary:hover {
     background: none;
   }
@@ -112,8 +134,9 @@
 }
 
 .learningGoalExpanded {
-  border-bottom: 1px solid $neutral_dark40;
+  border-top: 1px solid $neutral_dark40;
   padding: 1.25rem 1rem;
+
 
   display: flex;
   flex-direction: column;
@@ -170,3 +193,4 @@
 .evidenceLevelDescriptionIndented {
   padding-left: 2rem;
 }
+
