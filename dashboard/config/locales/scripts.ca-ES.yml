@@ -2200,6 +2200,10 @@ ca:
               display_name: Navegant per Code.org
           name: csa-auto-paced-pl
           title: Navegant per Code.org per CSA Pilot Professors
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configuració
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3729,6 +3733,8 @@ ca:
               display_name: 'Capítol 2: Ordinadors i resolució de problemes'
             lessonGroup-4:
               display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
             de la recerca més àmplia de la resolució de problemes. Practicareu utilitzant
@@ -5263,15 +5269,6 @@ ca:
               display_name: Lliçons antigues
             lessonGroup-6:
               display_name: Noves lliçons
-          student_description: Aquesta unitat explora el paper de les plataformes
-            de maquinari en la informàtica i com els diferents sensors poden proporcionar
-            una entrada i una sortida més eficaços que el teclat, el ratolí i el monitor
-            tradicionals. Utilitzant App Lab i Circuit Playground d'Adafruit, desenvolupareu
-            programes que utilitzin les mateixes entrades i sortides de maquinari
-            que veieu en els dispositius intel·ligents, mirant com un simple prototip
-            rugós pot conduir a un producte acabat. La unitat conclou amb un repte
-            de disseny per utilitzar el Circuit Playground com a base per a una innovació
-            del seu propi disseny.
           title: "(Opció A) Creació d'aplicacions amb dispositius - Circuit Playground
             ('23-'24)"
         csd6-dlp:
@@ -8873,6 +8870,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: focus en codificació1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -8961,6 +8960,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-creativitat1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9048,6 +9049,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-da1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9171,6 +9174,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-disseny-amb-propòsit1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9310,6 +9315,8 @@ ca:
               display_name: 'Capítol 2: Ordinadors i resolució de problemes'
             lessonGroup-4:
               display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta
           name: focus en maquinari1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9418,6 +9425,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-impacte-en-societat1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9960,9 +9969,6 @@ ca:
               display_name: Els impactes de la informàtica
             lessonGroup-7:
               display_name: Projecte de final de curs
-          student_description: Aprendre a codificar amb sprites i variables, i discutir
-            els impactes socials de la informàtica i Internet. Al final d'aquest curs,
-            dissenyar i crear un projecte que puguis compartir amb amics i familiars.
         nevada-standards-aligned-fifth-grade-2023-2023:
           description: Hem creat el Curs F per a estudiants de cinquè de primària.
             El curs comença observant com els usuaris prenen decisions en les apps
@@ -10006,9 +10012,11 @@ ca:
               display_name: Esdeveniments
             lessonGroup-7:
               display_name: Projecte de final de curs
-          student_description: Aprèn els fonaments de la informàtica i de la seguretat
-            a internet. Al final del curs, podràs crear el teu propi joc o història
-            i compartir-los.
+            lessonGroup-8:
+              display_name: Dades
+          lessons:
+            lesson-1:
+              name: Dades
         nevada-standards-aligned-fourth-grade-2023:
           description: Hem creat el Curs E per a alumnes de quart de primària. El
             curs comença amb una introducció a l'eina de programació Sprite Lab. Els
@@ -10031,18 +10039,14 @@ ca:
               display_name: Dades i Simulacions
             lessonGroup-6:
               display_name: Projecte de final de curs
-          student_description: Comença a programar amb algorismes, esdeveniments,
-            bucles, condicionals i funcions! Quan arribis al final del curs, podràs
-            dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
-            la família.
         nevada-standards-aligned-kindergarten-2023:
-          description: 'El curs A ofereix un pla d''estudis d''informàtica per als
-            lectors inicials, inclosos els estudiants de Kindergarten. Els estudiants
-            aprendran a programar utilitzant ordres com bucles i esdeveniments. Les
-            lliçons presentades en aquest curs també ensenyen als estudiants a col·laborar
+          description: El curs A ofereix un pla d'estudis d'informàtica per als lectors
+            inicials, inclosos els estudiants de Kindergarten. Els estudiants aprendran
+            a programar utilitzant ordres com bucles i esdeveniments. Les lliçons
+            presentades en aquest curs també ensenyen als estudiants a col·laborar
             de manera significativa amb els altres, investigar diferents tècniques
             de resolució de problemes, persistir davant de tasques desafiants i aprendre
-            sobre seguretat a Internet. '
+            sobre seguretat a Internet.
           description_audience: De 4 a 7 anys
           description_short: Una introducció a la informàtica per prelectors.
           lesson_groups:
@@ -10054,9 +10058,11 @@ ca:
               display_name: Bucles
             lessonGroup-5:
               display_name: Els impactes de la informàtica
-          student_description: Aprèn els fonaments de la informàtica i de la seguretat
-            a internet. Al final del curs, podràs crear el teu propi joc o història
-            i compartir-los.
+            lessonGroup-6:
+              display_name: Dades
+          lessons:
+            lesson-1:
+              name: Dades
         nevada-standards-aligned-second-grade-2023:
           description: Hem desenvolupat el Curs C per a estudiants de segon de primària.
             Els estudiants crearan programes amb seqüenciació, bucles i esdeveniments.
@@ -10074,16 +10080,17 @@ ca:
               display_name: Esdeveniments
             lessonGroup-6:
               display_name: Dades
-          student_description: Crea programes amb seqüenciació, bucles i esdeveniments.
-            Tradueix les teves inicials al codi binari, investiga diferents tècniques
-            per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament.
-            Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+            lessonGroup-8:
+              display_name: Sistemes Informàtics
+          lessons:
+            lesson-1:
+              name: Sistemes Informàtics
         nevada-standards-aligned-third-grade-2023:
-          description: 'Hem creat el curs D per a estudiants de tercer de primària.
+          description: Hem creat el curs D per a estudiants de tercer de primària.
             El curs comença amb una revisió dels conceptes trobats en cursos anteriors,
             incloent bucles i esdeveniments. Després, els estudiants desenvoluparan
-            la seva comprensió d''algoritmes, bucles niats, mentre que bucles, condicionals,
-            i molt més. '
+            la seva comprensió d'algoritmes, bucles niats, mentre que bucles, condicionals,
+            i molt més.
           description_audience: De 7 a 11 anys
           description_short: Obteniu informació sobre les declaracions condicionals.
             Crea el teu propi art, jocs, i fins i tot una festa de ball.
@@ -10100,8 +10107,6 @@ ca:
               display_name: Dades
             lessonGroup-8:
               display_name: Projecte de final de curs
-          student_description: Aquí aprendràs sobre bucles, condicionals i esdeveniments.
-            I, a més de programació, aprendràs què és la ciutadania digital.
         new-d:
           title: Nou Curs D Guió
         new-e:
@@ -11582,6 +11587,22 @@ ca:
               name: 'Mòdul 6 post-treball: Mètodes de corda en la Unitat 6'
           name: vpl-csa-2022
           title: Aprenentatge Professional Virtual CSA
+        vpl-csa-2023-m1:
+          title: Mòdul 1
+        vpl-csa-2023-m2:
+          title: Mòdul 2
+        vpl-csa-2023-m3:
+          title: Mòdul 3
+        vpl-csa-2023-m4:
+          title: Mòdul 4
+        vpl-csa-2023-m5:
+          title: Mòdul 5
+        vpl-csa-2023-m6:
+          title: Mòdul 6
+        vpl-csa-2023-m7:
+          title: Mòdul 7
+        vpl-csa-2023-m8:
+          title: Mòdul 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: CS Descobriments Aprenentatge Professional Virtual 2020 - 21
@@ -11609,6 +11630,22 @@ ca:
           title: CS Descobriments d'aprenentatge professional virtual 2021 - 22
         vpl-csd-2022:
           title: CS Descobriments Aprenentatge Professional Virtual 2022 - 23
+        vpl-csd-2023-m1:
+          title: Mòdul 1
+        vpl-csd-2023-m2:
+          title: Mòdul 2
+        vpl-csd-2023-m3:
+          title: Mòdul 3
+        vpl-csd-2023-m4:
+          title: Mòdul 4
+        vpl-csd-2023-m5:
+          title: Mòdul 5
+        vpl-csd-2023-m6:
+          title: Mòdul 6
+        vpl-csd-2023-m7:
+          title: Mòdul 7
+        vpl-csd-2023-m8:
+          title: Mòdul 8
         vpl-csd-ci-1:
           description: "Aquest mòdul d'aprenentatge professional està dissenyat per
             ajudar-vos a preparar-vos per ensenyar la unitat de resolució de problemes
@@ -12088,6 +12125,22 @@ ca:
           title: CS Principis d'aprenentatge professional virtual 21 - 22
         vpl-csp-2022:
           title: CS Principis d'aprenentatge professional virtual 22 - 23
+        vpl-csp-2023-m1:
+          title: Mòdul 1
+        vpl-csp-2023-m2:
+          title: Mòdul 2
+        vpl-csp-2023-m3:
+          title: Mòdul 3
+        vpl-csp-2023-m4:
+          title: Mòdul 4
+        vpl-csp-2023-m5:
+          title: Mòdul 5
+        vpl-csp-2023-m6:
+          title: Mòdul 6
+        vpl-csp-2023-m7:
+          title: Mòdul 7
+        vpl-csp-2023-m8:
+          title: Mòdul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

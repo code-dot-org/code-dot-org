@@ -12,7 +12,9 @@ const MetricsAdapter: React.FunctionComponent = () => {
   const channelId = useSelector(
     (state: {lab: LabState}) => state.lab.channel?.id
   );
-  const appName = useSelector((state: {lab: LabState}) => state.lab.appName);
+  const appName = useSelector(
+    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+  );
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) =>
       state.progress.currentLevelId || undefined

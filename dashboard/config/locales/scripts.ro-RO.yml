@@ -1655,6 +1655,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         csd1-dlp:
           lesson_groups:
             content:
@@ -3183,6 +3185,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3195,6 +3199,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3207,6 +3213,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3231,6 +3239,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3245,6 +3255,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3257,6 +3269,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3463,9 +3477,11 @@ ro:
               display_name: Evenimente
             lessonGroup-7:
               display_name: Proiect de final de curs
-          student_description: Învață noțiunile de bază ale științei calculatoarelor
-            și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
-            joc sau propria poveste pe care să le partajezi cu ceilalți.
+            lessonGroup-8:
+              display_name: Date
+          lessons:
+            lesson-1:
+              name: Date
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Vârsta: 8-12 ani'
           lesson_groups:
@@ -3487,9 +3503,11 @@ ro:
               display_name: Bucle
             lessonGroup-5:
               display_name: Impactul computerelor
-          student_description: Învață noțiunile de bază ale științei calculatoarelor
-            și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
-            joc sau propria poveste pe care să le partajezi cu ceilalți.
+            lessonGroup-6:
+              display_name: Date
+          lessons:
+            lesson-1:
+              name: Date
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3502,11 +3520,11 @@ ro:
               display_name: Evenimente
             lessonGroup-6:
               display_name: Date
-          student_description: Creează programe cu secvențiere, bucle și evenimente.
-            Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare
-            a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul
-            cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi
-            cu ceilalți!
+            lessonGroup-8:
+              display_name: Sisteme de calcul
+          lessons:
+            lesson-1:
+              name: Sisteme de calcul
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Vârsta: 7-11 ani'
           description_short: Învață despre condiții. Creează propriile opere de artă,

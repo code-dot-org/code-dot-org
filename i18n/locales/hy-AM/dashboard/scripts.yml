@@ -146,6 +146,7 @@ hy:
           description_short: Create a story or make a game with Gumball Play Lab!
           student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.

@@ -1958,6 +1958,8 @@ ta:
             Ice Age! ஆகியவற்றின் எழுத்துக்களைக் கொண்டு கணினி அறிவியலின் அடிப்படைகளை
             முயற்சிக்கவும்!
           title: கிளாசிக் மேஸி
+        how-ai-works-2023:
+          title: AI எவ்வாறு இயங்குகிறது
         iceage:
           name: பனியுகம்
         infinity:
@@ -2023,9 +2025,11 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-7:
               display_name: பாடநெறி திட்டத்தின் முடிவு
-          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக்
-            கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய
-            உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
+            lessonGroup-8:
+              display_name: தகவல்கள்
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2043,9 +2047,11 @@ ta:
               display_name: வரிசைப்படுத்துதல்
             lessonGroup-4:
               display_name: சுழற்சிகள்
-          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக்
-            கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய
-            உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
+            lessonGroup-6:
+              display_name: தகவல்கள்
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2058,11 +2064,11 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-6:
               display_name: தகவல்கள்
-          student_description: வரிசைமுறை, சுழல்கள் மற்றும் நிகழ்வுகளுடன் நிரல்களை
-            உருவாக்கவும். உங்கள் முதலெழுத்துக்களை பைனரியாக மொழிபெயர்க்கவும், பல்வேறு
-            சிக்கல்களைத் தீர்க்கும் நுட்பங்களை ஆராயவும் மற்றும் இணைய அச்சுறுத்தலுக்கு
-            எவ்வாறு பதிலளிப்பது என்பதை அறியவும். பாடத்திட்டத்தின் முடிவில், நீங்கள்
-            பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த விளையாட்டை அல்லது கதையை உருவாக்குங்கள்!
+            lessonGroup-8:
+              display_name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
+          lessons:
+            lesson-1:
+              name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1514,6 +1514,7 @@
   header_stats: "İstatistikler"
   header_help_us: "Bize yardım edin"
   header_about: "Hakkında"
+  header_incubator: "İnkübatör"
   header_teacher_community: "Öğretmen topluluğu"
   header_help_support: 'Yardım ve Destek '
   header_report_bug: "Hata bildir"
@@ -1628,7 +1629,7 @@
   hoc2018_mc_download_adventurer: "Minecraft Maceracı'nın çevrimdışı versiyonunu indir."
   hoc2018_mc_educators: "Eğitimciler İçin"
   hoc2018_mc_educators_box1_title: "Minecraft ile Kodla"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Eğitim Sürümü, Minecraft''ta standartlarla uyumlu müfredat, eğitim ve kodlama sağlar.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Eğitim Sürümü, Minecraft'ta standartlarla uyumlu müfredat, eğitim ve kodlama sağlar."
   hoc2018_mc_educators_box1_button: "Kullanmaya başla"
   hoc2018_mc_educators_box2_title: "Kolaylaştırıcı Rehberini İndir"
   hoc2018_mc_educators_box2_desc: "Bu araç kutusu, sizin bir Kod Saati barındırmanıza ve öğrencilerinizin bilgisayar bilimi ile ilgilenmesine yardımcı olur."
@@ -1736,7 +1737,7 @@
   hoc2018_mc_with_microsoft: "### ortaklığıyla"
   hoc2018_mc_thank_microsoft: "21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz."
   hoc2019_mc_mee_title: "İyilik için Minecraft Yapay Zeka "
-  hoc2019_mc_mee_description1: 'Yeni Minecraft Kod Saati eğitimi artık Minecraft''ta mevcuttur: Windows, Mac ve iPad için Eğitim Sürümü. Kodlama temellerini öğrenin ve öğrencilerinizle birlikte Yapay Zekayı keşfedin!'
+  hoc2019_mc_mee_description1: "Yeni Minecraft Kod Saati eğitimi artık Minecraft'ta mevcuttur: Windows, Mac ve iPad için Eğitim Sürümü. Kodlama temellerini öğrenin ve öğrencilerinizle birlikte Yapay Zekayı keşfedin!"
   hoc2019_mc_mee_description2: "Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişim."
   hoc2019_mc_more_coding_resources: "Daha Fazla Kodlama Kaynakları"
   hoc2019_dance_previous_versions: "Dans Partisinin önceki sürümünü mü arıyorsunuz?  \nÖnceki yıldan [Kısım 1](%{dance_2018_link}) ve [Kısım 2](%{dance_extras_2018_link}) başlamak için buraya tıklayın."
@@ -1749,18 +1750,18 @@
   page_not_available_description: "Üzgünüz, açmak istediğiniz sayfa artık bu adreste bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link}) adresine e-posta gönderin."
   page_not_available_button: "Anasayfaya Dön"
   hoc2020_mc_available_code_org: "Code.org'da mevcut"
-  hoc2020_mc_available_mee: 'Minecraft''ta Mevcut: Eğitim Sürümü'
+  hoc2020_mc_available_mee: "Minecraft'ta Mevcut: Eğitim Sürümü"
   hoc2020_mc_mee_title: "İki Köyün Minecraft Hikayesi"
-  hoc2020_mc_mee_description: 'Yeni Minecraft Hour of Code öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümü''nde mevcut. Öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin! Bir ders planı, videolar, bilgisayar bilimi müfredatı, eşitlik dersleri ve öğretmen eğitimleri dahil olmak üzere ücretsiz kaynaklara erişin.'
+  hoc2020_mc_mee_description: "Yeni Minecraft Hour of Code öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümü'nde mevcut. Öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin! Bir ders planı, videolar, bilgisayar bilimi müfredatı, eşitlik dersleri ve öğretmen eğitimleri dahil olmak üzere ücretsiz kaynaklara erişin."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Zamanda geriye yolculuk yapın ve kodlamayı öğrenin! Yeni Minecraft Kodlama Saati öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümünde mevcuttur. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın.'
+  hoc2021_mc_mee_description: "Zamanda geriye yolculuk yapın ve kodlamayı öğrenin! Yeni Minecraft Kodlama Saati öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümünde mevcuttur. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın."
   hoc2021_mc_mee_villages_title: "İki Köyün Hikâyesi"
-  hoc2021_mc_mee_villages_description: 'Minecraft: Eğitim Sürümünde öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin.'
+  hoc2021_mc_mee_villages_description: "Minecraft: Eğitim Sürümünde öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin."
   hoc2021_mc_mee_ai_title: "İyilik İçin Yapay Zeka"
-  hoc2021_mc_mee_ai_description: 'Öğrencilerinizle yapay zekayı keşfedin ve Minecraft: Eğitim Sürümünde kodlamayı öğrenin.'
+  hoc2021_mc_mee_ai_description: "Öğrencilerinizle yapay zekayı keşfedin ve Minecraft: Eğitim Sürümünde kodlamayı öğrenin."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Şafak vakti gizemli malikaneden kaçın ve bir milyon zümrüt kazanın! Yeni Minecraft Hour of Code eğitimi artık Windows, Mac, Chromebook, Ipad ve Mobil için Minecraft: Education Edition''da. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın.'
-  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition''daki bu ücretsiz kodlama dersinde geleceği kurtarmak için zamanda geriye yolculuk yapın.'
+  hoc2022_mc_mee_timecraft_description: "Minecraft: Education Edition'daki bu ücretsiz kodlama dersinde geleceği kurtarmak için zamanda geriye yolculuk yapın."
   footer_powered_by_aws: "Amazon Web Services ve \"Powered by AWS\" logoları Amazon.com, Inc. ve Amerika Birleşik Devletleri ve/veya başka ülkelerdeki uzantılarının tescilli markasıdır."
   footer_built_on_github: "Microsoft'tan GitHub üzerinde oluşturuldu"
   codebytes_skinny_banner_title: "CodeBytes canlı mini derslerimiz için 7-11 Aralık tarihlerinde bize katılın!"
@@ -1809,7 +1810,7 @@
   ai_zooniverse: "Zooniverse - Dağ Zebrası Anlık Görüntüsü"
   ai_zooniverse_description: "Görsellerdeki farklı hayvanları tespit ederek nesli tükenmekte olan Cape Dağı Zebrasını korumaya yardımcı olun."
   ai_audience: "Dinleyiciler"
-  ai_minecraft_description: 'Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişin. (Minecraft: Eğitim Sürümü gerekli)'
+  ai_minecraft_description: "Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişin. (Minecraft: Eğitim Sürümü gerekli)"
   ai_k_12_audience: "K-12 (okuma becerisi gerekli)"
   ai_microsoft_workshop: "Microsoft'tan ücretsiz sanal atölyeler"
   ai_microsoft_workshop_description: "Ücretsiz STEM ve kodlama atölyeleri ile merak uyandırın."

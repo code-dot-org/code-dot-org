@@ -2791,6 +2791,9 @@ ms:
               display_name: Kesan Pengkomputeran
           description_audience: 'Umur: 4-7 tahun'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Kewarganegaraan Digital
@@ -2800,10 +2803,14 @@ ms:
               display_name: Gelung
             lessonGroup-5:
               display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Data
           description_audience: 'Umur: 4-7 tahun'
           description_short: Pengenalan kepada sains komputer untuk prapembaca.
-          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Kewarganegaraan Digital
@@ -2817,10 +2824,14 @@ ms:
               display_name: Acara-acara
             lessonGroup-7:
               display_name: Akhir Projek Kursus
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Umur: 5-8 tahun'
           description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
-          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Pengkomputeran
           lesson_groups:
             lessonGroup-2:
               display_name: Kewarganegaraan Digital
@@ -2832,7 +2843,8 @@ ms:
               display_name: Acara-acara
             lessonGroup-6:
               display_name: Data
-          student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+            lessonGroup-8:
+              display_name: Sistem Pengkomputeran
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2878,3 +2890,5 @@ ms:
               display_name: Akhir Projek Kursus
           description_audience: 'Umur: 9-13 tahun'
           description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+        how-ai-works-2023:
+          title: Cara AI Berfungsi

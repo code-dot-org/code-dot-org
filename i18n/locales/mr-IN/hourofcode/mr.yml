@@ -81,7 +81,7 @@ mr:
   social_hoc2019_dance: 'यात आहेत: केटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पॅनिक अॅट
     द डिस्को आणि इतर!'
   social_hoc_anybody: 'Hour of Code: Anybody can Learn'
-  oceans_landing_title: AI for Oceans
+  oceans_landing_title: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   oceans_landing_description: मशीन लर्निंगबद्दल आणि AI च्या नैतिक वापराबद्दल शिका.
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: 25+ भाषांमध्ये उपलब्ध | इयत्ता 3+
@@ -97,7 +97,7 @@ mr:
     AI बद्दल अधिक शिकवण्यासाठी या नवीन प्रवासातील  Code.org च्या पहिल्या पावलाचा आनंद
     घ्या. जेव्हा तुम्ही महासागरासाठी AI ही कृती वापराल तेव्हा तुम्ही खऱ्या मशीन लर्निंग
     मॉडेल्सचे ट्रेनिंग कराल. [अधिक जाणून घ्या](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources: शिक्षक स्रोत
   oceans_landing_teacher_resources_desc: तुम्हाला AI, मशीन लर्निंग, ट्रेनिंग डेटा
     आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह या गोष्टी शिकवण्यासाठी मदत करण्याकरता
     धड्याचे प्लॅन्स आणि कृती.
@@ -163,43 +163,49 @@ mr:
   teach_ai_homepage_banner_title: कृत्रिम बुद्धिमत्ता जगासाठी
   teach_ai_homepage_banner_desc: Code.org टीचएआयचा एक भाग आहे, जे एआय आणि एआय बद्दल
     शिकवण्यासाठी सर्वत्र शिक्षकांना सक्षम बनविण्यासाठी समर्पित आहे.
-  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
-  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
-    Catalog and redesigned Teach page to help you find it all!
-  in_partnership_with: In partnership with
-  afe_partnership_logo_alt: Amazon Future Engineer logo
-  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
-    program to inspire, educate, and train low-income and other disadvantaged children
-    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
+  curriculum_launch_2023_title: सादर करत आहोत आमच्या अभ्यासक्रमातील अतुल्य अपडेट
+  curriculum_launch_2023_desc: सीएससी, सीएसपी, सीएसडी आणि बरेच काही - तसेच नवीन अभ्यासक्रम
+    कॅटलॉग आणि हे सर्व शोधण्यात तुम्हाला मदत करण्यासाठी पुन्हा डिझाइन केलेले टीच पेज!
+  in_partnership_with: च्या भागीदारीत
+  afe_partnership_logo_alt: Amazon फ्यूचर इंजिनियर लोगो
+  afe_partnership_thanks_desc: Amazonफ्युचर इंजिनिअर्स हा लहानपणापासून ते करिअरपर्यंतचा
+    सर्वसमावेशक कार्यक्रम आहे जो कमी उत्पन्न असलेल्या आणि इतर वंचित मुलांना आणि तरुणांना
+    संगणक विज्ञानात करिअर करण्यासाठी प्रेरणा, शिक्षण आणि प्रशिक्षण देण्यासाठी डिझाइन
+    केलेले आहे. [आमच्या भागीदारीविषयी जाणून घ्या](%{safe_url}).
+  grade_level: ग्रेड लेव्हल
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
-  teacher_label_csf: CS Fundamentals Teacher
+  students_label: विद्यार्थी
+  teachers_label: शिक्षक
+  teacher_label_csf: 'CS फंडामेंटल्स शिक्षक '
   teacher_label_csd: CS डिस्कव्हरीज शिक्षक
-  teacher_label_csp: CS Principles Teacher
-  teacher_label_csc: CS Connections Teacher
+  teacher_label_csp: 'CS प्रिंसिपल्स शिक्षक '
+  teacher_label_csc: 'CS कनेक्शन्स शिक्षक '
   teacher_label_csa: AP® Computer Science A Teacher
-  required_materials: 'Required Materials:'
-  optional_materials: 'Optional Materials:'
+  required_materials: 'आवश्यक साहित्य:'
+  optional_materials: 'वैकल्पिक साहित्य:'
   call_to_action_learn_more: अधिक जाणून घ्या
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_curriculum_options: अभ्यासक्रमाचे पर्याय एक्सप्लोर करा
+  call_to_action_explore_lessons: Explore lessons
   call_to_action_explore_modules: Explore modules
+  call_to_action_explore_module: Explore module
   call_to_action_explore_workshops: वर्कशॉप एक्सप्लोर करा
-  call_to_action_explore_course: Explore course
-  call_to_action_explore_courses: Explore courses
-  call_to_action_explore_full_course: Explore full course
-  call_to_action_explore_widgets: Explore widgets
-  call_to_action_explore_choice_level: Explore example choice level
-  call_to_action_explore_collection: Explore collection
-  call_to_action_explore_unplugged_lesson: Explore unplugged lessons
-  call_to_action_try_app_lab: Try App Lab
+  call_to_action_explore_course: अभ्यासक्रमाचा शोध घ्या
+  call_to_action_explore_courses: अभ्यासक्रम एक्सप्लोर करा
+  call_to_action_explore_full_course: पूर्ण कोर्स एक्सप्लोर करा
+  call_to_action_explore_widgets: विजेट्स एक्सप्लोर करा
+  call_to_action_explore_choice_level: उदाहरण निवड पातळी एक्सप्लोर करा
+  call_to_action_explore_collection: संग्रह एक्सप्लोर करा
+  call_to_action_explore_unplugged_lesson: अनप्लग्ड धडे एक्सप्लोर करा
+  call_to_action_try_app_lab: अॅप लॅब वापरून पहा
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_apply_for_pl: व्यावसायिक शिक्षणासाठी अर्ज करा
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
@@ -207,6 +213,7 @@ mr:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -222,19 +229,21 @@ mr:
   call_to_action_see_full_curriculum_catalog: संपूर्ण अभ्यासक्रमाचा कॅटलॉग पहा
   call_to_action_find_self_paced_modules: सेल्फ-पेस मॉड्यूल्स शोधा
   call_to_action_join_teacher_forums: टिचर फोरममध्ये सामील व्हा
-  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forums: शिक्षक मंच एक्सप्लोर करा
   call_to_action_explore_career_resources: करिअर संसाधने एक्सप्लोर करा
   call_to_action_watch_videos: व्हिडिओज पहा
   call_to_action_download_posters: पोस्टर डाऊनलोड करा
-  call_to_action_contact_support: Contact Code.org support
-  call_to_action_pick_units: Pick units
-  call_to_action_focus_on_topic: Focus on a topic
-  call_to_action_teach_full_intro_course: Teach a full intro course
-  call_to_action_see_module_details: See module details
-  call_to_action_start_modules: Start modules
-  call_to_action_see_course_details: See course details
-  call_to_action_learn_about_approach: Learn more about our approach
-  call_to_action_try_java_lab: Try Java Lab
+  call_to_action_contact_support: Code.org सपोर्टशी संपर्क साधा
+  call_to_action_pick_units: युनिट्स निवडा
+  call_to_action_focus_on_topic: विषयावर लक्ष केंद्रित करा
+  call_to_action_teach_full_intro_course: संपूर्ण परिचय अभ्यासक्रम शिकवा
+  call_to_action_see_module_details: मॉड्यूल तपशील पहा
+  call_to_action_start_modules: मॉड्युल्स सुरू करा
+  call_to_action_see_course_details: अभ्यासक्रम तपशील पहा
+  call_to_action_see_lesson_details: See lesson details
+  call_to_action_learn_about_approach: आमच्या दृष्टिकोनाबद्दल अधिक जाणून घ्या
+  call_to_action_try_java_lab: जावा लॅब वापरून पहा
+  call_to_action_notify_available: Notify me when available
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -252,10 +261,10 @@ mr:
     with Devices (micro:bit) professional learning program
   aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
     curriculum
-  aria_label_call_to_action_curriculum_csf_express: Explore the Computer Science Fundamentals
-    Express course
-  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explore the Computer
-    Science Fundamentals Pre-Reader Express course
+  aria_label_call_to_action_curriculum_csf_express: कॉम्प्युटर सायन्स फंडामेंटल्स
+    एक्सप्रेस कोर्स एक्सप्लोर करा
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: कॉम्प्युटर सायन्स फंडामेंटल्स
+    प्री-रीडर एक्सप्रेस कोर्स एक्सप्लोर करा
   aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
     curriculum
   aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
@@ -267,61 +276,78 @@ mr:
     (Circuit Playground) curriculum
   aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
     Devices (micro:bit) curriculum
-  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
-    Apps with Devices unit
-  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
-    Solving and Computing unit
-  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
-    unit
-  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
-    Animations and Games unit
-  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
-    unit
-  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
-    unit
-  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
-  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
-    collection
-  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
-    collection
-  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
-  aria_label_call_to_action_collection_coding: Explore the Coding collection
-  aria_label_call_to_action_collection_data: Explore the Data collection
-  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: डिव्हाइसेस युनिटसह
+    अॅप्स तयार करणे एक्सप्लोर करा
+  aria_label_call_to_action_curriculum_problem_solving_computing: प्रॉब्लेम सॉल्व्हिंग
+    अँड कॉम्प्युटिंग युनिट एक्सप्लोर करा
+  aria_label_call_to_action_curriculum_web_development: वेब डेव्हलपमेंट युनिट एक्सप्लोर
+    करा
+  aria_label_call_to_action_curriculum_interactive_animations_games: इंटरएक्टिव्ह
+    अॅनिमेशन आणि गेम युनिट एक्सप्लोर करा
+  aria_label_call_to_action_curriculum_design_process: डिझाइन प्रोसेस युनिट एक्सप्लोर
+    करा
+  aria_label_call_to_action_curriculum_data_society: डेटा आणि सोसायटी युनिट एक्सप्लोर
+    करा
+  aria_label_call_to_action_collection_hardware: हार्डवेअर कलेक्शन एक्सप्लोर करा
+  aria_label_call_to_action_collection_design_purpose: डिझाईन विथ पर्पज कलेक्शन एक्सप्लोर
+    करा
+  aria_label_call_to_action_collection_impact_society: सोसायटी कलेक्शनमधील प्रभाव
+    एक्सप्लोर करा
+  aria_label_call_to_action_collection_creativity: क्रिएटिव्हिटी कलेक्शन एक्सप्लोर
+    करा
+  aria_label_call_to_action_collection_coding: कोडींग कलेक्शन एक्सप्लोर करा
+  aria_label_call_to_action_collection_data: डेटा कलेक्शन एक्सप्लोर करा
+  aria_label_call_to_action_module_coding_w_poetry: कवितेसह कोडींग मॉड्यूल तपशील पहा
+  aria_label_call_to_action_module_coding_time_capsule: कोडिंग अ टाइम कॅप्सूल मॉड्यूल
+    तपशील पहा
+  aria_label_call_to_action_module_simulating_marine_ecosystem: मरीन इकोसिस्टम मॉड्यूलचे
+    सिम्युलेटिंग तपशील पहा
+  aria_label_call_to_action_module_coding_geometric_star_quilt: कोडिंग अ जीयोमेट्रिक
+    स्टार क्विल्ट मॉड्यूल तपशील पहा
+  aria_label_call_to_action_module_modeling_animal_adaptations: मॉडेलिंग अॅनिमल अॅडॉप्टेशन्स
+    मॉड्यूल तपशील पहा
+  aria_label_call_to_action_module_coding_book_covers: कोडिंग बुक कव्हर मॉड्यूल तपशील
+    पहा
+  aria_label_call_to_action_module_coding_interactive_maps: कोडिंग इंटरएक्टिव्ह मॅप्स
+    मॉड्यूल तपशील पहा
+  aria_label_call_to_action_csf_course_a: अभ्यासक्रम A तपशील पहा
+  aria_label_call_to_action_csf_course_b: अभ्यासक्रम B तपशील पहा
+  aria_label_call_to_action_csf_course_c: अभ्यासक्रम C तपशील पहा
+  aria_label_call_to_action_csf_course_d: अभ्यासक्रम D तपशील पहा
+  aria_label_call_to_action_csf_course_e: अभ्यासक्रम E तपशील पहा
+  aria_label_call_to_action_csf_course_f: अभ्यासक्रम F तपशील पहा
+  aria_label_call_to_action_ai_pl_101_videos: Watch AI 101 for Teachers videos
+  aria_label_call_to_action_ai_teaching_module: Explore the Teaching AI and Machine
+    Learning module
+  aria_label_call_to_action_how_ai_works_lesson_01: See the Introduction to Machine
+    Learning lesson details
+  aria_label_call_to_action_how_ai_works_lesson_02: See the Computer Vision lesson
     details
-  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
-    module details
-  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
-    a Marine Ecosystem module details
-  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
-    Star Quilt module details
-  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
-    Adaptations module details
-  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
-    module details
-  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
-    Maps module details
-  aria_label_call_to_action_csf_course_a: See Course A details
-  aria_label_call_to_action_csf_course_b: See Course B details
-  aria_label_call_to_action_csf_course_c: See Course C details
-  aria_label_call_to_action_csf_course_d: See Course D details
-  aria_label_call_to_action_csf_course_e: See Course E details
-  aria_label_call_to_action_csf_course_f: See Course F details
+  aria_label_call_to_action_how_ai_works_lesson_03: See the Neural Networks lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_04: See the Chatbots and Large Language
+    Models lesson details
+  aria_label_call_to_action_how_ai_works_lesson_05: See the Generative Images lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_06: See the Algorithmic Bias lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_07: See the Our AI Code of Ethics
+    lesson details
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
   curriculum_name_csf_a_f: CS फंडामेंटल्स A-F
-  curriculum_name_csf_express: Express
-  curriculum_name_csf_express_pre_reader: Pre-Reader Express
-  curriculum_name_csf_course_a: Course A
-  curriculum_name_csf_course_b: Course B
-  curriculum_name_csf_course_c: Course C
-  curriculum_name_csf_course_d: Course D
-  curriculum_name_csf_course_e: Course E
-  curriculum_name_csf_course_f: Course F
-  curriculum_name_csf_no_device: No Device/Unplugged
-  curriculum_name_csf_self_paced: Self-paced lesson
-  curriculum_name_csf_teacher_led: Teacher led lesson
+  curriculum_name_csf_express: एक्सप्रेस
+  curriculum_name_csf_express_pre_reader: प्री-रीडर एक्सप्रेस
+  curriculum_name_csf_course_a: अभ्यासक्रम A
+  curriculum_name_csf_course_b: अभ्यासक्रम B
+  curriculum_name_csf_course_c: अभ्यासक्रम C
+  curriculum_name_csf_course_d: अभ्यासक्रम D
+  curriculum_name_csf_course_e: अभ्यासक्रम E
+  curriculum_name_csf_course_f: अभ्यासक्रम F
+  curriculum_name_csf_no_device: कोणतेही डिव्‍हाइस/अनप्‍लग्‍ड नाही
+  curriculum_name_csf_self_paced: सेल्फ-पेस्ड लेसन
+  curriculum_name_csf_teacher_led: शिक्षकाद्वारे मार्गदर्शित धडा
   curriculum_name_csd: Computer Science Discoveries
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: संगणक विज्ञान कनेक्शन्स
@@ -330,90 +356,97 @@ mr:
   curriculum_name_ai: AI & Machine Learning
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_creating_apps_with_devices: डिव्हाइसेससह अॅप्स तयार करणे
   curriculum_name_poetry: कवितेसह कोडिंग
-  curriculum_name_dance_party: Dance Party
-  curriculum_name_problem_solving_computing: Problem Solving & Computing
-  curriculum_name_web_development: Web Development
-  curriculum_name_interactive_animations_games: Interactive Animations & Games
-  curriculum_name_design_process: The Design Process
-  curriculum_name_data_society: Data & Society
-  curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
-    skills, and work through fun challenges! Make games and creative projects to share
-    with friends, family, and teachers.
-  curriculum_desc_csf_express_pre_reader: Learn the basics of drag-and-drop block
-    coding by solving puzzles and creating animated scenes. Make art and simple games
-    to share with friends, family, and teachers.
-  curriculum_desc_csf_course_a: Program using commands like loops and events. Teach
-    students to collaborate with others, investigate different problem-solving techniques,
-    persist in the face of challenging tasks, and learn about internet safety.
-  curriculum_desc_csf_course_b: Through unplugged activities and a variety of puzzles,
-    students will learn the basics of programming, collaboration techniques, investigation
-    and critical thinking skills, persistence in the face of difficulty, and internet
-    safety.
-  curriculum_desc_csf_course_c: Create programs with sequencing, loops, and events.
-    Investigate problem-solving techniques and develop strategies for building positive
-    communities both online and offline. Create interactive games that students can
-    share.
-  curriculum_desc_csf_course_d: Review of the concepts found in earlier courses, including
-    loops and events. Afterward, students will develop their understanding of algorithms,
-    nested loops, while loops, conditionals, and more.
-  curriculum_desc_csf_course_e: Make fun, interactive projects that reinforce learning
-    about online safety. Engage in more complex coding such as nested loops, functions,
-    and conditionals.
-  curriculum_desc_csf_course_f: Look at how users make choices in the apps they use.
-    Make a variety of Sprite Lab apps that also offer choices for the user. Learn
-    more advanced concepts, including variables and “for” loops.
-  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
-    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
-    storage, and processing to aid in problem-solving.
-  curriculum_desc_web_development: Create and share content on web pages, exploring
-    the creative potential of the web. Develop critical consumption skills, problem-solving
-    abilities, and teamwork while programming.
-  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
-    interactive art, and games. Gain familiarity with programming concepts and the
-    design process.
-  curriculum_desc_design_process: Focus on considering the societal impact of computing.
-    Through design challenges, students empathize with others' needs and develop solutions.
-  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
-    the assistance of computers in this process. Cover representation systems and
-    associated challenges. Discover how data collections aid problem-solving.
-  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
-    in computing. Develop programs that utilize hardware inputs and outputs. There
-    is a version of this unit for both the micro:bit and Circuit Playground.
-  collection_hardware: Focus on Hardware
-  collection_hardware_desc: Empowers students to use data and physical devices to
-    solve problems.
-  collection_design_purpose: Focus on Design with Purpose
-  collection_design_purpose_desc: Empowers students to think about the needs of users
-    while designing websites and apps for devices.
-  collection_impact_society: Focus on Impact in Society
-  collection_impact_society_desc: Empowers students to think about computer science
-    as a tool to solve problems while considering the broader social impacts.
-  collection_creativity: Focus on Creativity
-  collection_creativity_desc: Empowers students to be creative as they learn to create
-    websites, animations and games, and apps for devices.
-  collection_coding: Focus on Coding
-  collection_coding_desc: Empowers students to build their coding skills in web development,
-    games and animation, and creating apps for devices.
-  collection_data: Focus on Data
-  collection_data_desc: Empowers students to use data to solve problems.
+  curriculum_name_dance_party: डान्स पार्टी
+  curriculum_name_problem_solving_computing: 'समस्या सोडवणे आणि कम्प्युटिंग '
+  curriculum_name_web_development: वेब डेव्हलपमेंट
+  curriculum_name_interactive_animations_games: इंटरएक्टिव्ह अॅनिमेशन आणि गेम्स
+  curriculum_name_design_process: डिझाईन प्रक्रिया
+  curriculum_name_data_society: डेटा आणि सोसायटी
+  curriculum_desc_csf_express: संगणक प्रोग्राम करायला शिका, समस्या सोडवण्याची कौशल्ये
+    विकसित करा आणि मजेदार आव्हानांवर काम करा! मित्र, कुटुंब आणि शिक्षकांसह सामायिक
+    करण्यासाठी गेम आणि सर्जनशील प्रकल्प तयार करा.
+  curriculum_desc_csf_express_pre_reader: कोडी सोडवून आणि अॅनिमेटेड दृश्ये तयार करून
+    ड्रॅग-अँड-ड्रॉप ब्लॉक कोडिंगची मूलभूत माहिती जाणून घ्या. मित्र, कुटुंब आणि शिक्षकांसह
+    सामायिक करण्यासाठी आर्ट आणि साधे गेम तयार करा.
+  curriculum_desc_csf_course_a: लूप आणि इव्हेंट्स सारख्या कमांडचा वापर करणारा प्रोग्राम.
+    विद्यार्थ्यांना इतरांसोबत सहयोग करण्यास शिकवा, समस्या सोडवण्याच्या विविध तंत्रांचा
+    अभ्यास करा, आव्हानात्मक कार्ये सुरू ठेवा आणि इंटरनेट सुरक्षिततेबद्दल जाणून घ्या.
+  curriculum_desc_csf_course_b: अनप्लग्ड अ‍ॅक्टिव्हिटी आणि विविध प्रकारच्या कोडीद्वारे
+    विद्यार्थी प्रोग्रामिंगची मूलभूत गोष्टी, सहयोग तंत्र, शोध आणि गंभीर विचार कौशल्ये,
+    प्रतिकूल परिस्थितीत चिकाटी आणि इंटरनेट सुरक्षितता शिकतील.
+  curriculum_desc_csf_course_c: सिक्वेन्सिंग, लूप आणि इव्हेंट्ससह प्रोग्राम तयार करा.
+    समस्या सोडवण्याच्या तंत्रांचे परीक्षण करा आणि ऑनलाइन आणि ऑफलाइन अशा दोन्ही प्रकारे
+    सकारात्मक समुदाय तयार करण्यासाठी धोरणे विकसित करा. विद्यार्थी शेअर करू शकतील असे
+    परस्परसंवादी खेळ तयार करा.
+  curriculum_desc_csf_course_d: लूप आणि इव्हेंट्ससह पूर्वीच्या अभ्यासक्रमांमध्ये आढळलेल्या
+    संकल्पनांचे पुनरावलोकन. पुढे, विद्यार्थी अल्गोरिदम, नेस्टेड लूप, लूप, कंडिशनल्स
+    आणि बरेच काही समजून घेतील.
+  curriculum_desc_csf_course_e: ऑनलाइन सुरक्षिततेबद्दल शिकणे अधिक मजबूत करणारे मजेदार,
+    परस्परसंवादी प्रकल्प तयार करा. नेस्टेड लूप, फंक्शन्स आणि कंडिशनल्स यासारख्या अधिक
+    जटिल कोडिंगमध्ये व्यस्त रहा.
+  curriculum_desc_csf_course_f: वापरकर्ते वापरत असलेल्या अॅप्समध्ये निवडी कशा करतात
+    ते पहा. विविध प्रकारचे स्प्राईट लॅब अॅप्स बनवा जे वापरकर्त्यासाठी निवडी देखील
+    देतात. व्हेरिएबल्स आणि “फॉर” लूपसह अधिक प्रगत संकल्पना जाणून घ्या
+  curriculum_desc_problem_solving_computing: कोडी, आव्हाने आणि वास्तविक-जगातील परिस्थिती
+    हाताळण्यासाठी समस्या सोडवण्याची प्रक्रिया वापरा. समस्या सोडवण्यात मदत करण्यासाठी
+    संगणक इनपुट, आउटपुट, स्टोरेज आणि प्रक्रिया याबद्दल जाणून घ्या.
+  curriculum_desc_web_development: वेब पृष्ठांवर सामग्री तयार करा आणि सामायिक करा,
+    वेबची सर्जनशील क्षमता एक्सप्लोर करा. प्रोग्रामिंग करताना गंभीर उपभोग कौशल्ये,
+    समस्या सोडवण्याची क्षमता आणि टीमवर्क विकसित करा.
+  curriculum_desc_interactive_animations_games: प्रोग्रामॅटिक प्रतिमा, अॅनिमेशन, इंटरएक्टिव्ह
+    आर्ट आणि गेम तयार करा. प्रोग्रामिंग संकल्पना आणि डिझाइन प्रक्रियेशी परिचित व्हा.
+  curriculum_desc_design_process: संगणनाच्या सामाजिक प्रभावाचा विचार करण्यावर लक्ष
+    केंद्रित करा. डिझाइन आव्हानांद्वारे, विद्यार्थी इतरांच्या गरजा समजून घेतात आणि
+    उपाय विकसित करतात.
+  curriculum_desc_data_society: समस्या सोडवण्यामध्ये डेटाची भूमिका आणि या प्रक्रियेत
+    संगणकाच्या सहाय्यावर जोर देण्यात आला आहे. प्रतिनिधित्व प्रणाली आणि संबंधित आव्हाने
+    कव्हर करा. समस्या सोडवण्यासाठी डेटा संकलन कसे मदत करते ते जाणून घ्या.
+  curriculum_desc_creating_apps_with_devices: कॉम्प्युटिंगमध्ये भौतिक उपकरणांची भूमिका
+    एक्सप्लोर करा. हार्डवेअर इनपुट आणि आउटपुट वापरणारे प्रोग्राम विकसित करा. मायक्रो:बिट
+    आणि सर्किट प्लेग्राउंड्स या दोन्हीसाठी या युनिटची आवृत्ती आहे.
+  collection_hardware: हार्डवेअरवर लक्ष केंद्रित करा
+  collection_hardware_desc: विद्यार्थ्यांना समस्यांचे निराकरण करण्यासाठी डेटा आणि
+    भौतिक उपकरणे वापरण्याचे सामर्थ्य देते.
+  collection_design_purpose: उद्देशासह डिझाइनवर लक्ष केंद्रित करा
+  collection_design_purpose_desc: उपकरणांसाठी वेबसाइट्स आणि अॅप्स डिझाइन करताना विद्यार्थ्यांना
+    वापरकर्त्यांच्या गरजा लक्षात घेण्यास सक्षम बनवते.
+  collection_impact_society: समाजातील प्रभावावर लक्ष केंद्रित करा
+  collection_impact_society_desc: व्यापक सामाजिक परिणामांचा विचार करताना समस्यांचे
+    निराकरण करण्यासाठी एक साधन म्हणून संगणक विज्ञानाचा विचार करण्यास विद्यार्थ्यांना
+    सक्षम करते.
+  collection_creativity: सर्जनशीलतेवर लक्ष केंद्रित करा
+  collection_creativity_desc: वेबसाइट्स, अॅनिमेशन आणि गेम आणि डिव्हाइसेससाठी अॅप्स
+    तयार करायला शिकत असताना विद्यार्थ्यांना सर्जनशील होण्यासाठी सक्षम बनवते.
+  collection_coding: कोडिंगवर लक्ष केंद्रित करा
+  collection_coding_desc: विद्यार्थ्यांना वेब डेव्हलपमेंट, गेम आणि अॅनिमेशन आणि डिव्हाइससाठी
+    अॅप्स तयार करण्यासाठी कोडिंग कौशल्ये तयार करण्यास सक्षम करते.
+  collection_data: डेटावर लक्ष केंद्रित करा
+  collection_data_desc: विद्यार्थ्यांना समस्यांचे निराकरण करण्यासाठी डेटा वापरण्यास
+    सक्षम करते.
   module_label_ages: 'वय:'
   module_label_grades: 'ग्रेड:'
   module_label_curriculum: 'Curriculum:'
-  module_label_curriculum_pure: Curriculum
+  module_label_curriculum_pure: अभ्यासक्रम
   module_label_duration: 'Duration:'
   module_label_prerequisites: 'Prerequisites:'
-  module_label_level: 'Level:'
-  module_label_topics: 'Topics:'
+  module_label_level: 'स्तर:'
+  module_label_topics: 'विषय:'
   module_label_devices: 'डिव्हायसेस:'
-  module_label_tools: 'Programming Tools:'
-  module_label_professional_learning: 'Professional Learning:'
-  module_label_languages: 'Languages Supported:'
-  module_label_accessibility_features: 'Accessibility:'
-  module_label_educator_tool: Educator tool
-  module_label_educator_course: Educator course
-  module_label_student_tool: Student tool
+  module_label_tools: 'प्रोग्रामिंग टूल्स:'
+  module_label_professional_learning: 'व्यावसायिक शिक्षण:'
+  module_label_languages: 'समर्थित भाषा:'
+  module_label_accessibility_features: 'प्रवेशयोग्यता:'
+  module_label_educator_tool: शिक्षक साधने
+  module_label_educator_course: शिक्षक अभ्यासक्रम
+  module_label_student_tool: विद्यार्थ्यांचे साधने
+  module_label_student_product: उत्पादन
+  module_label_student_content_resources: सामग्री आणि संसाधने
+  module_label_new: New
+  module_label_coming_soon: Coming soon
+  module_label_video_series: Video series
+  module_label_self_paced: Self-paced module
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -425,29 +458,33 @@ mr:
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
-  module_grade_kindergarten: Kindergarten
-  module_grade_grade_01: Grade 1
-  module_grade_grade_02: Grade 2
-  module_grade_grade_03: Grade 3
-  module_grade_grade_04: Grade 4
-  module_grade_grade_05: Grade 5
+  module_grade_kindergarten: बालवाडी
+  module_grade_grade_01: ग्रेड 1
+  module_grade_grade_02: ग्रेड 2
+  module_grade_grade_03: ग्रेड 3
+  module_grade_grade_04: ग्रेड 4
+  module_grade_grade_05: ग्रेड 5
   module_grade_k_5_teachers: K-5 शिक्षक
   module_grade_6_10_teachers: 6-10 शिक्षक
   module_grade_9_12_teachers: 9-12 शिक्षक
-  module_level_beginner: Beginner
-  module_level_intermediate: Intermediate
+  module_level_beginner: नवशिके
+  module_level_intermediate: मध्यवर्ती
+  module_duration_45_mins: 45 minutes
+  module_duration_1_hr: 1 hour
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
+  module_duration_5_hrs: 5 hours
   module_duration_8_hrs: 8 hours
+  module_duration_20_hrs: 20 hours
   module_duration_35_hrs: 35 hours
   module_duration_lesson: धडा
-  module_duration_week: Week
+  module_duration_week: आठवडा
   module_duration_month: 'महिना '
   module_duration_quarter: चतुर्थांश
-  module_duration_semester: Semester
+  module_duration_semester: सत्र (सेमिस्टर)
   module_duration_school_year: शालेय वर्ष
-  module_duration_month_quarter: Month or Quarter
-  module_duration_month_semester_year: Month, Semester, or Year
+  module_duration_month_quarter: महिना किंवा तिमाही
+  module_duration_month_semester_year: महिना, सेमिस्टर किंवा वर्ष
   module_prerequisites_none: कोणी ही / कुठलेही नाही
   module_prerequisites_maker_cp: Access to a Circuit Playground
   module_prerequisites_maker_microbit: Access to a micro:bit
@@ -458,85 +495,90 @@ mr:
   module_label_teaching_ai: Teaching AI and Machine Learning
   module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
   module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
-  module_subject_english_language_arts: English Language Arts
-  module_subject_social_studies: Social Studies
-  module_subject_science: Science
-  module_subject_math: Math
+  module_subject_english_language_arts: इंग्रजी भाषा कला
+  module_subject_social_studies: समाज शास्त्र
+  module_subject_science: विज्ञान
+  module_subject_math: गणित
   module_name_coding_w_poetry: कवितेसह कोडिंग
-  module_name_coding_time_capsule: Coding a Time Capsule
-  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
-  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
-  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
-  module_name_coding_book_covers: Coding Book Covers
-  module_name_coding_interactive_maps: Coding Interactive Maps
-  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
-    by creating interactive poems, illustrating the mood and tone with code.
-  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
-    memories for the future.
-  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
-    exploring the interdependencies between different organisms and their environment.
-  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
-    in stunning star quilts, blending mathematical concepts with creative expression.
-  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
-    your understanding of how different species have evolved to survive in their environments.
-  module_desc_coding_book_covers: Use code to create an animated cover of a book,
-    using sprites and text to convey characters, setting, plot, and more.
-  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
-    allowing you to explore geographic information in an engaging and interactive
-    way.
+  module_name_coding_time_capsule: टाइम कॅप्सूल कोडिंग
+  module_name_simulating_marine_ecosystem: मरीन इकोसिस्टम सिम्युलेशन
+  module_name_coding_geometric_star_quilt: जिओमेट्रिक स्टार क्विल्ट कोडिंग
+  module_name_modeling_animal_adaptations: मॉडेलिंग प्राणी अनुकूलन
+  module_name_coding_book_covers: कोडिंग बुक कव्हर्स
+  module_name_coding_interactive_maps: इंटरएक्टिव्ह मैप्स कोडींग
+  module_desc_coding_w_poetry: संवादात्मक कविता तयार करून, कोडसह मूड आणि टोनचे चित्रण
+    करून कोडिंग आणि भाषा कलांचा परस्परसंबंध एक्सप्लोर करा.
+  module_desc_coding_time_capsule: भविष्यातील आठवणी कॅप्चर करण्यासाठी आणि जतन करण्यासाठी
+    डिजिटल टाइम कॅप्सूल तयार करा.
+  module_desc_simulating_marine_ecosystem: मरीन इको सिस्टमचे अनुकरण करण्यासाठी कोडिंग
+    वापरा, विविध जीव आणि त्यांचे वातावरण यांच्यातील परस्परावलंबनांचा शोध घ्या.
+  module_desc_coding_geometric_star_quilt: सर्जनशील अभिव्यक्तीसह गणितीय संकल्पनांचे
+    मिश्रण करून, आश्चर्यकारक स्टार क्विल्ट मध्ये भौमितिक नमुने तयार करण्यासाठी कोड
+    शिकणे.
+  module_desc_modeling_animal_adaptations: विविध प्रजाती त्यांच्या वातावरणात टिकून
+    राहण्यासाठी कशा विकसित झाल्या आहेत हे समजून घेऊन, प्राण्यांच्या रुपांतरांचे मॉडेल
+    करण्यासाठी कोड वापरा
+  module_desc_coding_book_covers: अॅनिमेटेड पुस्तक कव्हर तयार करण्यासाठी कोड वापरा,
+    वर्ण, सेटिंग, कथानक आणि बरेच काही व्यक्त करण्यासाठी स्प्राइट्स आणि टेक्स्ट वापरा.
+  module_desc_coding_interactive_maps: एक कथा सांगणारा नकाशा विकसित करण्यासाठी कोडिंग
+    वापरा, ज्यामुळे तुम्हाला भौगोलिक माहिती आकर्षक आणि परस्परसंवादी मार्गाने एक्सप्लोर
+    करण्याची अनुमती मिळते.
   values_01: We believe computer science is foundational for all students
   values_02: We are committed to equity, access, and opportunity
   values_03: We believe in the power of a collaborative education community
   values_04: We are agile and responsive to feedback
   values_05: We act with integrity and transparency
   values_06: We believe broad impact requires thinking big and acting holistically
-  heading_professional_learning: Professional learning that meets your needs
+  heading_professional_learning: व्यावसायिक शिक्षण जे तुमच्या गरजा पूर्ण करते
   heading_additional_resources: Additional resources
-  heading_support_and_questions: Support and questions
-  heading_faq: Frequently asked questions
-  heading_curriculum_at_a_glance: Curriculum at a glance
-  heading_curricula_at_a_glance: Curricula at a glance
-  heading_engaging_projects: Engaging projects and activities that inspire learning
-  heading_build_apps: Build apps
-  heading_widgets: Widgets
-  heading_choice_levels: Choice levels
-  heading_year_long_intro_course: Year-long introductory course
-  heading_flexible_units: Flexible units
-  heading_collections: Collections
-  heading_find_a_module: Find a module for your classroom
-  heading_no_devices: No devices? We have you covered
-  heading_java_lab: Java Lab
-  heading_objects_first: Objects first
-  professional_learning_section_desc: Get the support you need as you prepare to teach.
-    Teachers love it, with over 90% ranking it the best professional development ever!
-  professional_learning_section_desc_short: Get the support you need as you prepare
-    to teach.
-  professional_learning_section_desc_self_paced: Just in time support that allows
-    you to prepare to teach with confidence on your schedule.
-  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
-    Professional Learning Program will bring you together with a group of teachers
-    to learn from each other as well as expert facilitators as you take on the first
-    year of teaching the free curriculum to your students. In-person and virtual workshops
-    are starting this summer.
-  professional_learning_section_block_facilitator_led_workshops_csf: Join local teachers
-    for inspiring and hands-on support to implement computer science in your classroom.
-    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
-    teachers or for schoolwide PD. Sign up for a professional development workshop
-    near you!
+  heading_support_and_questions: समर्थन आणि प्रश्न
+  heading_faq: वारंवार विचारले जाणारे प्रश्न
+  heading_curriculum_at_a_glance: एका दृष्टीक्षेपात अभ्यासक्रम
+  heading_curricula_at_a_glance: एका दृष्टीक्षेपात अभ्यासक्रम
+  heading_engaging_projects: शिक्षणाला चालना देणारे प्रकल्प आणि क्रियाकलाप यांचा समावेश
+    करणे
+  heading_build_apps: अॅप्स तयार करा
+  heading_widgets: विजेट्स
+  heading_choice_levels: निवडीचे स्तर
+  heading_year_long_intro_course: वर्षभराचा परिचयात्मक अभ्यासक्रम
+  heading_flexible_units: लवचिक युनिट्स
+  heading_collections: कलेक्शन/ संग्रह
+  heading_find_a_module: आपल्या वर्गासाठी एक मॉड्यूल शोधा
+  heading_no_devices: उपकरणे नाहीत? आम्ही तुम्हाला कव्हर केले
+  heading_java_lab: जावा लॅब
+  heading_objects_first: प्रथम ऑब्जेक्ट्स
+  heading_these_lessons_will: 'These lessons will:'
+  professional_learning_section_desc: तुम्ही शिकवण्याची तयारी करत असताना तुम्हाला
+    आवश्यक असलेली मदत मिळवा. शिक्षकांना ते आवडते, 90% पेक्षा जास्त लोकांनी याला आतापर्यंतचा
+    सर्वोत्तम व्यावसायिक विकास म्हणून रेट केले आहे!
+  professional_learning_section_desc_short: तुम्ही शिकवण्याची तयारी करत असताना तुम्हाला
+    आवश्यक असलेला पाठिंबा मिळवा.
+  professional_learning_section_desc_self_paced: फक्त वेळेत पाठींबा किंवा समर्थन मिळाल्यास
+    ते तुम्हाला तुमच्या वेळापत्रकानुसार आत्मविश्वासाने शिकवण्याची तयारी करू देते.
+  professional_learning_section_block_facilitator_led_workshops: जेव्हा तुम्ही तुमच्या
+    विद्यार्थ्यांना मोफत अभ्यासक्रम शिकवण्याच्या पहिल्या वर्षात भाग घेता तेव्हा आमचा
+    सहाय्यक व्यवसाय शिक्षण कार्यक्रम तुम्हाला शिक्षकांच्या गटासह एकमेकांकडून शिकण्यासाठी,
+    तसेच तज्ञ सुविधा देणार्‍यांसह एकत्र आणतो. वैयक्तिक आणि आभासी  म्हणजेच व्हर्च्युअल
+    कार्यशाळा या उन्हाळ्यात सुरू होणार आहेत.
+  professional_learning_section_block_facilitator_led_workshops_csf: तुमच्या वर्गात
+    संगणक विज्ञान लागू करण्यासाठी प्रेरणादायी आणि व्यावहारिक समर्थनासाठी स्थानिक शिक्षकांशी
+    संपर्क साधा. आमचे प्रादेशिक भागीदार वैयक्तिक शिक्षकांसाठी किंवा शाळा-व्यापी पीडीसाठी
+    उच्च-गुणवत्तेची, एक दिवसीय Code.org कार्यशाळा प्रदान करतात. तुमच्या जवळ असलेल्या
+    व्यावसायिक विकास कार्यशाळेसाठी साइन अप करा!
   professional_learning_section_block_csa: Our highly supportive Professional Learning
     Program will bring you together with a group of teachers to learn from each other
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
-  professional_learning_section_workshops_starting: In-person and virtual workshops
-    starting this summer.
-  no_devices_section_subhead: Go ahead, cut the cord (for a while)!
-  no_devices_section_desc: CS education does not always need to be in front of a screen
-    and device access shouldn't be a barrier to learning computer science concepts.
-  support_and_questions_section_subhead: Still have questions? Reach out to us! We
-    are here to help.
-  support_and_questions_section_desc: Our support team is here to answer any questions
-    you may have about starting teaching with Code.org. You can also ask other teachers
-    about their experience on our teacher forums.
+  professional_learning_section_workshops_starting: वैयक्तिक आणि आभासी  म्हणजेच व्हर्च्युअल
+    कार्यशाळा या उन्हाळ्यात सुरू होणार आहेत.
+  no_devices_section_subhead: पुढे जा, स्वतंत्र बना, कुणावरही अवलंबुन राहू नका  (थोड्यावेळासाठी)!
+  no_devices_section_desc: CS शिक्षणाला नेहमी स्क्रीनसमोर असण्याची गरज नाही आणि संगणक
+    विज्ञान संकल्पना शिकण्यासाठी डिव्हाइसची सुलभता अडथळा नसावी.
+  support_and_questions_section_subhead: अजूनही प्रश्न आहेत का? आमच्यापर्यंत पोहचा!
+    आम्ही मदत करण्यासाठी येथे आहोत.
+  support_and_questions_section_desc: Code.org सह अध्यापन सुरू करण्याबाबत तुमच्या
+    कोणत्याही प्रश्नांची उत्तरे देण्यासाठी आमचा सपोर्ट टीम येथे आहे. तुम्ही आमच्या
+    शिक्षक मंचावर इतर शिक्षकांना त्यांच्या अनुभवांबद्दल विचारू शकता.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -624,12 +666,17 @@ mr:
   ai_curriculum_grades_02: 'Grade Levels: 5-12'
   ai_curriculum_duration_02: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_02: View the lesson plan for AI and Ethics
-  ai_curriculum_title_03: AI for Oceans
+  ai_curriculum_title_03: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   ai_curriculum_desc_03: Help A.I. clean the oceans by training it to detect trash!
     Learn about training data and bias, and how AI can address world problems.
   ai_curriculum_grades_03: 'Grade Levels: 3-12'
   ai_curriculum_duration_03: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_curriculum_title_04: AI कसे काम करते
+  ai_curriculum_desc_04: These lessons supplement the How AI Works video series. Each
+    lesson is paired with a single video from the series, diving-deeper into the concepts
+    introduced in the videos.
+  ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -646,11 +693,14 @@ mr:
   ai_pl_list_04: Consider real-world implications of AI and machine learning.
   ai_pl_list_05: Explore end of chapter projects.
   ai_pl_duration: 'Duration: 2 hours'
-  ai_video_series_title: How AI Works
-  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
-    series of short videos will introduce you to how artificial intelligence works
-    and why it matters. Then delve into issues like algorithmic bias and the ethics
-    of AI decision-making.
+  ai_pl_title: Teaching AI and Machine Learning
+  ai_pl_desc: Introduction to artificial intelligence and machine learning. Train
+    a machine learning model using AI Lab. and engage with machine learning apps.
+    Consider real-world implications of AI and machine learning.
+  ai_video_series_title: AI कसे काम करते
+  ai_video_series_desc: This series of short videos will introduce you to how artificial
+    intelligence works and why it matters. Then delve into issues like algorithmic
+    bias and the ethics of AI decision-making.
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -669,50 +719,142 @@ mr:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
-  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_heading: AI EmpowerED साठी आमच्यात सामील व्हा!
   ai_pl_101_hero_desc: शिक्षकांसाठी आमच्या विनामूल्य ऑनलाइन शिक्षण मालिकेसह शिक्षणातील
     कृत्रिम बुद्धिमत्तेची (AI) परिवर्तनीय क्षमता शोधा.
-  ai_pl_101_hero_presented: Presented by
-  ai_pl_101_intro_heading: What is AI 101 for Teachers?
-  ai_pl_101_intro_text: This is a comprehensive online learning series for any teacher
-    and educator interested in the groundbreaking world of artificial intelligence
-    (AI) and its transformative potential in education. Partners Code.org, Khan Academy,
-    ISTE and ETSI are offering engaging sessions with renowned experts that will demystify
-    AI, explore responsible implementation, address bias, and showcase how AI-powered
-    learning can revolutionize student outcomes. Join us on this journey of exploration
-    and empowerment, and unlock the future of teaching with and about AI.
-  ai_pl_101_partnership_between: A partnership between
-  ai_pl_101_join_email_title: Sign up for early access to AI 101 for Teachers
-  ai_pl_101_pro_join_email_desc: Be the first to hear when each session launches.
-    Get updates on AI resources from Code.org, Khan Academy, ISTE, and ETS.
-  ai_pl_101_explore_title: AI-related resources
-  ai_pl_101_explore_desc: We have a variety of additional resources for you from Code.org,
-    ETS, ISTE and Khan Academy to support teachers in this new and growing field.
-    Check them out below.
+  ai_pl_101_hero_desc_02: A comprehensive online learning series for teachers.
+  ai_pl_101_hero_presented: द्वारे सादर केले
+  ai_pl_101_intro_heading: शिक्षकांसाठी AI 101 म्हणजे काय आहे?
+  ai_pl_101_intro_text: शिक्षकांसाठी AI 101 ही आर्टिफिशियल इंटेलिजन्स (AI) च्या अभूतपूर्व
+    जगामध्ये आणि शिक्षणातील त्याच्या परिवर्तनीय संभाव्यतेमध्ये स्वारस्य असलेल्या कोणत्याही
+    शिक्षक आणि प्रशिक्षकासाठी विनामूल्य, मूलभूत ऑनलाइन व्यावसायिक शिक्षण मालिका आहे.
+    Partners Code.org, ETS, ISTE, खान अकादमी प्रख्यात तज्ञांसोबत आकर्षक सत्रे सादर
+    करत आहेत जे AI ची माहिती देतील, जबाबदार अंमलबजावणी एक्सप्लोर करतील, पूर्वाग्रह
+    दूर करतील आणि AI-शक्तीवर चालणारे शिक्षण विद्यार्थ्यांचे परिणाम कसे सुधारू शकतात
+    ते दाखवतील.अन्वेषण आणि सक्षमीकरणाच्या या प्रवासात आमच्यासोबत सामील व्हा आणि AI
+    सह आणि त्याबद्दल शिकवण्याचे भविष्य अनलॉक करा.
+  ai_pl_101_partnership_between: यांच्यातील भागीदारी
+  ai_pl_101_join_email_title: शिक्षकांसाठी AI 101 वर लवकर प्रवेश मिळवण्यासाठी साइन
+    अप करा
+  ai_pl_101_pro_join_email_desc: प्रत्येक सत्र लॉन्च झाल्यावर लगेच ऐका. Code.org,
+    ETS, ISTE आणि Khan Academy वरून AI संसाधनांवर अपडेट मिळवा.
+  ai_pl_101_explore_title: AI-संबंधित संसाधने
+  ai_pl_101_explore_desc: आमच्याकडे तुमच्यासाठी Code.org, ETS, ISTE आणि खान अकादमी
+    कडून या नवीन आणि वाढत्या क्षेत्रात शिक्षकांना मदत करण्यासाठी अनेक अतिरिक्त संसाधने
+    आहेत. ते खाली पहा.
   ai_pl_101_explore_title_1: Khanmigo
-  ai_pl_101_explore__desc_1: Khan Academy’s AI-powered teaching aid allows teachers
-    to stop spending time on prep tasks they don’t love, and focus on what they do
-    love—teaching.
-  ai_pl_101_explore__button_1: Try Khanmigo
-  ai_pl_101_explore_title_2: Artificial Intelligence Explorations for Educators
-  ai_pl_101_explore__desc_2: For six years, this 15-hour online course from ISTE has
-    been guiding K-12 educators on the essentials of AI for teaching and learning.
-    The course is offered three times per year and is fully asynchronous with the
-    ongoing support of an expert instructor.
-  ai_pl_101_explore__button_2: Start the course
-  ai_pl_101_explore_title_3: AI Curriculum
-  ai_pl_101_explore__desc_3: In Code.org’s AI Curriculum for grades 3-12, students
-    use fun activities to see how computers learn from data. The curriculum also invites
-    students to investigate machine learning and data while reflecting on the ethical
-    implications of AI.
-  ai_pl_101_explore__button_3: Explore curricula
-  ai_pl_101_explore_title_4: ETS’s Criterion Interactive
-  ai_pl_101_explore__desc_4: 'This guided five-paragraph writing platform coaches
-    learners through five critical phases of the writing process: Prepare/Plan, Write,
-    Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge
-    scoring models and AI, assisting teachers in providing iterative feedback and
-    formative assessment throughout the writing experience.'
-  ai_pl_101_explore__button_4: Explore tool
+  ai_pl_101_explore__desc_1: खान अकादमीच्या AI-शक्तीवर चालणाऱ्या अध्यापन सहाय्यांमुळे
+    शिक्षकांना त्यांना आवडत नसलेल्या तयारीच्या कामांमध्ये वेळ वाया घालवणे थांबवता
+    येते आणि त्यांना जे आवडते ते शिकवण्यावर लक्ष केंद्रित करतात.
+  ai_pl_101_explore__button_1: Khanmigo वापरून पहा
+  ai_pl_101_explore_title_2: शिक्षकांसाठी आर्टिफिशियल इंटेलिजेंस एक्सप्लोरेशन
+  ai_pl_101_explore__desc_2: सहा वर्षांपासून, ISTE कडून हा 15 तासांचा ऑनलाइन कोर्स
+    K-12 शिक्षकांना शिकवण्यासाठी आणि शिकण्यासाठी AI च्या आवश्यक गोष्टींवर मार्गदर्शन
+    करत आहे. अभ्यासक्रम वर्षातून तीन वेळा सादर केला जातो आणि तज्ञ प्रशिक्षकाच्या सतत
+    समर्थनासह पूर्णपणे समक्रमित आहे.
+  ai_pl_101_explore__button_2: अभ्यासक्रम सुरू करा
+  ai_pl_101_explore_title_3: AI अभ्यासक्रम
+  ai_pl_101_explore__desc_3: ग्रेड 3-12 साठी Code.org च्या AI अभ्यासक्रमात, संगणक
+    डेटामधून कसे शिकतात हे पाहण्यासाठी विद्यार्थी मजेदार क्रियाकलापांचा वापर करतात.
+    अभ्यासक्रम विद्यार्थ्यांना AI च्या नैतिक परिणामांवर प्रतिबिंबित करताना मशीन लर्निंग
+    आणि डेटाची तपासणी करण्यास आमंत्रित करतो.
+  ai_pl_101_explore__button_3: अभ्यासक्रम एक्सप्लोर करा
+  ai_pl_101_explore_title_4: ETS निकष परस्परसंवादी
+  ai_pl_101_explore__desc_4: 'हे पाच-परिच्छेद लेखन प्लॅटफॉर्म विद्यार्थ्यांना लेखन
+    प्रक्रियेच्या पाच महत्त्वाच्या पायऱ्यांद्वारे मार्गदर्शन करते: तयारी/नियोजन, रचना
+    (लिखाण), पुनरावृत्ती, संपादन, प्रतिबिंब. ETS अत्याधुनिक स्कोअरिंग मॉडेल्स आणि
+    AI चा फायदा घेऊन लेखन अनुभव वैयक्तिकृत करते, शिक्षकांना संपूर्ण लेखन अनुभवामध्ये
+    पुनरावृत्ती फीडबॅक आणि रचनात्मक मूल्यांकन प्रदान करण्यात मदत करते.'
+  ai_pl_101_explore__button_4: साधन एक्सप्लोर करा
+  ai_pl_101_video_title_1: Fireside Chat with Sal Khan and Hadi Partovi
+  ai_pl_101_video_desc_1: "Join Sal Khan (Khan Academy) and Hadi Partovi (Code.org)
+    for a fireside chat on embracing artificial intelligence in the classroom. Expect
+    a lively discussion including some of the most controversial topics \tsurrounding
+    AI today."
+  ai_pl_101_video_title_2: Demystifying AI for Educators
+  ai_pl_101_video_desc_2: Introduction to the fundamentals of Artificial Intelligence
+    which will equip you with the foundational knowledge to understand the profound
+    impact of AI in our society and its increasing relevance to the field of education.
+    You will gain practical insights into leveraging AI for tasks in the classroom,
+    and saving time on administrative tasks.
+  ai_pl_101_video_title_3: Transforming Learning with AI
+  ai_pl_101_video_desc_3: Explore the intersection of AI and education. This session
+    explores how AI can be combined with pedagogy to enhance student learning. It
+    is a must-attend for educators seeking to leverage AI to transform their teaching
+    practices to enrich their students’ learning experiences.
+  ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
+  ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
+    incorporating artificial intelligence in educational environments. This session
+    will provide concrete strategies, resources, and real-world examples, all aimed
+    at understanding the potential biases of AI, and the ethical considerations that
+    come with it.
+  ai_pl_101_video_title_5: Bringing AI to the Classroom
+  ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
+    utilizing AI educational tools, and leveraging AI for student assessment. With
+    a rich blend of theory, practical examples, and resources, it aims to empower
+    educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
+    in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
+    AI. Hear how these new technologies work directly from the experts: Mira Murati,
+    CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  how_ai_works_hero_heading: AI कसे काम करते
+  how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
+    series and accompanying lessons!
+  how_ai_works_intro_desc: This series of short videos and accompanying in-classroom
+    lessons will introduce you and your students to how artificial intelligence works
+    and why it matters. You can choose individual lessons based on topic, explore
+    the whole series of topics in one class or teach all 7 lessons to give a deeper
+    dive.
+  how_ai_works_intro_list_01: Introduce you to artificial intelligence and machine
+    learning
+  how_ai_works_intro_list_02: Dive into how generative AI works, including large language
+    models (LLMs) and image generation
+  how_ai_works_intro_list_03: Explore bias, ethics, privacy and the responsible use
+    of AI
+  how_ai_works_intro_list_04: Touch on real world applications of AI, including computer
+    vision
+  how_ai_works_lessons_heading: AI lessons for your class
+  how_ai_works_lesson_title_01: Introduction to Machine Learning
+  how_ai_works_lesson_desc_01: Learn about a form of artificial intelligence called
+    machine learning and how they can use the Problem Solving Process to help train
+    a robot to solve problems. Participate in machine learning activities where a
+    robot is learning how to detect patterns in fish.
+  how_ai_works_lesson_title_02: Computer Vision
+  how_ai_works_lesson_desc_02: Learn how computer vision works. Watch a video explaining
+    computer vision and how a computer "sees". Then design an algorithm that uses
+    a network to decide what number the seven segment display is displaying and test
+    it.
+  how_ai_works_lesson_title_03: Neural Networks
+  how_ai_works_lesson_desc_03: Learn how neural networks work. Use a widgets to explore
+    neural networks in a hands on way. Watch a video explaining neural networks. Finally
+    discuss the need for diverse perspectives when creating recommendation systems.
+  how_ai_works_lesson_title_04: Chatbots and Large Language Models
+  how_ai_works_lesson_desc_04: Learn what an Large Language Model (LLM) is and how
+    it works, then use an LLM to co-create a text with AI. Finally, discuss about
+    whether or not LLMs are intelligent or creative.
+  how_ai_works_lesson_title_05: Generative Images
+  how_ai_works_lesson_desc_05: Learn how AI can generate images, then explore a diffusion
+    AI widget and discuss whether or not these models are creative.
+  how_ai_works_lesson_title_06: Algorithmic Bias
+  how_ai_works_lesson_desc_06: Practice cropping images to uncover the bias underlying
+    the Twitter cropping algorithm, then read and watch a video about the discovery
+    of this biased algorithm. Finally, discuss ways to recognize and reduce bias in
+    algorithms.
+  how_ai_works_lesson_title_07: Our AI Code of Ethics
+  how_ai_works_lesson_desc_07: Conduct research using articles and videos that expose
+    ethical pitfalls in an artificial intelligence area of their choice. Assemble
+    a class-wide "Our AI Code of Ethics" resource for AI creators and legislators
+    everywhere.
+  how_ai_works_lessons_in_a_day_title: How AI Works in a Day
+  how_ai_works_lessons_in_a_day_desc: Only have a day? There's also the option to
+    introduce the whole series to students in a single day. Perfect for any subject-area
+    teacher looking to introduce students to AI, or even for as a lesson for a guest
+    teacher.
+  how_ai_works_lessons_in_a_day_desc_02: Introduce all of the "How AI Works" videos
+    in one day. Students follow along with each video by matching vocabulary from
+    the video, then answering a reflection question about each video.
+  how_ai_works_resources_desc: Interested in learning more about AI? Here are some
+    additional resources that can help extend you and your students' learning.
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -1041,10 +1183,10 @@ mr:
   teach_page_additional_materials_list_desc_03: तुमच्या शाळेत लावण्यासाठी विविध रोल
     मॉडेल्सची ही पोस्टर्स प्रिंट करा आणि तुमच्या विद्यार्थ्यांना कॉम्प्युटर सायन्सचा
     प्रयत्न करण्यास प्रेरित करा.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1053,7 +1195,7 @@ mr:
   csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
-  csp_page_curriculum_glance_tools: App Lab
+  csp_page_curriculum_glance_tools: अॅप लॅब
   csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csp_page_curriculum_glance_professional_languages: मराठी
@@ -1164,227 +1306,231 @@ mr:
   csp_page_faq_answer_07_04: For more information about our goals and approach to
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
-  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
-    alone, combined into collections that focus on specific areas, or as a full year
-    course. The free curriculum introduces students to building their own websites,
-    apps, animations, games, and physical computing systems.
-  csd_page_intro_heading: Flexible curriculum to meet your needs
-  csd_page_intro_list_01: Flexible introductory curriculum
-  csd_page_intro_list_02: Breadth of topics
-  csd_page_intro_list_03: No prior experience needed
-  csd_page_intro_list_04: Build many different types of projects
-  csd_page_intro_list_05: Exciting and fun
-  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
-    The incredible organization in the curriculum is what makes me use it year after
-    year.
-  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
-    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_top_desc: Code.org चा सर्वात लवचिक अभ्यासक्रम, प्रत्येक युनिटला एकट्याने
+    शिकवण्याची परवानगी देतो, विशिष्ट क्षेत्रांवर लक्ष केंद्रित करणार्‍या संग्रहांमध्ये
+    किंवा वर्षभर अभ्यासक्रम म्हणून एकत्र केले जाते. विनामूल्य कोर्स विद्यार्थ्यांना
+    त्यांच्या स्वतःच्या वेबसाइट्स, अॅप्स, अॅनिमेशन्स, गेम्स आणि भौतिक संगणन प्रणाली
+    तयार करण्यासाठी ओळख करून देतो.
+  csd_page_intro_heading: तुमच्या गरजा पूर्ण करण्यासाठी लवचिक अभ्यासक्रम
+  csd_page_intro_list_01: लवचिक परिचयात्मक अभ्यासक्रम
+  csd_page_intro_list_02: विषयांची विस्तृतता
+  csd_page_intro_list_03: पूर्वीच्या अनुभवाची गरज नाही
+  csd_page_intro_list_04: विविध प्रकारचे प्रकल्प बनवा
+  csd_page_intro_list_05: रोमांचक आणि मजेदार
+  csd_page_quote: अभ्यासक्रम सर्वसमावेशक, सुव्यवस्थित आणि विद्यार्थी केंद्रित आहे!
+    अभ्यासक्रमाची सुव्यवस्थित रचना मला वर्षानुवर्षे वापरण्यासाठी प्रेरित करते.
+  csd_page_curriculum_glance_topics: कृत्रिम बुद्धिमत्ता, डेटा, वेब डिझाइन, भौतिक
+    संगणन, अॅप डिझाइन, गेम्स आणि अॅनिमेशन, कला आणि डिझाइन, प्रोग्रामिंग
   csd_page_curriculum_glance_devices: Laptop, Chromebook
-  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
+  csd_page_curriculum_glance_tools: अॅप लॅब, गेम लॅब, एआय लॅब, वेब लॅब
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csd_page_curriculum_glance_professional_languages: मराठी
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
-    classroom
-  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
-    there is a course for all different needs.
-  csd_page_pick_a_course_heading_02: How do you want to pick the content?
-  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
-  csd_page_courses_year_action_block_desc: 'An introductory computer science course
-    that empowers students to create authentic artifacts and engage with computer
-    science as a medium for creativity, communication, problem solving, and fun. '
-  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
-    its own with no prior experience required, which allows you to pick the exact
-    units that work for your classroom.
-  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
-    focused on a specific topic.
-  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
-  csd_page_faq_question_02: How/Where can I get professional development for this
-    course?
-  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
-    The program kicks off with a five-day summer workshop where you'll have an opportunity
-    to work hands-on with the curriculum and meet other teachers from your area. Throughout
-    the year, we offer follow up workshops and forum support. You don't need any prior
-    computer science experience to get started. And teachers love it! 90% rank it
-    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
-  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
-    with my students. What would you recommend?
-  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
-    all units of CS Discoveries over the course of a school year, can now easily assign
-    a specific set of CS Discoveries units based on what they want to focus on. These
-    collections are still the same exact units found in CS Discoveries, simply grouped
-    together based on our recommendations below to dive deep in a specific area of
-    CS Discoveries. Each collection is approximately one semester or slightly less
-    than one semester. [Click here to see our Collections options](%{collections_url}).
-  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
-    they have the ability to assign just one unit at a time from CS Discoveries without
-    assigning the entire course. We hope this helps support classrooms that teach
-    units of CS Discoveries embedded as part of larger courses or when teaching computer
-    science on a limited schedule. [Click here to see our flexible units](%).
-  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
-  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
-    is printing. Many lessons have handouts that are designed to guide students through
-    activities. While it is not required that all of these handouts be printed, many
-    were designed to be printed and we highly recommend printing when possible.
-  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
-    supplies and manipulatives such as: Student journals, poster paper, markers/colored
-    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
-    similar sized scrap paper), and rulers or a straight edge of some kind.'
-  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
-    items are called for in specific units:'
-  csd_page_faq_answer_04_04: Problem Solving and Computing
-  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
-    pennies can be replaced with some other kind of weight of the same size). Alternate
-    activities are available if you do not have access to these supplies.
-  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
-    rolls or scratch paper
-  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
-    options - one for those using circuit playgrounds and one for those using micro:bit.
-    Teachers should not buy both sets of devices or teach both unit options as they
-    are equivalent and cover the same content."
-  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
-  csc_page_top_desc: Make connections between computer science (CS) and other subjects
-    like math, language arts, science, and social studies.
-  csc_page_intro_heading: Teach CS while covering core subject standards
-  csc_page_intro_list_01: Incorporate CS into other subjects
-  csc_page_intro_list_02: Reinforce learning in other subjects
-  csc_page_intro_list_03: Meet core subject standards
-  csc_page_intro_list_04: Fun way to teach students about computer science
+  csd_page_pick_a_course_heading: तुमच्या वर्गासाठी योग्य सीएस डिस्कव्हरीज कोर्स निवडणे
+  csd_page_pick_a_course_desc: सीएस डिस्कव्हरीजसाठी ऑफर केलेल्या विविध पर्यायांसह,
+    सर्व वेगवेगळ्या गरजांसाठी एक कोर्स आहे.
+  csd_page_pick_a_course_heading_02: आपण सामग्री कशी निवडू इच्छिता?
+  csd_page_courses_year_desc: 7 युनिट्सद्वारे विद्यार्थी विविध विषयांचा शोध घेतात.
+  csd_page_courses_year_action_block_desc: एक प्रास्ताविक संगणक विज्ञान अभ्यासक्रम
+    जो विद्यार्थ्यांना प्रामाणिक कलाकृती तयार करण्यास आणि सर्जनशीलता, संप्रेषण, समस्या
+    सोडवणे आणि मजा करण्यासाठी एक माध्यम म्हणून संगणक विज्ञानाशी संलग्न होण्यास सामर्थ्य
+    देतो.
+  csd_page_courses_flexible_units_desc: CS डिस्कव्हरीजचे प्रत्येक युनिट स्वतःहून वापरता
+    येऊ शकते ज्याचा पूर्व अनुभव आवश्यक नसतो, जे तुम्हाला तुमच्या वर्गासाठी योग्य युनिट्स
+    निवडण्याची परवानगी देते.
+  csd_page_courses_collections_desc: विशिष्ट विषयावर लक्ष केंद्रित केलेल्या युनिट्सच्या
+    संचासह एका क्षेत्रात खोलवर जा.
+  csd_page_faq_question_01: सीएस डिस्कव्हरीज मानकांनुसार मॅप केलेले आहेत का?
+  csd_page_faq_answer_01: सीएस डिस्कव्हरीज हे K-12 Framework for Computer Science
+    आणि 2017 CSTA मानके या दोन्हींचा वापर करून मार्गदर्शन म्हणून लिहिले होते. सध्या,
+    सीएस डिस्कव्हरीजमधील प्रत्येक धड्यामध्ये संबंधित 2017 CSTA मानकांचे मॅपिंग समाविष्ट
+    आहे. [मानक मॅपिंगचा सारांश येथे आढळू शकतो](%{mappings_url}). मानकांची Google शिट
+    आवृत्ती [CSD Standards](%{csd_standards_url}) येथे आढळू शकते.
+  csd_page_faq_question_02: या कोर्ससाठी मी व्यावसायिक विकास कसा/कोठे मिळवू शकतो?
+  csd_page_faq_answer_02: आमचा व्यावसायिक शिक्षण कार्यक्रम वर्षभर समर्थन पुरवतो. कार्यक्रमाची
+    सुरुवात पाच दिवसांच्या उन्हाळी कार्यशाळेने होते जिथे तुम्हाला अभ्यासक्रमासोबत
+    काम करण्याची आणि तुमच्या क्षेत्रातील इतर शिक्षकांना भेटण्याची संधी मिळेल. संपूर्ण
+    वर्षभर, आम्ही फॉलो-अप कार्यशाळा आणि मंच समर्थन प्रदान करतो. प्रारंभ करण्यासाठी
+    तुम्हाला कोणत्याही पूर्व संगणक विज्ञान अनुभवाची आवश्यकता नाही. आणि शिक्षकांना
+    ते आवडते! 90% लोकांनी यास आतापर्यंतचा सर्वोत्तम व्यवसाय विकास म्हणून रेट केले
+    आहे. [अर्ज करण्यासाठी येथे क्लिक करा आणि अधिक जाणून घ्या](%{apply_url}).
+  csd_page_faq_question_03: मी CS डिस्कव्हरीज शिकवत आहे पण माझ्या विद्यार्थ्यांसोबत
+    एकापेक्षा कमी सेमिस्टर आहे. आपण काय शिफारस कराल?
+  csd_page_faq_answer_03_01: ज्या शिक्षकांचे वेळापत्रक मर्यादित आहे, जे शाळेच्या वर्षभरात
+    CS डिस्कव्हरीजचे सर्व युनिट्स शिकवू शकत नाहीत, ते आता CS डिस्कव्हरीजच्या युनिट्सचा
+    विशिष्ट संच त्यांना कशावर लक्ष केंद्रित करायचे आहे यावर आधारित सहजपणे नियुक्त
+    करू शकतात. हे संग्रह अजूनही CS डिस्कव्हरीजमध्ये सापडलेल्या समान अचूक युनिट्स आहेत,
+    CS डिस्कव्हरीजच्या विशिष्ट क्षेत्रात खोलवर जाण्यासाठी खाली दिलेल्या आमच्या शिफारसींच्या
+    आधारे एकत्र गटबद्ध केले आहेत. प्रत्येक संग्रह अंदाजे एक सेमेस्टर किंवा एका सेमिस्टरपेक्षा
+    थोडा कमी असतो. [आमचे संग्रह पर्याय पाहण्यासाठी येथे क्लिक करा](%{collections_url}).
+  csd_page_faq_answer_03_02: ज्या शिक्षकांचे वेळापत्रक अधिक प्रतिबंधित आहे, त्यांच्याकडे
+    संपूर्ण अभ्यासक्रम नियुक्त न करता CS डिस्कव्हरीजमधून एकावेळी फक्त एक युनिट नियुक्त
+    करण्याची क्षमता आहे. आम्हाला आशा आहे की हे मोठ्या अभ्यासक्रमांचा भाग म्हणून किंवा
+    मर्यादित वेळापत्रकात संगणक विज्ञान शिकवताना एम्बेड केलेल्या CS डिस्कव्हरीजच्या
+    युनिट्सना शिकवणाऱ्या वर्गांना समर्थन देईल. [आमची लवचिक युनिट्स पाहण्यासाठी येथे
+    क्लिक करा](%).
+  csd_page_faq_question_04: सीएस डिस्कव्हरीजसाठी कोणती सामग्री आणि पुरवठा आवश्यक आहे?
+  csd_page_faq_answer_04_01: हा अभ्यासक्रम शिकवताना विचारात घेण्यासाठी एक संभाव्य
+    खर्च म्हणजे मुद्रण. अनेक धड्यांमध्ये हँडआउट्स असतात जे विद्यार्थ्यांना क्रियाकलापांद्वारे
+    मार्गदर्शन करण्यासाठी डिझाइन केलेले असतात. हे सर्व हँडआउट मुद्रित करणे आवश्यक
+    नसले तरी, अनेक मुद्रित करण्यासाठी डिझाइन केले होते आणि आम्ही शक्य असेल तेव्हा
+    मुद्रित करण्याची शिफारस करतो.
+  csd_page_faq_answer_04_02: 'छपाईच्या पलीकडे, काही धड्यांमध्ये ठराविक क्लासरूम पुरवठा
+    आणि फेरफार आवश्यक असतात जसे की: विद्यार्थ्यांची जर्नल्स, पोस्टर पेपर, मार्कर/रंगीत
+    पेन्सिल, कात्री, स्क्रॅप पेपर, गोंद किंवा टेप, पोस्ट-इट नोट्स किंवा इंडेक्स कार्ड्स
+    (किंवा समान आकाराचे स्क्रॅप पेपर), आणि शासक किंवा काही प्रकारची सरळ किनार.'
+  csd_page_faq_answer_04_03: 'त्या सामान्य अभ्यासक्रम सामग्री व्यतिरिक्त, खालील बाबी
+    विशिष्ट युनिट्समध्ये मागविल्या जातात:'
+  csd_page_faq_answer_04_04: 'समस्या सोडवणे आणि कम्प्युटिंग '
+  csd_page_faq_answer_04_05: अॅल्युमिनियम फॉइल, पाण्यासाठी कंटेनर, पेनीज (लक्षात ठेवा
+    की पेनी समान आकाराच्या इतर प्रकारच्या वजनाने बदलल्या जाऊ शकतात). जर तुम्हाला या
+    पुरवठ्यांमध्ये प्रवेश नसेल तर पर्यायी उपक्रम उपलब्ध आहेत.
+  csd_page_faq_answer_04_06: उपकरणांसह अॅप्स तयार करणे (पर्याय A आणि पर्याय B)
+  csd_page_faq_answer_04_07: 'पर्याय A: सर्किट प्लेग्राउंड्सचा वर्ग संच. अधिक तपशीलांसाठी
+    [code.org/maker/circuitplayground](%{url}) पहा.'
+  csd_page_faq_answer_04_08: 'पर्याय बी: मायक्रो:बिट उपकरणांचा वर्ग संच. अधिक तपशीलांसाठी
+    [code.org/maker/microbit](%{url}) पहा.'
+  csd_page_faq_answer_04_09: मेकर सप्लाइज, जसे की रिकामे टिश्यू बॉक्स किंवा पुठ्ठा
+    रोल किंवा स्क्रॅच पेपर
+  csd_page_faq_answer_04_10: "*टीप: डिव्हाइसेससह अॅप्स तयार करण्यासाठी दोन अंमलबजावणी
+    पर्याय आहेत - एक सर्किट खेळाचे मैदान वापरणाऱ्यांसाठी आणि दुसरा मायक्रो:बिट वापरणाऱ्यांसाठी.
+    शिक्षकांनी उपकरणांचे दोन्ही संच विकत घेऊ नये किंवा दोन्ही युनिट पर्याय शिकवू नये
+    कारण ते समतुल्य आहेत आणि समान सामग्री कव्हर करू शकतात."
+  csd_page_faq_question_06: CS डिस्कव्हरीज इतर Code.org अभ्यासक्रमांशी कसे जुळतात?
+  csd_page_faq_answer_06_01: CS डिस्कव्हरीज हे आमच्या [CS Fundamentals](%{csf_url})
+    अभ्यासक्रम आणि आमच्या [CS तत्त्वे](%{csp_url}) कोर्समध्ये नैसर्गिकरित्या बसण्यासाठी
+    डिझाइन केलेले आहे. यातील प्रत्येक अभ्यासक्रम हा संगणक शास्त्रासाठी वयोमानानुसार
+    प्रवेश बिंदू म्हणून डिझाइन केलेला असताना, पूर्वीचा अनुभव असलेल्या विद्यार्थ्यांना
+    अनेक नवीन विषय एक्सप्लोर करण्यासाठी सापडतील आणि ते कादंबरीतील आणि अधिक आव्हानात्मक
+    संदर्भांमध्ये परिचित विषयांची पुनरावृत्ती करतील.
+  csc_page_top_desc: संगणक विज्ञान (CS) आणि इतर विषय जसे की गणित, भाषा कला, विज्ञान
+    आणि सामाजिक अभ्यास यांच्यात संबंध निर्माण करा.
+  csc_page_intro_heading: मुख्य विषयाच्या मानकांचा समावेश करताना CS शिकवा
+  csc_page_intro_list_01: इतर विषयांमध्ये सीएसचा समावेश करा
+  csc_page_intro_list_02: इतर विषयांमध्ये शिकण्यास बळकट करा
+  csc_page_intro_list_03: मुख्य विषय मानकांची पूर्तता
+  csc_page_intro_list_04: विद्यार्थ्यांना संगणक शास्त्र शिकविण्याचा मजेदार मार्ग
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: Easy for any teacher with any background
-  csc_page_curriculum_glance_topics: Interdisciplinary
-  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
-  csc_page_curriculum_glance_tools: Sprite Lab
-  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_intro_list_06: कोणत्याही पार्श्वभूमी असलेल्या कोणत्याही शिक्षकासाठी सोपे
+  csc_page_curriculum_glance_topics: आंतरशाखीय
+  csc_page_curriculum_glance_devices: लॅपटॉप, क्रोमबुक, टॅब्लेट
+  csc_page_curriculum_glance_tools: स्प्राइट लॅब
+  csc_page_curriculum_glance_professional_learning: सेल्फ-पेस्ड मॉड्यूल्स
   csc_page_curriculum_glance_professional_languages: मराठी
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: I greatly appreciate how thorough and well paced the lessons are.
-    I am not familiar with computer science, but with the lessons you provide I feel
-    confident in helping my students grasp the concepts and tie them into our curriculum.
-  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
-    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
-    day.
-  csc_page_faq_question_01: Is CS Connections mapped to standards?
-  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
-    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
-    Computer Science Teacher Association Standards (CSTA).
-  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_quote: धडे किती सखोल आणि चांगले आहेत याचे मला खरोखर कौतुक वाटते. मी संगणक
+    शास्त्राशी परिचित नाही, परंतु तुम्ही दिलेल्या धड्यांमुळे माझ्या विद्यार्थ्यांना
+    संकल्पना समजून घेण्यात आणि त्यांना आमच्या अभ्यासक्रमात समाविष्ट करण्यात मदत करण्यात
+    मला आत्मविश्वास वाटतो.
+  csc_page_find_a_module_desc: आमची सध्याची CS कनेक्शन ऑफरिंग 3री ते 5वी इयत्तेसाठी
+    आहे आणि दररोज 1 आठवडा 45-मिनिटांचे धडे घेण्यासाठी डिझाइन केलेले आहेत.
+  csc_page_faq_question_01: CS कनेक्शन मानकांशी मॅप केलेले आहेत का?
+  csc_page_faq_answer_01: होय! CS कनेक्शन्स ELA आणि गणित, नेक्स्ट जनरेशन सायन्स स्टँडर्ड्स
+    (NGSS) आणि कॉम्प्युटर सायन्स टीचर असोसिएशन स्टँडर्ड्स (CSTA) साठी कॉमन कोर स्टेट
+    स्टँडर्ड्स (CCSS) वर मॅप केले जातात.
+  csc_page_faq_question_02: CS कनेक्शन शिकवण्यासाठी किती खर्च येतो?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
-  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
-    Through reading, viewing videos, completing interactive puzzles, and reflecting
-    on your learning, you will develop your own understanding while preparing to teach
-    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
-    coming soon!
-  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
-  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
-  csc_page_faq_question_05: What materials do I need for CS Connections?
-  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
-    will have a projector to display the slideshow that corresponds with each lesson.
-  csf_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world.
-  csf_page_intro_heading: Free, and fun, elementary courses for each grade
-  csf_page_intro_list_01: Six courses, one for each elementary grade
-  csf_page_intro_list_02: Equitable introductory CS courses
-  csf_page_intro_list_03: Use the same course for all students in the same grade,
-    regardless of their experience
-  csf_page_intro_list_04: All courses make suitable entry points for students
-  csf_page_quote: I've been teaching the course since the Monday after the workshop.
-    The students and I LOVE it (and so do their classroom teachers!!!)
-  csf_page_curriculum_glance_topics: Programming, Internet, Games and Animation, Art
-    and Design, App Design
-  csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
-  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csc_page_faq_question_03: मी CS कनेक्शनसाठी व्यावसायिक विकास कसा/कोठे मिळवू शकतो?
+  csc_page_faq_answer_03: आम्ही CS कनेक्शनसाठी सेल्फ पेस्ड व्यावसायिक विकास ऑफर करतो.
+    वाचन, व्हिडिओ पाहणे, परस्परसंवादी कोडी पूर्ण करणे आणि आपल्या शिकण्यावर प्रतिबिंबित
+    करून, आपण आपल्या वर्गात कोणतेही CS कनेक्शन मॉड्यूल शिकवण्याची तयारी करता तेव्हा
+    आपली समज विकसित होईल. [येथे प्रारंभ करा](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: सीएस कनेक्शन्ससाठी व्यावसायिक शिक्षण लवकरच येत
+    आहे!
+  csc_page_faq_question_04: सीएस कनेक्शन शिकवण्यासाठी शिफारस केलेली वेळ काय आहे?
+  csc_page_faq_answer_04: प्रत्येक CS कनेक्शन मॉड्यूलला एक आठवडा लागण्यासाठी डिझाइन
+    केले आहे.
+  csc_page_faq_question_05: CS कनेक्शनसाठी मला कोणती सामग्री आवश्यक आहे?
+  csc_page_faq_answer_05: आदर्शपणे, प्रत्येक विद्यार्थ्याचा स्वतःचा संगणक असेल आणि
+    प्रत्येक धड्याशी संबंधित स्लाइड शो प्रदर्शित करण्यासाठी शिक्षकांकडे प्रोजेक्टर
+    असेल.
+  csf_page_top_desc: मोफत वर्षभराचा कोर्स जो विद्यार्थ्यांना संगणक विज्ञानाच्या मूलभूत
+    संकल्पनांचा परिचय करून देतो आणि संगणक आणि तंत्रज्ञान जगावर कसा प्रभाव टाकू शकतो
+    हे शोधण्यासाठी त्यांना आव्हान देतो.
+  csf_page_intro_heading: प्रत्येक इयत्तेसाठी विनामूल्य, आणि मजेदार, प्राथमिक अभ्यासक्रम
+  csf_page_intro_list_01: सहा अभ्यासक्रम, प्रत्येक प्राथमिक इयत्तेसाठी एक
+  csf_page_intro_list_02: न्याय्य प्रास्ताविक सीएस कोर्स
+  csf_page_intro_list_03: अनुभवाची पर्वा न करता एकाच वर्गातील सर्व विद्यार्थ्यांसाठी
+    समान अभ्यासक्रम वापरा
+  csf_page_intro_list_04: सर्व अभ्यासक्रम विद्यार्थ्यांसाठी योग्य एंट्री पॉइंट्स बनवतात
+  csf_page_quote: कार्यशाळेनंतर सोमवारपासून मी अभ्यासक्रम शिकवत आहे. विद्यार्थ्यांना
+    आणि मला ते आवडते (आणि त्यांच्या वर्गातील शिक्षकांनाही ते आवडते!!!)
+  csf_page_curriculum_glance_topics: प्रोग्रामिंग, इंटरनेट, गेम्स आणि अॅनिमेशन, आर्ट
+    अँड डिझाईन, अॅप डिझाइन
+  csf_page_curriculum_glance_devices: लॅपटॉप, क्रोमबुक, टॅब्लेट
+  csf_page_curriculum_glance_tools: स्प्राइट लॅब, प्ले लॅब
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: Arabic, Bahasa Indonesian, Catalán, Chinese
-    Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese,
-    Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian,
-    Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES,
-    Uzbek, Vietnamese
+  csf_page_curriculum_glance_languages: अरबी, बहासा इंडोनेशियन, कॅटलान, चायनीज सरलीकृत,
+    चायनीज पारंपारिक, चेक, फ्रेंच, जर्मन, हिंदी, इटालियन, जपानी, कोरियन, कन्नड, मलय,
+    मराठी, मंगोलियन, पोलिश, पोर्तुगीज-बीआर, रोमानियन, रशियन, स्लोव्हाक, टागालॉग, तमिळ
+    , थाई, तुर्की, युक्रेनियन, स्पॅनिश लॅटम, उर्दू, स्पॅनिश-ईएस, उझबेक, व्हिएतनामी
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: Picking the right CS Fundamentals course for your
-    classroom
-  csf_page_pick_a_course_desc: With the diverse set of options offered for CS Fundamentals,
-    there is a course for all different needs.
-  csf_page_pick_a_course_heading_02: How will your students engage with the content?
-  csf_page_courses_heading: Courses specifically designed for your elementary classroom
-  csf_page_courses_desc: Find the course for the grade you teach. Each course is approximately
-    a month long.
-  csf_page_courses_self_paced_heading: Self-paced elementary curriculums
-  csf_page_courses_self_paced_desc: Teachers play a critical role in student learning
-    by teaching our unplugged activities and leading whole class discussions, however,
-    we recognize that CS Fundamentals isn't always taught in a traditional classroom
-    setting. We provide two self-paced express courses alongside Courses A-F. These
-    express courses are designed for situations where teachers allow each student
-    to work at their own pace independently.
-  csf_page_faq_question_01: Is CS Fundamentals mapped to standards?
-  csf_page_faq_answer_01_01: 'CS Fundamentals was written using both the K-12 Framework
-    for Computer Science and the CSTA standards as guidance. Currently, every lesson
-    in CS Fundamentals contains mappings to the relevant CSTA standards. The summary
-    of all CSTA mappings for each course can be found at:'
-  csf_page_faq_answer_01_list_01: "[Course A Standards](%{course_a_url})"
-  csf_page_faq_answer_01_list_02: "[Course B Standards](%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[Course C Standards](%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[Course D Standards](%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[Course E Standards](%{course_e_url})"
-  csf_page_faq_answer_01_list_06: "[Course F Standards](%{course_f_url})"
-  csf_page_faq_answer_01_02: A Google Sheets version of the standards can be found
-    at [CSF Standards](%{csf_standards_url}).
-  csf_page_faq_question_02: How can I bring CS Fundamentals to my whole school?
-  csf_page_faq_answer_02: The leading K-12 CS curriculum in the United States, our
-    elementary program has been proven effective in major urban school districts like
-    Dallas, as well as small rural districts in Iowa. There is no need to hire specialists
-    to teach CS. Our program is uniquely designed to support teachers new to CS while
-    offering the flexibility to evolve lessons to fit student needs. [Share this brochure](%{brochure_url})
-    with your school and district administrators, or [suggest they take a look at
-    our administrators page](%{admins_url}) specially designed to answer administrators'
-    most common questions.
-  csf_page_faq_question_03: How much does it cost to teach CS Fundamentals?
-  csf_page_faq_question_04: How/Where can I get professional development for CS Fundamentals?
-  csf_page_faq_answer_04_01: New to teaching computer science? No worries! Most of
-    our teachers have never taught computer science before. Join local teachers for
-    inspiring and hands-on support to implement computer science in your classroom.
-    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
-    teachers or for schoolwide PD. [Sign up for a professional development workshop
-    near you](%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
-  csf_page_faq_question_05: What is the recommended timing for teaching CS Fundamentals?
-  csf_page_faq_answer_05: Each CSF course includes 13-17 lessons designed for 45-minute
-    periods. We recommend all students move from lesson to lesson at a pace set by
-    the teacher. There are many teacher-led project levels designed to be experienced
-    in unison while the skill-building lessons can be completed by students at their
-    own pace.
-  csf_page_faq_question_06: What materials do I need for CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_pick_a_course_heading: तुमच्या वर्गासाठी योग्य सीएस फंडामेंटल्स कोर्स निवडणे
+  csf_page_pick_a_course_desc: सीएस फंडामेंटल्ससाठी ऑफर केलेल्या विविध पर्यायांसह,
+    सर्व वेगवेगळ्या गरजांसाठी एक कोर्स आहे.
+  csf_page_pick_a_course_heading_02: आपले विद्यार्थी सामग्रीमध्ये कसे व्यस्त राहतील?
+  csf_page_courses_heading: 'विशेषत: तुमच्या प्राथमिक वर्गासाठी डिझाइन केलेले अभ्यासक्रम'
+  csf_page_courses_desc: तुम्ही शिकवत असलेल्या इयत्तेचा अभ्यासक्रम शोधा. प्रत्येक
+    कोर्स अंदाजे एक महिन्याचा आहे.
+  csf_page_courses_self_paced_heading: सेल्फ पेस्ड प्राथमिक अभ्यासक्रम
+  csf_page_courses_self_paced_desc: 'आमच्या अनप्लग्ड अ‍ॅक्टिव्हिटी शिकवून आणि संपूर्ण
+    वर्गातील चर्चेचे नेतृत्व करून शिक्षक विद्यार्थ्यांच्या शिक्षणात महत्त्वाची भूमिका
+    बजावतात, तथापि, आम्ही ओळखतो की CS मूलभूत गोष्टी नेहमी पारंपारिक वर्ग सेटिंगमध्ये
+    शिकवल्या जात नाहीत. आम्ही A-F तसेच दोन सेल्फ पेस्ड  एक्सप्रेस कोर्सेस ऑफर करतो.
+    हे एक्स्प्रेस कोर्स अशा परिस्थितींसाठी डिझाइन केले आहेत जिथे शिक्षक प्रत्येक विद्यार्थ्याला
+    त्यांच्या स्वत: च्या गतीने स्वतंत्रपणे काम करण्याची परवानगी देतात.'
+  csf_page_faq_question_01: सीएस फंडामेंटल्स स्टँडर्ड्समध्ये मॅप केलेले आहेत का?
+  csf_page_faq_answer_01_01: 'CS फंडामेंटल्स हे दोन्ही K-12 फ्रेमवर्क फॉर कॉम्प्युटर
+    सायन्स आणि CSTA मानके या दोन्हींचा वापर करून लिहीले गेले. सध्या, CS फंडामेंटल्समधील
+    प्रत्येक धड्यात संबंधित CSTA मानकांचे मॅपिंग समाविष्ट आहे. प्रत्येक अभ्यासक्रमासाठीच्या
+    सर्व CSTA मॅपिंगचा सारांश येथे आढळू शकतो:'
+  csf_page_faq_answer_01_list_01: "[अभ्यासक्रम A इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[अभ्यासक्रम B इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_list_03: "[अभ्यासक्रम C इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_list_04: "[अभ्यासक्रम D इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_list_05: "[अभ्यासक्रम E इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_list_06: "[अभ्यासक्रम F इयत्ता] (%{course_a_url})"
+  csf_page_faq_answer_01_02: इयत्तेची गुगल शीट आवृत्ती [CSF इयत्ता](%{csf_standards_url})
+    येथे आढळू शकते.
+  csf_page_faq_question_02: मी माझ्या संपूर्ण शाळेत CS फंडामेंटल्स कसे आणू शकतो?
+  csf_page_faq_answer_02: युनायटेड स्टेट्समधील अग्रगण्य K-12 CS अभ्यासक्रम, आमचा प्राथमिक
+    कार्यक्रम डॅलस सारख्या प्रमुख शहरी शाळा जिल्ह्यांमध्ये तसेच आयोवामधील लहान ग्रामीण
+    जिल्ह्यांमध्ये प्रभावी सिद्ध झाला आहे. सीएस शिकवण्यासाठी तज्ञांची नेमणूक करण्याची
+    गरज नाही. विद्यार्थ्यांच्या गरजा पूर्ण करण्यासाठी धडे विकसित करण्याची लवचिकता
+    प्रदान करताना आमचा कार्यक्रम CS मध्ये नवीन असलेल्या शिक्षकांना समर्थन देण्यासाठी
+    अद्वितीयपणे डिझाइन केला आहे. [हे माहितीपत्रक](%{brochure_url}) तुमच्या शाळा आणि
+    जिल्हा प्रशासकांसह सामायिक करा किंवा [त्यांना सुचवा की आमचे प्रशासक पृष्ठ पहा](%{admins_url})
+    विशेषतः प्रशासकांच्या सर्वात सामान्य प्रश्नांची उत्तरे देण्यासाठी डिझाइन केलेले
+    आहे.
+  csf_page_faq_question_03: CS फंडामेंटल्स शिकवण्यासाठी किती खर्च येतो?
+  csf_page_faq_question_04: CS फंडामेंटल्ससाठी मला व्यावसायिक विकास कसा/कोठे मिळेल?
+  csf_page_faq_answer_04_01: संगणक विज्ञान शिकवण्यासाठी नवीन? काळजी करू नका! आमच्या
+    बहुतेक शिक्षकांनी याआधी संगणक विज्ञान शिकवले नाही. तुमच्या वर्गात संगणक विज्ञानाची
+    अंमलबजावणी करण्यासाठी प्रेरणादायी आणि मदतीसाठी स्थानिक शिक्षकांशी संपर्क साधा
+    आमचे प्रादेशिक भागीदार वैयक्तिक शिक्षकांसाठी किंवा संपूर्ण शालेय पीडीसाठी उच्च-गुणवत्तेच्या,
+    एक दिवसीय Code.org कार्यशाळा ऑफर करतात. [तुमच्या जवळ असलेल्या व्यावसायिक विकास
+    कार्यशाळेसाठी साइन अप करा](%{sign_up_url})!
+  csf_page_faq_answer_04_02: आमच्या कार्यशाळांमध्ये सहभागी झालेल्या 100,000 हून अधिक
+    शिक्षकांमध्ये सामील व्हा. आमच्या कार्यशाळेतील बहुसंख्य उपस्थितांचे म्हणणे आहे
+    की, 'मी आतापर्यंत घेतलेला हा सर्वोत्कृष्ट व्यावसायिक विकास आहे.' खरं तर, [90%
+    उपस्थित लोक आमच्या कार्यक्रमाची शिफारस इतर शिक्षकांना करतील](%{rec_url})!
+  csf_page_faq_question_05: सीएस फंडामेंटल्स शिकवण्यासाठी शिफारस केलेली वेळ काय आहे?
+  csf_page_faq_answer_05: प्रत्येक CSF कोर्समध्ये 45-मिनिटांच्या कालावधीसाठी डिझाइन
+    केलेले 13-17 धडे समाविष्ट आहेत. आम्ही शिफारस करतो की सर्व विद्यार्थ्यांना शिक्षकाने
+    सेट केलेल्या गतीने धड्यातून धड्याकडे जावे. शिक्षकांच्या नेतृत्वाखालील अनेक प्रकल्प
+    स्तर एकसंधपणे अनुभवण्यासाठी डिझाइन केलेले आहेत तर कौशल्य-निर्मितीचे धडे विद्यार्थी
+    स्वतःच्या गतीने पूर्ण करू शकतात.
+  csf_page_faq_question_06: CS फंडामेंटल्ससाठी मला कोणती सामग्री हवी आहे?
+  csf_page_faq_answer_06: अनेक धड्यांमध्ये हँडआउट्स असतात जे विद्यार्थ्यांना क्रियाकलापांद्वारे
+    मार्गदर्शन करतात. ही संसाधने मुद्रित केली जाऊ शकतात किंवा डिजिटल पद्धतीने नियुक्त
+    केली जाऊ शकतात. काही धड्यांमध्ये ठराविक क्लासरूम पुरवठा आणि फेरफार करणे आवश्यक
+    आहे. [अधिक जाणून घेण्यासाठी CSF अभ्यासक्रमाला भेट द्या](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1397,7 +1543,7 @@ mr:
   csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csa_page_curriculum_glance_devices: Laptop, Chromebook
-  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_tools: जावा लॅब
   csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
   csa_page_curriculum_glance_languages: मराठी
   csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
@@ -1468,7 +1614,7 @@ mr:
     एपिसोडद्वारे घरीच शिकणे सुरू ठेवा.
   hoc_live_join_us: आमच्यात सामील व्हा
   hoc_live_learn_more: अधिक जाणून घ्या
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   hoc_overview_oceans_tutorial_desc: कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग
     डेटा आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी
     AI चा कसा वापर करता येईल, हे शिका.
@@ -1595,6 +1741,7 @@ mr:
   not_found_desc: पाहिजे असलेला पेज सापडला नाही
   not_found_instructions: वेब पत्ता तपासून पहा आणि पुन्हा सबमिट करा किंवा खालील यादीपैकी
     एक लिंक निवडा.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1647,6 +1794,7 @@ mr:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1668,6 +1816,7 @@ mr:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -1899,6 +2048,7 @@ mr:
   signup_submit_census_error_message: आम्ही दिलगीर आहोत. एक समस्या आली. कृपया फॉर्म
     पुन्हा सबमिट करण्याचा प्रयत्न करा.
   signup_submit_label: साइन अप करा
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: एक समस्या आली. कृपया पाहून घ्या की सर्व आवश्यक फील्ड
     नीट भरलेल्या आहेत.
   signup_submit_and_continue_label: पाठवा आणि सुरू ठेवा
@@ -2374,8 +2524,8 @@ mr:
     किंवा <a id=''teacher_banner_howto''>"कसे करावे” मार्गदर्शिका वाचा</a>'
   learn_banner_teachers_markdown: 'शिक्षक: [तास होस्ट करा](%{host_url}) किंवा [कसा
     करावा मार्गदर्शिका वाचा](%{howto_url})'
-  tutorial_dance2019_name: Dance Party
-  tutorial_danceparty_name: Dance Party
+  tutorial_dance2019_name: डान्स पार्टी
+  tutorial_danceparty_name: डान्स पार्टी
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 'तुमचा स्वत: चा क्रीडा प्रकार प्रोग्राम करा'
   tutorial_moana_name: 'Moana: Wayfinding with Code'
@@ -2390,7 +2540,7 @@ mr:
   tutorial_frzn_name: अॅना आणि एल्सा बरोबर प्रोग्रामिंग करा
   tutorial_cocom_name: 'CodeCombat: Escape the Dungeon!'
   tutorial_play-lab_name: खेळ प्रयोगशाळा
-  tutorial_boxisland_name: Box Island
+  tutorial_boxisland_name: बॉक्स आयलंड
   tutorial_textcomp_name: लेख संकुचन
   tutorial_encryption_name: सुलभ कुटबद्धीकरण (एनक्रीप्शन)
   tutorial_kanopixel_name: Kano Pixel Hack
@@ -2514,7 +2664,7 @@ mr:
   tutorial_fufafit_name: fuzzFamily Fitness
   tutorial_ozodance_name: Ozobot Dance-Off
   tutorial_codingrobotics_name: Intro to Coding through Robotics (ft. Wonder Workshop)
-  tutorial_box_name: Box Island
+  tutorial_box_name: बॉक्स आयलंड
   tutorial_hopgame_name: Hopscotch Game Design Workshop
   tutorial_icontrol_name: iControl
   tutorial_cocomteach_name: 'CodeCombat: Teacher-Led Activities'
@@ -2522,7 +2672,7 @@ mr:
   tutorial_bbcphys_name: Bitsbox Coding + Physics
   tutorial_bitsbox_name: Build Crazy Apps with Bitsbox
   tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: Conditionals with Cards
+  tutorial_crd_name: कार्ड्सबरोबर कंडीशनल्स
   tutorial_bbcbio_name: Bitsbox Coding + Biology
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Grok Learning
@@ -2732,7 +2882,7 @@ mr:
   tutorial_ozoprogram_name: How to Program Robots
   tutorial_ozopair_name: Pair Programming with Ozobot
   tutorial_codesnoopy_name: Snoopy Snow Brawl
-  tutorial_applabintro_name: Intro to App Lab
+  tutorial_applabintro_name: अॅप लॅबची ओळख
   tutorial_cslartist_name: The Little Artist In Your Computer Activity Pack
   tutorial_cslscratchjr_name: Let's Play with the ScratchJr Kitten! Activity Pack
   tutorial_floevents_name: Writing and interpreting Events
@@ -2943,7 +3093,7 @@ mr:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Play, Design, & Code with MakeCode Arcade
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Discover Python with Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
@@ -2962,7 +3112,7 @@ mr:
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: Facetracker
   tutorial_educodemaze_name: Design Your Own Maze!
   tutorial_educoderace_name: Code your own racing game!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
@@ -3062,7 +3212,8 @@ mr:
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: बास्केटबॉलचा खेळ किंवा विविध खेळांची सरमिसळ यापैकी
@@ -4226,10 +4377,11 @@ mr:
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: बास्केटबॉलचा खेळ किंवा विविध खेळांची सरमिसळ यापैकी
@@ -7036,7 +7188,7 @@ mr:
   tutorial_athlete_string_detail_grades: पातळी २+
   tutorial_moana_string_detail_grades: पातळी २+
   tutorial_star-wars_string_detail_grades: पातळी २+
-  tutorial_gumadventure_string_detail_grades: Grades 6-8
+  tutorial_gumadventure_string_detail_grades: इयत्ता 6-8
   tutorial_mchoc_string_detail_grades: पातळी २+
   tutorial_vidnews_string_detail_grades: Grades 6+
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
@@ -7073,7 +7225,7 @@ mr:
   tutorial_art_string_detail_grades: पातळी २+
   tutorial_tynkerbrick_string_detail_grades: पातळी २+
   tutorial_itchbio_string_detail_grades: Grades 6+
-  tutorial_itchj_string_detail_grades: Grades 6-8
+  tutorial_itchj_string_detail_grades: इयत्ता 6-8
   tutorial_tickleo_string_detail_grades: पातळी २+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
   tutorial_tynkermult_string_detail_grades: Grades 2-8
@@ -7095,12 +7247,12 @@ mr:
   tutorial_tynkercm_string_detail_grades: पातळी २+
   tutorial_codesterswintergreet_string_detail_grades: पातळी २+
   tutorial_codestersc_string_detail_grades: Grades 6+
-  tutorial_codestersturtle_string_detail_grades: Grades 6-8
+  tutorial_codestersturtle_string_detail_grades: इयत्ता 6-8
   tutorial_penjee_string_detail_grades: Grades 6+
   tutorial_trinket_string_detail_grades: पातळी २+
   tutorial_frogger_string_detail_grades: Grades 6+
   tutorial_tynkereco_string_detail_grades: Grades 2-8
-  tutorial_mitedarc_string_detail_grades: Grades 6-8
+  tutorial_mitedarc_string_detail_grades: इयत्ता 6-8
   tutorial_khan_string_detail_grades: Grades 6+
   tutorial_tynkerd_string_detail_grades: Grades 6+
   tutorial_cdmy_string_detail_grades: पातळी ९+
@@ -7114,33 +7266,33 @@ mr:
   tutorial_capost_string_detail_grades: Grades 6+
   tutorial_marco_string_detail_grades: Grades 2-8
   tutorial_codestersflappybike_string_detail_grades: Grades 6+
-  tutorial_kanopong_string_detail_grades: Grades 6-8
+  tutorial_kanopong_string_detail_grades: इयत्ता 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: दाखवू नये
   tutorial_tynkercc_string_detail_grades: Grades 6+
   tutorial_bamboo_string_detail_grades: Grades 2-5
   tutorial_robojav_string_detail_grades: Grades 6+
   tutorial_roboba_string_detail_grades: Grades 6+
-  tutorial_knodsnake_string_detail_grades: Grades 6-8
+  tutorial_knodsnake_string_detail_grades: इयत्ता 6-8
   tutorial_soccharater_string_detail_grades: Grades 6+
   tutorial_silent_string_detail_grades: Grades 6+
   tutorial_robomesh_string_detail_grades: पातळी २+
   tutorial_amaze_string_detail_grades: पातळी २+
   tutorial_codestersds_string_detail_grades: पातळी २+
-  tutorial_knodtext_string_detail_grades: Grades 6-8
+  tutorial_knodtext_string_detail_grades: इयत्ता 6-8
   tutorial_alicegar_string_detail_grades: Grades 6+
   tutorial_codesterstransform_string_detail_grades: Grades 6+
   tutorial_flexfrog_string_detail_grades: Grades 6+
   tutorial_codemoji_string_detail_grades: दाखवू नये
   tutorial_robobii_string_detail_grades: Grades 6+
-  tutorial_robobm_string_detail_grades: Grades 6-8
+  tutorial_robobm_string_detail_grades: इयत्ता 6-8
   tutorial_codingrobots_string_detail_grades: पातळी २+
   tutorial_robob_string_detail_grades: Grades 6+
   tutorial_coders_string_detail_grades: पातळी ९+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
   tutorial_caphoto_string_detail_grades: Grades 6+
-  tutorial_mozillahw_string_detail_grades: Grades 6-8
+  tutorial_mozillahw_string_detail_grades: इयत्ता 6-8
   tutorial_ticklep_string_detail_grades: दाखवू नये
   tutorial_bbot_string_detail_grades: पातळी २+
   tutorial_scratchg_string_detail_grades: Grades 6+
@@ -7177,21 +7329,21 @@ mr:
   tutorial_bbcphys_string_detail_grades: दाखवू नये
   tutorial_bitsbox_string_detail_grades: Grades 2-8
   tutorial_tlcemo_string_detail_grades: Grades 2-8
-  tutorial_crd_string_detail_grades: Grades 6-8
+  tutorial_crd_string_detail_grades: इयत्ता 6-8
   tutorial_bbcbio_string_detail_grades: दाखवू नये
   tutorial_ticklebb8_string_detail_grades: पातळी २+
   tutorial_grok_string_detail_grades: दाखवू नये
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: दाखवू नये
-  tutorial_secretcodes_string_detail_grades: Grades 6-8
+  tutorial_secretcodes_string_detail_grades: इयत्ता 6-8
   tutorial_tlchex_string_detail_grades: Grades 6+
   tutorial_tickles_string_detail_grades: पातळी २+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: पातळी २+
   tutorial_tlcbrain_string_detail_grades: Grades 6+
-  tutorial_hopquiz_string_detail_grades: Grades 6-8
+  tutorial_hopquiz_string_detail_grades: इयत्ता 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
-  tutorial_cha_string_detail_grades: Grades 6-8
+  tutorial_cha_string_detail_grades: इयत्ता 6-8
   tutorial_elaseq_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcmathi_string_detail_grades: दाखवू नये
   tutorial_tlcpixel_string_detail_grades: Grades 2-8
@@ -7311,13 +7463,13 @@ mr:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 3-5
+  tutorial_cmdodo_string_detail_grades: इयत्ता 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: पातळी ९+
   tutorial_raspipong_string_detail_grades: पातळी ९+
   tutorial_codehsvr_string_detail_grades: Grades 6+
-  tutorial_codesterstp_string_detail_grades: Grades 6-8
-  tutorial_codestersbb_string_detail_grades: Grades 6-8
+  tutorial_codesterstp_string_detail_grades: इयत्ता 6-8
+  tutorial_codestersbb_string_detail_grades: इयत्ता 6-8
   tutorial_gfcrossyroad_string_detail_grades: पातळी ९+
   tutorial_googleww_string_detail_grades: पातळी ९+
   tutorial_codehsjsapp_string_detail_grades: Grades 6+
@@ -7329,8 +7481,8 @@ mr:
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
   tutorial_codecar_string_detail_grades: Grades 6+
-  tutorial_codesterscp_string_detail_grades: Grades 6-8
-  tutorial_grokpetblock_string_detail_grades: Grades 6-8
+  tutorial_codesterscp_string_detail_grades: इयत्ता 6-8
+  tutorial_grokpetblock_string_detail_grades: इयत्ता 6-8
   tutorial_techbim_string_detail_grades: University
   tutorial_techfpp_string_detail_grades: University
   tutorial_codesterscr_string_detail_grades: Grades 2-8
@@ -7360,7 +7512,7 @@ mr:
   tutorial_gpbcatapult_string_detail_grades: Grades 6+
   tutorial_quorumastro_string_detail_grades: Grades 6+
   tutorial_alicewonder_string_detail_grades: Grades 2-5
-  tutorial_rginter_string_detail_grades: Grades 6-8
+  tutorial_rginter_string_detail_grades: इयत्ता 6-8
   tutorial_cssgrid_string_detail_grades: Grades 6+
   tutorial_jshero_string_detail_grades: पातळी ९+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
@@ -7368,7 +7520,7 @@ mr:
   tutorial_gpbcircle_string_detail_grades: Grades 6+
   tutorial_gpbpaint_string_detail_grades: Grades 6+
   tutorial_cocomarcade_string_detail_grades: Grades 6+
-  tutorial_beetik_string_detail_grades: Grades 6-8
+  tutorial_beetik_string_detail_grades: इयत्ता 6-8
   tutorial_codedj_string_detail_grades: Grades 6+
   tutorial_rgadvan_string_detail_grades: Grades 6+
   tutorial_codehsrn_string_detail_grades: पातळी ९+
@@ -7400,7 +7552,7 @@ mr:
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
   tutorial_kodpizza_string_detail_grades: Grades 2-5
   tutorial_kodwomen_string_detail_grades: Grades 2-8
-  tutorial_tfunplug_string_detail_grades: Grades 6-8
+  tutorial_tfunplug_string_detail_grades: इयत्ता 6-8
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: पातळी २+
@@ -7424,9 +7576,9 @@ mr:
   tutorial_legodetect_string_detail_grades: Grades 6+
   tutorial_legolight_string_detail_grades: Grades 6+
   tutorial_alexa_string_detail_grades: पातळी ९+
-  tutorial_grokpetmicro_string_detail_grades: Grades 6-8
+  tutorial_grokpetmicro_string_detail_grades: इयत्ता 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
-  tutorial_cadj_string_detail_grades: Grades 6-8
+  tutorial_cadj_string_detail_grades: इयत्ता 6-8
   tutorial_cacrazy_string_detail_grades: Grades 2-8
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
@@ -7456,8 +7608,8 @@ mr:
   tutorial_blockscadclock_string_detail_grades: पातळी ९+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
   tutorial_blockscadicecream_string_detail_grades: Grades 6+
-  tutorial_blockscadpizza_string_detail_grades: Grades 6-8
-  tutorial_blockscadsugar_string_detail_grades: Grades 6-8
+  tutorial_blockscadpizza_string_detail_grades: इयत्ता 6-8
+  tutorial_blockscadsugar_string_detail_grades: इयत्ता 6-8
   tutorial_bsgridlight_string_detail_grades: पातळी २+
   tutorial_bpartscratch_string_detail_grades: Grades 6+
   tutorial_bpartvid_string_detail_grades: Grades 6+
@@ -7468,11 +7620,11 @@ mr:
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
   tutorial_bpmathvid_string_detail_grades: Grades 6+
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
-  tutorial_bpmlkvid_string_detail_grades: Grades 6-8
+  tutorial_bpmlkvid_string_detail_grades: इयत्ता 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
-  tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
+  tutorial_bpsafetyvid_string_detail_grades: इयत्ता 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
-  tutorial_bpsciencevid_string_detail_grades: Grades 6-8
+  tutorial_bpsciencevid_string_detail_grades: इयत्ता 6-8
   tutorial_bptechscratch_string_detail_grades: Grades 6+
   tutorial_bptechvid_string_detail_grades: Grades 6+
   tutorial_caflags_string_detail_grades: Grades 6+
@@ -7498,7 +7650,7 @@ mr:
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersecard_string_detail_grades: Grades 6-8
+  tutorial_codestersecard_string_detail_grades: इयत्ता 6-8
   tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
@@ -7539,7 +7691,7 @@ mr:
   tutorial_talktome_string_detail_grades: Grades 6+
   tutorial_mobilecspmap_string_detail_grades: Grades 6+
   tutorial_ozorandom_string_detail_grades: पातळी २+
-  tutorial_ozotroll_string_detail_grades: Grades 6-8
+  tutorial_ozotroll_string_detail_grades: इयत्ता 6-8
   tutorial_peblioart_string_detail_grades: पातळी ९+
   tutorial_astropi_string_detail_grades: Grades 6+
   tutorial_rgart_string_detail_grades: Grades 2-5
@@ -7556,7 +7708,7 @@ mr:
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
   tutorial_spherofunctions_string_detail_grades: Grades 6+
-  tutorial_spheroinfrared_string_detail_grades: Grades 6-8
+  tutorial_spheroinfrared_string_detail_grades: इयत्ता 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
@@ -7599,7 +7751,7 @@ mr:
   tutorial_microsoftarcade_string_detail_grades: पातळी २+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
   tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6-8
+  tutorial_codecombatozaria_string_detail_grades: इयत्ता 6-8
   tutorial_vidcodedate_string_detail_grades: Grades 6+
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
@@ -7637,11 +7789,11 @@ mr:
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
   tutorial_itchwebcam_string_detail_grades: Grades 6+
   tutorial_itchball_string_detail_grades: Grades 2-8
-  tutorial_ttrace_string_detail_grades: Grades 6-8
+  tutorial_ttrace_string_detail_grades: इयत्ता 6-8
   tutorial_plethora_string_detail_grades: पातळी २+
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
-  tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_codeguppytext_string_detail_grades: इयत्ता 6-8
   tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
   tutorial_educativechatbot_string_detail_grades: पातळी ९+
   tutorial_educodebasics_string_detail_grades: Grades 6+
@@ -7649,9 +7801,9 @@ mr:
   tutorial_htmlacademyphp_string_detail_grades: Grades 6+
   tutorial_gamefrootdistance_string_detail_grades: पातळी २+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
-  tutorial_ttbunker_string_detail_grades: Grades 6-8
+  tutorial_ttbunker_string_detail_grades: इयत्ता 6-8
   tutorial_cuttle_string_detail_grades: Grades 6+
-  tutorial_bsdjokes_string_detail_grades: Grades 6-8
+  tutorial_bsdjokes_string_detail_grades: इयत्ता 6-8
   tutorial_rptree_string_detail_grades: Grades 6+
   tutorial_codestersunity_string_detail_grades: Grades 6+
   tutorial_codesterssoccer_string_detail_grades: Grades 6+
@@ -7660,13 +7812,13 @@ mr:
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: पातळी ९+
   tutorial_codecapture_string_detail_grades: Grades 6+
-  tutorial_codehslitter_string_detail_grades: Grades 6-8
-  tutorial_bsdocean_string_detail_grades: Grades 6-8
+  tutorial_codehslitter_string_detail_grades: इयत्ता 6-8
+  tutorial_bsdocean_string_detail_grades: इयत्ता 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
   tutorial_codejika_string_detail_grades: Grades 6+
-  tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
-  tutorial_rmagicequity_string_detail_grades: Grades 6-8
-  tutorial_ttfreestyle_string_detail_grades: Grades 6-8
+  tutorial_gamefrootclicker_string_detail_grades: इयत्ता 6-8
+  tutorial_rmagicequity_string_detail_grades: इयत्ता 6-8
+  tutorial_ttfreestyle_string_detail_grades: इयत्ता 6-8
   tutorial_ozobotcolor2_string_detail_grades: पातळी २+
   tutorial_ozobotcolor3_string_detail_grades: पातळी २+
   tutorial_clcarbon_string_detail_grades: Grades 6+
@@ -7691,8 +7843,8 @@ mr:
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
   tutorial_clfashion1_string_detail_grades: Grades 6+
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
-  tutorial_edisonmystery_string_detail_grades: Grades 6-8
-  tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
+  tutorial_edisonmystery_string_detail_grades: इयत्ता 6-8
+  tutorial_microbitseaturtles_string_detail_grades: इयत्ता 6-8
   tutorial_ozobotknow_string_detail_grades: पातळी २+
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
@@ -7702,14 +7854,14 @@ mr:
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
   tutorial_nasa3d_string_detail_grades: Grades 6+
   tutorial_blupants_string_detail_grades: Grades 6+
-  tutorial_legodance_string_detail_grades: Grades 6-8
+  tutorial_legodance_string_detail_grades: इयत्ता 6-8
   tutorial_nearpodcoding_string_detail_grades: पातळी ९+
   tutorial_kcjplastic_string_detail_grades: पातळी २+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
   tutorial_catrobatembroidery_string_detail_grades: Grades 6+
   tutorial_irobotphone_string_detail_grades: Grades 2-8
-  tutorial_codeguppydraw_string_detail_grades: Grades 6-8
+  tutorial_codeguppydraw_string_detail_grades: इयत्ता 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
   tutorial_meeempathy_string_detail_grades: पातळी २+
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
@@ -7867,28 +8019,28 @@ mr:
   tutorial_sjforest_string_platforms: iPad app
   tutorial_sjgreet_string_platforms: iPad app
   tutorial_sjsunset_string_platforms: iPad app
-  tutorial_fufafrenz_string_platforms: Unplugged
+  tutorial_fufafrenz_string_platforms: अनप्लग केले
   tutorial_bbcgeo_string_platforms: दाखवू नये
-  tutorial_chspixel_string_platforms: Unplugged
+  tutorial_chspixel_string_platforms: अनप्लग केले
   tutorial_hummingbird_string_platforms: PC, Mac, Linux, Chromebook downloadable,
     Hummingbird robot
   tutorial_recoloring_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_bbcchem_string_platforms: दाखवू नये
-  tutorial_floalgo_string_platforms: Unplugged
-  tutorial_flocond_string_platforms: Unplugged
-  tutorial_floloops_string_platforms: Unplugged
-  tutorial_pgts_string_platforms: Unplugged
+  tutorial_floalgo_string_platforms: अनप्लग केले
+  tutorial_flocond_string_platforms: अनप्लग केले
+  tutorial_floloops_string_platforms: अनप्लग केले
+  tutorial_pgts_string_platforms: अनप्लग केले
   tutorial_ozo_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
   tutorial_bbcla_string_platforms: दाखवू नये
   tutorial_bbcsci_string_platforms: दाखवू नये
-  tutorial_tlctour_string_platforms: Unplugged
+  tutorial_tlctour_string_platforms: अनप्लग केले
   tutorial_codesterstj_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_tlclocked_string_platforms: Unplugged
-  tutorial_baubles_string_platforms: Unplugged
+  tutorial_tlclocked_string_platforms: अनप्लग केले
+  tutorial_baubles_string_platforms: अनप्लग केले
   tutorial_bbcart_string_platforms: दाखवू नये
-  tutorial_tlcknight_string_platforms: Unplugged
-  tutorial_fufafit_string_platforms: Unplugged
+  tutorial_tlcknight_string_platforms: अनप्लग केले
+  tutorial_fufafit_string_platforms: अनप्लग केले
   tutorial_ozodance_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
   tutorial_codingrobotics_string_platforms: iPad, Dash robot
@@ -7899,29 +8051,29 @@ mr:
   tutorial_bbcmathii_string_platforms: दाखवू नये
   tutorial_bbcphys_string_platforms: दाखवू नये
   tutorial_bitsbox_string_platforms: All modern browsers, iOS
-  tutorial_tlcemo_string_platforms: Unplugged
-  tutorial_crd_string_platforms: Unplugged
+  tutorial_tlcemo_string_platforms: अनप्लग केले
+  tutorial_crd_string_platforms: अनप्लग केले
   tutorial_bbcbio_string_platforms: दाखवू नये
   tutorial_ticklebb8_string_platforms: iPad, iPhone, BB-8 robot
   tutorial_grok_string_platforms: दाखवू नये
   tutorial_ijournalist_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_bbcmusic_string_platforms: दाखवू नये
   tutorial_secretcodes_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_tlchex_string_platforms: Unplugged
+  tutorial_tlchex_string_platforms: अनप्लग केले
   tutorial_tickles_string_platforms: iPad, iPhone, Sphero robot
   tutorial_ozogame_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
-  tutorial_vidcodeio_string_platforms: Unplugged
-  tutorial_tlcbrain_string_platforms: Unplugged
+  tutorial_vidcodeio_string_platforms: अनप्लग केले
+  tutorial_tlcbrain_string_platforms: अनप्लग केले
   tutorial_hopquiz_string_platforms: iPad and iPhone
   tutorial_unfortunate_string_platforms: Dash and Dot robot
   tutorial_cha_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_elaseq_string_platforms: Unplugged, All modern browsers, iPad, Android
     tablet
   tutorial_bbcmathi_string_platforms: दाखवू नये
-  tutorial_tlcpixel_string_platforms: Unplugged
+  tutorial_tlcpixel_string_platforms: अनप्लग केले
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash and Dot robot
-  tutorial_tlcinvis_string_platforms: Unplugged
+  tutorial_tlcinvis_string_platforms: अनप्लग केले
   tutorial_tlcjflap_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_procolor_string_platforms: Ozobot robot
   tutorial_spiralsfinch_string_platforms: PC, Mac, Linux, Chromebook downloadable,
@@ -7931,20 +8083,20 @@ mr:
     robot
   tutorial_spiralsdash_string_platforms: Android tablet, Android phone, Dash robot
   tutorial_ghdebug_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_tlckk_string_platforms: Unplugged
-  tutorial_firstcomp_string_platforms: Unplugged
+  tutorial_tlckk_string_platforms: अनप्लग केले
+  tutorial_firstcomp_string_platforms: अनप्लग केले
   tutorial_mazefinch_string_platforms: All modern browsers, Finch robot
-  tutorial_tlccc_string_platforms: Unplugged
-  tutorial_tlcdoodle_string_platforms: Unplugged
-  tutorial_tlcpunch_string_platforms: Unplugged
+  tutorial_tlccc_string_platforms: अनप्लग केले
+  tutorial_tlcdoodle_string_platforms: अनप्लग केले
+  tutorial_tlcpunch_string_platforms: अनप्लग केले
   tutorial_finchfract_string_platforms: PC, Mac, Linux, Chromebook downloadable, Finch
     robot
-  tutorial_tlcmind_string_platforms: Unplugged
-  tutorial_tlctelebot_string_platforms: Unplugged
-  tutorial_tlcaus_string_platforms: Unplugged
-  tutorial_tlcmicro_string_platforms: Unplugged
+  tutorial_tlcmind_string_platforms: अनप्लग केले
+  tutorial_tlctelebot_string_platforms: अनप्लग केले
+  tutorial_tlcaus_string_platforms: अनप्लग केले
+  tutorial_tlcmicro_string_platforms: अनप्लग केले
   tutorial_imathematician_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_tlcmagic_string_platforms: Unplugged
+  tutorial_tlcmagic_string_platforms: अनप्लग केले
   tutorial_scratchmus_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_scratchanim_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_scratchfly_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -7983,7 +8135,7 @@ mr:
   tutorial_dswb_string_platforms: दाखवू नये
   tutorial_ssw_string_platforms: दाखवू नये
   tutorial_sswb_string_platforms: दाखवू नये
-  tutorial_kodable-unplugged_string_platforms: Unplugged
+  tutorial_kodable-unplugged_string_platforms: अनप्लग केले
   tutorial_scratch_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_bayes_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_gumball_string_platforms: दाखवू नये
@@ -8017,13 +8169,13 @@ mr:
   tutorial_itchstop_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_tynkerpn_string_platforms: All modern browsers, iPad, Android tablet
   tutorial_tynkerpd_string_platforms: All modern browsers, iPad, Android tablet
-  tutorial_persistence_string_platforms: Unplugged
-  tutorial_getloopy_string_platforms: Unplugged
-  tutorial_createface_string_platforms: Unplugged
-  tutorial_happymaps_string_platforms: Unplugged
-  tutorial_moveit_string_platforms: Unplugged
-  tutorial_bigevent_string_platforms: Unplugged
-  tutorial_gpp_string_platforms: Unplugged
+  tutorial_persistence_string_platforms: अनप्लग केले
+  tutorial_getloopy_string_platforms: अनप्लग केले
+  tutorial_createface_string_platforms: अनप्लग केले
+  tutorial_happymaps_string_platforms: अनप्लग केले
+  tutorial_moveit_string_platforms: अनप्लग केले
+  tutorial_bigevent_string_platforms: अनप्लग केले
+  tutorial_gpp_string_platforms: अनप्लग केले
   tutorial_foosgame_string_platforms: Android tablet, iPad
   tutorial_solopython_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
@@ -8148,7 +8300,7 @@ mr:
     Ozobot Bit or Evo robot
   tutorial_ozoeclipse_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
-  tutorial_ozosimulator_string_platforms: Unplugged
+  tutorial_ozosimulator_string_platforms: अनप्लग केले
   tutorial_ozoalgorithm_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
   tutorial_ozotimer_string_platforms: All modern browsers, Android tablets, iPads,
@@ -8161,20 +8313,20 @@ mr:
   tutorial_codesnoopy_string_platforms: सर्व आधुनिक ब्राउझर्स, अॅन्ड्रोइड टॅब्लेट,
     आयपॅड, अॅन्ड्रोइड फोन, आयफोन
   tutorial_applabintro_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_cslartist_string_platforms: Unplugged
-  tutorial_cslscratchjr_string_platforms: Unplugged
-  tutorial_floevents_string_platforms: Unplugged
-  tutorial_florobot_string_platforms: Unplugged
+  tutorial_cslartist_string_platforms: अनप्लग केले
+  tutorial_cslscratchjr_string_platforms: अनप्लग केले
+  tutorial_floevents_string_platforms: अनप्लग केले
+  tutorial_florobot_string_platforms: अनप्लग केले
   tutorial_isavesanta_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_iorder_string_platforms: All modern borwsers
   tutorial_ianimate_string_platforms: All modern browsers, iPad
   tutorial_iloveada_string_platforms: All modern borwsers
-  tutorial_kodflash_string_platforms: Unplugged
-  tutorial_kodchoose_string_platforms: Unplugged
-  tutorial_kodpizzapre_string_platforms: Unplugged
-  tutorial_kodpizza_string_platforms: Unplugged
-  tutorial_kodwomen_string_platforms: Unplugged
-  tutorial_tfunplug_string_platforms: Unplugged
+  tutorial_kodflash_string_platforms: अनप्लग केले
+  tutorial_kodchoose_string_platforms: अनप्लग केले
+  tutorial_kodpizzapre_string_platforms: अनप्लग केले
+  tutorial_kodpizza_string_platforms: अनप्लग केले
+  tutorial_kodwomen_string_platforms: अनप्लग केले
+  tutorial_tfunplug_string_platforms: अनप्लग केले
   tutorial_lbvariables_string_platforms: All modern browsers, littleBits Code Kit
   tutorial_lbfunctions_string_platforms: All modern browsers, littleBits Code Kit
   tutorial_lblogic_string_platforms: All modern browsers, littleBits Code Kit
@@ -8297,7 +8449,7 @@ mr:
   tutorial_codehsart_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codehsbitcoin_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codehsblockchain_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_codehscipher_string_platforms: Unplugged
+  tutorial_codehscipher_string_platforms: अनप्लग केले
   tutorial_codehscollision_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codehsmath_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codehsmusic_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -8307,7 +8459,7 @@ mr:
   tutorial_sushicards_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codesparkcreate_string_platforms: सर्व आधुनिक ब्राउझर्स, अॅन्ड्रोइड टॅब्लेट,
     आयपॅड, अॅन्ड्रोइड फोन, आयफोन
-  tutorial_hardvsoft_string_platforms: Unplugged
+  tutorial_hardvsoft_string_platforms: अनप्लग केले
   tutorial_codestersecard_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codesterslogo_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codesterstshirt_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -8327,10 +8479,10 @@ mr:
   tutorial_htmltimetravel_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_hp_flappy_string_platforms: iPad
   tutorial_appytappin_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_icipher_string_platforms: Unplugged
+  tutorial_icipher_string_platforms: अनप्लग केले
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
-  tutorial_imake_string_platforms: Unplugged
-  tutorial_imorse_string_platforms: Unplugged
+  tutorial_imake_string_platforms: अनप्लग केले
+  tutorial_imorse_string_platforms: अनप्लग केले
   tutorial_kanohp_string_platforms: Chrome, Safari, Android, iOS
   tutorial_khanwebpages_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_kibobowl_string_platforms: ''
@@ -8428,11 +8580,11 @@ mr:
   tutorial_googlerookie_string_platforms: सर्व आधुनिक ब्राउझर्स, अॅन्ड्रोइड टॅब्लेट,
     आयपॅड, अॅन्ड्रोइड फोन, आयफोन
   tutorial_tommyturtle_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_mazyad_string_platforms: Unplugged
+  tutorial_mazyad_string_platforms: अनप्लग केले
   tutorial_gamemaker_string_platforms: All modern browsers, iPad
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_n2y_string_platforms: Unplugged
+  tutorial_n2y_string_platforms: अनप्लग केले
   tutorial_microsoftarcade_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -8519,25 +8671,25 @@ mr:
   tutorial_ozobotcolor2_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_ozobotcolor3_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_kodablebasics_string_platforms: Unplugged
-  tutorial_scigirlscc_string_platforms: Unplugged
-  tutorial_irobotpicture_string_platforms: Unplugged
+  tutorial_kodablebasics_string_platforms: अनप्लग केले
+  tutorial_scigirlscc_string_platforms: अनप्लग केले
+  tutorial_irobotpicture_string_platforms: अनप्लग केले
   tutorial_kcjmyself_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_nearpodalgorithms_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_kibodrop_string_platforms: Unplugged
+  tutorial_kibodrop_string_platforms: अनप्लग केले
   tutorial_ozobotcolor1_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_scigirlspixels_string_platforms: Unplugged
+  tutorial_scigirlspixels_string_platforms: अनप्लग केले
   tutorial_kcjheroines_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_ozobotvalue_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_icodebytes_string_platforms: Unplugged
+  tutorial_icodebytes_string_platforms: अनप्लग केले
   tutorial_clfashion2_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_ai4all_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_cldata_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_spheroinputs_string_platforms: Unplugged
+  tutorial_spheroinputs_string_platforms: अनप्लग केले
   tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_spheroloops_string_platforms: Unplugged
-  tutorial_kiboprogram_string_platforms: Unplugged
-  tutorial_hellorubycsin60_string_platforms: Unplugged
+  tutorial_spheroloops_string_platforms: अनप्लग केले
+  tutorial_kiboprogram_string_platforms: अनप्लग केले
+  tutorial_hellorubycsin60_string_platforms: अनप्लग केले
   tutorial_clfashion1_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
   tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
@@ -8683,26 +8835,26 @@ mr:
   tutorial_sjforest_string_detail_platforms: iPad app
   tutorial_sjgreet_string_detail_platforms: iPad app
   tutorial_sjsunset_string_detail_platforms: iPad app
-  tutorial_fufafrenz_string_detail_platforms: Unplugged
+  tutorial_fufafrenz_string_detail_platforms: अनप्लग केले
   tutorial_bbcgeo_string_detail_platforms: दाखवू नये
-  tutorial_chspixel_string_detail_platforms: Unplugged
+  tutorial_chspixel_string_detail_platforms: अनप्लग केले
   tutorial_hummingbird_string_detail_platforms: Hummingbird robot
   tutorial_recoloring_string_detail_platforms: ''
   tutorial_bbcchem_string_detail_platforms: दाखवू नये
-  tutorial_floalgo_string_detail_platforms: Unplugged
-  tutorial_flocond_string_detail_platforms: Unplugged
-  tutorial_floloops_string_detail_platforms: Unplugged
-  tutorial_pgts_string_detail_platforms: Unplugged
+  tutorial_floalgo_string_detail_platforms: अनप्लग केले
+  tutorial_flocond_string_detail_platforms: अनप्लग केले
+  tutorial_floloops_string_detail_platforms: अनप्लग केले
+  tutorial_pgts_string_detail_platforms: अनप्लग केले
   tutorial_ozo_string_detail_platforms: Ozobot robot
   tutorial_bbcla_string_detail_platforms: दाखवू नये
   tutorial_bbcsci_string_detail_platforms: दाखवू नये
-  tutorial_tlctour_string_detail_platforms: Unplugged
+  tutorial_tlctour_string_detail_platforms: अनप्लग केले
   tutorial_codesterstj_string_detail_platforms: ''
-  tutorial_tlclocked_string_detail_platforms: Unplugged
-  tutorial_baubles_string_detail_platforms: Unplugged
+  tutorial_tlclocked_string_detail_platforms: अनप्लग केले
+  tutorial_baubles_string_detail_platforms: अनप्लग केले
   tutorial_bbcart_string_detail_platforms: दाखवू नये
-  tutorial_tlcknight_string_detail_platforms: Unplugged
-  tutorial_fufafit_string_detail_platforms: Unplugged
+  tutorial_tlcknight_string_detail_platforms: अनप्लग केले
+  tutorial_fufafit_string_detail_platforms: अनप्लग केले
   tutorial_ozodance_string_detail_platforms: Ozobot robot
   tutorial_codingrobotics_string_detail_platforms: iPad app, Dash robot
   tutorial_box_string_detail_platforms: दाखवू नये
@@ -8712,27 +8864,27 @@ mr:
   tutorial_bbcmathii_string_detail_platforms: दाखवू नये
   tutorial_bbcphys_string_detail_platforms: दाखवू नये
   tutorial_bitsbox_string_detail_platforms: ''
-  tutorial_tlcemo_string_detail_platforms: Unplugged
-  tutorial_crd_string_detail_platforms: Unplugged
+  tutorial_tlcemo_string_detail_platforms: अनप्लग केले
+  tutorial_crd_string_detail_platforms: अनप्लग केले
   tutorial_bbcbio_string_detail_platforms: दाखवू नये
   tutorial_ticklebb8_string_detail_platforms: BB-8 robot
   tutorial_grok_string_detail_platforms: दाखवू नये
   tutorial_ijournalist_string_detail_platforms: ''
   tutorial_bbcmusic_string_detail_platforms: दाखवू नये
   tutorial_secretcodes_string_detail_platforms: ''
-  tutorial_tlchex_string_detail_platforms: Unplugged
+  tutorial_tlchex_string_detail_platforms: अनप्लग केले
   tutorial_tickles_string_detail_platforms: Sphero robot
   tutorial_ozogame_string_detail_platforms: Ozobot robot
-  tutorial_vidcodeio_string_detail_platforms: Unplugged
-  tutorial_tlcbrain_string_detail_platforms: Unplugged
+  tutorial_vidcodeio_string_detail_platforms: अनप्लग केले
+  tutorial_tlcbrain_string_detail_platforms: अनप्लग केले
   tutorial_hopquiz_string_detail_platforms: iOS app
   tutorial_unfortunate_string_detail_platforms: Dash and Dot robot
   tutorial_cha_string_detail_platforms: ''
-  tutorial_elaseq_string_detail_platforms: Unplugged
+  tutorial_elaseq_string_detail_platforms: अनप्लग केले
   tutorial_bbcmathi_string_detail_platforms: दाखवू नये
-  tutorial_tlcpixel_string_detail_platforms: Unplugged
+  tutorial_tlcpixel_string_detail_platforms: अनप्लग केले
   tutorial_introrobo_string_detail_platforms: Dash and Dot robot
-  tutorial_tlcinvis_string_detail_platforms: Unplugged
+  tutorial_tlcinvis_string_detail_platforms: अनप्लग केले
   tutorial_tlcjflap_string_detail_platforms: ''
   tutorial_procolor_string_detail_platforms: Ozobot robot
   tutorial_spiralsfinch_string_detail_platforms: Finch robot
@@ -8740,19 +8892,19 @@ mr:
   tutorial_ticklel_string_detail_platforms: LEGO WeDo robot
   tutorial_spiralsdash_string_detail_platforms: Dash robot
   tutorial_ghdebug_string_detail_platforms: ''
-  tutorial_tlckk_string_detail_platforms: Unplugged
-  tutorial_firstcomp_string_detail_platforms: Unplugged
+  tutorial_tlckk_string_detail_platforms: अनप्लग केले
+  tutorial_firstcomp_string_detail_platforms: अनप्लग केले
   tutorial_mazefinch_string_detail_platforms: Finch robot
-  tutorial_tlccc_string_detail_platforms: Unplugged
-  tutorial_tlcdoodle_string_detail_platforms: Unplugged
-  tutorial_tlcpunch_string_detail_platforms: Unplugged
+  tutorial_tlccc_string_detail_platforms: अनप्लग केले
+  tutorial_tlcdoodle_string_detail_platforms: अनप्लग केले
+  tutorial_tlcpunch_string_detail_platforms: अनप्लग केले
   tutorial_finchfract_string_detail_platforms: Finch robot
-  tutorial_tlcmind_string_detail_platforms: Unplugged
-  tutorial_tlctelebot_string_detail_platforms: Unplugged
-  tutorial_tlcaus_string_detail_platforms: Unplugged
-  tutorial_tlcmicro_string_detail_platforms: Unplugged
+  tutorial_tlcmind_string_detail_platforms: अनप्लग केले
+  tutorial_tlctelebot_string_detail_platforms: अनप्लग केले
+  tutorial_tlcaus_string_detail_platforms: अनप्लग केले
+  tutorial_tlcmicro_string_detail_platforms: अनप्लग केले
   tutorial_imathematician_string_detail_platforms: ''
-  tutorial_tlcmagic_string_detail_platforms: Unplugged
+  tutorial_tlcmagic_string_detail_platforms: अनप्लग केले
   tutorial_scratchmus_string_detail_platforms: ''
   tutorial_scratchanim_string_detail_platforms: ''
   tutorial_scratchfly_string_detail_platforms: ''
@@ -8782,7 +8934,7 @@ mr:
   tutorial_dswb_string_detail_platforms: दाखवू नये
   tutorial_ssw_string_detail_platforms: दाखवू नये
   tutorial_sswb_string_detail_platforms: दाखवू नये
-  tutorial_kodable-unplugged_string_detail_platforms: Unplugged
+  tutorial_kodable-unplugged_string_detail_platforms: अनप्लग केले
   tutorial_scratch_string_detail_platforms: ''
   tutorial_bayes_string_detail_platforms: ''
   tutorial_gumball_string_detail_platforms: दाखवू नये
@@ -8810,17 +8962,17 @@ mr:
   tutorial_itchstop_string_detail_platforms: ''
   tutorial_tynkerpn_string_detail_platforms: ''
   tutorial_tynkerpd_string_detail_platforms: ''
-  tutorial_persistence_string_detail_platforms: Unplugged
-  tutorial_getloopy_string_detail_platforms: Unplugged
-  tutorial_createface_string_detail_platforms: Unplugged
-  tutorial_happymaps_string_detail_platforms: Unplugged
-  tutorial_moveit_string_detail_platforms: Unplugged
-  tutorial_bigevent_string_detail_platforms: Unplugged
-  tutorial_gpp_string_detail_platforms: Unplugged
+  tutorial_persistence_string_detail_platforms: अनप्लग केले
+  tutorial_getloopy_string_detail_platforms: अनप्लग केले
+  tutorial_createface_string_detail_platforms: अनप्लग केले
+  tutorial_happymaps_string_detail_platforms: अनप्लग केले
+  tutorial_moveit_string_detail_platforms: अनप्लग केले
+  tutorial_bigevent_string_detail_platforms: अनप्लग केले
+  tutorial_gpp_string_detail_platforms: अनप्लग केले
   tutorial_foosgame_string_detail_platforms: ''
   tutorial_solopython_string_detail_platforms: ''
-  tutorial_kodableint_string_detail_platforms: Unplugged
-  tutorial_kodableadv_string_detail_platforms: Unplugged
+  tutorial_kodableint_string_detail_platforms: अनप्लग केले
+  tutorial_kodableadv_string_detail_platforms: अनप्लग केले
   tutorial_tynkertj_string_detail_platforms: ''
   tutorial_wolframa_string_detail_platforms: ''
   tutorial_wolframm_string_detail_platforms: ''
@@ -8915,7 +9067,7 @@ mr:
   tutorial_ozojourney_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozocodes_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozoeclipse_string_detail_platforms: Ozobot Bit or Evo robot
-  tutorial_ozosimulator_string_detail_platforms: Unplugged
+  tutorial_ozosimulator_string_detail_platforms: अनप्लग केले
   tutorial_ozoalgorithm_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozotimer_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozohabits_string_detail_platforms: Ozobot Bit or Evo robot
@@ -8923,20 +9075,20 @@ mr:
   tutorial_ozopair_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_codesnoopy_string_detail_platforms: ''
   tutorial_applabintro_string_detail_platforms: ''
-  tutorial_cslartist_string_detail_platforms: Unplugged
-  tutorial_cslscratchjr_string_detail_platforms: Unplugged
-  tutorial_floevents_string_detail_platforms: Unplugged
-  tutorial_florobot_string_detail_platforms: Unplugged
+  tutorial_cslartist_string_detail_platforms: अनप्लग केले
+  tutorial_cslscratchjr_string_detail_platforms: अनप्लग केले
+  tutorial_floevents_string_detail_platforms: अनप्लग केले
+  tutorial_florobot_string_detail_platforms: अनप्लग केले
   tutorial_isavesanta_string_detail_platforms: ''
   tutorial_iorder_string_detail_platforms: ''
   tutorial_ianimate_string_detail_platforms: ''
   tutorial_iloveada_string_detail_platforms: ''
-  tutorial_kodflash_string_detail_platforms: Unplugged
-  tutorial_kodchoose_string_detail_platforms: Unplugged
-  tutorial_kodpizzapre_string_detail_platforms: Unplugged
-  tutorial_kodpizza_string_detail_platforms: Unplugged
-  tutorial_kodwomen_string_detail_platforms: Unplugged
-  tutorial_tfunplug_string_detail_platforms: Unplugged
+  tutorial_kodflash_string_detail_platforms: अनप्लग केले
+  tutorial_kodchoose_string_detail_platforms: अनप्लग केले
+  tutorial_kodpizzapre_string_detail_platforms: अनप्लग केले
+  tutorial_kodpizza_string_detail_platforms: अनप्लग केले
+  tutorial_kodwomen_string_detail_platforms: अनप्लग केले
+  tutorial_tfunplug_string_detail_platforms: अनप्लग केले
   tutorial_lbvariables_string_detail_platforms: littleBits Code Kit
   tutorial_lbfunctions_string_detail_platforms: littleBits Code Kit
   tutorial_lblogic_string_detail_platforms: littleBits Code Kit
@@ -9748,7 +9900,7 @@ mr:
   tutorial_appytappin_string_detail_programming_languages: BitsBox
   tutorial_icipher_string_detail_programming_languages: ''
   tutorial_iguess_string_detail_programming_languages: ''
-  tutorial_imake_string_detail_programming_languages: Unplugged
+  tutorial_imake_string_detail_programming_languages: अनप्लग केले
   tutorial_imorse_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_kanohp_string_detail_programming_languages: ब्लॉक्स, जावास्क्रिप्ट
   tutorial_khanwebpages_string_detail_programming_languages: HTML/CSS
@@ -9831,7 +9983,7 @@ mr:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_allcancodeapps_string_detail_programming_languages: साचे (ब्लॉक्स)
-  tutorial_n2y_string_detail_programming_languages: Unplugged
+  tutorial_n2y_string_detail_programming_languages: अनप्लग केले
   tutorial_microsoftarcade_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -9966,7 +10118,7 @@ mr:
   tutorial_catrobatembroidery_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
-  tutorial_codejumper_string_detail_programming_languages: Unplugged
+  tutorial_codejumper_string_detail_programming_languages: अनप्लग केले
   tutorial_meeempathy_string_detail_programming_languages: साचे (ब्लॉक्स), पायथन
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
@@ -10064,7 +10216,7 @@ mr:
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -10449,7 +10601,7 @@ mr:
   tutorial_hyperpadpong_string_detail_grades: पातळी ९+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
   tutorial_trinketgirl_string_detail_grades: Grades 6+
-  tutorial_rpimosquito_string_detail_grades: Grades 6-8
+  tutorial_rpimosquito_string_detail_grades: इयत्ता 6-8
   tutorial_tynkermars_string_detail_grades: Grades 6+
   tutorial_cityx_string_detail_grades: Grades 6+
   tutorial_vidcodemap_string_detail_grades: Grades 6+
@@ -10461,8 +10613,8 @@ mr:
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: पातळी ९+
   tutorial_uwcloud_string_detail_grades: पातळी २+
-  tutorial_htmlmuffin_string_detail_grades: Grades 6-8
-  tutorial_microsoftpizza_string_detail_grades: Grades 6-8
+  tutorial_htmlmuffin_string_detail_grades: इयत्ता 6-8
+  tutorial_microsoftpizza_string_detail_grades: इयत्ता 6-8
   tutorial_stemc_blckhole_string_detail_grades: पातळी ९+
   tutorial_careconfigure_string_detail_grades: Grades 6+
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
@@ -10471,10 +10623,10 @@ mr:
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: पातळी २+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
-  tutorial_codemojijava_string_detail_grades: Grades 6-8
+  tutorial_codemojijava_string_detail_grades: इयत्ता 6-8
   tutorial_ccfirewall_string_detail_grades: Grades 6+
-  tutorial_htmljs_string_detail_grades: Grades 6-8
-  tutorial_ttaqueducts_string_detail_grades: Grades 6-8
+  tutorial_htmljs_string_detail_grades: इयत्ता 6-8
+  tutorial_ttaqueducts_string_detail_grades: इयत्ता 6-8
   tutorial_vtgame_string_detail_grades: Grades 6+
   tutorial_baroborav_string_detail_grades: Grades 6+
   tutorial_baroboobstacle_string_detail_grades: पातळी २+
@@ -10509,8 +10661,8 @@ mr:
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: पातळी ९+
   tutorial_modvariables_string_detail_grades: Grades 6+
-  tutorial_codestersmicro_string_detail_grades: Grades 6-8
-  tutorial_codestersdata_string_detail_grades: Grades 6-8
+  tutorial_codestersmicro_string_detail_grades: इयत्ता 6-8
+  tutorial_codestersdata_string_detail_grades: इयत्ता 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_mee_string_detail_grades: पातळी २+
@@ -10596,11 +10748,11 @@ mr:
   tutorial_ozopopstar_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_eddesign_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edshapeup_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_ozocolor_string_platforms: Unplugged
+  tutorial_ozocolor_string_platforms: अनप्लग केले
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
-  tutorial_rootunplugged_string_platforms: Unplugged
-  tutorial_rgtreasure_string_platforms: Unplugged
+  tutorial_rootunplugged_string_platforms: अनप्लग केले
+  tutorial_rgtreasure_string_platforms: अनप्लग केले
   tutorial_peblioportraits_string_platforms: Chrome
   tutorial_rootcodebreak_string_platforms: iPad
   tutorial_microbit14_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -10621,7 +10773,7 @@ mr:
   tutorial_rpisensehat_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
     iPad, Android phone, Android tablet
-  tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_kuborobo_string_platforms: अनप्लग केले
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
@@ -10832,7 +10984,7 @@ mr:
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
-  tutorial_hello_name: Hello World
+  tutorial_hello_name: हॅलो वर्ल्ड
   tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
   tutorial_poemart_name: Poem Art
@@ -10840,7 +10992,7 @@ mr:
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
   tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
-  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_microsoftforest_name: Save the Forest with MakeCode Arcade
   tutorial_blackbirdscreen_name: Screen Saver
   tutorial_toxicodecompute2_name: Discover Python with Compute it
   tutorial_minecrafttimecraft_name: Minecraft Timecraft
@@ -11287,10 +11439,10 @@ mr:
     (Mexico)
   tutorial_itchmundos_language: Spanish (Mexico)
   tutorial_itchtenacity_language: Spanish (Mexico)
-  tutorial_kcjskiing_language: English, French
+  tutorial_kcjskiing_language: इंग्रजी, फ्रेंच
   tutorial_groksecurity_language: मराठी
   tutorial_creaticode_language: Chinese (Simplified), Chinese (Traditional), English
-  tutorial_kcjhockey_language: English, French
+  tutorial_kcjhockey_language: इंग्रजी, फ्रेंच
   tutorial_ttdungeon_language: मराठी
   tutorial_ccai_language: Arabic, Bulgarian, Catalan, Chinese (Simplified), Chinese
     (Traditional), Czech, Danish, Dutch, English, English (UK), Finnish, French, Galician,
@@ -11302,15 +11454,15 @@ mr:
   tutorial_stemdata_language: मराठी
   tutorial_thunkableinfo_language: मराठी
   tutorial_educodespace_language: मराठी
-  tutorial_kcjtennis_language: English, French
+  tutorial_kcjtennis_language: इंग्रजी, फ्रेंच
   tutorial_robotmagictower_language: मराठी
   tutorial_ttdragons_language: मराठी
-  tutorial_kcjarchery_language: English, French
+  tutorial_kcjarchery_language: इंग्रजी, फ्रेंच
   tutorial_ttsprouts_language: मराठी
   tutorial_ttmaze_language: मराठी
   tutorial_codetribe_language: English, English (UK)
   tutorial_ttcanyon_language: मराठी
-  tutorial_kcjxtrail_language: English, French
+  tutorial_kcjxtrail_language: इंग्रजी, फ्रेंच
   tutorial_codespeakroad_language: मराठी
   tutorial_educodelair_language: मराठी
   tutorial_ibmhourofz_language: English, English (UK)
@@ -11388,7 +11540,7 @@ mr:
   tutorial_creaticode_string_detail_grades: Grades 6+
   tutorial_kcjhockey_string_detail_grades: पातळी २+
   tutorial_ttdungeon_string_detail_grades: Grades 6+
-  tutorial_ccai_string_detail_grades: Grades 6-8
+  tutorial_ccai_string_detail_grades: इयत्ता 6-8
   tutorial_bsdai_string_detail_grades: Grades 6+
   tutorial_stemdata_string_detail_grades: पातळी ९+
   tutorial_thunkableinfo_string_detail_grades: Grades 6+
@@ -11400,7 +11552,7 @@ mr:
   tutorial_ttsprouts_string_detail_grades: पातळी २+
   tutorial_ttmaze_string_detail_grades: Grades 6+
   tutorial_codetribe_string_detail_grades: Grades 2-8
-  tutorial_ttcanyon_string_detail_grades: Grades 6-8
+  tutorial_ttcanyon_string_detail_grades: इयत्ता 6-8
   tutorial_kcjxtrail_string_detail_grades: Grades 2-8
   tutorial_codespeakroad_string_detail_grades: Grades 2-8
   tutorial_educodelair_string_detail_grades: Grades 6+
@@ -11409,7 +11561,7 @@ mr:
   tutorial_educodeforest_string_detail_grades: Grades 6+
   tutorial_educodehorus_string_detail_grades: Grades 6+
   tutorial_codespeakpokemon_string_detail_grades: Grades 6+
-  tutorial_stemholiday_string_detail_grades: Grades 6-8
+  tutorial_stemholiday_string_detail_grades: इयत्ता 6-8
   tutorial_codespeakpixel_string_detail_grades: Grades 6+
   tutorial_codespellsnexus_string_detail_grades: Grades 6+
   tutorial_carnegieslime_string_detail_grades: Grades 2-8
@@ -11430,7 +11582,7 @@ mr:
   tutorial_spheroinout_string_detail_grades: Pre-reader - Grade 5
   tutorial_edisonblueprint_string_detail_grades: Grades 6+
   tutorial_edisonmaze_string_detail_grades: Grades 2-8
-  tutorial_milnefunctions_string_detail_grades: Grades 6-8
+  tutorial_milnefunctions_string_detail_grades: इयत्ता 6-8
   tutorial_sasmap_string_detail_grades: Grades 2-5
   tutorial_firstrobotics_string_detail_grades: Grades 6+
   tutorial_sasdata_string_detail_grades: पातळी २+
@@ -11523,29 +11675,30 @@ mr:
   tutorial_hopescape_string_platforms: iPad, iPhone
   tutorial_ozorace_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_ozoequestrian_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_irobotpizza_string_platforms: Unplugged
+  tutorial_irobotpizza_string_platforms: अनप्लग केले
   tutorial_ai4alldance_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_ai4allneural_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_edisonmaze_string_platforms: सर्व आधुनिक ब्राउझर्स
+  tutorial_spheroinout_string_platforms: अनप्लग केले
+  tutorial_edisonblueprint_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_edisonmaze_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
   tutorial_firstrobotics_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_sasdata_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_carnegiesensabot_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_robotical4_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_kinderadd_string_platforms: Unplugged
+  tutorial_kinderadd_string_platforms: अनप्लग केले
   tutorial_imagipython_string_platforms: Chrome, Firefox, Android tablet, iPad, Android
     phone, iPhone
-  tutorial_robotical2_string_platforms: Unplugged
+  tutorial_robotical2_string_platforms: अनप्लग केले
   tutorial_robotical3_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_blockscadvirus_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_robotical1_string_platforms: Unplugged
-  tutorial_irobotshapes_string_platforms: Unplugged
-  tutorial_irobotparts_string_platforms: Unplugged
-  tutorial_irobottools_string_platforms: Unplugged
-  tutorial_kindercar_string_platforms: Unplugged
+  tutorial_robotical1_string_platforms: अनप्लग केले
+  tutorial_irobotshapes_string_platforms: अनप्लग केले
+  tutorial_irobotparts_string_platforms: अनप्लग केले
+  tutorial_irobottools_string_platforms: अनप्लग केले
+  tutorial_kindercar_string_platforms: अनप्लग केले
   tutorial_caavatar_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_hello_string_detail_platforms: ''
   tutorial_raspispace_string_detail_platforms: ''
@@ -12210,23 +12363,23 @@ mr:
     you can share while you're networking with people who can help or guide you in
     your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
-  tutorial_rpledfirefly_string_detail_grades: Grades 6-8
+  tutorial_rpledfirefly_string_detail_grades: इयत्ता 6-8
   tutorial_rpcharting_string_detail_grades: पातळी ९+
   tutorial_rpsolar_string_detail_grades: पातळी ९+
-  tutorial_rpwebcards_string_detail_grades: Grades 6-8
-  tutorial_codeclubhworld_string_detail_grades: Grades 6-8
+  tutorial_rpwebcards_string_detail_grades: इयत्ता 6-8
+  tutorial_codeclubhworld_string_detail_grades: इयत्ता 6-8
   tutorial_codeclubspells_string_detail_grades: Grades 2-5
-  tutorial_coderdojoanime_string_detail_grades: Grades 6-8
-  tutorial_coderdojotarget_string_detail_grades: Grades 6-8
+  tutorial_coderdojoanime_string_detail_grades: इयत्ता 6-8
+  tutorial_coderdojotarget_string_detail_grades: इयत्ता 6-8
   tutorial_creaticodescratch_string_detail_grades: Grades 6+
-  tutorial_bbsierpinski_string_detail_grades: Grades 6-8
+  tutorial_bbsierpinski_string_detail_grades: इयत्ता 6-8
   tutorial_bbstopwatch_string_detail_grades: Grades 6+
   tutorial_idrpatterns_string_detail_grades: Pre-reader - Grade 5
   tutorial_idrshapes_string_detail_grades: Pre-reader - Grade 5
   tutorial_edisondetect_string_detail_grades: Grades 2-8
   tutorial_edisonmusical_string_detail_grades: Grades 6+
   tutorial_codemonkeydiglit_string_detail_grades: Grades 2-8
-  tutorial_bsdrockpaper_string_detail_grades: Grades 6-8
+  tutorial_bsdrockpaper_string_detail_grades: इयत्ता 6-8
   tutorial_microbitreaction_string_detail_grades: Grades 2-5
   tutorial_kinderanimal_string_detail_grades: Pre-reader - Grade 5
   tutorial_kindersinger_string_detail_grades: Pre-reader - Grade 5
@@ -12240,19 +12393,19 @@ mr:
   tutorial_spheroincolor_string_detail_grades: Pre-reader - Grade 5
   tutorial_kcjdominos_string_detail_grades: Grades 2-8
   tutorial_spherocolortheory_string_detail_grades: Grades 6+
-  tutorial_codecombatesports_string_detail_grades: Grades 6-8
+  tutorial_codecombatesports_string_detail_grades: इयत्ता 6-8
   tutorial_spherodigdisplay_string_detail_grades: Grades 2-8
   tutorial_spherorvrincolor_string_detail_grades: Grades 6+
   tutorial_clbinary_string_detail_grades: पातळी २+
   tutorial_sascollabcode_string_detail_grades: Pre-reader +
-  tutorial_codecombatgoblins_string_detail_grades: Grades 6-8
+  tutorial_codecombatgoblins_string_detail_grades: इयत्ता 6-8
   tutorial_scratchstorytelling_string_detail_grades: Grades 2-8
   tutorial_crayolasymbols_string_detail_grades: पातळी २+
   tutorial_crayoladrawacode_string_detail_grades: Pre-reader - Grade 8
   tutorial_crayolafollowmycode_string_detail_grades: Pre-reader - Grade 8
-  tutorial_madpicturethis_string_detail_grades: Grades 6-8
+  tutorial_madpicturethis_string_detail_grades: इयत्ता 6-8
   tutorial_mindmakersmaps_string_detail_grades: पातळी ९+
-  tutorial_mindmakersjorel_string_detail_grades: Grades 6-8
+  tutorial_mindmakersjorel_string_detail_grades: इयत्ता 6-8
   tutorial_mindmakersroboland_string_detail_grades: Grades 2-5
   tutorial_mindmakersrobolandjr_string_detail_grades: Pre-reader - Grade 1
   tutorial_codehsdraw_string_detail_grades: Grades 2-8
@@ -12261,7 +12414,7 @@ mr:
   tutorial_bekidscoding_string_detail_grades: Pre-reader - Grade 5
   tutorial_rodocodehr_string_detail_grades: Pre-reader - Grade 5
   tutorial_microbitdice_string_detail_grades: Grades 2-5
-  tutorial_madflashcard_string_detail_grades: Grades 6-8
+  tutorial_madflashcard_string_detail_grades: इयत्ता 6-8
   tutorial_madappwars_string_detail_grades: Grades 6+
   tutorial_kodablepuppies_string_detail_grades: Pre-reader - Grade 5
   tutorial_googlesuperhero_string_detail_grades: Grades 2-8
@@ -12273,15 +12426,15 @@ mr:
   tutorial_hatchxrtrex_string_detail_grades: पातळी २+
   tutorial_blocksmithguinea_string_detail_grades: पातळी २+
   tutorial_pickcodeshapes_string_detail_grades: Grades 6+
-  tutorial_codesterssketch_string_detail_grades: Grades 6-8
+  tutorial_codesterssketch_string_detail_grades: इयत्ता 6-8
   tutorial_pickcodechatbot_string_detail_grades: Grades 6+
-  tutorial_codestersfish_string_detail_grades: Grades 6-8
-  tutorial_codestershedgehog_string_detail_grades: Grades 6-8
+  tutorial_codestersfish_string_detail_grades: इयत्ता 6-8
+  tutorial_codestershedgehog_string_detail_grades: इयत्ता 6-8
   tutorial_pickcodeggame_string_detail_grades: पातळी ९+
-  tutorial_codestersdino_string_detail_grades: Grades 6-8
+  tutorial_codestersdino_string_detail_grades: इयत्ता 6-8
   tutorial_pickcodemtpaint_string_detail_grades: पातळी ९+
   tutorial_microsoftcarnival_string_detail_grades: पातळी २+
-  tutorial_thunkablescavenger_string_detail_grades: Grades 6-8
+  tutorial_thunkablescavenger_string_detail_grades: इयत्ता 6-8
   tutorial_codeillusionfund_string_detail_grades: Pre-reader - Grade 5
   tutorial_codeillusiongoofybeg_string_detail_grades: पातळी २+
   tutorial_codeillusiongoofyint_string_detail_grades: Grades 6+
@@ -12296,10 +12449,10 @@ mr:
   tutorial_intelinofield_string_detail_grades: Pre-reader - Grade 5
   tutorial_cablockchain_string_detail_grades: Grades 6+
   tutorial_nasaparachute_string_detail_grades: Grades 2-5
-  tutorial_nasascratch_string_detail_grades: Grades 6-8
-  tutorial_nasaorbit_string_detail_grades: Grades 6-8
-  tutorial_nasapackage_string_detail_grades: Grades 6-8
-  tutorial_nasalunar_string_detail_grades: Grades 6-8
+  tutorial_nasascratch_string_detail_grades: इयत्ता 6-8
+  tutorial_nasaorbit_string_detail_grades: इयत्ता 6-8
+  tutorial_nasapackage_string_detail_grades: इयत्ता 6-8
+  tutorial_nasalunar_string_detail_grades: इयत्ता 6-8
   tutorial_meeestate_string_detail_grades: पातळी २+
   tutorial_imagipixelart_string_detail_grades: Grades 2-8
   tutorial_kcjhealth_string_detail_grades: Grades 6+
@@ -12331,16 +12484,16 @@ mr:
     iPad, Windows phone, Android phone, iPhone
   tutorial_bsdrockpaper_string_platforms: Chrome, Firefox
   tutorial_microbitreaction_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_kinderanimal_string_platforms: Unplugged
-  tutorial_kindersinger_string_platforms: Unplugged
+  tutorial_kinderanimal_string_platforms: अनप्लग केले
+  tutorial_kindersinger_string_platforms: अनप्लग केले
   tutorial_microbitwwn_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_grokcyberlive_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_codemojimaze_string_platforms: Unplugged
+  tutorial_codemojimaze_string_platforms: अनप्लग केले
   tutorial_codemojisnake_string_platforms: Chrome
   tutorial_carnegietoxibots_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_carnegieiris_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_carnegiespike_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_spheroincolor_string_platforms: Unplugged
+  tutorial_spheroincolor_string_platforms: अनप्लग केले
   tutorial_kcjdominos_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_spherocolortheory_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
@@ -12349,20 +12502,20 @@ mr:
     iPad, Windows phone, Android phone, iPhone
   tutorial_spherorvrincolor_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
-  tutorial_clbinary_string_platforms: Unplugged
+  tutorial_clbinary_string_platforms: अनप्लग केले
   tutorial_sascollabcode_string_platforms: iPad
   tutorial_codecombatgoblins_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_scratchstorytelling_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_crayolasymbols_string_platforms: Unplugged
-  tutorial_crayoladrawacode_string_platforms: Unplugged
-  tutorial_crayolafollowmycode_string_platforms: Unplugged
-  tutorial_madpicturethis_string_platforms: Unplugged
+  tutorial_crayolasymbols_string_platforms: अनप्लग केले
+  tutorial_crayoladrawacode_string_platforms: अनप्लग केले
+  tutorial_crayolafollowmycode_string_platforms: अनप्लग केले
+  tutorial_madpicturethis_string_platforms: अनप्लग केले
   tutorial_mindmakersmaps_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_mindmakersjorel_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_mindmakersroboland_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_mindmakersrobolandjr_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_codehsdraw_string_platforms: Unplugged
-  tutorial_codehscamouflage_string_platforms: Unplugged
+  tutorial_codehsdraw_string_platforms: अनप्लग केले
+  tutorial_codehscamouflage_string_platforms: अनप्लग केले
   tutorial_firiapythoncodex_string_platforms: Chrome
   tutorial_bekidscoding_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
@@ -12413,10 +12566,10 @@ mr:
     phone, iPhone
   tutorial_prstemalexa_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_coderzfarm_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_intelinofield_string_platforms: Unplugged
+  tutorial_intelinofield_string_platforms: अनप्लग केले
   tutorial_cablockchain_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone
-  tutorial_nasaparachute_string_platforms: Unplugged
+  tutorial_nasaparachute_string_platforms: अनप्लग केले
   tutorial_nasascratch_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone
   tutorial_nasaorbit_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -12546,8 +12699,8 @@ mr:
   tutorial_codemonkeydiglit_string_detail_programming_languages: Digital Literacy
   tutorial_bsdrockpaper_string_detail_programming_languages: Python
   tutorial_microbitreaction_string_detail_programming_languages: Blocks, Python, MakeCode
-  tutorial_kinderanimal_string_detail_programming_languages: Unplugged
-  tutorial_kindersinger_string_detail_programming_languages: Unplugged
+  tutorial_kinderanimal_string_detail_programming_languages: अनप्लग केले
+  tutorial_kindersinger_string_detail_programming_languages: अनप्लग केले
   tutorial_microbitwwn_string_detail_programming_languages: Blocks, Python, MakeCode
   tutorial_grokcyberlive_string_detail_programming_languages: Cybersecurity concepts
   tutorial_codemojimaze_string_detail_programming_languages: Unplugged, Sequences
@@ -12562,14 +12715,14 @@ mr:
   tutorial_codecombatesports_string_detail_programming_languages: JavaScript, Python
   tutorial_spherodigdisplay_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_spherorvrincolor_string_detail_programming_languages: साचे (ब्लॉक्स)
-  tutorial_clbinary_string_detail_programming_languages: Unplugged
+  tutorial_clbinary_string_detail_programming_languages: अनप्लग केले
   tutorial_sascollabcode_string_detail_programming_languages: Blocks, Tactile braille
     blocks
   tutorial_codecombatgoblins_string_detail_programming_languages: JavaScript, Python
   tutorial_scratchstorytelling_string_detail_programming_languages: साचे (ब्लॉक्स)
-  tutorial_crayolasymbols_string_detail_programming_languages: Unplugged
-  tutorial_crayoladrawacode_string_detail_programming_languages: Unplugged
-  tutorial_crayolafollowmycode_string_detail_programming_languages: Unplugged
+  tutorial_crayolasymbols_string_detail_programming_languages: अनप्लग केले
+  tutorial_crayoladrawacode_string_detail_programming_languages: अनप्लग केले
+  tutorial_crayolafollowmycode_string_detail_programming_languages: अनप्लग केले
   tutorial_madpicturethis_string_detail_programming_languages: Unplugged, HTML
   tutorial_mindmakersmaps_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_mindmakersjorel_string_detail_programming_languages: साचे (ब्लॉक्स)
@@ -12615,8 +12768,8 @@ mr:
   tutorial_codespeaksnake_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_prstemalexa_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_coderzfarm_string_detail_programming_languages: साचे (ब्लॉक्स)
-  tutorial_intelinofield_string_detail_programming_languages: Unplugged
-  tutorial_cablockchain_string_detail_programming_languages: Computational Thinking
+  tutorial_intelinofield_string_detail_programming_languages: अनप्लग केले
+  tutorial_cablockchain_string_detail_programming_languages: 'कॉम्प्युटेशनल विचार  '
   tutorial_nasaparachute_string_detail_programming_languages: Unplugged, Binary Code
   tutorial_nasascratch_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_nasaorbit_string_detail_programming_languages: साचे (ब्लॉक्स)
@@ -12685,7 +12838,7 @@ mr:
   some: यातील काही
   all: सर्व
   dont_know: मला माहीत नाही
-  language_label: Language
+  language_label: भाषा
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -12693,6 +12846,92 @@ mr:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Code.org वर प्रवेश
+  accessibility_hero_desc: प्रत्येक विद्यार्थ्याला संगणक शास्त्रात प्रवेश आहे याची
+    खात्री करून, अपंग विद्यार्थी आणि शिक्षक यांचा समावेश आणि पूर्ण सहभाग रोखणारे अडथळे
+    दूर करण्यासाठी आम्ही समर्पित आहोत.
+  accessibility_efforts_title: 2023 साठी आमचे प्रयत्न
+  accessibility_efforts_desc: 'पूर्णत: प्रवेश करण्यायोग्य व्यासपीठाचे आमचे ध्येय साध्य
+    करण्यासाठी, आम्ही एक सर्वसमावेशक कृती योजना राबवत आहोत ज्यात पुढील गोष्टींचा समावेश
+    आहे:'
+  accessibility_efforts_card_title_1: अंतर्गत प्रवेशयोग्यता प्रशिक्षण
+  accessibility_efforts_card_desc_1: आमचे उत्पादन आणि अभियांत्रिकी संघ डिसेंबर 2023
+    पर्यंत सर्वसमावेशक प्रवेशयोग्यता प्रशिक्षण पूर्ण करतील.
+  accessibility_efforts_card_title_2: VPAT विश्लेषण
+  accessibility_efforts_card_desc_2: बेसलाइन स्थापित करण्यासाठी आणि वार्षिक प्रगती
+    मोजण्यासाठी [स्वैच्छिक उत्पादन प्रवेशयोग्यता टेम्पलेट](%{voluntary_url}) पूर्ण
+    करत आहे. सप्टेंबर 2023 पर्यंत निकाल या पृष्ठावर उपलब्ध आहेत.
+  accessibility_efforts_card_title_3: प्रवेशयोग्य डिझाइनला समर्थन देणारी साधने
+  accessibility_efforts_card_desc_3: टीमच्या सदस्यांना टूल्समध्ये प्रवेश असेल जे सुनिश्चित
+    करतात की सर्व नवीन वैशिष्ट्ये प्रवेशयोग्यता लक्षात घेऊन डिझाइन केलेली आहेत आणि
+    तयार केली आहेत.
+  accessibility_efforts_card_title_4: प्रवेशयोग्य अभ्यासक्रम
+  accessibility_efforts_card_desc_4: आम्ही डिसेंबर 2023 पर्यंत संगणक विज्ञान तत्त्वे
+    आणि संगणक विज्ञान डिस्कव्हरीज  चे पहिल्या काही युनिट्ससाठी [WCAG स्तर AA अनुपालन](%{wcag_url})
+    साध्य करू.
+  accessibility_explore_title: Code.org ची प्रवेशयोग्यता संसाधने एक्सप्लोर करा
+  accessibility_explore_text: आमचे प्रवेशयोग्यता संसाधन पृष्ठ आमच्या वैशिष्ट्यांसाठी
+    आणि साधनांसाठी सर्वसमावेशक दस्तऐवज आणि मार्गदर्शन प्रदान करते, ज्यात प्रवेशयोग्य
+    तास कोड धडे, इमर्सिव्ह वाचक, कीबोर्ड नेव्हिगेशन आणि सानुकूलित पर्याय समाविष्ट
+    आहेत.
+  accessibility_explore_button: प्रवेशयोग्यता संसाधन पृष्ठ पहा
+  accessibility_help_us_title: आम्हाला सुधारण्यास मदत करा
+  accessibility_help_us_text: Code.org वर, आम्ही सक्रीय असतो आणि लगेच प्रतिसाद देण्यास
+    तत्पर असतो. आमच्या साधने आणि संसाधनांची प्रवेशयोग्यता सुधारण्यात मदत करण्यासाठी
+    तुमच्याकडे शिफारसी असल्यास, कृपया संपर्क साधा. सर्व विद्यार्थ्यांना संगणक विज्ञान
+    उपलब्ध करून देण्यात आम्हाला मदत केल्याबद्दल धन्यवाद!
+  accessibility_help_us_button: आम्हाला सांगा की आम्ही कसे सुधारू शकतो
+  accessibility_commit_title: प्रवेशयोग्यतेसाठी Code.org ची वचनबद्धता
+  accessibility_commit_text_1: Code.org चा विश्वास आहे की संगणक विज्ञान सर्व विद्यार्थ्यांसाठी
+    मूलभूत आहे आणि आम्ही आमच्या व्यासपीठावर आणि आमच्या अभ्यासक्रमात समानता, प्रवेश
+    आणि संधी सुनिश्चित करण्यासाठी वचनबद्ध आहोत.
+  accessibility_commit_text_2: आम्ही सर्व विद्यार्थ्यांच्या शिक्षणाच्या गरजा पूर्ण
+    करण्यासाठी एक समग्र दृष्टीकोन घेत आहोत आणि दिव्यांग विद्यार्थ्यांसाठी संगणक विज्ञान
+    शिक्षणाच्या प्रवेशातील अंतर कमी करण्यासाठी कार्य करत आहोत.
+  accessibility_commit_text_3: आम्ही छोट्या पासुन सुरुवात करत आहोत, परंतु आम्ही आमच्या
+    प्रगतीचे मोजमाप करू आणि जोपर्यंत आम्ही सर्वात क्लिष्ट प्रवेशयोग्यता आव्हाने सोडवत
+    नाही तोपर्यंत आम्ही पुनरावृत्ती करू.
+  accessibility_commit_text_4: Code.org वर, आम्ही आमच्या साधनांच्या प्रवेशयोग्यतेत
+    सतत सुधारणा करण्यासाठी वचनबद्ध आहोत आणि सर्व विद्यार्थी आणि शिक्षकांसाठी अधिक
+    समानता, प्रवेश आणि संधी या दिशेने हे महत्त्वाचे पाऊल उचलण्यास आम्ही उत्साहित आहोत.
+  accessibility_partner_title: आमचे भागीदार आणि शिफारसी
+  accessibility_partner_desc: अधिक प्रवेशयोग्य संगणक विज्ञान सामग्री शोधत असलेल्या
+    विद्यार्थ्यांसाठी आणि शिक्षकांसाठी आम्ही खालील संसाधनांची शिफारस करतो.
+  accessibility_card_title_1: सीएस मध्ये सर्वांना प्रवेश
+  accessibility_card_text_1: माध्यमिक शाळांमध्ये प्रवेशयोग्य कॉम्प्युटिंग आणण्यासाठी
+    शिक्षकांसाठी संसाधने आणि अपंग असलेल्या उच्च माध्यमिक विद्यार्थ्यांसाठी तंत्रज्ञान
+    क्षेत्रातील मार्गदर्शकांशी संपर्क साधण्यासाठी संसाधने.
+  accessibility_card_title_2: सर्वांसाठी ब्लॉक्स
+  accessibility_card_text_2: iPad साठी ब्लॉक-आधारित प्रोग्रामिंग वातावरण जे डॅश रोबोट
+    वापरून मूलभूत प्रोग्रामिंग संकल्पना शिकवते. व्हॉइसओव्हर, स्विच कंट्रोल आणि व्हॉइस
+    कंट्रोलसह प्रवेशयोग्य.
+  accessibility_card_title_3: कोड जम्पर
+  accessibility_card_text_3: दृष्टीदोष असलेल्या विद्यार्थ्यांसाठी भौतिक कोडिंग मदत/संसाधन.
+  accessibility_card_title_4: सर्वांसाठी सीएस
+  accessibility_card_text_4: एक संस्था जी संपूर्ण युनायटेड स्टेट्समधील विविध संस्थांसह
+    प्रकल्प आणि कार्यक्रमांचे समन्वय साधते.
+  accessibility_card_title_5: कर्णबधिर मुलांचा कोड
+  accessibility_card_text_5: कर्णबधिर किंवा श्रवणशक्ती कमी असलेल्या विद्यार्थ्यांना
+    सक्षम करण्यासाठी संगणक विज्ञान आणि तंत्रज्ञान शिक्षणाचा प्रचार करते.
+  accessibility_card_title_6: प्रत्येकजण कोड करू शकतात
+  accessibility_card_text_6: ऍपल द्वारे स्विफ्ट प्लेग्राउंड्ससाठी डिझाइन केलेला अभ्यासक्रम
+    जो प्रवेशयोग्यतेच्या गरजा असलेल्या विद्यार्थ्यांसाठी व्हॉइसओव्हर (सुधारित TTS)
+    आणि सानुकूलित अभ्यासक्रम प्रदान करतो.
+  accessibility_card_title_7: Khan Academy
+  accessibility_card_text_7: मथळे, उतारा आणि अॅनिमेशन गती कमी करण्याची क्षमता आणि
+    दृश्य-आश्रित सामग्री लपविण्याच्या क्षमतेसह विविध समायोजनांसह अभ्यासक्रम प्रदाता.
+    काही Code.org अभ्यासक्रम तसेच अतिरिक्त संगणकीय अभ्यासक्रम होस्ट करते.
+  accessibility_card_title_8: स्नॅप सर्किट्स
+  accessibility_card_text_8: एक शैक्षणिक उत्पादन जे सोल्डरलेस स्नॅप-टूगेदर इलेक्ट्रॉनिक
+    घटकांसह इलेक्ट्रॉनिक्स शिकवते. दृष्टीदोष असलेल्या विद्यार्थ्यांसाठी प्रवेश पॅक
+    समाविष्ट केला जाऊ शकतो.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: बौद्धिक अपंग विद्यार्थ्यांसाठी परस्परसंवादी कोडिंग रोबोटिक
+    बॉल आणि STEM शिक्षण किट. योग्य अनुप्रयोगासह जोडले जाणे आवश्यक आहे.
+  accessibility_card_title_10: कोरम
+  accessibility_card_text_10: 'कोरम वापरून Code.org च्या AP कॉम्प्युटर सायन्स प्रिन्सिपल्स
+    कोर्सचे रूपांतर, मूळत: अंध किंवा दृष्टिहीन विद्यार्थ्यांसाठी प्रवेशयोग्यता प्रदान
+    करण्यासाठी डिझाइन केलेली पुराव्यावर आधारित भाषा.'
   language_code:
     ar: Arabic
     az: Azerbaijani

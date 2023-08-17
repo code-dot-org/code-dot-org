@@ -1017,7 +1017,7 @@ pt-BR:
         - {}
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
       CSD U1 Test PSP match_2021:
@@ -1028,7 +1028,7 @@ pt-BR:
         - {}
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
       CSD U1 Test PSP match_2022:
@@ -1039,7 +1039,7 @@ pt-BR:
         - {}
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
       CSD U1 Test define a computer:
@@ -3247,12 +3247,18 @@ pt-BR:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
         title: drawSprites
+      CSD U3 drawing challenges_2021:
+        description: Experimente alguns desafios!
+        display_name: Desafios de desenho
+      CSD U3 drawing challenges_2022:
+        description: Experimente alguns desafios!
+        display_name: Desafios de desenho
       CSD U3 drawing practice choice_2021:
         description: Pratique muito!
-        display_name: Praticar
+        display_name: Pratique
       CSD U3 drawing practice choice_2022:
         description: Pratique muito!
-        display_name: Praticar
+        display_name: Pratique
       CSD U3 game intro:
         content1: descrição aqui
         markdown: |
@@ -4825,17 +4831,17 @@ pt-BR:
       CSD web conditionals practice choice_2022:
         display_name: Prática de Condicionais
       CSD web draw loop practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web draw loop practice choice_2022:
-        display_name: Praticar
+        display_name: Pratique
       CSD web movement practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web movement practice choice_2022:
-        display_name: Praticar
+        display_name: Pratique
       CSD web text practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web text practice choice_2022:
-        display_name: Praticar
+        display_name: Pratique
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |
           # Visão global
@@ -20779,6 +20785,14 @@ pt-BR:
         - correct: true
         questions:
         - {}
+      ml-club app-choice parent:
+        display_name: Personalize seu aplicativo
+      ml-club app-choice parent_2022:
+        display_name: Personalize seu aplicativo
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personalize seu aplicativo
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Personalize seu aplicativo
       ml-models-shoe survey:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)

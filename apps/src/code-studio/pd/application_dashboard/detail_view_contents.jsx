@@ -21,7 +21,7 @@ import {
   UNMATCHED_PARTNER_LABEL,
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ScholarshipDropdown} from '../components/scholarshipDropdown';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,

@@ -1867,13 +1867,21 @@ kn:
             lessonGroup-4:
               display_name: ಲೂಪ್‌ಗಳು
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
           lesson_groups:
             lessonGroup-2:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             lessonGroup-4:
               display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಡೇಟಾ
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
           lesson_groups:
             lessonGroup-2:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
@@ -1883,7 +1891,12 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             lessonGroup-7:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            lessonGroup-8:
+              display_name: ಡೇಟಾ
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
           lesson_groups:
             lessonGroup-2:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
@@ -1893,6 +1906,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             lessonGroup-6:
               display_name: ಡೇಟಾ
+            lessonGroup-8:
+              display_name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1922,3 +1937,5 @@ kn:
             lessonGroup-7:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+        how-ai-works-2023:
+          title: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ

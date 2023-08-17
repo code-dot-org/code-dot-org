@@ -23,8 +23,14 @@
         "debugging/coursea/2021": {
           "word": "ការបំបាត់កំហុស (Debugging)"
         },
+        "drop/coursea/2021": {
+          "word": "ទម្លាក់"
+        },
         "debugging/courseb/2021": {
           "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "drop/courseb/2021": {
+          "word": "ទម្លាក់"
         },
         "debugging/coursec/2021": {
           "word": "ការបំបាត់កំហុស (Debugging)"
@@ -86,6 +92,9 @@
         "define/express/2021": {
           "word": "កំណត់"
         },
+        "drop/pre-express/2021": {
+          "word": "ទម្លាក់"
+        },
         "debugging/pre-express/2021": {
           "word": "ការបំបាត់កំហុស (Debugging)"
         },
@@ -110,8 +119,14 @@
         "debugging/coursea/2022": {
           "word": "ការបំបាត់កំហុស (Debugging)"
         },
+        "drop/coursea/2022": {
+          "word": "ទម្លាក់"
+        },
         "debugging/courseb/2022": {
           "word": "ការបំបាត់កំហុស (Debugging)"
+        },
+        "drop/courseb/2022": {
+          "word": "ទម្លាក់"
         },
         "debugging/coursec/2022": {
           "word": "ការបំបាត់កំហុស (Debugging)"
@@ -172,6 +187,9 @@
         },
         "define/express/2022": {
           "word": "កំណត់"
+        },
+        "drop/pre-express/2022": {
+          "word": "ទម្លាក់"
         },
         "debugging/pre-express/2022": {
           "word": "ការបំបាត់កំហុស (Debugging)"

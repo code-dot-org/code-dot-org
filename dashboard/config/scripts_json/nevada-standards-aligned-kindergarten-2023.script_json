@@ -13,12 +13,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-kindergarten",
-    "serialized_at": "2023-07-24 17:41:00 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-09 22:27:36 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -81,7 +82,7 @@
       "position": 5,
       "properties": {
         "display_name": "Data",
-        "description": "Students will recognize that data can be collected and stored on different computing devices.  See codenv.org/lessons/grade-k-lesson-11"
+        "description": "Students will recognize that data can be collected and stored on different computing devices.  See [codenv.org/lessons/grade-k-lesson-11] (codenv.org/lessons/grade-k-lesson-11)"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",
@@ -299,7 +300,7 @@
       "name": "Data",
       "absolute_position": 11,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
         "overview": "Students will recognize that data can be collected and stored on different computing devices.  See codenv.org/lessons/grade-k-lesson-11"
@@ -5262,6 +5263,16 @@
       }
     },
     {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nv_cs_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "nv_cs_standards"
+      }
+    },
+    {
       "name": "Pair-Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming",
@@ -5666,6 +5677,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-kindergarten-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nv_cs_standards",
         "script.name": "nevada-standards-aligned-kindergarten-2023"
       }
     },
@@ -6389,5 +6406,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

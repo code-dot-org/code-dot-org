@@ -591,7 +591,7 @@
           "type": "វីដេអូ"
         },
         "sprites_1/csd/2021": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "sprite_properties/csd/2021": {
           "name": "លក្ខណៈសម្បត្តិនៃ sprite"
@@ -886,14 +886,20 @@
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
           "type": "វីដេអូ"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "ការបង្កើត Sprites"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "វីដេអូ"
@@ -928,8 +934,14 @@
         "sprite_lab_documentation/express/2021": {
           "name": "ឯកសារ Sprite Lab"
         },
+        "making_sprites/express/2021": {
+          "name": "ការបង្កើត Sprites"
+        },
         "sprite_lab_documentation_1/express/2021": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
         "pause_and_think_online/express/2021": {
           "type": "វីដេអូ"
@@ -1040,13 +1052,13 @@
           "type": "វីដេអូ"
         },
         "sprites/csd/2022": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "the_animation_tab/csd/2022": {
           "type": "វីដេអូ"
         },
         "sprites_1/csd/2022": {
-          "name": "អាង(Sprites)"
+          "name": "Sprites"
         },
         "sprite_properties/csd/2022": {
           "name": "លក្ខណៈសម្បត្តិនៃ sprite"
@@ -1378,8 +1390,11 @@
           "type": "វីដេអូ"
         },
         "introducing_sprite_lab_1/coursef/2022": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
           "type": "វីដេអូ"
+        },
+        "making_sprites/coursef/2022": {
+          "name": "ការបង្កើត Sprites"
         },
         "ai_impact_on_society/coursef/2022": {
           "type": "វីដេអូ"
@@ -1407,6 +1422,9 @@
         },
         "sprite_lab_documentation/express/2022": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
         "pause_and_think_online/express/2022": {
           "type": "វីដេអូ"

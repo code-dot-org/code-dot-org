@@ -1282,7 +1282,7 @@
           "courseA_artist_loops2_b": "Використовуй цей блок <xml><block type=\"simple_move_right\"/></xml> для розв'язання завдання."
         },
         "courseA_artist_loops3_2021": {
-          "courseA_artist_loops3_a": "Повільно проведи пальцем по програмі, щоб зрозуміти, де виникла проблема.",
+          "courseA_artist_loops3_a": "Повільно проведи пальцем по програмі та побачиш, де виникла проблема.",
           "courseA_artist_loops3_b": "Для розв'язання цього завдання тобі знадобиться блок, подібний до цього.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
@@ -1341,7 +1341,7 @@
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_a": "Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює.",
-          "courseA_artist_loops6_b": "Для виконання цього завдання тобі знадобляться 2 блоки у 2 різних напрямках."
+          "courseA_artist_loops6_b": "Для виконання цього завдання тобі знадобиться 2 блоки у 2 напрямках."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон."
@@ -1360,12 +1360,12 @@
         },
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.",
-          "courseA_artist_loops7_b": "Спочатку напиши код для однієї хвилі, а потім повтори, щоб намалювати ще дві.",
-          "courseA_artist_loops7_c": "Пам'ятай, що в одному циклі <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> можна розміщувати кілька блоків. "
+          "courseA_artist_loops7_b": "Спочатку напиши код для однієї хвилі, а потім повтори, щоб намалювати дві інші.",
+          "courseA_artist_loops7_c": "Пам'ятай, що ти можеш розмістити більше одного блоку в одному циклі <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Спробуй запустити код і побачиш, що в ньому всередині.",
-          "courseA_artist_loops8_b": "Як можна організувати цикл у коді, який нам наданий?",
+          "courseA_artist_loops8_b": "Як можна організувати цикл у коді, який нам надано?",
           "courseA_artist_loops8_c": "Що робить код?\\\nЩо він мав би робити?\\\nПро що це нам говорить?"
         },
         "courseA_artist_loops9": {
@@ -1404,8 +1404,8 @@
           "courseA_artist_loops_challenge2_c": "Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку."
         },
         "courseA_artist_loops_challenge2a_2021": {
-          "courseA_artist_loops_challenge2_a": "Блоки на зразок цього <xml>  <block type=\"simple_move_up_left\"/></xml> дозволять нашому Художнику рухатися під певним кутом!",
-          "courseA_artist_loops_challenge2_b": "Після встановлення одного намету, \"підстрибни\" двічі, щоб дістатися до наступного!",
+          "courseA_artist_loops_challenge2_a": "Блоки на зразок цього <xml>  <block type=\"simple_move_up_left\"/></xml> дозволять нашому Художнику рухатися під нахилом!",
+          "courseA_artist_loops_challenge2_b": "Після закінчення одного намету, \"підстрибни\" двічі, щоб дістатися до наступного!",
           "courseA_artist_loops_challenge2_c": "Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку."
         },
         "courseA_collector_loops1": {
@@ -1718,8 +1718,8 @@
           "courseA_playLab_events2_b": "Ось код, який тобі потрібен, щоб виконати це завдання:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events3_2021": {
-          "courseA_playLab_events3_a": "Перетягни цей блок <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> та з'єднай з блоком <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>.",
-          "courseA_playLab_events3_b": "Не забувай використовувати клавішу зі стрілкою вліво, щоб переміщати Хорхе до прапорця після того, як напишеш програму. Коли прапорець стане зеленим, завдання виконане!"
+          "courseA_playLab_events3_a": "Перетягни цей блок <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> та з'єднай його знизу блоку <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>.",
+          "courseA_playLab_events3_b": "Не забувай використовувати клавішу зі стрілкою вліво, щоб переміщати Хорхе до прапорця після того, як напишеш програму. Коли прапорець стане зеленим, завдання виконано!"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playLab_events4_a": "Ось блок подій, який тобі знадобиться, щоб змусити Хорхе рухатися вправо:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
@@ -1730,7 +1730,7 @@
           "courseA_playLab_events5_b": "Ти знаєш, що можна змінити клавішу для стрілки події, натиснувши на картинку в цьому блоці та обравши іншу клавішу?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_a": "Ось блок подій, який ти можеш використати, щоб змусити Хорхе зробити щось коли ти клацаєш мишею по ньому:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_a": "Ось блок подій, який ти можеш використати, щоб змусити Хорхе зробити щось при клацанні по ньому:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
           "courseA_playLab_events6_b": "Ось блок, який ти можеш використати для зміни фону:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>.",
           "courseA_playLab_events6_c": "Ось блок, який ти можеш використати для відтворення випадкового звуку:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
@@ -1738,15 +1738,15 @@
           "courseA_playLab_events7_a": "Використовуй цей блок, щоб керувати ситуаціями зіткнення героїв.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2021": {
-          "courseA_playlab_events_challenge1_a": "Зроби так, після клацання на Робін з'являвся пінгвін Ваддлз!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Зроби так, щоб коли ти клацаєш на пінгвіні Ваддлзі, з'являвся привид Бу!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Зроби так, щоб коли ти клацаєш на Бу, з'являвся пухнастий монстр Джейден!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Зроби так, щоб коли ти клацаєш на монстрі, з'являвся робот Спіфф!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_e": "І останнє, зроби так, щоб клацання на роботі Спіффі викликало чарівника Венделя!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Зроби так, щоб з'являвся пінгвін Ваддлз при натисканні на Робіна!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Зроби так, щоб з'являвся привид Бу при натисканні на пінгвіна Ваддлз!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Зроби так, щоб з'являвся пухнастий монстр Джейден при натисканні на Бу!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Зроби так, щоб з'являвся робот Спіфф при натисканні на монстра!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "І останнє, зроби так, щоб з'являвся чарівник Вендель при натисканні на Спіффа!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2021": {
           "courseA_playlab_events_challenge2_a": "Ти можеш змусити пташку заспівати.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Ти можеш змусити робота подавати сигнал.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Ти можеш змусити робота пищати.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Ти можеш змусити розлюченого монстра гарчати.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp12022": {
@@ -1762,7 +1762,7 @@
           "2": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "Якщо Скрет робить щось не те, переконайся, що обидва блоки повністю з'єднані, а потім знову натисни \"Запустити\".",
+          "1": "Якщо Скрет робить не те, що ти хочеш, переконайся, що обидва блоки повністю з'єднані, а потім знову натисни \"Запустити\".",
           "2": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
         },
         "courseB_Scrat_ramp2_2021": {
@@ -1905,12 +1905,12 @@
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Обережно, крига тріснула! Скрет може впасти у воду!",
-          "courseB_iceage_loops10_b": "Спробуй проговорити кроки вголос або записати їх на аркуші паперу. Бачиш закономірність?",
+          "courseB_iceage_loops10_b": "Спробуй проговорити кроки вголос або записати їх на аркуші паперу. Ти бачиш закономірність чи шаблон?",
           "courseB_iceage_loops10_c": "Це довге завдання! Йди цим шляхом."
         },
         "courseB_iceage_loops1_2021": {
           "courseB_iceage_loops1_a": "Обережно, крига тріснула! Скрет може провалитися!",
-          "courseB_iceage_loops1_b": "Ти маєш використати цей блок:\n\n<xml><block type=\"maze_moveEast\"/></xml>."
+          "courseB_iceage_loops1_b": "Ти маєш використовувати цей блок:\n\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseB_iceage_loops2": {
           "courseB_iceage_loops2_b": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу."
@@ -1925,7 +1925,7 @@
           "courseB_iceage_loops2_b": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу."
         },
         "courseB_iceage_loops2_2021": {
-          "courseB_iceage_loops2_a": "Розбий це завдання на 2 частини: одна перед поворотом, а друга - після.",
+          "courseB_iceage_loops2_a": "Розбий цю задачку на 2 частини, одна частинка тебе чекає перед поворотом, а інша після.",
           "courseB_iceage_loops2_b": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.",
           "courseB_iceage_loops2_c": "Йди цим шляхом та проведи Скрета до жолудя."
         },
@@ -1946,28 +1946,28 @@
           "courseB_iceage_loops4_b": "Не бійся запускати свій код і подивитися, що станеться!"
         },
         "courseB_iceage_loops4_2021": {
-          "courseB_iceage_loops4_a": "Спробуй записати кроки, які має зробити Скрет, щоб дістатися до жолудя. Бачиш закономірність?",
+          "courseB_iceage_loops4_a": "Спробуй записати кроки, які має зробити Скрет, щоб дістатися до жолудя. Бачиш закономірність чи шаблон?",
           "courseB_iceage_loops4_b": "Не бійся запускати свій код і подивитися, що станеться!",
-          "courseB_iceage_loops4_c": "Скрет має піти цим шляхом."
+          "courseB_iceage_loops4_c": "Цим шляхом має піти Скрет."
         },
         "courseB_iceage_loops6_2021": {
-          "courseB_iceage_loops6_a": "Твій кінцевий код матиме **три** блоки руху.",
-          "courseB_iceage_loops6_b": "Тобі потрібно лише створити ще **один** цикл!",
+          "courseB_iceage_loops6_a": "Твій кінцевий код матиме **три** блоки для руху.",
+          "courseB_iceage_loops6_b": "Тобі потрібно лише створити **один** додатковий цикл!",
           "courseB_iceage_loops6_c": "Твій кінцевий маршрут виглядає так."
         },
         "courseB_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Якщо ти застряг, спробуй записати кроки на аркуші паперу. Бачиш закономірність?",
-          "courseB_iceage_loops7_b": "Щоб дістатися жолудя, Скрет має піти цим шляхом."
+          "courseB_iceage_loops7_a": "Якщо ти застряг, спробуй записати кроки на аркуші паперу. Бачиш закономірність чи шаблон?",
+          "courseB_iceage_loops7_b": "Цим шляхом має піти Скрет, щоб дістатися жолудя."
         },
         "courseB_iceage_loops8_2021": {
           "courseB_iceage_loops8_a": "Перевір, чи правильні блоки для руху? Що ще можна змінити?",
-          "courseB_iceage_loops8_b": "Перший цикл має повторюватися **3** рази, другий - **5** разів, третій - **4** рази, а останній - **4** рази.",
+          "courseB_iceage_loops8_b": "Перший цикл має повторюватися **3** рази, другий - **5** разів, третій - **4** рази та останній - **4** рази.",
           "courseB_iceage_loops8_c": "Використовуй цикли, щоб допомогти Скрету пройти цим шляхом."
         },
         "courseB_iceage_loops9_2021": {
-          "courseB_iceage_loops9_a": "Виникли труднощі? Спробуй розбити завдання на менші частинки. Не бійся запускати програму в процесі створення коду!",
+          "courseB_iceage_loops9_a": "Потрапив у халепу? Спробуй розбити завдання на менші частинки. Не бійся запускати завдання на виконання поки складаєш блоки!",
           "courseB_iceage_loops9_b": "Твій кінцевий код має містити **4** цикли.",
-          "courseB_iceage_loops9_c": "Щоб дістати жолудь, Скрет має пройти цим маршрутом."
+          "courseB_iceage_loops9_c": "Скрет має пройти цим шляхом та дістати жолудь."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Приєднуй блоки до блоку <xml><block type=\"when_run\"/></xml>, щоб змусити Скрета рухатись!",
@@ -2152,38 +2152,38 @@
           "courseB_playlab_events_challenge2_d": "Спробуй змішувати!\n\nЗроби так, щоб одні тварини давали більше балів, ніж інші.\nВикористовуй різні звуки.\nЗмінюй настрій тварин!"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Додавай блоки по одному і натискай \"Запустити\", щоб побачити результат.",
-          "courseB_starWars_prog1_b": "Для вирішення завдання тобі потрібно буде йти на схід. Як далеко тобі потрібно йти?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_a": "Спробуй додати блоки по одному, а потім натисни \"Запустити\" і побачиш, що станеться.",
+          "courseB_starWars_prog1_b": "Для вирішення задачки тобі потрібно буде дістатися Сходу. Як далеко тобі потрібно йти?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
-          "courseB_starWars_prog2_a": "Розділи це завдання на дві частини. Збери одну груду металобрухту, а потім придумай, як дістатися до іншої."
+          "courseB_starWars_prog2_a": "Розділи цю задачку на дві частини. Знайди одну груду металобрухту, а потім придумай, як дістатися до іншої."
         },
         "courseB_starWars_prog3_2021": {
           "courseB_starWars_prog3_a": "Для вирішення цієї задачки тобі потрібно пройти 3 шляхи.",
-          "courseB_starWars_prog3_b": "Створюй код по одному фрагменту за раз. Запускай його і дивись, куди рухатися далі."
+          "courseB_starWars_prog3_b": "Створюй по одному фрагменту коду за раз. Запусти його та з'ясуй, куди рухатися далі."
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "Створюй код по одному фрагменту за раз. Запускай його і дивись, куди рухатися далі.",
-          "courseB_starWars_prog4_b": "Спробуй використати блок `повторити` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_a": "Створюй по одному фрагменту коду за раз. Запусти його та з'ясуй, куди рухатися далі.",
+          "courseB_starWars_prog4_b": "Спробуй використовувати блок `повторити` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
           "courseB_starWars_prog5_a": "Чи не схожий цей малюнок на попередню задачку?",
-          "courseB_starWars_prog5_b": "BB-8 збиратиме металобрухт, коли переїжджатиме через нього.",
-          "courseB_starWars_prog5_c": "Обведи цей малюнок пальцем. Порахуй шматочки металу під час руху.",
+          "courseB_starWars_prog5_b": "BB-8 буде збирати металобрухт, коли буде переходити через нього.",
+          "courseB_starWars_prog5_c": "Обведи цей малюнок пальчиком. Порахуй шматочки металу під час руху.",
           "courseB_starWars_prog5_da": "Поглянь, що станеться, якщо використовувати той самий розв'язок, що й у задачі зі сходами:"
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "Цей малюнок - це лише сходинка з двома рухами в кожному напрямку!",
-          "courseB_starWars_prog6_b": "Спробуй використати блок `повторити` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Спробуй використовувати блок `повторити` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
           "courseB_starWars_prog7_a": "Чи не схожий цей малюнок на попередню задачку?",
-          "courseB_starWars_prog7_b": "BB-8 збиратиме металобрухт, коли переїжджатиме через нього.",
-          "courseB_starWars_prog7_c": "Спробуй намалювати великий малюнок сходинок поверх цієї задачки. Чи проходить він через увесь металобрухт?"
+          "courseB_starWars_prog7_b": "BB-8 буде збирати металобрухт, коли буде переходити через нього.",
+          "courseB_starWars_prog7_c": "Спробуй намалювати великий малюнок сходинок поверх цієї задачки. Чи покриває він увесь металобрухт?"
         },
         "courseB_starWars_prog8_2021": {
-          "courseB_starWars_prog8_a": "Ти можеш проходити клітинками кілька разів.",
-          "courseB_starWars_prog8_b": "Спробуй використати блок `повторити` і побачиш що станеться з кодом, який ми додали всередину.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_a": "Ти можеш повертатися назад по шляху, де ти вже побував.",
+          "courseB_starWars_prog8_b": "Спробуй використовувати блок `повторення` і побачиш що станеться з кодом, який ми додали всередину.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Не бійся помилятися! Запусти код, щоб побачити, що станеться, навіть якщо завдання ще не вирішене до кінця."
@@ -2326,6 +2326,9 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "Коло має 360 градусів. Помножте ступені у свою чергу на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані повороти, щоб побачити, що це працює!"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Коло має 360 градусів. Помнож градуси свого повороту на кількість повторнень. Чи дорівнює результат 360?\nПеревір запропоновані обертання, щоб переконатися, що це працює!\n\nОсь кілька прикладів, щоб почати:\n\n-   Спробуй виконати поворот на 60 градусів 6 разів \n-   Спробуй виконати поворот на 45 градусів 8 разів \n-   Спробуй виконати поворот на 30 градусів 12 разів"
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "Коло має 360 градусів. Помножте ступені у свою чергу на кількість разів, коли ви повторюєте. Чи він дорівнює 360? Перевірте запропоновані повороти, щоб побачити, що це працює!"

@@ -69,7 +69,7 @@
           "display_name": "លក្ខណៈសម្បត្តិនៃ sprite"
         },
         "csd-2022/sprites": {
-          "display_name": "អាង(Sprites)"
+          "display_name": "Sprites"
         },
         "csd-2022/the-draw-loop": {
           "display_name": "ការគូររង្វិលជុំដដែលៗ"
@@ -84,7 +84,7 @@
           "display_name": "បន្ទប់វេប"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

@@ -1,0 +1,27 @@
+name 'CSA-SE-CV-PreSurvey-and-Assessment'
+title 'Pre-Survey and Assessment: Software Engineering and Computer Vision'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA SE-CV Student Pre-Survey Preamble'
+level 'CSA-SE-CV-Pre-Survey-Q01'
+level 'CSA-SE-CV-Pre-Survey-Q02'
+level 'CSA-SE-CV-Pre-Survey-Q03'
+level 'CSA-SE-CV-Pre-Survey-Q04'
+level 'CSA-SE-CV-Pre-Survey-Q05'
+level 'CSA-SE-CV-Pre-Survey-Q06'
+level 'CSA-SE-CV-Pre-Survey-Q07'
+level 'CSA-SE-CV-Pre-Survey-Q08'
+level 'CSA-SE-CV-Pre-Survey-Q09'
+
+page
+text 'CSA SE-CV Student Pre-Assessment Preamble'
+level 'CSA-SE-CV-Pre-Assessment-Q01'
+level 'CSA-SE-CV-Pre-Assessment-Q02'
+level 'CSA-SE-CV-Pre-Assessment-Q03'
+level 'CSA-SE-CV-Pre-Assessment-Q04'
+level 'CSA-SE-CV-Pre-Assessment-Q05'
+level 'CSA-SE-CV-Pre-Assessment-Q06'
+level 'CSA-SE-CV-Pre-Assessment-Q07'
+level 'CSA-SE-CV-Pre-Assessment-Q08'

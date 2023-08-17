@@ -10572,7 +10572,7 @@
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._"
         },
         "59a9f2f9-23f8-4562-a6ed-09063806bcff": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
           "name": "Hallo Wereld"
@@ -10581,7 +10581,7 @@
           "progression_name": "Vrije Speelruimte"
         },
         "ff807207-f4fc-4368-8df5-b4a35942dd53": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "ebbcd2fa-1991-41d3-a054-232b53cf8f17": {
           "name": "Reflectie"
@@ -11506,7 +11506,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's](https://hourofcode.com/us/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan.”"
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here][1] aan.”"
           ]
         },
         "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
@@ -11523,25 +11523,25 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "description": "Vraag de leerlingen om na te denken over de activiteiten van de dag. Wat hebben ze geleerd over coderen? Programmeren? Debuggen? Wat vinden ze van informatica en code nadat ze een uur hebben rondgekeken?"
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](https://studio.code.org/certificates/batch?course=bWM=) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Volgende stappen",
-          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn](<>) te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
+          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn][0] te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Geef elke student een [„Uitrijkaart”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
+          "description": "Geef elke student een [„Uitrijkaart”][0] en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Na het Uur Code",
-          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science](https://code.org/teach)** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart](https://code.org/volunteer/local)"
+          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals][0] cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science][1]** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart][2]"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
@@ -11560,7 +11560,7 @@
           "name": "Kunstenaar"
         },
         "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](<>)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Introductie",
@@ -11601,7 +11601,7 @@
         },
         "f6bcac9d-cd44-435f-8565-57a5926542f8": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Volgende stappen"
@@ -11637,7 +11637,7 @@
         },
         "2458fd7f-011d-4251-8877-2e90d5d55684": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Volgende stappen"
@@ -11670,11 +11670,11 @@
         },
         "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Volgende stappen",
-          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn](<>) te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
+          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn][0] te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
         },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
           "name": "Na het Uur Code"
@@ -11699,11 +11699,11 @@
         },
         "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Volgende stappen",
-          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn](<>) te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
+          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn][0] te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
@@ -11719,7 +11719,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Vier jouw deelname"
@@ -11749,7 +11749,7 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Vier jouw deelname"
@@ -11774,7 +11774,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Vier jouw deelname"
@@ -11792,18 +11792,18 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
@@ -11812,18 +11812,18 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
@@ -11832,18 +11832,18 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
@@ -11852,18 +11852,18 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
@@ -11872,18 +11872,18 @@
           ]
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "3711e1c5-c206-4510-b260-99ee8f061a4c": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
@@ -11892,25 +11892,25 @@
           ]
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Hallo Wereld",
           "progression_name": "Hallo Wereld"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Reflectie",
-          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections][0] voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen][1]."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### De voorbereiding.\n\nHeet de leerlingen welkom in de klas en introduceer heel kort de activiteit van vandaag. \n\nDeze les is een echte verassing voor de leerlingen. Waarschijnlijk hebben de meeste leerlingen al van Minecraft gehoord, maar geef een korte introductie voor degenen die het niet kennen.\nMinecraft is een spel van kubussen. Je kunt spelen als Alex of Steve terwijl je door doolhoven werkt. Je moet voorwerpen oppikken en verkennen in een wereld die bestaat uit kubussen van dingen.\n\nZeg: \"Vandaag gaan we een uur lang leren coderen. Heeft iemand hier al eens van de term \"code\" gehoord? Wat betekent het?\n\nDe leerlingen kunnen zeggen dat een \"code\" een soort geheime boodschap is, of dat het op een of andere manier met computers te maken heeft.\n\nVertaald met www.DeepL.com/Translator (gratis versie)"
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's](https://hourofcode.com/us/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan.”"
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here][1] aan.”"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -11923,7 +11923,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Heldenreis",
-          "description": "Daag je leerlingen uit om de [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) tutorial te voltooien.\n\nAfhankelijk van de leeftijd en vaardigheden van uw leerlingen kunt u overwegen: \n\n-   Voor jongere leerlingen raden we u aan uw klas in paren te verdelen en elke groep te vragen samen te werken om de tutorial te voltooien met behulp van [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Voor leerlingen in de middenbouw vinden we dat zelfstandig werken aan tutorials goed werkt. Soms helpt het om leerlingen hun eigen tutorial te laten kiezen. Als leerlingen niet geïnteresseerd zijn in Minecraft, kunnen ze een soortgelijke ervaring opdoen met de tutorials [Codeer met Anna en Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) of [Star Wars](https://code.org/starwars).\n-   Voor oudere of volwassen leerlingen werkt het leerprogramma [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) uitstekend als zelfstandige uitdaging of als programmeeractiviteit in tweetallen."
+          "description": "Daag je leerlingen uit om de [Minecraft: Hero's Journey][0] tutorial te voltooien.\n\nAfhankelijk van de leeftijd en vaardigheden van uw leerlingen kunt u overwegen: \n\n-   Voor jongere leerlingen raden we u aan uw klas in paren te verdelen en elke groep te vragen samen te werken om de tutorial te voltooien met behulp van [pair programming][1].\n-   Voor leerlingen in de middenbouw vinden we dat zelfstandig werken aan tutorials goed werkt. Soms helpt het om leerlingen hun eigen tutorial te laten kiezen. Als leerlingen niet geïnteresseerd zijn in Minecraft, kunnen ze een soortgelijke ervaring opdoen met de tutorials [Codeer met Anna en Elsa][2] of [Star Wars][3].\n-   Voor oudere of volwassen leerlingen werkt het leerprogramma [Minecraft: Hero's Journey][4] uitstekend als zelfstandige uitdaging of als programmeeractiviteit in tweetallen."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -11931,7 +11931,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Heldenreis"
@@ -11941,18 +11941,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](https://studio.code.org/certificates/batch?course=bWM=) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Volgende stappen",
-          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn](<>) te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
+          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn][0] te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Geef elke student een [„Uitrijkaart”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
+          "description": "Geef elke student een [„Uitrijkaart”][0] en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Na het Uur Code",
-          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science](https://code.org/teach)** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart](https://code.org/volunteer/local)"
+          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals][0] cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science][1]** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart][2]"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -11991,7 +11991,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's](https://hourofcode.com/us/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan.”"
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here][1] aan.”"
           ]
         },
         "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
@@ -12008,20 +12008,20 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "description": "Vraag de leerlingen om na te denken over de activiteiten van de dag. Wat hebben ze geleerd over coderen? Programmeren? Debuggen? Wat vinden ze van informatica en code nadat ze een uur hebben rondgekeken?"
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Volgende stappen"
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Geef elke student een [„Uitrijkaart”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
+          "description": "Geef elke student een [„Uitrijkaart”][0] en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Na het Uur Code"
@@ -12040,7 +12040,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Vier jouw deelname"
@@ -12065,11 +12065,11 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Volgende stappen"
@@ -12082,7 +12082,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's](https://hourofcode.com/us/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan.”"
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here][1] aan.”"
           ]
         },
         "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
@@ -12097,17 +12097,17 @@
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Geef elke student een [„Uitrijkaart”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
+          "description": "Geef elke student een [„Uitrijkaart”][0] en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "description": "Vraag de leerlingen om na te denken over de activiteiten van de dag. Wat hebben ze geleerd over coderen? Programmeren? Debuggen? Wat vinden ze van informatica en code nadat ze een uur hebben rondgekeken?"
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](https://studio.code.org/certificates/batch?course=bWM=) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Volgende stappen"
@@ -12121,7 +12121,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's](https://hourofcode.com/us/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan.”"
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met programmeren is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen inspirerend zou vinden en laat die nu zien. Voor jongere leerlingen raden we [The Hour of Code is Here][1] aan.”"
           ]
         },
         "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
@@ -12138,25 +12138,25 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "description": "Vraag de leerlingen om na te denken over de activiteiten van de dag. Wat hebben ze geleerd over coderen? Programmeren? Debuggen? Wat vinden ze van informatica en code nadat ze een uur hebben rondgekeken?"
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](https://studio.code.org/certificates/batch?course=bWM=) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Volgende stappen",
-          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn](<>) te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
+          "description": "Laat de leerlingen weten dat als ze de activiteit van vandaag leuk vonden, ze veel opties hebben om door te gaan met programmeren. Moedig leerlingen aan om naar [code.org/learn][0] te gaan voor een lijst met opties, of, als je een van de vervolgactiviteiten plant, vertel de leerlingen wat er in de toekomst in je klas komt."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Geef elke student een [„Uitrijkaart”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
+          "description": "Geef elke student een [„Uitrijkaart”][0] en vraag hen om samen te vatten wat ze vandaag hebben geleerd, hoe ze zich voelden of wat ze hebben meegemaakt. Leerlingen kunnen tekenen, schrijven of zich uitdrukken op elke manier die zij prettig vinden. Verzamel een „uitrijkaart” van elke student die de kamer verlaat. Als je wilt, kun je de „Exit Tickets (uitrijkaarten)” op een prikbord of op een prominente plek in de school plaatsen als herinnering aan je Hour of Code."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Na het Uur Code",
-          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science](https://code.org/teach)** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart](https://code.org/volunteer/local)"
+          "description": "Nadat uw Hour of Code is afgelopen, zijn er vele manieren om het onderwijs in informatica in uw klassen (tot groep 7) voort te zetten. Hier zijn enkele ideeën:\n\n-   **Leer de [Code Studio Computer Science Fundamentals][0] cursussen**. Deze zes cursussen zijn ontworpen voor jonge leerlingen. Leerlingen werken zich een weg door een reeks puzzels die hen leren coderen, en docenten hebben toegang tot boeiende lesplannen die helpen het leren tot leven te brengen. Code.org biedt gratis professionele ontwikkeling voor deze cursussen, online of persoonlijk.\n-   **Bezoek [You can Teach Computer Science][1]** voor meer cursussuggesties.\n-   Nodig een informaticadeskundige uit om met uw klas over zijn of haar werk te praten\\*\\*. Kent u geen plaatselijke informaticadeskundigen? Neem contact op met een vrijwilliger op onze [vrijwilligerskaart][2]"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
@@ -12237,11 +12237,11 @@
           ]
         },
         "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
-          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn](http://code.org/learn)te gaan."
+          "description": "Als een groep of individu voortijdig klaar is, kunnen ze een andere tutorial proberen door naar [code.org/learn][0]te gaan."
         },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
           "name": "Vier jouw deelname",
-          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat](http://code.org/certificates) met zijn of haar naam erop."
+          "description": "Leg uit dat je vandaag een uur aan het coderen bent, want deze week is het Computer Science Education Week, en miljoenen andere studenten over de hele wereld hebben deze week ook een Hour of Code geleerd. Feliciteer studenten met hun deelname aan deze wereldwijde beweging.\n\nGeef elke student [een certificaat][0] met zijn of haar naam erop."
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
           "name": "Volgende stappen"
@@ -12252,7 +12252,7 @@
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
           "description": "#### De voorbereiding\n\nVerwelkom de leerlingen in de klas en introduceer de activiteit van de dag.",
           "tips": [
-            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met coderen is door een van [onze inspirerende video's](https://hourofcode.com/promote/resources#videos) te laten zien. Kies er een waarvan je denkt dat de leerlingen hem inspirerend vinden en laat die nu zien. Voor leerlingen in de middenbouw raden we [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw) aan."
+            "Een manier om de Hour of Code te introduceren als je zelf niet zo bekend bent met coderen is door een van [onze inspirerende video's][0] te laten zien. Kies er een waarvan je denkt dat de leerlingen hem inspirerend vinden en laat die nu zien. Voor leerlingen in de middenbouw raden we [The Hour of Code is Here][1] aan."
           ]
         },
         "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
@@ -12262,7 +12262,7 @@
           "description": "Moedig de leerlingen aan om te vertellen hoe zij hun creativiteit uiten, bijvoorbeeld met kunst, dans, muziek of schrijven. Vraag de leerlingen, als vervolgvraag, wat zij gebruiken om hun inspiratie te krijgen voor hun creativiteit. "
         },
         "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
-          "description": "**Lees samen poëzie:** Lees samen als klas een [few poems](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) en oefen het benoemen van de stemming van elk gedicht. Moedig de leerlingen aan hun interpretatie te delen, zelfs als die verschilt van die van iemand anders. "
+          "description": "**Lees samen poëzie:** Lees samen als klas een [few poems][0] en oefen het benoemen van de stemming van elk gedicht. Moedig de leerlingen aan hun interpretatie te delen, zelfs als die verschilt van die van iemand anders. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
           "name": "Poëzie",

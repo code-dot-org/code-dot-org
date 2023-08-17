@@ -119,7 +119,8 @@ sq:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
-    microsoft_v2_auth: 'Llogaria e Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Të zgjuar'
     powerschool: 'Shkolla e fuqizuar'
     forgot_password: 'Keni harruar fjalëkalimin?'
     migration_success: 'Suksese! Ju keni përditësuar përvojën tonë të llogarisë së re.'
@@ -155,9 +156,9 @@ sq:
     birthday: 'Ditëlindja (jo e domosdoshme)'
     age: 'Mosha'
     user_type: 'A jeni nxënës apo mësues?'
-    submit: 'Rregjistrohu'
+    submit: 'Regjistrohu'
     go_to_account: 'Shko te llogaria ime'
-    teacher: 'A jeni një mësues?'
+    teacher: 'A jeni një mësimdhënës?'
     valid_username: "I disponueshëm!"
     invalid_username: "Emri i përdoruesit duhet të ketë të paktën 5 karaktere"
     taken_username: "Ky emër është i zënë"
@@ -309,6 +310,7 @@ sq:
     header:
       finished_hoc: "Unë e mbarova Orën e Kodimit"
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
+      my_dashboard: "Paneli im"
       course_catalog: "Katalogu i kursit"
       project_gallery: "Projektet"
       sections: "Seksionet"
@@ -466,9 +468,9 @@ sq:
   footer:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: 'Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.'
-    help_from_html_old: 'Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin e këtyre materialeve.'
+    help_from_html_old: "Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin e këtyre materialeve.\n"
     art_from_html: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox..Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark and &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark and &copy;  %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Bimët vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC.Të gjitha të drejtat e rezervuara'
     code_from_html: 'Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU LGPL 2.1</a> .'
     powered_by_aws: 'Mundësuar nga Amazon Web Services'
     built_on_github: 'E ndërtuar në GitHub nga Microsoft'
@@ -488,6 +490,7 @@ sq:
     make_my_own_app: 'Ndërtoj aplikacionin tim'
     how_it_works: 'Si funksionon'
     try_hour_of_code: 'Provo një Orë Kodimi!'
+    store: 'Dyqani'
   reference_area:
     title: 'Keni nevojë për ndihmë?'
     subtitle: 'Shiko këto video dhe udhëzimet'
@@ -501,6 +504,7 @@ sq:
     notes_coming_soon: 'Shënimet për këtë video vijnë së shpejti.'
     autoplay_option: 'Luaj videot automatikisht'
     download: 'Shkarko Videon'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
@@ -782,6 +786,7 @@ sq:
     mac: 'Mac OS X'
   locked_stage: 'Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë është e bllokuar aktualisht. Mësuesi juaj mund të zhbllokuar këtë fazë kur është koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.'
   hidden_stage: "Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj se cili mësim duhet të jetë."
+  no_script_access_student: "Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin tuaj se në cilën njësi duhet të jeni."
   return_unit_overview: 'Shko në njësinë e rishikimit'
   return_course_overview: 'Shko në njësinë e rishikimit'
   pd:
@@ -824,3 +829,4 @@ sq:
   code_org_logo_alt: "Code.org Faqja kryesore"
   pixelation:
     binary: "Binare"
+

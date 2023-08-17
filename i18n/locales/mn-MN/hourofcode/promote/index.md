@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: Үгийг тараана
 ---
 
 {{ signup_button }}

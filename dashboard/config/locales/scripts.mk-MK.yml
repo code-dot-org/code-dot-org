@@ -359,10 +359,20 @@ mk:
           lesson_groups:
             lessonGroup-4:
               display_name: Лупови
+            lessonGroup-8:
+              display_name: Податоци
+          lessons:
+            lesson-1:
+              name: Податоци
         nevada-standards-aligned-kindergarten-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+          lessons:
+            lesson-1:
+              name: Податоци
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-4:

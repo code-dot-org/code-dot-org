@@ -614,11 +614,11 @@ es-MX:
         rough_poemart_events: v1 Arte del Poema Eventos
         rough_poemart_imagery: v1 Arte del Poema Imágenes
         rough_poemart_congrats: v1 Arte del Poema Felicidades
-        poetry_module_variables: Variables - Codificación con Poesía
-        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
-        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas - Codificación con Poesía
-        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación con Poesía
-        poetry_module_conditionals: Condicionales - Codificación con Poesía
+        poetry_module_variables: Variables - Programación con Poesía
+        poetry_module_textandvariables: Texto y Variables - Programación con Poesía
+        poetry_module_planningapp: El plan de tu Generador de Poemas - Programación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Programación con Poesía
+        poetry_module_conditionals: Condicionales - Programación con Poesía
         poemart_intro: Arte del Poema  Introducción
         poemart_events: Arte del Poema Eventos
         poemart_imagery: Arte del Poema Imágenes
@@ -737,6 +737,8 @@ es-MX:
         PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
         how-ai-works-llms-full: Cómo funcionan los chatbots y la modelación de lenguage
         how-ai-works-creativity-full: '¿La IA tiene creatividad e imaginación?'
+        llms-cobranded: 'Cómo funciona la IA: chatbots y modelos de lenguaje grande'
+        generative-ai-cobranded: 'Cómo funciona la IA: IA generativa'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

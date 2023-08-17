@@ -2374,6 +2374,8 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
         csd2-2023: {}
         csd4-2023:
           lesson_groups:
@@ -2620,6 +2622,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-creativity2-2023: {}
         focus-on-creativity3-2023:
           lesson_groups:
@@ -2638,6 +2642,8 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2652,6 +2658,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2667,6 +2675,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         self-paced-pl-k5-getting-started: {}
         focus-on-design-with-purpose2-2023: {}
         focus-on-design-with-purpose3-2023:
@@ -2684,6 +2694,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-coding2-2023: {}
         focus-on-coding3-2023:
           lesson_groups:
@@ -2699,6 +2711,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2820,10 +2834,18 @@ he:
             lessonGroup-4:
               display_name: חזרות
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: נתונים
           lesson_groups:
             lessonGroup-4:
               display_name: חזרות
+            lessonGroup-6:
+              display_name: נתונים
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: נתונים
           lesson_groups:
             lessonGroup-4:
               display_name: חזרות
@@ -2831,7 +2853,12 @@ he:
               display_name: אירועים
             lessonGroup-7:
               display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: נתונים
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: מערכות מחשוב
           lesson_groups:
             lessonGroup-4:
               display_name: חזרות
@@ -2839,6 +2866,8 @@ he:
               display_name: אירועים
             lessonGroup-6:
               display_name: נתונים
+            lessonGroup-8:
+              display_name: מערכות מחשוב
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-6:
@@ -2867,3 +2896,29 @@ he:
               display_name: משתנים
             lessonGroup-7:
               display_name: פרויקט סיום קורס
+        vpl-csp-2023-m1: {}
+        vpl-csp-2023-m2: {}
+        vpl-csp-2023-m3: {}
+        vpl-csp-2023-m4: {}
+        vpl-csp-2023-m5: {}
+        vpl-csp-2023-m6: {}
+        vpl-csp-2023-m7: {}
+        vpl-csp-2023-m8: {}
+        vpl-csa-2023-m1: {}
+        how-ai-works-2023: {}
+        vpl-csa-2023-m2: {}
+        vpl-csa-2023-m3: {}
+        vpl-csa-2023-m4: {}
+        vpl-csa-2023-m5: {}
+        vpl-csa-2023-m6: {}
+        vpl-csa-2023-m7: {}
+        vpl-csa-2023-m8: {}
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1: {}
+        vpl-csd-2023-m2: {}
+        vpl-csd-2023-m3: {}
+        vpl-csd-2023-m4: {}
+        vpl-csd-2023-m5: {}
+        vpl-csd-2023-m6: {}
+        vpl-csd-2023-m7: {}
+        vpl-csd-2023-m8: {}

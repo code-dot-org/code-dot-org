@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
@@ -13,12 +14,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-first-grade",
-    "serialized_at": "2023-07-24 17:13:10 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-09 22:29:14 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -88,9 +90,22 @@
       }
     },
     {
-      "key": "lessonGroup-7",
+      "key": "lessonGroup-8",
       "user_facing": true,
       "position": 6,
+      "properties": {
+        "display_name": "Data",
+        "description": "Students will recognize that a variety of data can be stored in and retrieved from a computing device.  codenv.org/lessons/grade-1-lesson-12"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "nevada-standards-aligned-first-grade-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 7,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -327,12 +342,28 @@
       }
     },
     {
-      "key": "End of Course Project",
-      "name": "End of Course Project",
+      "key": "lesson-1",
+      "name": "Data",
       "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 12,
+      "properties": {
+        "overview": "Students will recognize that a variety of data can be stored in and retrieved from a computing device.  codenv.org/lessons/grade-1-lesson-12"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "nevada-standards-aligned-first-grade-2023"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
         "overview": "In this **project** lesson, students apply what they have learned about sequencing and events in an open-ended project with Play Lab.",
         "preparation": "* Code your own Play Lab projects in advance to inspire students!\n",
@@ -1110,6 +1141,18 @@
         "lesson_activity.key": "6a01e167-a100-474e-a149-4a351d9b6f9c",
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "lesson_group.key": "lessonGroup-6",
+        "script.name": "nevada-standards-aligned-first-grade-2023"
+      }
+    },
+    {
+      "key": "7556c3bf-9905-4496-8113-41c92438b4f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7556c3bf-9905-4496-8113-41c92438b4f7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "nevada-standards-aligned-first-grade-2023"
       }
     },
@@ -2618,6 +2661,16 @@
       "seeding_key": {
         "activity_section.key": "865eda01-e62b-4c7e-8694-9c4c1c7ab08e",
         "lesson_activity.key": "6a01e167-a100-474e-a149-4a351d9b6f9c"
+      }
+    },
+    {
+      "key": "272d8eb1-f0d5-4834-bc51-aaf412f6585b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "272d8eb1-f0d5-4834-bc51-aaf412f6585b",
+        "lesson_activity.key": "7556c3bf-9905-4496-8113-41c92438b4f7"
       }
     },
     {
@@ -6009,6 +6062,16 @@
       }
     },
     {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nv_cs_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "nv_cs_standards"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair_programming",
@@ -6515,6 +6578,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-first-grade-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nv_cs_standards",
         "script.name": "nevada-standards-aligned-first-grade-2023"
       }
     },
@@ -7371,5 +7440,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

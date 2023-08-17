@@ -18,6 +18,10 @@ module I18n
             FileUtils.cp(filepath, File.join(I18N_SOURCE_DIR_PATH, "#{filepath.split('/')[-2]}.json"))
           end
 
+          # `@code-dot-org/ml-activities/i18n/oceans.json` is used as the i18n source for `apps/i18n/fish/*.json`
+          # instead of the original file `apps/i18n/fish/en_us.json`
+          FileUtils.cp(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(I18N_SOURCE_DIR_PATH, 'fish.json'))
+
           puts 'Redacting *labs content'
           # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
           # strings existing in crowdin already

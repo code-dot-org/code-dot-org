@@ -62,7 +62,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/arrays"
+      "/courses/csd-2022/guides/arrays",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/modifying-arrays",
     "mini_rubric": "false",
@@ -76,7 +77,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.891+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.5_2222\"},{\"changed_at\":\"2023-05-12 17:39:03 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.891+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.5_2222\"},{\"changed_at\":\"2023-05-12 17:39:03 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-16 19:33:40 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

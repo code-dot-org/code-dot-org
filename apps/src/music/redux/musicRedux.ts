@@ -35,8 +35,8 @@ export interface MusicState {
   showInstructions: boolean;
   /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
-  /** If the headers are showing */
-  isHeadersShowing: boolean;
+  /** If the headers should be hidden */
+  hideHeaders: boolean;
   /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
   /** The current list of playback events */
@@ -64,7 +64,7 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isHeadersShowing: true,
+  hideHeaders: false,
   isBeatPadShowing: true,
   playbackEvents: [],
   orderedFunctions: [],
@@ -130,13 +130,13 @@ const musicSlice = createSlice({
         ];
     },
     showHeaders: state => {
-      state.isHeadersShowing = true;
+      state.hideHeaders = false;
     },
     hideHeaders: state => {
-      state.isHeadersShowing = false;
+      state.hideHeaders = true;
     },
     toggleHeaders: state => {
-      state.isHeadersShowing = !state.isHeadersShowing;
+      state.hideHeaders = !state.hideHeaders;
     },
     showBeatPad: state => {
       state.isBeatPadShowing = true;
