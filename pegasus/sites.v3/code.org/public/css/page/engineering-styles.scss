@@ -10,30 +10,22 @@
     object-fit: contain;
     object-position: center;
   }
-
   .text-wrapper {
     margin-right: 1.25rem;
   }
-
   a.link-button {
     background-color: $neutral-white;
     border-color: $neutral-white;
     color: $neutral-dark;
   }
-
   @media screen and (max-width: $width-sm) {
     .text-wrapper {
       margin-right: 0;
     }
-
     .flex-container {
       flex-direction: column;
     }
   }
-}
-
-ul li:before {
-  content: "";
 }
 
 .engineering-team {
@@ -66,7 +58,6 @@ ul li:before {
       max-width: 15rem;
       width: 50%;
       float: right;
-
     }
     &__divider {
       height: 2.5rem;
@@ -82,7 +73,6 @@ ul li:before {
       max-width: 29.4rem;
       float: right;
       margin-left: 3.75rem;
-
     }
     &__image--2 {
       max-width: 22.8rem;
@@ -93,7 +83,6 @@ ul li:before {
       max-width: 16.8rem;
       float: right;
       margin-left: 3.75rem;
-
     }
     &__image--4 {
       max-width: 25.5rem;
@@ -107,16 +96,15 @@ ul li:before {
         height: 3rem;
       }
     }
-
   }
 }
 
-.no-padding-bottom {
+.faq {
   .link-button {
     margin-top: 2.5rem;
-    @media (max-width: 767px) {
-      margin-bottom: 2.5rem;
-    }
+  }
+  @media (min-width: 970px) {
+    padding-bottom: 0;
   }
 }
 
@@ -126,8 +114,7 @@ ul li:before {
 }
 
 .faq {
-  b {
-    font-family: $gotham-bold;
-
+  strong {
+    @include strong;
   }
 }
