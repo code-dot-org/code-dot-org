@@ -10,6 +10,7 @@ import {
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+import {translatedCourseOfferingDeviceTypes} from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -27,32 +28,22 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
 }) => {
-  const icons = {
-    ideal: 'circle-check',
-    not_recommended: 'triangle-exclamation',
-    incompatible: 'circle-xmark',
+  const iconData = {
+    ideal: {
+      icon: 'circle-check',
+      color: style.circleCheck,
+    },
+    not_recommended: {
+      icon: 'triangle-exclamation',
+      color: style.triangleExclamation,
+    },
+    incompatible: {
+      icon: 'circle-xmark',
+      color: style.circleXmark,
+    },
   };
 
-  const iconColor = {
-    'circle-check': style.circleCheck,
-    'triangle-exclamation': style.triangleExclamation,
-    'circle-xmark': style.circleXmark,
-  };
-
-  const getDeviceCompatibility = deviceCompatibility => {
-    const devices = JSON.parse(deviceCompatibility);
-    const compatibilityIcons = {};
-    for (var device in devices) {
-      compatibilityIcons[
-        device !== 'no_device'
-          ? device.charAt(0).toUpperCase() + device.slice(1)
-          : i18n.offline()
-      ] = icons[devices[device]];
-    }
-    return compatibilityIcons;
-  };
-
-  const compatibilityIcons = getDeviceCompatibility(deviceCompatibility);
+  const devices = JSON.parse(deviceCompatibility);
 
   return (
     <div>
@@ -142,13 +133,20 @@ const ExpandedCurriculumCatalogCard = ({
             </div>
             <hr className={style.horizontalDivider} />
             <div className={style.compatibilityContainer}>
-              {Object.keys(compatibilityIcons).map(key => (
+              {Object.keys(devices).map(device => (
                 <div className={style.iconWithDescription}>
                   <FontAwesome
-                    icon={compatibilityIcons[key]}
-                    className={`fa-solid ${iconColor[compatibilityIcons[key]]}`}
+                    icon={iconData[devices[device]].icon}
+                    className={`fa-solid ${iconData[devices[device]].color}`}
                   />
-                  <BodyTwoText>{key}</BodyTwoText>
+                  <BodyTwoText>
+                    {device !== 'no_device'
+                      ? translatedCourseOfferingDeviceTypes[device]
+                          .charAt(0)
+                          .toUpperCase() +
+                        translatedCourseOfferingDeviceTypes[device].slice(1)
+                      : i18n.offline()}
+                  </BodyTwoText>
                 </div>
               ))}
             </div>
