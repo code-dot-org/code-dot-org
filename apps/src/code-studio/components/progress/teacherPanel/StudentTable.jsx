@@ -87,7 +87,7 @@ class StudentTable extends React.Component {
                   <div style={styles.name}>
                     {student.name}
                     {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName}`}
+                      ` ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
