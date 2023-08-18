@@ -6256,7 +6256,7 @@
       },
       "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [          
+        "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_allthethings"
         ],
         "lesson.key": "lesson-51",
