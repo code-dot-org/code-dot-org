@@ -52,6 +52,7 @@ class DCDOBase < DynamicConfigBase
       'family-name-features': DCDO.get('family-name-features', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
+      chatapi: DCDO.get('chatapi', false),
     }
   end
 end
