@@ -1,5 +1,4 @@
 import React, {useState, useCallback} from 'react';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -70,25 +69,20 @@ const ChatWorkspace: React.FunctionComponent = () => {
     <ChatWorkspaceContext.Provider value={{onSubmit: onSubmit}}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
         {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-        <PanelContainer
-          id="chat-workspace-panel"
-          headerText={aichatI18n.aichatWorkspaceHeader()}
+        <div
+          id="chat-workspace-conversation"
+          className={moduleStyles.conversationArea}
         >
-          <div
-            id="chat-workspace-conversation"
-            className={moduleStyles.conversationArea}
-          >
-            {storedMessages.map(message => (
-              <ChatMessage message={message} key={message.id} />
-            ))}
-          </div>
-          <div
-            id="chat-workspace-editor"
-            className={moduleStyles.userChatMessageEditor}
-          >
-            <UserChatMessageEditor />
-          </div>
-        </PanelContainer>
+          {storedMessages.map(message => (
+            <ChatMessage message={message} key={message.id} />
+          ))}
+        </div>
+        <div
+          id="chat-workspace-editor"
+          className={moduleStyles.userChatMessageEditor}
+        >
+          <UserChatMessageEditor />
+        </div>
       </div>
     </ChatWorkspaceContext.Provider>
   );
