@@ -109,4 +109,18 @@ describe('StudentTable', () => {
     const firstStudentRow = wrapper.find('tr').at(1);
     expect(firstStudentRow.text()).to.match(/^Student 2/);
   });
+
+  it('sorts null family names last', () => {
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Student 1', familyName: 'FamNameB'},
+        {id: 2, name: 'Student 2'},
+        {id: 3, name: 'Student 3', familyName: 'FamNameA'},
+      ],
+      isSortedByFamilyName: true,
+    });
+
+    const lastStudentRow = wrapper.find('tr').at(3);
+    expect(lastStudentRow.text()).to.match(/^Student 2/);
+  });
 });
