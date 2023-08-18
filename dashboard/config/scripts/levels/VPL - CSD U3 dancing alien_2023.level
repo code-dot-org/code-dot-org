@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-08-01T17:48:01.000Z",
   "level_num": "custom",
@@ -55,7 +56,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\": {\r\n      \"name\": \"greenAlien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh\"\r\n    }\r\n  }\r\n}",
-    "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 11 Level 5 in the CS Discoveries curriculum.\r\n\r\n# Sprites in the Draw Loop\r\n\r\nBy changing sprite properties in the draw loop, you can animate your characters.\r\n\r\n# Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner why some code is inside the draw loop and some code is outside.\r\n* Try changing the numbers in the random number block and running the program again.\r\n",
+    "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 12 Level 4 in the CS Discoveries curriculum.\r\n\r\n# Sprites in the Draw Loop\r\n\r\nBy changing sprite properties in the draw loop, you can animate your characters.\r\n\r\n# Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner why some code is inside the draw loop and some code is outside.\r\n* Try changing the numbers in the random number block and running the program again.\r\n",
     "parent_level_id": 20714,
     "name_suffix": "_2023",
     "map_reference": "/courses/vpl-csd-2022/guides/the-draw-loop",
@@ -76,14 +77,16 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "display_name": "Unit 3 Lesson 11 Level 5",
+    "display_name": "Unit 3 Lesson 12 Level 4",
     "thumbnail_url": "https://images.code.org/b9f943dbbcc310608117fef48771d19a-image-1595615435289.30.18 PM.png",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-08-01T17:48:01.569+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 dancing alien_2022\\\"\"],\"cloned_from\":\"VPL - CSD U3 dancing alien_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-01T17:48:01.569+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 dancing alien_2022\\\"\"],\"cloned_from\":\"VPL - CSD U3 dancing alien_2022\"},{\"changed_at\":\"2023-08-18 03:17:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
