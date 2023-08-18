@@ -41,7 +41,7 @@ export default class ProgressManager {
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData: ProjectLevelData | undefined) {
+  onLevelChange(levelData?: ProjectLevelData) {
     this.levelData = levelData;
     this.resetValidation(
       (levelData?.validations && levelData.validations.length > 0) || false
