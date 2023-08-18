@@ -10,6 +10,7 @@ async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {messages: messagesToSend};
+
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
