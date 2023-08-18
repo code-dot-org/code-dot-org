@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:13:56 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-17 20:32:58 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -129,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-overview_2023"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -151,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-applying the rubric_2023"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -173,6 +179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection_2023"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -195,6 +204,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources_2023"
+        ],
         "progression": "College Board FRQs (~25 minutes)"
       },
       "bonus": false,
@@ -217,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-unit-5-frq_2023"
+        ],
         "progression": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
       },
       "bonus": false,
@@ -239,6 +254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection_2023"
+        ],
         "progression": "FRQ Skills (~5 minutes)"
       },
       "bonus": false,
@@ -261,6 +279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-4-wrap-up_2023"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
