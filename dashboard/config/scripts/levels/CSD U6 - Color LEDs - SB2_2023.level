@@ -61,7 +61,7 @@
     "parent_level_id": 20511,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/color-lights",
     "mini_rubric": "false",
@@ -73,7 +73,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:01.809+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - SB2_2222\"},{\"changed_at\":\"2023-08-15 16:36:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:01.809+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - SB2_2222\"},{\"changed_at\":\"2023-08-15 16:36:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:37:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:38:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

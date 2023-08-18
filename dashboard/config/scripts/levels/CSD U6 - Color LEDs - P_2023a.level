@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T16:59:41.000Z",
   "level_num": "custom",
@@ -49,7 +50,7 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -68,11 +69,16 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board.\r\n\r\nIf student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T16:59:41.113+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - P_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T16:59:41.113+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - P_2222\"},{\"changed_at\":\"2023-08-16 17:42:51 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
