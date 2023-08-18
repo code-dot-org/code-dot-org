@@ -475,28 +475,27 @@ export default {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
-    const behaviorEditor = {};
     // TODO: Reenable behavior editor after function editor is working
-    // const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
-    //   {
-    //     FUNCTION_HEADER: i18n.behaviorEditorHeader(),
-    //     FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
-    //     FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
-    //   },
-    //   'behavior_definition',
-    //   {
-    //     [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
-    //   },
-    //   false /* disableParamEditing */,
-    //   [
-    //     Blockly.BlockValueType.NUMBER,
-    //     Blockly.BlockValueType.STRING,
-    //     Blockly.BlockValueType.COLOUR,
-    //     Blockly.BlockValueType.BOOLEAN,
-    //     Blockly.BlockValueType.SPRITE,
-    //     Blockly.BlockValueType.LOCATION,
-    //   ]
-    // ));
+    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+      {
+        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
+      },
+      'behavior_definition',
+      {
+        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
+      },
+      false /* disableParamEditing */,
+      [
+        Blockly.BlockValueType.NUMBER,
+        Blockly.BlockValueType.STRING,
+        Blockly.BlockValueType.COLOUR,
+        Blockly.BlockValueType.BOOLEAN,
+        Blockly.BlockValueType.SPRITE,
+        Blockly.BlockValueType.LOCATION,
+      ]
+    ));
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
