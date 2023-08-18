@@ -51,8 +51,8 @@ class StudentTable extends React.Component {
       isSortedByFamilyName,
     } = this.props;
 
-    const collator = new Intl.Collator();
     // Sort students, in-place.
+    const collator = new Intl.Collator();
     isSortedByFamilyName
       ? students.sort((a, b) => collator.compare(a.familyName, b.familyName))
       : students.sort((a, b) => collator.compare(a.name, b.name));
