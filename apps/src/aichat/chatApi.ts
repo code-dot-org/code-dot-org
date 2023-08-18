@@ -2,7 +2,6 @@ import {Role, Status, ChatCompletionMessage} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
 import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
-import DCDO from '@cdo/apps/dcdo';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
@@ -11,18 +10,15 @@ async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {messages: messagesToSend};
-  const callOpenaiChatCompletion = !!DCDO.get('chatapi', false);
-  const response = callOpenaiChatCompletion
-    ? await HttpClient.post(
-        CHAT_COMPLETION_URL,
-        JSON.stringify(payload),
-        true,
-        {
-          'Content-Type': 'application/json; charset=UTF-8',
-        }
-      )
-    : null;
-  if (response?.ok) {
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+  if (response.ok) {
     return await response.json();
   } else {
     return null;

@@ -4,7 +4,7 @@ class OpenaiChatController < ApplicationController
 
   # POST /openai/chat_completion
   def chat_completion
-    unless has_required_messages_param?
+    unless has_required_messages_param? || DCDO.get('openai_chat_completion', false)
       return render(status: :bad_request, json: {})
     end
 
