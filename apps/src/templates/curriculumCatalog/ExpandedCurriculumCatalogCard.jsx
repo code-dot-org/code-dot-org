@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {
   BodyTwoText,
   Heading3,
-  Heading6,
+  Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
@@ -96,7 +96,9 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <Heading6>{i18n.availableResources()}</Heading6>
+                    <Heading4 visualAppearance="heading-xs">
+                      {i18n.availableResources()}
+                    </Heading4>
                     <hr className={style.thickDivider} />
                     <TextLink text={i18n.lessonPlans()} href="#" />
                     <hr className={style.horizontalDivider} />
@@ -109,7 +111,9 @@ const ExpandedCurriculumCatalogCard = ({
                     <TextLink text={i18n.projectRubrics()} href="#" />
                   </div>
                   <div className={style.professionalLearningContainer}>
-                    <Heading6>{i18n.professionalLearning()}</Heading6>
+                    <Heading4 visualAppearance="heading-xs">
+                      {i18n.professionalLearning()}
+                    </Heading4>
                     <hr className={style.thickDivider} />
                     <TextLink
                       text={i18n.facilitatorLedWorkshops()}
@@ -179,12 +183,16 @@ const ExpandedCurriculumCatalogCard = ({
             </div>
             <div className={style.relatedCurriculaContainer}>
               <div className={style.closeButton}>
-                <a onClick={onClose}>
-                  <FontAwesome icon="xmark" className="fa-solid" />
-                </a>
+                <Button
+                  onClick={onClose}
+                  icon="xmark"
+                  iconClassName="fa-solid"
+                />
               </div>
               <div className={style.relatedContainer}>
-                <Heading6>{i18n.relatedCurricula()}</Heading6>
+                <Heading4 visualAppearance="heading-xs">
+                  {i18n.relatedCurricula()}
+                </Heading4>
                 <hr className={style.thickDivider} />
               </div>
             </div>

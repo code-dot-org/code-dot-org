@@ -31,15 +31,30 @@ $container-width: 960px;
 
 .closeButton {
   display: flex;
-  justify-content: right;
+  justify-content: end;
+  line-height: normal;
 
-  a {
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    height: auto;
+  }
+
+  button:active {
+    border: none !important;
+  }
+
+  button:hover {
+    background-color: transparent;
+  }
+
+  i {
     text-decoration: none;
     color: $neutral_dark80;
     font-size: 20px;
-  }
-  a:hover {
-    cursor: pointer;
   }
 }
 
@@ -96,6 +111,14 @@ $container-width: 960px;
   border-top: 1px solid $neutral_dark20;
 }
 
+.iconStyle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
 .iconWithDescription {
   display: flex;
   align-items: center;
@@ -126,7 +149,7 @@ $container-width: 960px;
   }
 
   i {
-    margin-left: 8px;
+    margin-inline-start: 8px;
   }
 }
 
