@@ -9,7 +9,7 @@ import {
   MODAL_EDITOR_NAME_INPUT_ID,
 } from './functionEditorConstants';
 
-// This class is not yet implemented. It is used for the modal function editor,
+// This class is a work in progress. It is used for the modal function editor,
 // which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
@@ -194,16 +194,20 @@ export default class FunctionEditor {
       hiddenProcedure.getId()
     );
 
-    // Add the model to the procedure and main workspaces so we know all procedures available there.
+    // Add the model to the procedure and main workspaces so we know
+    // all procedures available there.
     this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
     this.mainWorkspace.getProcedureMap().add(mainProcedure);
 
     // Add the procedure model to the editor's map as well
-    // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
+    // Can't use the same underlying model or events get weird.
+    // Models were not intended to be added to multiple
     // workspaces, so make a new one with the same data.
-    // We disable events during this operation because we mirror events from the editor workspace to
-    // the other workspaces, but we don't need to mirror this event as we set up the procedure in the other
-    // workspaces above.
+
+    // We disable events during this operation because we mirror
+    // events from the editor workspace to the other workspaces, but
+    // we don't need to mirror this event as we set up the procedure
+    // in the other workspaces above.
     Blockly.Events.disable();
     const editorProcedureModel = new ObservableProcedureModel(
       this.editorWorkspace,
@@ -257,13 +261,15 @@ export default class FunctionEditor {
         try {
           event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
         } catch (err) {
-          // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
-          // the delete in the secondary workspace cannot be deserialized into the original workspace.
+          // Could not deserialize event. This is expected to happen. E.g. When
+          // round-tripping parameter deletes, the delete in the secondary workspace
+          // cannot be deserialized into the original workspace.
           return;
         }
         event.run(true);
 
-        // Update the toolbox in case this change is happening while the flyout is open
+        // Update the toolbox in case this change is happening
+        // while the flyout is open.
         this.mainWorkspace.getToolbox().refreshSelection();
       }
     });

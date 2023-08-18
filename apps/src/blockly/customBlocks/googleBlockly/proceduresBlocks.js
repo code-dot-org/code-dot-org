@@ -133,6 +133,9 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   }
 });
 
+// Override the destroy function to not destroy the procedure. We need to do this
+// so that when we clear the modal function editor we don't remove the procedure
+// from the procedure map.
 GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
   const mixin = {
     destroy: function () {
