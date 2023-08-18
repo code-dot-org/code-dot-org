@@ -182,18 +182,40 @@ $container-width: 309px;
   display: flex;
 }
 
-.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
-  justify-content: flex-start;
+@media screen and (max-width: $width-xxl) {
+  .cardsContainer:nth-child(3n + 1) .centerExpandedCard {
+    justify-content: flex-start;
+  }
+
+  .cardsContainer:nth-child(3n + 2) .centerExpandedCard {
+    justify-content: center;
+  }
+
+  .cardsContainer:nth-child(3n + 3) .centerExpandedCard {
+    justify-content: flex-end;
+  }
+
+  .cardsContainer:nth-child(3n + 3) .arrowContainer:before {
+    background: #f7f8fa;
+  }
 }
 
-.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
-  justify-content: center;
+@media screen and (max-width: 959px) {
+  .cardsContainer:nth-child(odd) .centerExpandedCard {
+    justify-content: flex-start;
+  }
+
+  .cardsContainer:nth-child(even) .centerExpandedCard {
+    justify-content: flex-end;
+  }
 }
 
-.cardsContainer:nth-child(3n + 3) .centerExpandedCard {
-  justify-content: flex-end;
-}
+@media screen and (max-width: 633px) {
+  .cardsContainer:nth-child(odd) .centerExpandedCard {
+    justify-content: flex-start;
+  }
 
-.cardsContainer:nth-child(3n + 3) .arrowContainer:before {
-  background: #f7f8fa;
+  .cardsContainer:nth-child(even) .centerExpandedCard {
+    justify-content: flex-end;
+  }
 }
