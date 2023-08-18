@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2023-05-19 21:25:09 UTC",
+    "serialized_at": "2023-08-17 22:17:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,6 +92,40 @@
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "AI 3-5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "Introduction to Machine Learning",
+      "name": "Introduction to Machine Learning",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -142,6 +176,74 @@
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
+    },
+    {
+      "key": "48ac26f5-72f0-43af-a124-7b69dda9bdc1",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48ac26f5-72f0-43af-a124-7b69dda9bdc1",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "e7c14423-c5a0-41e7-adb2-f8197792fa58",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "92c1d8e0-8e89-479f-82af-905a30303b68",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "c541f86a-c78b-4582-8f34-4959bd84036d",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c541f86a-c78b-4582-8f34-4959bd84036d",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "46f484d1-92ee-436f-9991-7f052b99dcff",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46f484d1-92ee-436f-9991-7f052b99dcff",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -183,6 +285,422 @@
       "seeding_key": {
         "activity_section.key": "9e2a21db-0a99-4dea-8064-4a5195c4334d",
         "lesson_activity.key": "6ba8448f-f4b4-4507-b927-dafa1a62090f"
+      }
+    },
+    {
+      "key": "03035651-70e7-41cc-bff5-795115e597bd",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
+      },
+      "seeding_key": {
+        "activity_section.key": "03035651-70e7-41cc-bff5-795115e597bd",
+        "lesson_activity.key": "48ac26f5-72f0-43af-a124-7b69dda9bdc1"
+      }
+    },
+    {
+      "key": "6ca92331-a97e-4d10-99b0-e65dfb6fb7df",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What’s an example of Artificial Intelligence (or AI) either in your personal life or that you’ve seen in a movie or book?_",
+        "name": "Journal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Students may gravitate towards examples of artificial intelligence whose form also mimics a human being, such as interactive robots or Siri or having a conversation with ChatGPT, but also emphasize examples that broader and more embedded in tools we use frequently, such as social media algorithms or streaming recommendation algorithms.\n\nShortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ca92331-a97e-4d10-99b0-e65dfb6fb7df",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "821c1c5a-edb9-4c3e-a0ad-0fa2c834be38",
+      "position": 2,
+      "properties": {
+        "description": "Have students brainstorm silently on their own, then share with their neighbors, and finally share with the whole class."
+      },
+      "seeding_key": {
+        "activity_section.key": "821c1c5a-edb9-4c3e-a0ad-0fa2c834be38",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "fa67a973-5408-4c06-9fba-3cd3cd3dde6d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa67a973-5408-4c06-9fba-3cd3cd3dde6d",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "bf8ceab3-d8ee-4c8a-bb82-f7f562cf5778",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the large venn diagram that includes AI and many applications."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf8ceab3-d8ee-4c8a-bb82-f7f562cf5778",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "1e2d6832-b2eb-49c8-8510-4862475169a8",
+      "position": 5,
+      "properties": {
+        "description": "Artificial Intelligence is used in a lot of different places in our lives - from facial recognition in our phones to personal recommendations when we browse the web, and even in driverless cars. For the next few weeks, we’re going to focus on a specific type of artificial intelligence called machine learning.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e2d6832-b2eb-49c8-8510-4862475169a8",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "1d1db647-cde7-4dde-ab1a-c0d613a691a8",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_ai_works_-_what_is_machine_learning_/katies-playground/unversioned] video in the slides\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d1db647-cde7-4dde-ab1a-c0d613a691a8",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "92aaf787-31ed-4012-a461-5c3e30a5433e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+      },
+      "seeding_key": {
+        "activity_section.key": "92aaf787-31ed-4012-a461-5c3e30a5433e",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "8318842f-0e35-4ff7-abb7-9fa23d95b1e4",
+      "position": 8,
+      "properties": {
+        "description": "Machine learning helps us solve important problems in society. In the next few weeks, we’ll look at how we can create our own machine learning apps to solve problems. To help accomplish our goals, we will use the Problem Solving Process - Define, Prepare, Try, Reflect, and always Empathize. Let's take a look at how these steps appear for Machine Learning in particular",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8318842f-0e35-4ff7-abb7-9fa23d95b1e4",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "bf7f3989-b578-424c-8eaf-3f1ab9e2cdab",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7f3989-b578-424c-8eaf-3f1ab9e2cdab",
+        "lesson_activity.key": "e7c14423-c5a0-41e7-adb2-f8197792fa58"
+      }
+    },
+    {
+      "key": "411b1387-a754-4bcf-98a6-b26f58da1ed8",
+      "position": 1,
+      "properties": {
+        "description": "In today’s activity, we’re going to use machine learning to help a robot clean up the ocean. To do this, we need to teach the robot to recognize fish so it will clean up anything that isn't a fish. We’ll give it lots of examples of fish, give it time to learn from those examples, and then see how well it does in cleaning up the ocean.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real-World Influence:** This type of technology is being used in the real-world by groups such as [The Ocean Cleanup](https://theoceancleanup.com/), which have used artificial intelligence and machine learning to train robots to recognize plastics in the water. You could consider showing this short video to the class as a way to further motivate today's activity: [How AI Helps Clean Oceans From Plastics](https://www.youtube.com/watch?v=3S2w-ewCf5s)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "411b1387-a754-4bcf-98a6-b26f58da1ed8",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "3ce5f06b-900c-4680-8326-c93530bdc546",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ce5f06b-900c-4680-8326-c93530bdc546",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "4111cbe4-3293-4c2b-8733-7ce409ad7442",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
+        "name": "Level 1 - Recognizing Fish",
+        "progression_name": "Recognizing Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "4111cbe4-3293-4c2b-8733-7ce409ad7442",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "cacc08b2-c17b-4444-b03a-b925cc6d0c6b",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a class, go through this level which guides you through the process of training A.I. Bot to recognize fish. As you do, fill in the first part of the activity guide as a class. Consider the following strategies at different stages of the level:",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**A.I. Bot and Pronouns:** These levels purposefully use A.I. Bot’s full name and avoid gendering A.I. Bot as “he” or “she”. Even though some AI systems take on personified gendered roles - such as Siri or Jarvis - actual machine learning programs don’t have genders because they’re just computer programs. Model this same behavior with students by referring to A.I. Bot by it’s full name or using “it” as its pronoun.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cacc08b2-c17b-4444-b03a-b925cc6d0c6b",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "75f0bbf1-aaf3-41fd-8f8c-dd1c1358e57e",
+      "position": 5,
+      "properties": {
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they used for their training data </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "75f0bbf1-aaf3-41fd-8f8c-dd1c1358e57e",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "bfdb00b4-310e-4f0d-a853-ee84f947ae8d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Help students understand that A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn."
+      },
+      "seeding_key": {
+        "activity_section.key": "bfdb00b4-310e-4f0d-a853-ee84f947ae8d",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "b15a6ba6-1c56-4a29-bca0-46e41767ee77",
+      "position": 7,
+      "properties": {
+        "description": "This is one example of how the Problem Solving Process and Machine Learning can be used to solve a problem. We prepared our data, used it to train A.I. Bot, then reflected on the results and decided what to do next. In this next level, you will follow this process and train A.I. Bot to detect certain kinds of fish - like red fish or blue fish or triangle fish.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b15a6ba6-1c56-4a29-bca0-46e41767ee77",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "94ecc594-5024-41b3-8dfc-d8302583c021",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
+        "name": "Level 2 - Recognizing Fish Features",
+        "progression_name": "Recognizing Fish Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "94ecc594-5024-41b3-8dfc-d8302583c021",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "d312ee5b-4cdf-4ee4-adec-ed9f2a4cbda2",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Guides and Code Studio:** Students may struggle initially to keep track of information on their activity guide as they complete levels in Code Studio. One way to help students think about this is similar to being a scientist performing a lab experiment: they are performing an experiment in Code Studio, and keeping track of their results in their Activity Guide.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d312ee5b-4cdf-4ee4-adec-ed9f2a4cbda2",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "59885b7f-6538-4cad-a2a0-dee9eeab5804",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "59885b7f-6538-4cad-a2a0-dee9eeab5804",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "4ee30e60-e2bc-4d53-b79e-3567ab80bccb",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students may find that A.I. Bot thinks some features are important when they’re actually completely unrelated to their word. For example, thinking that the mouth of a fish is important when trying to determine if the fish is red. Students can verify this by looking for patterns in the fish that A.I. Bot has accepted - maybe all of their example fishes happened to have the same type of mouth and A.I. Bot mistakenly thought this was important."
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee30e60-e2bc-4d53-b79e-3567ab80bccb",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "aa395e4d-cbc9-4ca4-b9ae-a0ff792fd5cf",
+      "position": 12,
+      "properties": {
+        "description": "Some of you noticed that A.I. Bot was learning about parts of the fish that aren’t actually important, like the mouth or eyes or dorsal fin. This happens in real life too - machines can learn patterns we don’t intend even with lots of data, which can cause A.I. Bot to make mistakes. For this situation, it’s pretty easy to tell if A.I. Bot made a mistake - we can quickly see if a fish isn’t actually red or circular. Let’s try a slightly harder challenge - trying to recognize expressions!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa395e4d-cbc9-4ca4-b9ae-a0ff792fd5cf",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "689714e5-5dff-4beb-a0fd-d864879ab9ae",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
+        "name": "Level 3 - Recognizing Fish Expressions",
+        "progression_name": "Recognizing Expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "689714e5-5dff-4beb-a0fd-d864879ab9ae",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "dc86ed2f-a826-42e1-b6e4-51e5f32824df",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc86ed2f-a826-42e1-b6e4-51e5f32824df",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "1c44785b-c9d2-4b0d-91bb-e290474a953a",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c44785b-c9d2-4b0d-91bb-e290474a953a",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "1bc9920a-1b66-4b7b-94d6-d3a6f9c7d838",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  For the first part of the question, guide students to notice that there are a lot of purple fish on the screen so A.I. Bot might think that purple fish are more likely to be angry than other fish.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Job Interviews:** If there is time available, consider showing students [Objective or Biased: On the questionable use of Artificial Intelligence for job applications](https://web.br.de/interaktiv/ki-bewerbung/en/). This is a real-life example of a similar situation where unintended factors, such as wearing glasses or a headscarf, are influencing how an AI system rates job applicants. This can be a useful resource to make a connection between this fish activity and the real-world, but this resource is not designed for a middle-school audience and requires some adjustments and decisions for how to best present to your students.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1bc9920a-1b66-4b7b-94d6-d3a6f9c7d838",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "ecdeaac5-0918-4a12-88fa-44f7ea616a7d",
+      "position": 17,
+      "properties": {
+        "description": "The second part of the question is more open-ended. Students should explore their own ideas and feelings about whether this kind of labeling is appropriate based on the color of the fish. In particular, A.I. Bot has learned “purple fish are angry fish”, which students may have strong reactions to. They may describe similar situations outside of the classroom, such as moments where they’ve been judged by their appearance, gender, or race, to help explain their opinions. This question is designed to start a conversation and connect students’ experiences to the potential pitfalls of machine learning, and it’s okay if the discussion doesn’t come to a firm conclusion. You can let students know that they will continue to learn about and discuss these issues in the rest of the unit. Use the remarks below to help wrap up the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "ecdeaac5-0918-4a12-88fa-44f7ea616a7d",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "fb11d630-f5ef-4556-bfff-1b6f8886221e",
+      "position": 18,
+      "properties": {
+        "description": "Even with a small example like this, we see that machine learning can get into trouble and learn something untrue about a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem. These types of examples happen in real life too and can have serious consequences, such as whether or not you receive medical care or get a job offer. As we learn how to use machine learning to solve problems, we need to always be thinking about: What is the impact, and who is being included or excluded?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fb11d630-f5ef-4556-bfff-1b6f8886221e",
+        "lesson_activity.key": "92c1d8e0-8e89-479f-82af-905a30303b68"
+      }
+    },
+    {
+      "key": "9c3bde83-4996-40e6-9311-f43e508224c8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the  video in the slides\n[r how_ai_works_-_training_data_and_bias/katies-playground/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c3bde83-4996-40e6-9311-f43e508224c8",
+        "lesson_activity.key": "c541f86a-c78b-4582-8f34-4959bd84036d"
+      }
+    },
+    {
+      "key": "c3e85c2c-1621-4574-a02c-bdd27b9cd55a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What's a situation where it it might be helpful to use machine learning to solve a problem?_\n\nEncourage students to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If you teach additional lessons within this unit, you can refer back to these post-its as these topics are covered in other lessons.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3e85c2c-1621-4574-a02c-bdd27b9cd55a",
+        "lesson_activity.key": "c541f86a-c78b-4582-8f34-4959bd84036d"
+      }
+    },
+    {
+      "key": "bd2baa86-cc37-4cad-9530-0d391eaf71ab",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd2baa86-cc37-4cad-9530-0d391eaf71ab",
+        "lesson_activity.key": "46f484d1-92ee-436f-9991-7f052b99dcff"
+      }
+    },
+    {
+      "key": "3c98f292-6395-448d-929a-6687bf0a8632",
+      "position": 2,
+      "properties": {
+        "description": "If you'd like to teach additional lessons from the How AI Works video series, [click here to explore additional resources](https://code.org/ai/how-ai-works)",
+        "name": "Additional Lessons"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c98f292-6395-448d-929a-6687bf0a8632",
+        "lesson_activity.key": "46f484d1-92ee-436f-9991-7f052b99dcff"
+      }
+    },
+    {
+      "key": "7e3b272d-3164-468c-8079-eee9215e2e10",
+      "position": 3,
+      "properties": {
+        "description": "If you'd like to dive even deeper into AI and Machine Learning, consider exploring our 5-week unit on AI and Machine Learning. [Click here to view the unit and learn more](https://studio.code.org/s/aiml-2023?viewAs=Instructor)",
+        "name": "AI and Machine Learning Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e3b272d-3164-468c-8079-eee9215e2e10",
+        "lesson_activity.key": "46f484d1-92ee-436f-9991-7f052b99dcff"
       }
     }
   ],
@@ -690,6 +1208,72 @@
       "level_keys": [
         "Counting Samples 2"
       ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "4111cbe4-3293-4c2b-8733-7ce409ad7442"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash_katietest"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Fish Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94ecc594-5024-41b3-8dfc-d8302583c021"
+      },
+      "level_keys": [
+        "Oceans_Short_katietest"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "689714e5-5dff-4beb-a0fd-d864879ab9ae"
+      },
+      "level_keys": [
+        "Oceans_Long_katietest"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -944,13 +1528,122 @@
         "script.name": "katies-playground",
         "activity_section.key": "9e2a21db-0a99-4dea-8064-4a5195c4334d"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash_katietest",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "4111cbe4-3293-4c2b-8733-7ce409ad7442"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short_katietest",
+        "script_level.level_keys": [
+          "Oceans_Short_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94ecc594-5024-41b3-8dfc-d8302583c021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long_katietest",
+        "script_level.level_keys": [
+          "Oceans_Long_katietest"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "689714e5-5dff-4beb-a0fd-d864879ab9ae"
+      }
     }
   ],
   "resources": [
-
+    {
+      "name": "Classifying Fish",
+      "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
+      "key": "classifying_fish",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "How AI Works - Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "how_ai_works_-_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_works_-_training_data_and_bias"
+      }
+    },
+    {
+      "name": "How AI Works - What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "how_ai_works_-_what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_works_-_what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "Introduction to Machine Learning",
+      "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+      "key": "introduction_to_machine_learning",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_machine_learning"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "how_ai_works_-_training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "how_ai_works_-_what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "introduction_to_machine_learning"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -959,21 +1652,80 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "vocabulary.key": "machine_learning"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "1a44e467-6b08-408d-a38e-c1b587e75793",
+      "properties": {
+        "description": "Apply the Problem Solving Process to train a computer to solve a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "objective.key": "1a44e467-6b08-408d-a38e-c1b587e75793"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
