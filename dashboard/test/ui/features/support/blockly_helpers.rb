@@ -29,7 +29,9 @@ module BlocklyHelpers
   end
 
   def generate_offset_code(selector)
-    # only generate code for non-hidden elements
+    # Only get offset for non-hidden elements. We have to check the parent tree
+    # for any hidden parents, because blocks will not be "hidden" per jquery's logic
+    # if they are inside a hidden div.
     "$(\"#{selector}\").filter(function (index) {" \
         "return $(this).parents(':hidden').length === 0;" \
         "}).offset()"

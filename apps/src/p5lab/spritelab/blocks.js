@@ -475,7 +475,6 @@ export default {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
-    // TODO: Reenable behavior editor after function editor is working
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
