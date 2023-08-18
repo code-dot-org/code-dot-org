@@ -50,11 +50,7 @@ const CurriculumCatalog = ({
   };
 
   const handleExpandedCardChange = index => {
-    if (expandedCardIndex === index) {
-      setExpandedCardIndex(null);
-    } else {
-      setExpandedCardIndex(index);
-    }
+    setExpandedCardIndex(expandedCardIndex === index ? null : index);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
