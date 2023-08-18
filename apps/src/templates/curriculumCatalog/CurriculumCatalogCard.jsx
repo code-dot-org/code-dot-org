@@ -42,6 +42,12 @@ const CurriculumCatalogCard = ({
   pathToCourse,
   onAssignSuccess,
   quickViewDisplayed,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -72,6 +78,12 @@ const CurriculumCatalogCard = ({
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     onAssignSuccess={onAssignSuccess}
     quickViewDisplayed={quickViewDisplayed}
+    deviceCompatibility={deviceCompatibility}
+    description={description}
+    professionalLearningProgram={professionalLearningProgram}
+    video={video}
+    publishedDate={publishedDate}
+    selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     {...props}
   />
 );
@@ -100,6 +112,12 @@ CurriculumCatalogCard.propTypes = {
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
   quickViewDisplayed: PropTypes.bool,
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -124,6 +142,12 @@ const CustomizableCurriculumCatalogCard = ({
   onAssignSuccess,
   courseId,
   quickViewDisplayed,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -253,7 +277,20 @@ const CustomizableCurriculumCatalogCard = ({
         </div>
       </div>
       {isAssignDialogOpen && renderAssignDialog()}
-      {isExpandedCardDisplayed && <ExpandedCurriculumCatalogCard />}
+      {isExpandedCardDisplayed && (
+        <ExpandedCurriculumCatalogCard
+          courseDisplayName={courseDisplayName}
+          duration={duration}
+          gradeRange={gradeRange}
+          subjectsAndTopics={subjectsAndTopics}
+          deviceCompatibility={deviceCompatibility}
+          description={description}
+          professionalLearningProgram={professionalLearningProgram}
+          video={video}
+          publishedDate={publishedDate}
+          selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+        />
+      )}
     </div>
   );
 };
@@ -284,7 +321,14 @@ CustomizableCurriculumCatalogCard.propTypes = {
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
+  // for expanded card
   quickViewDisplayed: PropTypes.bool,
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
 };
 
 export default connect(

@@ -32,7 +32,7 @@ module Policies
         'config/scripts/levels/foo/bar/baz',
         'config/levels/custom/foo',
         'config/levels/custom/foo/bar/baz',
-      ].map {|dir| Rails.root.join(dir, "#{level.name}.level").to_s}
+      ].map {|dir| Rails.root.join(dir, "#{level.name}.level")}
 
       level_files.each do |level_file|
         FileUtils.mkdir_p(File.dirname(level_file))
