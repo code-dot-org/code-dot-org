@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
   students: [
     {id: 1, name: 'Student 1', familyName: 'FamNameB'},
     {id: 2, name: 'Student 2', familyName: 'FamNameA'},
+    {id: 3, name: 'Student 3', familyName: null},
   ],
   onSelectUser: () => {},
   getSelectedUserId: () => {},
@@ -47,6 +48,20 @@ const levelsWithProgress = [
     status: LevelStatus.not_tried,
     submitLevel: false,
     userId: 2,
+  },
+  {
+    id: '33',
+    assessment: null,
+    contained: false,
+    driver: null,
+    isConceptLevel: false,
+    levelNumber: 4,
+    navigator: null,
+    paired: null,
+    passed: false,
+    status: LevelStatus.not_tried,
+    submitLevel: false,
+    userId: 3,
   },
 ];
 

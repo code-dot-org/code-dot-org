@@ -51,10 +51,11 @@ class StudentTable extends React.Component {
       isSortedByFamilyName,
     } = this.props;
 
+    const collator = new Intl.Collator();
     // Sort students, in-place.
     isSortedByFamilyName
-      ? students.sort((a, b) => a.familyName.localeCompare(b.familyName))
-      : students.sort((a, b) => a.name.localeCompare(b.name));
+      ? students.sort((a, b) => collator.compare(a?.familyName, b?.familyName))
+      : students.sort((a, b) => collator.compare(a?.name, b?.name));
 
     return (
       <table style={styles.table} className="student-table">
@@ -86,7 +87,7 @@ class StudentTable extends React.Component {
                   <div style={styles.name}>
                     {student.name}
                     {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName}`}
+                      ` ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
