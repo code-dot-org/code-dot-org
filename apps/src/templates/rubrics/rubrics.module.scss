@@ -123,19 +123,18 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-  margin-bottom: 0;
 
   border-radius: 30px;
   border: 1px solid $product_affirmative_default;
   background: $light_affirmative_100;
+}
 
+p.aiTokenText {
   font-family: $gotham-extra-bold;
   color: $product_affirmative_default;
-
-  p {
-    color: $product_affirmative_default;
-  }
+  margin-bottom: 0;
 }
+
 
 .aiTokenText {
   font-family: $gotham-extra-bold;

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import classnames from 'classnames';
 import style from './rubrics.module.scss';
 import {learningGoalShape} from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -78,9 +79,13 @@ LearningGoal.propTypes = {
 
 const AiToken = () => {
   return (
-    <BodyFourText className={style.aiToken}>
-      {i18n.artificialIntelligenceAbbreviation()}
-      <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
-    </BodyFourText>
+    <div>
+      {' '}
+      <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
+        {i18n.artificialIntelligenceAbbreviation()}
+
+        <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
+      </BodyFourText>
+    </div>
   );
 };
