@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-02 01:30:24 UTC",
+    "serialized_at": "2023-08-18 05:03:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6072,6 +6072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Music Video 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6165,6 +6168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Level"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6178,6 +6184,27 @@
       },
       "level_keys": [
         "AI Chat Test Level"
+      ]
+    },
+    {
+      "chapter": 175,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Test Level 2"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level 2"
       ]
     }
   ],
@@ -8395,6 +8422,18 @@
         "script.name": "allthethings",
         "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Test Level 2",
+        "script_level.level_keys": [
+          "AI Chat Test Level 2"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      }
     }
   ],
   "resources": [
@@ -8425,6 +8464,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
