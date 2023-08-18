@@ -230,3 +230,17 @@ $container-width: 960px;
   background: $neutral_white;
   z-index: 1;
 }
+
+@media screen and (max-width: 959px) {
+  .relatedCurriculaContainer {
+    display: none;
+  }
+
+  .courseOfferingContainer {
+    width: 632px;
+  }
+
+  .videoContainer {
+    height: 188px;
+  }
+}
