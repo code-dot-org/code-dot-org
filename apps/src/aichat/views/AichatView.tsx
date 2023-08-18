@@ -6,7 +6,7 @@ import ChatWorkspace from './ChatWorkspace';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 const commonI18n = require('@cdo/locale');
-const aichatI18n = require('../locale');
+const aichatI18n = require('@cdo/aichat/locale');
 
 const AichatView: React.FunctionComponent = () => {
   return (
@@ -21,8 +21,8 @@ const AichatView: React.FunctionComponent = () => {
       </div>
       <div className={moduleStyles.chatWorkspaceArea}>
         <PanelContainer
-          id={aichatI18n.aichatWorkspaceHeader()}
-          headerText="AI Chat Lab"
+          id="aichat-workspace-panel"
+          headerText={aichatI18n.aichatWorkspaceHeader()}
         >
           <ChatWorkspace />
         </PanelContainer>
