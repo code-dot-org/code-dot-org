@@ -96,7 +96,7 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  resetValidation(hasConditions: boolean) {
+  private resetValidation(hasConditions: boolean) {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
