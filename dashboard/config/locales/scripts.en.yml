@@ -384,6 +384,8 @@ en:
               name: Music
             lesson-50:
               name: AI Chat
+            lesson-51:
+              name: AI Rubrics
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10320,6 +10322,8 @@ en:
               name: Animal Adaptations
             lesson-4:
               name: Function Machines w Artist
+            lesson-5:
+              name: AI 3-5
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
