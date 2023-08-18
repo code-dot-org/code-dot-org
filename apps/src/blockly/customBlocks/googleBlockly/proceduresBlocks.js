@@ -181,7 +181,7 @@ export function flyoutCategory(workspace) {
     // call to open the behavior editor with a new defintion block.
     // Until then, we just create a block under all existing blocks on the
     // main workspace.
-    createAndCenterNewDefBlock(functionDefinitionBlock);
+    createNewDefinitionBlock(functionDefinitionBlock);
   };
 
   if (useModalFunctionEditor) {
@@ -233,21 +233,21 @@ const getLowestBlockBottomY = () => {
   return lowestBlockBottom + 16;
 };
 
-export const createAndCenterNewDefBlock = function (blockState) {
-  // Everything here is place-holder code that should be replaced with a
-  // call to open the behavior editor with a new defintion block.
-  // Until then, we just create a block under all existing blocks on the
-  // main workspace.
-
-  const newDefBlock = Blockly.serialization.blocks.append(
+// Creates a new definition block under all existing blocks on the main workspace,
+// scrolls to the block, and selects it
+// TODO: Replace this with code to open the behavior editor with the new definition block
+export const createNewDefinitionBlock = blockState => {
+  const newDefinitionBlock = Blockly.serialization.blocks.append(
     {...blockState, x: 16, y: getLowestBlockBottomY()},
     Blockly.getMainWorkspace()
   );
-  // Hide the open toolbox flyout
+
+  // Close the open toolbox flyout
   Blockly.getMainWorkspace().hideChaff();
+
   // Scroll to the new block and select it.
-  Blockly.getMainWorkspace().centerOnBlock(newDefBlock.id);
-  newDefBlock.select();
+  Blockly.getMainWorkspace().centerOnBlock(newDefinitionBlock.id);
+  newDefinitionBlock.select();
 };
 
 export function sortProceduresByName(a, b) {
