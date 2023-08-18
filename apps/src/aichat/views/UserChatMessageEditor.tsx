@@ -3,7 +3,7 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import {ChatWorkspaceContext} from './ChatWorkspace';
 import aichatI18n from '../locale';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {useSelector} from 'react-redux';
 
 /**
@@ -12,7 +12,7 @@ import {useSelector} from 'react-redux';
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
   const systemPrompt = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.systemPrompt
+    (state: {lab: AichatState}) => state.lab.levelProperties?.systemPrompt
   );
 
   const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import aichatI18n from '../locale';
 import {ChatCompletionMessage, Role, Status} from '../types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import {useSelector} from 'react-redux';
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -75,7 +75,7 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const botTitle = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.botTitle
+    (state: {lab: AichatState}) => state.lab.levelProperties?.botTitle
   );
   return (
     <div id={`ChatMessage id: ${message.id}`}>
