@@ -1,7 +1,7 @@
 import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {createAndCenterNewDefBlock} from './proceduresBlocks';
+import {createNewDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
@@ -149,14 +149,11 @@ GoogleBlockly.Extensions.registerMutator(
  * @returns an array of XML block elements
  */
 export function flyoutCategory(workspace) {
-  const blockList = [];
-
   const newBehaviorButton = {
     kind: 'button',
     text: msg.createBlocklyBehavior(),
     callbackKey: 'createNewBehavior',
   };
-
   const behaviorDefinitionBlock = {
     kind: 'block',
     type: 'behavior_definition',
@@ -165,21 +162,24 @@ export function flyoutCategory(workspace) {
     },
   };
 
-  const createNewBehavior = function () {
-    // Everything here is place-holder code that should be replaced with a
-    // call to open the behavior editor with a new defintion block.
-    // Until then, we just create a block under all existing blocks on the
-    // main workspace.
+  // TODO: Replace this with a call to open the behavior editor with a new block
+  const createNewBehavior = () =>
+    createNewDefinitionBlock(behaviorDefinitionBlock);
 
-    createAndCenterNewDefBlock(behaviorDefinitionBlock);
-  };
+  // If the modal function editor is enabled, we render a button to open the editor
+  // Otherwise, we render a "blank" behavior definition block
+  let newBehaviorOption;
   if (useModalFunctionEditor) {
+    newBehaviorOption = newBehaviorButton;
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
-    blockList.push(newBehaviorButton);
   } else {
-    blockList.push(behaviorDefinitionBlock);
+    newBehaviorOption = behaviorDefinitionBlock;
   }
-  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
+
+  const blockList = [
+    newBehaviorOption,
+    ...getCustomCategoryBlocksForFlyout('Behavior'),
+  ];
 
   const allWorkspaces = Blockly.Workspace.getAll().filter(
     workspace => !workspace.isFlyout
@@ -229,17 +229,17 @@ function getCustomCategoryBlocksForFlyout(category) {
 
       const jsonBlocks = convertXmlToJson(xmlRootElement);
 
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(block =>
-        simplifyBlockStateForFlyout(block)
+      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
+        simplifyBlockStateForFlyout
       );
       return flyoutBlocks; // Return the new <xml> root element with block children
     }
   }
 
-  return null; // Return null if the desired category is not found
+  return []; // Return empty array if the desired category is not found
 }
 
-// Used to simplify block state for inclusion in the Behaviors category flyout.
+// Used to simplify block state for inclusion in the Behaviors category flyout
 function simplifyBlockStateForFlyout(block) {
   // Clone the original block object to avoid modifying it directly
   const modifiedBlock = {...block};
