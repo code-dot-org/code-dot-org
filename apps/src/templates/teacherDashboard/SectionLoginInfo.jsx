@@ -31,6 +31,7 @@ class SectionLoginInfo extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.string.isRequired,
+      code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -61,8 +62,6 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            // TODO: define this prop
-            // eslint-disable-next-line react/prop-types
             sectionCode={section.code}
             sectionId={section.id}
           />
