@@ -11,10 +11,7 @@ async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {messages: messagesToSend};
-  const callOpenaiChatCompletion = !!DCDO.get(
-    'callOpenaiChatCompletion',
-    false
-  );
+  const callOpenaiChatCompletion = !!DCDO.get('chatapi', false);
   const response = callOpenaiChatCompletion
     ? await HttpClient.post(
         CHAT_COMPLETION_URL,
