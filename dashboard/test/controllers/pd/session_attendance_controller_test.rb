@@ -56,7 +56,6 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'attend signed out redirects to sign_in page' do
     get :attend, params: {session_code: @session.code}
-    assert_response :success
     assert_redirected_to "/users/sign_in?user_return_to=/pd/attend/#{@session.code}"
   end
 
