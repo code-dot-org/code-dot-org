@@ -16,7 +16,6 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
   LevelProperties,
-  ProjectLevelData,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
