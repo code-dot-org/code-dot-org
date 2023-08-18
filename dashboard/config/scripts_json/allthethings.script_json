@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-18 05:03:48 UTC",
+    "serialized_at": "2023-08-18 17:05:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6233,6 +6233,30 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "AI Chat Test Level - 2"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level - 2"
+      ]
+    },
+    {
+      "chapter": 176,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene sprites_allthethings"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "AI Chat Test Level 2"
         ],
         "lesson.key": "lesson-50",
@@ -6254,11 +6278,14 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 177,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene challenge_allthethings"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7598,7 +7625,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7611,7 +7638,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7676,7 +7703,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_artistIntro",
+        "level.key": "2-3 Artist 1 new",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -7689,7 +7716,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
+        "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -7806,7 +7833,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 6",
+        "level.key": "4-5 Maze 3",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -7819,7 +7846,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 3",
+        "level.key": "4-5 Maze 6",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -8492,14 +8519,18 @@
     },
     {
       "seeding_key": {
-        "level.key": "AI Chat Test Level 2",
+        "level.key": "AI Chat Test Level - 2",
         "script_level.level_keys": [
-          "AI Chat Test Level 2"
+          "AI Chat Test Level - 2"
         ],
         "lesson.key": "lesson-50",
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 Sprites scene sprites_allthethings",
         "script_level.level_keys": [
           "CSD U3 Sprites scene sprites_allthethings"
