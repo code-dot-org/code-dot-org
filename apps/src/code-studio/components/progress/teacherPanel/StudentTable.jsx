@@ -52,20 +52,10 @@ class StudentTable extends React.Component {
     } = this.props;
 
     // Sort students, in-place.
+    const collator = new Intl.Collator();
     isSortedByFamilyName
-      ? students.sort((a, b) => {
-          if (a.familyName && b.familyName) {
-            return a.familyName.localeCompare(b.familyName);
-          } else if (a.familyName) {
-            // Sort empty family names last.
-            return -1;
-          } else if (b.familyName) {
-            return 1;
-          } else {
-            return 0;
-          }
-        })
-      : students.sort((a, b) => a.name.localeCompare(b.name));
+      ? students.sort((a, b) => collator.compare(a.familyName, b.familyName))
+      : students.sort((a, b) => collator.compare(a.name, b.name));
 
     return (
       <table style={styles.table} className="student-table">
