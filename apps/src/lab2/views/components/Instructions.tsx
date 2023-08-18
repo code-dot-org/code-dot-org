@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
@@ -39,7 +39,12 @@ interface InstructionsProps {
  * present on the legacy instructions panel, such as Help & Tips, Documentation, Code Review,
  * For Teachers Only, etc.
  */
-const Instructions: React.FunctionComponent<InstructionsProps> = props => {
+const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  beforeNextLevel,
+  baseUrl,
+  layout,
+  imagePopOutDirection,
+}) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
     (state: {lab: LabState}) =>
@@ -62,6 +67,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = props => {
 
   const {theme} = useContext(ThemeContext);
 
+  const onNextPanel = useCallback(() => {
+    if (beforeNextLevel) {
+      beforeNextLevel();
+    }
+    dispatch(navigateToNextLevel());
+  }, [dispatch, beforeNextLevel]);
+
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
@@ -72,14 +84,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = props => {
       text={instructionsText}
       message={message || undefined}
       showNextButton={showNextButton}
-      onNextPanel={() => {
-        if (props.beforeNextLevel) {
-          props.beforeNextLevel();
-        }
-        dispatch(navigateToNextLevel());
-      }}
+      onNextPanel={onNextPanel}
       theme={theme}
-      {...props}
+      {...{baseUrl, layout, imagePopOutDirection}}
     />
   );
 };
