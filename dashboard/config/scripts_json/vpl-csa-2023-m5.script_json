@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:13:45 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-17 20:33:17 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -118,6 +118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-overview_2023"
+        ],
         "progression": "Module 5 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -140,6 +143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection_2023"
+        ],
         "progression": "Image Filters in Unit 5 (~25 minutes)"
       },
       "bonus": false,
@@ -162,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter_2023"
+        ],
         "progression": "Image Filters in Unit 5 (~25 minutes)"
       },
       "bonus": false,
@@ -184,6 +193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-5-project-reflection_2023"
+        ],
         "progression": "The Unit 5 Project (~25 minutes)"
       },
       "bonus": false,
@@ -206,6 +218,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project_2023"
+        ],
         "progression": "The Unit 5 Project (~25 minutes)"
       },
       "bonus": false,
@@ -228,6 +243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-5-wrap-up_2023"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,
