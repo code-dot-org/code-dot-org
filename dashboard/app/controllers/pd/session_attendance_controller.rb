@@ -24,7 +24,6 @@ class Pd::SessionAttendanceController < ApplicationController
       # If signed out, user must sign in then is redirected back. If signed in to an account not associated
       # with an enrollment in this workshop, user must switch to an account enrolled in this workshop.
       if current_user
-        @safe_names = @session.workshop.unattended_enrollments.get_safe_names
         render :no_enrollment_match
         return
       else
@@ -50,7 +49,6 @@ class Pd::SessionAttendanceController < ApplicationController
     end
 
     enrollment.update!(user: current_user)
-
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
     attendance.update! marked_by_user: nil, enrollment: enrollment
 
