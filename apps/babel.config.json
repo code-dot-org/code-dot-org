@@ -1,7 +1,7 @@
 // Using babel.config.json instead of .babelrc makes this configuration apply
 // even when we are transpiling within node_modules.
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react" ],
+  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript" ],
   "plugins": [
     "add-module-exports",
     "syntax-async-functions",
