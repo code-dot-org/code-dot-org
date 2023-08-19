@@ -129,7 +129,7 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'puma_worker_killer'
 gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
