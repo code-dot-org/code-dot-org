@@ -3,9 +3,8 @@ import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
-import aichatI18n from '../locale';
 import {ChatCompletionMessage, Status, Role} from '../types';
-import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
+import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 
 /**
@@ -14,7 +13,7 @@ import {getChatCompletionMessage} from '../chatApi';
 const ChatWorkspace: React.FunctionComponent = () => {
   const [showWarningModal, setShowWarningModal] = useState(true);
   const [storedMessages, setStoredMessages] =
-    useState<ChatCompletionMessage[]>(demoChatMessages);
+    useState<ChatCompletionMessage[]>(initialChatMessages);
 
   const onCloseWarningModal = useCallback(
     () => setShowWarningModal(false),
