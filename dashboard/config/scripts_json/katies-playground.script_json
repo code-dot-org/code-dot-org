@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2023-08-17 22:17:46 UTC",
+    "serialized_at": "2023-08-18 18:08:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -110,15 +110,15 @@
     },
     {
       "key": "Introduction to Machine Learning",
-      "name": "Introduction to Machine Learning",
+      "name": "Introduction to Machine Learning for Upper Elementary ",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
+        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n",
+        "preparation": "- Watch the video and review this guide\n- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
       "seeding_key": {
@@ -302,12 +302,12 @@
       "key": "6ca92331-a97e-4d10-99b0-e65dfb6fb7df",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What’s an example of Artificial Intelligence (or AI) either in your personal life or that you’ve seen in a movie or book?_",
-        "name": "Journal",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _How are a boombox and a smart speaker similar and how are they different?_ ",
+        "name": "Building Background Knowledge",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Students may gravitate towards examples of artificial intelligence whose form also mimics a human being, such as interactive robots or Siri or having a conversation with ChatGPT, but also emphasize examples that broader and more embedded in tools we use frequently, such as social media algorithms or streaming recommendation algorithms.\n\nShortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
+            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as, engaging in conversations, displaying emotions, solving problems and many other forms. Smart speakers rely on natural language processing and machine learning, two subsets of AI, to improve performance over time.\n\nShortly after this prompt, students will watch a video that further defines AI and the focus of this lesson, Machine Learning.\n"
           }
         ]
       },
@@ -331,7 +331,7 @@
       "key": "fa67a973-5408-4c06-9fba-3cd3cd3dde6d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Try to surface any personal connections students may already have with smart speakers and 'old school' boomboxes. \nSome key differences to highlight:\n- Wires/wireless\n- Microphone attached vs internal\n- Amount of buttons & their assumed functions\n-  WiFi connectivity\nKey similiaries: \n- Output music\n- Take input from humans\n- "
       },
       "seeding_key": {
         "activity_section.key": "fa67a973-5408-4c06-9fba-3cd3cd3dde6d",
@@ -1215,6 +1215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_katietest"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1237,6 +1240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_katietest"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1259,6 +1265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_katietest"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
