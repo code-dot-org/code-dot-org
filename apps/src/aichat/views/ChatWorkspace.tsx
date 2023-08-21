@@ -3,7 +3,6 @@ import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
-import aichatI18n from '../locale';
 import {ChatCompletionMessage, Status, Role} from '../types';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 import {getChatCompletionMessage} from '../chatApi';
