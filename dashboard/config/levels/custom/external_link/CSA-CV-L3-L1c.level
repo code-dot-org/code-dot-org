@@ -11,8 +11,8 @@
     "long_instructions": "## Unlock the App\r\n\r\nEnter a four digit passcode to unlock the app. The user types into a text box, and then clicks the \"Enter\" button to check the passcode.",
     "bubble_choice_description": "Enter a four digit passcode to unlock the app. The user types into a text box, and then clicks the \"Enter\" button to check the passcode.",
     "link_title": "Unlock the App",
-    "url": "https://github.com/jamjamgobambam/unlock-starter"
+    "url": "https://github.com/code-dot-org/csa-cv-lesson3c"
   },
-  "audit_log": "[{\"changed_at\":\"2023-08-14T22:13:55.092+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1c\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1c\"},{\"changed_at\":\"2023-08-14 22:15:26 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-14T22:13:55.092+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1c\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1c\"},{\"changed_at\":\"2023-08-14 22:15:26 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-18 15:07:14 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>
