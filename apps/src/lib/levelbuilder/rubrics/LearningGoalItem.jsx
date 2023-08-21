@@ -86,7 +86,6 @@ const styles = {
   },
   checkbox: {
     marginLeft: 7,
-    
   },
   label: {
     fontSize: 18,
