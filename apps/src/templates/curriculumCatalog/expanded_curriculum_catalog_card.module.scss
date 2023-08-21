@@ -85,7 +85,6 @@ $container-width: 960px;
 .expandedCardContainer {
   position: relative;
   background-color: $neutral_white;
-  color: #333;
   border: 1px solid $neutral_dark;
   border-radius: 4px;
   width: $container-width;
@@ -125,6 +124,7 @@ $container-width: 960px;
   align-items: center;
   column-gap: 8px;
   margin: 0 0 0.5em 0;
+  white-space: nowrap;
 
   > p {
     font-size: 0.875em;
@@ -195,7 +195,7 @@ $container-width: 960px;
 
 .subjectsText {
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .thickDivider {
@@ -204,4 +204,29 @@ $container-width: 960px;
 
 .videoContainer {
   height: 246.5px;
+}
+
+.arrowContainer {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid $neutral_white;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.arrowContainer::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid $neutral_dark;
+  border-left: 1px solid $neutral_dark;
+  top: 100%;
+  left: 54.5%;
+  margin-left: -25px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -9px;
+  background: $neutral_white;
+  z-index: 1;
 }
