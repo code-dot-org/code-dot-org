@@ -10,7 +10,7 @@ class ManifestBuilderTest < Minitest::Test
   def test_get_animation_strings_for_spritelab_quietly
     animation_strings = nil
 
-    VCR.use_cassette('animations/manifest_spritelab_strings') do
+    VCR.use_cassette('animations/manifest_spritelab_strings', record: :none) do
       animation_strings = ManifestBuilder.new({spritelab: true, quite: true}).get_animation_strings
     end
 

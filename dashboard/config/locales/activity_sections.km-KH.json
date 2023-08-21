@@ -1727,13 +1727,13 @@
           "progression_name": "អនុវត្តន៍"
         },
         "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
-          "progression_name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "progression_name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "ការទស្សន៍ទាយ"
         },
         "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
-          "progression_name": "របៀបបង្កើតអាង (Sprite)"
+          "progression_name": "របៀបបង្កើត SPRITE"
         },
         "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
           "name": "លេងដោយសេរី",
@@ -1831,13 +1831,13 @@
           "progression_name": "លេងដោយសេរី"
         },
         "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
-          "progression_name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "progression_name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "ការទស្សន៍ទាយ"
         },
         "ee39051b-426b-40d9-b61f-1f180cae8717": {
-          "progression_name": "របៀបបង្កើតអាង (Sprite)"
+          "progression_name": "របៀបបង្កើត SPRITE"
         },
         "18e78998-a305-4084-83a3-df1cd05da78f": {
           "name": "លេងដោយសេរី",
@@ -2331,13 +2331,13 @@
           "progression_name": "អនុវត្តន៍"
         },
         "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
-          "progression_name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "progression_name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "ការទស្សន៍ទាយ"
         },
         "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
-          "progression_name": "របៀបបង្កើតអាង (Sprite)"
+          "progression_name": "របៀបបង្កើត SPRITE"
         },
         "4280e340-3549-4814-9afe-d6c9fe291025": {
           "progression_name": "លេងដោយសេរី"
@@ -2430,13 +2430,13 @@
           "progression_name": "លេងដោយសេរី"
         },
         "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
-          "progression_name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+          "progression_name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "ការទស្សន៍ទាយ"
         },
         "51a140d6-441e-487b-9e1f-313e842b78c3": {
-          "progression_name": "របៀបបង្កើតអាង (Sprite)"
+          "progression_name": "របៀបបង្កើត SPRITE"
         },
         "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
           "progression_name": "លេងដោយសេរី"
@@ -2642,7 +2642,7 @@
           ]
         },
         "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [
@@ -6477,6 +6477,9 @@
         "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
           "progression_name": "អនុវត្តន៍"
         },
+        "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
           "progression_name": "ការកសាងជំនាញ"
         },
@@ -6508,6 +6511,9 @@
         },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "ការទស្សន៍ទាយ"
@@ -6609,6 +6615,9 @@
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "1620d22b-10cf-4c91-bb52-cda64a75b666": {
+          "progression_name": "កំណត់សកម្មភាពឱ្យតួរអង្គ"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "ការកសាងជំនាញ"
@@ -6792,7 +6801,7 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
           "progression_name": "វីដេអូ៖ ការណែនាំ អាង(Sprite)"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
@@ -6806,6 +6815,7 @@
           ]
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "ការបង្កើត Sprites",
           "tips": [
             null
           ],
@@ -6834,7 +6844,11 @@
           ]
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites",
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "progression_name": "កំណត់សកម្មភាពឱ្យតួរអង្គ"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
           "progression_name": "ប្រើប្លុក [blockly block][0] ពីប្រអប់ កូដប្លុក ​ហើយបន្ថែមវាទៅផ្នែកខាងក្រោមនៃប្លុកផ្សេងទៀត ​ដើម្បីបញ្ចប់កូដនេះ​ បន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"។\""
@@ -6846,6 +6860,9 @@
           "tips": [
             null
           ]
+        },
+        "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
           "tips": [
@@ -7164,6 +7181,7 @@
           "progression_name": "លេងដោយសេរី"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "ការបង្កើត Sprites",
           "tips": [
             null
           ],
@@ -7184,13 +7202,20 @@
           ]
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites",
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "progression_name": "កំណត់សកម្មភាពឱ្យតួរអង្គ"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "progression_name": "ការកសាងជំនាញ"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "អនុវត្តន៍"
+        },
+        "660e66d6-d582-4568-9274-8971b0f5b344": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
           "tips": [
@@ -7200,11 +7225,20 @@
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "លេងដោយសេរី"
         },
+        "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "progression_name": "វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ"
+        },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "អនុវត្តន៍"
         },
+        "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
+          "progression_name": "វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ"
+        },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "ព្រឹត្តិការណ៍"
+        },
+        "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
+          "progression_name": "វីដេអូ៖ ការវាស់ពិធីជប់លៀងរាំ"
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
@@ -7250,6 +7284,9 @@
         "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
           "progression_name": "លេងដោយសេរី"
         },
+        "614b6acb-6e88-403e-a873-aa900b8666c4": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "e2b26151-70bf-4a9d-b08a-28a0efffd9e0": {
           "progression_name": "អនុវត្តន៍"
         },
@@ -7280,6 +7317,9 @@
         },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "ការទស្សន៍ទាយ"
@@ -7811,7 +7851,7 @@
           ]
         },
         "6b2ab9dc-4cdf-4797-a181-ac82354bd22f": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "3db6f33d-50ad-4131-a34a-c9d0cf11c1ce": {
           "tips": [
@@ -10802,7 +10842,7 @@
           ]
         },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
-          "description": "![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
+          "description": "[][0]"
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
@@ -12269,6 +12309,9 @@
         "3315af90-e8ff-4568-813e-2b743e90bf30": {
           "progression_name": "មេរៀនបន្ថែម"
         },
+        "2d76e0dc-c660-40b1-b975-d6f00ad0edbf": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
           "progression_name": "ការកសាងជំនាញ"
         },
@@ -12309,6 +12352,9 @@
         },
         "3ea15706-caac-499b-aef5-a7210f291bfc": {
           "progression_name": "មេរៀនបន្ថែម"
+        },
+        "a4ab31f7-6915-461a-b307-aad86879a097": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "b7925091-8715-4ad6-8d94-6ca396d22fd6": {
           "progression_name": "ការទស្សន៍ទាយ"
@@ -12590,7 +12636,7 @@
           ]
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
           "progression_name": "វីដេអូ៖ ការណែនាំ អាង(Sprite)"
         },
         "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
@@ -12599,6 +12645,7 @@
           ]
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "name": "ការបង្កើត Sprites",
           "tips": [
             null
           ],
@@ -12630,7 +12677,11 @@
           ]
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites",
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
+          "progression_name": "កំណត់សកម្មភាពឱ្យតួរអង្គ"
         },
         "ddbb537c-edf8-479c-b44d-8188941c0655": {
           "progression_name": "ការកសាងជំនាញ"
@@ -12642,6 +12693,9 @@
           "tips": [
             null
           ]
+        },
+        "89eea455-9916-4a03-b782-7c22b535cb4a": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
           "tips": [
@@ -12725,6 +12779,9 @@
           "tips": [
             null
           ]
+        },
+        "04c4b8b1-e89f-4593-b843-2c7ef2ed3299": {
+          "name": "ការរាប់ជាមួយអថេរ"
         },
         "51946ebc-7151-47c2-88bb-29d89d0338c5": {
           "progression_name": "ការទស្សន៍ទាយ"
@@ -12943,13 +13000,20 @@
           ]
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites",
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "cc8e4408-1488-4da7-be3f-abc39f349b23": {
+          "progression_name": "កំណត់សកម្មភាពឱ្យតួរអង្គ"
         },
         "5ee02837-9f63-4306-84d8-ded40216114f": {
           "progression_name": "ការកសាងជំនាញ"
         },
         "a04d7a73-d970-45f1-8c68-6553af32892f": {
           "progression_name": "អនុវត្តន៍"
+        },
+        "c1903a35-66ca-4702-8dea-17cea274e921": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
           "tips": [
@@ -12959,11 +13023,20 @@
         "116adfa6-d62e-421c-aeff-c0d7a60cb4f0": {
           "progression_name": "លេងដោយសេរី"
         },
+        "9a3fff4a-420a-45fd-9409-ec6cecaf15b9": {
+          "progression_name": "វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ"
+        },
         "5398d472-ce7e-4f6b-9a6c-ccfa31ebde30": {
           "progression_name": "អនុវត្តន៍"
         },
+        "0bb34d8e-12a2-4cb4-935d-0c7b247777ff": {
+          "progression_name": "វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ"
+        },
         "537232f4-4f8e-4dd4-9b51-122c0d012e9a": {
           "progression_name": "ព្រឹត្តិការណ៍"
+        },
+        "6672d026-0039-4df8-b54f-f0fc92790588": {
+          "progression_name": "វីដេអូ៖ ការវាស់ពិធីជប់លៀងរាំ"
         },
         "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
           "tips": [
@@ -13009,6 +13082,9 @@
         "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
           "progression_name": "លេងដោយសេរី"
         },
+        "744f5dec-6181-4973-bb05-c46564144240": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "12894c2b-8f8d-49f7-b339-f1e8f150bfd4": {
           "progression_name": "អនុវត្តន៍"
         },
@@ -13039,6 +13115,9 @@
         },
         "9798ab7a-f709-42df-b9fb-1828099a88d3": {
           "progression_name": "លេងដោយសេរី"
+        },
+        "13e970f9-2c63-49d0-9995-322afdd7f201": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "8504a81d-7f72-44e2-ac40-5fe386544817": {
           "progression_name": "ការទស្សន៍ទាយ"
@@ -13203,6 +13282,9 @@
           "tips": [
             null
           ]
+        },
+        "78a9627d-1365-414a-b492-8e2e6fe8892c": {
+          "name": "ការរាប់ជាមួយអថេរ"
         },
         "b2d87065-8954-443d-a9be-bb206b411b24": {
           "progression_name": "ការទស្សន៍ទាយ"

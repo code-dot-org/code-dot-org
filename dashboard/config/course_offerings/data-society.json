@@ -5,16 +5,16 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/21eeda87b825c040382dee0b986939c1-Data.png",
   "cs_topic": "data",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "professional_learning_program": null,
-  "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "description": "In this unit, students learn about the importance of using data to solve problems and understand how computers can help in this process. ",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/15aqFQQVBWU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=15aqFQQVBWU&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 443
 }

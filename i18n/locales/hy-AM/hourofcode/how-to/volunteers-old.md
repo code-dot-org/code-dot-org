@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Ինչպես ուղեցույցներ Hour O-Code կամավորների համար
 ---
 
 {{ signup_button }}

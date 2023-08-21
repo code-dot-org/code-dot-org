@@ -401,6 +401,8 @@ my:
               display_name: Loops
         soccer:
           name: ဘောလုံး
+        starwars:
+          title: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-4:

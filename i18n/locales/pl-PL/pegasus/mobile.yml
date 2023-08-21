@@ -1538,6 +1538,7 @@
   header_stats: "Statystyki"
   header_help_us: "Pomóż nam"
   header_about: "O programie"
+  header_incubator: "Inkubator"
   header_teacher_community: "Społeczność nauczycieli"
   header_help_support: 'Pomoc i wsparcie '
   header_report_bug: "Zgłoś problem"
@@ -1652,7 +1653,7 @@
   hoc2018_mc_download_adventurer: "Pobierz wersję offline Poszukiwacza Przygód z Minecraftem."
   hoc2018_mc_educators: "Dla nauczycieli"
   hoc2018_mc_educators_box1_title: "Koduj z Minecraftem"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Edycja Edukacyjna zapewnia program nauczania zgodny ze standardami, szkolenie i kodowanie z Minecraftem.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Edycja Edukacyjna zapewnia program nauczania zgodny ze standardami, szkolenie i kodowanie z Minecraftem."
   hoc2018_mc_educators_box1_button: "Rozpocznij"
   hoc2018_mc_educators_box2_title: "Pobierz przewodnik dla facylitatorów"
   hoc2018_mc_educators_box2_desc: "Ten zestaw narzędzi pomoże Ci przeprowadzić Godzinę Kodowania (the Hour of Code) i zachęcić uczniów do informatyki."
@@ -1760,7 +1761,7 @@
   hoc2018_mc_with_microsoft: "W partnerstwie z: "
   hoc2018_mc_thank_microsoft: "Dziękujemy Microsoft za wspieranie naszej wizji i misji, aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności, by odnieść sukces w XXI wieku."
   hoc2019_mc_mee_title: "Sztuczna inteligencja z Minecraftem na dobre"
-  hoc2019_mc_mee_description1: 'Nowy samouczek dla Minecraftu w ramach Godziny Kodowania jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!'
+  hoc2019_mc_mee_description1: "Nowy samouczek dla Minecraftu w ramach Godziny Kodowania jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!"
   hoc2019_mc_mee_description2: "Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu lekcji, filmów, programu informatyki i szkoleń dla nauczycieli."
   hoc2019_mc_more_coding_resources: "Więcej zasobów do kodowania"
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link}) z 2018."
@@ -1773,18 +1774,18 @@
   page_not_available_description: "Przepraszamy, ta strona nie jest już dostępna pod tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail [support@code.org](%{support_email_link})."
   page_not_available_button: "Powrót do strony domowej"
   hoc2020_mc_available_code_org: "Dostępne na Code.org"
-  hoc2020_mc_available_mee: 'Dostępne w Minecrafcie: Education Edition'
+  hoc2020_mc_available_mee: "Dostępne w Minecrafcie: Education Edition"
   hoc2020_mc_mee_title: "Opowieść Minecrafta o dwóch wioskach"
-  hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
+  hoc2020_mc_mee_description: "Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! Nowy samouczek Minecraft w ramach Godziny Kodowania jest już dostępny w grze Minecraft: Education Edition dla systemów Windows, Mac, Chromebook i iPad. Zacznij od bezpłatnych zasobów, szkoleń i filmów dla nauczycieli.'
+  hoc2021_mc_mee_description: "Cofnij się w czasie i naucz się kodować! W grze Minecraft: Education Edition na systemy Windows, Mac, Chromebook oraz iPad został udostępniony nowy samouczek poświęcony Godzinie kodowania z Minecraft. Skorzystaj z darmowych zasobów edukacyjnych, szkoleń i filmów."
   hoc2021_mc_mee_villages_title: "Opowieść o dwóch wioskach"
-  hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Naucz się podstaw kodowania i odkrywaj różnorodność oraz integrację ze swoimi uczniami w Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "AI Na dobre"
-  hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami i naucz się kodować w grze Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Poznaj sztuczną inteligencję ze swoimi uczniami i naucz się kodować w grze Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Posiadłość Minecraft Escape"
   hoc2022_mc_mee_description: 'Ucieknij z tajemniczej rezydencji o świcie i zarobić milion szmaragdów! Nowy samouczek Minecraft Hour of Code jest już dostępny w Minecraft: Education Edition dla systemów Windows, Mac, Chromebook, Ipad i Mobile. Zacznij korzystać z bezpłatnych zasobów dla nauczycieli, szkolenia, i filmy. '
-  hoc2022_mc_mee_timecraft_description: 'Cofnij się w czasie, aby uratować przyszłość w tej bezpłatnej lekcji kodowania w grze Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Cofnij się w czasie, aby uratować przyszłość w tej bezpłatnej lekcji kodowania w grze Minecraft: Education Edition."
   footer_powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
   footer_built_on_github: "Oparty na GitHub firmy Microsoft"
   codebytes_skinny_banner_title: "Dołącz do nas 7-11 grudnia do naszych mini-lekcjach na żywo z CodeBytes!"
@@ -1833,7 +1834,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Pomóż chronić zagrożoną zebrę górską, rozpoznając różne zwierzęta na zdjęciach."
   ai_audience: "Odbiorcy"
-  ai_minecraft_description: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki i szkoleń dla nauczycieli. (Wymaga Minecraftu: Education Edition)'
+  ai_minecraft_description: "Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki i szkoleń dla nauczycieli. (Wymaga Minecraftu: Education Edition)"
   ai_k_12_audience: "K-12 (Wymaga czytania)"
   ai_microsoft_workshop: "Bezpłatne wirtualne warsztaty firmy Microsoft "
   ai_microsoft_workshop_description: "Rozpalaj ciekawość dzięki darmowym warsztatom STEM i kodowania."

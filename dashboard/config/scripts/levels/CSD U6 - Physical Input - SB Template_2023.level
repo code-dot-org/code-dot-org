@@ -1,19 +1,16 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-09-21T13:19:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "var myButton = createButton": null,
-      "onBoardEvent": null,
-      "buzzer.frequency": null,
-      "var myLed = createLed": null,
-      "led.toggle": null,
-      "__.toggle": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "//This code creates a button attached to pin \"A0\"\r\nvar buzzButton = createButton(\"A0\");\r\n\r\n//This code buzzes when buzzButton goes down\r\nonBoardEvent(buzzButton, \"down\", function() {\r\n  buzzer.frequency(200, 100);\r\n});\r\n\r\n//1) Use an onBoardEvent() to detect when the buzzButton is released up\r\n\r\n//2) When the `buzzButton` is released: make a high-pitched buzz",
+    "start_blocks": "//This code creates a button attached to pin \"A1\"\r\nvar buzzButton = createButton(\"A1\");\r\n\r\n//This code buzzes when buzzButton goes down\r\nonBoardEvent(buzzButton, \"down\", function() {\r\n  buzzer.frequency(200, 100);\r\n});\r\n\r\n//1) Use an onBoardEvent() to detect when the buzzButton is released up\r\n\r\n//2) When the `buzzButton` is released: make a high-pitched buzz",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -69,13 +66,8 @@
 
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-09-21T13:19:37.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:37.962+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB Template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB Template_2222\"},{\"changed_at\":\"2023-03-17 16:45:49 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:37.962+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB Template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB Template_2222\"},{\"changed_at\":\"2023-03-17 16:45:49 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 17:04:04 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 17:34:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,5 +1,6 @@
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -9,6 +10,7 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
+const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -45,6 +47,18 @@ export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
   isBackgroundMusicMuted,
 });
+export const setSortByFamilyName = (
+  isSortedByFamilyName,
+  sectionId,
+  unitName,
+  source
+) => ({
+  type: SET_SORT_BY_FAMILY_NAME,
+  isSortedByFamilyName,
+  sectionId,
+  unitName,
+  source,
+});
 
 const initialState = {
   userId: null,
@@ -54,6 +68,7 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
+  isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
 };
@@ -96,6 +111,25 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       isBackgroundMusicMuted: action.isBackgroundMusicMuted,
+    };
+  }
+  if (action.type === SET_SORT_BY_FAMILY_NAME) {
+    if (action.isSortedByFamilyName) {
+      analyticsReport.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
+        sectionId: action.sectionId,
+        unitName: action.unitName,
+        source: action.source,
+      });
+    } else {
+      analyticsReport.sendEvent(EVENTS.SORT_BY_DISPLAY_NAME, {
+        sectionId: action.sectionId,
+        unitName: action.unitName,
+        source: action.source,
+      });
+    }
+    return {
+      ...state,
+      isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
   if (action.type === SET_INITIAL_DATA) {

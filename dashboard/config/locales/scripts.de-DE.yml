@@ -2244,6 +2244,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         csd1-dlp:
           description: Dies ist Lerneinheit 1 des Plans für Vertieftes Lernen von
             Code.org - Erkenntnisse aus der Informatik für Moderatoren in der Ausbildung.
@@ -6145,6 +6147,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-coding2-2023:
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
@@ -6181,6 +6185,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-creativity2-2023:
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
@@ -6217,6 +6223,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-data2:
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
@@ -6263,6 +6271,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-design-with-purpose2-2023:
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
@@ -6303,6 +6313,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-hardware2-2023:
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
@@ -6335,6 +6347,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6532,6 +6546,8 @@ de:
           student_description: Lerne die Grundlagen der Informatik kennen – mit Figuren
             aus Angry Birds, Plants vs. Zombies, und mit Scrat aus Ice Age!
           title: Klassisches Labyrinth
+        how-ai-works-2023:
+          title: So funktioniert KI
         iceage:
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
           description_short: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -6711,9 +6727,11 @@ de:
               display_name: Ereignisse
             lessonGroup-7:
               display_name: Projekt am Ende des Kurses
-          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
-            Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
-            Kurses, die mit anderen geteilt werden kann.
+            lessonGroup-8:
+              display_name: Daten
+          lessons:
+            lesson-1:
+              name: Daten
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Alter: 8-12'
           description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
@@ -6737,9 +6755,11 @@ de:
               display_name: Schleifen
             lessonGroup-5:
               display_name: Auswirkungen der Datenverarbeitung
-          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
-            Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
-            Kurses, die mit anderen geteilt werden kann.
+            lessonGroup-6:
+              display_name: Daten
+          lessons:
+            lesson-1:
+              name: Daten
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6752,12 +6772,11 @@ de:
               display_name: Ereignisse
             lessonGroup-6:
               display_name: Daten
-          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und
-            Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen
-            Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit
-            Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz
-            eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen
-            können!
+            lessonGroup-8:
+              display_name: Computersysteme
+          lessons:
+            lesson-1:
+              name: Computersysteme
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Alter: 7-11'
           description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine
@@ -7786,6 +7805,22 @@ de:
         virustest:
           description_short: 'Entwickle mit Sprite Lab die Simulation eines Virenausbruchs. '
           title: Simulieren eines Ausbruchs
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2020:
           name: vpl-csd-2020
         vpl-csd-2021:
@@ -7806,6 +7841,22 @@ de:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd-ci-1:
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf
             den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor.
@@ -8014,6 +8065,22 @@ de:
           title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
         vpl-csp-2020:
           name: vpl-csp-2020
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

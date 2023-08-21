@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:52:12.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -40,7 +45,7 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "long_instructions": "<img src=\"https://images.code.org/122ae9e48210f88c7e1a403ac49e6481-image-1586412828471.11.56 PM.png\" style=\"float: right; width: 150px;\">\r\n\r\n# Debug: Missing Shapes\r\n\r\nWhen the code below is run, nothing shows up. Try to debug the code so the image on the right appears!\r\n\r\n# Do This\r\n\r\n1) Debug the code so that an image shows up.\r\n\t- You do _not_ need to add any new blocks to your code! You only need to rearrange the blocks that are already in the code area\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/122ae9e48210f88c7e1a403ac49e6481-image-1586412828471.11.56 PM.png\" style=\"float: right; width: 150px;\">\r\n\r\n# Debug: Missing Shapes\r\n\r\nWhen the code below is run, nothing shows up. Try to debug the code so the image on the right appears!\r\n\r\n# Do This\r\n\r\n1) Debug the code so that an image shows up.\r\n\t- You do _not_ need to add any new blocks to your code! You only need to fix some parameters for the blocks that are already in the code area\r\n",
     "parent_level_id": 19159,
     "name_suffix": "_2023",
     "map_reference": "/courses/csd-2022/guides/shapes-and-parameters",
@@ -61,13 +66,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:52:12.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:12.145+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes missing_2022\\\"\"],\"cloned_from\":\"CSD U3 shapes missing_2022\"},{\"changed_at\":\"2022-10-12 19:00:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:12.145+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes missing_2022\\\"\"],\"cloned_from\":\"CSD U3 shapes missing_2022\"},{\"changed_at\":\"2022-10-12 19:00:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 21:59:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

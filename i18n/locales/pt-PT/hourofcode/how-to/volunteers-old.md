@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Guia prático para voluntários da Hora do Código
 ---
 
 {{ signup_button }}

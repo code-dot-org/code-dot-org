@@ -1654,6 +1654,10 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
         csd1-dlp:
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần
@@ -3072,10 +3076,22 @@ vi:
           title: Mã lệnh Flappy có bài khảo sát
         focus-on-coding-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-creativity-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-data-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3086,10 +3102,22 @@ vi:
               display_name: Chương 2
         focus-on-design-with-purpose-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-hardware-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
         focus-on-impact-in-society-post-survey-2023:
           title: Khảo sát sau khoá học
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3193,6 +3221,8 @@ vi:
           student_description: Hãy thử những nền tảng của khoa học máy tính với các
             nhân vật từ Angry Birds, Plants vs Zombies và Scrat từ Ice Age!
           title: Mê cung cổ điển
+        how-ai-works-2023:
+          title: Cách thức hoạt động của AI
         iceage:
           description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age
             Play Lab!
@@ -3305,9 +3335,11 @@ vi:
               display_name: Các sự kiện
             lessonGroup-7:
               display_name: Dự án tổng kết khóa học
-          student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính
-            và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
-            tạo câu chuyện của riêng bạn để có thể chia sẻ.
+            lessonGroup-8:
+              display_name: Dữ liệu
+          lessons:
+            lesson-1:
+              name: Dữ liệu
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Độ tuổi: 8-12'
           lesson_groups:
@@ -3329,9 +3361,11 @@ vi:
               display_name: Vòng lặp
             lessonGroup-5:
               display_name: Tác động của máy tính
-          student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính
-            và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
-            tạo câu chuyện của riêng bạn để có thể chia sẻ.
+            lessonGroup-6:
+              display_name: Dữ liệu
+          lessons:
+            lesson-1:
+              name: Dữ liệu
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3344,11 +3378,11 @@ vi:
               display_name: Các sự kiện
             lessonGroup-6:
               display_name: Dữ liệu
-          student_description: Tạo chương trình với trình tự, vòng lặp và sự kiện.
-            Dịch tên viết tắt của bạn sang dạng nhị phân, khám phá các kỹ thuật giải
-            quyết vấn đề khác nhau và tìm hiểu cách đối phó với nạn bắt nạt trực tuyến.
-            Vào cuối khóa học, hãy làm game hoặc sáng tác câu chuyện của riêng bạn
-            để có thể chia sẻ!
+            lessonGroup-8:
+              display_name: Hệ thống máy tính
+          lessons:
+            lesson-1:
+              name: Hệ thống máy tính
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Độ tuổi: 7-11'
           description_short: Tìm hiểu về câu lệnh điều kiện. Sáng tạo tác phẩm nghệ

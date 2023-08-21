@@ -8,271 +8,271 @@ title: Οδηγίες για τα μαθήματα
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Οδηγίες για τη δημιουργία και την υποβολή σεμιναρίων και μαθημάτων για την Ώρα του Κώδικα™ και την Εβδομάδα Εκπαίδευσης Πληροφορικής
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Το Code.org φιλοξενεί μια ποικιλία δραστηριοτήτων, μαθημάτων και βίντεο της Ώρας του Κώδικα™ στους ιστότοπους Code.org και Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Θέλετε να υποβάλετε το δικό σας αυτο-καθοδηγούμενο σεμινάριο, μάθημα με δάσκαλο ή δραστηριότητα ρομποτικής/κατασκευαστή που εξηγεί μια αρχή της επιστήμης των υπολογιστών; Συμμετάσχετε σε αυτό το παγκόσμιο κίνημα και βοηθήστε τους συμμετέχοντες σε όλο τον κόσμο να ξεκινήσουν με μια ώρα κώδικα ή να προχωρήσουν περαιτέρω με δραστηριότητες πολλαπλών μαθημάτων, διάρκειας ημέρας ή εβδομάδας.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**Αφού διαβάσετε τις οδηγίες, μπορείτε να υποβάλετε τη δραστηριότητά σας μέσω της σελίδας [Hour of Code™ Υποβολή δραστηριότητας](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Μπορείτε να υποβάλετε μια δραστηριότητα ανά πάσα στιγμή, αλλά η προθεσμία για συμπερίληψη σε οποιοδήποτε δεδομένο ημερολογιακό έτος είναι η 1η Οκτωβρίου. (Για παράδειγμα, τυχόν δραστηριότητες που λαμβάνονται μετά την 1η Οκτωβρίου 2023, δεν θα αναφέρονται για την Ώρα του Κώδικα του 2023.)** Εάν έχετε οποιεσδήποτε ερωτήσεις σχετικά με την υποβολή της δραστηριότητάς σας, επικοινωνήστε μαζί μας στο support@code.org.
 
-A few tips:
+Μερικές συμβουλές:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Υποβάλετε περισσότερες από μία δραστηριότητες**: Εάν έχετε δημιουργήσει δραστηριότητες για διαφορετικά επίπεδα, διαφορετικές ηλικίες, ή άλλες κατηγορίες, παραθέτουμε τις δραστηριότητές σας ξεχωριστά, ώστε κάθε δάσκαλος να μπορεί να βρει το σωστό για την τάξη του. Υποβάλετε κάθε σεμινάριο ή δραστηριότητα ξεχωριστά. Δεδομένου του αριθμού των υποβολών που έχουμε δει τα τελευταία χρόνια, θα έχουμε χρόνο να αναθεωρήσουμε **έως 5 δραστηριότητες** ανά συνεργάτη. Μετά από αυτό, θα καταβάλουμε κάθε δυνατή προσπάθεια για να αναθεωρήσουμε όσο το δυνατόν περισσότερα πριν ξεκινήσει η Ώρα του Κώδικα.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Πέρα από τα μαθήματα για αρχάριους**: Εκτός από τα μαθήματα για δασκάλους και μαθητές που μαθαίνουν την επιστήμη των υπολογιστών για πρώτη φορά, παραθέτουμε μαθησιακές εμπειρίες για αίθουσες διδασκαλίας με γνώσεις πληροφορικής που θέλουν να προχωρήσουν λίγο περισσότερο! Βοηθήστε μας υποβάλλοντας μαθήματα για μαθήματα που είναι ήδη άνετα με τα βασικά.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Θεματικές περιοχές**: Έχετε μια υπέροχη ιδέα μαθήματος που ενσωματώνει την Επιστήμη των Υπολογιστών στα Μαθηματικά; Ιστορία; Γλωσσικές Τέχνες; Επιστήμη; Τέχνη; Ή άλλο θέμα; Είχαμε πολλά αιτήματα από εκπαιδευτικούς που θέλουν να συνδέσουν την Ώρα του Κώδικα με τη θεματική τους περιοχή. Οι εκπαιδευτικοί μπορούν να φιλτράρουν για τον τύπο της τάξης τους (ζώνη βαθμού ή θεματική περιοχή), οπότε χρειαζόμαστε τη βοήθειά σας για να συμπληρώσουμε τα κενά για να προσφέρουμε δραστηριότητες στην τάξη ή σχέδια μαθημάτων που σχετίζονται με το CS σε κάθε σημαντική θεματική περιοχή για διαφορετικές ζώνες βαθμού. Συνεχίζουμε επίσης να έχουμε μια κατηγορία «Επιστήμη Υπολογιστών» για εκπαιδευτικούς που αναζητούν γενικές δραστηριότητες CS.
 
 <a id="top"></a>
 
-## Index:
+## Ευρετήριο:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Τι να υποβάλετε](#whatsubmit)
+- [Γενικές οδηγίες για τη δημιουργία μιας δραστηριότητας Hour of Code™](#guidelines)
+- [Πώς να υποβάλετε](#submit)
+- [Πώς θα αξιολογηθούν οι δραστηριότητες](#inclusion)
+- [Προτάσεις για το σχεδιασμό της δραστηριότητάς σας](#design)
+- [Βασικές κατευθύνσεις](#tm)
+- [Εικονοστοιχείο ανίχνευσης](#pixel)
+- [Προώθηση της δραστηριότητάς σας, της CsedWeek και της Ώρας του Κώδικα](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Τι να υποβάλετε
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Αυτοκαθοδηγούμενο παζλ ή παιχνίδι ([παράδειγμα](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Αυτές οι δραστηριότητες έχουν σχεδιαστεί για τους μαθητές να αυτοκατευθύνονται μέσω ενός σεμιναρίου. Δεν απαιτούν πολλές οδηγίες από έναν δάσκαλο ή μια εργασία προετοιμασίας δασκάλου.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Μάθημα που διευκολύνεται από τον δάσκαλο ([παράδειγμα](https://studio.code.org/s/course1/lessons/2/levels/1), [πρότυπο](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Τώρα που εκατοντάδες χιλιάδες εκπαιδευτικοί έχουν δοκιμάσει την Ώρα του Κώδικα, πολλές αίθουσες διδασκαλίας είναι έτοιμες για πιο δημιουργικές δραστηριότητες που διδάσκουν τα βασικά της επιστήμης των υπολογιστών. Για να βοηθήσουμε τους πιο προχωρημένους εκπαιδευτικούς να βρουν έμπνευση, συλλέγουμε και επιμελούμε μαθήματα και σχέδια δραστηριοτήτων «υπό την καθοδήγηση εκπαιδευτικών» για βετεράνους της Ώρας του Κώδικα.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Ένας τύπος δραστηριότητας που θα παρουσιάσουμε για έμπειρους εκπαιδευτικούς είναι τα έργα δημιουργίας «ανοιχτού sandbox». Δραστηριότητες που ενθαρρύνουν τους μαθητές να δημιουργήσουν τη δική τους εφαρμογή, παιχνίδι, ιστότοπο ή άλλο έργο. Εάν διευκολυνθεί σωστά, πιο ανοιχτές δραστηριότητες μπορούν να αναδείξουν καλύτερα τη δημιουργική φύση της επιστήμης των υπολογιστών.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Ορισμένοι εκπαιδευτικοί μπορεί επίσης να προτιμούν να φιλοξενούν δραστηριότητες της Ώρας του Κώδικα που ακολουθούν μια παραδοσιακή μορφή μαθήματος και όχι μια εμπειρία οδηγού-γρίφ/παιχνιδιού.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Μπορείτε να ξεκινήσετε με αυτό το πρότυπο [](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) για το πρόγραμμα μαθημάτων σας.
 
-**Activities for teachers in other subjects/fields**
+**Δραστηριότητες για εκπαιδευτικούς σε άλλα γνωστικά αντικείμενα**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Διαθέτουμε επίσης σχέδια μαθημάτων σχεδιασμένα για διαφορετικές θεματικές περιοχές. Για παράδειγμα, ένα σχέδιο μαθήματος μιας ώρας για τη διδασκαλία κώδικα σε μια τάξη γεωμετρίας. Ή μια άσκηση pad-lib για μάθημα Αγγλικών. Ή μια δημιουργική δραστηριότητα δημιουργίας κουίζ για το μάθημα ιστορίας. Αυτά μπορούν να βοηθήσουν στην πρόσληψη εκπαιδευτικών σε άλλους θεματικούς τομείς για να καθοδηγήσουν μια δραστηριότητα της Ώρας του Κώδικα που είναι μοναδική στον τομέα τους, αποδεικνύοντας παράλληλα πώς το CS μπορεί να επηρεάσει και να ενισχύσει πολλούς διαφορετικούς θεματικούς τομείς.
 
-Examples:
+Παραδείγματα:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Mirror Images (μια δραστηριότητα για έναν δάσκαλο τέχνης)
+- Μια δραστηριότητα arduino για έναν καθηγητή φυσικής
+- Μια ιστορία δραστηριότητας τεχνολογίας για έναν καθηγητή ιστορίας
+- Και δείτε [αυτή τη λίστα](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) για περισσότερες ιδέες από εκπαιδευτικούς (ή προσθέστε τις δικές σας στη λίστα για να εμπνεύσετε άλλους)
 
-**For students with special needs**
+**Για μαθητές με ειδικές ανάγκες**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Εάν δημιουργήσετε μια δραστηριότητα ή σεμινάριο που έχει σχεδιαστεί για μαθητές με ειδικές ανάγκες, παρακαλώ καλέστε το στην περιγραφή. Συγκεκριμένα, υπάρχουν πολύ λίγες επιλογές για άτομα με προβλήματα όρασης. Εάν η δραστηριότητά σας έχει σχεδιαστεί για αυτό το κοινό, Παρακαλώ ενημερώστε μας.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Γενικές κατευθύνσεις για τη δημιουργία μιας δραστηριότητας για την Ώρα του Κώδικα
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Ο στόχος μιας Ώρας Κώδικα είναι να δώσει στους αρχάριους μια προσιτή πρώτη γεύση της επιστήμης των υπολογιστών ή του προγραμματισμού. Ο τόνος πρέπει να είναι ότι:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- Ο καθένας μπορεί να μάθει την επιστήμη των υπολογιστών - ανεξάρτητα από την ηλικία, το φύλο, τη φυλή ή την ικανότητα/αναπηρία.
+- Η επιστήμη των υπολογιστών συνδέεται με μια μεγάλη ποικιλία τομέων και ενδιαφερόντων. Όλοι πρέπει να το μάθουν!
+- Ενθαρρύνετε τους μαθητές να δημιουργήσουν κάτι μοναδικό που μπορεί να μοιραστεί με γονείς/φίλους ή στο διαδίκτυο.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Οι δραστηριότητες θα πρέπει να διδάσκουν μια έννοια της επιστήμης των υπολογιστών, όπως βρόχοι, προϋποθέσεις, κρυπτογράφηση, ή πώς λειτουργεί το Διαδίκτυο. Μια δραστηριότητα μπορεί επίσης να διδάξει πώς η επιστήμη των υπολογιστών συνδέεται με επαγγέλματα, γεγονότα ή ιστορία του πραγματικού κόσμου. Για παράδειγμα, διδασκαλία σχεδιασμού UX για τη δημιουργία εφαρμογών που έχουν νόημα για ένα κοινό ή σκοπό. Αποθαρρύνουμε δραστηριότητες που επικεντρώνονται στη σύνταξη του προγραμματισμού και όχι στις έννοιες. Για παράδειγμα, θα απαριθμήσουμε, αλλά όχι να επισημάνουμε, δραστηριότητες που διδάσκουν HTML. Ομοίως, αποθαρρύνουμε τα μαθήματα προγραμματισμού μπλοκ που επικεντρώνονται στη ρύθμιση/αλλαγή επιλογών διαμόρφωσης αντί να μάθουμε πώς να μοντελοποιούμε έναν αλγόριθμο ή μια διαδικασία.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Δραστηριότητες που απαιτούν εγκατάσταση εφαρμογών, εφαρμογή για επιτραπέζιους υπολογιστές ή εμπειρίες κονσόλας παιχνιδιών είναι εντάξει αλλά δεν είναι ιδανικές. Δεν θα αναφέρουμε δραστηριότητες που απαιτούν εγγραφή ή πληρωμή. (Οι δραστηριότητες ρομποτικής μπορεί να απαιτούν αγορά ρομποτικής.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Μορφή υπό την καθοδήγηση των μαθητών (Self-Guided):* Η αρχική Ώρα του Κώδικα βασίστηκε κυρίως στην επιτυχία αυτοκαθοδηγούμενων σεμιναρίων ή μαθημάτων, προαιρετικά διευκολυνόμενα από τον δάσκαλο. Υπάρχουν πολλές υπάρχουσες επιλογές, αλλά αν θέλετε να δημιουργήσετε ένα νέο, Αυτές οι δραστηριότητες πρέπει να σχεδιαστούν έτσι ώστε να είναι διασκεδαστικές για έναν μαθητή που εργάζεται μόνος του, ή σε μια τάξη της οποίας ο δάσκαλος έχει ελάχιστο υπόβαθρο προετοιμασίας ή CS. Θα πρέπει να παρέχουν οδηγίες για τους μαθητές σε αντίθεση με μια ανοιχτή πρόκληση διάρκειας μίας ώρας. Στην ιδανική περίπτωση, οι οδηγίες και τα σενάρια, βρίσκονται ενσωματωμένα στην προγραμματιστική πλατφόρμα, ώστε να μην εναλλάσσονται καρτέλες ή παράθυρα μεταξύ του σεναρίου και της προγραμματιστικής πλατφόρμας.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Για να αποκτήσετε μια αίσθηση της μεγάλης ποικιλίας τύπων σεμιναρίων και σχεδίων μαθημάτων που μπορείτε να δημιουργήσετε, επισκεφθείτε τη σελίδα [Ώρες του Κώδικα](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Πώς να υποβάλετε
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Επισκεφθείτε τη σελίδα</a> Υποβολής Δραστηριότητας Hour of Code™ και συμπληρώστε τις ερωτήσεις για να υποβάλετε τη δραστηριότητά σας.</p> 
 
-What you’ll need:
+Τι θα χρειαστείτε:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Όνομα και email της κύριας επαφής που αντιπροσωπεύει την υποβληθείσα δραστηριότητα
+* Όνομα δραστηριότητας (δεν μπορεί να συμπεριληφθεί η «Ώρα του Κώδικα» στο όνομα)
+* Σύνδεσμος URL για τη δραστηριότητα
+* Περιγραφή δραστηριότητας (μέγιστος αριθμός χαρακτήρων: 400) 
+    * Παρακαλούμε να συμπεριλάβετε στην περιγραφή κατά πόσο το σενάριο είναι αυτοκαθοδηγούμενο για τους μαθητές ή απαιτεί τη συνδρομή του εκπαιδευτικού. Επιπλέον, μερικά σχολεία ενδιαφέρονται να γνωρίζουν εάν η Ώρα του Κώδικα υιοθετεί τα πρότυπα Common Core ή τα Next Generation Science. Εαν το σενάριο υιοθετεί συγκεκριμένα πρότυπα, μην αμελήσετε να το συμπεριλάβετε.
+* Συνιστώμενο (-α) επίπεδο (-α) βαθμού (-α) για προοριζόμενους χρήστες. Μπορείτε να ανατρέξετε στα \[Πρότυπα K-12 της Ένωσης Καθηγητών Πληροφορικής\] (https://k12cs.org/framework-statements-by-grade-band/) για έννοιες πληροφορικής κατάλληλες για το επίπεδο. Παραδείγματα επιπέδων βαθμού περιλαμβάνουν: 
+    * Νηπιαγωγείο - Βαθμός 1 (ηλικίες 4-6)
+    * Βαθμοί 2-5 (ηλικίες 7-10)
+    * Βαθμοί 6-8 (ηλικίες 11-13)
+    * Βαθμοί 9+ (ηλικίες 14+)
+* Μια λίστα με τις θεματικές περιοχές που καλύπτει η δραστηριότητά σας (εκτός από την Επιστήμη των Υπολογιστών). Για παράδειγμα, εάν ένας καθηγητής μαθηματικών μπορεί να χρησιμοποιήσει τη δραστηριότητά σας για να διδάξει για γωνίες ή παραβολές, απαριθμήστε ως μαθηματικά. Εάν έχετε μια δραστηριότητα τρελών libs που διδάσκει ρήματα/ουσιαστικά/κ.λπ.. επιλέξτε γλωσσικές τέχνες.
+* Μια λίστα με τις γλώσσες προγραμματισμού που διδάσκει η δραστηριότητά σας. Δηλαδή C/C ++, Java, JavaScript, κλπ. ή ανεξάρτητα από τη γλώσσα (για σχέδια μαθημάτων που μπορούν να διδαχθούν σε πολλές γλώσσες)
+* Μια λίστα με τις υποστηριζόμενες φυσικές γλώσσες. Σημείωση: Η ανίχνευση γλώσσας είναι ευθύνη του παρόχου δραστηριότητας. θα ανακατευθύνουμε όλους τους χρήστες στη μεμονωμένη διεύθυνση URL που παρέχεται.
+* Ποιο επίπεδο εμπειρίας πρέπει να έχει ένας εκπαιδευτικός για να χρησιμοποιήσει τη δραστηριότητά σας; (π.χ. αρχάριοι ή άνετοι.) Και, τι επίπεδο εμπειρίας πρέπει να έχουν οι μαθητές; Εάν θέλετε να προετοιμάσετε πιο προηγμένες δραστηριότητες της Ώρας του Κώδικα™, συμπεριλάβετε τις προηγούμενες γνώσεις που απαιτούνται στην περιγραφή της δραστηριότητάς σας.
+* Η διάρκεια της δραστηριότητάς σας 
+    * 1 ώρα μόνο
+    * 1 ώρα με το επόμενο μάθημα
+    * 2-6 ώρες (μπορεί να είναι πολλαπλά μαθήματα)
+* Μια λίστα καταλυμάτων προσβασιμότητας, εάν η δραστηριότητά σας τα έχει. Αυτά περιλαμβάνουν συμβατότητα με πρόγραμμα ανάγνωσης οθόνης, δυνατότητες κειμένου σε ομιλία, χρήση χρωμάτων υψηλής αντίθεσης, ή οποιαδήποτε άλλα καταλύματα για μαθητές με αναπηρίες.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Πρόσθετα πράγματα που θα χρειαστείτε κατά την υποβολή σχεδίων μαθήματος
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Σύνδεση με το σχέδιο μαθήματος. Αυτό μπορεί να είναι μια ιστοσελίδα, σύνδεσμος dropbox, google drive ή παρόμοια υπηρεσία.
+* Ποιο λογισμικό ή/και υλικό θα χρειαστεί ο δάσκαλος για να κάνει το σχέδιο μαθήματος (Scratch? Ρομπότ; Τίποτα;)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Πρόσθετα πράγματα που θα χρειαστείτε κατά την υποβολή διαδικτυακών δραστηριοτήτων
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Όνομα και λογότυπο του οργανισμού σας
+* Είτε είναι συμβατό με COPPA είτε όχι
+* Ένας σύνδεσμος URL στις σημειώσεις του εκπαιδευτικού (προαιρετικό)
+* Κατάλογο με ελεγμένες/συμβατές πλατφόρμες: 
+    * Web based: Ποιες πλατφόρμες έχετε δοκιμάσει; 
+        * OS - Mac, Win και άλλες εκδόσεις
+        * Προγράμματα περιήγησης - IE11, Edge, Firefox, Chrome, Safari
+        * iOS mobile Safari (βελτιστοποιημένη για κινητές συσκευές)
+        * Android Chrome (βελτιστοποιημένη για κινητές συσκευές)
+    * Μή διαδικτυακές δραστηριότητες: Καθορίστε την πλατφόρμα του εγγενή κώδικα (Mac, Win, iOS, Android, xBox, άλλο)
+    * Αποσυνδεδεμένο
+* Στιγμιότυπο οθόνης ή εικόνα μάρκετινγκ της δραστηριότητας Ώρας του Κώδικα. Στείλτε τουλάχιστον μία εικόνα με διαστάσεις 4:3. Θα πρέπει να είναι τουλάχιστον 520px έως 390px. Αυτή η εικόνα δεν πρέπει να έχει κείμενο πάνω της (εκτός από το λογότυπό σας), προκειμένου να είναι πιο προσιτή για μη αγγλόφωνους. Εάν δεν δοθεί κατάλληλη εικόνα, θα πάρουμε ένα screenshot από το σενάριό σου Ή μπορεί να μην το αναρτήσουμε. Όλες οι εικόνες πρέπει να υποβληθούν ως σύνδεσμος URL σε ένα .jpg, .jpeg ή .png.
+* Για την ακριβέστερη παρακολούθηση της συμμετοχής, οι τρίτοι συνεργάτες φροντιστηρίου πρέπει να συμπεριλάβουν εικόνες παρακολούθησης 1 pixel στην πρώτη σελίδα των σεμιναρίων τους για την Ώρα του Κώδικα. Ανατρέξτε στην ενότητα [Tracking Pixel](#pixel) παρακάτω για περισσότερες λεπτομέρειες.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Προβάλλουν στα μέσα κοινωνικής δικτύωσης το γεγονός ότι ολοκλήρωσαν μια Ώρα του Κώδικα
+    * Λάβουν ένα πιστοποιητικό για την ολοκλήρωση της Ώρας του Κώδικα
+    * Δουν τους πίνακες χωρών/πόλεων με τις περισσότερες συμμετοχές στις δραστηριότητες της Ώρας του Κώδικα
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Προαιρετικά) Μπορούμε να συνεχίσουμε με έναν ηλεκτρονικό σύνδεσμο έρευνας/φόρμας ζητώντας μια αναφορά των ακόλουθων μετρήσεων δραστηριότητας: 
+    * Για online δραστηριότητες (ειδικά για εφαρμογές smartphones/tablets): 
+        * Αριθμός χρηστών
+        * Πόσοι ολοκλήρωσαν τις εργασίες
+        * Μέσος όρος χρόνου ανα εργασία
+        * Συνολικός αριθμός γραμμών κώδικα που γράφηκαν από όλους τους χρήστες
+        * Πόσοι συνέχισαν περαιτέρω (μετράται όταν κάποιος χρήστης που ολοκλήρωσε τις εργασίες συνεχίσει με επιπλέον εργασίες στη σελίδα σας)
+    * Για τις offline δρατηριότητες 
+        * Αριθμός λήψεων των δραστηριοτήτων σε χαρτί (κατά περίπτωση)
 
-#### Additional things you’ll need when submitting Robotics
+#### Πρόσθετα πράγματα που θα χρειαστείτε κατά την υποβολή της Ρομποτικής
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Εάν υποβάλετε μια δραστηριότητα ρομποτικής, πρέπει να γνωρίζουμε το κόστος ανά μαθητή για ρομποτική.
+* Για να αξιολογήσετε τις δραστηριότητες ρομποτικής για συμπερίληψη στον ιστότοπο, θα χρειαστεί να στείλετε δείγματα κιτ σε αναθεωρητές.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Πώς θα αξιολογηθούν οι δραστηριότητες
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Μια ποικιλόμορφη επιτροπή εκπαιδευτικών πληροφορικής θα ταξινομήσει τις υποβολές βάσει ποιοτικών και ποσοτικών κριτηρίων. Θα αναφέρονται όλες οι δραστηριότητες που πληρούν τα βασικά κριτήρια. Οι εκπαιδευτικοί θα μπορούν να φιλτράρουν και να ταξινομούν για να βρουν τις καλύτερες δραστηριότητες για την τάξη τους.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Η ρουμπρίκα για την αξιολόγηση δραστηριοτήτων και σχεδίων μαθημάτων θα αναζητήσει τα ακόλουθα κριτήρια για όλες τις δραστηριότητες και θα τα ταξινομήσει ανάλογα:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Υψηλή ποιότητα παραγωγής
+- Προώθηση της μάθησης από όλες τις δημογραφικές ομάδες (esp. φοιτητές που υποεκπροσωπούνται στο CS, όπως οι νέες γυναίκες, οι μαθητές από περιθωριοποιημένες φυλετικές και εθνοτικές ομάδες και οι μαθητές με αναπηρίες)
+- Εκπαιδευτικό (διδάσκει καλά τις έννοιες της επιστήμης των υπολογιστών)
+- Διασκεδαστικό και συναρπαστικό
+- Ενθαρρύνει τους μαθητές να δημιουργήσουν κάτι μοναδικό που μπορούν να μοιραστούν (Για νεότερους μαθητές: με γονείς και συμμαθητές. Για τους παλαιούς μαθητές: στο Διαδίκτυο)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Εάν η επιτροπή αναθεώρησης βαθμολογήσει τη δραστηριότητα σε μηδενική ποιότητα παραγωγής (λόγω κακών σφαλμάτων ή οδηγιών που την καθιστούν πολύ δύσκολη στη χρήση), στην προώθηση της μάθησης σε υποεκπροσωπούμενες ομάδες (λόγω ρατσιστικού/σεξιστικού υλικού), στην εκπαιδευτική αξία (δεν διδάσκει έννοιες CS) ή διασκέδαση/εμπλοκή (λόγω δυσκολίας/αποθάρρυνσης για τους μαθητές να εργαστούν), η δραστηριότητα δεν θα αναφέρεται.
 
-In addition, in order to be listed, all activities must:
+Επιπλέον, για να καταχωρούνται, όλες οι δραστηριότητες πρέπει:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Να είστε κατάλληλοι για μια δημόσια σχολική τάξη (χωρίς όπλα, χωρίς ρητο/περιεχόμενο για ενηλίκους, χωρίς θρησκευτικό περιεχόμενο κ.λπ.)
+- Δεν απαιτείται εγγραφή
+- Δεν απαιτείται πληρωμή (εξαίρεση για δραστηριότητες ρομποτικής, αυτές μπορεί να απαιτούν αγορά ρομπότ/κιτ)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Για αυτοκατευθυνόμενες δραστηριότητες για νέους εκπαιδευτικούς και μαθητές, η επιτροπή αναθεώρησης θα αναζητήσει εάν:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Οι εκπαιδευτικοί μπορούν να χρησιμοποιήσουν το σεμινάριο ή τη δραστηριότητα χωρίς υπόβαθρο στην επιστήμη των υπολογιστών
+- Οι μαθητές μπορούν να είναι επιτυχημένοι χωρίς υπόβαθρο στην επιστήμη των υπολογιστών
+- Οι μαθητές μπορούν να κατευθύνουν τον εαυτό τους μέσω του σεμιναρίου χωρίς καθοδήγηση γονέα ή δασκάλου
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Οι εκπαιδευτικοί και οι μαθητές θα μπορούν να αναζητούν και να φιλτράρουν τη λίστα δραστηριοτήτων μας με βάση φίλτρα όπως ο βαθμός, επίπεδο εμπειρίας, θέμα, υλικό, και τα λοιπά. Από προεπιλογή, θα δείξουμε πρώτα σχέδια μαθημάτων και δραστηριότητες που:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Λάβετε τις υψηλότερες βαθμολογίες από την επιτροπή αναθεώρησης
+- Είναι μια ώρα αυτοκατευθυνόμενες δραστηριότητες σχεδιασμένες για αρχάριους (μαθητές και εκπαιδευτικούς)
+- Απευθυνθείτε σε ένα ευρύ φάσμα χρηστών (σε πλατφόρμες, γλώσσες και ηλικίες)
+- Δεν απαιτείται εγκατάσταση
+- Είναι καινούργια φέτος
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Προτάσεις για το σχεδιασμό αυτοκαθοδηγούμενων σεμιναρίων μίας ώρας
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Μπορείτε να συμπεριλάβετε το λογότυπο [Hour of Code](https://hourofcode.com/us/promote/resources#logo) στο σεμινάριό σας, αλλά αυτό δεν απαιτείται. Εάν χρησιμοποιείτε το λογότυπο της Ώρας του Κώδικα, δείτε τις παρακάτω οδηγίες λογότυπου. <u>Σε καμία περίπτωση δεν μπορεί να χρησιμοποιηθεί το λογότυπο και το όνομα του Code.org.</u> Και τα δύο είναι εμπορικά σήματα και δεν μπορούν να αναμειχθούν με εμπορικό σήμα τρίτου μέρους χωρίς ρητή γραπτή άδεια.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Σιγουρευτείτε ότι ο μέσος μαθητής μπορεί να την ολοκληρώσει με άνεση μέσα σε μία ώρα.** Εξετάστε την πιθανότητα να προσθέσετε μια επιπλέον δραστηριότητα για τους μαθητές που ολοκληρώνουν την ώρα πιο γρήγορα. Να θυμάστε ότι τα περισσότερα παιδιά έρχονται πρώτη φορά σε επαφή με την Πληροφορική και τον προγραμματισμό.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Συμπεριλάβετε τις σημειώσεις του δασκάλου** Οι περισσότερες δραστηριότητες πρέπει να έχουν ως στόχο το μαθητή, αλλά εάν μια δραστηριότητα θεωρείτε ότι μπορεί να διευκολυνθεί με την παρουσία ενός άλλου εκπαιδευτικού, παρακαλούμε να συμπεριλάβετε σαφείς και απλές οδηγίες για τον εκπαιδευτικό με τη μορφή σημειώσεων σε μια ξεχωριστή διεύθυνση URL που θα υποβάλλετε με τη δραστηριότητά σας. Δεν είναι μόνο οι μαθητές αρχάριοι, αλλά και πολλοί εκπαιδευτικοί επίσης. Συμπεριλάβετε πληροφορίες όπως:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Σε ποιες πλατφόρμες και προγράμματα περιήγησης λειτουργεί καλύτερα το σεμινάριο;
+- Λειτουργεί σε smartphone; Ταμπλέτες;
+- Προτείνετε τον προγραμματισμό σε ζευγάρια μαθητών;
+- Σκέψεις για χρήση σε μια τάξη; Π.χ. εάν υπάρχουν βίντεο, συμβουλεύστε τους εκπαιδευτικούς να προβάλλουν τα βίντεο σε μια προβαλλόμενη οθόνη για να τα βλέπουν μαζί ολόκληρη η τάξη
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Ενσωματώστε τα σχόλια στο τέλος της δραστηριότητας.** (Π.χ. «Τελειώσατε 10 επίπεδα και μάθατε για τους βρόχους! Μεγάλη δουλειά!»)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Ενθαρρύνετε τους μαθητές να δημοσιεύσουν στα κοινωνικά δίκτυα (όπου ταιριάζει) όταν θα έχουν τελειώσει.** Για παράδειγμα "έχω κάνει μια ώρα του κώδικα με ________ Εσύ; #HourOfCode» ή «Έχω κάνει ένα #HourOfCode ως μέρος του #CSEdWeek. Εσύ; @Scratch.” Χρησιμοποιήστε το hashtag **#HourOfCode** (ή με κεφαλαία γράμματα H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Δημιουργήστε τη δραστηριότητά σας στα ισπανικά ή σε άλλες γλώσσες εκτός από τα αγγλικά.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Εξηγήστε ή συνδέστε τη δραστηριότητά σας με σημαντικά θέματα της κοινωνίας ή της καθημερινής ζωής.** Ο προγραμματισμός γίνεται υπερδύναμος όταν οι μαθητές δουν ότι μπορεί να αλλάξει τον κόσμο προς το καλύτερο!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Βεβαιωθείτε ότι το σεμινάριό σας μπορεί να χρησιμοποιηθεί σε ένα παράδειγμα [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Αυτό είναι ιδιαίτερα χρήσιμο για την Ώρα του Κώδικα επειδή πολλές αίθουσες διδασκαλίας δεν διαθέτουν υλικό 1:1 για όλους τους μαθητές.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Βασικές κατευθύνσεις
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Η Ώρα του Κώδικα® και η Hora del Código® είναι σήματα κατατεθέντα της Code.org. Πολλοί από τους συνεργάτες μας έχουν χρησιμοποιήσει τα εμπορικά σήματα «Ώρα του Κώδικα» στις ιστοσελίδες τους σε σχέση με τις δραστηριότητές τους για την Ώρα του Κώδικα. Δεν θέλουμε να αποτρέψουμε αυτή τη χρήση, αλλά θέλουμε να βεβαιωθούμε ότι η χρήση εμπίπτει σε μερικά όρια:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Χρησιμοποιήστε την «Ώρα του Κώδικα» μόνο σε σχέση με μη εμπορικές δραστηριότητες CS Education στο πλαίσιο της εκστρατείας για την Ώρα του Κώδικα και για κανέναν άλλο σκοπό.
+2. Οποιαδήποτε αναφορά στην «Ώρα του Κώδικα» θα πρέπει να χρησιμοποιείται με τρόπο που δεν υποδηλώνει ότι είναι το δικό σας εμπορικό σήμα, αλλά ότι μάλλον αναφέρεται στην Ώρα του Κώδικα ως κίνημα βάσης. Καλό παράδειγμα: «Συμμετέχετε στην Ώρα του Κώδικα® στο AcmeCorp.com». Κακό παράδειγμα: «Δοκιμάστε την ώρα του κώδικα από την ACME Corp».
+3. Χρησιμοποιήστε έναν εκθέτη «®» στα πιο εμφανή σημεία που αναφέρετε την «Ώρα του Κώδικα», τόσο στον ιστότοπό σας όσο και στις περιγραφές εφαρμογών.
+4. Συμπεριλάβετε γλώσσα στη σελίδα (ή στο υποσέλιδο), συμπεριλαμβανομένων συνδέσμων προς τις ιστοσελίδες Hour of Code, CsedWeek και Code.org, που αποκαλύπτει και τα δύο ακόλουθα: α. Η Ώρα του Κώδικα® και η Hora del Código® είναι σήματα κατατεθέντα της Code.org. και β. Το «[Hour of Code](http://hourofcode.com/) ® είναι μια πανελλαδική πρωτοβουλία του [Code.org](http://code.org/) για να εισαγάγει εκατομμύρια μαθητές σε μία ώρα επιστήμης υπολογιστών και προγραμματισμού υπολογιστών.»
+5. Μην χρησιμοποιείτε την «Ώρα του Κώδικα» στα ονόματα εφαρμογών.
+6. Μην χρησιμοποιείτε την «Ώρα του Κώδικα» σε σχέση με οποιαδήποτε εμπορική χρήση ή σκοπό (π.χ. τοποθέτηση της δραστηριότητας της Ώρας του Κώδικα πίσω από ένα paywall, προώθηση άλλης υπηρεσίας επί πληρωμή ως μέρος της δραστηριότητάς σας στην Ώρα του Κώδικα, πώληση εμπορευμάτων της Ώρας του Κώδικα).
+7. Μην χρησιμοποιείτε την «Ώρα του Κώδικα» σε σχέση με οποιαδήποτε δραστηριότητα που απαιτεί σύνδεση ή δημιουργία λογαριασμού.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Εικονοστοιχείο ανίχνευσης
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Προκειμένου να παρακολουθήσουμε με μεγαλύτερη ακρίβεια τη συμμετοχή, ζητάμε από κάθε συνεργάτη σεμιναρίου να συμπεριλάβει μια εικόνα παρακολούθησης 1 pixel στην πρώτη σελίδα των σεμιναρίων της Ώρας του Κώδικα. Η εικόνα pixel πρέπει να βρίσκεται μόνο στην αρχική σελίδα. Μην συμπεριλάβετε σε ενδιάμεσες σελίδες του σεμιναρίου σας.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Αυτό θα μας επιτρέψει να μετρήσουμε τους χρήστες που κάνουν το σεμινάριο Hour of Code. Θα οδηγήσει σε πιο ακριβείς μετρήσεις συμμετοχής για το σεμινάριό σας.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Εάν το σεμινάριό σας εγκριθεί και συμπεριληφθεί στην τελική σελίδα εκμάθησης, το Code.org θα σας παρέχει ένα μοναδικό pixel παρακολούθησης για να το ενσωματώσετε στο σεμινάριό σας. Δείτε το παρακάτω παράδειγμα.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+ΣΗΜΕΙΩΣΗ: αυτό δεν είναι σημαντικό για εφαρμογές που απαιτούν εγκατάσταση (εφαρμογές iOS/Android ή εφαρμογές για υπολογιστές)
 
-Example tracking pixels for Dance Party:
+Παράδειγμα εικονοστοιχείων παρακολούθησης για το Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Προώθηση των δραστηριοτήτων σας, CsedWeek και Ώρα του Κώδικα
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Προωθήστε τη δραστηριότητά σας στο δίκτυό σας! Κατευθύνετε τους στη σελίδα Ώρα του Κώδικα. Οι χρήστες σας είναι πολύ πιο πιθανό να αντιδράσουν σε μια αλληλογραφία από εσάς σχετικά με τη δραστηριότητά σας. Χρησιμοποιήστε τη διεθνή εκστρατεία για την Ώρα του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης Πληροφορικής ως δικαιολογία για να ενθαρρύνετε τους χρήστες να προσκαλέσουν άλλους να συμμετάσχουν, και βοηθήστε μας να προσεγγίσουμε περισσότερους μαθητές!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Δυνατότητα ώρας κώδικα και CsedWeek στον ιστότοπό σας. Π.χ.: <http://www.tynker.com/hour-of-code>
+- Προωθήστε την Ώρα του Κώδικα χρησιμοποιώντας μέσα κοινωνικής δικτύωσης, παραδοσιακά μέσα, λίστες αλληλογραφίας κ.λπ., χρησιμοποιώντας το hashtag #HourOfCode (με κεφαλαία γράμματα H, O, C)
+- Διοργανώστε μια τοπική εκδήλωση ή ζητήστε από τους υπαλλήλους σας να διοργανώσουν μια εκδήλωση στα σχολεία ή στην γειτονιά τους.
+- Δείτε το [κιτ πόρων μας](https://hourofcode.com/us/promote) για περισσότερες πληροφορίες.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 {{ signup_button }}

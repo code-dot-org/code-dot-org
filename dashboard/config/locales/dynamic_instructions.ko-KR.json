@@ -2,8 +2,6 @@
   "ko-KR": {
     "data": {
       "dynamic_instructions": {
-        "allthethings AI Lab 1": {
-        },
         "ml-bad data-club investigations": {
           "dataDisplayFeatures": "**이렇게 하세요: ** 다른 열을 클릭하여 이 학생이 수집한 데이터를 조사하세요. 모델에 문제가 있을 수 있는 이유를 찾아보십시오. 학습하고 테스트하는데 사용할 몇 가지 특징을 선택해야 합니다.",
           "dataDisplayLabel": "**이렇게 하세요: ** 라벨로서 사용할 열을 선택한 다음 계속 버튼을 누릅니다.",

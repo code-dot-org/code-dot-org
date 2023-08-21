@@ -1232,7 +1232,7 @@ sk:
       sports: 'Športy'
       express: 'Zrýchlené'
       csf: 'Základy informatiky'
-      csc: 'CS Connections'
+      csc: 'informatika a medzipredmetové vzťahy'
       year_long: 'Celoročné'
       csa_labs: 'CSA Labs'
       self_paced: 'Vlastným tempom'
@@ -1296,3 +1296,4 @@ sk:
     binary: "Binárny"
     hexadecimal: "Hexadecimálne"
     pixel_format_header: "Formát pixelov"
+

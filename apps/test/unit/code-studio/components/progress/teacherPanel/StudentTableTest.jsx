@@ -1,21 +1,23 @@
 import React from 'react';
+import DCDO from '@cdo/apps/dcdo';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
-import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
+import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   students: [
-    {id: 1, name: 'Student 1'},
-    {id: 2, name: 'Student 2'},
+    {id: 1, name: 'Student 1', familyName: 'FamNameB'},
+    {id: 2, name: 'Student 2', familyName: 'FamNameA'},
   ],
   onSelectUser: () => {},
   getSelectedUserId: () => {},
   levelsWithProgress: [],
   sectionId: 1,
   unitName: 'A Unit',
+  isSortedByFamilyName: false,
 };
 
 const levelsWithProgress = [
@@ -78,5 +80,45 @@ describe('StudentTable', () => {
     firstStudentRow.simulate('click');
 
     expect(onSelectUserStub).to.have.been.calledWith(1);
+  });
+
+  it('sorts by display name by default', () => {
+    const wrapper = setUp();
+
+    const firstStudentRow = wrapper.find('tr').at(1);
+    expect(firstStudentRow.text()).to.match(/^Student 1/);
+  });
+
+  it('sorts by family name if toggled', () => {
+    DCDO.reset();
+    DCDO.set('family-name-features', true);
+
+    const wrapper = setUp({isSortedByFamilyName: true});
+
+    const firstStudentRow = wrapper.find('tr').at(1);
+    expect(firstStudentRow.text()).to.match(/^Student 2 FamNameA/);
+
+    DCDO.reset();
+  });
+
+  it('sorts null family names last', () => {
+    DCDO.reset();
+    DCDO.set('family-name-features', true);
+
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Student 1', familyName: 'FamNameB'},
+        {id: 2, name: 'Student 2'},
+        {id: 3, name: 'Student 3', familyName: 'FamNameA'},
+      ],
+      isSortedByFamilyName: true,
+    });
+
+    const lastStudentRow = wrapper.find('tr').at(3);
+    expect(lastStudentRow.text()).to.match(/^Student 2/);
+    expect(lastStudentRow.text()).to.not.match(/null/);
+    expect(lastStudentRow.text()).to.not.match(/undefined/);
+
+    DCDO.reset();
   });
 });

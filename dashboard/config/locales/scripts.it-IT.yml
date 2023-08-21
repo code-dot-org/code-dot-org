@@ -1588,6 +1588,10 @@ it:
             corso e le risorse per gli insegnanti. \n\n**Tempo suggerito:** 1 ora"
           name: piattaforma-di-autoapprendimento-csa
           title: Navigare nel sito Code.org per gli Insegnanti di CSA Pilota
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configurazione
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2148,6 +2152,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -3061,15 +3067,6 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
-          student_description: Questa unità esplora il ruolo delle piattaforme hardware
-            nell'informatica e come diversi sensori possono fornire input e output
-            più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali.
-            Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai
-            programmi che utilizzano gli stessi input e output hardware che vedi nei
-            dispositivi intelligenti, osservando come un semplice prototipo approssimativo
-            può portare a un prodotto finito. L'unità si conclude con una sfida progettuale
-            per utilizzare il Circuit Playground come base per un'innovazione di propria
-            progettazione.
         csd6-dlp:
           lesson_groups:
             content:
@@ -4524,6 +4521,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4570,6 +4569,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4616,6 +4617,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4649,6 +4652,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4697,6 +4702,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4737,6 +4744,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4864,6 +4873,8 @@ it:
           student_description: Impara i concetti base dell'informatica con i personaggi
             di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
           title: Labirinto Classico
+        how-ai-works-2023:
+          title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con
             L'Era Glaciale!
@@ -5044,10 +5055,11 @@ it:
               display_name: Eventi
             lessonGroup-7:
               display_name: Progetto di fine corso
-          student_description: 'Impara le basi dell''informatica e della sicurezza
-            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
-            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
-            2018, è la più aggiornata in italiano ==>'
+            lessonGroup-8:
+              display_name: Dati
+          lessons:
+            lesson-1:
+              name: Dati
         nevada-standards-aligned-fourth-grade-2023:
           description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
             Il corso inizia con un'introduzione allo ambiente di programmazione denominato
@@ -5069,17 +5081,14 @@ it:
               display_name: Dati e simulazioni
             lessonGroup-6:
               display_name: Progetto di fine corso
-          student_description: Inizia a programmare con algoritmi, eventi, cicli,
-            istruzioni condizionali e funzioni! Alla fine di questo corso, progetta
-            e crea un gioco o un disegno da condividere con amici e parenti.
         nevada-standards-aligned-kindergarten-2023:
-          description: 'Il corso A offre un piano di studi di informatica per i bambini
-            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+          description: Il corso A offre un piano di studi di informatica per i bambini
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell'infanzia.
             Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
             Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
             in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
             dei problemi, perseverare di fronte a compiti impegnativi e conoscere
-            le questioni di sicurezza legate a Internet. '
+            le questioni di sicurezza legate a Internet.
           description_audience: 'Età: da 4 a 7 anni'
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
@@ -5092,10 +5101,11 @@ it:
               display_name: Cicli
             lessonGroup-5:
               display_name: Impatti dell'informatica
-          student_description: 'Impara le basi dell''informatica e della sicurezza
-            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
-            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
-            2018, è la più aggiornata in italiano ==>'
+            lessonGroup-6:
+              display_name: Dati
+          lessons:
+            lesson-1:
+              name: Dati
         nevada-standards-aligned-second-grade-2023:
           description: Abbiamo realizzato il Corso C per gli alunni della seconda
             primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli
@@ -5114,17 +5124,16 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Dati
-          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
-            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
-            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
-            Alla fine del corso, puoi creare e condividere un gioco interattivo o
-            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
-            è la più aggiornata in italiano ==>'
+            lessonGroup-8:
+              display_name: Sistemi informatici
+          lessons:
+            lesson-1:
+              name: Sistemi informatici
         nevada-standards-aligned-third-grade-2023:
-          description: 'Abbiamo creato il corso D per gli alunni della terza primaria.
+          description: Abbiamo creato il corso D per gli alunni della terza primaria.
             Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,
             inclusi cicli ed eventi. In seguito, gli alunni sviluppano la loro comprensione
-            di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
+            di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora.
           description_audience: Da 7 a 11 anni
           lesson_groups:
             lessonGroup-2:
@@ -5139,8 +5148,6 @@ it:
               display_name: Dati
             lessonGroup-8:
               display_name: Progetto di fine corso
-          student_description: Impara di più sui cicli, le istruzioni condizionali
-            e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
         new-d:
           title: Corso D
         new-e:

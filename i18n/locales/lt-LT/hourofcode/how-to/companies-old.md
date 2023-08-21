@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Kaip surengti valandos kodą - Įmonės
 ---
 
 {{ signup_button }}

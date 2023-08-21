@@ -1225,6 +1225,7 @@ pl-PL:
   header_help_support: 'Pomoc i wsparcie '
   header_help_us: Pomóż nam
   header_home: Strona główna
+  header_incubator: Inkubator
   header_learn: Ucz się
   header_legal: Prywatność i legalność
   header_legal_privacy: Polityka prywatności
@@ -1460,13 +1461,13 @@ pl-PL:
     uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu
     nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
   hoc2020_mc_mee_title: Opowieść Minecrafta o dwóch wioskach
-  hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami
+  hoc2021_mc_mee_ai_description: 'Poznaj sztuczną inteligencję ze swoimi uczniami
     i naucz się kodować w grze Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: AI Na dobre
-  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! Nowy samouczek
-    Minecraft w ramach Godziny Kodowania jest już dostępny w grze Minecraft: Education
-    Edition dla systemów Windows, Mac, Chromebook i iPad. Zacznij od bezpłatnych zasobów,
-    szkoleń i filmów dla nauczycieli.'
+  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! W grze Minecraft:
+    Education Edition na systemy Windows, Mac, Chromebook oraz iPad został udostępniony
+    nowy samouczek poświęcony Godzinie kodowania z Minecraft. Skorzystaj z darmowych
+    zasobów edukacyjnych, szkoleń i filmów.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność
     oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'

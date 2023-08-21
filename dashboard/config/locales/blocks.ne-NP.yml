@@ -5,19 +5,11 @@ ne:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -298,8 +290,6 @@ ne:
             '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
-      Dancelab_setBackgroundEffect:
-        options: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -314,8 +304,6 @@ ne:
             '"SHARK"': सार्कहरु
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
-      Dancelab_setForegroundEffect:
-        options: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -704,8 +692,6 @@ ne:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '100': large
-            '30': small
             '50': medium
       gamelab_mirrorSprite:
         options:
@@ -741,9 +727,6 @@ ne:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': medium
       gamelab_setProp:
         options:
@@ -756,9 +739,6 @@ ne:
           PROPERTY:
             '"scale"': size
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': medium
       gamelab_setSizes:
         options:
