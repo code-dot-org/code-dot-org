@@ -5,20 +5,23 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AichatState {
   chatMessages: ChatCompletionMessage[];
+  newUserMessage: string;
   isWaitingForChatResponse: boolean;
-  showWarningModal: boolean;
 }
 
 const initialState: AichatState = {
+  newUserMessage: '',
   chatMessages: [],
   isWaitingForChatResponse: false,
-  showWarningModal: false,
 };
 
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
+    setNewUserMessage: (state, action: PayloadAction<string>) => {
+      state.newUserMessage = action.payload;
+    },
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessages.push(action.payload);
     },
@@ -27,9 +30,6 @@ const aichatSlice = createSlice({
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
-    },
-    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
-      state.showWarningModal = action.payload;
     },
   },
 });
@@ -40,8 +40,8 @@ const aichatSlice = createSlice({
 // to be connected to this state.
 registerReducers({aichat: aichatSlice.reducer});
 export const {
+  setNewUserMessage,
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
-  setShowWarningModal,
 } = aichatSlice.actions;
