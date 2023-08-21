@@ -56,7 +56,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'attend signed out redirects to sign_in page' do
     get :attend, params: {session_code: @session.code}
-    assert_redirected_to "/users/sign_in?user_return_to=/pd/attend/#{@session.code}"
+    assert_redirected_to_sign_in
   end
 
   test 'attend no matching enrollment renders no_enrollment_match view' do
