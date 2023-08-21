@@ -29,16 +29,11 @@ export default class FunctionEditor {
     this.paramTypes = opt_paramTypes || [];
   }
 
-  setMainWorkspace = workspace => {
-    this.mainWorkspace = workspace;
-  };
-
   setProcedureWorkspace = workspace => {
     this.procedureWorkspace = workspace;
   };
 
-  init(mainWorkspace, procedureWorkspace, options) {
-    this.setMainWorkspace(mainWorkspace);
+  init(procedureWorkspace, options) {
     this.setProcedureWorkspace(procedureWorkspace);
 
     // The workspace we'll show to users for editing
@@ -76,23 +71,26 @@ export default class FunctionEditor {
       .addEventListener('click', this.handleDelete.bind(this));
 
     // Main workspace toolbox procedure category callback
-    this.mainWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(this.mainWorkspace, true)
+    Blockly.mainBlockSpace.registerToolboxCategoryCallback('PROCEDURE', () =>
+      this.flyoutCategory(Blockly.mainBlockSpace, true)
     );
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
     // false to not show the new function button inside the modal editor
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(this.mainWorkspace, false)
+      this.flyoutCategory(Blockly.mainBlockSpace, false)
     );
 
     // Set up the "new procedure" button in the toolbox
-    this.mainWorkspace.registerButtonCallback('newProcedureCallback', () => {
-      this.newProcedureCallback(this.mainWorkspace);
-      // refresh the flyout after the new procedure is created
-      this.mainWorkspace.getToolbox().refreshSelection();
-    });
+    Blockly.mainBlockSpace.registerButtonCallback(
+      'newProcedureCallback',
+      () => {
+        this.newProcedureCallback(Blockly.mainBlockSpace);
+        // refresh the flyout after the new procedure is created
+        Blockly.mainBlockSpace.getToolbox().refreshSelection();
+      }
+    );
 
     this.setUpEditorWorkspaceChangeListeners();
   }
@@ -101,8 +99,10 @@ export default class FunctionEditor {
     this.dom.style.display = 'none';
   }
 
+  // We kept this around for backwards compatibility with the CDO
+  // function editor, but its logic is the same as hide.
   hideIfOpen() {
-    // TODO: Implement
+    this.hide();
   }
 
   // TODO
@@ -117,6 +117,10 @@ export default class FunctionEditor {
    * @param {Procedure} procedure The procedure to show.
    */
   showForFunction(procedure) {
+    // We disable events while clearing the workspace in order to skip
+    // propogating those events to the other workspaces. We would be propogating
+    // delete events, but we aren't actually deleting the blocks, just removing them
+    // from the editor workspace.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
     Blockly.Events.enable();
@@ -189,7 +193,7 @@ export default class FunctionEditor {
       name
     );
     const mainProcedure = new ObservableProcedureModel(
-      this.mainWorkspace,
+      Blockly.mainBlockSpace,
       hiddenProcedure.getName(),
       hiddenProcedure.getId()
     );
@@ -197,7 +201,7 @@ export default class FunctionEditor {
     // Add the model to the procedure and main workspaces so we know
     // all procedures available there.
     this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
-    this.mainWorkspace.getProcedureMap().add(mainProcedure);
+    Blockly.mainBlockSpace.getProcedureMap().add(mainProcedure);
 
     // Add the procedure model to the editor's map as well
     // Can't use the same underlying model or events get weird.
@@ -232,7 +236,7 @@ export default class FunctionEditor {
     // delete all caller blocks from the main workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
-      this.mainWorkspace
+      Blockly.mainBlockSpace
     ).forEach(block => {
       block.dispose();
     });
@@ -255,11 +259,11 @@ export default class FunctionEditor {
     // workspace.
     this.editorWorkspace.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
-      if (!this.mainWorkspace) return;
+      if (!Blockly.mainBlockSpace) return;
       if (e instanceof ProcedureBase) {
         let event;
         try {
-          event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
+          event = Blockly.Events.fromJson(e.toJson(), Blockly.mainBlockSpace);
         } catch (err) {
           // Could not deserialize event. This is expected to happen. E.g. When
           // round-tripping parameter deletes, the delete in the secondary workspace
@@ -270,7 +274,7 @@ export default class FunctionEditor {
 
         // Update the toolbox in case this change is happening
         // while the flyout is open.
-        this.mainWorkspace.getToolbox().refreshSelection();
+        Blockly.mainBlockSpace.getToolbox().refreshSelection();
       }
     });
 

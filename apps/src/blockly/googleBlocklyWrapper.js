@@ -670,18 +670,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     // Hidden workspace where we can put function definitions.
     const procedureWorkspace = new Blockly.Workspace();
     blocklyWrapper.setProcedureWorkspace(procedureWorkspace);
+    blocklyWrapper.setMainWorkspace(workspace);
 
     if (options.useModalFunctionEditor) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       // TODO: Is this the best place to call the init function
       // (and is using the init function) reasonable for the modal function editor?
-      blocklyWrapper.functionEditor.init(
-        workspace,
-        procedureWorkspace,
-        opt_options
-      );
+      blocklyWrapper.functionEditor.init(procedureWorkspace, opt_options);
     }
-    blocklyWrapper.setMainWorkspace(workspace);
 
     return workspace;
   };
