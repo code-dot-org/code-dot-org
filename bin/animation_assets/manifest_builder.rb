@@ -74,7 +74,7 @@ class ManifestBuilder
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab] && @options[:upload_to_s3]
+    if upload_spritelab_to_s3?
       manifest_filename = generate_spritelab_manifest_filename
       info "Uploading #{manifest_filename} to S3"
       AWS::S3.upload_to_bucket(
@@ -198,7 +198,7 @@ class ManifestBuilder
   # and replaces the aliases of the aliases of the animations with their translation.
   # Then, the localized manifest is uploaded to S3 with the suffix .{locale}.json
   def upload_localized_manifest(locale, strings)
-    return unless @options[:spritelab] && @options[:upload_to_s3]
+    return unless upload_spritelab_to_s3?
 
     @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
     @animation_objects ||= get_animation_objects(@bucket)
@@ -454,5 +454,9 @@ class ManifestBuilder
 
   def warn(s)
     puts(s)
+  end
+
+  def upload_spritelab_to_s3?
+    @options[:spritelab] && @options[:upload_to_s3]
   end
 end
