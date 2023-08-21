@@ -45,8 +45,6 @@ module I18n
               # write data to path
               name = "#{script.name}.json"
               path = File.join(I18N_SOURCE_FILE_PATH, get_script_subdirectory(script), name)
-              next if I18nScriptUtils.unit_directory_change?(name, path)
-
               FileUtils.mkdir_p(File.dirname(path))
               File.write(path, JSON.pretty_generate(data))
             end
