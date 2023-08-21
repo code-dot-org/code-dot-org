@@ -206,11 +206,9 @@ def pass_time_for_user(name, amount_of_time)
   end
 end
 
-And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::AUTHORIZED_TEACHER
-  user.save!
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |_|
+  # this currently just givgites permissions to whoever is signed in?
+  browser_request(url: '/api/test/authorized_teacher_access', method: 'POST')
 end
 
 And(/^I get universal instructor access$/) do
