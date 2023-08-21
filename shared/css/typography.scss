@@ -247,14 +247,12 @@ em,
 
 strong em,
 em strong,
-.em.strong,
-.strong .em {
+em.strong,
+.strong em {
   @include strong-em;
 }
 
-.em.extra-strong,
-.extra-strong .em,
-em .extra-strong,
+em.extra-strong,
 .extra-strong em {
   @include extra-strong-em;
 }
