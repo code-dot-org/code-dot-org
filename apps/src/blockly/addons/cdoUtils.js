@@ -37,6 +37,16 @@ export function loadBlocksToWorkspace(workspace, source) {
   positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
 
+export function loadProcedureBlocksToWorkspace(source) {
+  if (Blockly.getProcedureWorkspace() && source) {
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      Blockly.getProcedureWorkspace(),
+      source
+    );
+    Blockly.functionEditor.setUpEditorProcedureMap();
+  }
+}
+
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }

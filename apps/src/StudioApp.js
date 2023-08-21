@@ -1249,16 +1249,10 @@ StudioApp.prototype.loadBlocks = function (source) {
 
 /**
  * Load the editor with blocks.
- * @param {string} source Text representation of blocks (XML or JSON).
+ * @param {string} source Text representation of procedure blocks (JSON).
  */
 StudioApp.prototype.loadProcedureBlocks = function (source) {
-  if (Blockly.getProcedureWorkspace() && source) {
-    console.log('loading procedure blocks...');
-    Blockly.cdoUtils.loadBlocksToWorkspace(
-      Blockly.getProcedureWorkspace(),
-      source
-    );
-  }
+  Blockly.cdoUtils.loadProcedureBlocksToWorkspace(source);
 };
 
 /**
@@ -2778,8 +2772,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   }
   try {
     this.loadBlocks(startBlocks);
-    console.log('attempting to load procedure blocks...');
-    this.loadProcedureBlocks(config.level.procedureBlocks);
+    this.loadProcedureBlocks(config.level.procedureSource);
   } catch (e) {
     if (loadLastAttempt) {
       try {

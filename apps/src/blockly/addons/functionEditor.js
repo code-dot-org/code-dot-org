@@ -356,4 +356,21 @@ export default class FunctionEditor {
       },
     };
   }
+
+  setUpEditorProcedureMap() {
+    Blockly.Events.disable();
+    this.procedureWorkspace
+      .getProcedureMap()
+      .getProcedures()
+      .forEach(procedure => {
+        const editorProcedureModel = new ObservableProcedureModel(
+          this.editorWorkspace,
+          procedure.getName(),
+          procedure.getId()
+        );
+
+        this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
+      });
+    Blockly.Events.enable();
+  }
 }
