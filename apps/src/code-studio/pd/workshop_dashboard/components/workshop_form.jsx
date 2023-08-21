@@ -872,14 +872,14 @@ export class WorkshopForm extends React.Component {
       data: JSON.stringify({pd_workshop: workshop_data, notify}),
     })
       .done(data => {
-        console.log(`Save successful: ${data}`);
+        console.log(`Save successful: ${JSON.stringify(data)}`);
         if (this.props.onSaved) {
           this.props.onSaved(data);
           console.log('ONSAVED CALLED!');
         }
       })
       .fail(data => {
-        console.log(`Save failed: ${data}`);
+        console.log(`Save failed: ${JSON.stringify(data)}`);
         if (data.responseJSON.errors) {
           console.log(`Errors: ${data.responseJSON.errors}`);
           this.setState({

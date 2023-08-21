@@ -81,6 +81,7 @@ describe('WorkshopForm test', () => {
     //   {'Content-Type': 'application/json'},
     //   '',
     // ]);
+    console.log('PUBLISH START');
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -131,6 +132,7 @@ describe('WorkshopForm test', () => {
   });
 
   it('edits form and can save', () => {
+    console.log('SAVE START');
     const server = sinon.fakeServer.create();
     server.respondWith('PATCH', `/api/v1/pd/workshops/${fakeWorkshop.id}`, [
       200,
