@@ -514,28 +514,28 @@
           "courseD_bee_nested_loops_challenge2_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ជាមួយ​ពួកគេ​ដោយ​របៀប​ណា​ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រ?"
+          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដែលឬទេ? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ ដោយប្រើ ​![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រទៅរកមឹកដែលឬទេ?"
         },
         "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ជាមួយ​ពួកគេ​ដោយ​របៀប​ណា​ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រ?"
+          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដែលឬទេ? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ ដោយប្រើ ​![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រទៅរកមឹកដែលឬទេ?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ជាមួយ​ពួកគេ​ដោយ​របៀប​ណា​ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រ?"
+          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដែលឬទេ? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ ដោយប្រើ ​![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រទៅរកមឹកដែលឬទេ?"
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ជាមួយ​ពួកគេ​ដោយ​របៀប​ណា​ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រ?"
+          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដែលឬទេ? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ ដោយប្រើ ​![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រទៅរកមឹកដែលឬទេ?"
         },
         "CourseE_HOC 2018 Level_7a": {
-          "aquatic7": "អ្នកអាចប្រើ if path block ដើម្បីជួយអ្នកក្នុងការបត់ស្តាំ។"
+          "aquatic7": "អ្នកអាចប្រើប្លុក 'ប្រសិនបើមានផ្លូវ' ដើម្បីជួយអ្នកក្នុងការបត់ឱ្បបានត្រឹមត្រូវ។"
         },
         "CourseE_HOC 2018 Level_7a2022": {
           "aquatic7": "អ្នកអាចប្រើ if path block ដើម្បីជួយអ្នកក្នុងការបត់ស្តាំ។"
         },
         "CourseE_HOC 2018 Level_7a_2020": {
-          "aquatic7": "អ្នកអាចប្រើ if path block ដើម្បីជួយអ្នកក្នុងការបត់ស្តាំ។"
+          "aquatic7": "អ្នកអាចប្រើប្លុក 'ប្រសិនបើមានផ្លូវ' ដើម្បីជួយអ្នកក្នុងការបត់ឱ្បបានត្រឹមត្រូវ។"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "អ្នកអាចប្រើ if path block ដើម្បីជួយអ្នកក្នុងការបត់ស្តាំ។"
+          "aquatic7": "អ្នកអាចប្រើប្លុក 'ប្រសិនបើមានផ្លូវ' ដើម្បីជួយអ្នកក្នុងការបត់ឱ្បបានត្រឹមត្រូវ។"
         },
         "CourseE_HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "ឃើញដុំផ្កាថ្មក្រហម និងខៀវទេ? ប្រើពួកវាជាមគ្គុទ្ទេសក៍ដើម្បីបត់ស្តាំ និងឆ្វេងកាត់ថ្មប៉ប្រះទឹក។"
@@ -604,10 +604,10 @@
           "alternate": "ប្លុក រាំឆ្លាស់អាចរកបានក្នុង ប្រអប់កូដប្លុក ផ្នែក \"អ្នករាំ\""
         },
         "HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ជាមួយ​ពួកគេ​ដោយ​របៀប​ណា​ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រ?"
+          "voyage_aquatic_10a": "ឃើញ **ចង្កៀងសមុទ្រ** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដែលឬទេ? តើ​អ្នក​អាច​ប្រើ​លក្ខខណ្ឌ​ ដោយប្រើ ​![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ដើម្បី​ឆ្លង​កាត់​វិមាន​មហាសមុទ្រទៅរកមឹកដែលឬទេ?"
         },
         "HOC 2018 Level_7a": {
-          "aquatic7": "អ្នកអាចប្រើ if path block ដើម្បីជួយអ្នកក្នុងការបត់ស្តាំ។"
+          "aquatic7": "អ្នកអាចប្រើប្លុក 'ប្រសិនបើមានផ្លូវ' ដើម្បីជួយអ្នកក្នុងការបត់ឱ្បបានត្រឹមត្រូវ។"
         },
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "ឃើញដុំផ្កាថ្មក្រហម និងខៀវទេ? ប្រើពួកវាជាមគ្គុទ្ទេសក៍ដើម្បីបត់ស្តាំ និងឆ្វេងកាត់ថ្មប៉ប្រះទឹក។"
@@ -1211,6 +1211,9 @@
           "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "course3_farmer_condLoops_challenge1": {
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
         },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "ឆ្វេងឬស្ដាំ? ស្រេច​តែលើ​អ្នក!"
@@ -6435,86 +6438,86 @@
         "courseD_farmer_condLoops2": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops22022": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops2_2018": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops2_2019": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops2_2020": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops2_2021": {
           "courseD_farmer_condLoops2_a": "មធ្យោបាយដ៏ល្អបំផុតដើម្បីធ្វើវាគឺការដាក់សេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ' ដោយដាក់មួយនៅខាងក្នុងនៃផ្សេងទៀត។",
           "courseD_farmer_condLoops2_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "កូដលក្ខខណ្ឌ 'ប្រសិនបើ់' របស់អ្នកគូរតែមើលទៅដូចខាងក្រោម: \n\n-   ប្រសិនបើមានផ្លែពោត\n-   រើសពោត\n-   បើមិនអុីចឹងទេ\n-   ប្រសិនបើមានសាឡាត់\n    \\\\រើសសាឡាត់\n\nប្រសិនបើមិនមានអ្វីទេ អ្នកមិនត្រូវរើសទេ!"
         },
         "courseD_farmer_condLoops3": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops32022": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops3_2018": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops3_2019": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops3_2020": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops3_2021": {
           "courseD_farmer_condLoops3_a": "ដើម្បីទទួលបានធាតុទាំងអស់ សូមសាកល្បងដាក់ឃ្លា `ប្រសិនបើ` បីជ្រៅ។\n\nនេះមានន័យថា អ្នកគួរតែដាក់សេចក្តីថ្លែងការណ៍ `ប្រសិនបើ` មួយនៅខាងក្នុងនៃពាក្យផ្សេងទៀត បន្ទាប់មកដាក់សេចក្តីថ្លែងការណ៍ទីបី `ប្រសិនបើ` នៅខាងក្នុងទីពីរ។",
-          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែមានសេចក្តីថ្លែងការណ៍ 'ប្រសិនបើ/បើមិនអញ្ចឹងទេ' មួយ និងសេចក្តីថ្លែងការណ៍សាមញ្ញមួយ 'ប្រសិនបើ' ។"
+          "courseD_farmer_condLoops3_b": "សម្រាប់ល្បែងផ្គុំរូបនេះ អ្នកគួរតែប្រើមួយ 'if/else'  និងលក្ខខណ្ឌ 'if' ។"
         },
         "courseD_farmer_condLoops4": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops42022": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops4_2018": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops4_2019": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops4_2020": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops4_2021": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4": "គ្មាននរណាម្នាក់ដឹងថាប៉ុន្មានក្បាលនៃសាឡាត់នឹងដុះចេញពីពន្លកនីមួយៗ។\n\nប្រើរង្វិលជុំ 'ខណៈពេលដែលមានសាឡាត់' ដើម្បីបន្តរើសរហូតដល់បំណែកនីមួយៗត្រូវបានប្រមូលផ្តុំ។",
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "រង្វិលជុំ 'while' នឹងគ្រប់គ្រងចន្លោះទទេផងដែរ! ដោយសារ​គ្មាន​សាឡាត់ វា​នឹង​មិន​រើស​ទេ ហើយ​ទុក​ឲ្យ​កូដ​បន្ត។",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើរង្វិលជុំ 'នៅពេលមានផ្លូវខាងមុខ' ឬរង្វិលជុំ 'ធ្វើម្តងទៀត' ដើម្បីឆ្លងកាត់ដំណាំទាំងអស់។"
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "អ្នកអាចប្រើ 'While' loop ឬ loop 'ធ្វើឡើងវិញ' ដើម្បីប្រមូលផលដំណាំទាំអអស់។"
         },
         "courseD_farmer_condLoops5": {
           "courseD_farmer_condLoops5_a": "មានរង្វិលជុំថ្មី៖ \"ធ្វើម្តងទៀតរហូតដល់ល្ពៅ\" ។ តើអ្នកអាចឃើញពីរបៀបប្រើវានៅក្នុងល្បែងផ្គុំរូបនេះទេ?",
@@ -6545,44 +6548,86 @@
         },
         "courseD_farmer_condLoops62022": {
           "courseD_farmer_condLoops6_a": "ប្រើរង្វិលជុំ `ខណៈពេលដែលផ្លូវទៅមុខ` ឬប្លុក `ប្រសិនបើមានផ្លូវខាងមុខ / ផ្សេងទៀត` ដើម្បីផ្លាស់ទីអ្នកប្រមូលផលចុះក្រោមផ្នែកនីមួយៗនៃវង់។",
-          "courseD_farmer_condLoops6_b": "អ្នកគ្រាន់តែត្រូវពិនិត្យមើលពោតក្នុងអំឡុងពេលប្រមូលផលភាគច្រើន។ គ្រាន់តែជ្រើសរើសល្ពៅមួយនៅចុងបញ្ចប់នៃកម្មវិធីរបស់អ្នក។"
+          "courseD_farmer_condLoops6_b": "ការប្រមូលផលរបស់អ្នកភាគច្រើនសុតតែពោត។ អ្នកគ្រាន់តែប្រមូលយកផ្លែល្ពៅមួយផ្លែនៅចុងបញ្ចប់តែប៉ុណ្ណោះ។"
         },
         "courseD_farmer_condLoops6_2018": {
-          "courseD_farmer_condLoops6_b": "អ្នកគ្រាន់តែត្រូវពិនិត្យមើលពោតក្នុងអំឡុងពេលប្រមូលផលភាគច្រើន។ គ្រាន់តែជ្រើសរើសល្ពៅមួយនៅចុងបញ្ចប់នៃកម្មវិធីរបស់អ្នក។"
+          "courseD_farmer_condLoops6_b": "ការប្រមូលផលរបស់អ្នកភាគច្រើនសុតតែពោត។ អ្នកគ្រាន់តែប្រមូលយកផ្លែល្ពៅមួយផ្លែនៅចុងបញ្ចប់តែប៉ុណ្ណោះ។"
         },
         "courseD_farmer_condLoops6_2019": {
           "courseD_farmer_condLoops6_a": "ប្រើរង្វិលជុំ `ខណៈពេលដែលផ្លូវទៅមុខ` ឬប្លុក `ប្រសិនបើមានផ្លូវខាងមុខ / ផ្សេងទៀត` ដើម្បីផ្លាស់ទីអ្នកប្រមូលផលចុះក្រោមផ្នែកនីមួយៗនៃវង់។",
-          "courseD_farmer_condLoops6_b": "អ្នកគ្រាន់តែត្រូវពិនិត្យមើលពោតក្នុងអំឡុងពេលប្រមូលផលភាគច្រើន។ គ្រាន់តែជ្រើសរើសល្ពៅមួយនៅចុងបញ្ចប់នៃកម្មវិធីរបស់អ្នក។"
+          "courseD_farmer_condLoops6_b": "ការប្រមូលផលរបស់អ្នកភាគច្រើនសុតតែពោត។ អ្នកគ្រាន់តែប្រមូលយកផ្លែល្ពៅមួយផ្លែនៅចុងបញ្ចប់តែប៉ុណ្ណោះ។"
         },
         "courseD_farmer_condLoops6_2020": {
           "courseD_farmer_condLoops6_a": "ប្រើរង្វិលជុំ `ខណៈពេលដែលផ្លូវទៅមុខ` ឬប្លុក `ប្រសិនបើមានផ្លូវខាងមុខ / ផ្សេងទៀត` ដើម្បីផ្លាស់ទីអ្នកប្រមូលផលចុះក្រោមផ្នែកនីមួយៗនៃវង់។",
-          "courseD_farmer_condLoops6_b": "អ្នកគ្រាន់តែត្រូវពិនិត្យមើលពោតក្នុងអំឡុងពេលប្រមូលផលភាគច្រើន។ គ្រាន់តែជ្រើសរើសល្ពៅមួយនៅចុងបញ្ចប់នៃកម្មវិធីរបស់អ្នក។"
+          "courseD_farmer_condLoops6_b": "ការប្រមូលផលរបស់អ្នកភាគច្រើនសុតតែពោត។ អ្នកគ្រាន់តែប្រមូលយកផ្លែល្ពៅមួយផ្លែនៅចុងបញ្ចប់តែប៉ុណ្ណោះ។"
         },
         "courseD_farmer_condLoops6_2021": {
           "courseD_farmer_condLoops6_a": "ប្រើរង្វិលជុំ `ខណៈពេលដែលផ្លូវទៅមុខ` ឬប្លុក `ប្រសិនបើមានផ្លូវខាងមុខ / ផ្សេងទៀត` ដើម្បីផ្លាស់ទីអ្នកប្រមូលផលចុះក្រោមផ្នែកនីមួយៗនៃវង់។",
-          "courseD_farmer_condLoops6_b": "អ្នកគ្រាន់តែត្រូវពិនិត្យមើលពោតក្នុងអំឡុងពេលប្រមូលផលភាគច្រើន។ គ្រាន់តែជ្រើសរើសល្ពៅមួយនៅចុងបញ្ចប់នៃកម្មវិធីរបស់អ្នក។"
+          "courseD_farmer_condLoops6_b": "ការប្រមូលផលរបស់អ្នកភាគច្រើនសុតតែពោត។ អ្នកគ្រាន់តែប្រមូលយកផ្លែល្ពៅមួយផ្លែនៅចុងបញ្ចប់តែប៉ុណ្ណោះ។"
         },
         "courseD_farmer_condLoops7": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
         },
         "courseD_farmer_condLoops72022": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' ដើម្បីរក្សាអ្នកច្រូតផ្លាស់ទីចំនួនជំហានត្រឹមត្រូវ។"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'នៅពេលមានផ្លូវខាងមុខ' ដើម្បីឱ្យ អ្នកប្រមូលផលផ្លាស់ទីដោយជំហានត្រឹមត្រូវ។"
         },
         "courseD_farmer_condLoops7_2018": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
         },
         "courseD_farmer_condLoops7_2019": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' ដើម្បីរក្សាអ្នកច្រូតផ្លាស់ទីចំនួនជំហានត្រឹមត្រូវ។"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'នៅពេលមានផ្លូវខាងមុខ' ដើម្បីឱ្យ អ្នកប្រមូលផលផ្លាស់ទីដោយជំហានត្រឹមត្រូវ។"
         },
         "courseD_farmer_condLoops7_2020": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' ដើម្បីរក្សាអ្នកច្រូតផ្លាស់ទីចំនួនជំហានត្រឹមត្រូវ។"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'នៅពេលមានផ្លូវខាងមុខ' ដើម្បីឱ្យ អ្នកប្រមូលផលផ្លាស់ទីដោយជំហានត្រឹមត្រូវ។"
         },
         "courseD_farmer_condLoops7_2021": {
-          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីទៅដល់ដំណាំទាំងអស់នៅតែជាវង់។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'ខណៈពេលដែលផ្លូវទៅមុខ' ដើម្បីរក្សាអ្នកច្រូតផ្លាស់ទីចំនួនជំហានត្រឹមត្រូវ។"
+          "courseD_farmer_condLoops7_a": "សូមកត់សម្គាល់ថាផ្លូវងាយស្រួលបំផុតដើម្បីប្រមូលដំណាំទាំងអស់គឺតាមផ្លូវរាងគូទខ្យង។\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "សាកល្បងប្រើ 'នៅពេលមានផ្លូវខាងមុខ' ដើម្បីឱ្យ អ្នកប្រមូលផលផ្លាស់ទីដោយជំហានត្រឹមត្រូវ។"
+        },
+        "courseD_farmer_condLoops_challenge1": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge12022": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge1_2018": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge1_2019": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge1_2020": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "ប៊ូតុង \"ជំហាន\" អាចមានប្រយោជន៍ខ្លាំងណាស់នៅក្នុងបញ្ហាប្រឈមនេះ។",
+          "courseD_farmer_condLoops_challenge1_b": "ជាធម្មតាអ្នកគ្រាន់តែ \"រើសល្ពៅ\" ប្រសិនបើអ្នកនៅជាមួយល្ពៅ។ តើអ្នកត្រូវធ្វើអ្វីទៀតប្រសិនបើអ្នកនៅជាមួយល្ពៅ?"
+        },
+        "courseD_farmer_condLoops_challenge2": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
+        },
+        "courseD_farmer_condLoops_challenge22022": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
+        },
+        "courseD_farmer_condLoops_challenge2_2018": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
+        },
+        "courseD_farmer_condLoops_challenge2_2019": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
+        },
+        "courseD_farmer_condLoops_challenge2_2020": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "បរិមាណបន្លែក្នុងចន្លោះនីមួយៗអាចផ្លាស់ប្តូរបាន។ loop  `while` អាចជួយបាន!"
         },
         "courseD_farmer_while1": {
           "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
@@ -8597,6 +8642,15 @@
           "courseF_bee_fwp_challenge2_b": "តើអ្នកកំពុងរត់ចេញពីប្លុក“ ឆ្ពោះទៅមុខ” មែនទេ?\nសាកល្បងប្រើ  `រង្វិលជុំដដែលៗ` នៅក្នុងកម្មវិធីសំខាន់របស់អ្នក។",
           "courseF_bee_fwp_challenge2_c": "\\*\\* នេះគឺជាអ្វីដែលមុខងាររបស់អ្នកគួរតែមានដូចជា៖ \\*\\*\n\n[បិទប្លុក] [0]",
           "courseF_bee_fwp_challenge2_d": "\\*\\* នេះគឺជាអ្វីដែលកម្មវិធីសំខាន់របស់អ្នកគួរមានលក្ខណះដូចជា៖ \\*\\*\n\n[បិទប្លុក] [0]"
+        },
+        "courseF_clicker_finish_-2022-2": {
+          "clicker_backsgrounds_hint": "ធ្វើឱ្យហ្គេមរបស់អ្នកភ្លឺដោយកំណត់ផ្ទៃខាងក្រោយទៅជា \"ពណ៌ចៃដន្យ\" រាល់ពេលដែលចុច sprite ។\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackground\">\n        <value name=\"COLOR\">\n          <block type=\"gamelab_randomColor\"></block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_extend_hint": "តើអ្នកចង់បានហ្គេមយូរជាងនេះទេ? បង្កើត sprites កាន់តែច្រើនឡើង ៗ បន្ទាប់ពីពេលវេលាជាក់លាក់មួយបានកន្លងផុតទៅ។\n\n<xml><block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">3</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_makeNumSprites\">\n        <field name=\"ANIMATION_NAME\">\"gold coin\"</field>\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <field name=\"NUM\">5</field>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "clicker_remove_hint": "នៅពេលដែលហ្គេមរបស់អ្នកបញ្ចប់ អ្នកអាចលុប sprites ដែលនៅសល់ទាំងអស់ដូចនេះ៖\n\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_destroy\">\n      <value name=\"THIS\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"gold coin\"</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "clicker_sounds_hint": "បន្ថែមសំឡេងទៅផ្នែកផ្សេងៗនៃហ្គេមរបស់អ្នកដោយភ្ជាប់ប្លុក \"លេងសំឡេង\" នៅក្រោមព្រឹត្តិការណ៍នីមួយៗ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n<block type=\"gamelab_spriteClicked\">\n    <field name=\"CONDITION\">\"when\"</field>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <field name=\"ANIMATION\">\"gold coin\"</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n    <block type=\"gamelab_atTime\">\n    <field name=\"UNIT\">\"seconds\"</field>\n    <value name=\"N\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">10</field>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_playSound\">\n        <field name=\"SOUND\">Choose</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_clicker_score_-2022-2": {
+          "print_variable_hint": "អ្នកអាចមាន sprite និយាយតម្លៃនៃអថេរដូចនេះ៖\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"variables_get\">\n      <field name=\"VAR\">score</field>\n    </block>\n  </value>\n</block></xml>"
         },
         "courseF_events_choice_pufferfish": {
           "changeProp": "អ្នកនឹងត្រូវការប្លុកនេះ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"

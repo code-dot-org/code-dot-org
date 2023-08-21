@@ -173,6 +173,9 @@
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
+        },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
@@ -185,8 +188,14 @@
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Kombinojnë forma të thjeshta në dizajne komplekse me nested loops."
+        },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Vendos se cilat lloje të deklaratave janë OK për t'u thënë në internet dhe cilat jo."
@@ -196,6 +205,9 @@
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
@@ -235,6 +247,9 @@
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
@@ -324,10 +339,10 @@
           "description": "Shpjegojnë rregullat për të udhëtuar në mënyrë të sigurt në internet."
         },
         "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
-          "description": "Krahasojnë se si të qëndrojnë të sigurt në internet është i ngjashme me qëndrimin e sigurisë në botën reale."
+          "description": "Krahasojnë se si të qenurit të sigurt në internet është e ngjashme me të qenurit të sigurtë në botën reale."
         },
         "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
-          "description": "Zbulojnë se interneti mund të përdoret për të vizituar vende të largëta dhe për të mësuar gjëra të reja"
+          "description": "Zbulojnë se interneti mund të përdoret për të vizituar vende që janë larg si dhe për të mësuar gjëra të reja."
         },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Njohin se çfarë pritet kur nxënësit kalojnë në laboratorin kompjuterik."
@@ -420,16 +435,16 @@
           "description": "Mësojnë se informacioni që ata shpërndajnë në internet lë një gjurmë digjitale."
         },
         "7cc37ede-4e83-4881-9213-1746313de397": {
-          "description": "Eksplorojnë se çfarë informacioni është në rregull për t'u shpërndarë në internet."
+          "description": "Eksplorojnë se çfarë informacioni është në rregull të shpërndahet në internet."
         },
         "1fb2f469-060b-4caf-ab67-28747acc0f00": {
           "description": "Përkthejnë një listë hapash në një sërë veprimesh fizike"
         },
         "8a9a5295-648e-47f2-baec-c5a360f2788a": {
-          "description": "Përcaktojnë një listë hapash (algoritme) për të çuar një mik nga pozicioni fillestar në qëllimin e tij"
+          "description": "Përcaktojnë një listë hapash (algoritmi) për të dërguar një shok/shoqe nga pozicioni i tyre fillestar deri te qëllimi i tyre"
         },
         "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
-          "description": "Identifikojnë dhe rregullo gabimet në ekzekutimin e një algoritmi"
+          "description": "Identifikojnë dhe rregullojnë gabimet në ekzekutimin e një algoritmi"
         },
         "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
           "description": "Modelimi i sjelljeve të duhura të laboratorit"
@@ -522,7 +537,7 @@
           "description": "Kapërcejnë pengesat të tilla si kufizimet kohore ose bugs."
         },
         "33b55b11-ca81-406f-be39-265e8f33d09d": {
-          "description": "Identifikojnë mënyrat për t'iu përgjigjur fjalëve me kuptim në internet, duke përdorur S-T-O-P."
+          "description": "Identifikojnë mënyrat për t'iu përgjigjur fjalëve të këqija në internet, duke përdorur S-T-O-P."
         },
         "ce3ba860-7753-4c2c-a161-64d59903674a": {
           "description": "Kuptojnë se si mund të duket padrejtësia në internet dhe si mund t'i bëjë njerëzit të ndihen."
@@ -668,6 +683,9 @@
         "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
+        },
         "f466b8aa-18bf-460d-9780-1abcb7f32589": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
@@ -684,37 +702,37 @@
           "description": "Identifikoni arsyet pse njerëzit ndajnë informacione rreth vetes në internet."
         },
         "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
-          "description": "Krijo sprites të reja dhe cakto atyre kostume dhe sjellje."
+          "description": "Krijojnë sprites të reja dhe cakto atyre kostume dhe sjellje."
         },
         "bf11a11b-35be-4fdc-a266-9f192e141760": {
-          "description": "Defino “sprite” si një karakter ose objekt në ekran që mund të zhvendoset dhe ndryshohet."
+          "description": "Defino “sprite” si një karakter ose objekt në ekran që mund të zhvendoset dhe ndryshohet.jnë"
         },
         "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
           "description": "Krijojnë sprites të reja dhe t'i caktojnë atyre kostume dhe vende."
         },
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
-          "description": "Krijojnë një animacion interaktiv duke përdorur sprites dhe ngjarje."
+          "description": "Krijojnë një animacion interaktiv duke përdorur sprites dhe evente."
         },
         "41232751-173e-4eaa-9bc4-bb5b65957d03": {
           "description": "Zgjedhin se çfarë informate për veten e tyre është i sigurt të ndahet në internet."
         },
         "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
-          "description": "Krijojë një program kompjuterik interaktiv që shpreh se kush janë, me tekst dhe imazhe të personalizuara."
+          "description": "Krijojnë një program kompjuterik interaktiv që shpreh se kush janë, me tekst dhe imazhe të personalizuara."
         },
         "62ffafea-c5f4-4942-b283-9462c41d52cd": {
-          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+          "description": "Identifikojnë përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
         "68b90262-3e0e-4c90-9888-21796cd30869": {
           "description": "Dallojnë komandat që duhet të përsëriten në loops dhe komandat që duhet të përdoren vetë."
         },
         "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
-          "description": "Numëroj sa herë duhet të përsëritet një veprim dhe prezantojë atë si një loop."
+          "description": "Numërojnë sa herë duhet të përsëritet një veprim dhe prezantojë atë si një loop."
         },
         "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
-          "description": "Thyej detyrat komplekse në sesione më të vogla të përsëritshme."
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
         },
         "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
-          "description": "Kombinoj forma të thjeshta në dizajne komplekse me nested loops."
+          "description": "Kombinojnë forma të thjeshta në dizajne komplekse me nested loops."
         },
         "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
           "description": "Përshkruajnë kur nevojitet një loop , nested loop ose nuk nevojitet asnjë loop."
@@ -768,7 +786,7 @@
           "description": "Përmirësojnë një dizajn ekzistues aplikacioni duke adresuar nevojat e qasshmërisë së përdoruesve."
         },
         "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
-          "description": "Shpjegoni pse qasshmëria është një pjesë e rëndësishme e dizajnimit të një aplikacioni për përdoruesit."
+          "description": "Shpjegojnë pse qasshmëria është një pjesë e rëndësishme e dizajnimit të një aplikacioni për përdoruesit."
         },
         "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
           "description": "Përshkruajnë ndikimin e aplikacioneve mobile në botën moderne."
@@ -824,23 +842,83 @@
         "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
           "description": "Krijojnë një kafshë shtëpiake virtuale interaktive duke përdorur ngjarjet, sjelljet dhe artin e personalizuar."
         },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Përcaktojnë marrëdhënien midis mënyrës se si definohet, ruhet dhe merret një variabël kur shtypim “Ekzekuto” në një program."
+        },
         "8805bb75-452c-4778-9cd2-6df020a13216": {
-          "description": "Deklaron një variabël"
+          "description": "Deklarojnë një variabël"
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Thërrasin një variabël shumë herë në një program."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Caktojnë një vlerë variablit"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "Përdorin variablat në lidhje me kërkesat."
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Përdorin variabla për të mbajtur fjalë dhe fraza."
+        },
+        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
+          "description": "Krijojnë një program kompjuterik ndërveprues që i përgjigjet të dhënave të përdoruesit."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Përdorin variabla për të mbajtur fjalë dhe fraza."
+        },
+        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
+          "description": "Përdorin variabla në lidhje me kërkesat."
+        },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Krijojnë programe Sprite Lab ku spritet krijohen në grupe dhe kontrollohen individualisht duke përdorur evente."
         },
         "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
-          "description": "Krijoni një lojë klikuese në Sprite Lab ku sprites mund të hiqen për të fituar pikë"
+          "description": "Krijojnë një lojë klikuese në Sprite Lab ku sprites mund të hiqen për të fituar pikë"
         },
         "9da7b378-c4e9-4184-b58a-61dfdad47357": {
-          "description": "Krijoni një variabël që ruan informacionin dhe ndryshon me kalimin e kohës"
+          "description": "Krijojnë një variabël që ruan informacionin dhe ndryshon me kalimin e kohës"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Krijojnë lojën e tyre të koleksionistit në Sprite Lab duke përdorur sprite të shumta të cilat kontrollohen individualisht dhe variabla për të gjurmuar rezultatin e lojtarit."
+        },
+        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
+          "description": "Bëjnë dhe provojnë një parashikim duke modifikuar variablat e simulimit"
+        },
+        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
+          "description": "Krijojnë grafik me dy rreshta për të krahasuar të dhënat për dy burime të ndryshme"
+        },
+        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
+          "description": "Përdorin një simulim kompjuterik për të mbledhur të dhëna rreth një modeli"
         },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
-          "description": "Diskutoni rolin që luan inteligjenca artificiale në jetën e tyre."
+          "description": "Diskutojnë rolin që luan inteligjenca artificiale në jetën e tyre."
         },
         "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
-          "description": "Trajnoni dhe testoni një model të mësimit të makinës."
+          "description": "Trajnojnë dhe testojnë një model të mësimit të makinës."
         },
         "ba631251-039e-4f7a-9320-158390f318c2": {
-          "description": "Arsyeja se si paragjykimi njerëzor luan një rol në mësimin e makinerive."
+          "description": "Tregojnë se si paragjykimi njerëzor luan një rol në mësimin e makinave."
+        },
+        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
+          "description": "Përkthejnë URL-të në IP adresa."
+        },
+        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
+          "description": "Mësojnë rreth kompleksitetit të dërgimit të mesazheve në internet."
+        },
+        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
+          "description": "Shpjegojë se si kufizimet e sistemit mund të ndikojnë në hartimin e projektit."
+        },
+        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
+          "description": "Hartojë dhe zbatojë plane për të zgjidhur çdo problem në kodin e tyre."
+        },
+        "505fcab3-063d-4c18-9ce1-83077359307d": {
+          "description": "Artikulojë procesin e projektimit dhe se si ai ndihmoi në formimin e projektit të përfunduar kulminant."
+        },
+        "88fa834a-0717-4422-a6df-a6af49a1e928": {
+          "description": "Përshkruaj se si kompromisi mund të ndihmojë në mbajtjen e një projekti në rrugën e duhur dhe të frymëzojë kreativitetin."
+        },
+        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
+          "description": "Mësoj të planifikoj paraprakisht për një detyrë të vazhdueshme."
         },
         "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
           "description": "Identifikojnë dhe gjejnë gabimet në një program."
@@ -867,10 +945,16 @@
           "description": "Zhvillojnë aftësitë e zgjidhjes së problemeve dhe të të menduarit kritik duke rishikuar praktikat e debugging."
         },
         "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
-          "description": "Krijo një program për të përfunduar një imazh duke përdorur hapa vijues."
+          "description": "Krijojnë një program për të përfunduar një imazh duke përdorur hapa vijues."
         },
         "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
-          "description": "Zbërtheni format komplekse në pjesë të thjeshta."
+          "description": "Zbërthejnë format komplekse në pjesë të thjeshta."
+        },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Krijojnë sprites të reja dhe t'i caktojnë atyre kostume dhe sjellje."
+        },
+        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
+          "description": "Përcaktojnë \"sprite\" si një karakter ose objekt në ekran që mund të zhvendoset dhe ndryshohet."
         },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
           "description": "Zhvilloni programe që u përgjigjen ngjarjeve në kohë"
@@ -892,6 +976,9 @@
         },
         "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
           "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Thyejnë detyrat komplekse në sesione më të vogla të përsëritshme."
         },
         "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
           "description": "Krijoni një lojë klikuese në Sprite Lab ku sprites mund të hiqen për të fituar pikë"
