@@ -13,34 +13,28 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 2.5rem 0 1.5rem 0;
-}
-
-h1, h2, h3 {
-  font-family: var(--barlowSemiCondensed-semibold);
-}
-
-h5, h6 {
-  font-family: var(--gotham-bold);
-}
-
 h1,
 .heading-xxl {
+  font-family: var(--barlowSemiCondensed-semibold);
   font-size: 3rem;
   line-height: 1.16;
+  margin: 1em 0 0.5em 0;
 }
 
 h2,
 .heading-xl {
+  font-family: var(--barlowSemiCondensed-semibold);
   font-size: 2.125rem;
   line-height: 1.24;
+  margin: 1em 0 0.5em 0;
 }
 
 h3,
 .heading-lg {
+  font-family: var(--barlowSemiCondensed-semibold);
   font-size: 1.75rem;
   line-height: 1.28;
+  margin-bottom: 0.5em;
 }
 
 h4,
@@ -48,18 +42,23 @@ h4,
   font-family: var(--barlowSemiCondensed-medium);
   font-size: 1.5rem;
   line-height: 1.32;
+  margin-bottom: 0.5em;
 }
 
 h5,
 .heading-sm {
+  font-family: var(--gotham-bold);
   font-size: 1.25rem;
   line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
 h6,
 .heading-xs {
+  font-family: var(--gotham-bold);
   font-size: 1rem;
   line-height: 1.48;
+  margin-bottom: 0.5em;
 }
 
 p {
