@@ -81,15 +81,13 @@ h1.tools-title {
   margin-bottom: 0.5em;
 }
 
-h3 {
+h3,
+h3.tutorial-info-h {
+  margin-top: 0px;
   font-family: var(--barlowSemiCondensed-medium);
   font-size: 1.5rem;
   line-height: 1.32;
   margin-bottom: 0.5em;
-}
-
-h3.tutorial-info-h {
-  margin-top: 0px;
 }
 
 .tutorial-info-start {
