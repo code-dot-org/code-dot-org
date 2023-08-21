@@ -97,7 +97,7 @@ figcaption {
   line-height: 1.64;
 }
 
-a {
+p a {
   font-family: var(--gotham-bold);
 }
 
