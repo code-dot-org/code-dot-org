@@ -96,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "LED Color Dropdown",
     "thumbnail_url": "https://images.code.org/8e05ffd4bb4e9961a7275c2a005dd2a4-image-1649457435863.png",
@@ -107,7 +108,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:09.875+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracC_2222\"},{\"changed_at\":\"2023-08-15 16:54:32 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:09.875+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracC_2222\"},{\"changed_at\":\"2023-08-15 16:54:32 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:54:50 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

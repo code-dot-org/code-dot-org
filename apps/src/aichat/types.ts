@@ -8,10 +8,22 @@ export type AichatLocale = {
   [key: string]: () => string;
 };
 
-export type ChatMessage = {
-  id: string;
-  name: string;
-  role: 'user' | 'assistant' | 'system';
+export type ChatCompletionMessage = {
+  id: number;
+  role: Role;
   chatMessageText: string;
-  status: 'ok' | 'inappropriate' | 'personal';
+  status: Status;
 };
+
+export enum Role {
+  ASSISTANT = 'assistant',
+  USER = 'user',
+  SYSTEM = 'system',
+}
+
+export enum Status {
+  OK = 'ok',
+  PERSONAL = 'personal',
+  INAPPROPRIATE = 'inappropriate',
+  UNKNOWN = 'unknown',
+}

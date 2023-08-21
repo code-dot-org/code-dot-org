@@ -1,10 +1,10 @@
 {
   "key": "vpl-csp",
-  "display_name": "CS Principles Virtual Professional Learning",
+  "display_name": "CS Principles Virtual Professional Learning 23-24",
   "category": "pl_virtual",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": "virtual_academic_year_workshops_612",

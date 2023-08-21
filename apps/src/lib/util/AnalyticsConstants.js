@@ -47,6 +47,8 @@ const EVENTS = {
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
+  SORT_BY_FAMILY_NAME: 'Sorted by family name',
+  SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',

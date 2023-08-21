@@ -96,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "LED Mood Ring",
     "thumbnail_url": "https://images.code.org/614397ffb356db0b0df85b7dcf77e020-image-1650060225659.png",
@@ -107,7 +108,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.198+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"},{\"changed_at\":\"2023-08-15 16:55:21 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:11.198+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"},{\"changed_at\":\"2023-08-15 16:55:21 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:55:29 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

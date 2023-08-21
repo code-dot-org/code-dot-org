@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:10:48.000Z",
   "level_num": "custom",
@@ -186,8 +187,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "palette_category_at_start": "Circuit",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "Embedded Prediction",
     "contained_level_names": [
       "CSD U6 - Board Outputs - Emb_2023"
@@ -196,7 +196,8 @@
     "parent_level_id": 20396,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/responding-to-user-input"
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
@@ -208,11 +209,13 @@
     "teacher_markdown": "This code uses the buzzer on the Circuit Playground to create a sound. The first number in the frequency block controls the note of the buzzer - low numbers create lower bass notes, and high numbers create higher frequency sounds. Students will explore these frequencies in the next few levels",
     "start_blocks": "onEvent(\"lowButton\", \"click\", function() {\r\n  buzzer.frequency(200, 500);\r\n});\r\nonEvent(\"midButton\", \"click\", function() {\r\n  buzzer.frequency(500, 500);\r\n});\r\nonEvent(\"highButton\", \"click\", function() {\r\n  buzzer.frequency(800, 500);\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"classic\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"lowButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 80px;\">Low</button><button id=\"midButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 185px;\">Mid</button><button id=\"highButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 150px; background-color: rgb(26, 188, 156); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 0px; border-width: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 30px; position: absolute; left: 85px; top: 290px;\">High</button></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:48.447+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:48.447+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P2_2222\"},{\"changed_at\":\"2023-08-16 17:04:00 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
