@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PropTypes, { nominalTypeHack } from 'prop-types';
+import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
@@ -30,8 +30,7 @@ export default function LearningGoalItem({deleteItem}) {
                 />
               </label>
             </div>
-            <label 
-              style={styles.labelAndInput}>
+            <label style={styles.labelAndInput}>
               Use AI to assess
               <input
                 type="checkbox"
@@ -40,7 +39,9 @@ export default function LearningGoalItem({deleteItem}) {
                 style={styles.checkbox}
               />
               <span
-                style={aiEnabled ? (styles.checkboxChecked) : (styles.checkboxBlank)}
+                style={
+                  aiEnabled ? styles.checkboxChecked : styles.checkboxBlank
+                }
                 aria-hidden="true"
               >
                 &#10003;
@@ -105,7 +106,6 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 2,
-    color: color.white,
     margin: 5,
     width: 20,
     height: 20,
