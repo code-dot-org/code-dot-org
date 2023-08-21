@@ -562,6 +562,12 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :strip_display_family_names
+  def strip_display_family_names
+    self.name = name.strip if name
+    self.family_name = family_name.strip if family_name
+  end
+
   validate :no_family_name_for_teachers
   def no_family_name_for_teachers
     if family_name && (teacher? || sections_as_pl_participant.any?)
