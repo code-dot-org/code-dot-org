@@ -13,6 +13,7 @@ export default function RubricContainer({rubric}) {
       </div>
       <div className={style.rubricContent}>
         <div className={style.learningGoalContainer}>
+          {/* TODO: do not hardcode in AI setting or feedback availability */}
           {rubric.learningGoals.map(lg => (
             <LearningGoal
               key={lg.key}
