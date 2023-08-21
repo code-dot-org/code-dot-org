@@ -30,7 +30,7 @@ export default function LearningGoalItem({deleteItem}) {
                 />
               </label>
             </div>
-            <label>
+            <label style={styles.labelAndInput}>
               Use AI to assess
               <input
                 type="checkbox"
@@ -86,6 +86,7 @@ const styles = {
   },
   checkbox: {
     marginLeft: 7,
+    
   },
   label: {
     fontSize: 18,
