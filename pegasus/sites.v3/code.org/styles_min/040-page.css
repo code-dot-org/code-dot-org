@@ -63,6 +63,38 @@ h6,
 
 p {
   line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-one {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.body-two {
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-three {
+  font-size: 0.875rem;
+  line-height: 1.54;
+  margin-bottom: 1em;
+}
+
+.body-four {
+  font-size: 0.75rem;
+  line-height: 1.64;
+  margin-bottom: 1em;
+}
+
+figcaption {
+  font-family: var(--gotham-bold), sans-serif;
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.64;
 }
 
 a {
@@ -81,6 +113,11 @@ a:visited {
 
 a:hover, a:active {
   color: var(--brand_secondary_dark);
+}
+
+a:link:has(i),
+a:link:has(span) {
+  text-decoration: none;
 }
 
 strong {
