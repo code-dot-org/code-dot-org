@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -6,6 +7,11 @@ import moduleStyles from './chatWorkspace.module.scss';
 import {ChatCompletionMessage, Status, Role} from '../types';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
+import {
+  setIsWaitingForChatResponse,
+  setNewUserMessage,
+  addChatMessage,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -15,6 +21,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const [storedMessages, setStoredMessages] =
     useState<ChatCompletionMessage[]>(initialChatMessages);
 
+  const dispatch = useAppDispatch();
+
   const onCloseWarningModal = useCallback(
     () => setShowWarningModal(false),
     [setShowWarningModal]
@@ -23,13 +31,14 @@ const ChatWorkspace: React.FunctionComponent = () => {
   // This function is called when the user submits a chat message.
   // It sends the user message to the backend and retrieves the assistant response.
   const onSubmit = async (message: string, systemPrompt: string) => {
+    dispatch(setIsWaitingForChatResponse(true));
     const newMessageId =
       storedMessages.length === 0
         ? 1
         : storedMessages[storedMessages.length - 1].id + 1;
 
     // TODO: Post user message with status unknown while message is being sent to backend.
-
+    setNewUserMessage(message);
     // TODO: Filter inappropriate and too personal messages.
     const appropriateChatMessages = [...storedMessages];
 
@@ -40,6 +49,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
       message,
       appropriateChatMessages
     );
+    dispatch(setIsWaitingForChatResponse(false));
 
     // Add user chat messages to newMessages.
     let newMessages: ChatCompletionMessage[] = [
@@ -50,6 +60,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         chatMessageText: message,
       },
     ];
+    addChatMessage(newMessages[0]);
 
     // Add assistant chat messages to newMessages.
     if (chatApiResponse.assistantResponse) {
@@ -60,6 +71,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         chatMessageText: chatApiResponse.assistantResponse,
       };
       newMessages = [...newMessages, assistantChatMessage];
+      addChatMessage(assistantChatMessage);
     }
     setStoredMessages([...storedMessages, ...newMessages]);
   };
