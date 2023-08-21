@@ -299,6 +299,7 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          isEnglish={isEnglish}
         />
       )}
     </div>
