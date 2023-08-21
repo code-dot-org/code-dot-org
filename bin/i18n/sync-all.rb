@@ -83,6 +83,10 @@ class I18nSync
     I18n::SyncIn.perform
   end
 
+  def sync_out(upload_manifests = false)
+    I18n::SyncOut.perform(upload_manifests: upload_manifests)
+  end
+
   def parse_options(args)
     options = {}
     opt_parser = OptionParser.new do |opts|

@@ -10,6 +10,12 @@ const makerCurriculum = {
   school_subject: null,
   course_version_path: '/s/course',
   is_translated: false,
+  device_compatibility: null,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const countingCurriculum = {
@@ -25,6 +31,11 @@ const countingCurriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const poemArtCurriculum = {
@@ -40,6 +51,11 @@ const poemArtCurriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const danceUnpluggedCurriculum = {
@@ -56,6 +72,11 @@ const danceUnpluggedCurriculum = {
     '{"computer":"incompatible","chromebook":"incompatible","tablet":"incompatible","mobile":"incompatible","no_device":"ideal"}',
   course_version_path: '/s/course',
   is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course1Curriculum = {
@@ -71,6 +92,11 @@ const course1Curriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course2Curriculum = {
@@ -86,6 +112,11 @@ const course2Curriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course3Curriculum = {
@@ -101,6 +132,11 @@ const course3Curriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course4Curriculum = {
@@ -116,6 +152,11 @@ const course4Curriculum = {
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noGradesCurriculum = {
@@ -131,6 +172,11 @@ const noGradesCurriculum = {
     '{"computer":"not_recommended","chromebook":"not_recommended","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
   is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noPathCurriculum = {
@@ -146,6 +192,11 @@ const noPathCurriculum = {
     '{"computer":"not_recommended","chromebook":"not_recommended","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: null,
   is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 // Curricula groups

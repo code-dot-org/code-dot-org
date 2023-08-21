@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:00:09.000Z",
   "level_num": "custom",
@@ -90,7 +91,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Debugging",
@@ -101,9 +103,8 @@
     "encrypted_examples": "4SCqg8HZuIqJV24oqy6Ifrj4ljeeBoMQOS6Ii4Kozbj6QLEp77zonGbdHjjD\nKZmYiAeGKCVDHk3IwCf6fcMN5Q==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:09.123+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:09.123+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracD_2222\"},{\"changed_at\":\"2023-08-16 17:44:02 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:35.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Creating Functions\r\n\r\nIn this app, some new aliens have appeared that are red and blue! When the user clicks on an alien, the LEDs should turn on to match the alien.\r\n\r\nThe red aliens have already been completed, but the blue aliens still need to be finished. You'll need to **define** a function called `blueLEDs`, then **call** the function inside each event.\r\n\r\n## Do This\r\n**1) Defining Our Function**:\r\n\r\n- At the bottom of the code, add a new [`function myFunction() {}`(#68D995)](/docs/applab/functionParams_none/) block [**(Show Me Where)**](#triggercallout=define).\r\n- Name the function `blueLEDs`. Add several [`color()`(#f78183)](/docs/applab/color/) blocks to make every LED blue\r\n\r\n**2) Calling Our Function**:\r\n\r\n- At the top of the code, find the [`onEvent()`(#fff176)](/docs/applab/onEvent/) blocks for the two blue aliens [**(Show Me Where)**](#triggercallout=call).\r\n- Add a [`myFunction()`(#68D995)](/docs/applab/callMyFunction/) block to each event. Change the function mame to `blueLEDs`.\r\n\r\n**Run your code!** When you click an alien, the lights on the LED should light up to match",
     "parent_level_id": 20595,
     "name_suffix": "_2023a",
@@ -66,7 +67,8 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/maker/setup"
     ],
     "start_blocks": "//Events\r\nonEvent(\"redAlien1\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\nonEvent(\"redAlien2\", \"click\", function() {\r\n  //Turn the LEDs red\r\n  redLEDs();\r\n});\r\n\r\n//2) Calling our Functions\r\nonEvent(\"blueAlien1\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\nonEvent(\"blueAlien2\", \"click\", function() {\r\n  //Turn the LEDs blue\r\n  \r\n});\r\n\r\n\r\n// Functions\r\nfunction redLEDs() {\r\n  colorLeds[0].color(\"red\");\r\n  colorLeds[1].color(\"red\");\r\n  colorLeds[2].color(\"red\");\r\n  colorLeds[3].color(\"red\");\r\n  colorLeds[4].color(\"red\");\r\n  colorLeds[5].color(\"red\");\r\n  colorLeds[6].color(\"red\");\r\n  colorLeds[7].color(\"red\");\r\n  colorLeds[8].color(\"red\");\r\n  colorLeds[9].color(\"red\");\r\n}\r\n//1) Defining our Functions\r\n//Add Your Function Here!\r\n",
     "map_reference": "/courses/csd-2022/guides/functions",
@@ -82,9 +84,8 @@
     "encrypted_examples": "td00VTc1ROyUFfFc5Y6OTy7C4jlXbLapnqy6Foh/U+pkbyu60MZLPOzV5/Iw\nHQdEFYHF4lKdLnTOH2WkwQ3b0Q==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:35.615+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:35.615+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB2_2222\"},{\"changed_at\":\"2023-08-16 19:39:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

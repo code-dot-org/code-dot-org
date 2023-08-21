@@ -417,7 +417,7 @@ class FilesApi < Sinatra::Base
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
-        return file_too_large(endpoint) if exception.class == WebPurify::TextTooLongError
+        return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end

@@ -9,10 +9,6 @@
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
         "/s/express-2021/lessons/1#{webpack_offline_asset_path('js/offline-service-worker.js')}"
-    :javascript
-      window.CPA_EXPERIENCE = "#{Cpa.cpa_experience(request)}"
-    :javascript
-      window.GENDER_FEATURE_ENABLED = "#{experiment_value('gender', request)}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title

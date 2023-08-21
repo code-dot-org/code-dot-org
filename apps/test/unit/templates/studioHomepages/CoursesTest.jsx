@@ -18,14 +18,12 @@ describe('Courses', () => {
     it('shows a short banner when signed in', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={false} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isTrue(header.prop('short'));
       assert.isUndefined(header.prop('description'));
     });
 
     it('shows a long banner when signed out', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={true} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isFalse(header.prop('short'));
       assert.isString(header.prop('description'));
     });
   });

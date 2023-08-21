@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:40.000Z",
   "level_num": "custom",
@@ -48,7 +49,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Notes and Octaves\r\n\r\nYou can play the same note at different octaves, such as a \"low note\" or \"high note\". You can represent this in your code by adding a number at the end of a note. For example:\r\n- [`buzzer.note(\"C1\", 100)`(#f78183)](/docs/applab/buzzer.note/) would play a C note at the lowest octave\r\n- [`buzzer.note(\"C8\", 100)`(#f78183)](/docs/applab/buzzer.note/) would play a C note at the highest octave\r\n- [`buzzer.note(\"C\", 100)`(#f78183)](/docs/applab/buzzer.note/) would play a C note at the default octave, \"C4\"\r\n\r\n## Do This\r\n\r\n1) Complete the app below by filling in the missing notes with the correct octave\r\n\r\n**Run Your Code!** Click each button to listen to the notes. Notice that at very low and very high octaves, the sound becomes distorted and unrecognizable",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -59,16 +60,16 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/playing-notes"
+      "/courses/csd-2022/guides/playing-notes",
+      "/maker/setup"
     ],
     "start_blocks": "onEvent(\"C1\", \"click\", function() {\r\n  buzzer.note(\"C1\", 100);\r\n});\r\nonEvent(\"C2\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C3\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C4\", \"click\", function() {\r\n  buzzer.note(\"C4\", 100);\r\n});\r\nonEvent(\"C5\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C6\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C7\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C8\", \"click\", function() {\r\n  \r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"C1\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 0px; top: 130px; width: 40px;\">C1</button><button id=\"C2\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 0px; top: 170px; width: 80px;\" class=\"\">C2</button><button id=\"C3\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 0px; top: 210px; width: 120px;\">C3</button><button id=\"C4\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 0px; top: 250px; width: 160px;\">C4</button><button id=\"C5\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 2.22045e-16px; top: 290px; width: 200px;\">C5</button><button id=\"C6\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: -1.11022e-16px; top: 330px; width: 240px;\">C6</button><button id=\"C7\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: -1.11022e-16px; top: 370px; width: 280px;\">C7</button><button id=\"C8\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 0px; top: 410px; width: 320px;\">C8</button><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 225px; height: 35px; position: absolute; left: 55px; top: 25px; text-align: center;\" id=\"titleLabel\">Press each button to hear the note in that octave!</label></div></div>",
     "encrypted_examples": "Njdn3e+g/mAtwSuRvDZmTDMgaIKWTrOgp6L4QQoYAnZI2SLuRM6gZnEJubHU\nSNHXqojPgfhnyygctYtFHyq59w==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.657+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.657+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2_2222\"},{\"changed_at\":\"2023-08-16 19:33:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

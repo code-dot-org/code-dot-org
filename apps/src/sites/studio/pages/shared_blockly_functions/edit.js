@@ -46,7 +46,7 @@ const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>
   <block type="behavior_definition">
-    <title id=${DEFAULT_NAME} name="NAME">${DEFAULT_NAME}</title>
+    <title id="${DEFAULT_NAME}" name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;
 

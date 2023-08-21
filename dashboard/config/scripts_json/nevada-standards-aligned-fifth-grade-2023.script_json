@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fifth-grade",
-    "serialized_at": "2023-07-24 17:17:18 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-07 21:16:23 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -7662,6 +7662,18 @@
       }
     },
     {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nevada_cs_standards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "nevada_cs_standards"
+      }
+    },
+    {
       "name": "Pause and Think Online",
       "url": "https://youtu.be/X_duZ-1LApg",
       "key": "pause_and_think_online",
@@ -8085,6 +8097,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-fifth-grade-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nevada_cs_standards",
         "script.name": "nevada-standards-aligned-fifth-grade-2023"
       }
     },
@@ -9322,6 +9340,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

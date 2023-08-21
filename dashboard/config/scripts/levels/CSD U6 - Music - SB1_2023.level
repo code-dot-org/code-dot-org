@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:40.000Z",
   "level_num": "custom",
@@ -46,7 +47,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Piano Notes\r\n\r\nThis is the same piano from the last level, but there are some bugs!\r\n\r\n## Do This\r\n\r\n1) Edit the code so that all keys are using a [`buzzer.note()`(#f78183)](/docs/applab/buzzer.note/) block to play the corresponding note.\r\n2) Make sure that all the values passed in to [`buzzer.note()`(#f78183)](/docs/applab/buzzer.note/) are notes, and not frequencies.\r\n\t- _Hint: Remember to put quotes around the notes! e.g [`buzzer.note(\"A4\", 100)`(#f78183)](/docs/applab/buzzer.note/)_\r\n\r\nNote: This level starts in text mode because of some of the bugs! As you debug, you can check your work by trying to convert back to block mode and see if it works correctly.\r\n",
     "code_functions": {
       "onEvent": null,
@@ -56,7 +57,8 @@
     "parent_level_id": 20524,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/producing-output"
+      "/courses/csd-2022/guides/producing-output",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/playing-notes",
     "mini_rubric": "false",
@@ -67,9 +69,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.486+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB1_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.486+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB1_2222\"},{\"changed_at\":\"2023-08-16 19:33:08 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
