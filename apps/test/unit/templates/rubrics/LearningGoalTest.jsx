@@ -103,7 +103,7 @@ describe('LearningGoal', () => {
 
     const wrapper = shallow(
       <LearningGoal
-        learningGoal={{key: 'key', learningGoal: 'Testing'}}
+        learningGoal={{key: 'key', learningGoal: 'Testing', evidenceLevels: []}}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
