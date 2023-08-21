@@ -39,11 +39,19 @@
 }
 
 .mc-h1-second-box {
-  margin-top: 30px;
+  margin-top: 0;
+  font-family: var(--gotham-bold);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
 .mc-h1-half-box {
-  margin-top: 8px;
+  margin-top: 0;
+  font-family: var(--gotham-bold);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
 .img-container-wide .mc-h1-second-box {
