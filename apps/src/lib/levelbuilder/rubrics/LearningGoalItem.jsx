@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { nominalTypeHack } from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
@@ -30,7 +30,8 @@ export default function LearningGoalItem({deleteItem}) {
                 />
               </label>
             </div>
-            <label style={styles.labelAndInput}>
+            <label 
+              style={styles.labelAndInput}>
               Use AI to assess
               <input
                 type="checkbox"
@@ -38,6 +39,12 @@ export default function LearningGoalItem({deleteItem}) {
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
               />
+              <span
+                style={aiEnabled ? (styles.checkboxChecked) : (styles.checkboxBlank)}
+                aria-hidden="true"
+              >
+                &#10003;
+              </span>
             </label>
           </div>
         </div>
@@ -85,7 +92,37 @@ const styles = {
     marginBottom: 20,
   },
   checkbox: {
-    marginLeft: 7,
+    opacity: 0,
+    position: 'absolute',
+  },
+  checkboxChecked: {
+    background: color.cyan,
+    color: color.white,
+    fontSize: 18,
+    textAlign: 'center',
+    fontStyle: 'bold',
+    borderColor: color.white,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 2,
+    color: color.white,
+    margin: 5,
+    width: 20,
+    height: 20,
+  },
+  checkboxBlank: {
+    background: color.white,
+    color: color.white,
+    fontSize: 18,
+    textAlign: 'center',
+    fontStyle: 'bold',
+    borderColor: color.black,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 2,
+    margin: 5,
+    width: 20,
+    height: 20,
   },
   label: {
     fontSize: 18,
