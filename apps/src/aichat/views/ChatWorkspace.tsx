@@ -37,10 +37,12 @@ const ChatWorkspace: React.FunctionComponent = () => {
         ? 1
         : storedMessages[storedMessages.length - 1].id + 1;
 
-    // TODO: Post user message with status unknown while message is being sent to backend.
+    // TODO: Ask product about how to display user message with status unknown while message is being sent to backend.
     setNewUserMessage(message);
     // TODO: Filter inappropriate and too personal messages.
-    const appropriateChatMessages = [...storedMessages];
+    const appropriateChatMessages = storedMessages.filter(
+      msg => msg.status === Status.OK
+    );
 
     // Send user message to backend and retrieve assistant response.
     const chatApiResponse = await getChatCompletionMessage(
