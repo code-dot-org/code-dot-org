@@ -578,6 +578,16 @@ class UserTest < ActiveSupport::TestCase
     user.reload
     assert_equal user.name, 'test name'
     assert_equal user.family_name, 'test fam name'
+
+    user.name = '  test name 2  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name 2'
+
+    user.family_name = '  test fam name 2  '
+    user.save
+    user.reload
+    assert_equal user.family_name, 'test fam name 2'
   end
 
   test "can create a user with age" do
