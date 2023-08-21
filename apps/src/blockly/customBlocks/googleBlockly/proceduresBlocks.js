@@ -94,10 +94,21 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  const procedure = this.getSourceBlock().getProcedureModel();
-  if (procedure) {
-    Blockly.functionEditor.showForFunction(procedure);
+  // Eventually, this will be where we create a modal function editor.
+  // For now, just find the function definition block and select it.
+  const workspace = this.getSourceBlock().workspace;
+  const name = this.getSourceBlock().getFieldValue('NAME');
+  const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
+  if (definition) {
+    workspace.centerOnBlock(definition.id);
+    definition.select();
   }
+
+  // TODO: When we are ready, this is how we can open the modal function editor.
+  // const procedure = this.getSourceBlock().getProcedureModel();
+  // if (procedure) {
+  //   Blockly.functionEditor.showForFunction(procedure);
+  // }
 };
 
 // This extension adds an edit button to the end of a procedure call block.

@@ -674,9 +674,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     if (options.useModalFunctionEditor) {
       blocklyWrapper.functionEditor = new FunctionEditor();
-      // TODO: Is this the best place to call the init function
-      // (and is using the init function) reasonable for the modal function editor?
-      blocklyWrapper.functionEditor.init(procedureWorkspace, opt_options);
+      // TODO: To use the modal function editor, uncomment this init function.
+      // The modal function editor is currently a work in progress so we are leaving
+      // it commented out.
+      // blocklyWrapper.functionEditor.init(procedureWorkspace, opt_options);
     }
 
     return workspace;
