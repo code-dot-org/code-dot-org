@@ -110,6 +110,19 @@
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
 
+  SQLUserWriter: <%= lambda_fn 'SQLUser',
+    db_server_name: '',
+    db_admin_username: '',
+    db_admin_password: '',
+    username: '',
+    user_host: '%',
+    password: '',
+    database_list: [],
+    permissions: []
+  %>
+
+
+
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
