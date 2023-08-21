@@ -34,10 +34,6 @@ const aichatSlice = createSlice({
   },
 });
 
-// TODO: If/when a top-level component is created that wraps {@link AichatView}, then
-// registering reducers should happen there. We are registering reducers here for now
-// because MusicView is currently the top-level entrypoint into Music Lab and also needs
-// to be connected to this state.
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   setNewUserMessage,
