@@ -119,6 +119,7 @@ var currentSources = {
   selectedPoem: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
+  procedureSource: null,
 };
 
 /**
@@ -146,6 +147,7 @@ function unpackSources(data) {
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
+    procedureSource: data.procedureSource,
   };
 }
 
@@ -721,6 +723,11 @@ var projects = (module.exports = {
         if (current) {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
+          }
+          if (currentSources.procedureSource) {
+            sourceHandler.setInitialProcedureSource(
+              currentSources.procedureSource
+            );
           }
         } else {
           this.setName('My Project');
@@ -1320,6 +1327,7 @@ var projects = (module.exports = {
             this.sourceHandler.inRestrictedShareMode();
           const teacherHasConfirmedUploadWarning =
             this.sourceHandler.teacherHasConfirmedUploadWarning();
+          const procedureSource = this.sourceHandler.getProcedureSource();
           callback({
             source,
             html,
@@ -1330,6 +1338,7 @@ var projects = (module.exports = {
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,
+            procedureSource,
           });
         })
         .catch(error => callback({error}))

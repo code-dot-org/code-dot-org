@@ -339,6 +339,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return '';
   };
 
+  // CDO Blockly does not have a concept of a procedure workspace,
+  // so we return undefined here.
+  blocklyWrapper.getProcedureWorkspace = () => {
+    return undefined;
+  };
+
   return blocklyWrapper;
 }
 

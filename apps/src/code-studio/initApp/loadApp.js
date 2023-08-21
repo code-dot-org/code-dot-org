@@ -460,6 +460,9 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInitialProcedureSource(procedureSource) {
+    getAppOptions().level.procedureSource = procedureSource;
+  },
   setInRestrictedShareMode(inRestrictedShareMode) {
     getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
   },
@@ -512,6 +515,14 @@ const sourceHandler = {
       return prepareForRemix();
     }
     return Promise.resolve(); // Return an insta-resolved promise.
+  },
+  // Get the source from the procedure workspace, if any. Otherwise return null.
+  // Procedures will only exist for Google Blockly levels.
+  getProcedureSource() {
+    if (window.Blockly && Blockly.getProcedureWorkspace()) {
+      return Blockly.cdoUtils.getCode(Blockly.getProcedureWorkspace(), true);
+    }
+    return null;
   },
 };
 

@@ -1248,6 +1248,20 @@ StudioApp.prototype.loadBlocks = function (source) {
 };
 
 /**
+ * Load the editor with blocks.
+ * @param {string} source Text representation of blocks (XML or JSON).
+ */
+StudioApp.prototype.loadProcedureBlocks = function (source) {
+  if (Blockly.getProcedureWorkspace() && source) {
+    console.log('loading procedure blocks...');
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      Blockly.getProcedureWorkspace(),
+      source
+    );
+  }
+};
+
+/**
  * Applies the specified arrangement to top startBlocks. If any
  * individual blocks have x or y properties set in the XML, those values
  * take priority. If no arrangement for a particular block type is
@@ -2764,6 +2778,8 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   }
   try {
     this.loadBlocks(startBlocks);
+    console.log('attempting to load procedure blocks...');
+    this.loadProcedureBlocks(config.level.procedureBlocks);
   } catch (e) {
     if (loadLastAttempt) {
       try {
