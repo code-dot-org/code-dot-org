@@ -1,4 +1,5 @@
-/* Variables are duplicated from shared/css/color.scss */
+/* Variables are duplicated from shared/css/color.scss
+  and shared/css/typography.scss */
 :root {
   --brand_primary_light: #ABDFE5;
   --brand_primary_default: #009EB0;
@@ -24,6 +25,7 @@
 
 html {
   height: 100%;
+  font-size: 100%;
 }
 
 body {
