@@ -384,6 +384,8 @@ en:
               name: Music
             lesson-50:
               name: AI Chat
+            lesson-51:
+              name: AI Rubrics
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
