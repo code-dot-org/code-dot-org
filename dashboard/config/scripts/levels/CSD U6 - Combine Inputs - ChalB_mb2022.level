@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:49:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -101,23 +106,19 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
     ],
     "display_name": "Motorcycle Movement",
     "thumbnail_url": "https://images.code.org/3f3c1010a959a4503137b0fc5e613c20-image-1648843153015.8.b-preview.gif",
     "bubble_choice_description": "Create an app that moves a motorcycle left and right on the screen using the micro:bit buttons",
     "start_blocks": "// Move the motorcycle left when the A button is clicked\r\nonBoardEvent(buttonA, \"press\", function() {\r\n  var motorX = getProperty(\"motorcycle\", \"x\");\r\n  motorX = motorX - 10;\r\n  setProperty(\"motorcycle\", \"x\", motorX);\r\n});\r\n\r\n// Move the motorcycle right when B button is clicked\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-motorcycle\" id=\"motorcycle\" style=\"height: 100px; width: 100px; position: absolute; top: 175px; margin: 0px; left: 105px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#ff0000\" data-image-type=\"icon\"></div></div>",
-    "preload_asset_list": null,
-    "encrypted_examples": "exQINY9UQkkBiZY7qV3F1dofKFEKdzcPaon/ZREdTB0zhH1V9GvMulxJcPQS\nQJU+CJMX5UPGYuvlvAZIAUZ7wg==\n"
+    "encrypted_examples": "exQINY9UQkkBiZY7qV3F1dofKFEKdzcPaon/ZREdTB0zhH1V9GvMulxJcPQS\nQJU+CJMX5UPGYuvlvAZIAUZ7wg==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:49:03.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:03.635+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"},{\"changed_at\":\"2023-02-08 22:43:58 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:54:21 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:03.635+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalB_2222\"},{\"changed_at\":\"2023-02-08 22:43:58 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:54:21 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:06:45 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

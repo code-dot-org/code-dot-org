@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:26:39.000Z",
   "level_num": "custom",
@@ -84,7 +85,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 27448,
     "encrypted": "false",
     "mini_rubric": "false",
@@ -104,12 +104,13 @@
     "ai_model_id": "j5MH8AtyV1sw",
     "ai_model_name": "Pet Recommender",
     "name_suffix": "_2023",
-    "start_blocks": "<xml></xml>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:26:39.070+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-import project template_2022\\\"\"],\"cloned_from\":\"ml-models in applab-import project template_2022\"},{\"changed_at\":\"2023-08-03 18:22:37 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:26:39.070+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-import project template_2022\\\"\"],\"cloned_from\":\"ml-models in applab-import project template_2022\"},{\"changed_at\":\"2023-08-03 18:22:37 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 14:37:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
