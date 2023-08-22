@@ -71,7 +71,7 @@ class I18nScriptUtilsTest < Minitest::Test
     Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).in_sequence(exec_seq).returns([expected_unit_i18n_filepath2])
     I18nScriptUtils.expects(:log_error).with(
       'Destination directory for unit is attempting to change',
-      'Unit expected wants to output strings to 1/expected_unit_i18n.json, but 2/expected_unit_i18n.json already exists'
+      'Unit expected_unit_i18n wants to output strings to 1/expected_unit_i18n.json, but 2/expected_unit_i18n.json already exists'
     ).in_sequence(exec_seq)
 
     assert I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath1)
