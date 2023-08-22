@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:43.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -92,7 +97,6 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 20px; padding: 2px 15px; width: 320px; height: 80px; position: absolute; left: 2.22045e-16px; top: 125px; text-align: center;\" id=\"statusLabel\">Wheels Are Aligned</label></div></div>",
     "bubble_choice_description": "Create an app that simulates the sensor in cars and trucks that detects if the wheels are aligned and warns about flat tires",
     "start_blocks": "//1) Create an event to continuously check the accelerometer\r\n\r\n//2) Get the `roll` property of the accelerometer and store it in a variable\r\n\r\n//3) If the micro:bit is tilted to the left: display \"Check left side tires\" on the screen\r\n\r\n//4) If the micro:bit is tilted to the right: display \"Check right side tires\" on the screen",
-    "preload_asset_list": null,
     "encrypted_examples": "e+a8UEyim9qQVd1onbE3O+OwX/aCQCTIxxK55P+VuZy9wvB+7vm3qY7xnsjF\n5o5A5YOe7W7m1jXnwZSCI9UCEw==\n",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
@@ -107,16 +111,13 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
-    ]
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:43.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:43.595+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalC_2222\"},{\"changed_at\":\"2023-02-10 21:06:39 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:43.595+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalC_2222\"},{\"changed_at\":\"2023-02-10 21:06:39 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:12:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

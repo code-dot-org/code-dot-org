@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:49:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -99,23 +104,19 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
     ],
     "display_name": "LED Mood Ring",
     "thumbnail_url": "https://images.code.org/614397ffb356db0b0df85b7dcf77e020-image-1650060225659.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; padding: 2px 15px; width: 320px; height: 45px; position: absolute; left: 0px; top: 0px; text-align: center;\" id=\"titleLabel\">Mood Ring</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; padding: 2px 15px; width: 320px; height: 60px; position: absolute; left: 0px; top: 45px; text-align: center;\" id=\"descriptionLabel\">Choose your mood from the dropdown below and the LED ring will update to reflect it</label><select id=\"moodDropdown\" style=\"width: 200px; height: 30px; margin: 0px; border-style: solid; background-color: rgb(255, 255, 255); color: rgb(77, 87, 95); background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%234d575f%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E&quot;); border-color: rgb(0, 0, 0); border-radius: 4px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 0px 30px 0px 15px; position: absolute; left: 65px; top: 140px;\"><option>Excited</option><option>Relaxed</option><option>(Add your mood here)</option><option>(Add your mood here)</option></select></div></div>",
     "start_blocks": "onEvent(\"moodDropdown\", \"change\", function() {\r\n  //Add your code here\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create an app prototype that simulates a Mood Ring, which changes the design of the LEDs based on the mood of the user",
-    "preload_asset_list": null,
-    "encrypted_examples": "N0p+H/i4cltEiAwO0WSuiytKI/7fLqCjoYg9fScZ3Fli6i7qG316gsZDdvrc\nRRJM+w2gGGgSp+OZBfXhB7Vt6A==\n"
+    "encrypted_examples": "N0p+H/i4cltEiAwO0WSuiytKI/7fLqCjoYg9fScZ3Fli6i7qG316gsZDdvrc\nRRJM+w2gGGgSp+OZBfXhB7Vt6A==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:49:03.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:03.460+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"},{\"changed_at\":\"2023-02-08 22:40:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:54:16 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:03.460+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2222\"},{\"changed_at\":\"2023-02-08 22:40:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:54:16 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:06:39 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
