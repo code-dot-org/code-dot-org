@@ -9,7 +9,6 @@ export interface AichatState {
   // Messages will be logged and stored.
   chatMessages: ChatCompletionMessage[];
   // New user message that is submitted via the user chat message editor.
-  // TODO: Decide how to display user message with status unknown while message is being sent to backend.
   newUserMessage: string;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
