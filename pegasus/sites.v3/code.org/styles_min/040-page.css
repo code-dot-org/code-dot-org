@@ -1,4 +1,9 @@
-/* Uses color and typography variables from 050-theme.css */
+/* Uses color and typography variables from 050-theme.css
+
+  — See shared/css/typography.scss for more info on how the rebrand
+    styles are used here.
+*/
+
 
 /* for homepage 2.0.. */
 #homepage .clear {
