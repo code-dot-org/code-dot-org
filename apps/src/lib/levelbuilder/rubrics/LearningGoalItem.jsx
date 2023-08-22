@@ -44,8 +44,8 @@ export default function LearningGoalItem({deleteItem}) {
                 style={
                   aiEnabled ? styles.checkboxChecked : styles.checkboxBlank
                 }
-                aria-hidden="true" 
-              > 
+                aria-hidden="true"
+              >
                 &#10003; {/* Checkmark HTML code */}
               </span>
             </label>
