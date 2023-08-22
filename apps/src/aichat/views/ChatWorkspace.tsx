@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
@@ -12,13 +12,16 @@ import {
   setIsWaitingForChatResponse,
   setNewUserMessage,
   addChatMessage,
+  setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent = () => {
-  const [showWarningModal, setShowWarningModal] = useState(true);
+  const showWarningModal = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.showWarningModal
+  );
 
   const storedMessages = useSelector(
     (state: {aichat: AichatState}) => state.aichat.chatMessages
@@ -27,8 +30,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
-    () => setShowWarningModal(false),
-    [setShowWarningModal]
+    () => dispatch(setShowWarningModal(false)),
+    [dispatch]
   );
 
   // This function is called when the user submits a chat message.
