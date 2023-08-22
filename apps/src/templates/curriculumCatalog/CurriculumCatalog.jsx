@@ -24,6 +24,7 @@ const CurriculumCatalog = ({
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
 
   const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
@@ -46,6 +47,10 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
+  };
+
+  const handleExpandedCardChange = key => {
+    setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -113,6 +118,8 @@ const CurriculumCatalog = ({
                   selfPacedPlCourseOfferingPath={
                     self_paced_pl_course_offering_path
                   }
+                  isExpanded={expandedCardKey === key}
+                  onQuickViewClick={() => handleExpandedCardChange(key)}
                   {...props}
                 />
               )

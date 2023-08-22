@@ -87,8 +87,6 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
-            // TODO: Add prop types for this field
-            // eslint-disable-next-line react/prop-types
             navigateToHref(initialProgrammingExpression.showPath);
           } else {
             setLastUpdated(Date.now());
@@ -277,8 +275,6 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        // TODO: define initialProgrammingExpression.showPath in prop types
-        // eslint-disable-next-line react/prop-types
         handleView={() => navigateToHref(initialProgrammingExpression.showPath)}
       />
     </div>
@@ -298,6 +294,7 @@ const programmingExpressionShape = PropTypes.shape({
   tips: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
   examples: PropTypes.arrayOf(PropTypes.object).isRequired,
+  showPath: PropTypes.string,
 });
 
 ProgrammingExpressionEditor.propTypes = {

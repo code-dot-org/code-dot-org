@@ -153,6 +153,7 @@ sq:
         MazeStep: Forma e Fazës Labirinth
         Multi: Lojërat me alternativa
         NetSim: Imitues Interneti
+        Spritelab: Sprite Lab
         StudioEC: Play Lab
         TextMatch: Përshtatja e Tekstit
         Unplug1: Hyrje në Shkencë Kompjuterike
@@ -726,6 +727,7 @@ sq:
         C4_variables_artist: Variablat - Artist
         C4_variables_playlab: Variablat - Play Lab
         CDEF_Video_SpritesInAction: Sprites në veprim
+        CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
         CSF_debugging_k1_blocks: Rregullimi
@@ -787,6 +789,7 @@ sq:
         mc_if_statements: Minecraft-kushti if
         mc_intro: Minecraft-Prezantimi
         mc_repeat: Minecraft- Përsërit
+        oceans_machine_learning: Mësimi i Makinave
         parameters: Funksionet me parametra
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab

@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:53:20.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -87,20 +92,16 @@
     "display_name": "Whack-A-Mole",
     "bubble_choice_description": "Create an app that simulates a whack-a-mole game, where you press 3 external buttons to earn points",
     "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
-    "preload_asset_list": null,
     "encrypted_examples": "EE0T+EXNpW8O65CujphlKB0+sGBpH9kY61z5xsOO624xHtmeDNjbLCt+NyXw\nW+1cAx5zSZ5BBWPxqkfe5r4G3w==\n",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-circuits-buttons",
-      "/courses/csd-2022/guides/board-events"
-    ]
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:53:20.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:20.053+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PA_2222\"},{\"changed_at\":\"2023-02-22 03:05:40 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"map_reference\",\"start_blocks\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:39:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:59:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:20.053+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PA_2222\"},{\"changed_at\":\"2023-02-22 03:05:40 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"map_reference\",\"start_blocks\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:39:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:59:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:19:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
