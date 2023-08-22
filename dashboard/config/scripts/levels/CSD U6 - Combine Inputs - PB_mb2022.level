@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-08T21:41:22.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -85,7 +90,6 @@
     "display_name": "Quiz Question",
     "bubble_choice_description": "Use a dropdown and the ledScreen to create a quiz question game",
     "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
-    "preload_asset_list": null,
     "encrypted_examples": "0BzDXMmSpSJyCw8x5sWKjqhmggkdCT7McBn1dghiT7RiSKcvcfcP1JtXWWH4\nkH86r4GGT7AHsPRXq31eukgutQ==\n",
     "reference_links": [
       "/courses/csd-2022/guides/if-statements-2",
@@ -94,16 +98,13 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
-    ]
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-08T21:41:22.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-08T21:41:22.416+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PA_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PA_mb2022\"},{\"changed_at\":\"2023-02-08 22:03:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"callout_json\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-08 22:06:53 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:41:08 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:42:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-08T21:41:22.416+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PA_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PA_mb2022\"},{\"changed_at\":\"2023-02-08 22:03:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"callout_json\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-08 22:06:53 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:41:08 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:42:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:06:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

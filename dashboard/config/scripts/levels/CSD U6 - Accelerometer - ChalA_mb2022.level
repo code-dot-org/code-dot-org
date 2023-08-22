@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:43.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -92,7 +97,6 @@
     "start_blocks": "var pitch;\r\nvar roll;\r\nonBoardEvent(accelerometer, \"data\", function() {\r\n  pitch = accelerometer.getOrientation(\"pitch\");\r\n  roll = accelerometer.getOrientation(\"roll\");\r\n  setText(\"pitchLabel\", pitch);\r\n  setText(\"rollLabel\", roll);\r\n});\r\n\r\n//1) Create an event to check when the left button is pressed\r\n//2) If the micro:bit is facing away from the user: turn on all of the LEDs\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 99px; height: 40px; position: absolute; left: 35px; top: 100px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"pitchTitle\">pitch:</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; height: 40px; position: absolute; left: 140px; top: 175px; width: 150px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"rollLabel\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 150px; height: 40px; position: absolute; left: 145px; top: 100px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"pitchLabel\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 67px; height: 40px; position: absolute; left: 60px; top: 175px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"rollTitle\">roll:</label></div></div>",
     "bubble_choice_description": "Create an app that uses the accelerometer to simulate a safety sensor on construction equipment",
-    "preload_asset_list": null,
     "encrypted_examples": "RlUpPZGTOX6mT/mDo5i8Fz0+TuUs4xUw5nop8mdyifZqx77exFLsYDPu56ux\n9/vfTaE74N1DLvKBI/mxwLtvdA==\n",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
@@ -107,16 +111,13 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
-    ]
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:43.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:43.413+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalA_2222\"},{\"changed_at\":\"2023-02-10 20:58:04 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:27 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:43.413+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalA_2222\"},{\"changed_at\":\"2023-02-10 20:58:04 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:27 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:45:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:12:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
