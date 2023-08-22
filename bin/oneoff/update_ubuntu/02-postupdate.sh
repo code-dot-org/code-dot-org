@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-	echo "Not running as root"
-	exit
+  echo "Not running as root"
+  exit
 fi
 
 # Rerun chef build; this is at the very minimum required to resolve the "Can't
