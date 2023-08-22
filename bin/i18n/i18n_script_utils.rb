@@ -270,7 +270,7 @@ class I18nScriptUtils
   #
   # Example:
   #   If `course_version` of the script (unit) `csd1` was changed from `2017` to `2023`,
-  #   the new script file `i18n/locales/source/curriculum_content/2023/csd/csd1.json` will not be created
+  #   the new script file `i18n/locales/source/curriculum_content/2023/csd/csd1.json` should not be created
   #   until the previous scrip file `i18n/locales/source/curriculum_content/2017/csd/csd1.json` is synced-out
   #
   # Note we could try here to remove the old version of the file both from the
