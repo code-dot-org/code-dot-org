@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -89,10 +94,6 @@
     "display_name": "Environmental App",
     "thumbnail_url": "https://images.code.org/7f8fca3bef40cd07285bdab6b8858b1a-mb-Challenge.png",
     "bubble_choice_description": "Create an app prototype that could be used in an environmental or ecology setting to monitor plants or animals in an environment",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/courses/csd-2022/guides/microbit-sensors",
       "/courses/csd-2022/guides/data-and-change-events",
@@ -100,16 +101,16 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:01.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.982+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalD_2222\"},{\"changed_at\":\"2023-02-09 22:52:36 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.982+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - ChalD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - ChalD_2222\"},{\"changed_at\":\"2023-02-09 22:52:36 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:10:31 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

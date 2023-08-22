@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:53:18.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -52,19 +57,15 @@
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Physical Input - SB Template_mb2022",
     "encrypted_examples": "uChyVfFF3dGK4BD3yhhxMJXK9Fg/S2LE3QBa6+D64u3GuVNd6ZDWJIYJlZQ7\nKjacG/6IzV7LRl5pymTkcxF+wA==\n",
-    "preload_asset_list": null,
     "reference_links": [
       "/courses/csd-2022/guides/microbit-circuits-buttons",
-      "/courses/csd-2022/guides/board-events"
-    ]
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:53:18.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:18.491+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB2_2222\"},{\"changed_at\":\"2023-02-22 02:17:01 +0000\",\"changed\":[\"makerlab_enabled\",\"text_mode_at_start\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:21:52 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"map_reference\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:26:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:39:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 16:35:08 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:29:20 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:18.491+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB2_2222\"},{\"changed_at\":\"2023-02-22 02:17:01 +0000\",\"changed\":[\"makerlab_enabled\",\"text_mode_at_start\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:21:52 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"map_reference\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:26:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:39:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 16:35:08 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:29:20 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:19:10 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
