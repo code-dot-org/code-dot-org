@@ -1,21 +1,8 @@
 import GoogleBlockly from 'blockly/core';
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
-
-// Move blocks of the specified types to the front of the list. Used by load()
-function partitionBlocksByType(blockStates, prioritizedBlockTypes) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blockStates.forEach(block => {
-    prioritizedBlockTypes.includes(block.type)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
-}
 
 export default class CdoBlockSerializer extends GoogleBlockly.serialization
   .blocks.BlockSerializer {

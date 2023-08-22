@@ -210,3 +210,25 @@ export function registerCustomProcedureBlocks() {
   unregisterProcedureBlocks();
   Blockly.common.defineBlocks(procedureBlocks);
 }
+
+/**
+ * Partitions blocks of the specified types to the front of the list.
+ *
+ * @param {Element[]} blockElements - An array of block elements to be partitioned.
+ * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
+ *    These types are moved to the front of the list while otherwise maintaining order.
+ * @returns {Element[]} A new array of block elements partitioned based on their types.
+ */
+export function partitionBlocksByType(blockElements, prioritizedBlockTypes) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blockElements.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
+}
