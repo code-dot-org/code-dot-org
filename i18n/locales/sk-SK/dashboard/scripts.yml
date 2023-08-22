@@ -349,6 +349,8 @@ sk:
           description_short: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
+        flappy-impact-study:
+          title: Flappy kód s prieskumom
         coursea-draft:
           title: 'Základy informatiky: Kurz A'
         courseb-draft:

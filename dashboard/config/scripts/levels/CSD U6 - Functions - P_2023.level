@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:18:03.000Z",
   "level_num": "custom",
@@ -47,7 +48,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20571,
     "name_suffix": "_2023",
     "encrypted": "false",
@@ -59,11 +60,16 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"homeScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 28px; padding: 2px 15px; width: 320px; height: 60px; position: absolute; left: 0px; top: 0px;\" id=\"titleLabel\">Happiness Tracker</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 16px; padding: 2px 15px; width: 320px; height: 105px; position: absolute; left: 0px; top: 65px; text-align: center;\" id=\"directionsLabel\">Press the buttons on your circuit playground to track how you're feeling. Based on your happiness value, the screen will change to reflect how you feel</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgb(244, 203, 104); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 18px; padding: 2px 15px; width: 210px; height: 235px; position: absolute; left: 55px; top: 185px; text-align: center;\" id=\"happinessLabel\">Current Happiness Value</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; padding: 2px 15px; width: 210px; height: 70px; position: absolute; left: 55px; top: 235px; font-size: 70px; text-align: center;\" id=\"valueLabel\">0</label><img data-canonical-image-url=\"icon://fa-meh-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"emojiIcon\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 110px; top: 310px; margin: 0px;\"></div></div>",
     "start_blocks": "var happinessValue = 0;\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  happinessValue = happinessValue - 1;\r\n  updateScreen();\r\n});\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  happinessValue = happinessValue + 1;\r\n  updateScreen();\r\n});\r\nfunction updateScreen() {\r\n  setText(\"valueLabel\", happinessValue);\r\n  if (happinessValue >= 5) {\r\n    setProperty(\"emojiIcon\", \"image\", \"icon://fa-smile-o\");\r\n  }\r\n  if (happinessValue < 5) {\r\n    setProperty(\"emojiIcon\", \"image\", \"icon://fa-meh-o\");\r\n  }\r\n  if (happinessValue <= -5) {\r\n    setProperty(\"emojiIcon\", \"image\", \"icon://fa-frown-o\");\r\n  }\r\n}\r\n",
     "teacher_markdown": "Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\r\n\r\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:02.994+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:18:02.994+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P_2222\"},{\"changed_at\":\"2023-08-16 19:36:15 +0000\",\"changed\":[\"makerlab_enabled\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

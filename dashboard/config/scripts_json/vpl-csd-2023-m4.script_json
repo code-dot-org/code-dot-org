@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:10:23 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-18 03:56:23 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -135,6 +135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 Overview_2023"
+        ],
         "progression": "Module 4 Overview"
       },
       "bonus": false,
@@ -157,6 +160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - CI_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -179,6 +185,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - CI2_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -201,6 +210,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L4 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -223,6 +235,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -245,6 +260,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L8 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -267,6 +285,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - L12 GoalsTasks_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -289,6 +310,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 Video Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -311,6 +335,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module - U4L12Level3_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -333,6 +360,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level4_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -355,6 +385,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level5_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -377,6 +410,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level6_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -399,6 +435,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L12 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -421,6 +460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - Conclusions and Connections_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -443,6 +485,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U4 Chapter 1 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -465,6 +510,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - L13 LInkingScreens_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -487,6 +535,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U4 Chapter 2 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -509,6 +560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 Wrap Up_2023"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
