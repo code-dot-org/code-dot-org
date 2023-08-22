@@ -7,7 +7,6 @@ class RegistrationsController < Devise::RegistrationsController
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
-  skip_before_action :assert_child_account_policy, only: [:set_age]
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
