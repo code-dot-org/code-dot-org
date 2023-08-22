@@ -75,6 +75,12 @@ const EVENTS = {
     'Show Only Translated Curriculums Toggled',
   CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT:
     'No Available Curriculums Message Shown',
+
+  // Rubrics
+  RUBRIC_OPENED_FROM_FAB_EVENT: 'Rubric Opened From FAB',
+  RUBRIC_CLOSED_FROM_FAB_EVENT: 'Rubric Closed From FAB',
+  RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'Rubric Learning Goal Expanded',
+  RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'Rubric Learning Goal Collapsed',
 };
 
 export {EVENTS};

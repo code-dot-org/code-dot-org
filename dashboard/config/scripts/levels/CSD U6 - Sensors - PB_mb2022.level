@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:50:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -93,7 +98,6 @@
     "display_name": "Interactive Birthday Card",
     "bubble_choice_description": "Use the temperature sensor to detect when someone blows out the candles of a card",
     "thumbnail_url": "https://images.code.org/a4c512a9fff8dbf6d75995a1b26f7115-image-1648852629293.png",
-    "preload_asset_list": null,
     "encrypted_examples": "xP1okNGuCNRWCFtwrvn4O7XTVNjfmaqf2vreDIebxrBbOhbATUlxSq3tNJ1O\nF8NACF3TqkEIw6jV/aqkmTtZBQ==\n",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-sensors",
@@ -102,16 +106,13 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
-    ]
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:50:59.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:59.822+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PB_2222\"},{\"changed_at\":\"2023-02-09 22:11:47 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_html\",\"start_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:33:28 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:59.822+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PB_2222\"},{\"changed_at\":\"2023-02-09 22:11:47 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_html\",\"start_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:33:28 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:09:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
