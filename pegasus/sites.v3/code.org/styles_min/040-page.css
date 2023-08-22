@@ -97,11 +97,9 @@ figcaption {
   line-height: 1.64;
 }
 
-p a {
-  font-family: var(--gotham-bold);
-}
-
+a,
 a:link {
+  font-family: var(--gotham-bold);
   color: var(--brand_secondary_default);
   text-decoration: underline;
   transition: color ease-in-out .2s;
@@ -111,12 +109,12 @@ a:visited {
   color: var(--brand_secondary_default);
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: var(--brand_secondary_dark);
 }
 
-a:link:has(i),
-a:link:has(span) {
+a:link:has(*) {
   text-decoration: none;
 }
 
@@ -354,6 +352,10 @@ label {
   font-weight: normal;
 }
 
+figcaption,
 .video_caption_link {
-  font-family: var(--gotham-regular);
+  font-family: var(--gotham-bold);
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.64;
 }
