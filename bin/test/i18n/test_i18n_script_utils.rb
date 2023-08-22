@@ -63,26 +63,28 @@ class I18nScriptUtilsTest < Minitest::Test
   def test_unit_directory_changing
     exec_seq = sequence('execution')
 
-    expected_file_name = 'expected.json'
-    expected_file1_path = CDO.dir('i18n/locales/source/course_content/1/expected.json')
-    expected_file2_path = CDO.dir('i18n/locales/source/course_content/2/expected.json')
+    expected_i18n_dir   = CDO.dir('i18n/locales/source/expected_i18n_dir')
+    expected_file_name  = 'expected.json'
+    expected_file1_path = CDO.dir('i18n/locales/source/expected_i18n_dir/1/expected.json')
+    expected_file2_path = CDO.dir('i18n/locales/source/expected_i18n_dir/2/expected.json')
 
-    Dir.expects(:glob).with(CDO.dir('i18n/locales/source/course_content/**/expected.json')).in_sequence(exec_seq).returns([expected_file2_path])
+    Dir.expects(:glob).with(File.join(expected_i18n_dir, '**', expected_file_name)).in_sequence(exec_seq).returns([expected_file2_path])
     I18nScriptUtils.expects(:log_error).with(
       'Destination directory for script is attempting to change',
       'Script expected wants to output strings to 1/expected.json, but 2/expected.json already exists'
     ).in_sequence(exec_seq)
 
-    assert I18nScriptUtils.unit_directory_change?(expected_file_name, expected_file1_path)
+    assert I18nScriptUtils.unit_directory_change?(expected_i18n_dir, expected_file_name, expected_file1_path)
   end
 
   def test_unit_directory_changing_when_no_matching_files
+    expected_i18n_dir  = CDO.dir('i18n/locales/source/expected_i18n_dir')
     expected_file_name = 'expected.json'
-    expected_file_path = 'i18n/locales/source/course_content/expected.json'
+    expected_file_path = CDO.dir('i18n/locales/source/expected_i18n_dir/expected.json')
 
-    Dir.expects(:glob).with(CDO.dir('i18n/locales/source/course_content/**/expected.json')).once.returns([expected_file_path])
+    Dir.expects(:glob).with(File.join(expected_i18n_dir, '**', expected_file_name)).once.returns([expected_file_path])
 
-    refute I18nScriptUtils.unit_directory_change?(expected_file_name, expected_file_path)
+    refute I18nScriptUtils.unit_directory_change?(expected_i18n_dir, expected_file_name, expected_file_path)
   end
 
   def test_yml_file_fixing
