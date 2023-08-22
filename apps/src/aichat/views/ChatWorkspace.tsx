@@ -1,13 +1,14 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import {ChatCompletionMessage, Status, Role} from '../types';
-import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
+  AichatState,
   setIsWaitingForChatResponse,
   setNewUserMessage,
   addChatMessage,
@@ -18,8 +19,10 @@ import {
  */
 const ChatWorkspace: React.FunctionComponent = () => {
   const [showWarningModal, setShowWarningModal] = useState(true);
-  const [storedMessages, setStoredMessages] =
-    useState<ChatCompletionMessage[]>(initialChatMessages);
+
+  const storedMessages = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.chatMessages
+  );
 
   const dispatch = useAppDispatch();
 
@@ -38,7 +41,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         : storedMessages[storedMessages.length - 1].id + 1;
 
     // TODO: Ask product about how to display user message with status unknown while message is being sent to backend.
-    setNewUserMessage(message);
+    dispatch(setNewUserMessage(message));
     // TODO: Filter inappropriate and too personal messages.
     const appropriateChatMessages = storedMessages.filter(
       msg => msg.status === Status.OK
@@ -54,15 +57,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
     dispatch(setIsWaitingForChatResponse(false));
 
     // Add user chat messages to newMessages.
-    let newMessages: ChatCompletionMessage[] = [
-      {
-        id: chatApiResponse.id,
-        role: Role.USER,
-        status: chatApiResponse.status,
-        chatMessageText: message,
-      },
-    ];
-    addChatMessage(newMessages[0]);
+    const newMessage: ChatCompletionMessage = {
+      id: chatApiResponse.id,
+      role: Role.USER,
+      status: chatApiResponse.status,
+      chatMessageText: message,
+    };
+    dispatch(addChatMessage(newMessage));
 
     // Add assistant chat messages to newMessages.
     if (chatApiResponse.assistantResponse) {
@@ -72,10 +73,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
         status: Status.OK,
         chatMessageText: chatApiResponse.assistantResponse,
       };
-      newMessages = [...newMessages, assistantChatMessage];
-      addChatMessage(assistantChatMessage);
+      dispatch(addChatMessage(assistantChatMessage));
     }
-    setStoredMessages([...storedMessages, ...newMessages]);
   };
 
   return (

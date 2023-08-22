@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {ChatCompletionMessage} from '../types';
+import {initialChatMessages} from '../constants';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -16,7 +17,7 @@ export interface AichatState {
 
 const initialState: AichatState = {
   newUserMessage: '',
-  chatMessages: [],
+  chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
 };
 
