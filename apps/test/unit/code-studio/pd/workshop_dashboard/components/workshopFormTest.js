@@ -81,7 +81,6 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    console.log('PUBLISH START');
     const onPublish = sinon.spy();
 
     const wrapper = mount(
@@ -138,7 +137,7 @@ describe('WorkshopForm test', () => {
     server.respondWith('PATCH', `/api/v1/pd/workshops/${fakeWorkshop.id}`, [
       200,
       {'Content-Type': 'application/json'},
-      '',
+      JSON.stringify({}),
     ]);
     const onSave = sinon.spy();
 
@@ -169,7 +168,6 @@ describe('WorkshopForm test', () => {
     saveButton.simulate('click');
 
     server.respond();
-    wrapper.update();
 
     expect(onSave).to.have.been.calledOnce;
     expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
