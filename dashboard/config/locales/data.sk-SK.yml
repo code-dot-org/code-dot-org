@@ -959,6 +959,7 @@ sk:
         frozen_intro: Úvod do Hodiny Kódu
         frozen_loops: Úvod do cyklov
         function: Funkcie
+        generative-ai-cobranded: 'Ako funguje AI: Generatívna AI'
         gumball_events: Hodina Kódu s Gumball - Udalosti
         gumball_intro: Hodina Kódu s Gumball - Úvod
         gumball_repeat: Hodina Kódu s Gumball - Výrazy s opakovaniami
@@ -990,6 +991,9 @@ sk:
         hoc_dance_warmup_2019: Tanečná párty 2019 - Zahrej sa
         hoc_wrapup: Zhrnutie Hodiny Kódu
         how-ai-works-creativity-full: Má AI kreativitu a predstavivosť?
+        how-ai-works-llms-full: Ako fungujú chatboty a veľké jazykové modely
+        how-ai-works-llms-part1: Chatboty a veľké jazykové modely Časť 1
+        how-ai-works-llms-part2: Chatboty a veľké jazykové modely, časť 2
         how-to-k5-workshops: 'Základy informatiky s Code.org: Otestované žiakmi, schválené
           učiteľmi'
         iceage_events: Hodina Kódu s Dobou ľadovou - Udalosti
@@ -1002,6 +1006,7 @@ sk:
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_repeat_forever: Play Lab - Nekonečné opakovanie
         lesson_planning: Plánovanie hodín
+        llms-cobranded: 'Ako funguje AI: Chatboty a veľké jazykové modely'
         loop_for: Blok "Počítadlo"
         loop_times: Blok Opakuj
         loop_until: Blok "opakuj pokiaľ neplatí"
