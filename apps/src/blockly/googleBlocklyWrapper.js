@@ -154,9 +154,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     let workspaceCode = Blockly.JavaScript.workspaceToCode(
       Blockly.mainBlockSpace
     );
-    if (this.getProcedureWorkspace()) {
+    if (this.getHiddenDefinitionWorkspace()) {
       workspaceCode += Blockly.JavaScript.workspaceToCode(
-        this.getProcedureWorkspace()
+        this.getHiddenDefinitionWorkspace()
       );
     }
     return workspaceCode;
@@ -670,15 +670,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.setMainWorkspace(workspace);
 
     // Hidden workspace where we can put function definitions.
-    const procedureWorkspace = new Blockly.Workspace();
-    blocklyWrapper.setProcedureWorkspace(procedureWorkspace);
+    const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
 
     if (options.useModalFunctionEditor) {
-      // TODO: To use the modal function editor, uncomment these lines.
-      // blocklyWrapper.functionEditor = new FunctionEditor();
       // The modal function editor is currently a work in progress so we are leaving
       // it commented out.
-      // blocklyWrapper.functionEditor.init(procedureWorkspace, opt_options);
+      // TODO: To use the modal function editor, uncomment these lines and update
+      // editButtonHandler in procedureBlocks.js.
+      // blocklyWrapper.functionEditor = new FunctionEditor();
+      // blocklyWrapper.functionEditor.init(opt_options);
     }
 
     return workspace;
@@ -695,12 +696,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.mainWorkspace = mainWorkspace;
   };
 
-  blocklyWrapper.setProcedureWorkspace = function (procedureWorkspace) {
-    this.procedureWorkspace = procedureWorkspace;
+  blocklyWrapper.setHiddenDefinitionWorkspace = function (
+    hiddenDefinitionWorkspace
+  ) {
+    this.hiddenDefinitionWorkspace = hiddenDefinitionWorkspace;
   };
 
-  blocklyWrapper.getProcedureWorkspace = function () {
-    return this.procedureWorkspace;
+  blocklyWrapper.getHiddenDefinitionWorkspace = function () {
+    return this.hiddenDefinitionWorkspace;
   };
 
   blocklyWrapper.getMainWorkspace = function () {

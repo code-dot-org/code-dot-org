@@ -29,13 +29,7 @@ export default class FunctionEditor {
     this.paramTypes = opt_paramTypes || [];
   }
 
-  setProcedureWorkspace = workspace => {
-    this.procedureWorkspace = workspace;
-  };
-
-  init(procedureWorkspace, options) {
-    this.setProcedureWorkspace(procedureWorkspace);
-
+  init(options) {
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
     this.dom = modalEditor;
@@ -135,7 +129,7 @@ export default class FunctionEditor {
 
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
       procedure.getName(),
-      this.procedureWorkspace
+      Blockly.getHiddenDefinitionWorkspace()
     );
 
     if (existingProcedureBlock) {
@@ -176,7 +170,12 @@ export default class FunctionEditor {
     let name = 'do something';
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
-    while (Blockly.Procedures.isNameUsed(name, this.procedureWorkspace)) {
+    while (
+      Blockly.Procedures.isNameUsed(
+        name,
+        Blockly.getHiddenDefinitionWorkspace()
+      )
+    ) {
       // Collision with another procedure.
       const r = name.match(/^(.*?)(\d+)$/);
       if (!r) {
@@ -191,7 +190,7 @@ export default class FunctionEditor {
   newProcedureCallback() {
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
-      this.procedureWorkspace,
+      Blockly.getHiddenDefinitionWorkspace(),
       name
     );
     const mainProcedure = new ObservableProcedureModel(
@@ -202,7 +201,9 @@ export default class FunctionEditor {
 
     // Add the model to the procedure and main workspaces so we know
     // all procedures available there.
-    this.procedureWorkspace.getProcedureMap().add(hiddenProcedure);
+    Blockly.getHiddenDefinitionWorkspace()
+      .getProcedureMap()
+      .add(hiddenProcedure);
     Blockly.mainBlockSpace.getProcedureMap().add(mainProcedure);
 
     // Add the procedure model to the editor's map as well
@@ -230,7 +231,7 @@ export default class FunctionEditor {
     // delete all caller blocks from the procedure workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
-      this.procedureWorkspace
+      Blockly.getHiddenDefinitionWorkspace()
     ).forEach(block => {
       block.dispose();
     });
@@ -284,12 +285,12 @@ export default class FunctionEditor {
     // This allows us to propogate edits to functions to the procedure workspace
     // (the source of truth for function definitions).
     this.editorWorkspace.addChangeListener(e => {
-      if (e.isUiEvent || !this.procedureWorkspace) return;
+      if (e.isUiEvent || !Blockly.getHiddenDefinitionWorkspace()) return;
       var json = e.toJson();
       // Convert JSON back into an event, then execute it.
       var secondaryEvent = Blockly.Events.fromJson(
         json,
-        this.procedureWorkspace
+        Blockly.getHiddenDefinitionWorkspace()
       );
       secondaryEvent.run(true);
     });
