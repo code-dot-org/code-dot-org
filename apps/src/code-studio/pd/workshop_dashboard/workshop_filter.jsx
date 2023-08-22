@@ -16,6 +16,7 @@ import DatePicker from './components/date_picker';
 import {DATE_FORMAT} from './workshopConstants';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import moment from 'moment';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -28,7 +29,8 @@ import {
   Button,
   MenuItem,
   Clearfix,
-} from 'react-bootstrap-2';
+} from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {
   Courses,
   Subjects,
