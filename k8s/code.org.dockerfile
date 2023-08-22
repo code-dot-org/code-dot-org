@@ -96,9 +96,14 @@ RUN \
   rbenv install && \
   true
 
+RUN \
+  mkdir dashboard
+
 COPY --chown=${UID} \
   Gemfile \
   Gemfile.lock \
+  dashboard/Gemfile \
+  dashboard/Gemfile.lock \
   ./
 
 RUN \
@@ -110,6 +115,9 @@ RUN \
   #
   # Running this lets us build on arm64 until staging is updated to use newer mini_racer gem
   bundle config --local without staging test production levelbuilder && \
+  cd dashboard && \
+  bundle config --local without staging test production levelbuilder && \
+  cd .. && \
   # Linux+arm64 has a problem with 0.0.7.2 that MacOS+arm64 doesn't, hack an update in here for now
   sed -i "s/gem 'unf_ext', '0.0.7.2'/gem 'unf_ext', '0.0.8.2'/g" Gemfile  && \
   #
@@ -119,6 +127,8 @@ RUN \
 RUN \
 #   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
   eval "$(rbenv init -)" && \
+  bundle install --quiet && \
+  cd dashboard && \
   bundle install --quiet && \
   true
 
@@ -253,6 +263,7 @@ COPY --chown=${UID} --link ./ ./
 
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
 COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
+COPY --from=code.org-rbenv ${SRC}/dashboard/.bundle ${SRC}/dashboard/.bundle
 COPY --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 
 
