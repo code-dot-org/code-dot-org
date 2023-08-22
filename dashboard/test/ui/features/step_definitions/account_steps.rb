@@ -207,7 +207,6 @@ def pass_time_for_user(name, amount_of_time)
 end
 
 And(/^I give user "([^"]*)" authorized teacher permission$/) do |_|
-  # this currently just givgites permissions to whoever is signed in?
   browser_request(url: '/api/test/authorized_teacher_access', method: 'POST')
 end
 
