@@ -4,19 +4,19 @@ require_relative './cfn_response'
 
 def lambda_handler(event:, context:)
   props = event['ResourceProperties']
-  username = props['username']
-  user_host = props['user_host']
-  password = props['password']
-  database_list = props['database_list']
-  permissions = props['permissions']
+  name = props['Name']
+  client_host = props['ClientHost']
+  password = props['Password']
+  databases = props['Databases']
+  privileges = props['Privileges']
 
   physical_resource_id = event['PhysicalResourceId']
   physical_resource_id ||= username
 
   mysql_client = Mysql2::Client.new(
-    host: props['db_server_name'],
-    username: props['db_admin_username'],
-    password: props['db_admin_password'],
+    host: props['DBServerHost'],
+    username: props['DBAdminUsername'],
+    password: props['DBAdminPassword'],
     read_timeout: 10,
     write_timeout: 10,
     connect_timeout: 10
@@ -26,26 +26,26 @@ def lambda_handler(event:, context:)
   when 'Create'
     create_or_update_sql_user(
       mysql_client: mysql_client,
-      username: username,
-      user_host: user_host,
+      name: name,
+      client_host: client_host,
       password: password,
-      database_list: database_list,
-      permissions: permissions
+      databases: databases,
+      privileges: privileges
     )
   when 'Update'
     create_or_update_sql_user(
       mysql_client: mysql_client,
-      username: username,
-      user_host: user_host,
+      name: name,
+      client_host: client_host,
       password: password,
-      database_list: database_list,
-      permissions: permissions
+      databases: databases,
+      privileges: privileges
     )
   when 'Delete'
     delete_sql_user(
       mysql_client: mysql_client,
-      username: username,
-      user_host: user_host
+      name: name,
+      client_host: client_host
     )
   else
     raise 'Unsupported Resource Event type.'
@@ -59,10 +59,10 @@ end
 
 # Custom CloudFormation Resources don't support importing an existing Resource, so support updating existing
 # SQL users even when the event type is `Create`.
-def create_or_update_sql_user(mysql_client:, username:, user_host:, password:, database_list:, permissions:)
+def create_or_update_sql_user(mysql_client:, name:, client_host:, password:, databases:, privileges:)
   results = []
   create_statement = <<-SQL
-    CREATE USER IF NOT EXISTS '#{username}}'@'#{user_host}'
+    CREATE USER IF NOT EXISTS '#{name}}'@'#{client_host}'
     IDENTIFIED WITH mysql_native_password
     BY '#{client.escape(password)}';
   SQL
@@ -70,7 +70,7 @@ def create_or_update_sql_user(mysql_client:, username:, user_host:, password:, d
 
   update_password_statement = <<-SQL
     -- Update password if user already exists.
-    ALTER USER '#{username}}'@'#{user_host}'
+    ALTER USER '#{name}}'@'#{client_host}'
     IDENTIFIED WITH mysql_native_password
     BY '#{client.escape(password)}';
   SQL
@@ -80,19 +80,19 @@ def create_or_update_sql_user(mysql_client:, username:, user_host:, password:, d
   # We don't yet support specifying a specific set of objects within a specific database because that would
   # make the arguments to this method more complex, and this is already an improvement over granting permission
   # to all tables in all databases (`*.*`).
-  database_list.each do |database|
+  databases.each do |database|
     grant_statement = <<-SQL
       GRANT
-        #{permissions.join(',')}
+        #{privileges.join(',')}
       ON #{database}.*
-      TO '#{username}'@'#{user_host}';
+      TO '#{name}'@'#{client_host}';
     SQL
     results << mysql_client.query(grant_statement)
   end
   return results
 end
 
-def delete_sql_user(mysql_client:, username:, user_host:)
-  results = mysql_client.query("DROP USER IF EXISTS '#{username}'@'#{user_host}';")
+def delete_sql_user(mysql_client:, name:, client_host:)
+  results = mysql_client.query("DROP USER IF EXISTS '#{name}'@'#{client_host}';")
   return results
 end
