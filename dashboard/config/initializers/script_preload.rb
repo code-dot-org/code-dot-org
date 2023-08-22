@@ -1,6 +1,5 @@
 # Preload script cache before application fork.
-# This speeds up load time of new Unicorn child worker processes
-# and Spring application preloader (Rails console, unit tests).
+# This speeds up load time of new Unicorn child worker processes.
 
 # Skip if this is running a Rake task (e.g. rake db:setup), when running rails console,
 # or when caching is disabled.
