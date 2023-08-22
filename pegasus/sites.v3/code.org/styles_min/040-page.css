@@ -98,6 +98,33 @@ figcaption,
   line-height: 1.64;
 }
 
+.overline-one {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--brand_primary_default);
+}
+
+.overline-two {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.75rem;
+  line-height: 1.64;
+  color: var(--brand_primary_default);
+}
+
+.overline-three {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.625rem;
+  line-height: 1.76;
+  color: var(--brand_primary_default);
+}
+
 a,
 a:link {
   font-family: var(--gotham-bold);
