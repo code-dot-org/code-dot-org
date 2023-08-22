@@ -50,13 +50,11 @@ html[dir= 'rtl']  .left-tutorial{
 }
 
 .specific-tutorial-heading {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin: 0 0 0.5em;
   color: black;
-}
-
-.specific-tutorial-heading em {
-  font-family: 'Gotham 5i', sans-serif;
 }
 
 .tutorial-promo-container button {
@@ -84,8 +82,7 @@ html[dir= 'rtl']  .left-tutorial{
 }
 
 .tutorial-button {
-  font-size: 18px;
-  height: 40px;
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
