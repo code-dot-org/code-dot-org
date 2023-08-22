@@ -38,13 +38,15 @@ export default function LearningGoalItem({deleteItem}) {
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
               />
+              {/* This span is used for checkbox styling;
+              It is hidden from AT devices */}
               <span
                 style={
                   aiEnabled ? styles.checkboxChecked : styles.checkboxBlank
                 }
-                aria-hidden="true"
-              >
-                &#10003;
+                aria-hidden="true" 
+              > 
+                &#10003; {/* Checkmark HTML code */}
               </span>
             </label>
           </div>
