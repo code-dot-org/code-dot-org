@@ -46,7 +46,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
     // TODO: Ask product about how to display user message with status unknown while message is being sent to backend.
     dispatch(setNewUserMessage(message));
 
-    // TODO: Filter inappropriate and too personal messages.
     const appropriateChatMessages = storedMessages.filter(
       msg => msg.status === Status.OK
     );
