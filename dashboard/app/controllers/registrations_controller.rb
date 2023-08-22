@@ -7,6 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
+  skip_before_action :assert_child_account_policy, only: [:set_age]
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
@@ -208,7 +209,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
-  # from cached pages which will not populate the CSRF token
+  # from cached pages which will not populate the CSRF token. This also skips lockout policy
+  # checks since those depend on the age being set.
   def set_age
     return head(:forbidden) unless current_user
     current_user.update(age: params[:user][:age]) if current_user.age.blank?
