@@ -46,7 +46,7 @@ export default function LearningGoalItem({deleteItem}) {
                 }
                 aria-hidden="true"
               >
-                &#10003; {/* Checkmark HTML code */}
+                ✔
               </span>
             </label>
           </div>
@@ -103,7 +103,6 @@ const styles = {
     color: color.white,
     fontSize: 18,
     textAlign: 'center',
-    fontStyle: 'bold',
     borderColor: color.white,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -117,7 +116,6 @@ const styles = {
     color: color.white,
     fontSize: 18,
     textAlign: 'center',
-    fontStyle: 'bold',
     borderColor: color.black,
     borderStyle: 'solid',
     borderWidth: 1,
