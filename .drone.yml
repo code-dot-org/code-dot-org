@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.1
+    image: codedotorg/code-dot-org:ubuntu-20
     pull: always
     volumes:
       - name: rbenv
@@ -144,7 +144,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.1
+    image: codedotorg/code-dot-org:ubuntu-20
     pull: always
     volumes:
       - name: rbenv
