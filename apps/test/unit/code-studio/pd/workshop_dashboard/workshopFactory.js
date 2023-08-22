@@ -37,6 +37,8 @@ Factory.define('workshop multiple sessions')
   .extend('workshop')
   .attr('sessions', () => Factory.buildList('session', 3));
 
+Factory.define('virtual workshop').extend('workshop').attr('virtual', true);
+
 Factory.define('csp summer workshop')
   .extend('workshop')
   .attr('course', 'CS Principles')

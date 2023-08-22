@@ -132,9 +132,9 @@ describe('WorkshopForm test', () => {
   });
 
   it('edits form and can save', () => {
-    console.log('SAVE START');
+    const workshop = Factory.build('virtual workshop');
     const server = sinon.fakeServer.create();
-    server.respondWith('PATCH', `/api/v1/pd/workshops/${fakeWorkshop.id}`, [
+    server.respondWith('PATCH', `/api/v1/pd/workshops/${workshop.id}`, [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
@@ -148,7 +148,7 @@ describe('WorkshopForm test', () => {
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
             onSaved={onSave}
-            workshop={fakeWorkshop}
+            workshop={workshop}
             readOnly={false}
           />
         </MemoryRouter>
