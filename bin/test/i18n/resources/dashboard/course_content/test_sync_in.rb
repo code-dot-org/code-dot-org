@@ -62,7 +62,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(true)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/Hour of Code')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with('hoc-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'hoc-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
@@ -104,7 +104,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(true)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/other')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with('unversioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'unversioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
@@ -146,7 +146,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with('versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
@@ -188,7 +188,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with('versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).never
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
@@ -230,7 +230,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', script.name).never.returns(false)
     script.expects(:unversioned?).never.returns(false)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).never
-    I18nScriptUtils.expects(:unit_directory_change?).with('versioned-script.json', expected_i18n_source_file_path).never.returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).never.returns(false)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).never
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', {}).in_sequence(exec_seq)
