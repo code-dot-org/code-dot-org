@@ -13,12 +13,15 @@ export interface AichatState {
   newUserMessage: string;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Denotes whether we should show the warning modal
+  showWarningModal: boolean;
 }
 
 const initialState: AichatState = {
   newUserMessage: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
+  showWarningModal: true,
 };
 
 const aichatSlice = createSlice({
@@ -32,10 +35,13 @@ const aichatSlice = createSlice({
       state.chatMessages.push(action.payload);
     },
     clearChatMessages: state => {
-      state.chatMessages = [];
+      state.chatMessages = initialChatMessages;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
+    },
+    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
+      state.showWarningModal = action.payload;
     },
   },
 });
@@ -46,4 +52,5 @@ export const {
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
+  setShowWarningModal,
 } = aichatSlice.actions;
