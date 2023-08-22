@@ -50,6 +50,7 @@ const CurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -88,6 +89,7 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    isInUS={isInUS}
     {...props}
   />
 );
@@ -124,6 +126,7 @@ CurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -156,6 +159,7 @@ const CustomizableCurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -299,7 +303,7 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
-          isEnglish={isEnglish}
+          isInUS={isInUS}
         />
       )}
     </div>
@@ -342,6 +346,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 export default connect(

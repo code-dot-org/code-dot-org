@@ -246,14 +246,13 @@ sq:
     built_on_github: E ndërtuar në GitHub nga Microsoft
     code_from_html: Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU
       LGPL 2.1</a> .
+    cookie_notice: Njoftim për Cookie
     copyright: E drejta e autorit
     feedback: Jepni feedback-un tuaj
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan
       në krijimin e këtij tutoriali.
-    help_from_html_old: 'Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në
-      krijimin e këtyre materialeve.
-
-      '
+    help_from_html_old: Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin
+      e këtyre materialeve.
     how_it_works: Si funksionon
     make_my_own_app: Ndërtoj aplikacionin tim
     more: Më shumë
@@ -433,6 +432,8 @@ sq:
       help_support: Ndihmë dhe mbështetje
       help_us: Na Ndihmo
       learn: Mëso
+      legal: Privatësia & Ligjore
+      legal_cookie_notice: Njoftim për Cookie
       legal_privacy: Rregullat e Privatësisë
       legal_tos: Kushtet e shërbimit
       my_dashboard: Paneli im
@@ -460,6 +461,7 @@ sq:
       calc: Llogarit
       classroom: Faqja Kryesore e Mësuesit
       create: Krijo
+      dance: Festë vallëzimi
       district_dashboard: Pulti i Qarkut
       driver: Përdorues
       eval: Vlerëso
@@ -473,11 +475,13 @@ sq:
       logout: Dil
       minecraft_adventurer: Aventurieri Minecraft
       minecraft_designer: Minecraft
+      my_projects: Projektet e mia
       navigator: Lundrues
       playlab: Play Lab
       settings: Llogaria ime
       signin: Futu
       signup: Krijo një llogari
+      spritelab: Sprite Lab
       starwars: Lufta e Yjeve
       stats: Code Studio
       team: Skuadra
@@ -917,6 +921,10 @@ sq:
       title: Laboratori i Aplikacioneve
     aquatic:
       title: Minecraft
+    dance:
+      title: Festë vallëzimi
+    dance-2019:
+      title: Festë vallëzimi
     flappy:
       body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin
         tonë Flappy Code!

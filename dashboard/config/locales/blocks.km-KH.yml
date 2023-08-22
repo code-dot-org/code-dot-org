@@ -1081,19 +1081,91 @@ km:
         options:
           DIR:
             "'ahead'": នៅខាងមុខ
+            "'left'": បត់ឆ្វេង
+            "'right'": បត់ស្ដាំ
+        text: |-
+          ប្រសិនបើមានផ្លូវ  {DIR}
+          {STATEMENT}
       craft_ifStandingOn:
         options:
           TYPE:
-            "'planksOak'": ក្តារឈើសែន
+            "'blueCoralBlock'": ផ្កាថ្មខៀវ
+            "'planksOak'": បន្ទះក្ដា
+            "'redCoralBlock'": ផ្កាថ្មក្រហម
             "'sand'": ខ្សាច់
+            "'seaLantern'": ចង្កៀងសមុទ្រ
+            "'wool_blue'": ទឹកជ្រៅ
+        text: |-
+          ប្រសិនបើឈរលើ {TYPE}
+          {STATEMENT}
       craft_ifStandingOnLimit:
         options:
           TYPE:
+            "'darkPrismarine'": ថ្មកែវខ្មៅ
             "'sand'": ខ្សាច់
+            "'seaLantern'": ចង្កៀងសមុទ្រ
+        text: |-
+          ប្រសិនបើឈរលើ {TYPE}
+          {STATEMENT}
       craft_moveForward:
         text: ផ្លាស់ទីទៅមុខ
+      craft_placeBlock:
+        options:
+          blockType:
+            '"blackConcrete"': ដុំបេតុងខ្មៅ
+            '"blueCoralBlock"': ដុំផ្កាថ្មពណ៌ខៀវ
+            '"blueDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ខៀវក្រម៉ៅ
+            '"blueIce"': ដុំទឹកកកខៀវ
+            '"chiseledStoneBricks"': ដុំថ្មក្បាច់
+            '"crackedStoneBricks"': ដុំឥដ្ឋថ្មប្រេះ
+            '"darkPrismarine"': ថ្មកែវខ្មៅ
+            '"kelp"': សារ៉ាយសមុទ្រ
+            '"magentaCoralBlock"': ដុំផ្កាថ្មពណ៌ស្វាយ
+            '"magentaDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ស្វាយក្រម៉ៅ
+            '"mossyStoneBricks"': ដុំឥដ្ឋថ្ម mossy
+            '"packedIce"': ដុំទឹកកកខៀវក្រម៉ៅ
+            '"pinkCoralBlock"': ដុំផ្កាថ្មពណ៌ផ្កាឈូក
+            '"pinkDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ផ្កាឈូកក្រម៉ៅ
+            '"polishedGranite"': ដុំថ្មក្រានីតប៉ូលា
+            '"prismarine"': ថ្មកែវ
+            '"readDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ក្រហមក្រម៉ៅ
+            '"redCoralBlock"': ដុំផ្កាថ្មពណ៌ក្រហម
+            '"seaGrass"': ស្មៅសមុទ្រ
+            '"seaLantern"': ចង្កៀងសមុទ្រ
+            '"stoneBricks"': ដុំឥដ្ឋថ្ម
+            '"strippedDarkOak"': ដុំឈើខ្មៅ
+            '"strippedOak"': ដុំឈើ
+            '"yellowCoralBlock"': ដុំផ្កាថ្មពណ៌លឿង
+            '"yellowDeadCoralBlock"': ដុំផ្កាថ្មពណ៌លឿងក្រម៉ៅ
+        text: ដាក់ {blockType}
+      craft_placePrismarine:
+        text: ដាក់ថ្មកែវ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      craft_repeatUntilConduit:
+        text: |-
+          ធ្វើរហូត conduit រួចរាល់
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          ធ្វើរហូតដល់គោលដៅ
+          {STATEMENT}
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"cod"': ត្រី
+            '"dolphin"': ផ្សោត
+            '"salmon"': ត្រីសាម៉ុង
+            '"seaTurtle"': អណ្តើកសមុទ្រ
+            '"squid"': មឹក
+            '"tropicalFish"': ត្រីត្រូពិច
+        text: បង្កើត {ENTITY}
+      craft_turn:
+        options:
+          DIR:
+            left: ឆ្វេង ↺
+            right: ស្ដាំ ↻
+        text: បត់ {DIR}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
       gamelab_atTime:
@@ -1259,6 +1331,7 @@ km:
             "'sound://category_animals/chicken.mp3'": មេមាន់
             "'sound://category_animals/cow.mp3'": មេគោ
             "'sound://category_animals/dog.mp3'": ឆ្កែ
+            "'sound://category_animals/dolphin.mp3'": ផ្សោត
             "'sound://category_animals/sheep.mp3'": ចៀម
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
             "'sound://category_digital/jump_7.mp3'": លោត

@@ -662,9 +662,14 @@ la:
     de nuevos informes, recomendaciones de políticas y oportunidades de participación
     pública.
   ai_pl_callout_title: Introducción a la IA para Docentes
-  ai_pl_callout_desc_01: Descubre el alucinante mundo de la inteligencia artificial
-    (IA) y su potencial para transformar la educación con nuestra serie virtual para
-    docentes.
+  ai_pl_callout_desc_01: IA 101 es una serie de aprendizaje profesional en línea gratuita
+    y fundamental para cualquier docente y educador interesado en el innovador mundo
+    de la inteligencia artificial (IA) y su potencial transformador en la educación.
+    Code.org, ETS, ISTE y Khan Academy ofrecen atractivas sesiones con expertos de
+    renombre que desmitificarán la IA, explorarán la implementación responsable, abordarán
+    los prejuicios y mostrarán cómo el aprendizaje impulsado por la IA puede revolucionar
+    los resultados de los estudiantes. Únete a nosotros en este viaje de exploración
+    y empoderamiento, y desbloquea el futuro de la enseñanza con y sobre IA.
   ai_pl_callout_desc_02: Code.org, ETS, ISTE y Khan Academy formaron una alianza para
     apoyar a los docentes con el uso de la IA en sus aulas.
   ai_hero_heading: La inteligencia artificial no es magia… ¡Es simplemente código!
@@ -773,7 +778,7 @@ la:
     (IA) en la educación con nuestra serie gratuita de aprendizaje en línea para educadores.
   ai_pl_101_hero_desc_02: Una serie integral de aprendizaje en línea para docentes.
   ai_pl_101_hero_presented: Presentado por
-  ai_pl_101_intro_heading: "¿Qué es AI 101 para docentes?"
+  ai_pl_101_intro_heading: "¿Qué es IA 101?"
   ai_pl_101_intro_text: AI 101 para docentes es una serie de aprendizaje profesional
     en línea gratuita y fundamental para cualquier docente y educador interesado en
     el innovador mundo de la inteligencia artificial (IA) y su potencial transformador
@@ -819,7 +824,7 @@ la:
     la IA, ayudando a los docentes a proporcionar opiniones iterativas y evaluaciones
     formativas a lo largo de la experiencia de escritura.'
   ai_pl_101_explore__button_4: Explora la herramienta
-  ai_pl_101_video_title_1: Charla junto a la chimenea con Sal Khan y Hadi Partovi
+  ai_pl_101_video_title_1: "¿Cómo usar la IA en tú clase? - Sal Khan y Hadi Partovi"
   ai_pl_101_video_desc_1: Únete a Sal Khan (Khan Academy) y Hadi Partovi (Code.org)
     para una charla junto a la chimenea sobre cómo adoptar la inteligencia artificial
     en el aula. Espere una discusión animada que incluya algunos de los temas más

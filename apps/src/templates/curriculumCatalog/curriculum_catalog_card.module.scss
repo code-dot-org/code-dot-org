@@ -1,6 +1,5 @@
-@use "sass:math";
-@import "phase1-design-system";
-@import 'breakpoints';
+@use 'sass:math';
+@import 'phase1-design-system';
 
 $border-radius: 4px;
 $container-width: 309px;
@@ -96,7 +95,8 @@ $container-width: 309px;
   margin-bottom: 0.75em;
   pointer-events: none;
 
-  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+  :global(.tooltip-inner) {
+    /* stylelint-disable-line selector-pseudo-class-no-unknown */
     border-radius: 5px;
     color: #fff;
     background-color: #222;
@@ -107,7 +107,8 @@ $container-width: 309px;
     }
   }
 
-  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+  :global(.tooltip-arrow) {
+    /* stylelint-disable-line selector-pseudo-class-no-unknown */
     left: 50%;
     bottom: 0;
     border: 15px solid transparent;
@@ -188,10 +189,12 @@ $container-width: 309px;
   justify-content: center;
 }
 
-.cardsContainer:nth-child(3n + 3) .centerExpandedCard {
-  justify-content: flex-end;
-}
+.cardsContainer:nth-child(3n + 3) {
+  .centerExpandedCard {
+    justify-content: flex-end;
+  }
 
-.cardsContainer:nth-child(3n + 3) .arrowContainer:before {
-  background: $neutral_light;
+  .arrowContainer:before {
+    background: $neutral_light;
+  }
 }

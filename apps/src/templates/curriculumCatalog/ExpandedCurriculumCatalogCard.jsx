@@ -28,7 +28,7 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
-  isEnglish,
+  isInUS,
 }) => {
   const iconData = {
     ideal: {
@@ -46,6 +46,7 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
+  console.log(isInUS);
 
   return (
     <div>
@@ -111,7 +112,7 @@ const ExpandedCurriculumCatalogCard = ({
                     <hr className={style.horizontalDivider} />
                     <TextLink text={i18n.projectRubrics()} href="#" />
                   </div>
-                  {isEnglish &&
+                  {isInUS &&
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
@@ -229,6 +230,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
-  isEnglish: PropTypes.bool,
+  isInUS: PropTypes.bool,
 };
 export default ExpandedCurriculumCatalogCard;
