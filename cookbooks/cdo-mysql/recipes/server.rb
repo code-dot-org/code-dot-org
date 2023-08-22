@@ -2,6 +2,7 @@ include_recipe 'cdo-mysql::repo'
 
 apt_package 'mysql-server' do
   action :upgrade
+  # Pin to MySQL 5.7 until we're ready to update to MySQL 8
   version '5.7.42-1ubuntu18.04'
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
