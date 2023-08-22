@@ -8,12 +8,14 @@ $(document).ready(() => {
   const unitName = lessonData.unitName;
   const lessonNumber = lessonData.lessonNumber;
   const levels = lessonData.levels;
+  const lessonId = lessonData.id;
 
   ReactDOM.render(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}
       levels={levels}
+      lessonId={lessonId}
     />,
     document.getElementById('form')
   );

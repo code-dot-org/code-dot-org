@@ -335,7 +335,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
+    resources :rubrics, only: [:edit, :new, :create, :update]
+
+    # resources :lessons, only: [:edit, :update] do
+    #   member do
+    #     get :show, to: 'lessons#show_by_id'
+    #     post :clone
+    #   end
+    # end
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do

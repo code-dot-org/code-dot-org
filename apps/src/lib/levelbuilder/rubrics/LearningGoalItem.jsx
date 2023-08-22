@@ -5,12 +5,34 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
-export default function LearningGoalItem({deleteItem}) {
-  const [aiEnabled, setAiEnabled] = useState(false);
+export default function LearningGoalItem({
+  key,
+  deleteItem,
+  exisitingLearningGoalData,
+  handleAiEnabledChange,
+  handleLearningGoalNameChange,
+}) {
+  const [updatedAiEnabled, setUpdatedAiEnabled] = useState(
+    exisitingLearningGoalData.aiEnabled
+  );
+
+  const [learningGoalData] = useState(exisitingLearningGoalData);
 
   const handleCheckboxChange = () => {
-    setAiEnabled(!aiEnabled);
+    setUpdatedAiEnabled(!updatedAiEnabled);
+    handleAiEnabledChange(learningGoalData.id);
   };
+
+  const handleKeyConceptChange = event => {
+    handleLearningGoalNameChange(
+      event.target.value,
+      exisitingLearningGoalData.id
+    );
+  };
+
+  // const updateLearningGoalData = newLearningGoalData => {
+  //   setLearningGoalData(newLearningGoalData);
+  // };
 
   return (
     <div className="uitest-learning-goal-card">
@@ -27,6 +49,7 @@ export default function LearningGoalItem({deleteItem}) {
                 <input
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
+                  onChange={handleKeyConceptChange}
                 />
               </label>
             </div>
@@ -34,7 +57,7 @@ export default function LearningGoalItem({deleteItem}) {
               Use AI to assess
               <input
                 type="checkbox"
-                checked={aiEnabled}
+                checked={updatedAiEnabled}
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
               />
@@ -43,7 +66,7 @@ export default function LearningGoalItem({deleteItem}) {
         </div>
       </div>
       <div style={styles.activityBody}>
-        <EvidenceDescriptions isAiEnabled={aiEnabled} />
+        <EvidenceDescriptions isAiEnabled={updatedAiEnabled} />
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
@@ -59,6 +82,10 @@ export default function LearningGoalItem({deleteItem}) {
 
 LearningGoalItem.propTypes = {
   deleteItem: PropTypes.func,
+  key: PropTypes.string,
+  handleAiEnabledChange: PropTypes.func,
+  exisitingLearningGoalData: PropTypes.object,
+  handleLearningGoalNameChange: PropTypes.func,
 };
 
 const styles = {
