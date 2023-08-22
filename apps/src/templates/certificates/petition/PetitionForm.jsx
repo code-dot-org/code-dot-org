@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {Button} from 'react-bootstrap-2';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {range, mapValues, without, find} from 'lodash';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
