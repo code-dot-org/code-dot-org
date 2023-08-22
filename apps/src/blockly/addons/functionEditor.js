@@ -96,7 +96,9 @@ export default class FunctionEditor {
   }
 
   hide() {
-    this.dom.style.display = 'none';
+    if (this.dom) {
+      this.dom.style.display = 'none';
+    }
   }
 
   // We kept this around for backwards compatibility with the CDO

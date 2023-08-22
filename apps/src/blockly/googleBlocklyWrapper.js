@@ -667,14 +667,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
+    blocklyWrapper.setMainWorkspace(workspace);
+
     // Hidden workspace where we can put function definitions.
     const procedureWorkspace = new Blockly.Workspace();
     blocklyWrapper.setProcedureWorkspace(procedureWorkspace);
-    blocklyWrapper.setMainWorkspace(workspace);
 
     if (options.useModalFunctionEditor) {
-      blocklyWrapper.functionEditor = new FunctionEditor();
-      // TODO: To use the modal function editor, uncomment this init function.
+      // TODO: To use the modal function editor, uncomment these lines.
+      // blocklyWrapper.functionEditor = new FunctionEditor();
       // The modal function editor is currently a work in progress so we are leaving
       // it commented out.
       // blocklyWrapper.functionEditor.init(procedureWorkspace, opt_options);
