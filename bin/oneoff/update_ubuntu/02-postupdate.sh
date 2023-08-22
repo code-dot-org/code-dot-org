@@ -6,8 +6,6 @@ fi
 
 # Unhold the packages we held prior to the update now that the
 # update is finished.
-# TODO: verify that doing this before chef-client doesn't
-# break anything
 apt-mark unhold mysql-server mysql-client;
 apt-mark unhold imagemagick libmagickcore-dev libmagickwand-dev;
 
