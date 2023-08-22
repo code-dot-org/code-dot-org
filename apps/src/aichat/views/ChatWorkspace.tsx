@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useCallback} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
