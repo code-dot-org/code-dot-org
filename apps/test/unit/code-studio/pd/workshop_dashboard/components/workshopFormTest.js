@@ -75,12 +75,12 @@ describe('WorkshopForm test', () => {
   });
 
   it('creates and publishes new workshop form', () => {
-    // const server = sinon.fakeServer.create();
-    // server.respondWith('POST', '/api/v1/pd/workshops', [
-    //   200,
-    //   {'Content-Type': 'application/json'},
-    //   '',
-    // ]);
+    const server = sinon.fakeServer.create();
+    server.respondWith('POST', '/api/v1/pd/workshops', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({}),
+    ]);
     console.log('PUBLISH START');
     const onPublish = sinon.spy();
 
@@ -122,13 +122,14 @@ describe('WorkshopForm test', () => {
     expect(onPublish).not.to.have.been.called;
 
     // Publish workshop
-    //server.respond();
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
     publishButton.simulate('click');
 
+    server.respond();
+
     expect(onPublish).to.have.been.calledOnce;
 
-    //server.restore();
+    server.restore();
   });
 
   it('edits form and can save', () => {
@@ -164,9 +165,11 @@ describe('WorkshopForm test', () => {
     expect(onSave).not.to.have.been.called;
 
     // Save workshop
-    server.respond();
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
     saveButton.simulate('click');
+
+    server.respond();
+    wrapper.update();
 
     expect(onSave).to.have.been.calledOnce;
     expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
