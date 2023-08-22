@@ -2,10 +2,10 @@ import React from 'react';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {rubricShape} from './rubricShapes';
+import {reportingDataShape, rubricShape} from './rubricShapes';
 import LearningGoal from './LearningGoal';
 
-export default function RubricContainer({rubric}) {
+export default function RubricContainer({rubric, reportingData}) {
   return (
     <div className={style.rubricContainer}>
       <div className={style.rubricHeader}>
@@ -20,6 +20,7 @@ export default function RubricContainer({rubric}) {
               learningGoal={lg}
               teacherHasEnabledAi
               canProvideFeedback={false}
+              reportingData={reportingData}
             />
           ))}
         </div>
@@ -30,4 +31,5 @@ export default function RubricContainer({rubric}) {
 
 RubricContainer.propTypes = {
   rubric: rubricShape,
+  reportingData: reportingDataShape,
 };

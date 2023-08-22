@@ -26,7 +26,9 @@ export default function RubricFloatingActionButton({rubric, reportingData}) {
         onClick={handleClick}
         type="button"
       />
-      {isOpen && <RubricContainer rubric={rubric} />}
+      {isOpen && (
+        <RubricContainer rubric={rubric} reportingData={reportingData} />
+      )}
     </div>
   );
 }
