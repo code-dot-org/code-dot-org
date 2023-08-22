@@ -3,23 +3,127 @@
 
 $container-width: 960px;
 
-.expandedCardContainer {
-  position: absolute;
-  background-color: #f9f9f9;
-  color: #333;
-  border: 1px solid #ccc;
-  border-color: #333;
-  border-radius: 4px;
-  padding: 16px;
-  width: $container-width;
-  height: 25em;
+.bodyText {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-align: center;
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
+}
+
+.centerContentContainer {
+  display: flex;
+  column-gap: 48px;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: end;
+  line-height: normal;
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    height: auto;
+  }
+
+  button:active {
+    border: none !important;
+  }
+
+  button:hover {
+    background-color: transparent;
+  }
+
+  i {
+    text-decoration: none;
+    color: $neutral_dark80;
+    font-size: 20px;
+  }
+}
+
+.compatibilityContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.courseOfferingContainer {
+  width: 736px;
+  padding: 16px 32px 16px 16px;
   box-sizing: border-box;
+}
+
+.descriptionContainer {
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  font-size: 0.875em;
+}
+
+.descriptionVideoContainer {
+  width: 440px;
+}
+
+.expandedCardContainer {
+  position: relative;
+  background-color: $neutral_white;
+  color: #333;
+  border: 1px solid $neutral_dark;
+  border-radius: 4px;
+  width: $container-width;
+  box-sizing: border-box;
+}
+
+.circleCheck {
+  color: $product_affirmative_default;
+}
+
+.circleXmark {
+  color: $product_negative_default;
+}
+
+.triangleExclamation {
+  color: $product_caution_default;
+}
+
+.flexDivider {
+  display: flex;
+}
+
+.horizontalDivider {
+  border-top: 1px solid $neutral_dark20;
+}
+
+.iconStyle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
 .iconWithDescription {
   display: flex;
   align-items: center;
-  column-gap: 0.5em;
+  column-gap: 8px;
   margin: 0 0 0.5em 0;
 
   > p {
@@ -36,5 +140,68 @@ $container-width: 960px;
 .infoContainer {
   display: flex;
   align-items: center;
-  column-gap: 1em;
+  column-gap: 20px;
+}
+
+.linksContainer {
+  hr {
+    margin: 8px 0;
+  }
+
+  i {
+    margin-inline-start: 8px;
+  }
+}
+
+.professionalLearningContainer {
+  a {
+    color: $brand_secondary_default !important;
+    text-decoration: underline !important;
+  }
+}
+
+.relatedContainer {
+  margin-top: 36px;
+
+  hr {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.relatedCurriculaContainer {
+  background-color: $neutral_light;
+  width: 224px;
+  padding: 16px;
+}
+
+.resourcesContainer {
+  width: 200px;
+  margin-bottom: 40px;
+
+  hr {
+    margin: 8px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $neutral_dark !important;
+  }
+
+  a:hover {
+    color: $brand_secondary_default !important;
+  }
+}
+
+.subjectsText {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.thickDivider {
+  border-top: 2px solid $neutral_dark20;
+}
+
+.videoContainer {
+  height: 246.5px;
 }
