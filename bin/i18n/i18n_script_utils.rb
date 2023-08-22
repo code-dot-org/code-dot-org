@@ -10,30 +10,30 @@ I18N_SOURCE_DIR = "i18n/locales/source"
 
 CROWDIN_PROJECTS = {
   codeorg: {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
   },
   'codeorg-markdown': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg_markdown_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-markdown_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
   },
   'hour-of-code': {
-    config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/hourofcode_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/hour-of-code_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
   },
   'codeorg-restricted': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_files_to_sync_out.json")
-  }
-}
+    config_file:            CDO.dir('bin/i18n/codeorg_restricted_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-restricted_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
+  },
+}.freeze
 
 CROWDIN_TEST_PROJECTS = {
   'codeorg-testing': {
@@ -268,7 +268,7 @@ class I18nScriptUtils
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
   def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
-    level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
+    level_content_directory = CDO.dir(File.join(I18N_SOURCE_DIR, 'course_content'))
 
     matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
       other_filename == script_i18n_filename
@@ -294,5 +294,23 @@ class I18nScriptUtils
     #   error_message: error_message
     # )
     puts "[#{error_class}] #{error_message}"
+  end
+
+  def self.fix_yml_file(filepath)
+    # Ryby implementation of the removed perl script `bin/i18n-codeorg/lib/fix-ruby-yml.pl`
+    # while(<>) {
+    #   # Remove ---
+    #   s/^---\n//;
+    #   # Fixes the "no:" problem.
+    #   s/^([a-z]+(?:-[A-Z]+)?):(.*)/"\1":\2/g;
+    #   print;
+    # }
+
+    yml_data = File.read(filepath)
+
+    yml_data.sub!(/^---\n/, '')                             # Remove ---
+    yml_data.gsub!(/^([a-z]+(?:-[A-Z]+)?):(.*)/, '"\1":\2') # Fixes the "no:" problem.
+
+    File.write(filepath, yml_data)
   end
 end

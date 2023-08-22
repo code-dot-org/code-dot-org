@@ -1369,6 +1369,10 @@ az:
               name: Cavabları Dəyişdirin
             lesson-5:
               name: Təsadüfi Cavablar Almaq Üçün Massivlərdən İstifadə Edin
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Qur
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -1802,6 +1806,8 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         csd1-dlp:
           lesson_groups:
             content:
@@ -3786,6 +3792,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3814,6 +3822,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3842,6 +3852,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3858,6 +3870,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3876,6 +3890,8 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4019,6 +4035,8 @@ az:
           student_description: Əsəbi quşlar, Bitkilər və Zombilər və Buz dövründən
             Scrat personajı ilə kompüter elmlərinin əsas anlayışlarında özünüzü sınayın!
           title: Ənənəvi labirint
+        how-ai-works-2023:
+          title: Süni İntelekt (Sİ) necə işləyir?
         iceage:
           name: buz dövrü
         infinity:
@@ -4154,6 +4172,11 @@ az:
               display_name: Tədbirlər
             lessonGroup-7:
               display_name: Kurs layihələrinin sonu!
+            lessonGroup-8:
+              display_name: məlumat
+          lessons:
+            lesson-1:
+              name: məlumat
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Yaşlar: 8-12'
           lesson_groups:
@@ -4650,6 +4673,22 @@ az:
           lessons:
             lesson-3:
               name: Yoxlama
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -4668,10 +4707,42 @@ az:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd-ci-7:
           lesson_groups:
             lessonGroup-2:
               display_name: AI və Maşın Öyrənməsinin tədrisi
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

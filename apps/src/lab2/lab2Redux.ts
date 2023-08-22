@@ -13,10 +13,10 @@ import {
 import {
   AppName,
   Channel,
-  LevelData,
+  LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
-  LevelProperties,
+  ProjectLevelData,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -29,7 +29,7 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
 import {
-  initialValidationState,
+  getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
@@ -58,12 +58,6 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
-  // Note: the following properties are derived from levelProperties. We should update components that consume
-  // these to access these fields via levelProperties instead.
-  levelData: LevelData | undefined;
-  hideShareAndRemix: boolean;
-  isProjectLevel: boolean;
-  appName: AppName | undefined;
 }
 
 const initialState: LabState = {
@@ -72,12 +66,8 @@ const initialState: LabState = {
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
-  validationState: {...initialValidationState},
-  levelData: undefined,
-  hideShareAndRemix: true,
-  isProjectLevel: false,
+  validationState: getInitialValidationState(),
   levelProperties: undefined,
-  appName: undefined,
 };
 
 // Thunks
@@ -201,6 +191,13 @@ export const hasPageError = (state: {lab: LabState}) => {
   return state.lab.pageError !== undefined;
 };
 
+// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
+// if not specified.
+export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
+  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
+  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -227,7 +224,7 @@ const labSlice = createSlice({
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    // Update the level data and initial sources simultaneously when the level changes.
+    // Update the level properties, initial sources, and channel simultaneously when the level changes.
     // These fields are updated together so that labs receive all updates at once.
     onLevelChange(
       state,
@@ -237,22 +234,6 @@ const labSlice = createSlice({
         initialSources?: ProjectSources;
       }>
     ) {
-      // Set individual properties in the redux store based off of level properties.
-      // TODO: Components should access these via levelProperties directly.
-      const {levelData, appName, hideShareAndRemix, isProjectLevel} =
-        action.payload.levelProperties;
-
-      state.appName = appName;
-      state.levelData = levelData;
-      state.hideShareAndRemix =
-        hideShareAndRemix === undefined
-          ? initialState.hideShareAndRemix
-          : hideShareAndRemix;
-      state.isProjectLevel =
-        isProjectLevel === undefined
-          ? initialState.isProjectLevel
-          : isProjectLevel;
-
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;

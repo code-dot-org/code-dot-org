@@ -527,7 +527,7 @@ uk:
         what_is_an_event: Що таке подія?
         teaching_cs_pair_programming: 'Вивчаємо Основи інформатики: Програмування в парах'
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати проблеми'
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія додатків - Режим дизайну'
+        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим дизайну'
         csd_pair_programming: Парне програмування
         csd_gamelab_functions: Виклик та визначення функцій
         csd_applab_parameters: Функції з параметрами
@@ -538,7 +538,7 @@ uk:
         CSF_Spritelab_MakeSprite_v2: Як створити спрайт
         CSF_SpriteLab_SpritesInAction_v2: Спрайти в роботі
         csd_debugging: Налагодження
-        csd_applab_designmode_short: Режим дизайну Лабораторії додатків
+        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
         csp-pd-welcome: Ласкаво просимо до родини!
         CSF-Teaching-Problem-Solving: 'Основи інформатики: Навчаємось вирішувати проблеми'
         oceans_machine_learning: Машинне навчання
@@ -560,7 +560,7 @@ uk:
         csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
         csd_ml_numerical_ai_lab: Числові дані в Лабораторії ШІ
         PL_CSD_TeacherTips_Debugging: Поради для вчителя - налагодження
-        csd_u6_circuit_playground: Фізична інформатика
+        csd_u6_circuit_playground: Програмування пристроїв
         csd_u6_input_output: Вхідні та вихідні дані
         PL_CS_Journeys_Overview: Інформатичні подорожі
         csp_applab_parameters: Функції з параметрами

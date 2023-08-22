@@ -255,8 +255,9 @@ export default function RubricsContainer({
         handleLearningGoalNameChange={handleLearningGoalNameChange}
       />
       <div style={styles.bottomRow}>
+  
         <Button
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
           onClick={saveRubric}
           size={Button.ButtonSize.narrow}

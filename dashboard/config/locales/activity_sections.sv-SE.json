@@ -739,7 +739,7 @@
           ]
         },
         "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [
@@ -5544,7 +5544,7 @@
           ]
         },
         "6b2ab9dc-4cdf-4797-a181-ac82354bd22f": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "3db6f33d-50ad-4131-a34a-c9d0cf11c1ce": {
           "tips": [
@@ -8400,7 +8400,7 @@
           ]
         },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
-          "description": "![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
+          "description": "[][0]"
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
@@ -11244,7 +11244,7 @@
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
           "description": "#### Introduktion\n\nVälkomna eleverna till lektionen och presentera dagens aktivitet.",
           "tips": [
-            "Ett sätt att presentera kodningstimmen om du inte är så bekant med kodning själv är att visa en av [våra inspirationsvideor](https://hourofcode.com/promote/resources#videos). Välj den som du tror att dina elever kommer att tycka är inspirerande och dela den nu. För elever i åldern 11 till 14 år föreslår vi [Kodningstimmen är här](https://youtu.be/FC5FbmsH4fw)."
+            "Ett sätt att presentera kodningstimmen om du inte är så bekant med kodning själv är att visa en av [våra inspirationsvideor][0]. Välj den som du tror att dina elever kommer att tycka är inspirerande och dela den nu. För elever i åldern 11 till 14 år föreslår vi [Kodningstimmen är här][1]."
           ]
         },
         "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
@@ -11254,7 +11254,7 @@
           "description": "Uppmuntra eleverna att dela med sig av hur de uttrycker sin kreativitet, till exempel med konst, dans, musik eller skrivande. Som en följdfråga, fråga eleverna vad de använder för att bli inspirerade att skapa."
         },
         "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
-          "description": "**Läs poesi tillsammans:** Läs några [några dikter](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) tillsammans i klassen och öva på att identifiera stämningen i varje dikt. Uppmuntra eleverna att dela med sig av sin tolkning, även om den skiljer sig från någon annans."
+          "description": "**Läs poesi tillsammans:** Läs några [några dikter][0] tillsammans i klassen och öva på att identifiera stämningen i varje dikt. Uppmuntra eleverna att dela med sig av sin tolkning, även om den skiljer sig från någon annans."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
           "description": "#### Allmänt stöd\n\nI slutet av den här aktiviteten kommer eleverna att ha en animerad dikt som representerar deras visuella tolkning av den dikt de valde. Den här lektionen är utformad för att ge eleverna en möjlighet att knåpa med sin kod och hitta de visuella effekter som de gillar bäst. \n\nNär du går runt i klassrummet ska du uppmuntra eleverna att:\n\n-   **Ta den tid som behövs:** De flesta nivåerna kräver att eleverna hittar de perfekta effekterna som matchar deras tolkning av stämningen i dikten. Att stanna kvar på en nivå och knåpa med sin kod ska uppmuntras. \n\n-   **Hitta en dikt som du gillar:** Dikten som visas för en elev på en ny nivå är bara ett förslag. Det finns en rullgardinsmeny för dikter med förinlästa dikter högst upp på skärmen. Be eleverna läsa igenom några och hitta en som de gillar. De kan sedan börja animera dikten de valt med kod. \n\n-   **Visa upp en slutförd nivå:** En nivåbubbla som är helt grön betyder att eleven har klarat alla kraven för den nivån. Be en elev klicka på en grön bubbla för att visa upp vad han eller hon har skapat. \n\nNär en elev har kört fast: \n\n-   **Läs instruktionerna:** Instruktionerna är en punktlista med information om hur man slutför nivån. Om en elev inte kommer vidare kan du be eleven läsa instruktionerna högt för dig och återberätta vad som står i instruktionerna med sina egna ord.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Håll utkik efter tips**: De flesta av nivåerna innehåller minst ett tips med mer ingående beskrivning om hur man klarar nivån. \n-   **Ta vara på buggar:** Att få en bugg i din kod är en naturlig del av kodningsprocessen. Om programmet inte gör vad eleven förväntade sig ber du denne att först berätta vad han eller hon vill ska hända, och sedan klicka på Kör för att observera vad som faktiskt händer och sedan hitta vad i koden som orsakade diskrepansen. Kom ihåg att poängtera att det är positivt att hitta och fixa buggar. Att få en bugg innebär att eleverna gör ett bra jobb med att bygga ett mer komplext program."

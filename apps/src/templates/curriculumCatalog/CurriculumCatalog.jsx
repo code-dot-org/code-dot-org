@@ -12,6 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -23,6 +24,9 @@ const CurriculumCatalog = ({
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
+
+  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
@@ -43,6 +47,10 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
+  };
+
+  const handleExpandedCardChange = key => {
+    setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -73,6 +81,13 @@ const CurriculumCatalog = ({
                 script_id,
                 is_standalone_unit,
                 is_translated,
+                //Expanded Card Props
+                device_compatibility,
+                description,
+                professional_learning_program,
+                video,
+                published_date,
+                self_paced_pl_course_offering_path,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -94,6 +109,17 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
+                  quickViewDisplayed={isQuickViewDisplayed}
+                  deviceCompatibility={device_compatibility}
+                  description={description}
+                  professionalLearningProgram={professional_learning_program}
+                  video={video}
+                  publishedDate={published_date}
+                  selfPacedPlCourseOfferingPath={
+                    self_paced_pl_course_offering_path
+                  }
+                  isExpanded={expandedCardKey === key}
+                  onQuickViewClick={() => handleExpandedCardChange(key)}
                   {...props}
                 />
               )
@@ -124,7 +150,6 @@ const CurriculumCatalog = ({
       <HeaderBanner
         headingText={i18n.curriculumCatalogHeaderTitle()}
         subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        short={false}
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />

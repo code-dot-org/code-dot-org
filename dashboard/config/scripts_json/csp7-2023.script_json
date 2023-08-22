@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-06 18:22:12 UTC",
+    "serialized_at": "2023-08-16 12:49:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1318,7 +1318,13 @@
       "position": 4,
       "properties": {
         "description": "**Distribute:** Give students copies of [r csp_parameters_and_return_make_-_rock_paper_scissors_app/csp/2023] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Rock Paper Scissors App"
+        "progression_name": "Make the Rock Paper Scissors App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5690fb1b-cf43-4e59-b9ca-da20537405ee",
@@ -3608,16 +3614,15 @@
       }
     },
     {
-      "name": "CSP Bingo Cards - Unit Seven",
-      "url": "https://drive.google.com/file/d/1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u/view?usp=sharing",
-      "key": "csp_bingo_cards_-_unit_seven",
+      "name": "CSP Bingo Cards - Unit 6 & 7",
+      "url": "https://docs.google.com/presentation/d/1nkBhCExqdR0DbT28N1x5oEEkn4PGbPl7zaNZZNXqsF8/edit?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_6_7",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://drive.google.com/uc?export=download&id=1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "csp_bingo_cards_-_unit_seven"
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
       }
     },
     {
@@ -3747,6 +3752,18 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_7_-_lesson_8-11_-_project_assessment"
+      }
+    },
+    {
+      "name": "Customize Make Lessons: How-To-Guide",
+      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
+      "key": "customize_make_lessons_how-to-guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "customize_make_lessons_how-to-guide"
       }
     },
     {
@@ -3996,6 +4013,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
         "resource.key": "csp_unit_7_-_lesson_3_-_parameters_and_return_practice"
       }
@@ -4039,7 +4062,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
-        "resource.key": "csp_bingo_cards_-_unit_seven"
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
       }
     },
     {

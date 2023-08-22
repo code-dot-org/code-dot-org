@@ -6526,6 +6526,8 @@ zh-TW:
               display_name: 第 2 章：計算機與問題解決能力
             lessonGroup-4:
               display_name: 替代課程
+            lessonGroup-5:
+              display_name: 問卷
           title: 單元一-問題解決和計算（'23-'24）
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
         csd2-2023:
@@ -7271,6 +7273,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
               display_name: 替代課程
+            lessonGroup-4:
+              display_name: 問卷
           name: 對創造力的焦點 1-2023
           title: 單元一-問題解決和計算（'23-'24）
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
@@ -7315,6 +7319,8 @@ zh-TW:
               display_name: 第 2 章：計算機與問題解決能力
             lessonGroup-4:
               display_name: 替代課程
+            lessonGroup-5:
+              display_name: 問卷
           name: 對焦於硬件
           title: 單元一-問題解決和計算（'23-'24）
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
@@ -7347,6 +7353,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
               display_name: 替代課程
+            lessonGroup-4:
+              display_name: 問卷
           name: 聚焦在數據上
           title: 問題解決與計算 ('23-'24)
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
@@ -7400,6 +7408,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
               display_name: 替代課程
+            lessonGroup-4:
+              display_name: 問卷
           name: 專注於設計，具有目的的 1-2023
           title: 單元一-問題解決和計算（'23-'24）
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
@@ -7445,6 +7455,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
               display_name: 替代課程
+            lessonGroup-4:
+              display_name: 問卷
           name: 焦點編碼
           title: 單元一-問題解決和計算（'23-'24）
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
@@ -8083,6 +8095,9 @@ zh-TW:
           description_short: 為學齡前兒童設計的計算機科學指引。
           description: 課程 A 為初學者提供計算機科學課程，包括幼稚園學生。學生將學習使用循環和事件等命令進行編程。本課程的課程還教導學生與他人進行有意義的合作，研究不同的解決問題的技巧，堅持面對具有挑戰性的任務，並了解互聯網安全。
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: 數據
           lesson_groups:
             lessonGroup-2:
               display_name: 數位公民
@@ -8096,10 +8111,15 @@ zh-TW:
               display_name: 事件
             lessonGroup-7:
               display_name: 課程結束專案
+            lessonGroup-8:
+              display_name: 數據
           description_audience: 年齡 5-8
           description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
           description: 我們開發了課程 B，考慮到一年級學生。雖然 B 課程中的概念與 A 課程中的概念相同，但學生可以學習更複雜的不插電活動，並通過更多種類的謎題進行工作。學生將學習編程的基礎知識，協作技巧，調查和批判性思維能力，面對困難的堅持和互聯網安全。在本課程結束時，學生在 Play Lab 編程環境中創建遊戲。
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: 計算系統
           lesson_groups:
             lessonGroup-2:
               display_name: 數位公民
@@ -8111,6 +8131,8 @@ zh-TW:
               display_name: 事件
             lessonGroup-6:
               display_name: 數據
+            lessonGroup-8:
+              display_name: 計算系統
           description: 我們為二年級的學生開發了 C 課程。學生將創建包含排序，循環和事件的程序。他們將研究解決問題的技術並制定策略，以建立在線和離線積極的社區。在課程結束時，學生將創建可以分享的互動遊戲。
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8167,3 +8189,53 @@ zh-TW:
           description_audience: 年齡 9-13
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           description: 我們為五年級的學生創建了 F 課程。課程從研究使用者如何在他們使用的應用程式中做出選擇開始。然後，學生學習製作各種 Sprite Lab 應用程序，這些應用程序也為用戶提供選擇。在課程後期的課程中，學生將學習各種情境中的變數。在整個課程中，學生將獲得更大的自主權和更多選擇。在課程結束時，學生將創建互動項目，與他們的朋友和家人分享。
+        vpl-csp-2023-m1:
+          title: 模組 1
+        vpl-csp-2023-m2:
+          title: 模組 2
+        vpl-csp-2023-m3:
+          title: 模組 3
+        vpl-csp-2023-m4:
+          title: 模組 4
+        vpl-csp-2023-m5:
+          title: 模組 5
+        vpl-csp-2023-m6:
+          title: 模組 6
+        vpl-csp-2023-m7:
+          title: 模組 7
+        vpl-csp-2023-m8:
+          title: 模組 8
+        vpl-csa-2023-m1:
+          title: 模組 1
+        how-ai-works-2023:
+          title: 人工智慧是如何運作的
+        vpl-csa-2023-m2:
+          title: 模組 2
+        vpl-csa-2023-m3:
+          title: 模組 3
+        vpl-csa-2023-m4:
+          title: 模組 4
+        vpl-csa-2023-m5:
+          title: 模組 5
+        vpl-csa-2023-m6:
+          title: 模組 6
+        vpl-csa-2023-m7:
+          title: 模組 7
+        vpl-csa-2023-m8:
+          title: 模組 8
+        vpl-csd-2023-m1:
+          title: 模組 1
+        vpl-csd-2023-m2:
+          title: 模組 2
+        vpl-csd-2023-m3:
+          title: 模組 3
+        vpl-csd-2023-m4:
+          title: 模組 4
+        vpl-csd-2023-m5:
+          title: 模組 5
+        vpl-csd-2023-m6:
+          title: 模組 6
+        vpl-csd-2023-m7:
+          title: 模組 7
+        vpl-csd-2023-m8:
+          title: 模組 8

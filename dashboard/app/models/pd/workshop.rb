@@ -452,7 +452,7 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
+        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
         email.deliver_now
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"

@@ -17,7 +17,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
         text: itakda ang laki ng lahat ng mga Sprite sa {SIZE}
       BadGuys_setSize_dropdown:
         options:
@@ -26,7 +25,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
         text: itakda ang laki ng {SPRITE} sa {SIZE}
       Dancelab_alternateMoves:
         options:
@@ -1006,8 +1004,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
         text: Ang mikroskopyo merong {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1025,8 +1021,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Makipag-ugnay sa {VAR1} gamit ang {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1366,15 +1360,11 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
         text: Ang mikroskopyo merong {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1582,7 +1572,6 @@ fil:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1642,16 +1631,10 @@ fil:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': lahat
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': lahat
       aalab_spriteSayChoices:
         text: "{SPRITE} sabihin ang {SPEECH}"
@@ -1773,7 +1756,6 @@ fil:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2302,11 +2284,9 @@ fil:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': mabagal
             '5': normal
             '7': mabilis
-            '9': extra fast
       gamelab_setTint:
         text: baguhin ang kulay ng {THIS} sa {COLOR}
       gamelab_setupScoreboard:

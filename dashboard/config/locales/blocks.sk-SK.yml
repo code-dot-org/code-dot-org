@@ -15,7 +15,6 @@ sk:
             '0.75': Malé
             '1.00': stredný
             '2.00': Veľké
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ sk:
             '0.75': Malé
             '1.00': stredný
             '2.00': Veľké
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -472,28 +470,8 @@ sk:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -999,8 +977,6 @@ sk:
         options:
           INPUT1:
             '1': citrónová šťava
-            '3': baking soda
-            '5': both
         text: Mikroskop má {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1018,8 +994,6 @@ sk:
         options:
           INPUT1:
             '1': citrónová šťava
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Komunikovať {VAR1} s {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1352,15 +1326,11 @@ sk:
         options:
           INPUT1:
             '1': citrónová šťava
-            '3': baking soda
-            '5': both
         text: Mikroskop má {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': citrónová šťava
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1871,7 +1841,6 @@ sk:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2389,11 +2358,9 @@ sk:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': pomaly
             '5': normálny
             '7': rýchlo
-            '9': extra fast
       gamelab_setTint:
         text: zmeň farbu {THIS} na {COLOR}
       gamelab_setupScoreboard:

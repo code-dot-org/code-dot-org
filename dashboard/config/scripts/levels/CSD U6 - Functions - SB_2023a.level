@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:39.000Z",
   "level_num": "custom",
@@ -102,8 +103,7 @@
     "name_suffix": "_2023a",
     "show_type_hints": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/arrays",
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/color-lights",
     "mini_rubric": "false",
@@ -120,9 +120,8 @@
     "encrypted_examples": "UHVWXLuz8cqyX7d+JG3dbMUMMcEop12G8K6B/Wp/8L5HsyaPt4lgS/MTD2jD\nq7kOxignRQ5xnhosGk3ot3wCLA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.439+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.439+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB_2222\"},{\"changed_at\":\"2023-08-16 19:40:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

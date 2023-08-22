@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Programmēšanas stunda “How-to” rajoniem
 ---
 
 {{ signup_button }}

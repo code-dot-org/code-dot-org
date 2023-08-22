@@ -407,6 +407,7 @@
   "https://studio.code.org/s/allthethings/lessons/13/levels/2": {
     "short_instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
     "long_instructions": "The `string-append` function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of `string-append`.",
+    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\"",
     "callouts": {
       "": "Teal colored blocks, like this one, output string values"
     }
@@ -2945,5 +2946,15 @@
   },
   "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
     "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
+    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about George Washington?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
+    "long_instructions": "# Create Your Scene - Sprites\n\nWith your background in place, it's time to add your sprites.\n\n# Do This\n\n1.  Add or draw at least 2 sprite animations in the Animation Tab.\n2.  Create at least 2 sprites and assign each one an animation.\n3.  Set the value for any sprite properties you'd like to use.\n    -   _Try to use at least 1 sprite property (such as rotation, scale, tint or any others in the Toolbox) with each sprite._\n4.  Draw all of your sprites to the screen."
+  },
+  "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
+    "display_name": "Challenge: Extend Your Scene",
+    "long_instructions": "# Review Your Scene\n\nCheck over your scene one last time to make sure you have included everything that you want.\n\n# Do this\n\n1.  Compare the scene that you drew to your plan.\n2.  Make any last changes.\n3.  What are you most proud of?"
   }
 }

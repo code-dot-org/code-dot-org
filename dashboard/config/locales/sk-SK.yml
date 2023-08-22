@@ -151,11 +151,15 @@ sk:
       uložením cookies na Vašom počítači alebo zariadení.
     more_information: Prečítajte si Zásady ochrany súkromia pre Code.org.
   copy: Kopírovať
+  course_deprecated:
+    button: Zobraziť nové učebné osnovy
+    title: Hlavy hore! Tento učebný plán už nie je k dispozícii, ale Code.org má pre
+      vás k dispozícii novšie možnosti.
   course_offering:
     headers:
       collections: Zbierky
       csa_labs: CSA Labs
-      csc: CS Connections
+      csc: informatika a medzipredmetové vzťahy
       csf: Základy informatiky
       express: Zrýchlené
       favorites: Obľúbené
@@ -503,6 +507,7 @@ sk:
       error_wrong_provider: Nesprávny poskytovateľ. Uistite sa, že sa prihlasujete
         pomocou účtu Google.
       login_with_google: Prihláste sa do aplikácie Maker s Googlom
+    setup_page_title: Nastavenie výrobcu
   match:
     correct_body: To je správna odpoveď.
     correct_title: Správne
@@ -550,6 +555,7 @@ sk:
       about_partners: Partneri
       about_team: Celý tím
       about_us: O nás
+      app_lab_tutorials: App Lab Návody
       course_catalog: Katalóg kurzov
       documentation: Dokumentácia
       educate_beyond: Nad rámec Code.org
@@ -563,6 +569,7 @@ sk:
       educate_partner: Staňte sa naším partnerom
       educate_tools: Nástroje a videá
       finished_hoc: Hotovo!
+      game_lab_documentation: Dokumentácia Game Lab
       game_lab_tutorials: Návody na herné laboratórium
       help_support: Pomoc a podpora
       help_us: Pomôžte nám
@@ -574,11 +581,14 @@ sk:
       legal_tos: Podmienky používania služby
       my_dashboard: Môj hlavný panel
       professional_learning: Vzdelávanie pre profesionálov
+      project_beats_documentation: Dokumentácia projektu Beats
       project_gallery: Projekty
       report_abuse: Nahlásiť zneužitie
       report_bug: Nahlásiť chybu
       sections: Triedy
       sign_in_to_save: Pre uloženie pokroku je nutné sa prihlásiť
+      sprite_lab_documentation: Dokumentácia Sprite Lab
+      sprite_lab_tutorials: Sprite Lab Návody
       stats: Štatistiky
       teach: Vyučujte
       teacher_community: Komunita učiteľov

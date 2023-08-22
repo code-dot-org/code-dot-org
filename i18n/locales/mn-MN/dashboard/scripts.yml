@@ -3126,6 +3126,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3404,6 +3406,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3422,6 +3426,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3439,6 +3445,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3461,6 +3469,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3477,6 +3487,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3690,6 +3702,9 @@ mn:
           description_audience: 4-7 насныхан
           description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
           lesson_groups:
             lessonGroup-2:
               display_name: Дижитал иргэншил
@@ -3701,9 +3716,14 @@ mn:
               display_name: Тооцооллын нөлөө
             lessonGroup-6:
               display_name: Үйл явдлууд
+            lessonGroup-8:
+              display_name: Өгөгдөл
           description_audience: 5-8 насныхан
           description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Тооцооллын систем
           lesson_groups:
             lessonGroup-2:
               display_name: Дижитал иргэншил
@@ -3715,6 +3735,8 @@ mn:
               display_name: Үйл явдлууд
             lessonGroup-6:
               display_name: Өгөгдөл
+            lessonGroup-8:
+              display_name: Тооцооллын систем
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3754,3 +3776,51 @@ mn:
               display_name: Тооцооллын нөлөө
           description_audience: 9-13 насныхан
           description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        vpl-csp-2023-m1:
+          title: Модуль 1
+        vpl-csp-2023-m2:
+          title: Модуль 2
+        vpl-csp-2023-m3:
+          title: Модуль 3
+        vpl-csp-2023-m4:
+          title: Модуль 4
+        vpl-csp-2023-m5:
+          title: Модуль 5
+        vpl-csp-2023-m6:
+          title: Модуль 6
+        vpl-csp-2023-m7:
+          title: Модуль 7
+        vpl-csp-2023-m8:
+          title: Модуль 8
+        vpl-csa-2023-m1:
+          title: Модуль 1
+        vpl-csa-2023-m2:
+          title: Модуль 2
+        vpl-csa-2023-m3:
+          title: Модуль 3
+        vpl-csa-2023-m4:
+          title: Модуль 4
+        vpl-csa-2023-m5:
+          title: Модуль 5
+        vpl-csa-2023-m6:
+          title: Модуль 6
+        vpl-csa-2023-m7:
+          title: Модуль 7
+        vpl-csa-2023-m8:
+          title: Модуль 8
+        vpl-csd-2023-m1:
+          title: Модуль 1
+        vpl-csd-2023-m2:
+          title: Модуль 2
+        vpl-csd-2023-m3:
+          title: Модуль 3
+        vpl-csd-2023-m4:
+          title: Модуль 4
+        vpl-csd-2023-m5:
+          title: Модуль 5
+        vpl-csd-2023-m6:
+          title: Модуль 6
+        vpl-csd-2023-m7:
+          title: Модуль 7
+        vpl-csd-2023-m8:
+          title: Модуль 8

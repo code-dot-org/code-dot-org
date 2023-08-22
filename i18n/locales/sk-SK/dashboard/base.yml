@@ -353,8 +353,13 @@ sk:
       professional_learning: "Vzdelávanie pre profesionálov"
       documentation: "Dokumentácia"
       tutorials: "Návody"
+      app_lab_tutorials: "App Lab Návody"
+      game_lab_documentation: "Dokumentácia Game Lab"
       game_lab_tutorials: "Návody na herné laboratórium"
+      sprite_lab_documentation: "Dokumentácia Sprite Lab"
+      sprite_lab_tutorials: "Sprite Lab Návody"
       web_lab_documentation: "Dokumentácia k Web Lab"
+      project_beats_documentation: "Dokumentácia projektu Beats"
       educate_overview: "Prehľad školiteľov"
       educate_elementary: "Základná škola"
       educate_middle: "2. stupeň základnej školy"
@@ -1232,7 +1237,7 @@ sk:
       sports: 'Športy'
       express: 'Zrýchlené'
       csf: 'Základy informatiky'
-      csc: 'CS Connections'
+      csc: 'informatika a medzipredmetové vzťahy'
       year_long: 'Celoročné'
       csa_labs: 'CSA Labs'
       self_paced: 'Vlastným tempom'
@@ -1261,6 +1266,7 @@ sk:
       error_invalid_user: 'ID používateľa je neplatné. Prihláste sa znova prosím.'
       error_no_code: 'Prosím zadajte svoj prihlasovací kód'
       confirm_login: 'Kliknite "Potvrdiť" a prihláste sa pomocou svojho účtu Google.'
+    setup_page_title: 'Nastavenie výrobcu'
   parent_email_banner:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
     link_your_email: "Prepojte svoj e-mail"
@@ -1296,3 +1302,7 @@ sk:
     binary: "Binárny"
     hexadecimal: "Hexadecimálne"
     pixel_format_header: "Formát pixelov"
+  course_deprecated:
+    title: "Hlavy hore! Tento učebný plán už nie je k dispozícii, ale Code.org má pre vás k dispozícii novšie možnosti."
+    button: "Zobraziť nové učebné osnovy"
+

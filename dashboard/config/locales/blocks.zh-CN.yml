@@ -17,7 +17,6 @@ zh-CN:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
         text: 将所有精灵图的大小设置为{SIZE}
       BadGuys_setSize_dropdown:
         options:
@@ -26,7 +25,6 @@ zh-CN:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -1006,8 +1004,6 @@ zh-CN:
         options:
           INPUT1:
             '1': 柠檬汁
-            '3': baking soda
-            '5': both
         text: 显微镜有{INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1025,8 +1021,6 @@ zh-CN:
         options:
           INPUT1:
             '1': 柠檬汁
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: 让{VAR1}与{SPRITE1COSTUME}交流
       FunctionBlocks_makeManipulative2:
@@ -1410,15 +1404,11 @@ zh-CN:
         options:
           INPUT1:
             '1': 柠檬汁
-            '3': baking soda
-            '5': both
         text: 显微镜有{INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': 柠檬汁
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1734,9 +1724,7 @@ zh-CN:
             '"none"': 保持静止
             '"quarantining"': 生病时隔离
           PORTION:
-            '0.25': few
             '0.5': 一半
-            '0.75': most
             '1': 所有
           RATE:
             '"gradually"': 逐渐
@@ -1751,9 +1739,7 @@ zh-CN:
             '"none"': 保持静止
             '"quarantining"': 生病时隔离
           PORTION:
-            '0.25': few
             '0.5': 一半
-            '0.75': most
             '1': 所有
       aalab_spriteSayChoices:
         options:
@@ -1926,7 +1912,6 @@ zh-CN:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'

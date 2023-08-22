@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-09-21T13:19:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -41,12 +46,13 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/3aeb72194daf2c81b6f45a8d02b0c9d7-image-1644444040622.png)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add an LED\r\n\r\nLet's update our device to toggle an external LED rather than the small red LED on the circuit playground!\r\n\r\n## Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Use two wires to connect an LED to the Circuit Playground on pin `\"A7\"`\r\n\t- One wire connects the negative (-) end of the LED to the `GND` pin\r\n    - One wire connects the positive (+) end of the LED to the `\"A7\"` pin\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the Maker Setup again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create an LED variable on pin `\"A7\"`\r\n\t- Drag out a [`createLed()`(#4dd0e1)](/docs/applab/createLed/) block.\r\n    - Change the pin to `\"A7\"`\r\n2) Update the code to use the external LED instead of the small red led\r\n\t- Replace the `led.toggle()`(#f78183) block with a `___.toggle()`(#f78183) block.\r\n    - Type your variable name into the first blank\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make your external LED turn on and off",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/bcea7eb7f2a178af27fac304204de2d0-image-1691602693089.png)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add an LED\r\n\r\nLet's update our device to toggle an external LED rather than the small red LED on the circuit playground!\r\n\r\n## Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Use two wires to connect an LED to the Circuit Playground on pin `\"A7\"`\r\n\t- One wire connects the negative (-) end of the LED to the `GND` pin\r\n    - One wire connects the positive (+) end of the LED to the `\"A7\"` pin\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the [Maker Setup](https://studio.code.org/maker/setup) again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create an LED variable on pin `\"A7\"`\r\n\t- Drag out a [`createLed()`(#4dd0e1)](/docs/applab/createLed/) block.\r\n    - Change the pin to `\"A7\"`\r\n2) Update the code to use the external LED instead of the small red led\r\n\t- Replace the `led.toggle()`(#f78183) block with a `___.toggle()`(#f78183) block.\r\n    - Type your variable name into the first blank\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make your external LED turn on and off",
     "text_mode_at_start": "false",
     "parent_level_id": 20603,
     "name_suffix": "_2023",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds"
+      "/courses/csd-2022/guides/circuits-and-leds",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/circuits-and-buttons",
     "mini_rubric": "false",
@@ -57,15 +63,18 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "project_template_level_name": "CSD U6 - Physical Input - SB Template_2023",
     "encrypted_examples": "R7VR2c+tzOw+xANhRHRlQ7a+4W8T0HcCdT3c1/IDK4K1PYxMnp+eAP/PMdVl\nOfKUdt+pDbd1I9Q1QSscodoINQ==\n",
+    "code_functions": {
+      "var myButton = createButton": null,
+      "onBoardEvent": null,
+      "buzzer.frequency": null,
+      "var myLed = createLed": null,
+      "led.toggle": null,
+      "__.toggle": null
+    },
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-09-21T13:19:38.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:38.442+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB4_2222\"},{\"changed_at\":\"2023-03-17 16:45:25 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:25 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:56 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"code_functions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:38.442+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB4_2222\"},{\"changed_at\":\"2023-03-17 16:45:25 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:25 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-17 16:46:56 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"code_functions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 17:36:13 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 17:38:27 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"code_functions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 22:26:52 +0000\",\"changed\":[\"reference_links\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

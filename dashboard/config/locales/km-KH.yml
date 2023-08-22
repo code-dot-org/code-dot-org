@@ -301,7 +301,7 @@ km:
       educate_inspire: ជំរុញទឹកចិត្តសិស្ស
       educate_middle: អនុវិទ្យាល័យ
       educate_partner: ធ្វើជាដៃគូរបស់យើង
-      finished_hoc: ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។
+      finished_hoc: ខ្ញុំបានបញ្ចប់!
       game_lab_documentation: ឯកសារ Game Lab
       game_lab_tutorials: មេរៀនណែនាំ Game Lab
       help_support: ជំនួយ និងការគាំទ្រ
@@ -343,7 +343,7 @@ km:
       bounce: បាល់​លោត
       classroom: ទំព័រដើមរបស់់គ្រូបង្រៀន
       create: 'បង្កើត '
-      dance: Dance Party
+      dance: កម្មវិធីរាំ
       gamelab: មន្ទីរពិសោធន៍ហ្គេម
       gamelab_jr: បន្ទប់ហ្គេម (beta)
       gumball: The Amazing World of Gumball
@@ -611,9 +611,9 @@ km:
     aquatic:
       title: ម៉ាញក្រាស់
     dance:
-      title: Dance Party
+      title: កម្មវិធីរាំ
     dance-2019:
-      title: Dance Party
+      title: កម្មវិធីរាំ
     flappy:
       body: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
         សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
