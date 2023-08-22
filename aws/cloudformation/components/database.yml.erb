@@ -110,15 +110,38 @@
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
 
-  SQLUserWriter: <%= lambda_fn 'SQLUser',
-    db_server_name: '',
-    db_admin_username: '',
-    db_admin_password: '',
-    username: '',
-    user_host: '%',
-    password: '',
-    database_list: [],
-    permissions: []
+  SQLUserWriter: <%= lambda_fn 'SQLUserCloudFormationResource',
+    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
+    DBAdminUsername: '!Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"',
+    DBAdminPassword: '!Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"',
+    Name: '!Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:username}}"',
+    ClientHost: '%',
+    Password: '!Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:password}}"',
+    # TODO: Add database name suffix dynamically.
+    Databases: ['pegasus_development', 'dashboard_development'],
+    Privileges: %w(
+      SELECT
+      INSERT
+      UPDATE
+      DELETE
+      CREATE
+      DROP
+      RELOAD
+      PROCESS
+      REFERENCES
+      INDEX
+      ALTER
+      SHOW\ DATABASES
+      CREATE\ TEMPORARY\ TABLES
+      LOCK\ TABLES
+      EXECUTE
+      CREATE\ VIEW
+      SHOW\ VIEW
+      CREATE\ ROUTINE
+      ALTER\ ROUTINE
+      EVENT
+      TRIGGER
+    )
   %>
 
 
