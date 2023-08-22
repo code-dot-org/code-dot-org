@@ -12,7 +12,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
-import {clearChatMessages} from '@cdo/apps/aichat/redux/aichatRedux';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -72,7 +71,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     if (beforeNextLevel) {
       beforeNextLevel();
     }
-    dispatch(clearChatMessages());
     dispatch(navigateToNextLevel());
   }, [dispatch, beforeNextLevel]);
 
