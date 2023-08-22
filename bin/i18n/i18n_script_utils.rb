@@ -255,30 +255,30 @@ class I18nScriptUtils
   end
 
   # For resources like `course_content` and `curriculum_content`,
-  # sync-in creates the script (unit) course_version/course_offering folders structure
+  # sync-in creates the unit course_version/course_offering folders structure
   # (e.g. `i18n/locales/source/curriculum_content/2017/csd/csd1.json`).
   #
-  # If a script (unit) is updated such that its destination directory changes after
+  # If a unit is updated such that its destination directory changes after
   # creation, we can end up in a situation in which we have multiple copies of
-  # the script file in the repo, which makes it difficult for the sync out to
+  # the unit file in the repo, which makes it difficult for the sync out to
   # know which is the canonical version.
   #
   # To prevent that, here we proactively check for existing files in the
-  # filesystem with the same filename as our target script file, but a
-  # different directory. If found, we refuse to create the second such script
+  # filesystem with the same filename as our target unit file, but a
+  # different directory. If found, we refuse to create the second such unit
   # file and notify of the attempt, so the issue can be manually resolved.
   #
   # Example:
-  #   If `course_version` of the script (unit) `csd1` was changed from `2017` to `2023`,
-  #   the new script file `i18n/locales/source/curriculum_content/2023/csd/csd1.json` should not be created
-  #   until the previous scrip file `i18n/locales/source/curriculum_content/2017/csd/csd1.json` is synced-out
+  #   If `course_version` of the unit `csd1` was changed from `2017` to `2023`,
+  #   the new unit file `i18n/locales/source/curriculum_content/2023/csd/csd1.json` should not be created
+  #   until the previous unit file `i18n/locales/source/curriculum_content/2017/csd/csd1.json` is synced-out
   #
   # Note we could try here to remove the old version of the file both from the
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
-  def self.unit_directory_change?(content_dir, script_i18n_name, script_i18n_filename)
-    matching_files = Dir.glob(File.join(content_dir, "**", script_i18n_name)).reject do |other_filename|
-      other_filename == script_i18n_filename
+  def self.unit_directory_change?(content_dir, unit_i18n_filename, unit_i18n_filepath)
+    matching_files = Dir.glob(File.join(content_dir, "**", unit_i18n_filename)).reject do |other_filename|
+      other_filename == unit_i18n_filepath
     end
 
     return false if matching_files.empty?
@@ -286,12 +286,13 @@ class I18nScriptUtils
     # Clean up the file paths, just to make our output a little nicer
     base = Pathname.new(content_dir)
     relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
-    relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-    script_name = File.basename(script_i18n_name, '.*')
-    error_class = 'Destination directory for script is attempting to change'
-    error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+    relative_new = Pathname.new(unit_i18n_filepath).relative_path_from(base)
+    unit_name = File.basename(unit_i18n_filename, '.*')
+    error_class = 'Destination directory for unit is attempting to change'
+    error_message = "Unit #{unit_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
     log_error(error_class, error_message)
-    return true
+
+    true
   end
 
   def self.log_error(error_class, error_message)

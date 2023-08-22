@@ -63,28 +63,28 @@ class I18nScriptUtilsTest < Minitest::Test
   def test_unit_directory_changing
     exec_seq = sequence('execution')
 
-    expected_i18n_dir   = CDO.dir('i18n/locales/source/expected_i18n_dir')
-    expected_file_name  = 'expected.json'
-    expected_file1_path = CDO.dir('i18n/locales/source/expected_i18n_dir/1/expected.json')
-    expected_file2_path = CDO.dir('i18n/locales/source/expected_i18n_dir/2/expected.json')
+    expected_content_dir         = CDO.dir('i18n/locales/source/expected_content_dir')
+    expected_unit_i18n_filename  = 'expected_unit_i18n.json'
+    expected_unit_i18n_filepath1 = CDO.dir('i18n/locales/source/expected_content_dir/1/expected_unit_i18n.json')
+    expected_unit_i18n_filepath2 = CDO.dir('i18n/locales/source/expected_content_dir/2/expected_unit_i18n.json')
 
-    Dir.expects(:glob).with(File.join(expected_i18n_dir, '**', expected_file_name)).in_sequence(exec_seq).returns([expected_file2_path])
+    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).in_sequence(exec_seq).returns([expected_unit_i18n_filepath2])
     I18nScriptUtils.expects(:log_error).with(
-      'Destination directory for script is attempting to change',
-      'Script expected wants to output strings to 1/expected.json, but 2/expected.json already exists'
+      'Destination directory for unit is attempting to change',
+      'Unit expected wants to output strings to 1/expected_unit_i18n.json, but 2/expected_unit_i18n.json already exists'
     ).in_sequence(exec_seq)
 
-    assert I18nScriptUtils.unit_directory_change?(expected_i18n_dir, expected_file_name, expected_file1_path)
+    assert I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath1)
   end
 
   def test_unit_directory_changing_when_no_matching_files
-    expected_i18n_dir  = CDO.dir('i18n/locales/source/expected_i18n_dir')
-    expected_file_name = 'expected.json'
-    expected_file_path = CDO.dir('i18n/locales/source/expected_i18n_dir/expected.json')
+    expected_content_dir        = CDO.dir('i18n/locales/source/expected_content_dir')
+    expected_unit_i18n_filename = 'expected_unit_i18n.json'
+    expected_unit_i18n_filepath = CDO.dir('i18n/locales/source/expected_content_dir/expected_unit_i18n.json')
 
-    Dir.expects(:glob).with(File.join(expected_i18n_dir, '**', expected_file_name)).once.returns([expected_file_path])
+    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).once.returns([expected_unit_i18n_filepath])
 
-    refute I18nScriptUtils.unit_directory_change?(expected_i18n_dir, expected_file_name, expected_file_path)
+    refute I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath)
   end
 
   def test_yml_file_fixing
