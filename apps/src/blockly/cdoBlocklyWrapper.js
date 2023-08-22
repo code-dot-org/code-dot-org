@@ -330,6 +330,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     registerCustomProcedureBlocks() {
       // Google Blockly only. Registers custom blocks for modal function editor.
     },
+    partitionBlocksByType() {
+      // TODO: Add comment
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
 
