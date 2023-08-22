@@ -1,6 +1,6 @@
 {
   "key": "nevada-standards-aligned-fourth-grade",
-  "display_name": "Nevada Standards Aligned 4th Grade",
+  "display_name": "Nevada Standards Aligned: Beta - CSF Course E",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "4",
   "header": "teacher_led",
-  "image": "https://images.code.org/6c6c1cda3e4d54cadd37ab3a222f3d58-image (1).png",
+  "image": "https://images.code.org/b671ac6357900572dbaf947d41d35947-NevadaBetaCatalogCard.png",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",

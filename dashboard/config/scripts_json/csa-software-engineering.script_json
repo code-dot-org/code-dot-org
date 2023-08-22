@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-17 01:19:34 UTC",
+    "serialized_at": "2023-08-18 14:58:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2528,6 +2528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L1"
+        ],
         "progression": "MediaPipe Object Detection Model Demo"
       },
       "bonus": false,
@@ -2550,6 +2553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L2"
+        ],
         "progression": "MediaPipe Model Testing: Image Files"
       },
       "bonus": false,
@@ -2572,6 +2578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L3"
+        ],
         "progression": "COCO - Common Objects in Context Dataset"
       },
       "bonus": false,
@@ -2594,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2616,6 +2628,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3234,7 +3249,7 @@
     },
     {
       "name": "[KEY] Train Your Model",
-      "url": "https://docs.google.com/document/d/1QM2mqU\\_lnonkdndOrXV354gckTLK0nh\\_0zlPxEnO2C4/edit",
+      "url": "https://docs.google.com/document/d/1QM2mqU_lnonkdndOrXV354gckTLK0nh_0zlPxEnO2C4/edit?usp=drive_link",
       "key": "_key_train_your_model",
       "properties": {
         "audience": "Verified Teacher",
@@ -3492,7 +3507,7 @@
     },
     {
       "name": "Image Files",
-      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP\\_OGbp3wPp/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view?usp=drive_link",
       "key": "image_files",
       "properties": {
         "audience": "Student",
@@ -3565,7 +3580,7 @@
     },
     {
       "name": "Object Detection Datasets Datasheets",
-      "url": "https://docs.google.com/document/d/1Lc-BGSoBMSf5aiSy0\\_OAgbtVYv-A0kdesklxpe0iTqs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Lc-BGSoBMSf5aiSy0_OAgbtVYv-A0kdesklxpe0iTqs/edit?usp=drive_link",
       "key": "object_detection_datasets_datasheets",
       "properties": {
         "audience": "Student",
@@ -3772,7 +3787,7 @@
     },
     {
       "name": "Use Your Model",
-      "url": "https://docs.google.com/document/d/1vt8Rvuf\\_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit",
+      "url": "https://docs.google.com/document/d/1vt8Rvuf_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit?usp=drive_link",
       "key": "use_your_model",
       "properties": {
         "audience": "Student",

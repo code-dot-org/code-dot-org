@@ -384,6 +384,8 @@ en:
               name: Music
             lesson-50:
               name: AI Chat
+            lesson-51:
+              name: AI Rubrics
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10320,6 +10322,8 @@ en:
               name: Animal Adaptations
             lesson-4:
               name: Function Machines w Artist
+            lesson-5:
+              name: AI 3-5
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -12674,7 +12678,7 @@ en:
             lessonGroup-6:
               display_name: Data
           name: nevada-standards-aligned-kindergarten-2023
-          title: " Nevada Standards Aligned Kindergarten Course"
+          title: 'Nevada Standards Aligned: Beta - CSF Course A'
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: 'Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
@@ -12701,7 +12705,7 @@ en:
             lessonGroup-8:
               display_name: Data
           name: nevada-standards-aligned-first-grade-2023
-          title: Nevada Standards Aligned First Grade Course
+          title: 'Nevada Standards Aligned: Beta - CSF Course B'
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
@@ -12726,7 +12730,7 @@ en:
             lessonGroup-8:
               display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
-          title: Nevada Standards Aligned Second Grade Course
+          title: 'Nevada Standards Aligned: Beta - CSF Course C'
           description_audience: ''
           description_short: " Learn the basics of computer science and create your own art, stories, and games."
           description: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
@@ -12749,7 +12753,7 @@ en:
             lessonGroup-8:
               display_name: End of Course Project
           name: nevada-standards-aligned-third-grade-2023
-          title: Nevada Standards Aligned Third Grade Course
+          title: 'Nevada Standards Aligned: Beta - CSF Course D'
           description_audience: 'Ages: 7-11'
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
@@ -12768,7 +12772,7 @@ en:
             lessonGroup-6:
               display_name: End of Course Project
           name: nevada-standards-aligned-fourth-grade-2023
-          title: Nevada Standards Aligned Fourth Grade Course
+          title: 'Nevada Standards Aligned: Beta - CSF Course E'
           description_audience: 'Ages: 8-12'
           description_short: Learn the basics of sprites, nested loops, and functions.
           description: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
@@ -12800,7 +12804,7 @@ en:
             lessonGroup-7:
               display_name: End of Course Project
           name: nevada-standards-aligned-fifth-grade-2023
-          title: Nevada Standards Aligned Fifth Grade Course
+          title: 'Nevada Standards Aligned: Beta - CSF Course F'
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.

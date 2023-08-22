@@ -2,9 +2,11 @@ sq:
   data:
     progressions:
       'Artist: Variables': 'Artist: Variablat'
+      Assessment: Vlerësim
       Back and Forth: Prapa dhe perpara
       Bass, Mid, and Treble: Bass, Mes, dhe Treble
       Challenge: Sfida
+      Customize: Personalizo
       Dance Crews: Ekipet e Vallezimit 
       Debugging: Rregullimi
       Design Mode: dan is a masive dick- 
@@ -16,20 +18,31 @@ sq:
       Functions: funksione
       Functions with Parameters: Funksionet me parametra
       Get In Formation: Hyni ne rradhe
+      Introducing Sprite Lab: Prezantimi i Sprite Lab
       Lesson Extras: Mësim shtesë
       Levels: Nivelet
       Lists: Listat
+      'Mini-Project: Collector Game': 'Mini-projekt: Collector Game'
+      'Mini-Project: Outbreak Simulator': 'Mini-projekt: Simulimi i shpërthimit'
+      'Mini-Project: Sticker Art': 'Mini-Projekt: Arti i Stikerave'
+      'Mini-Project: User Input Programs': 'Mini-projekt: Programet e hyrjes (input) së përdoruesit'
+      'Mini-Project: Virtual Pet': 'Mini-projekt: Kafshë shtëpiake virtuale'
+      Modify simulation variables: Modifikoni variablat e simulimit
       More Buttons: Më shumë butona
       Move It Move it Video  - Unplugged Activity: Video Move it Move it- Aktivitet i shkëputur
       Overview: Përmbledhja
       Pair Programming: Programim në çift
+      Picturing Data: Vizualizimi i të dhënave
       Practice: Ushtrime
       Prediction: Parashikimi
       Project: Projekt
       Quarter Notes: Quarter Notes
       Reflection: Reflektim
-      Skill Building: Ndërtimi i shkathtësive
+      Run a simulation: Ekzekutoni një simulim
+      Skill Building: Zhvillimi i shkathtësive
       Speed it Up, Slow it Down: Shpejtoje, Ngadalesoje
+      The Internet - Unplugged Activity: Interneti - Aktivitet i shkëputur
+      Train AI to Clean the Ocean: Trajnoni IA-në për të pastruar oqeanin
       Variables: variabla
       Video: Video
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programimi me blloqe'
@@ -39,13 +52,16 @@ sq:
       'Video: Follow The Digital Trail': 'Video: Ndiqni rrugën digjitale'
       'Video: Introduction to Play Lab': 'Video: Hyrje në Play Lab'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Hyrje në Labirint - Programimi me blloqe '
+      'Video: Outbreak Simulator: Free Play': 'Video: Simulimi i shpërthimit: Lojë e lirë'
       'Video: Pair Programming': 'Video- Programimi në çift'
       'Video: Programming with Rey and BB-8': 'Video: Programimi me Rey dhe BB-8'
       'Video: Repeat Blocks': 'Video: Përsëritni blloqet'
       'Video: Repeat Blocks with BB-8': 'Video: Përsëritni blloqet me BB-8'
       'Video: The Collector': 'Video: Mbledhësi'
       'Video: The Harvester': 'Video: Korrësi'
+      'Video: Training Data & Bias': 'Video: Të dhënat e trajnimit dhe paragjykimet'
       'Video: Using the Repeat Block': 'Video: Përdorimi i bllokut të përsëritur'
       Warm Up: Parapërgatitje
+      Welcome to Monster Town: Mirë se vini në Qytetin e Përbindëshave
       Where'd They Go?: Ku shkuan ata?
       Wrap-up: Mbështjell
