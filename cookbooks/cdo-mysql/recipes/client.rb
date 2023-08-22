@@ -5,6 +5,7 @@ include_recipe 'cdo-mysql::repo'
 # all the way back to MySQL 5.5
 apt_package 'libmysqlclient-dev'
 
+# Pin to MySQL 5.7 until we're ready to update to MySQL 8
 apt_package 'mysql-client' do
   version '5.7.42-1ubuntu18.04'
 end
