@@ -322,13 +322,16 @@ sq:
       stats: "statistikat"
       help_us: "Na Ndihmo"
       about: "Rreth"
+      legal: "Privatësia & Ligjore"
       legal_privacy: "Rregullat e Privatësisë"
+      legal_cookie_notice: "Njoftim për Cookie"
       legal_tos: "Kushtet e shërbimit"
     user:
       classroom: 'Faqja Kryesore e Mësuesit'
       district_dashboard: 'Pulti i Qarkut'
       label: 'Përshëndetje %{username}'
       stats: 'Code Studio'
+      my_projects: 'Projektet e mia'
       settings: 'Llogaria ime'
       logout: 'Dil'
       signin: 'Futu'
@@ -342,6 +345,7 @@ sq:
       artist: 'Artisti'
       bounce: 'Hidhu'
       calc: 'Llogarit'
+      dance: 'Festë vallëzimi'
       eval: 'Vlerëso'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -351,6 +355,7 @@ sq:
       minecraft_adventurer: 'Aventurieri Minecraft'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
+      spritelab: 'Sprite Lab'
       starwars: 'Lufta e Yjeve'
       loading: 'Në ngarkim...'
       view_all: 'Shiko të gjitha projektet...'
@@ -468,7 +473,7 @@ sq:
   footer:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: 'Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.'
-    help_from_html_old: "Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin e këtyre materialeve.\n"
+    help_from_html_old: 'Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin e këtyre materialeve.'
     art_from_html: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox..Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Bimët vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC.Të gjitha të drejtat e rezervuara'
     code_from_html: 'Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU LGPL 2.1</a> .'
@@ -491,6 +496,7 @@ sq:
     how_it_works: 'Si funksionon'
     try_hour_of_code: 'Provo një Orë Kodimi!'
     store: 'Dyqani'
+    cookie_notice: 'Njoftim për Cookie'
   reference_area:
     title: 'Keni nevojë për ndihmë?'
     subtitle: 'Shiko këto video dhe udhëzimet'
@@ -552,6 +558,10 @@ sq:
       cta: 'Mëso si '
     aquatic:
       title: "Minecraft"
+    dance-2019:
+      title: 'Festë vallëzimi'
+    dance:
+      title: 'Festë vallëzimi'
     flappy:
       title: 'Kodi Flappy'
       body: 'Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë Flappy Code!'

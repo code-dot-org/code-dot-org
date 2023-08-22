@@ -3635,6 +3635,8 @@ sk:
           student_description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj
             náš Flappy kód!
           title: Flappy kód
+        flappy-impact-study:
+          title: Flappy kód s prieskumom
         fmscsd3preview:
           title: CSD - Kreslenie v Game Labe
         focus-on-coding-post-survey-2023:

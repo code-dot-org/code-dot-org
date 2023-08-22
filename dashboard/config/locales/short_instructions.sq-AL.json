@@ -179,6 +179,7 @@
         "CourseE_HOC 2018 Level_9b2022": "Përdorni koral si waypoints për të arritur thesarin.",
         "CourseE_HOC 2018 Level_9b_2020": "Përdorni koral si waypoints për të arritur thesarin.",
         "CourseE_HOC 2018 Level_9b_2021": "Përdorni koral si waypoints për të arritur thesarin.",
+        "CourseF_Project_SpriteLab_-2022-2": "Ju keni arritur në fund të kursit F! Krijoni projektin tuaj Sprite Lab.",
         "Crack Random Substitution": "Udhëzimet",
         "Crack a Caesar Cipher": "Udhëzimet",
         "Dance_2019_01": "Terhiqni bllokun <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> ne hapesiren e punes, dhe lidheni ate brenda bllokut  <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml>",
