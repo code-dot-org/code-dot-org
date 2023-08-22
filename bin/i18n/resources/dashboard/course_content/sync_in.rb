@@ -334,7 +334,7 @@ module I18n
 
               script_i18n_name = "#{script.name}.json"
               script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
-              next if I18nScriptUtils.unit_directory_change?(script_i18n_name, script_i18n_filename)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, script_i18n_name, script_i18n_filename)
 
               File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
             end
