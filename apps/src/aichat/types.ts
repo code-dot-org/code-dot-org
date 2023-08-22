@@ -1,3 +1,5 @@
+import {LevelProperties} from '@cdo/apps/lab2/types';
+
 // TODO: Ideally this type would only contain keys present in
 // translated string JSON files (ex. apps/i18n/aichat/en_us.json).
 // However, this requires depending on files outside of apps/src,
@@ -26,4 +28,10 @@ export enum Status {
   PERSONAL = 'personal',
   INAPPROPRIATE = 'inappropriate',
   UNKNOWN = 'unknown',
+}
+
+export interface AichatLevelProperties extends LevelProperties {
+  systemPrompt?: string;
+  botTitle?: string;
+  botDescription?: string;
 }

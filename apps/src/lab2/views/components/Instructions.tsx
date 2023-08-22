@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
@@ -15,6 +15,8 @@ import {ThemeContext} from '../ThemeWrapper';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
+  /** Additional callback to fire before navigating to the next level. */
+  beforeNextLevel?: () => void;
   /**
    * Base asset URL for images. Note: this is currently unused but may be needed in the future if we support
    * instructions images.
@@ -37,7 +39,12 @@ interface InstructionsProps {
  * present on the legacy instructions panel, such as Help & Tips, Documentation, Code Review,
  * For Teachers Only, etc.
  */
-const Instructions: React.FunctionComponent<InstructionsProps> = props => {
+const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  beforeNextLevel,
+  baseUrl,
+  layout,
+  imagePopOutDirection,
+}) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
     (state: {lab: LabState}) =>
@@ -47,14 +54,25 @@ const Instructions: React.FunctionComponent<InstructionsProps> = props => {
   );
   const levelIndex = useSelector(currentLevelIndex);
   const currentLevelCount = useSelector(levelCount);
-  const validationState = useSelector(
+  const {hasConditions, message, satisfied} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
+
+  // If there are no validation conditions, we can show the next button so long as
+  // there is another level. If validation is present, also check that conditions are satisfied.
   const showNextButton =
-    validationState.satisfied && levelIndex + 1 < currentLevelCount;
+    (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
+
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
+
+  const onNextPanel = useCallback(() => {
+    if (beforeNextLevel) {
+      beforeNextLevel();
+    }
+    dispatch(navigateToNextLevel());
+  }, [dispatch, beforeNextLevel]);
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -64,11 +82,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = props => {
   return (
     <InstructionsPanel
       text={instructionsText}
-      message={validationState.message || undefined}
+      message={message || undefined}
       showNextButton={showNextButton}
-      onNextPanel={() => dispatch(navigateToNextLevel())}
+      onNextPanel={onNextPanel}
       theme={theme}
-      {...props}
+      {...{baseUrl, layout, imagePopOutDirection}}
     />
   );
 };
@@ -116,6 +134,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   };
 
   const vertical = layout === 'vertical';
+
+  const canShowNextButton = showNextButton && onNextPanel;
 
   return (
     <div
@@ -171,18 +191,19 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
           </div>
         )}
-        {message && (
+        {(message || canShowNextButton) && (
           <div id="instructions-feedback" className={moduleStyles.feedback}>
             <div
-              key={message}
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              <SafeMarkdown
-                markdown={message}
-                className={moduleStyles.markdownText}
-              />
-              {showNextButton && onNextPanel && (
+              {message && (
+                <SafeMarkdown
+                  markdown={message}
+                  className={moduleStyles.markdownText}
+                />
+              )}
+              {canShowNextButton && (
                 <button
                   id="instructions-feedback-button"
                   type="button"
