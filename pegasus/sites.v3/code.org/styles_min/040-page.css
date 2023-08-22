@@ -90,8 +90,9 @@ p {
   margin-bottom: 1em;
 }
 
-figcaption {
-  font-family: var(--gotham-bold), sans-serif;
+figcaption,
+.video_caption_link {
+  font-family: var(--gotham-bold);
   font-size: 0.875rem;
   margin: 0.5em 0 1em;
   line-height: 1.64;
@@ -350,12 +351,4 @@ button {
 label {
   font-family: var(--gotham-bold);
   font-weight: normal;
-}
-
-figcaption,
-.video_caption_link {
-  font-family: var(--gotham-bold);
-  font-size: 0.875rem;
-  margin: 0.5em 0 1em;
-  line-height: 1.64;
 }
