@@ -59,13 +59,16 @@ class StudentTable extends React.Component {
     // Example: comparator(['familyName', 'name']) will sort by familyName
     // first, looking at name if necessary to break ties.
     const comparator = keys => (a, b) =>
-      keys.reduce((result, key) => result || letterCompare(a[key], b[key]), 0);
+      keys.reduce(
+        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
+        0
+      );
 
     const letterCompare = (a, b) => {
       // Strip out any non-alphabetic characters from the strings before sorting
       // (https://unicode.org/reports/tr44/#Alphabetic)
-      const aLetters = (a || '').replace(/[^\p{Alphabetic}]/gu, '');
-      const bLetters = (b || '').replace(/[^\p{Alphabetic}]/gu, '');
+      const aLetters = a.replace(/[^\p{Alphabetic}]/gu, '');
+      const bLetters = b.replace(/[^\p{Alphabetic}]/gu, '');
 
       const initialCompare = collator.compare(aLetters, bLetters);
 
@@ -77,7 +80,9 @@ class StudentTable extends React.Component {
         return 1;
       }
 
-      return initialCompare;
+      // Use original strings as a fallback if the special-character-stripped
+      // version compares as equal.
+      return initialCompare || collator.compare(a, b);
     };
 
     // Sort students, in-place.
