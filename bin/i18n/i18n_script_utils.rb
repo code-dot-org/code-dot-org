@@ -255,7 +255,7 @@ class I18nScriptUtils
   end
 
   # For resources like `course_content` and `curriculum_content`,
-  # sync-in creates the unit course_version/course_offering folders structure
+  # sync-in creates the unit course_version/course_offering directory structure
   # (e.g. `i18n/locales/source/curriculum_content/2017/csd/csd1.json`).
   #
   # If a unit is updated such that its destination directory changes after
