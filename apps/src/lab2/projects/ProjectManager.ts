@@ -259,7 +259,12 @@ export default class ProjectManager {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
-    if (!this.lastChannel || !(this.sourcesToSave || this.channelToSave)) {
+    // We also cannot save if the user is not the owner of this project.
+    if (
+      !this.lastChannel ||
+      !this.lastChannel.isOwner ||
+      !(this.sourcesToSave || this.channelToSave)
+    ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
