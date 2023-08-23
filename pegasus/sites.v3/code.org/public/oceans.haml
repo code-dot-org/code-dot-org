@@ -98,7 +98,7 @@ theme: responsive
 
   %div{style: "clear: both; margin-top: 10px;"}
 
-  %h3.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
+  %p.body-one.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
 
   = view :resource_boxes, resources: resources
 
@@ -133,8 +133,8 @@ theme: responsive
   #behind-the-scenes
     %h2= hoc_s(:oceans_behind_the_scenes)
 
-    %h3!= hoc_s(:oceans_behind_the_scenes_1_markdown, markdown: :inline)
+    %p!= hoc_s(:oceans_behind_the_scenes_1_markdown, markdown: :inline)
 
-    %h3!= hoc_s(:oceans_behind_the_scenes_2_markdown, markdown: :inline)
+    %p!= hoc_s(:oceans_behind_the_scenes_2_markdown, markdown: :inline)
 
 .clear
