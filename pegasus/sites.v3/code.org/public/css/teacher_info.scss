@@ -1,64 +1,22 @@
 @import "color.scss";
 @import "font.scss";
 
+// NOTE: This can be replaced with an .action-block element
+// that's used on design-system-pegasus.scss if/when this
+// page is refactored.
+
 .teacher-info-container {
   background-color: $neutral_light;
   color: $neutral_dark;
-  padding: 10px 20px 20px 0px;
+  padding: 1rem 1.5rem;
   border: 1px solid $neutral_dark20;
-  border-radius: 2px;
-  font-family: $gotham-regular;;
+  border-radius: 4px;
+  font-family: $gotham-regular;
 }
 
 .teacher-info-inner-container {
-  padding: 0px 0px 0px 20px;
 
-  button {
-    align-self: flex-end;
-    background-color: $brand_secondary_default;
-    border: 2px solid $brand_secondary_default;
-    color: $neutral_white;
-    font-family: $gotham-bold;
-    margin: 5px 0;
-    font-size: 16px;
-    line-height: 16px;
-
-    &:hover {
-      background-color: $brand_secondary_dark;
-      border-color: $brand_secondary_dark;
-      box-shadow: none;
-    }
-
-    &:focus {
-      border-color: $brand_primary_default;
-    }
-
-    &:disabled {
-      color: $neutral_white;
-      border-color: $neutral_dark20;
-      background-color: $neutral_dark20;
-      box-shadow: none;
-      cursor: not-allowed;
-    }
+  h3 {
+    margin-top: 0;
   }
-}
-
-.teacher-info-tag {
-  display: inline-block;
-  padding: 5px 20px;
-  color: $brand_primary_default;
-  border-radius: 0px 2px 2px 0px;
-  text-transform: uppercase;
-}
-
-html[dir= 'rtl'] .teacher-info-container {
-  padding: 10px 0px 20px 20px;
-}
-
-html[dir= 'rtl'] .teacher-info-inner-container {
-  padding: 0px 20px 0px 0px;
-}
-
-html[dir= 'rtl'] .teacher-info-tag {
-  border-radius: 2px 0px 0px 2px;
 }
