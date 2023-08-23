@@ -204,6 +204,7 @@ $container-width: 960px;
 
 .videoContainer {
   height: 246.5px;
+  width: 100%;
 }
 
 .arrowContainer {
@@ -229,4 +230,13 @@ $container-width: 960px;
   margin-top: -9px;
   background: $neutral_white;
   z-index: 1;
+}
+
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 140px;
 }
