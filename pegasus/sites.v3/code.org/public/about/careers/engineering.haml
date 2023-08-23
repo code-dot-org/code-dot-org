@@ -44,28 +44,32 @@ theme: responsive_full_width
     %div
       %img.our-team-text__image.our-team-text__image--1{src: "/images/about/careers/engineering/our-team--1.jpg", alt: ""}
       %h3.heading-md=hoc_s(:engineering_our_team_sub_title_1)
-      %p=hoc_s(:engineering_our_team_text_1, markdown: :inline, locals: {youtube_url: "https://www.youtube.com/watch?v=YMjRTjonlWg", target: "_blank", rel: "noopener noreferrer"})
+      %p.body-three
+        =hoc_s(:engineering_our_team_text_1, markdown: :inline, locals: {youtube_url: "https://www.youtube.com/watch?v=YMjRTjonlWg", target: "_blank", rel: "noopener noreferrer"})
       .clear
 
       .our-team-text__divider
 
       %img.our-team-text__image.our-team-text__image--2{src: "/images/about/careers/engineering/our-team--2.jpg", alt: hoc_s(:engineering_our_team_sub_title_2)}
       %h3.heading-md=hoc_s(:engineering_our_team_sub_title_2)
-      %p=hoc_s(:engineering_our_team_text_2)
+      %p.body-three
+        =hoc_s(:engineering_our_team_text_2)
       .clear
 
       .our-team-text__divider
 
       %img.our-team-text__image.our-team-text__image--3{src: "/images/about/careers/engineering/our-team--3.jpg", alt: hoc_s(:engineering_our_team_sub_title_1)}
       %h3.heading-md=hoc_s(:engineering_our_team_sub_title_3)
-      %p=hoc_s(:engineering_our_team_text_3)
+      %p.body-three
+        =hoc_s(:engineering_our_team_text_3)
       .clear
 
       .our-team-text__divider
 
       %img.our-team-text__image.our-team-text__image--4{src: "/images/about/careers/engineering/our-team--4.jpg", alt: hoc_s(:engineering_our_team_sub_title_2)}
       %h3.heading-md=hoc_s(:engineering_our_team_sub_title_4)
-      %p=hoc_s(:engineering_our_team_text_4)
+      %p.body-three
+        =hoc_s(:engineering_our_team_text_4)
       .clear
 
 = view :section_divider_line
