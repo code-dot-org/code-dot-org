@@ -59,7 +59,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     );
     dispatch(setIsWaitingForChatResponse(false));
 
-    // Add user chat messages to newMessages.
+    // Add user chat messages to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: chatApiResponse.id,
       role: Role.USER,
@@ -68,7 +68,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     };
     dispatch(addChatMessage(newMessage));
 
-    // Add assistant chat messages to newMessages.
+    // Add assistant chat messages to chatMessages.
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: chatApiResponse.id + 1,
