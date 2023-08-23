@@ -2,6 +2,8 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
+import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
+import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -10,29 +12,25 @@ describe('RubricsContainerTest', () => {
       {id: 2, name: 'level 2'},
       {id: 3, name: 'level 3'},
     ],
+    unitName: 'sample unit',
+    lessonNumber: 0,
   };
-  it('adds and deletes Learning Goals when add or delete button is clicked', () => {
-    // add LearningGoals
+
+  it('renders the components on the page correctly for a new rubric', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    expect(wrapper.find('.uitest-learning-goal-card').length).to.equal(1);
-    const addConceptButton = wrapper
-      .find('#ui-test-add-new-concept-button')
-      .first();
-    addConceptButton.simulate('click');
-    expect(wrapper.find('LearningGoalItem').length).to.equal(2);
-    addConceptButton.simulate('click');
-    expect(wrapper.find('LearningGoalItem').length).to.equal(3);
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
+    expect(wrapper.find(LearningGoalItem)).to.have.length(1);
+    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
+  });
 
-    // delete a Learning Goal
-    expect(wrapper.find('LearningGoalItem').at(0).key()).to.equal('1');
-    const firstDeleteButton = wrapper
-      .find('LearningGoalItem')
-      .at(0)
-      .find('Button');
-    firstDeleteButton.simulate('click');
-
-    // validate that the item has been deleted
-    expect(wrapper.find('LearningGoalItem').length).to.equal(2);
-    expect(wrapper.find('LearningGoalItem').at(0).key()).to.equal('2');
+  it('adds a new learning goal on "Add new Key Concept" button click', () => {
+    const wrapper = mount(<RubricsContainer {...defaultProps} />);
+    const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
+    wrapper.find('RubricEditor').invoke('addNewConcept')({
+      preventDefault: sinon.spy(),
+    });
+    wrapper.update();
+    const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
+    expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
   });
 });

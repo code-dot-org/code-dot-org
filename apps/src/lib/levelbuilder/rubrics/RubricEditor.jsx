@@ -10,15 +10,18 @@ export default function RubricEditor({
   handleAiEnabledChange,
   handleLearningGoalNameChange,
 }) {
-  const renderLearningGoalItems = learningGoalList.map(goal => (
-    <LearningGoalItem
-      deleteItem={() => deleteItem(goal.id)}
-      id={goal.id}
-      exisitingLearningGoalData={goal}
-      handleAiEnabledChange={handleAiEnabledChange}
-      handleLearningGoalNameChange={handleLearningGoalNameChange}
-    />
-  ));
+  const renderLearningGoalItems = learningGoalList.map(goal => {
+    return (
+      <LearningGoalItem
+        deleteItem={() => deleteItem(goal.id)}
+        id={goal.id}
+        key={goal.id}
+        exisitingLearningGoalData={goal}
+        handleAiEnabledChange={handleAiEnabledChange}
+        handleLearningGoalNameChange={handleLearningGoalNameChange}
+      />
+    );
+  });
 
   return (
     <div>

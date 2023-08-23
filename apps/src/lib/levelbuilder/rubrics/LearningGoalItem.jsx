@@ -6,7 +6,6 @@ import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
 export default function LearningGoalItem({
-  key,
   deleteItem,
   exisitingLearningGoalData,
   handleAiEnabledChange,
@@ -14,6 +13,10 @@ export default function LearningGoalItem({
 }) {
   const [updatedAiEnabled, setUpdatedAiEnabled] = useState(
     exisitingLearningGoalData.aiEnabled
+  );
+
+  const [updatedKeyConcept, setUpdatedKeyConcept] = useState(
+    exisitingLearningGoalData.learningGoal
   );
 
   const [learningGoalData] = useState(exisitingLearningGoalData);
@@ -24,15 +27,12 @@ export default function LearningGoalItem({
   };
 
   const handleKeyConceptChange = event => {
+    setUpdatedKeyConcept(event.target.value);
     handleLearningGoalNameChange(
       event.target.value,
       exisitingLearningGoalData.id
     );
   };
-
-  // const updateLearningGoalData = newLearningGoalData => {
-  //   setLearningGoalData(newLearningGoalData);
-  // };
 
   return (
     <div className="uitest-learning-goal-card">
@@ -47,6 +47,7 @@ export default function LearningGoalItem({
               <label style={styles.labelAndInput}>
                 <span style={styles.label}>{`Key Concept:`}</span>
                 <input
+                  value={updatedKeyConcept}
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
                   onChange={handleKeyConceptChange}
@@ -82,7 +83,6 @@ export default function LearningGoalItem({
 
 LearningGoalItem.propTypes = {
   deleteItem: PropTypes.func,
-  key: PropTypes.string,
   handleAiEnabledChange: PropTypes.func,
   exisitingLearningGoalData: PropTypes.object,
   handleLearningGoalNameChange: PropTypes.func,

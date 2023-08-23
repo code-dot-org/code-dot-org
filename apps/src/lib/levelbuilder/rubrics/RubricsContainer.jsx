@@ -2,50 +2,12 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
-// import {navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
 import {snakeCase} from 'lodash';
 
 const FORM_ID = 'rubrics-container';
 const RUBRIC_PATH = '/rubrics';
-
-// Custom hook to update the list of learning goals to create
-// Currently, this hook returns two things:
-//   - learningGoals: list of objects that represent the learningGoals to create
-//   - updateLearningGoal: function to update the learningGoal at the given index
-// const useLearningGoals = learningGoal => {
-//   // added "default properties" for any new learningGoal
-//   const [learningGoals, setLearningGoals] = useState(
-//     learningGoal
-//       ? [
-//           {
-//             ...Object.keys(learningGoal),
-//             // aiEnabled: learningGoal.aiEnabled, // not sure about this syntax
-//           },
-//         ]
-//       : [
-//           {
-//             aiEnabled: false,
-//           },
-//         ]
-//   );
-
-//   const updateLearningGoal = (learningGoalIdx, keyToUpdate, val) => {
-//     const newLearningGoals = learningGoals.map((learningGoal, idx) => {
-//       if (idx === learningGoalIdx) {
-//         return {
-//           ...learningGoal,
-//           [keyToUpdate]: val,
-//         };
-//       } else {
-//         return learningGoal;
-//       }
-//     });
-//     setLearningGoals(newLearningGoals);
-//   };
-
-//   return [learningGoals, updateLearningGoal];
-// };
 
 export default function RubricsContainer({
   unitName,
@@ -54,16 +16,9 @@ export default function RubricsContainer({
   rubric,
   lessonId,
 }) {
-  //////////////////// BIG MISTAKE
-  // const [learningGoals, updateLearningGoal] = useLearningGoals(
-  //   learningGoalToBeEdited
-  // );
-  // // note that the use of currentId here is temporary until we are connected to the data
-  // const [currentId, setCurrentId] = useState(1);
-
   const [learningGoalList, setLearningGoalList] = useState(
     !!rubric
-      ? [rubric.learningGoals]
+      ? rubric.learningGoals
       : [
           {
             key: 'learningGoal-1',
@@ -88,13 +43,7 @@ export default function RubricsContainer({
     return `learningGoal-${learningGoalNumber}`;
   };
 
-  // update the goal list
-  // setLearningGoalList(oldList => {
-  //   return [...oldList, startingData];
-  // });
-
   const addNewConceptHandler = event => {
-    // temporary tool for creating unique Ids
     event.preventDefault();
 
     const newKey = generateLearningGoalKey();
@@ -131,7 +80,6 @@ export default function RubricsContainer({
         return learningGoal;
       }
     });
-    console.log('I am for ' + idToUpdate);
     setLearningGoalList(newLearningGoalData);
   };
 
@@ -146,7 +94,6 @@ export default function RubricsContainer({
         return learningGoal;
       }
     });
-    console.log('I am for ' + idToUpdate);
     setLearningGoalList(newLearningGoalData);
   };
 
@@ -158,7 +105,6 @@ export default function RubricsContainer({
 
   const saveRubric = event => {
     event.preventDefault();
-    // const dataUrl = !!rubric ? `${RUBRIC_PATH}/${rubric.id}/edit?` : RUBRIC_PATH;
     const dataUrl = !!rubric ? `/rubrics/${rubric.id}/edit` : RUBRIC_PATH;
     const method = !!rubric ? 'PATCH' : 'POST';
 
@@ -176,8 +122,6 @@ export default function RubricsContainer({
       learningGoalsAttributes: learningGoalListAsData,
     };
 
-    console.log(dataUrl);
-
     fetch(dataUrl, {
       method: method,
       headers: {
@@ -187,18 +131,10 @@ export default function RubricsContainer({
       body: JSON.stringify(rubric_data),
     })
       .then(response => {
-        if (!!rubric) {
-          console.log(response);
-          //let redirectUrl = response.url;
-          // navigateToHref(redirectUrl);
-        } else {
-          console.log(response);
-          //let redirectUrl = response.url;
-          // navigateToHref(redirectUrl);
-        }
+        let redirectUrl = response.url;
+        navigateToHref(redirectUrl);
       })
       .catch(err => {
-        // setIsSaveInProgress(false);
         console.error('Error saving rubric:' + err);
       });
   };
@@ -218,7 +154,6 @@ export default function RubricsContainer({
   }
 
   const handleDropdownChange = event => {
-    console.log(event.target.value);
     setSelectedLevelForAssessment(event.target.value);
   };
 
@@ -255,7 +190,6 @@ export default function RubricsContainer({
         handleLearningGoalNameChange={handleLearningGoalNameChange}
       />
       <div style={styles.bottomRow}>
-  
         <Button
           color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
