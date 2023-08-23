@@ -188,7 +188,7 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
-  isInUS: PropTypes.bool,
+  isInUS: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;
