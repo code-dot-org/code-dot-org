@@ -15,12 +15,12 @@ describe('CdoUtils', () => {
         {type: 'blockType2'},
         {type: 'Dancelab_whenSetup'},
       ];
-      const options = {
-        prioritizedBlockTypes: ['when_run', 'Dancelab_whenSetup'],
-        isJson: true,
-      };
 
-      const result = partitionBlocksByType(blocks, options);
+      const result = partitionBlocksByType(
+        blocks,
+        ['when_run', 'Dancelab_whenSetup'],
+        false
+      );
       expect(result).to.deep.equal([
         {type: 'when_run'},
         {type: 'Dancelab_whenSetup'},
@@ -35,43 +35,39 @@ describe('CdoUtils', () => {
         '<block type="procedures_defnoreturn"></block>'
       );
       const block3 = createBlockElement('<block type="blockType2"></block>');
-
       const blockElements = [block1, block2, block3];
-      const options = {
-        prioritizedBlockTypes: PROCEDURE_DEFINITION_TYPES,
-        isJson: false,
-      };
 
-      const result = partitionBlocksByType(blockElements, options);
+      const result = partitionBlocksByType(
+        blockElements,
+        PROCEDURE_DEFINITION_TYPES,
+        true
+      );
       expect(result).to.deep.equal([block2, block1, block3]);
     });
 
     it('should handle an empty block array', () => {
-      const options = {
-        prioritizedBlockTypes: PROCEDURE_DEFINITION_TYPES,
-        isJson: false,
-      };
-      const result = partitionBlocksByType([], options);
+      const result = partitionBlocksByType(
+        [],
+        PROCEDURE_DEFINITION_TYPES,
+        true
+      );
       expect(result).to.deep.equal([]);
     });
 
     it('should return the original array if no prioritized types are provided', () => {
       const blocks = [{type: 'A'}, {type: 'B'}, {type: 'C'}];
-      const options = {isJson: true};
 
-      const result = partitionBlocksByType(blocks, options);
+      const result = partitionBlocksByType(blocks, undefined, false);
       expect(result).to.deep.equal(blocks);
     });
 
-    it('should not thrown an error and default to using blockElements if isJson is not provided', () => {
+    it('should not thrown an error and default to using blockElements if isBlockElement is not provided', () => {
       const block1 = createBlockElement('<block type="C"></block>');
       const block2 = createBlockElement('<block type="B"></block>');
       const block3 = createBlockElement('<block type="A"></block>');
-
       const blockElements = [block1, block2, block3];
-      const options = {prioritizedBlockTypes: ['A']};
 
-      const result = partitionBlocksByType(blockElements, options);
+      const result = partitionBlocksByType(blockElements, ['A']);
       expect(result).to.deep.equal([block3, block1, block2]);
     });
 

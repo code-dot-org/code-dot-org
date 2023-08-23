@@ -220,13 +220,16 @@ export function registerCustomProcedureBlocks() {
  * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
  * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
  */
-export function partitionBlocksByType(blocks = [], options = {}) {
-  const {prioritizedBlockTypes = [], isJson = false} = options;
+export function partitionBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = [],
+  isBlockElements = true
+) {
   const prioritizedBlocks = [];
   const remainingBlocks = [];
 
   blocks.forEach(block => {
-    const blockType = isJson ? block.type : block.getAttribute('type');
+    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
     prioritizedBlockTypes.includes(blockType)
       ? prioritizedBlocks.push(block)
       : remainingBlocks.push(block);
