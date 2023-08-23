@@ -214,17 +214,19 @@ export function registerCustomProcedureBlocks() {
 /**
  * Partitions blocks of the specified types to the front of the list.
  *
- * @param {Element[]} blockElements - An array of block elements to be partitioned.
- * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
- *    These types are moved to the front of the list while otherwise maintaining order.
- * @returns {Element[]} A new array of block elements partitioned based on their types.
+ * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
+ * @param {Object} [options] - An object containing partitioning options.
+ * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
+ * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
+ * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
  */
-export function partitionBlocksByType(blockElements, prioritizedBlockTypes) {
+export function partitionBlocksByType(blocks, options = {}) {
+  const {prioritizedBlockTypes, isJson} = options;
   const prioritizedBlocks = [];
   const remainingBlocks = [];
 
-  blockElements.forEach(block => {
-    const blockType = block.getAttribute('type');
+  blocks.forEach(block => {
+    const blockType = isJson ? block.type : block.getAttribute('type');
     prioritizedBlockTypes.includes(blockType)
       ? prioritizedBlocks.push(block)
       : remainingBlocks.push(block);

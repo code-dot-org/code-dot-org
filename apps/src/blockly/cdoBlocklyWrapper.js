@@ -331,7 +331,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       // Google Blockly only. Registers custom blocks for modal function editor.
     },
     partitionBlocksByType() {
-      // TODO: Add comment
+      // Google Blockly only. Used to load/render certain block types before others.
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
