@@ -278,7 +278,7 @@ Resources:
     Properties:
       Description: 'Create/Update/Delete a SQL User and its permissions in a MySQL database.'
       FunctionName: SQLUser
-      Code: <%=lambda_zip 'sql_user.rb', 'cfn_response.rb' %>
+      Code: <%=lambda_zip 'lambdas/sql_user', 'cfn_response.rb' %>
       Handler: sql_user.lambda_handler
       Runtime: ruby3.2
       MemorySize: 1024

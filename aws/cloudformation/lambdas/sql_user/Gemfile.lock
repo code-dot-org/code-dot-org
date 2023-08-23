@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mysql2 (0.5.5)
+
+PLATFORMS
+  x86_64-darwin-22
+
+DEPENDENCIES
+  mysql2
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.19
