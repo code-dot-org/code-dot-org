@@ -103,6 +103,28 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
+  test 'enrollment reminder emails send to email stored in enrollment.email' do
+    teacher = create :teacher, email: 'personal@email.com'
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    enrollment = create :pd_enrollment, user: teacher, workshop: workshop, email: 'enrollment@email.com'
+
+    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10})
+
+    refute mail.to_s.include? 'personal@email.com'
+    assert_equal mail.to, ['enrollment@email.com']
+  end
+
+  test 'survey emails send to email stored in enrollment.email' do
+    teacher = create :teacher, email: 'personal@email.com'
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    enrollment = create :pd_enrollment, user: teacher, workshop: workshop, email: 'enrollment@email.com'
+
+    mail = Pd::WorkshopMailer.exit_survey(enrollment)
+
+    refute mail.to_s.include? 'personal@email.com'
+    assert_equal mail.to, ['enrollment@email.com']
+  end
+
   test 'exit survey email links are complete urls' do
     # Note these commented out test cases should be re-enabled
     # once we stop suppressing post-workshop emails for Academic Year Workshops.
