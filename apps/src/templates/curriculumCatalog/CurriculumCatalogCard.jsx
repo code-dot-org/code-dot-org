@@ -48,6 +48,8 @@ const CurriculumCatalogCard = ({
   video,
   publishedDate,
   selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -84,6 +86,8 @@ const CurriculumCatalogCard = ({
     video={video}
     publishedDate={publishedDate}
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+    isExpanded={isExpanded}
+    onQuickViewClick={onQuickViewClick}
     {...props}
   />
 );
@@ -118,6 +122,8 @@ CurriculumCatalogCard.propTypes = {
   video: PropTypes.string,
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -148,10 +154,11 @@ const CustomizableCurriculumCatalogCard = ({
   video,
   publishedDate,
   selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
-  const [isExpandedCardDisplayed, setIsExpandedCardDisplayed] = useState(false);
 
   const handleClickAssign = () => {
     setIsAssignDialogOpen(true);
@@ -201,12 +208,9 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
-  const handleQuickView = () => {
-    setIsExpandedCardDisplayed(!isExpandedCardDisplayed);
-  };
 
   return (
-    <div>
+    <div className={style.cardsContainer}>
       <div>
         <div
           className={classNames(
@@ -251,7 +255,7 @@ const CustomizableCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.neutralDark}
                   type="button"
-                  onClick={handleQuickView}
+                  onClick={onQuickViewClick}
                   aria-label={quickViewButtonDescription}
                   text={'Quick View'}
                 />
@@ -279,7 +283,7 @@ const CustomizableCurriculumCatalogCard = ({
         </div>
         {isAssignDialogOpen && renderAssignDialog()}
       </div>
-      {isExpandedCardDisplayed && (
+      {isExpanded && (
         <ExpandedCurriculumCatalogCard
           courseDisplayName={courseDisplayName}
           duration={duration}
@@ -294,7 +298,7 @@ const CustomizableCurriculumCatalogCard = ({
           pathToCourse={pathToCourse}
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
-          onClose={handleQuickView}
+          onClose={onQuickViewClick}
         />
       )}
     </div>
@@ -335,6 +339,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   video: PropTypes.string,
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
 };
 
 export default connect(
