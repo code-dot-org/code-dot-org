@@ -49,7 +49,7 @@ steps:
     image: codedotorg/code-dot-org:ubuntu-20
     pull: always
     volumes:
-      - name: rbenv
+      - name: rbenvnew
         path: /home/circleci/.rbenv
       - name: mysql
         path: /var/lib/mysql
@@ -73,20 +73,15 @@ steps:
 
   - name: update-cache
     image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/circleci/.rbenv
     settings:
       endpoint: s3://code-dot-org
       debug: true
       pull: true
       rebuild: true
       filename: unit-tests-cache.tar
-      mount:
-        - /home/circleci/.rbenv
 
 volumes:
-  - name: rbenv
+  - name: rbenvnew
     temp: {}
   - name: mysql
     temp: {}
