@@ -8,7 +8,7 @@ module I18n
   module Metrics
     I18N_METRICS_NAMESPACE = 'I18n'.freeze
 
-    # logging to CloudWatch the runtime of a yield block, typically a method.
+    # logging to CloudWatch the runtime of a yield block, typically a method, in Milliseconds.
     # @param method_name [String] Name of the method logged to CloudWatch
     # @param sync_step [String] Step of the sync where the method is used. Options: in, up, down, out.
     def self.report_runtime(method_name, sync_step)
@@ -24,21 +24,15 @@ module I18n
       result
     end
 
-    def self.report_filesize(file_name, sync_step)
-      # addtl_dimensions << {name: 'SyncStep', value: sync_step}
-      # addtl_dimensions << {name: 'FileName', value: file_name}
-      file_path = CDO.dir(File.join("/i18n/locales/source", file_name))
+    def self.report_filesize(file_path, sync_step)
+      file_name = File.basename(file_path)
+      file_dir = File.dirname(file_path)
       log_metric(
-        :FileSizeTest,
+        :FileSize,
         File.size(file_path),
-        [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}],
+        [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}, {name: 'FileDir', value: file_dir}],
         'Bytes'
       )
-      file = File.read(file_path)
-      log_metric(:FileLinesTest, file.count($/), [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}])
-
-      # puts "metric_name: :LOC, value: #{file.count($/)}, SyncStep: #{sync_step}, FileName: #{file_name}"
-      # log_metric(:Filesize, File.size(file_path), [{name: 'FileName', value: file_name}])
     end
 
     # returns the EC2 instance ID if we are running the sync from an EC2,
