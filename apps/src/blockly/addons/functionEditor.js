@@ -32,6 +32,11 @@ export default class FunctionEditor {
   init(options) {
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
+    if (!modalEditor) {
+      // If the modal editor component has not been created, we cannot init.
+      return;
+    }
+
     this.dom = modalEditor;
 
     // Customize auto-populated Functions toolbox category.
@@ -124,7 +129,7 @@ export default class FunctionEditor {
     this.nameInput.value = procedure.getName();
     // TODO: populate description
 
-    this.dom.style.display = '';
+    this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
 
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
