@@ -15,12 +15,13 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
    */
   load(stateToLoad, workspace) {
+    console.log('stateToLoad: ', stateToLoad['blocks']);
     // Procedure definitions should be loaded ahead of call blocks, so that the
     // procedures map is updated correctly.
-    const blockStates = partitionBlocksByType(
-      stateToLoad['blocks'],
-      PROCEDURE_DEFINITION_TYPES
-    );
+    const blockStates = partitionBlocksByType(stateToLoad['blocks'], {
+      prioritizedBlockTypes: PROCEDURE_DEFINITION_TYPES,
+      isJson: true,
+    });
 
     for (const blockState of blockStates) {
       try {

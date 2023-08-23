@@ -122,9 +122,9 @@ export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
 
   // Procedure definitions should be loaded ahead of call
   // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
-    blockElements,
-    prioritizedBlockTypes
-  );
+  const partitionedBlockElements = partitionBlocksByType(blockElements, {
+    prioritizedBlockTypes,
+    isJson: false,
+  });
   return partitionedBlockElements;
 }
