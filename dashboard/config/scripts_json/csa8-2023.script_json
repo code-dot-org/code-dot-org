@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-15 19:33:24 UTC",
+    "serialized_at": "2023-08-22 18:07:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,6 +116,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.5\n* Topic Questions 7.5\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I determine the efficiency of an algorithm?**\n\nStudents have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, they realize that they have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. Students learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. Students then write user stories for their Creative Coding with the Console Project to identify required program features.",
         "preparation": "* **(Optional)** Print copies of the U8L2 Guided Notes (one for each student)\n* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-2-searching/37952) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I determine the efficiency of an algorithm?**\n\nYou have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, you realize that you have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. You learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. You then write user stories for your Creative Coding with the Console Project to identify required program features."
@@ -134,6 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How is a binary search more efficient than a linear search?**\n\nStudents previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, they discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. Students also revisit recursion and explore how the binary search algorithm can be implemented recursively.",
         "preparation": "* **(Optional)** Print copies of the U8L3 Guided Notes (one for each student)\n* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-3-binary-search/37953) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is a binary search more efficient than a linear search?**\n\nYou previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, you discover a better searching algorithm that can perform more efficiently if the list is already sorted. You explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. You also revisit recursion and explore how the binary search algorithm can be implemented recursively."
@@ -152,6 +154,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, students learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, they explore its functionality using manipulatives and evaluate its efficiency using execution counts. Students then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values.",
         "preparation": "* **(Optional)** Print copies of the U8L4 Guided Notes (one for each student)\n* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-4-selection-sort/37954) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, you learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, you explore its functionality using manipulatives and evaluate its efficiency using execution counts. You then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values."
@@ -170,6 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nStudents previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, they explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. Students analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms.",
         "preparation": "* **(Optional)** Print copies of the U8L5 Guided Notes (one for each student)\n* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-5-insertion-sort/37955) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nYou previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, you explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. You analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms."
@@ -188,6 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. They learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. Students determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms.",
         "preparation": "* **(Optional)** Print copies of the U8L6 Guided Notes (one for each student)\n* Print copies of the Merge Sort handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-6-merge-sort/37956) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. You learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. You determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms."
@@ -206,6 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, students learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, students have an opportunity to apply what they have learned about searching and sorting to work with multiple lists. They review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. Students then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure.",
         "preparation": "* **(Optional)** Print copies of the U8L7 Guided Notes (one for each student)\n* Preview the *Searching Algorithms* and *Sorting Algorithms* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-7-searching-and-sorting/37957) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I implement searching and sorting algorithms when working multiple lists?**\n\nThroughout the unit, you learned about searching and sorting algorithms and analyzed the efficiency of each. In this lesson, you have an opportunity to apply what you have learned about searching and sorting to work with multiple lists. You review the functionality and ideal scenario for each searching and sorting algorithm and explore how programs work with multiple lists to store different but related values. You then practice implementing algorithms to traverse multiple lists and use searching and sorting algorithms to find and organize elements in a data structure."
@@ -242,6 +248,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, students consider how the apps and programs they use when at home or at school collect data about them, such as their name, address, or favorite TV show. They explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security.",
         "preparation": "* **(Optional)** Print copies of the U8L9 Guided Notes (one for each student)\n* Print copies of the Data, Privacy, and Security handout (one for each student)\n* Print copies of the Unit 8 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-9-privacy-and-security/37959) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the tradeoffs between the utility of data collection and safeguarding privacy and security?**\n\nIn this lesson, you consider how the apps and programs you use when at home or at school collect data about you, such as your name, address, or favorite TV show. You explore issues related to privacy and security by reading case studies about real-world breaches and debate about the tradeoffs between the utility of data collection and safeguarding privacy and security."
@@ -1429,18 +1436,6 @@
       }
     },
     {
-      "key": "7aceeeef-baa0-4898-94f2-3dc80d21f00e",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.5\n* Topic Questions 7.5\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7aceeeef-baa0-4898-94f2-3dc80d21f00e",
-        "lesson_activity.key": "16cf9021-af0b-4810-ac4b-0a4dab68e6dc"
-      }
-    },
-    {
       "key": "a9cb65ee-7c12-4aaf-af9f-279289266d79",
       "position": 1,
       "properties": {
@@ -1731,18 +1726,6 @@
       }
     },
     {
-      "key": "5dbb66c0-18b5-41f2-af3f-bcd8a677ec30",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "5dbb66c0-18b5-41f2-af3f-bcd8a677ec30",
-        "lesson_activity.key": "e6f9a2ca-73aa-41ad-8e93-988203317d63"
-      }
-    },
-    {
       "key": "0bdc0b87-35f8-4a45-9fd5-5e00d05415b4",
       "position": 1,
       "properties": {
@@ -1984,18 +1967,6 @@
       }
     },
     {
-      "key": "59f14725-269f-4e0e-a21b-a01fb20eb0c0",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "59f14725-269f-4e0e-a21b-a01fb20eb0c0",
-        "lesson_activity.key": "b41d850c-4840-4ec7-981a-634a5b4f8445"
-      }
-    },
-    {
       "key": "bfbd6df7-b068-4104-809d-5c59b469b698",
       "position": 1,
       "properties": {
@@ -2227,18 +2198,6 @@
       }
     },
     {
-      "key": "16917b76-998d-4de9-9e00-aed8227da33b",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "16917b76-998d-4de9-9e00-aed8227da33b",
-        "lesson_activity.key": "4d6616f9-27aa-4b4e-b9b2-f10fd2db5b30"
-      }
-    },
-    {
       "key": "c9b26c83-bc0f-4347-bac2-897f8f2080bd",
       "position": 1,
       "properties": {
@@ -2465,18 +2424,6 @@
       },
       "seeding_key": {
         "activity_section.key": "92a51183-0844-4325-8437-4abbdf8926d3",
-        "lesson_activity.key": "682da159-6ad7-413f-93eb-a516c04eec23"
-      }
-    },
-    {
-      "key": "0066dfb3-a06a-4485-b1b1-d0178e56ccaa",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0066dfb3-a06a-4485-b1b1-d0178e56ccaa",
         "lesson_activity.key": "682da159-6ad7-413f-93eb-a516c04eec23"
       }
     },
@@ -2785,18 +2732,6 @@
       }
     },
     {
-      "key": "ee3eeadd-1cbe-4cc8-b470-ec895a7afe29",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "ee3eeadd-1cbe-4cc8-b470-ec895a7afe29",
-        "lesson_activity.key": "4fa478e9-17ff-45c7-9df1-c8737bd549b4"
-      }
-    },
-    {
       "key": "d5e9bf65-b5d7-42e0-85b2-3f81bd25c35a",
       "position": 1,
       "properties": {
@@ -3101,18 +3036,6 @@
       },
       "seeding_key": {
         "activity_section.key": "4b9781e9-646b-464e-8264-a2615eb7ffc7",
-        "lesson_activity.key": "39b34429-564d-44d4-be6f-5fb485ca5bb7"
-      }
-    },
-    {
-      "key": "4ce06b53-9c29-4f80-b1c9-d563268d83ba",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "4ce06b53-9c29-4f80-b1c9-d563268d83ba",
         "lesson_activity.key": "39b34429-564d-44d4-be6f-5fb485ca5bb7"
       }
     },
@@ -4952,6 +4875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4973,6 +4899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4995,6 +4924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5017,6 +4949,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
