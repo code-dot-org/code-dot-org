@@ -8,15 +8,16 @@
           %a{:href=>person[:url_s], :target=>"_self"}
             - unless avatar_url.nil_or_empty?
               %img{:src=>avatar_url, :alt=>"Open LinkedIn, personal website, or extended bio in a new window to learn more about", :style=>'max-height: 200px; border-radius: 100px;'}
-            %h3{:style=>'min-height: 20px'}
+            %h3.heading-sm{:style=>'min-height: 20px'}
               = person[:name_s]
         - else
           - unless avatar_url.nil_or_empty?
             %img{:src=>avatar_url, :alt=>"", :style=>'max-height: 200px; border-radius: 100px;'}
-          %h3{:style=>'min-height: 20px;'}
+          %h3.heading-sm{:style=>'min-height: 20px;'}
             = person[:name_s]
         -unless person[:title_s].nil_or_empty?
-          %p{:style=>'min-height: 40px;'}!= person[:title_s]
-        %p{:style=>'font-size: 13px;  margin-bottom: 50px;'}!= person[:description_t]
+          %p{:style=>'min-height: 40px;'}
+            %strong!= person[:title_s]
+        %p{:style=>'margin-bottom: 50px;'}!= person[:description_t]
 
   %br{:style=>'clear: both;'}
