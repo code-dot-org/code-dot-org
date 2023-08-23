@@ -7,32 +7,22 @@
 # 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
 require_relative 'i18n_script_utils'
-require_relative 'metrics'
 
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync up starting"
-    CROWDIN_TEST_PROJECTS.each do |name, options|
-      file_count = 0
+    CROWDIN_PROJECTS.each do |name, options|
       puts "Uploading source strings to #{name} project"
       command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file]}"
       Open3.popen2(command) do |_stdin, stdout, status_thread|
         while line = stdout.gets
           # skip lines detailing individual file upload, unless that file
           # resulted in an unexpected response
+          next if line.start_with?("✔️  File")
 
-          if line.start_with?("✔️  File")
-            file_count += 1
-            file_name = line.partition(' File ').last.tr("'", "").strip
-            if name.to_s == 'codeorg-markdown-testing'
-              I18n::Metrics.report_filesize('markdown/public/' + file_name, 'up')
-            else
-              I18n::Metrics.report_filesize(file_name, 'up')
-            end
-          else
-            puts line
-          end
+          puts line
         end
+
         raise "Sync up failed" unless status_thread.value.success?
       end
     end

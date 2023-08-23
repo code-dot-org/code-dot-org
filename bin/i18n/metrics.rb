@@ -56,7 +56,6 @@ module I18n
       # add machine_id and environment dimensions to addtl_dimensions
       addtl_dimensions << {name: 'Environment', value: CDO.rack_env}
       addtl_dimensions << {name: 'MachineId', value: machine_id}
-      puts "#{I18N_METRICS_NAMESPACE} {metric_name: #{metric_name}, value: #{metric_value}, dimensions: #{addtl_dimensions}, unit: #{metric_units}}"
       Cdo::Metrics.put_metric(
         I18N_METRICS_NAMESPACE,
           {
