@@ -44,7 +44,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {baseAssetUrl, BlockMode} from '../constants';
+import {baseAssetUrl, BlockMode, DEFAULT_LIBRARY} from '../constants';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
@@ -53,6 +53,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
+import MusicLibrary from '../player/MusicLibrary';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -160,6 +161,7 @@ class UnconnectedMusicView extends React.Component {
     if (this.props.appName === 'music') {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
+    this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
   }
 
   async componentDidUpdate(prevProps) {
@@ -197,6 +199,10 @@ class UnconnectedMusicView extends React.Component {
       this.updateHighlightedBlocks();
     }
 
+    if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
+      this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
+    }
+
     // Update components with new level data and new initial sources when
     // the level changes.
     if (
@@ -218,7 +224,7 @@ class UnconnectedMusicView extends React.Component {
     if (!libraryName && initialSources?.labConfig?.music) {
       libraryName = initialSources.labConfig.music.library;
     }
-    await this.loadAndInitializePlayer(libraryName);
+    await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
@@ -242,7 +248,8 @@ class UnconnectedMusicView extends React.Component {
   // Load the library and initialize the music player, if not already loaded.
   // Currently, we only load one library per progression.
   loadAndInitializePlayer = async libraryName => {
-    if (this.state.loadedLibrary) {
+    if (this.state.currentLibraryName === libraryName) {
+      // Already loaded this library, no need to load again.
       return;
     }
 
@@ -250,11 +257,12 @@ class UnconnectedMusicView extends React.Component {
 
     try {
       this.library = await loadLibrary(libraryName);
+      MusicLibrary.setCurrent(this.library);
     } catch (error) {
       this.props.setPageError({
         errorMessage: 'Error loading library',
         error,
-        details: {libraryName: libraryName || 'default'},
+        details: {libraryName},
       });
       return;
     }
@@ -268,19 +276,12 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    try {
-      this.player.initialize(this.library, this.props.updateLoadProgress);
-    } catch (error) {
-      this.props.setPageError({
-        errorMessage: 'Error initializing music player',
-        error,
-        details: {libraryName: libraryName || 'default'},
-      });
-      return;
-    }
+    this.player.updateConfiguration(
+      this.library.getBPM(),
+      this.library.getKey()
+    );
 
     this.setState({
-      loadedLibrary: true,
       currentLibraryName: libraryName,
     });
 
@@ -437,6 +438,7 @@ class UnconnectedMusicView extends React.Component {
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
+    this.player.preloadSounds(this.sequencer.getPlaybackEvents());
   };
 
   saveCode = (forceSave = false) => {

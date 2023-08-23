@@ -26,36 +26,27 @@ export default class MusicPlayer {
   private bpm: number;
   private key: Key;
   private samplePlayer: SamplePlayer;
-  private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
+    this.samplePlayer = new SamplePlayer();
+    this.updateConfiguration(bpm, key);
     this.bpm = this.validateBpm(bpm);
     this.key = this.validateKey(key);
-    this.samplePlayer = new SamplePlayer();
-    this.library = null;
+    this.samplePlayer.setBpm(bpm);
   }
 
-  /**
-   * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
-   * Playback cannot start until the player is initialized.
-   */
-  initialize(
-    library: MusicLibrary,
-    updateLoadProgress: (value: number) => void
-  ) {
-    this.library = library;
-
-    // Set key and BPM from library if present
-    const libraryBpm = library.getBPM();
-    if (libraryBpm) {
-      this.bpm = this.validateBpm(libraryBpm);
+  updateConfiguration(bpm?: number, key?: Key) {
+    if (bpm) {
+      this.bpm = this.validateBpm(bpm);
+      this.samplePlayer.setBpm(this.bpm);
     }
-    const libraryKey = library.getKey();
-    if (libraryKey) {
-      this.key = this.validateKey(libraryKey);
+    if (key) {
+      this.key = this.validateKey(key);
     }
+  }
 
-    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
+  setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
+    this.samplePlayer.setUpdateLoadProgress(updateLoadProgress);
   }
 
   /**
@@ -71,6 +62,19 @@ export default class MusicPlayer {
 
   getBPM(): number {
     return this.bpm;
+  }
+
+  /**
+   * Pre-load sounds for playback
+   */
+  // TODO: Metrics?
+  preloadSounds(events: PlaybackEvent[]) {
+    const sampleIds = events
+      .map(event => this.convertEventToSamples(event))
+      .flat()
+      .map(sampleEvent => sampleEvent.sampleId);
+
+    this.samplePlayer.loadSounds(sampleIds);
   }
 
   /**
@@ -197,8 +201,9 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
-    if (this.library === null) {
-      Lab2MetricsReporter.logWarning('Music Player not initialized');
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      Lab2MetricsReporter.logWarning('Library not set. Cannot play sounds.');
       return [];
     }
 
@@ -208,7 +213,7 @@ export default class MusicPlayer {
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
-      const soundData = this.library.getSoundForId(soundEvent.id);
+      const soundData = library.getSoundForId(soundEvent.id);
       if (!soundData) {
         Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
         return [];
@@ -292,12 +297,12 @@ export default class MusicPlayer {
   }
 
   private getSampleForNote(note: number, instrument: string): string | null {
-    if (this.library === null) {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
       return null;
     }
 
-    const folder: SoundFolder | null =
-      this.library.getFolderForPath(instrument);
+    const folder: SoundFolder | null = library.getFolderForPath(instrument);
 
     if (folder === null) {
       Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);

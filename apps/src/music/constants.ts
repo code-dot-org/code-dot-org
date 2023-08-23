@@ -64,3 +64,5 @@ export const REMOTE_STORAGE = 'remote';
 
 // Minimum number of measures in a song
 export const MIN_NUM_MEASURES = 30;
+
+export const DEFAULT_LIBRARY = 'default';
