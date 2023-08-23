@@ -235,6 +235,22 @@ describe('ProjectManager', () => {
       assert.deepEqual(e, error);
     }
   });
+
+  it('does not trigger a save if the user is not the owner', async () => {
+    const readonlyChannel = {...FAKE_CHANNEL, isOwner: false};
+    channelsStore.load.returns(Promise.resolve(readonlyChannel));
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE);
+    assert.isTrue(sourcesStore.save.notCalled);
+    assert.isTrue(channelsStore.save.notCalled);
+  });
 });
 
 // Helper functions
