@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-15 19:23:21 UTC",
+    "serialized_at": "2023-08-22 17:42:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,6 +98,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
         "preparation": "* **(Optional)** Print copies of the U3L1 Guided Notes (one for each student)\n* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-1-one-dimensional-1d-arrays/37885) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
@@ -116,6 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U3L2 Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-2-modifying-elements/37886) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
@@ -134,6 +136,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nStudents have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, students discover the need for loops to repeatedly access multiple elements and revisit `while` loops. Students learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. Students then practice using `while` loops to traverse one and multiple 1D arrays.",
         "preparation": "* **(Optional)** Print copies of the U3L3 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-3-traversing-1d-arrays/37887) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nYou have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, you discover the need for loops to repeatedly access multiple elements and revisit `while` loops. You learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. You then practice using `while` loops to traverse one and multiple 1D arrays."
@@ -152,6 +155,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
         "preparation": "* **(Optional)** Print copies of the U3L4 Guided Notes (one for each student)\n* Preview the *For Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-4-for-loops/37888) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
@@ -170,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
         "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
@@ -188,6 +193,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
         "preparation": "* **(Optional)** Print copies of the U3L6 Guided Notes (one for each student)\n* Preview the *Polymorphism* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-6-polymorphism/37890) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
@@ -206,6 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
         "preparation": "* **(Optional)** Print copies of the U3L7 Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-7-enhanced-for-loops/37891) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
@@ -224,6 +231,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
         "preparation": "* **(Optional)** Print copies of the U3L8 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-8-array-algorithms/37892) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
@@ -242,6 +250,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U3L9 Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-9-finding-duplicates/37893) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
@@ -1294,18 +1303,6 @@
       }
     },
     {
-      "key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
-        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
-      }
-    },
-    {
       "key": "02114e55-4866-4028-a84e-f4c3fbeb5672",
       "position": 1,
       "properties": {
@@ -1605,18 +1602,6 @@
       }
     },
     {
-      "key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
-        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
-      }
-    },
-    {
       "key": "2d32c1d6-e348-4448-becf-65b1bb0f6be4",
       "position": 1,
       "properties": {
@@ -1901,18 +1886,6 @@
       },
       "seeding_key": {
         "activity_section.key": "de2d3d9f-dd48-45c3-a369-7400df7f4810",
-        "lesson_activity.key": "4eafe6ef-0997-4d1d-8953-ec0ff693f958"
-      }
-    },
-    {
-      "key": "54197dd0-eecf-4f1b-8bb1-825796f5e379",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "54197dd0-eecf-4f1b-8bb1-825796f5e379",
         "lesson_activity.key": "4eafe6ef-0997-4d1d-8953-ec0ff693f958"
       }
     },
@@ -2245,18 +2218,6 @@
       }
     },
     {
-      "key": "c3e68f8c-1ab1-49a9-9345-7a86c0d5bb5c",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "c3e68f8c-1ab1-49a9-9345-7a86c0d5bb5c",
-        "lesson_activity.key": "b4d010a4-d25c-4d2b-8f5b-4372853fbdfb"
-      }
-    },
-    {
       "key": "7bb6dfc5-e014-4fd0-a5ff-ff4233e7c457",
       "position": 1,
       "properties": {
@@ -2537,18 +2498,6 @@
       }
     },
     {
-      "key": "be81990c-8cae-4f74-93af-d2f733ab3793",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "be81990c-8cae-4f74-93af-d2f733ab3793",
-        "lesson_activity.key": "be24be6c-d594-43e1-a15c-488b34334c0c"
-      }
-    },
-    {
       "key": "6b3ef944-66ab-427f-b635-d3765be96e1d",
       "position": 1,
       "properties": {
@@ -2818,18 +2767,6 @@
       }
     },
     {
-      "key": "7b21fcda-7d77-4e8f-97bc-eb73070b80fa",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7b21fcda-7d77-4e8f-97bc-eb73070b80fa",
-        "lesson_activity.key": "6e18e8f5-e225-4d6d-aec2-b1022d7394ad"
-      }
-    },
-    {
       "key": "ae6026cc-6c14-4545-9924-0d0a466db1f8",
       "position": 1,
       "properties": {
@@ -3077,18 +3014,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c42c564c-18a8-4cf2-9b1e-c1f78fd36234",
-        "lesson_activity.key": "0dcf1d6c-66af-4144-9047-68e4a28e5494"
-      }
-    },
-    {
-      "key": "8255d09b-6b08-40b7-a154-d56227cdeb23",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8255d09b-6b08-40b7-a154-d56227cdeb23",
         "lesson_activity.key": "0dcf1d6c-66af-4144-9047-68e4a28e5494"
       }
     },
@@ -3410,18 +3335,6 @@
       }
     },
     {
-      "key": "92fb37dc-e132-48cc-932c-2012e6a38d3e",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "92fb37dc-e132-48cc-932c-2012e6a38d3e",
-        "lesson_activity.key": "34a422c2-f415-4973-80cc-ec7645e0e355"
-      }
-    },
-    {
       "key": "ade42d13-e74a-4283-b13a-2ed2b1861e88",
       "position": 1,
       "properties": {
@@ -3669,18 +3582,6 @@
       },
       "seeding_key": {
         "activity_section.key": "f9f004f0-83ad-4869-b73d-2453d9047cda",
-        "lesson_activity.key": "72c2eaca-f2a6-4f3e-b8df-6bf1fb693952"
-      }
-    },
-    {
-      "key": "db419a42-6817-4da4-9940-81cd190fc38f",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "db419a42-6817-4da4-9940-81cd190fc38f",
         "lesson_activity.key": "72c2eaca-f2a6-4f3e-b8df-6bf1fb693952"
       }
     },
@@ -6396,6 +6297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6417,6 +6321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6439,6 +6346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6461,6 +6371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
