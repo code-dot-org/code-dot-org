@@ -324,6 +324,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      resources: get_available_resources(locale_code)
     }
   end
 
@@ -456,5 +457,29 @@ class CourseOffering < ApplicationRecord
     end
 
     true
+  end
+
+  def get_available_resources(locale_code='en-us')
+    acceptable_types = ['Answer Key', 'Activity Guides', 'Slides', 'Exemplar', 'Slide Deck', 'Rubric']
+    resources = latest_published_version(locale_code).resources
+    found_types = Set.new
+    filtered_resources = resources.select do |resource|
+      properties = resource.properties
+      type = properties['type']
+      if properties.key?('type') && acceptable_types.include?(type) && found_types.exclude?(type)
+        found_types.add(type)
+        true
+      else
+        false
+      end
+    end
+
+    expanded_card_resources = filtered_resources&.map do |resource|
+      {
+        "type" => resource["properties"]["type"],
+        "url" => resource["url"]
+      }
+    end
+    return expanded_card_resources
   end
 end
