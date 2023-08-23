@@ -1,5 +1,5 @@
 ---
-title: High School Page
+title: High School Curricula
 theme: responsive
 ---
 
@@ -7,14 +7,14 @@ theme: responsive
 %link{href: "/css/generated/page/school-curricula.css", rel: "stylesheet"}
 
 %section
-    .wrapper
-        %h1
-            =hoc_s(:high_school_curricula_title)
-        %p.video-101__text=hoc_s(:high_school_curricula_description)
-        = view :high_school_curricula_video
-        %hr{style: "border-top: 1px solid #bababa; margin: 2rem 0"}
-        .div{style: "text-align: center; margin-bottom: 72px"}
-            %p{style: "text-align: center; margin-botton: 2rem"}
-                =hoc_s(:curricula_bottom_text)
-            %a.link-button.secondary{href: "https://studio.code.org/catalog"}
-                =hoc_s(:curricula_bottom_button)
+  .wrapper
+    %h1
+      =hoc_s(:curricula_title_high)
+      %p.video-101__text=hoc_s(:curricula_desc_high)
+      = view :high_school_curricula_video
+      %hr{style: "border-top: 1px solid #bababa; margin: 2rem 0"}
+      .div{style: "text-align: center; margin-bottom: 72px"}
+        %p{style: "text-align: center; margin-botton: 2rem"}
+          =hoc_s(:heading_explore_curriculum_catalog)
+        %a.link-button.secondary{href: "https://studio.code.org/catalog"}
+          =hoc_s(:call_to_action_explore_curriculum_catalog)
