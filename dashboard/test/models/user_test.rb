@@ -572,6 +572,24 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "saving user strips display name and family name" do
+    user = create :student, name: '  test name  ', family_name: '  test fam name  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name'
+    assert_equal user.family_name, 'test fam name'
+
+    user.name = '  test name 2  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name 2'
+
+    user.family_name = '  test fam name 2  '
+    user.save
+    user.reload
+    assert_equal user.family_name, 'test fam name 2'
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
