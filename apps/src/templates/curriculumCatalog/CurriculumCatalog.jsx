@@ -91,6 +91,7 @@ const CurriculumCatalog = ({
               }) => (
                 <CurriculumCatalogCard
                   key={key}
+                  courseKey={key}
                   courseDisplayName={display_name}
                   courseDisplayNameWithLatestYear={
                     display_name_with_latest_year
