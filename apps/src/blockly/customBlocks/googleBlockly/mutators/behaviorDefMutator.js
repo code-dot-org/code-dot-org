@@ -1,3 +1,14 @@
+/**
+ * Most of this logic is copied from `procedureDefMutator` from @blockly/block-shareable-procedures.
+ * As in our local copy of `procedureDefMutator`, the compose() and decompose() methods
+ * have been removed to avoid rendering a gear icon that we do not want. In addition,
+ * the domToMutation(), saveExtraState(), and loadExtraState() methods have been customized
+ * to handle the behaviorId attribute. A future version of the shareable-procedures plugin will
+ * export the `procedureDefMutator` (and other extensions), but using it will require bumping to Blockly v10.
+ * TODO: Once we are on Blockly v10, we can remove our local `procedureDefMutator`, but our
+ * `behaviorDefMutator` file might need to stick around.
+ */
+
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
 
 /**
