@@ -32,6 +32,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradesArray,
@@ -53,6 +54,7 @@ const CurriculumCatalogCard = ({
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
+    courseKey={courseKey}
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: courseDisplayName,
@@ -93,6 +95,7 @@ const CurriculumCatalogCard = ({
 );
 
 CurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
@@ -127,6 +130,7 @@ CurriculumCatalogCard.propTypes = {
 };
 
 const CustomizableCurriculumCatalogCard = ({
+  courseKey,
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
@@ -165,7 +169,7 @@ const CustomizableCurriculumCatalogCard = ({
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayNameWithLatestYear,
+        curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
       }
@@ -306,6 +310,7 @@ const CustomizableCurriculumCatalogCard = ({
 };
 
 CustomizableCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
