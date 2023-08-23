@@ -185,7 +185,8 @@
             {
               "type": "rating",
               "name": "beliefs_influence_teaching",
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "natalia_comment": "NOTE: added conditional logic by RP 08/22/2023",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "I can provide examples of how my identity, experience, and beliefs about who belongs in CS influence the teaching choices I make",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -194,8 +195,19 @@
             {
               "type": "rating",
               "name": "strategies_ensure_inclusion_csp",
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "natalia_comment": "NOTE: added conditional logic by RP 08/22/2023 - Displays to RPs not in FL",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_csp_states",
+              "natalia_comment": "NOTE: added conditional logic by RP 08/22/2023 - Displays to RPs in FL",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} = 'Broward County Public Schools'  or {regional_partner_name} =  'Florida International University' or {regional_partner_name} = 'Orlando Science Center' or {regional_partner_name} = 'Tampa Bay STEM Network' or {regional_partner_name} = 'University of North Florida & STEM2 Hub')",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom fosters a sense of belonging.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -221,7 +233,8 @@
             {
               "type": "rating",
               "name": "believe_mental_models_equitible",
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "natalia_comment": "NOTE: added conditional logic by RP 08/22/2023 - Displays to RPs not in FL",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "I believe shared mental models contribute to equitable learning experiences.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
