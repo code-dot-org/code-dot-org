@@ -211,6 +211,7 @@ export function flyoutCategory(workspace) {
 
 function getCustomCategoryBlocksForFlyout(category) {
   const parser = new DOMParser();
+  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
   const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
 
   const categoryNodes = xmlDoc.getElementsByTagName('category');
@@ -228,7 +229,6 @@ function getCustomCategoryBlocksForFlyout(category) {
       }
 
       const jsonBlocks = convertXmlToJson(xmlRootElement);
-
       const flyoutBlocks = jsonBlocks.blocks.blocks.map(
         simplifyBlockStateForFlyout
       );

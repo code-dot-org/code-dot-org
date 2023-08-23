@@ -61,7 +61,6 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-// import {CdoParameterModel} from './customBlocks/googleBlockly/mutators/parameterModel';
 
 const options = {
   contextMenu: true,
