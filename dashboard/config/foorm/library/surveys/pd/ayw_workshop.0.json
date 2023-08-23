@@ -700,6 +700,7 @@
                 },
                 {
                   "value": "ability_impact_barriers",
+                  "natalia_comment": "NOTE: added conditional logic by RP 08/16/2023",
                   "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
                   "text": "Through my participation in this workshop I am better able to impact the barriers to access, diversity, and inclusion that students face in my CS classroom."
                 },

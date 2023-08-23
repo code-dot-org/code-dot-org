@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-18 14:58:28 UTC",
+    "serialized_at": "2023-08-22 18:08:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -403,7 +403,7 @@
       "key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1227,7 +1227,7 @@
       "position": 1,
       "properties": {
         "description": "Tools like Copilot can help us fix errors in our code, create new programs, or add new features to existing programs. As these tools improve, they can be useful as part of the software development process. How we use these tools, though, might be different depending on the problem we are trying to solve.",
-        "duration": "20",
+        "duration": "65",
         "name": "Copilot as a Dev Tool",
         "remarks": true
       },
