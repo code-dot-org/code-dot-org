@@ -28,6 +28,7 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  isInUS,
 }) => {
   const iconData = {
     ideal: {
@@ -45,6 +46,7 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
+  console.log(isInUS);
 
   return (
     <div>
@@ -110,33 +112,44 @@ const ExpandedCurriculumCatalogCard = ({
                     <hr className={style.horizontalDivider} />
                     <TextLink text={i18n.projectRubrics()} href="#" />
                   </div>
-                  <div className={style.professionalLearningContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.professionalLearning()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <TextLink
-                      text={i18n.facilitatorLedWorkshops()}
-                      href={professionalLearningProgram}
-                      icon={
-                        <FontAwesome
-                          icon="arrow-up-right-from-square"
-                          className="fa-solid"
-                        />
-                      }
-                    />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink
-                      text={i18n.selfPacedPl()}
-                      href={selfPacedPlCourseOfferingPath}
-                      icon={
-                        <FontAwesome
-                          icon="arrow-up-right-from-square"
-                          className="fa-solid"
-                        />
-                      }
-                    />
-                  </div>
+                  {isInUS &&
+                    (professionalLearningProgram ||
+                      selfPacedPlCourseOfferingPath) && (
+                      <div className={style.professionalLearningContainer}>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.professionalLearning()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {professionalLearningProgram && (
+                          <TextLink
+                            text={i18n.facilitatorLedWorkshops()}
+                            href={professionalLearningProgram}
+                            icon={
+                              <FontAwesome
+                                icon="arrow-up-right-from-square"
+                                className="fa-solid"
+                              />
+                            }
+                          />
+                        )}
+                        {professionalLearningProgram &&
+                          selfPacedPlCourseOfferingPath && (
+                            <hr className={style.horizontalDivider} />
+                          )}
+                        {selfPacedPlCourseOfferingPath && (
+                          <TextLink
+                            text={i18n.selfPacedPl()}
+                            href={selfPacedPlCourseOfferingPath}
+                            icon={
+                              <FontAwesome
+                                icon="arrow-up-right-from-square"
+                                className="fa-solid"
+                              />
+                            }
+                          />
+                        )}
+                      </div>
+                    )}
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
@@ -217,5 +230,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 export default ExpandedCurriculumCatalogCard;
