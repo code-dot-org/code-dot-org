@@ -1,0 +1,48 @@
+- video_middle_curricula_index = 6
+
+- video_middle_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_9_12), hoc_s(:module_grade_9_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
+
+- video_middle_curricula_title = [hoc_s(:middle_curricula_video_title_1), hoc_s(:csp_curricula_title), hoc_s(:curriculum_name_csa), hoc_s(:artiffcial_intelligence_video_title), hoc_s(:maker_video_title), hoc_s(:hour_of_code)]
+
+- video_middle_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:csp_page_top_desc), hoc_s(:csa_course_description),  hoc_s(:ai_hero_desc), hoc_s(:maker_video_description), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
+
+- video_id = ["cs_discoveries", "cs_principles", "ai_intelligence", "courses_maker", "hour_of_code"]
+
+- video_code = ["uQim0hBHco0", "DMr1iFYacGQ", "lFkFi2jGs70", "dWRnCXbUDgA", "ZoqMiFKspAA"]
+
+
+- video_middle_curricula_index.times do |index|
+  .action-block.action-block--two-col.video-101__text
+    - if index === 0 || index === 1 || index === 2 || index === 3 || index === 4
+      %figure.video-101__video.col-50
+        = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
+    - if index === 5 
+      .video-101__image 
+        %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
+    .text-wrapper.col-50
+      %p.overline 
+        %span Grades:
+        = video_middle_curricula_tags[index]
+      %h3
+        = video_middle_curricula_title[index]
+      %p.heading-sm
+        = video_middle_curricula_desc[index]
+      
+      - if index === 0
+        %a.link-button{href: "/csd"}
+          = hoc_s(:csf_link)
+      - if index === 1
+        %a.link-button{href:"/csp"}
+          = hoc_s(:csp_page_button_link)
+      - if index === 2
+        %a.link-button{href:"/csa"}
+          = hoc_s(:csa_course_button_link)
+      - if index === 3
+        %a.link-button{href: "/ai"}
+          = hoc_s(:ai_why_link_01)
+      - if index === 4
+        %a.link-button{href: "/maker"}
+          = hoc_s(:maker_page_link)
+      - if index === 5
+        %a.link-button{href: "/hourofcode"}
+          = hoc_s(:hour_of_code_link)

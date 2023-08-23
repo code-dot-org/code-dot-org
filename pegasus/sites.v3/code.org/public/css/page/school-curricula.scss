@@ -1,0 +1,35 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.img {
+  &--max {
+    max-width: 100%;
+  }
+}
+
+.video-101 {
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  .action-block {
+    margin-bottom: 2rem;
+    background: $neutral_white;
+  }
+
+  &__image,
+  &__video {
+
+    @media (min-width: 971px) {
+      margin: 20px 0 20px 20px;
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+.partnership-ai + #clearboth + .desktop-feature {
+  display: none;
+}
