@@ -131,7 +131,7 @@ WORKDIR /tmp
 # en_US.UTF-8 locale not available by default
 RUN locale-gen en_US.UTF-8
 
-# install mysql
+# Install MySQL.
 #
 # We explicitly target MySQL 5.7, and because of that we also explicitly target
 # Ubuntu Bionic (18.x).
@@ -150,12 +150,10 @@ RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04;
 
 # disable auth for local dashboard mysql db
-RUN chown -R mysql:mysql /var/lib/mysql && \
-    service mysql start && \
+RUN service mysql start && \
     echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
-    chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
     service mysql stop
 
 # install yarn
