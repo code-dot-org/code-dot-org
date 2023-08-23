@@ -196,13 +196,15 @@ export function flyoutCategory(workspace) {
   );
   const allFunctionNames = [];
   allWorkspaces.forEach(workspace => {
-    const behaviorBlocks = workspace
+    const procedureBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
-    behaviorBlocks.forEach(block =>
+    procedureBlocks.forEach(block =>
       allFunctionNames.push(block.getFieldValue('NAME'))
     );
   });
+
+  // TODO: Does this require case-insensitive sorting?
   allFunctionNames.sort().forEach(name => {
     blockList.push({
       kind: 'block',
@@ -249,16 +251,3 @@ export const createNewDefinitionBlock = blockState => {
   Blockly.getMainWorkspace().centerOnBlock(newDefinitionBlock.id);
   newDefinitionBlock.select();
 };
-
-export function sortProceduresByName(a, b) {
-  const nameA = a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1; // Name A comes before Name B
-  }
-  if (nameA > nameB) {
-    return 1; // Name A comes after Name B
-  }
-  return 0; // Names are equal
-}

@@ -114,7 +114,7 @@ export const behaviorDefMutator = {
       for (let i = 0; i < state['params'].length; i++) {
         const {name, id, paramId} = state['params'][i];
         this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id), //, type),
+          new ObservableParameterModel(this.workspace, name, paramId, id),
           i
         );
       }
