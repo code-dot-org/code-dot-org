@@ -80,10 +80,12 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
-  const botTitle = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)?.botTitle
-  );
+  const botTitle =
+    useSelector(
+      (state: {lab: LabState}) =>
+        (state.lab.levelProperties as AichatLevelProperties | undefined)
+          ?.botTitle
+    ) || 'EduBot';
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (
