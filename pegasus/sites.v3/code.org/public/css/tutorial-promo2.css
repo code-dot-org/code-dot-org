@@ -81,10 +81,6 @@ html[dir= 'rtl']  .left-tutorial{
   line-height: 16px;
 }
 
-.tutorial-button {
-
-}
-
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .tutorial-promo-container .tutorial-box h2 {
     font-size: 17px;
