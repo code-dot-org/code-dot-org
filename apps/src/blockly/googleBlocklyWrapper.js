@@ -51,7 +51,6 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
@@ -85,6 +84,7 @@ const INFINITE_LOOP_TRAP =
 const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+  this.mainWorkspace = undefined;
 
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -151,7 +151,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+    let workspaceCode = Blockly.JavaScript.workspaceToCode(
+      Blockly.mainBlockSpace
+    );
+    if (this.getHiddenDefinitionWorkspace()) {
+      workspaceCode += Blockly.JavaScript.workspaceToCode(
+        this.getHiddenDefinitionWorkspace()
+      );
+    }
+    return workspaceCode;
   };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
@@ -194,9 +202,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalTypeColors');
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
-  blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
   blocklyWrapper.wrapReadOnlyProperty('thrasos');
@@ -324,12 +330,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
@@ -661,12 +667,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
+    blocklyWrapper.setMainWorkspace(workspace);
+
+    // Hidden workspace where we can put function definitions.
+    const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
+
     if (options.useModalFunctionEditor) {
-      // Customize auto-populated Functions toolbox category.
-      workspace.registerToolboxCategoryCallback(
-        'PROCEDURE',
-        functionsFlyoutCategory
-      );
+      // The modal function editor is currently a work in progress so we are leaving
+      // it commented out.
+      // TODO: To use the modal function editor, uncomment these lines and update
+      // editButtonHandler in procedureBlocks.js.
+      // blocklyWrapper.functionEditor = new FunctionEditor();
+      // blocklyWrapper.functionEditor.init(opt_options);
     }
 
     return workspace;
@@ -675,8 +688,26 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
   blocklyWrapper.fireUiEvent = function (element, eventName, opt_properties) {
     if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
+      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
     }
+  };
+
+  blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
+    this.mainWorkspace = mainWorkspace;
+  };
+
+  blocklyWrapper.setHiddenDefinitionWorkspace = function (
+    hiddenDefinitionWorkspace
+  ) {
+    this.hiddenDefinitionWorkspace = hiddenDefinitionWorkspace;
+  };
+
+  blocklyWrapper.getHiddenDefinitionWorkspace = function () {
+    return this.hiddenDefinitionWorkspace;
+  };
+
+  blocklyWrapper.getMainWorkspace = function () {
+    return blocklyWrapper.mainBlockSpace;
   };
 
   initializeBlocklyXml(blocklyWrapper);
