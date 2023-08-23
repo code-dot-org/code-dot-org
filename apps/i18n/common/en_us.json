@@ -1070,6 +1070,7 @@
   "feedbackPlaceholderNonVerified": "You must be a verified teacher to leave feedback.",
   "feedbackRubricEvaluation": "Evaluation Rubric:",
   "feedbackSaveError": "There's been an error saving your feedback. Please try to save again.",
+  "feedbackProfanityError": "Your comment contains profanity, so it will not be saved. Please try again.",
   "feedbackShareBannerTitle": "Share your feedback",
   "feedbackShareBannerDesc": "Help us improve this feature by answering a few short questions.",
   "feedbackShareBannerButton": "Share feedback",

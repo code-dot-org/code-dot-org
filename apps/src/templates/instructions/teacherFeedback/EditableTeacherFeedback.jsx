@@ -20,11 +20,13 @@ import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import * as utils from '@cdo/apps/utils';
 
 const ErrorType = {
   NoError: 'NoError',
   Load: 'Load',
   Save: 'Save',
+  Profanity: 'Profanity',
 };
 
 export class EditableTeacherFeedback extends Component {
@@ -131,6 +133,36 @@ export class EditableTeacherFeedback extends Component {
 
   onSubmitFeedback = () => {
     this.setState({submitting: true});
+    //if (verifiedInstructor) {
+    //  this.performFeedbackSubmission();
+    // } else {
+    // User is not a verified instructor, perform the profanity check before submitting feedback
+    utils
+      .findProfanity(
+        this.state.comment,
+        appOptions.locale,
+        appOptions.authenticityToken
+      )
+      .done(profaneWords => {
+        if (profaneWords?.length > 0) {
+          // Handle case where profanity is found in the comment
+          this.setState({
+            errorState: ErrorType.Profanity,
+            submitting: false,
+          });
+        } else {
+          // Proceed with feedback submission after profanity check
+          this.performFeedbackSubmission();
+        }
+      })
+      .fail(() => {
+        // Don't block the user in the case of a server error.
+        this.performFeedbackSubmission();
+      });
+    //}
+  };
+
+  performFeedbackSubmission = () => {
     const payload = {
       comment: this.state.comment,
       review_state: this.state.reviewState,
@@ -212,7 +244,8 @@ export class EditableTeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !verifiedInstructor;
+      !verifiedInstructor ||
+      errorState === ErrorType.Profanity;
 
     return (
       <div style={styles.button}>
@@ -225,6 +258,8 @@ export class EditableTeacherFeedback extends Component {
         />
         {errorState === ErrorType.Save &&
           this.renderError(i18n.feedbackSaveError())}
+        {errorState === ErrorType.Profanity &&
+          this.renderError(i18n.feedbackProfanityError())}
       </div>
     );
   }
