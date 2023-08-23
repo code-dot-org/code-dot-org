@@ -1,0 +1,91 @@
+---
+title: Careers at Code.org
+video_player: true
+theme: responsive
+---
+
+
+%section.hero-banner-basic{style: "display: block !important"}
+  .wrapper
+    .text-wrapper.col-60
+      %h1=hoc_s(:careers_hero_title)
+      %p.body-one=hoc_s(:careers_hero_description)
+      %a.link-button{href: "#ai-pl-callout"}
+        =hoc_s(:call_to_action_learning_opportunity)
+    %figure.col-33{style: "float: right"}
+      %img{src: "/images/about/careers/hero-image.jpg", alt: "", style: "position: relative;"}
+    .clear
+
+%section.accessibility-efforts.bg-neutral-light
+  .wrapper
+    .text-wrapper
+      %h2
+        = hoc_s(:accessibility_efforts_title)
+      %p.body-two
+        = hoc_s(:accessibility_efforts_desc)
+    .grid-container
+      - item_count = 4
+      - item_count.times do |index|
+        .flex-container
+          %figure
+            %img{src: "/images/accessibility/efforts_#{index + 1}.png",  alt: hoc_s("accessibility_efforts_card_title_#{index + 1}")}
+          .text-wrapper
+            %h3.heading-sm
+              =hoc_s("accessibility_efforts_card_title_#{index + 1}")
+            %p.body-three
+              - if index == 1
+                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
+              - elsif index == 3
+                =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
+              - else
+                = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
+
+=hoc_s(:careers_hero_title)
+=hoc_s(:careers_hero_description)
+=hoc_s(:careers_hero_cta)
+=hoc_s(:careers_vision_title)
+=hoc_s(:careers_vision_decsription)
+=hoc_s(:careers_values_title)
+=hoc_s(:careers_values_text_1)
+=hoc_s(:careers_approach_section_title)
+=hoc_s(:careers_approach_section_description)
+=hoc_s(:careers_approach_section_button)
+=hoc_s(:careers_principle_section_title)
+=hoc_s(:careers_principle_title_1)
+=hoc_s(:careers_principle_description_1)
+=hoc_s(:careers_balance_section_title)
+=hoc_s(:careers_balance_section_description)
+=hoc_s(:careers_openroles_section_title)
+=hoc_s(:careers_openroles_section_description)
+=hoc_s(:careers_engineering_job_title_1)
+=hoc_s(:careers_engineering_job_description_1)
+=hoc_s(:careers_educational_title)
+=hoc_s(:careers_educational_job_title_1)
+=hoc_s(:careers_educational_job_description_1)
+=hoc_s(:careers_more_info_text)
+=hoc_s(:careers_approach_section_title)
+=hoc_s(:careers_approach_section_description)
+
+%img{src: "/images/about/careers/core-values-first-column-1.jpg", alt: "foundational"}
+%img{src: "/images/about/careers/core-values-first-column-2.jpg", alt: "equality"}
+%img{src: "/images/about/careers/core-values-first-column-3.jpg", alt: "community"}
+%img{src: "/images/about/careers/core-values-second-column-1.jpg", alt: "responsive-feedback"}
+%img{src: "/images/about/careers/core-values-second-column-2.jpg", alt: "integrity"}
+%img{src: "/images/about/careers/core-values-second-column-3.jpg", alt: "thinking big"}
+%img{src: "/images/about/careers/diversityJobsAward.jpg", alt: "Diversity Jobs award"}
+%img{src: "/images/about/careers/final-section-pride.jpg", alt: "Pride"}
+%img{src: "/images/about/careers/finall-section-team.jpg", alt: "Team"}
+%img{src: "/images/about/careers/hero-image.jpg", alt: "Hero"}
+%img{src: "/images/about/careers/principle-section-1.jpg", alt: "North Star"}
+%img{src: "/images/about/careers/principle-section-2.jpg", alt: "Hard on problems"}
+%img{src: "/images/about/careers/principle-section-3.jpg", alt: "Solutions"}
+%img{src: "/images/about/careers/principle-section-4.jpg", alt: "Mentality"}
+%img{src: "/images/about/careers/principle-section-5.jpg", alt: "Inovational skills"}
+%img{src: "/images/about/careers/principle-section-6.jpg", alt: "Anchor decisions"}
+%img{src: "/images/about/careers/principle-section-7.jpg", alt: "Growth mindset"}
+%img{src: "/images/about/careers/vision-section-image.jpg", alt: "Students"}
+%img{src: "/images/about/careers/work-life-balance-flexible.jpg", alt: "Flexible environment"}
+%img{src: "/images/about/careers/work-life-balance-growth.jpg", alt: "Learning opportunities"}
+%img{src: "/images/about/careers/work-life-balance-health.jpg", alt: "Health benefits"}
+%img{src: "/images/about/careers/work-life-balance-time.jpg", alt: "Paid time"}
+
