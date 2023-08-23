@@ -99,8 +99,12 @@ const ExpandedCurriculumCatalogCard = ({
                         />
                       </div>
                     ) : (
-                      <div className={style.videoContainer}>
-                        <img src={imageSrc} alt={imageAltText} />
+                      <div className={style.imageContainer}>
+                        <img
+                          src={imageSrc}
+                          alt={imageAltText}
+                          style={{height: '100%'}}
+                        />
                       </div>
                     )}
                   </div>
