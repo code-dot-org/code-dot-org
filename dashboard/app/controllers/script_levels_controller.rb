@@ -462,9 +462,7 @@ class ScriptLevelsController < ApplicationController
 
     # Check to see if any of the variants are part of an experiment that we're in
     if current_user && @script_level.has_experiment?
-      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
-        current_user.sections_as_student.first
-      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      experiment_level = @script_level.find_experiment_level(current_user)
       return experiment_level if experiment_level
     end
 
