@@ -234,11 +234,13 @@ function getCustomCategoryBlocksForFlyout(category) {
       const flyoutBlocks = jsonBlocks.blocks.blocks.map(
         simplifyBlockStateForFlyout
       );
-      return flyoutBlocks; // Return the new <xml> root element with block children
+
+      // Returns an array of simplified JSON blocks for flyout, or an empty array
+      // if the desired category is not found
+      return flyoutBlocks;
     }
   }
-
-  return []; // Return empty array if the desired category is not found
+  return [];
 }
 
 // Used to simplify block state for inclusion in the Behaviors category flyout
