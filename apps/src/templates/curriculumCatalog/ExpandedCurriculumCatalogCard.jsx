@@ -46,7 +46,6 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
-  console.log(isInUS);
 
   return (
     <div>
