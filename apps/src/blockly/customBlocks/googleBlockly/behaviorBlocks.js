@@ -193,6 +193,8 @@ export function flyoutCategory(workspace) {
       allBehaviorNames.push(block.getFieldValue('NAME'))
     );
   });
+
+  // TODO: Does this require case-insensitive sorting?
   allBehaviorNames.sort().forEach(name => {
     blockList.push({
       kind: 'block',
