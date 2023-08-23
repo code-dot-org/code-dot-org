@@ -6,7 +6,16 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..50).map do |i|
-          {userId: i, profile: {name: {fullName: "Sample User #{i}"}}}
+          {
+            userId: i,
+            profile: {
+              name: {
+                fullName: "Sample User #{i}",
+                givenName: "Sample",
+                familyName: "User #{i}"
+              }
+            }
+          }
         end
       }.to_json
     ).students
