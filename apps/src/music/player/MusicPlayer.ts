@@ -10,7 +10,6 @@ import {Effects} from './interfaces/Effects';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 // Using require() to import JS in TS files
-const soundApi = require('./sound');
 const constants = require('../constants');
 
 // Default to 4/4 time, 120 BPM, C Major
@@ -57,7 +56,8 @@ export default class MusicPlayer {
    * @param buffer
    */
   loadSoundFromBuffer(id: number, buffer: ArrayBuffer) {
-    soundApi.LoadSoundFromBuffer(id, buffer);
+    // TODO: re-enable
+    // soundApi.LoadSoundFromBuffer(id, buffer);
   }
 
   getBPM(): number {
