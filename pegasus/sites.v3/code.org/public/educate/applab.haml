@@ -15,7 +15,7 @@ video_player: true
 .tools-banner
   .tools-img-box
     %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png"), alt: ""}
-  .tools-info{style: "max-width: 676px;"}
+  .tools-info{style: "max-width: 658px;"}
     .tools-title-bar
       %h1.tools-title App Lab
     .tools-description
@@ -89,7 +89,7 @@ video_player: true
         %a{href: "/educate/professional-learning"}
           %button Learn more
 
-  %h3
+  %h3.heading-sm
     %a{href: '/csp'} Computer Science Principles
     units that use App Lab
 
@@ -138,7 +138,7 @@ video_player: true
         %strong Data
         %p Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab, but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
 
-  %h3
+  %h3.heading-sm
     %a{href: '/csd'} Computer Science Discoveries
     units that use App Lab
 
@@ -167,7 +167,7 @@ video_player: true
             Adafruit's Circuit Playground
           board.
 
-  %h3
+  %h3.heading-sm
     Flexible Units that use App Lab
 
   %table
@@ -219,7 +219,7 @@ video_player: true
     // beginning of each video chapter
     - unless video[:category_title].nil_or_empty?
       .clear
-      %h3= video[:category_title]
+      %h2= video[:category_title]
     %div{style: "float:left; padding:10px; width: 275px;"}
       = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'center', download_path: video[:download_path], letterbox: 'false'
 
