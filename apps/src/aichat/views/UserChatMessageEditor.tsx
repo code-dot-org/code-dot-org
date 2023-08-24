@@ -14,14 +14,12 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
   const systemPrompt = useSelector(
     (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.systemPrompt
+      (state.lab.levelProperties as AichatLevelProperties)?.systemPrompt
   );
-
+  // TODO: If systemPrompt is undefined, handle this error case.
   const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;
   const handleSubmit = useCallback(() => {
-    const prompt = systemPrompt ? systemPrompt : '';
-    onSubmit?.(userMessage, prompt);
+    onSubmit?.(userMessage, systemPrompt);
     setUserMessage('');
   }, [onSubmit, userMessage, systemPrompt]);
 
