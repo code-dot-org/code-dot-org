@@ -380,10 +380,10 @@ export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
     let studentData = {};
     for (let i = 0; i < studentDataArray.length; i++) {
-      const { name, familyName } = studentDataArray[i];
+      const {name, familyName} = studentDataArray[i];
 
       // Do not add rows with no name
-      if ( name === '') {
+      if (name === '') {
         continue;
       }
 

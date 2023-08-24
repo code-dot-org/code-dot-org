@@ -44,7 +44,7 @@ class AddMultipleStudents extends Component {
       const parts = line.split(',');
       const name = parts[0].trim();
       const familyName = parts.length > 1 ? parts[1].trim() : '';
-      return { name, familyName };
+      return {name, familyName};
     });
     this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
