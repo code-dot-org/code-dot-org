@@ -15,6 +15,20 @@ import {
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
 
+const formatTimeSpent = timeSpent => {
+  const minutes = Math.floor(timeSpent / 60);
+  const seconds = timeSpent % 60;
+
+  return i18n.timeSpent({minutes, seconds});
+};
+
+const formatLastAttempt = lastAttempt => {
+  const date = new Date(lastAttempt);
+  return i18n.levelLastUpdated({
+    lastUpdatedDate: date.toLocaleDateString(),
+  });
+};
+
 export default function RubricContainer({
   rubric,
   studentLevelInfo,
@@ -31,7 +45,6 @@ export default function RubricContainer({
       <div className={style.rubricContent}>
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
-            {/* TODO (AITT-107): use real data and only show if viewing student work  */}
             <Heading2>{studentLevelInfo.name}</Heading2>
             <div>
               <Heading5>
@@ -44,9 +57,7 @@ export default function RubricContainer({
                 {studentLevelInfo.timeSpent && (
                   <div className={style.singleMetadata}>
                     <FontAwesome icon="clock" />
-                    <span>
-                      {i18n.timeSpent({timeSpent: studentLevelInfo.timeSpent})}
-                    </span>
+                    <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
                   </div>
                 )}
                 <div className={style.singleMetadata}>
@@ -61,9 +72,7 @@ export default function RubricContainer({
                   <div className={style.singleMetadata}>
                     <FontAwesome icon="calendar" />
                     <span>
-                      {i18n.levelLastUpdated({
-                        lastUpdatedDate: studentLevelInfo.lastAttempt,
-                      })}
+                      {formatLastAttempt(studentLevelInfo.lastAttempt)}
                     </span>
                   </div>
                 )}
@@ -72,7 +81,6 @@ export default function RubricContainer({
           </div>
         )}
         <div className={style.learningGoalContainer}>
-          {/* TODO: do not hardcode in AI setting or feedback availability */}
           {rubric.learningGoals.map(lg => (
             <LearningGoal
               key={lg.key}

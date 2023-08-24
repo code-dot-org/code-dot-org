@@ -56,7 +56,8 @@ function initPage() {
 
   const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
   if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
-    const rubricData = getScriptData('rubric');
+    const rubricData = getScriptData('rubricdata');
+    const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -64,7 +65,8 @@ function initPage() {
     };
     ReactDOM.render(
       <RubricFloatingActionButton
-        rubric={rubricData}
+        rubric={rubric}
+        studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
       />,
       rubricFabMountPoint
