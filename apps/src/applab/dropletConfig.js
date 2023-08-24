@@ -117,6 +117,13 @@ export var blocks = [
     params: ['"id"', '"text"'],
   },
   {
+    func: 'textArea',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['id', 'text'],
+    params: ['"id"', '"text"'],
+  },
+  {
     func: 'dropdown',
     parent: api,
     category: 'UI controls',

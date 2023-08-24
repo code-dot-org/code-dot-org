@@ -135,6 +135,7 @@ module SharedConstants
       "button": null,
       "textInput": null,
       "textLabel": null,
+      "textArea": null,
       "dropdown": null,
       "getText": null,
       "setText": null,

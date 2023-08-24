@@ -888,6 +888,36 @@ applabCommands.textInput = function (opts) {
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
 
+applabCommands.textArea = function (opts) {
+  console.log('textArea');
+  // PARAMNAME: textArea: id vs. areaId
+  apiValidateDomIdExistence(opts, 'textArea', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textArea', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(opts, 'textArea', 'forId', opts.forId, true);
+  }
+  var newTextArea = document.createElement('textarea');
+  var textNode = document.createTextNode(opts.text);
+  newTextArea.id = opts.elementId;
+  newTextArea.style.position = 'relative';
+  newTextArea.style.borderStyle = 'solid';
+  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+  newTextArea.style.textRendering = 'optimizeSpeed';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newTextArea,
+    Applab.activeScreen()
+  );
+  var forElement = document.getElementById(opts.forId);
+  if (forElement && Applab.activeScreen().contains(forElement)) {
+    newTextArea.setAttribute('for', opts.forId);
+  }
+
+  return Boolean(
+    newTextArea.appendChild(textNode) &&
+      Applab.activeScreen().appendChild(newTextArea)
+  );
+};
+
 applabCommands.textLabel = function (opts) {
   // PARAMNAME: textLabel: id vs. labelId
   apiValidateDomIdExistence(opts, 'textLabel', 'id', opts.elementId, false);

@@ -149,6 +149,8 @@ export default {
         return ElementType.IMAGE;
       case 'canvas':
         return ElementType.CANVAS;
+      case 'textarea':
+        return ElementType.TEXT_AREA;
       case 'input':
         switch (element.getAttribute('type')) {
           case 'checkbox':

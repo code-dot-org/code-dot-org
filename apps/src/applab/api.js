@@ -181,6 +181,13 @@ export function putImageData(imageData, x, y) {
   });
 }
 
+export function textArea(elementId, text) {
+  return Applab.executeCmd(null, 'textArea', {
+    elementId: elementId,
+    text: text,
+  });
+}
+
 export function textInput(elementId, text) {
   return Applab.executeCmd(null, 'textInput', {
     elementId: elementId,
