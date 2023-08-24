@@ -45,9 +45,8 @@ export const submitChatMessage = createAsyncThunk(
     const appropriateChatMessages = storedMessages.filter(
       msg => msg.status === Status.OK
     );
-    // Send user message to backend and retrieve assistant response.
-    // create the newChatCompleteMessage
-    // Add to chatMessages
+
+    // Create the new user ChatCompleteMessage and add to chatMessages
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
@@ -56,6 +55,7 @@ export const submitChatMessage = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
+    // Send user message to backend and retrieve assistant response.
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
       newMessageId,
@@ -104,7 +104,6 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{id: number; status: Status}>
     ) => {
-      console.log(state.chatMessages);
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
       if (chatMessage) {
