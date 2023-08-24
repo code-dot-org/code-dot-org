@@ -23,12 +23,12 @@ import experiments from '@cdo/apps/util/experiments';
  * @param {string} source - workspace serialization, either XML or JSON
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
-export function loadBlocksToWorkspace(workspace, source, procedures) {
-  const {parsedSource, parsedProcedures, blockOrderMap} =
-    parseSourceAndProcedures(source, procedures);
+export function loadBlocksToWorkspace(workspace, source, hiddenDefintions) {
+  const {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
+    parseSourceAndProcedures(source, hiddenDefintions);
   Blockly.serialization.workspaces.load(parsedSource, workspace);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
-  loadProcedureBlocksToWorkspace(parsedProcedures);
+  loadProcedureBlocksToWorkspace(parsedHiddenDefinitions);
 }
 
 function loadProcedureBlocksToWorkspace(source) {
@@ -46,9 +46,28 @@ function loadProcedureBlocksToWorkspace(source) {
 }
 
 function parseSourceAndProcedures(source, procedures) {
+  let {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
+    getProceduresAndSourceAsJson(source, procedures);
+  // TODO: When we add behaviors, we should always hide behavior blocks.
+  const procedureTypesToHide = [];
+  if (
+    Blockly.useModalFunctionEditor &&
+    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+  ) {
+    procedureTypesToHide.push('procedures_defnoreturn');
+  }
+  moveHiddenProcedures(
+    parsedSource,
+    parsedHiddenDefinitions,
+    procedureTypesToHide
+  );
+  return {parsedSource, parsedHiddenDefinitions, blockOrderMap};
+}
+
+function getProceduresAndSourceAsJson(source, procedures) {
   let isXml = stringIsXml(source);
   let parsedSource;
-  let parsedProcedures;
+  let parsedHiddenDefinitions;
   let blockOrderMap;
   procedures = procedures || '{}';
   if (isXml) {
@@ -58,38 +77,53 @@ function parseSourceAndProcedures(source, procedures) {
   } else {
     parsedSource = JSON.parse(source);
   }
-  parsedProcedures = JSON.parse(procedures);
+  parsedHiddenDefinitions = JSON.parse(procedures);
+  return {parsedSource, parsedHiddenDefinitions, blockOrderMap};
+}
+
+/**
+ * Move hidden procedures from the source to the hidden definition object.
+ * These will be used to initialize the main and hidden definitions workspaces, respectively.
+ * Procedures are hidden if they have a type in the procedureTypesToHide array.
+ * In addition, copy the procedure model from the source
+ * object to the hidden definition object when moving a procedure.
+ * @param {Object} source Project source object, parsed from JSON.
+ * @param {Object} hiddenDefinitions Hidden Definition object, parsed from JSON (or an empty object)
+ * @param {Array<string>} procedureTypesToHide procedure types to move to procedures object.
+ * @returns void
+ */
+function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
   if (
-    Blockly.useModalFunctionEditor &&
-    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+    procedureTypesToHide.length === 0 ||
+    !source.blocks ||
+    !source.blocks.blocks
   ) {
-    const procedures = [];
-    const otherBlocks = [];
-    parsedSource.blocks.blocks.forEach(block => {
-      // TODO: we may need to include more types here once behaviors are added.
-      if (block.type === 'procedures_defnoreturn') {
-        procedures.push(block);
-      } else {
-        otherBlocks.push(block);
+    return;
+  }
+  const blocksToHide = [];
+  const otherBlocks = [];
+  source.blocks.blocks.forEach(block => {
+    if (procedureTypesToHide.includes(block.type)) {
+      blocksToHide.push(block);
+    } else {
+      otherBlocks.push(block);
+    }
+  });
+  source.blocks.blocks = otherBlocks;
+  hiddenDefinitions.blocks ||= {};
+  hiddenDefinitions.blocks.blocks ||= [];
+  hiddenDefinitions.blocks.blocks.push(...blocksToHide);
+  if (source.procedures && source.procedures.length > 0) {
+    hiddenDefinitions.procedures ||= [];
+    source.procedures.forEach(sourceProcedure => {
+      if (
+        hiddenDefinitions.procedures.filter(p => p.id === sourceProcedure.id)
+          .length === 0
+      ) {
+        hiddenDefinitions.procedures.push(sourceProcedure);
       }
     });
-    parsedSource.blocks.blocks = otherBlocks;
-    parsedProcedures.blocks ||= {};
-    parsedProcedures.blocks.blocks ||= [];
-    parsedProcedures.blocks.blocks.push(...procedures);
-    if (parsedSource.procedures && parsedSource.procedures.length > 0) {
-      parsedProcedures.procedures ||= [];
-      parsedSource.procedures.forEach(sourceProcedure => {
-        if (
-          parsedProcedures.procedures.filter(p => p.id === sourceProcedure.id)
-            .length === 0
-        ) {
-          parsedProcedures.procedures.push(sourceProcedure);
-        }
-      });
-    }
   }
-  return {parsedSource, parsedProcedures, blockOrderMap};
 }
 
 export function setHSV(block, h, s, v) {
