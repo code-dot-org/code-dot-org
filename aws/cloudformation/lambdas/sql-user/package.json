@@ -1,0 +1,15 @@
+{
+  "name": "sql-user",
+  "version": "1.0.0",
+  "description": "Custom CloudFormation Resource Lambda that creates/updates/deletes SQL users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1443.0",
+    "mysql": "^2.18.1"
+  }
+}
