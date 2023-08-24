@@ -99,39 +99,50 @@ $default-spacing: 2px;
 
 .dancingBot {
   margin-bottom: 50px;
-  width: 200px;
+  width: 350px;
+  height: 400px;
   position: relative;
-  margin-left: 100px;
+  position: relative;
+  background-color: #ddd;
+  border-radius: 5px;
+
+  .svgViewBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   .botImage {
+    position: absolute;
     width: 150px;
+    left: 100px;
   }
 
   .hand0Image {
     position: absolute;
-    right: 25;
+    left: 25px;
     width: 75px;
     top: 130px;
   }
 
   .hand1Image {
     position: absolute;
-    left: -75px;
+    left: 250px;
     width: 75px;
     top: 130px;
   }
 
   .foot0Image {
     position: absolute;
-    right: 20px;
+    left: 60px;
+    top: 290px;
     width: 75px;
-    bottom: -40px;
   }
 
   .foot1Image {
     position: absolute;
-    left: -45px;
+    left: 210px;
+    top: 290px;
     width: 75px;
-    bottom: -40px;
   }
 }
