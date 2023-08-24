@@ -13,6 +13,8 @@ class LearningGoalEvaluationsController < ApplicationController
     if learning_goal_evaluation
       learning_goal_evaluation.update(learning_goal_evaluation_params)
       render json: learning_goal_evaluation
+    else
+      render status: :bad_request, json: learning_goal_evaluation
     end
   end
 
