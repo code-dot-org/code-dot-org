@@ -519,8 +519,11 @@ const sourceHandler = {
   // Get the source from the procedure workspace, if any. Otherwise return null.
   // Procedures will only exist for Google Blockly levels.
   getProcedureSource() {
-    if (window.Blockly && Blockly.getProcedureWorkspace()) {
-      return Blockly.cdoUtils.getCode(Blockly.getProcedureWorkspace(), true);
+    if (window.Blockly && Blockly.getHiddenDefinitionWorkspace()) {
+      return Blockly.cdoUtils.getCode(
+        Blockly.getHiddenDefinitionWorkspace(),
+        true
+      );
     }
     return null;
   },

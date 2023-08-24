@@ -14,6 +14,7 @@ import {
 import {parseElement as parseXmlElement} from '../../xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Loads blocks to a workspace.
@@ -23,28 +24,19 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
 export function loadBlocksToWorkspace(workspace, source, procedures) {
-  console.log('in loadBlocksToWorkspace');
-  // let isXml = stringIsXml(source);
-  // let stateToLoad;
-  // let blockOrderMap;
-  // if (isXml) {
-  //   const xml = parseXmlElement(source);
-  //   stateToLoad = convertXmlToJson(xml);
-  //   blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
-  // } else {
-  //   stateToLoad = JSON.parse(source);
-  // }
   const {parsedSource, parsedProcedures, blockOrderMap} =
     parseSourceAndProcedures(source, procedures);
   Blockly.serialization.workspaces.load(parsedSource, workspace);
-  loadProcedureBlocksToWorkspace(parsedProcedures);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
+  loadProcedureBlocksToWorkspace(parsedProcedures);
 }
 
 function loadProcedureBlocksToWorkspace(source) {
-  console.log('in loadProcedureBlocksToWorkspace', source);
-  if (Blockly.getHiddenDefinitionWorkspace() && source) {
-    //Blockly.functionEditor.unifyMainAndHiddenWorkspaceProcedures();
+  if (
+    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR) &&
+    Blockly.getHiddenDefinitionWorkspace() &&
+    source
+  ) {
     Blockly.serialization.workspaces.load(
       source,
       Blockly.getHiddenDefinitionWorkspace()
@@ -60,7 +52,6 @@ function parseSourceAndProcedures(source, procedures) {
   let blockOrderMap;
   procedures = procedures || '{}';
   if (isXml) {
-    console.log('parsing xml! source is ', source);
     const xml = parseXmlElement(source);
     parsedSource = convertXmlToJson(xml);
     blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
@@ -68,10 +59,12 @@ function parseSourceAndProcedures(source, procedures) {
     parsedSource = JSON.parse(source);
   }
   parsedProcedures = JSON.parse(procedures);
-  if (Blockly.useModalFunctionEditor) {
+  if (
+    Blockly.useModalFunctionEditor &&
+    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+  ) {
     const procedures = [];
     const otherBlocks = [];
-    console.log({parsedSourceLength: parsedSource.blocks.blocks.length});
     parsedSource.blocks.blocks.forEach(block => {
       // TODO: we may need to include more types here once behaviors are added.
       if (block.type === 'procedures_defnoreturn') {
@@ -81,14 +74,19 @@ function parseSourceAndProcedures(source, procedures) {
       }
     });
     parsedSource.blocks.blocks = otherBlocks;
-    console.log({parsedSourceAfterUpdate: parsedSource});
     parsedProcedures.blocks ||= {};
     parsedProcedures.blocks.blocks ||= [];
     parsedProcedures.blocks.blocks.push(...procedures);
     if (parsedSource.procedures && parsedSource.procedures.length > 0) {
       parsedProcedures.procedures ||= [];
-      // TODO: need to not add duplicates
-      parsedProcedures.procedures.push(...parsedSource.procedures);
+      parsedSource.procedures.forEach(sourceProcedure => {
+        if (
+          parsedProcedures.procedures.filter(p => p.id === sourceProcedure.id)
+            .length === 0
+        ) {
+          parsedProcedures.procedures.push(sourceProcedure);
+        }
+      });
     }
   }
   return {parsedSource, parsedProcedures, blockOrderMap};

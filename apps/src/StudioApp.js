@@ -1236,7 +1236,6 @@ StudioApp.prototype.initReadonly = function (options) {
     rtl: getStore().getState().isRtl,
     scrollbars: false,
   });
-  console.log('in initReadonly?');
   this.loadBlocks(options.blocks);
 };
 
@@ -1245,7 +1244,6 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source, procedures) {
-  console.log('in studioapp loadBlocks');
   Blockly.cdoUtils.loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     source,
