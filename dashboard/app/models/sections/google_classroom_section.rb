@@ -35,13 +35,15 @@ class GoogleClassroomSection < OmniAuthSection
   def self.from_service(course_id, owner_id, student_list, section_name)
     code = "G-#{course_id}"
 
+    set_family_name = DCDO.get('google_classroom_family_name', false)
+
     students = student_list.map do |student|
       OmniAuth::AuthHash.new(
         uid: student.user_id,
         provider: 'google_oauth2',
         info: {
-          name: student.profile.name.given_name,
-          family_name: student.profile.name.family_name,
+          name: set_family_name ? student.profile.name.given_name : student.profile.name.full_name,
+          family_name: set_family_name ? student.profile.name.family_name : nil,
         },
       )
     end
