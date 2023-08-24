@@ -3,6 +3,22 @@
   and shared/css/font.scss
 */
 
+/* Import Barlow fonts */
+@font-face {
+  font-family: 'Barlow Semi Condensed Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf') format('truetype'),
+local('?');
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf') format('truetype'), local('?');
+}
+
 :root {
   /* Colors */
   --brand_primary_light: #ABDFE5;

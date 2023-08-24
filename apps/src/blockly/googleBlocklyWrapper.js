@@ -59,6 +59,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
+import experiments from '@cdo/apps/util/experiments';
 
 const options = {
   contextMenu: true,
@@ -672,14 +673,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
 
-    blocklyWrapper.useModalFunctionEditor =
-      options.useModalFunctionEditor || false;
-
-    if (options.useModalFunctionEditor) {
-      // The modal function editor is currently a work in progress so we are leaving
-      // it commented out.
-      // TODO: To use the modal function editor, uncomment these lines and update
-      // editButtonHandler in procedureBlocks.js.
+    if (
+      options.useModalFunctionEditor &&
+      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+    ) {
+      // If the modal function editor is enabled for this level and
+      // the dcdo flag is on, initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(opt_options);
     }

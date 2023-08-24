@@ -18,6 +18,7 @@ const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
+  isInUS,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -121,6 +122,7 @@ const CurriculumCatalog = ({
                   }
                   isExpanded={expandedCardKey === key}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
+                  isInUS={isInUS}
                   {...props}
                 />
               )
@@ -186,6 +188,7 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  isInUS: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;
