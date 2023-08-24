@@ -318,7 +318,12 @@ class CourseOffering < ApplicationRecord
       course_offering_id: id,
       script_id: script_id,
       is_standalone_unit: standalone_unit?,
-      is_translated: translated?(locale_code)
+      is_translated: translated?(locale_code),
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
     }
   end
 

@@ -69,7 +69,7 @@ class FallbackPlayerCaptionDialog extends Component {
             className="ui-test-fallback-player-caption-dialog-close"
             text={i18n.fallbackVideoClosedCaptioningDialogClose()}
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>

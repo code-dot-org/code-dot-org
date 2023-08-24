@@ -1034,7 +1034,7 @@
           "type": "Ресурс"
         },
         "extra_code_in_challenge_levels/csd/2021": {
-          "name": "Додатковий код у рівнях із додатковими завданнями",
+          "name": "Додатковий код рівнів додаткових завдань",
           "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
           "type": "Ресурс"
         },
@@ -1221,10 +1221,12 @@
           "type": "Ресурс"
         },
         "introduction-to-variables/csd/2021": {
+          "name": "Знайомство зі змінними",
           "url": "https://youtu.be/UG7Q1Sr0_F0",
           "type": "Відео"
         },
         "naming_variables/csd/2021": {
+          "name": "Іменування змінних",
           "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
           "type": "Ресурс"
         },
@@ -1264,12 +1266,12 @@
           "type": "Ресурс"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
-          "name": "Мініпроєкт - Сцени із надписами",
+          "name": "Мініпроєкт - Сцени з субтитрами",
           "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
           "type": "Зразок"
         },
         "captioned-scenes/csd/2021": {
-          "name": "Сцени із надписами",
+          "name": "Сцени з субтирами",
           "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
           "type": "Рубрика"
         },
@@ -1279,15 +1281,15 @@
           "type": "Інструкція до вправи"
         },
         "random-dot-flipbook/csd/2021": {
-          "name": "Кінеограф з випадковими точками",
+          "name": "Фліпбук з випадковими точками",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random-sprite-flipbook/csd/2021": {
-          "name": "Кінеограф з випадковими спрайтами",
+          "name": "Фліпбук з випадковими спрайтами",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "youtube-flipbook/csd/2021": {
-          "name": "Приклад кінеографа - Marnic Bos",
+          "name": "Приклад фліпбука - Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Відео"
         },
@@ -1307,7 +1309,7 @@
           "type": "Відео"
         },
         "the_counter_pattern/csd/2021": {
-          "name": "Лічильник шаблону",
+          "name": "Шаблон лічильника",
           "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1342,10 +1344,12 @@
           "type": "Ресурс"
         },
         "if_statements/csd/2021": {
+          "name": "Команди умови",
           "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
           "type": "Ресурс"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Команди Якщо/Інакше",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1360,7 +1364,7 @@
           "type": "Зразок"
         },
         "interactive-card-marked-rubrics/csd/2021": {
-          "name": "Інтерактивна картка - критерії оцінювання",
+          "name": "Інтерактивна листівка - критерії оцінювання (приклад заповнення)",
           "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
           "type": "Зразок"
         },
@@ -1380,11 +1384,11 @@
           "type": "Рубрика"
         },
         "interactive_card_-_student_checklist/csd/2021": {
-          "name": "Інтерактивна картка - Контрольний список для учнів",
+          "name": "Інтерактивна листівка - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
         },
         "extra_code_in_challenge_levels_1/csd/2021": {
-          "name": "Додатковий код у рівнях із додатковими завданнями",
+          "name": "Додатковий код рівнів додаткових завдань",
           "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
           "type": "Ресурс"
         },
@@ -1419,7 +1423,7 @@
           "type": "Ресурс"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
-          "name": "Інструкція до мініпроєкту - Сайд-скролер",
+          "name": "План мініпроєкту - Сайд-скролер",
           "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Зразок"
         },
@@ -1438,15 +1442,17 @@
           "type": "Ресурс"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
-          "name": "Гра-літалка - Інструкція до проєкту",
+          "name": "Гра Літун - План проєкту",
           "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
           "type": "Зразок"
         },
         "flyer-game-1/csd/2021": {
+          "name": "Гра Літун",
           "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
           "type": "Рубрика"
         },
         "flyer-game/csd/2021": {
+          "name": "Гра Літун",
           "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
           "type": "План проєкту"
         },
@@ -2280,6 +2286,7 @@
           "type": "Ресурс"
         },
         "if_statements_1/csd/2021": {
+          "name": "Команди умови",
           "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -4882,7 +4889,7 @@
           "type": "Слайди"
         },
         "extra_code_in_challenge_levels/csd/2022": {
-          "name": "Додатковий код у рівнях із додатковими завданнями",
+          "name": "Додатковий код рівнів додаткових завдань",
           "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
           "type": "Ресурс"
         },
@@ -5144,10 +5151,12 @@
           "type": "Слайди"
         },
         "introduction_to_variables/csd/2022": {
+          "name": "Знайомство зі змінними",
           "url": "https://youtu.be/UG7Q1Sr0_F0",
           "type": "Відео"
         },
         "naming_variables/csd/2022": {
+          "name": "Іменування змінних",
           "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
           "type": "Ресурс"
         },
@@ -5207,12 +5216,12 @@
           "type": "Слайди"
         },
         "captioned_scenes/csd/2022": {
-          "name": "Сцени із надписами",
+          "name": "Сцени з субтирами",
           "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
           "type": "Рубрика"
         },
         "mini_project_-_captioned_scenes/csd/2022": {
-          "name": "Мініпроєкт - Сцени із надписами",
+          "name": "Мініпроєкт - Сцени з субтитрами",
           "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
           "type": "Зразок"
         },
@@ -5226,7 +5235,7 @@
           "type": "Слайди"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "name": "Приклад кінеографа - Marnic Bos",
+          "name": "Приклад фліпбука - Marnic Bos",
           "url": "https://youtu.be/hol0p29cd8o",
           "type": "Відео"
         },
@@ -5236,11 +5245,11 @@
           "type": "Відео"
         },
         "random_dot_flipbook/csd/2022": {
-          "name": "Кінеограф з випадковими точками",
+          "name": "Фліпбук з випадковими точками",
           "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
         },
         "random_sprite_flipbook/csd/2022": {
-          "name": "Кінеограф з випадковими спрайтами",
+          "name": "Фліпбук з випадковими спрайтами",
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "the_draw_loop/csd/2022": {
@@ -5258,7 +5267,7 @@
           "type": "Відео"
         },
         "the_counter_pattern/csd/2022": {
-          "name": "Лічильник шаблону",
+          "name": "Шаблон лічильника",
           "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -5301,6 +5310,7 @@
           "type": "Відео"
         },
         "if_statements/csd/2022": {
+          "name": "Команди умови",
           "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -5313,6 +5323,7 @@
           "type": "Слайди"
         },
         "if-else_statements/csd/2022": {
+          "name": "Команди Якщо/Інакше",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -5326,7 +5337,7 @@
           "type": "Слайди"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
-          "name": "Додатковий код у рівнях із додатковими завданнями",
+          "name": "Додатковий код рівнів додаткових завдань",
           "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
           "type": "Ресурс"
         },
@@ -5336,12 +5347,12 @@
           "type": "Зразок"
         },
         "interactive_card_-_marked_rubrics/csd/2022": {
-          "name": "Інтерактивна картка - критерії оцінювання",
+          "name": "Інтерактивна листівка - критерії оцінювання (приклад заповнення)",
           "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
           "type": "Зразок"
         },
         "interactive_card_-_student_checklist/csd/2022": {
-          "name": "Інтерактивна картка - Контрольний список для учнів",
+          "name": "Інтерактивна листівка - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
         },
         "interactive_card_1/csd/2022": {
@@ -5402,7 +5413,7 @@
           "type": "Слайди"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
-          "name": "Інструкція до мініпроєкту - Сайд-скролер",
+          "name": "План мініпроєкту - Сайд-скролер",
           "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Зразок"
         },
@@ -5433,15 +5444,17 @@
           "type": "Слайди"
         },
         "flyer_game/csd/2022": {
+          "name": "Гра Літун",
           "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
           "type": "Рубрика"
         },
         "flyer_game_-_project_guide/csd/2022": {
-          "name": "Гра-літалка - Інструкція до проєкту",
+          "name": "Гра Літун - План проєкту",
           "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
           "type": "Зразок"
         },
         "flyer_game_1/csd/2022": {
+          "name": "Гра Літун",
           "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
           "type": "План проєкту"
         },
@@ -6362,18 +6375,20 @@
           "type": "Ресурс"
         },
         "if_statements_1/csd/2022": {
+          "name": "Команди умови",
           "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
           "type": "Ресурс"
         },
         "if_statements_2/csd/2022": {
+          "name": "Команди умови",
           "type": "Відео"
         },
         "the_counter_pattern_1/csd/2022": {
-          "name": "Лічильник шаблону",
+          "name": "Шаблон лічильника",
           "type": "Відео"
         },
         "the_counter_pattern_2/csd/2022": {
-          "name": "Лічильник шаблону",
+          "name": "Шаблон лічильника",
           "type": "Ресурс"
         },
         "variables_1/csd/2022": {
@@ -7005,7 +7020,8 @@
           "type": "Ресурс"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Зміни для віртуального уроку"
+          "name": "Зміни для віртуального уроку",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Безпека у моєму інтернет-районі: Слайди до уроку",
@@ -7162,13 +7178,16 @@
           "type": "Відповіді"
         },
         "all_resources/courseb/2022": {
-          "name": "Всі ресурси"
+          "name": "Всі ресурси",
+          "url": "/s/courseb-2022/resources"
         },
         "all_standards/courseb/2022": {
-          "name": "Всі стандарти"
+          "name": "Всі стандарти",
+          "url": "/s/courseb-2022/standards"
         },
         "all_vocabulary/courseb/2022": {
-          "name": "Всі терміни"
+          "name": "Всі терміни",
+          "url": "/s/courseb-2022/vocab"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Керівництво по стандартах Common Core і NGSS",
@@ -7204,7 +7223,8 @@
           "type": "Ресурс"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Зміни для віртуального уроку"
+          "name": "Зміни для віртуального уроку",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "digital_trails_animal_tracks/courseb/2022": {
           "name": "Цифрові сліди: Сліди звірят",
@@ -7266,7 +7286,8 @@
           "type": "Зображення емоцій"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Як створити групу класу на Code.org"
+          "name": "Як створити групу класу на Code.org",
+          "url": "https://youtu.be/4Wugxc80fNU"
         },
         "pair_programming/courseb/2022": {
           "name": "Парне програмування",
@@ -7431,6 +7452,7 @@
           "type": "Роздатковий матеріал"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
+          "name": "CSF - Курс C - Слайди 2022-2023 рр.",
           "type": "Слайди"
         },
         "my_robotic_friends/coursec/2022": {

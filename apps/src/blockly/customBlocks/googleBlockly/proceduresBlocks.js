@@ -59,6 +59,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -85,6 +86,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -92,8 +94,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  console.log('edit button clicked!');
-
   // Eventually, this will be where we create a modal function editor.
   // For now, just find the function definition block and select it.
   const workspace = this.getSourceBlock().workspace;
@@ -103,6 +103,12 @@ export const editButtonHandler = function () {
     workspace.centerOnBlock(definition.id);
     definition.select();
   }
+
+  // TODO: When we are ready, this is how we can open the modal function editor.
+  // const procedure = this.getSourceBlock().getProcedureModel();
+  // if (procedure) {
+  //   Blockly.functionEditor.showForFunction(procedure);
+  // }
 };
 
 // This extension adds an edit button to the end of a procedure call block.
@@ -140,6 +146,21 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
       }
     });
   }
+});
+
+// Override the destroy function to not destroy the procedure. We need to do this
+// so that when we clear the modal function editor we don't remove the procedure
+// from the procedure map.
+GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
+  const mixin = {
+    destroy: function () {
+      // no-op
+      // this overrides the destroy hook registered
+      // in the procedure_def_get_def_mixin
+    },
+  };
+  // We can't register this as a mixin since we're overwriting existing methods
+  Object.assign(this, mixin);
 });
 
 // TODO: After updating to Blockly v10, remove this local copy of

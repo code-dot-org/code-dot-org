@@ -14,11 +14,12 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fourth-grade",
-    "serialized_at": "2023-08-07 21:16:11 UTC",
+    "serialized_at": "2023-08-18 19:09:19 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

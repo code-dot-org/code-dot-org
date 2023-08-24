@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:43.000Z",
   "level_num": "custom",
@@ -46,7 +47,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Piano with Arrays\r\n\r\nThis app has a piano with the sharp notes included with a new array:\r\n\r\n- `var sharpNotes = [\"C#4\", \"D#4\", \"F#4\", \"G#4\", \"A#4\"];`(#BB77C7)\r\n\r\nIn the program below, all of the natural note keys work correctly, but the top sharp keys still need to be coded.\r\n\r\n# Do this\r\n\r\n1) Find the section of the code that has the sharp note events [**(Show Me Where)**](#triggercallout=sharp_notes)\r\n2) Add code to play the sharp notes using the `sharpNotes` array\r\n\t- Using the natural notes as a template, add [`buzzer.note()`(#f78183)](/docs/applab/buzzer.note/) blocks and type in the `sharpNotes` array into the block\r\n    - Remember to use square brackets `[]` for your array\r\n    - ::: details [**Show Me How**]\r\n    ![](https://images.code.org/9943e9db0909a43e4aaa9d17644ce402-image-1649187666958.gif)\r\n    :::\r\n\r\n**Run Your App!** Verify that the piano works correctly.",
     "code_functions": {
       "buzzer.note": null,
@@ -61,7 +62,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/arrays"
+      "/courses/csd-2022/guides/arrays",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/modifying-arrays",
     "mini_rubric": "false",
@@ -74,9 +76,8 @@
     "encrypted_examples": "JKJUe6GVa3V1eZ6i3lapUvggJGObtXK6+/71Od05O6a/p+0645MXkQl4yS25\nr5+yh1S7Bta1ZOj9QICUNjZ1ZQ==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:43.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:43.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB3_2222\"},{\"changed_at\":\"2023-08-16 19:33:45 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

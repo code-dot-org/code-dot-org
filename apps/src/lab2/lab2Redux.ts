@@ -13,9 +13,10 @@ import {
 import {
   AppName,
   Channel,
+  LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
-  LevelProperties,
+  ProjectLevelData,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -28,7 +29,7 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
 import {
-  initialValidationState,
+  getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
@@ -65,7 +66,7 @@ const initialState: LabState = {
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
-  validationState: {...initialValidationState},
+  validationState: getInitialValidationState(),
   levelProperties: undefined,
 };
 

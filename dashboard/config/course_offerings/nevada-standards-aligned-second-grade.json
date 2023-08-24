@@ -1,6 +1,6 @@
 {
   "key": "nevada-standards-aligned-second-grade",
-  "display_name": "Nevada Standards Aligned 2nd Grade",
+  "display_name": "Nevada Standards Aligned: Beta - CSF Course C",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -8,7 +8,7 @@
   "marketing_initiative": "CSF",
   "grade_levels": "2",
   "header": "teacher_led",
-  "image": null,
+  "image": "https://images.code.org/833d4af73df7ec924635b38170323f79-NevadaBetaCatalogCard.png",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",

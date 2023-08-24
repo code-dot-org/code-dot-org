@@ -42,7 +42,7 @@
     "parent_level_id": 20926,
     "name_suffix": "_2023",
     "expand_debugger": "false",
-    "long_instructions": "# Create your Sprites\r\n\r\nNext you will create your sprites and give them starting properties in the \"Create Sprites\" area of your code.  For each sprite your should:\r\n\r\n1. Create the sprite in the correct place on the screen\r\n* Set its animation (or color and size)\r\n* Set its velocity and rotation speed, if needed\r\n* Set its collider and bounciness, if needed\r\n\r\n**Tip:** After you create each sprite, test it before making the next one.  If your sprite starts off screen, first place it on the screen to test it, then move it back off screen once you know that it looks right.\r\n\r\n**Tip:** If your sprite's position will need to be reset later in your game, it's a good idea to make a function that sets the position of this sprite that you can use again later.\r\n",
+    "long_instructions": "# Create your Sprites\r\n\r\nNext you will create your sprites and give them starting properties in the \"Create Sprites\" area of your code.  For each sprite you should:\r\n\r\n1. Create the sprite in the correct place on the screen\r\n* Set its animation (or color and size)\r\n* Set its velocity and rotation speed, if needed\r\n* Set its collider and bounciness, if needed\r\n\r\n**Tip:** After you create each sprite, test it before making the next one.  If your sprite starts off screen, first place it on the screen to test it, then move it back off screen once you know that it looks right.\r\n\r\n**Tip:** If your sprite's position will need to be reset later in your game, it's a good idea to make a function that sets the position of this sprite that you can use again later.\r\n",
     "reference_links": [
       "/courses/csd-2022/guides/problem-solving-process-programming",
       "/courses/csd-2022/guides/drawing-shapes",
@@ -69,7 +69,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:26.834+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game create sprites_2022\\\"\"],\"cloned_from\":\"CSD U3 game create sprites_2022\"},{\"changed_at\":\"2023-03-09 17:54:47 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:05:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:26.834+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game create sprites_2022\\\"\"],\"cloned_from\":\"CSD U3 game create sprites_2022\"},{\"changed_at\":\"2023-03-09 17:54:47 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:05:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-09 21:07:27 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

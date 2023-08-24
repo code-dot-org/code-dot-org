@@ -125,6 +125,12 @@ And(/^I create a (young )?student( in Colorado)?( who has never signed in)? name
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
+And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
+  steps <<~GHERKIN
+    And I type "#{@users[name][:email]}" into "#{element}"
+  GHERKIN
+end
+
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   create_user(name,
     data_transfer_agreement_required: '1',
@@ -200,11 +206,8 @@ def pass_time_for_user(name, amount_of_time)
   end
 end
 
-And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::AUTHORIZED_TEACHER
-  user.save!
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |_|
+  browser_request(url: '/api/test/authorized_teacher_access', method: 'POST')
 end
 
 And(/^I get universal instructor access$/) do

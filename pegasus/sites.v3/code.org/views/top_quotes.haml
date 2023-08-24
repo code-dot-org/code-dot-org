@@ -2,12 +2,12 @@
 -twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Leaders and trendsetters agree more students should learn computer science @codeorg'}
 -DB[:cdo_quotes].where(tag_s:'promote').each do |value|
   #block.col-50.left{:style=>' width: 50%; margin-bottom: 10px;'}
-    #headshot.col-18.left{:style=>'margin-bottom: 5px; margin-right: 15px;'}
+    #headshot.col-18.left{:style=>'margin-bottom: 5px; margin-right: 15px; margin-top: 6px;'}
       %img{:src=>value[:image_url_s]}
     #text.col-66.left
-      %h3{:style=> 'margin:0px;'}
+      %h3.heading-sm{:style=> 'margin:0px;'}
         =value[:name_s]
-      %h4{:style=>'margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;'}
+      %h4.heading-xs{:style=>'margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;'}
         -unless value[:title_s].nil_or_empty?
           =value[:title_s]
       %p{:style=>'padding-right:10px;'}

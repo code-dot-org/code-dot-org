@@ -10515,6 +10515,8 @@ fr:
             aux personnages de Angry Birds, de Plantes vs Zombies et Scrat de l'Âge
             de glace !
           title: Labyrinthe classique
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
         iceage:
           description: Crée une histoire ou fais un jeu avec le Labo de jeux Âge de
             Glace !
@@ -10835,6 +10837,11 @@ fr:
               display_name: Événements
             lessonGroup-7:
               display_name: Projet de fin de cours
+            lessonGroup-8:
+              display_name: Données
+          lessons:
+            lesson-1:
+              name: Données
         nevada-standards-aligned-fourth-grade-2023:
           description: Nous avons créé le cours E pour des élèves de CM1. Le cours
             commence par une introduction à l'outil de programmation Labo des Sprites.
@@ -10899,6 +10906,11 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Données
+            lessonGroup-8:
+              display_name: Systèmes informatiques
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
         nevada-standards-aligned-third-grade-2023:
           description: Nous avons créé le cours D pour les élèves de CE2. Le cours
             commence par un examen des notions abordées dans les cours précédents,
@@ -12459,6 +12471,22 @@ fr:
               name: 'Suite du module 6 : Méthodes de chaîne dans l''unité 6'
           name: vpl-csa-2022
           title: Formation professionnelle virtuelle CSA
+        vpl-csa-2023-m1:
+          title: Module 1
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Apprentissage professionnel virtuel CS Discoveries 2020 - 21
@@ -12486,6 +12514,22 @@ fr:
           title: Apprentissage professionnel virtuel CS Discoveries 2021 - 22
         vpl-csd-2022:
           title: Apprentissage professionnel virtuel CS Discoveries 2022 - 23
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
         vpl-csd-ci-1:
           description: "Ce module de formation professionnelle est conçu pour vous
             aider à vous préparer à enseigner aux élèves la résolution de problèmes
@@ -12976,6 +13020,22 @@ fr:
           title: Principes CS Apprentissage professionnel virtuel 21 - 22
         vpl-csp-2022:
           title: CS Principles Apprentissage professionnel virtuel 22 - 23
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

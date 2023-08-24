@@ -190,11 +190,13 @@ pt:
     renda e outras pessoas desfavorecidas para seguir carreiras em ciência da computação.
     [Saiba mais sobre nossa parceria] (%{afe_url}).
   grade_level: Nível escolar
-  grade_level_label_elementary: Escola Primária
-  grade_level_label_middle: Ensino médio
-  grade_level_label_high: Ensino médio
+  grade_level_label_elementary: Ensino Fundamental 1
+  grade_level_label_middle: Ensino Fundamental 2
+  grade_level_label_high: Ensino Médio
+  students_label: Estudantes
+  teachers_label: Professores
   teacher_label_csf: Professor de fundamentos de CS
-  teacher_label_csd: Professor de Descobertas em CC
+  teacher_label_csd: Professor do Curso Descobertas da CC
   teacher_label_csp: Professora de princípios de CS
   teacher_label_csc: Professor do CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
@@ -204,10 +206,12 @@ pt:
   call_to_action_watch_now: Assista agora
   call_to_action_try_activity: Experimente a atividade
   call_to_action_explore_unit: Explorar a unidade
-  call_to_action_explore_curriculum: Explore o currículo
+  call_to_action_explore_curriculum: Explorar o currículo
   call_to_action_explore_curriculum_options: Explore as opções de currículo
+  call_to_action_explore_lessons: Explore as aulas
   call_to_action_explore_modules: Explore os módulos
-  call_to_action_explore_workshops: Explorar workshops
+  call_to_action_explore_module: Explore o módulo
+  call_to_action_explore_workshops: Explorar oficinas
   call_to_action_explore_course: Explore o curso
   call_to_action_explore_courses: Explore os cursos
   call_to_action_explore_full_course: Explore o curso completo
@@ -231,17 +235,17 @@ pt:
   call_to_action_contact_regional_partner: Entre em contato com seu parceiro regional
   call_to_action_join_csta: Junte-se ao CSTA
   call_to_action_support_farsi: Apoie Code.org em farsi
-  call_to_action_resources_lesson_plan: Explorar exemplo de plano de ensino
+  call_to_action_resources_lesson_plan: Explorar exemplos de planos de ensino
   call_to_action_resources_videos: Explorar todos os vídeos
   call_to_action_resources_slides: Explorar exemplo de apresentação de slides
   call_to_action_resources_assessments: Explorar uma lição avaliativa
   call_to_action_resources_tools: Experimentar as ferramentas de programação
   call_to_action_sign_up_free: Cadastre-se gratuitamente
-  call_to_action_explore_ai_resources: Explorar recursos de I.A.
+  call_to_action_explore_ai_resources: Explore recursos sobre I.A.
   call_to_action_explore_curriculum_catalog: Explorar o Catálogo de Currículos
   call_to_action_see_full_curriculum_catalog: Ver o Catálogo de Currículos completo
-  call_to_action_find_self_paced_modules: Localizar módulos conforme o ritmo do professor
-  call_to_action_join_teacher_forums: Participar de fóruns de professores
+  call_to_action_find_self_paced_modules: Encontrar módulos individualizados
+  call_to_action_join_teacher_forums: Juntar-se ao fórum dos professores
   call_to_action_explore_teacher_forums: Explore os fóruns de professores
   call_to_action_explore_career_resources: Explorar recursos de carreira
   call_to_action_watch_videos: Assistir aos vídeos
@@ -253,8 +257,10 @@ pt:
   call_to_action_see_module_details: Veja os detalhes do módulo
   call_to_action_start_modules: Módulos iniciais
   call_to_action_see_course_details: Veja os detalhes do curso
+  call_to_action_see_lesson_details: Veja os detalhes da aula
   call_to_action_learn_about_approach: Saiba mais sobre nossa abordagem
   call_to_action_try_java_lab: Experimente o Java Lab
+  call_to_action_notify_available: Notifique-me quando disponível
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -328,6 +334,23 @@ pt:
   aria_label_call_to_action_csf_course_d: Veja os detalhes do Curso D
   aria_label_call_to_action_csf_course_e: Veja os detalhes do Curso E
   aria_label_call_to_action_csf_course_f: Veja os detalhes do Curso F
+  aria_label_call_to_action_ai_pl_101_videos: Assista aos vídeos do AI 101 for Teachers
+  aria_label_call_to_action_ai_teaching_module: Explore o módulo de ensino de IA e
+    aprendizado de máquina
+  aria_label_call_to_action_how_ai_works_lesson_01: Veja os detalhes da aula de Introdução
+    ao Aprendizado de Máquina
+  aria_label_call_to_action_how_ai_works_lesson_02: Veja os detalhes da aula de Visão
+    Computacional
+  aria_label_call_to_action_how_ai_works_lesson_03: Veja os detalhes da aula sobre
+    Redes Neurais
+  aria_label_call_to_action_how_ai_works_lesson_04: Veja os detalhes da aula sobre
+    Chatbots e modelos de grande linguagem
+  aria_label_call_to_action_how_ai_works_lesson_05: Veja os detalhes da aula de Imagens
+    Gerativas
+  aria_label_call_to_action_how_ai_works_lesson_06: Veja os detalhes da aula sobre
+    preconceito algorítmico
+  aria_label_call_to_action_how_ai_works_lesson_07: Veja os detalhes da aula do Nosso
+    Código de Ética de IA
   video_title_professional_learning_program: Programa de aprendizagem profissional
     da Code.org
   curriculum_name_csf: Fundamentos da Ciência da Computação
@@ -347,9 +370,9 @@ pt:
   curriculum_name_csd: Descobertas da ciência da computação
   curriculum_name_csp: Princípios da ciência da computação
   curriculum_name_csc: Conexões em Ciência da Computação
-  curriculum_name_csa: Ciência da Computação A
+  curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csc_02: Qualquer Módulo de Conexões em CC
-  curriculum_name_ai: IA e aprendizado de máquina
+  curriculum_name_ai: IA & Machine Learning
   curriculum_name_maker_cp: Criação de aplicativos com dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Criação de aplicativos com dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Criação de aplicativos com dispositivos
@@ -444,6 +467,10 @@ pt:
   module_label_student_tool: Ferramenta para estudantes
   module_label_student_product: Produto
   module_label_student_content_resources: Conteúdo e recursos
+  module_label_new: Novo
+  module_label_coming_soon: Em breve
+  module_label_video_series: Série de vídeos
+  module_label_self_paced: Módulo individualizado
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -466,9 +493,13 @@ pt:
   module_grade_9_12_teachers: Professores 9-12
   module_level_beginner: Iniciante
   module_level_intermediate: Intermediário
+  module_duration_45_mins: 45 minutos
+  module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
+  module_duration_5_hrs: 5 horas
   module_duration_8_hrs: 8 horas
+  module_duration_20_hrs: 20 horas
   module_duration_35_hrs: 35 horas
   module_duration_lesson: Lição
   module_duration_week: Semana
@@ -542,6 +573,7 @@ pt:
   heading_no_devices: Sem dispositivos? Nós temos tudo o que você precisa
   heading_java_lab: Laboratório Java
   heading_objects_first: Objetos em primeiro lugar
+  heading_these_lessons_will: 'Essas aulas irão:'
   professional_learning_section_desc: Obtenha o apoio de que precisa ao se preparar
     para ensinar. Os professores adoram, com mais de 90% classificando-o como o melhor
     desenvolvimento profissional de todos os tempos!
@@ -674,6 +706,11 @@ pt:
   ai_curriculum_grades_03: 'Níveis de ensino: 3-12'
   ai_curriculum_duration_03: 'Duração: 1 hora'
   ai_curriculum_btn_aria_label_03: Experimente a atividade AI for Oceans
+  ai_curriculum_title_04: Como a IA funciona
+  ai_curriculum_desc_04: Essas aulas complementam a série de vídeos How AI Works.
+    Cada aula é combinada com um único vídeo da série, aprofundando os conceitos introduzidos
+    nos vídeos.
+  ai_curriculum_btn_aria_label_04: Explore as aulas de Como a IA funciona
   ai_carousel_heading: 'O que os professores dizem sobre a IA com a Code.org:'
   ai_carousel_quote_01: Essa lição também deu aos meus alunos a oportunidade de ver
     que há um elemento de opinião nos sistemas de classificação. Mais tarde, quando
@@ -691,6 +728,11 @@ pt:
   ai_pl_list_04: Considere as implicações reais da IA e do aprendizado de máquina.
   ai_pl_list_05: Explore os projetos de final de capítulo.
   ai_pl_duration: 'Duração: 2 horas'
+  ai_pl_title: Ensino de IA e aprendizado de máquina
+  ai_pl_desc: Introdução à inteligência artificial e ao aprendizado de máquina. Treine
+    um modelo de aprendizado de máquina usando o AI Lab. e interaja com aplicativos
+    de aprendizado de máquina. Considere as implicações reais da IA e do aprendizado
+    de máquina.
   ai_video_series_title: Como a IA funciona
   ai_video_series_desc: Com uma introdução do CEO da Microsoft, Satya Nadella, esta
     série de vídeos curtos apresentará como a inteligência artificial funciona e por
@@ -718,6 +760,7 @@ pt:
   ai_pl_101_hero_heading: Juntar-se a nós no AI EmpowerED!
   ai_pl_101_hero_desc: Descubra o potencial transformador da inteligência artificial
     (I.A.) na educação com a nossa série on-line gratuita de aprendizagem para educadores.
+  ai_pl_101_hero_desc_02: Uma série de aprendizagem on-line abrangente para professores.
   ai_pl_101_hero_presented: Apresentado por
   ai_pl_101_intro_heading: O que é o AI 101 para professores?
   ai_pl_101_intro_text: AI 101 for Teachers é uma série de aprendizado profissional
@@ -762,6 +805,100 @@ pt:
     aproveitando modelos de pontuação e IA de ponta, ajudando os professores a fornecer
     feedback iterativo e avaliação formativa durante toda a experiência de redação.'
   ai_pl_101_explore__button_4: Ferramenta de exploração
+  ai_pl_101_video_title_1: Bate-papo ao lado da lareira com Sal Khan e Hadi Partovi
+  ai_pl_101_video_desc_1: Junte-se a Sal Khan (Khan Academy) e Hadi Partovi (Code.org)
+    para uma conversa ao lado da lareira sobre como adotar a inteligência artificial
+    na sala de aula. Espere uma discussão animada, incluindo alguns dos tópicos mais
+    controversos em torno da IA atualmente.
+  ai_pl_101_video_title_2: Desmistificando a IA para educadores
+  ai_pl_101_video_desc_2: Introdução aos fundamentos da Inteligência Artificial, que
+    fornecerá o conhecimento fundamental para compreender o profundo impacto da IA
+    em nossa sociedade e sua crescente relevância no campo da educação. Você obterá
+    informações práticas sobre como aproveitar a IA para tarefas na sala de aula e
+    economizar tempo em tarefas administrativas.
+  ai_pl_101_video_title_3: Transformando o aprendizado com a IA
+  ai_pl_101_video_desc_3: Explore a interseção entre IA e educação. Esta sessão explora
+    como a IA pode ser combinada com a pedagogia para aprimorar o aprendizado dos
+    alunos. É uma visita obrigatória para educadores que buscam aproveitar a IA para
+    transformar suas práticas de ensino e enriquecer as experiências de aprendizado
+    de seus alunos.
+  ai_pl_101_video_title_4: Garantindo uma abordagem responsável à IA
+  ai_pl_101_video_desc_4: Explore as considerações éticas e as melhores práticas para
+    incorporar a inteligência artificial em ambientes educacionais. Esta sessão fornecerá
+    estratégias, recursos e exemplos do mundo real concretos, todos com o objetivo
+    de compreender os possíveis preconceitos da IA e as considerações éticas que a
+    acompanham.
+  ai_pl_101_video_title_5: Trazendo a IA para a sala de aula
+  ai_pl_101_video_desc_5: Esta sessão se concentra em ensinar sobre IA, avaliar e
+    utilizar ferramentas educacionais de IA e aproveitar a IA para avaliação de estudantes.
+    Com uma rica mistura de teoria, exemplos práticos e recursos, o objetivo é capacitar
+    os educadores a navegar no cenário da IA e aprimorar as experiências de aprendizado
+    dos alunos.
+  ai_pl_101_video_desc_6: 'Saiba mais sobre a nova tecnologia que impulsiona as grandes
+    mudanças na IA, apresentando dois novos vídeos sobre modelos de grande linguagem
+    (como o ChatGPT) e a IA generativa. Ouça como essas novas tecnologias funcionam
+    diretamente com os especialistas: Mira Murati, CTO da OpenAI, e Cristóbal Valenzuela,
+    CEO da RunwayML.'
+  how_ai_works_hero_heading: Como a IA funciona
+  how_ai_works_hero_desc: Mergulhe no mundo da IA com “Como a IA funciona”, nossa
+    série de vídeos e as aulas que a acompanham!
+  how_ai_works_intro_desc: Esta série de vídeos curtos e as aulas presenciais que
+    os acompanham apresentarão a você e seus alunos como a inteligência artificial
+    funciona e por que ela é importante. Você pode escolher aulas individuais com
+    base no tópico, explorar toda a série de tópicos em uma aula ou ensinar todas
+    as 7 aulas para se aprofundar.
+  how_ai_works_intro_list_01: Apresentar a inteligência artificial e o aprendizado
+    de máquina
+  how_ai_works_intro_list_02: Mergulhe em como a IA generativa funciona, incluindo
+    modelos de grande linguagem (LLMs) e geração de imagens
+  how_ai_works_intro_list_03: Explore o preconceito, a ética, a privacidade e o uso
+    responsável da IA
+  how_ai_works_intro_list_04: Toque nas aplicações reais da IA, incluindo visão computacional
+  how_ai_works_lessons_heading: Aulas de IA para sua turma
+  how_ai_works_lesson_title_01: Introdução ao aprendizado de máquina
+  how_ai_works_lesson_desc_01: Saiba mais sobre uma forma de inteligência artificial
+    chamada aprendizado de máquina e como eles podem usar o Processo de Solução de
+    Problemas para ajudar a treinar um robô para resolver problemas. Participe de
+    atividades de aprendizado de máquina em que um robô aprende a detectar padrões
+    em peixes.
+  how_ai_works_lesson_title_02: Visão computacional
+  how_ai_works_lesson_desc_02: Saiba como a visão computacional funciona. Assista
+    a um vídeo explicando a visão computacional e como um computador “vê”. Em seguida,
+    crie um algoritmo que use uma rede para decidir qual número a tela de sete segmentos
+    está exibindo e teste-o.
+  how_ai_works_lesson_title_03: Redes neurais
+  how_ai_works_lesson_desc_03: Saiba como as redes neurais funcionam. Use widgets
+    para explorar redes neurais de forma prática. Assista a um vídeo explicando as
+    redes neurais. Por fim, discuta a necessidade de perspectivas diversas ao criar
+    sistemas de recomendação.
+  how_ai_works_lesson_title_04: Chatbots e modelos de grande linguagem
+  how_ai_works_lesson_desc_04: Saiba o que é um modelo de linguagem grande (LLM) e
+    como ele funciona e, em seguida, use um LLM para cocriar um texto com a IA. Finalmente,
+    discuta se os LLMs são inteligentes ou criativos.
+  how_ai_works_lesson_title_05: Imagens generativas
+  how_ai_works_lesson_desc_05: Saiba como a IA pode gerar imagens e, em seguida, explore
+    um widget de IA de difusão e discuta se esses modelos são criativos ou não.
+  how_ai_works_lesson_title_06: Viés algorítmico
+  how_ai_works_lesson_desc_06: Pratique recortar imagens para descobrir o viés subjacente
+    ao algoritmo de recorte do Twitter e, em seguida, leia e assista a um vídeo sobre
+    a descoberta desse algoritmo tendencioso. Por fim, discuta maneiras de reconhecer
+    e reduzir o viés nos algoritmos.
+  how_ai_works_lesson_title_07: Nosso Código de Ética de IA
+  how_ai_works_lesson_desc_07: Faça pesquisas usando artigos e vídeos que exponham
+    armadilhas éticas em uma área de inteligência artificial de sua escolha. Reúna
+    um recurso “Nosso Código de Ética de IA” para toda a classe para criadores e legisladores
+    de IA em todos os lugares.
+  how_ai_works_lessons_in_a_day_title: Como a IA funciona em um dia
+  how_ai_works_lessons_in_a_day_desc: Só tem um dia? Também existe a opção de apresentar
+    toda a série aos alunos em um único dia. Perfeito para qualquer professor da área
+    de estudo que queira apresentar a IA aos alunos ou até mesmo como uma aula para
+    um professor convidado.
+  how_ai_works_lessons_in_a_day_desc_02: Apresente todos os vídeos “Como a IA funciona”
+    em um dia. Os alunos acompanham cada vídeo combinando o vocabulário do vídeo e
+    respondendo a uma pergunta de reflexão sobre cada vídeo.
+  how_ai_works_resources_desc: Interessado em aprender mais sobre IA? Aqui estão alguns
+    recursos adicionais que podem ajudar a ampliar o aprendizado de você e de seus
+    alunos.
   ai_vid_intro_caption: Apresentando como a IA funciona
   ai_vid_chatbots_caption: Como funcionam os chatbots e os modelos de grande linguagem
   ai_vid_creativity_caption: A IA tem criatividade e imaginação?
@@ -803,7 +940,7 @@ pt:
   self_paced_pl_modules_list_03: Prepare-se para começar a ensinar o currículo com
     seus alunos.
   self_paced_pl_facilitator_heading: Quer levar seu aprendizado ainda mais longe?
-  self_paced_pl_facilitator_subheading: Workshops conduzidos por facilitadores
+  self_paced_pl_facilitator_subheading: Oficinas conduzidas por facilitadores
   self_paced_pl_facilitator_desc: Além dos módulos on-line individualizados acima,
     workshops de aprendizagem profissional ministrados por facilitadores estão disponíveis
     para professores. Junte-se aos mais de 100.000 professores que participaram de
@@ -964,23 +1101,23 @@ pt:
     seu financiamento, preparação e distribuição das traduções de farsi e, assim,
     permitirá que seu esforço de traduções de farsi prossiga em total conformidade
     com os requisitos de sanções econômicas dos EUA.
-  resources_tabs_heading: Recursos que vão apoiá-lo a cada etapa do caminho
-  resources_tabs_desc: "[Abra sua conta no Code.org](%{sign_up_url}) para ter acesso
-    a materiais que vão ajudá-lo a lecionar ciência da computação com confiança. O
-    Code.org tem recursos extensos projetados para apoiar o educador, mesmo os que
-    não tiverem experiência anterior no ensino de CC."
-  resources_tabs_tab_label_lesson_plans: Planos de aulas
+  resources_tabs_heading: Recursos que vão auxiliá-lo a cada etapa do caminho
+  resources_tabs_desc: "[Cadastre-se na Code.org](%{sign_up_url}) para ter acesso
+    a materiais que vão ajudá-lo a lecionar ciência da computação com confiança. A
+    Code.org tem um amplo catálogo de recursos projetados para auxiliar o educador,
+    até mesmo aqueles que não possuem experiência no ensino de CC."
+  resources_tabs_tab_label_lesson_plans: Planos de Aula
   resources_tabs_tab_label_videos: Vídeos
   resources_tabs_tab_label_slides: Slides
   resources_tabs_tab_label_assessments: Avaliações
-  resources_tabs_tab_label_tools: Ferramentas de programação
-  resources_tabs_lesson_plans_subhead: Receber orientação, aprendizagem objetivos
-    e estratégias de avaliação passo-a-passo para lecionar com eficiência.
-  resources_tabs_lesson_plans_desc: Entre os recursos mais úteis, destacam-se as apresentações
-    de slides, o guia de atividades, os critérios de avaliação e muito mais – todos
-    organizados no mesmo lugar. Cada plano de ensino é acompanhado por dicas para
-    implementação em sala de aula, ideias sobre diferenciação e atividades de extensão,
-    para ensinar aos alunos todas as competências.
+  resources_tabs_tab_label_tools: Ferramentas de Programação
+  resources_tabs_lesson_plans_subhead: Tenha o passo a passo, os objetivos de aprendizagem
+    e as estratégias de avaliação para lecionar com eficiência.
+  resources_tabs_lesson_plans_desc: Entre os recursos mais úteis destacam-se os conjutos
+    de apresentações, o guia de atividades, as rubricas e muito mais – todos dispostos
+    no mesmo lugar. Cada plano de ensino é acompanhado por dicas para implementação
+    em sala de aula, ideias sobre personalização de ensino e atividades de extensão,
+    para atender aos mais diversos tipos de alunos.
   resources_tabs_videos_heading: Vídeos Instrutivos
   resources_tabs_videos_subhead: Assista a vídeos com um panorama geral de ciência
     da computação e conceitos de programação de fácil compreensão.
@@ -1005,77 +1142,75 @@ pt:
     permite uma variedade de paradigmas de programação. Isso permite ao alunos uma
     transição sem transtornos entre a codificação baseada em blocos para as línguas
     em formato de texto, e estimula a criatividade e a inovação.
-  teach_page_top_heading: Lecione ciência da computação e incentive as possibilidades
-  teach_page_top_desc_01: Estimule seus alunos a explorarem seu máximo potencial com
-    o currículo gratuito de Ciência da Computação (CC) do Code.org.
-  teach_page_top_desc_02: Juntar-se à comunidade global com mais de 2 milhões de educador
-    capacitando a nova geração de inovadores, solucionadores de problemas e cidadãos
-    digitais! O Code.org dá apoio aos professores por toda sua jornada, com aprendizagem
-    profissional, currículos abrangentes e suporte quando necessário.
-  teach_page_why_teach_cs_heading: Por que lecionar ciência da computação com o Code.org?
-  teach_page_why_teach_cs_block_heading_01: Desenvolver as competências fundamentais
+  teach_page_top_heading: Lecione ciência da computação e fomente possibilidades
+  teach_page_top_desc_01: Estimule seus alunos a explorarem seu potencial máximo com
+    o currículo gratuito de Ciência da Computação (CC) da Code.org.
+  teach_page_top_desc_02: Junte-se a esta comunidade global com mais de 2 milhões
+    de educadores capacitando a nova geração de inovadores, solucionadores de problemas
+    e cidadãos digitais! A Code.org auxilia os professores por toda a sua jornada,
+    com aprendizagem profissional, currículos abrangentes e suporte quando necessário.
+  teach_page_why_teach_cs_heading: Por que lecionar ciência da computação com a Code.org?
+  teach_page_why_teach_cs_block_heading_01: Desenvolva as habilidades fundamentais
     em CC
-  teach_page_why_teach_cs_block_desc_01: Assim como a leitura, redação e matemática,
-    a ciência da computação é fundamental para qualquer meta. A matéria abrange a
-    solução de problema e o raciocínio crítico, e permite aos alunos participar ativamente
-    de uma sociedade cada vez mais digital.
-  teach_page_why_teach_cs_block_heading_02: Potencialização de recursos de ensino
-    abrangentes
+  teach_page_why_teach_cs_block_desc_01: Assim como a leitura, a redação e a matemática,
+    a ciência da computação é fundamental para tantos outros fins. A matéria abrange
+    a resolução de problemas e o raciocínio crítico, e proporciona aos alunos a participarem
+    ativamente de uma sociedade cada vez mais digital.
+  teach_page_why_teach_cs_block_heading_02: Aproveite materiais de ensino flexíveis
   teach_page_why_teach_cs_block_desc_02: Plano de ensino aprofundado e opções de aprendizagem
     profissional flexíveis asseguram que professores de diversas formações diferentes
     possam lecionar ciência da computação.
-  teach_page_why_teach_cs_block_heading_03: Desbloqueio de percursos para todos os
-    alunos
-  teach_page_why_teach_cs_block_desc_03: Os cargos na área de informática formam o
-    setor maior, que mais cresce e que remunera melhor entre todos nos EUA.
-  teach_page_why_teach_cs_block_heading_04: Veja como o mundo mudou com a I.A.
-  teach_page_why_teach_cs_block_desc_04: Ensine aos alunos como funciona a I.A. e
+  teach_page_why_teach_cs_block_heading_03: 'Proporcione caminhos para todos os alunos '
+  teach_page_why_teach_cs_block_desc_03: Os empregos na área da computação são os
+    maiores, os mais promissores, e o mais bem remunerados dentre todos nos EUA.
+  teach_page_why_teach_cs_block_heading_04: Compreenda um mundo transformado pela
+    I.A.
+  teach_page_why_teach_cs_block_desc_04: Ensine aos alunos como a I.A. funciona e
     como utilizá-la com segurança. Nossa Aprendizagem Profissional estimula a curiosidade
-    e a confiança com esta tecnologia em franca evolução.
-  teach_page_why_teach_cs_heading_02: Comece a ensinar ciência da computação com o
+    e a confiança com esta tecnologia em constante evolução.
+  teach_page_why_teach_cs_heading_02: Comece a ensinar ciência da computação com a
     Code.org hoje mesmo!
-  teach_page_quote: Quando você utiliza o currículo do Code.org, você tem tudo o que
-    precisa no mesmo lugar. O sistema inclui perguntas que você fará aos alunos, lições
-    que você vai ensinar e uma orientação sobre como fazê-lo. Portanto se você não
-    em qualquer experiência em ciência da computação, ela também estará lá para você.
-    Se você já tem experiência lecionando ciência da computação, o Code.org representa
+  teach_page_quote: Quando você utiliza o currículo da Code.org, você tem tudo o que
+    precisa no mesmo lugar; as perguntas necessárias a serem feitas aos alunos, as
+    lições que você precisa para lecionar e uma orientação sobre como fazê-lo. Mesmo
+    se você não tiver qualquer experiência em ciência da computação, pode contar com
+    ele. Mas se você já tem experiência lecionando ciência da computação, ele te mostrará
     uma nova abordagem ao seu método de ensino.
   teach_page_free_curriculum_heading: Currículo gratuito e envolvente
   teach_page_free_curriculum_desc: Queremos que você leve a Ciência da Computação
-    para a sua escola sem se preocupar com o custo. É por isso que emos o compromisso
-    de manter nosso currículo eternamente gratuito!
+    para a sua escola sem se preocupar com o custo. É por isso que assumimos o compromisso
+    de manter nosso currículo gratuito para sempre!
   teach_page_free_curriculum_list_heading_01: Currículo envolvente para todos os níveis
-    de alunos
+    de ensino
   teach_page_free_curriculum_list_desc_01: Currículo gratuito, flexível e divertido,
-    com ofertas em mais de 67 idiomas.
-  teach_page_free_curriculum_list_heading_02: Currículo adaptável e inovador
-  teach_page_free_curriculum_list_desc_02: 'O Code.org oferece tudo, desde um currículo
-    anual a atividades em apenas uma unidade. E mais: atualizamos nossos currículos
-    anualmente, para observarmos as melhores práticas e as áreas de foco, bem como
-    para criarmos novas ofertas para ensinar os temas de maior demanda na atualidade.'
-  teach_page_free_curriculum_list_heading_03: Currículo estruturado e mapeado conforme
-    as normas nacionais
-  teach_page_free_curriculum_list_desc_03: Cada currículo é mapeado segundo pelo menos
-    um conjunto de normas nacionais, incluindo a CSTA, as normas da Next Generation
+    disponível em mais de 67 idiomas.
+  teach_page_free_curriculum_list_heading_02: Currículo flexível e inovador
+  teach_page_free_curriculum_list_desc_02: 'A Code.org oferece tudo, desde um currículo
+    anual a atividades de apenas uma unidade. E mais: atualizamos nossos currículos
+    anualmente para incentivar as melhores práticas e áreas de foco, bem como para
+    criar novas ofertas de ensino que atendam os temas de maior demanda na atualidade.'
+  teach_page_free_curriculum_list_heading_03: Currículo estruturado nos padrões nacionais
+  teach_page_free_curriculum_list_desc_03: Cada currículo é estruturado seguindo pelo
+    menos um conjunto de padrões nacionais, incluindo a CSTA, as normas da Next Generation
     Science e da Common Core.
-  teach_page_free_curriculum_heading_02: 'Explore nossos currículos para conhecer
-    os diversos níveis oferecidos:'
-  teach_page_resources_heading: Recursos que vão apoiá-lo a cada etapa do caminho
+  teach_page_free_curriculum_heading_02: 'Explore nosso currículo para conhecer os
+    diversos níveis de ensino oferecidos:'
+  teach_page_resources_heading: Recursos que vão auxiliá-lo a cada etapa do caminho
   teach_page_resources_desc: Ao abrir uma conta no Code.org, você terá acesso a materiais
     que vão ajudá-lo a lecionar ciência da computação com confiança. O Code.org tem
     recursos extensos projetados para apoiar o educador, mesmo os que não tiverem
     experiência anterior no ensino de CC. Clique nas guias para saber mais sobre os
     recursos.
   teach_page_curriculum_heading: Ofertas de currículos que os alunos adoram
-  teach_page_curriculum_desc: São tantas ofertas incríveis para explorar! Veja aqui
-    algumas das nossas ofertas mais novas e populares.
+  teach_page_curriculum_desc: São tantas ofertas incríveis para explorar! Aqui vai
+    algumas das nossas ofertas mais recentes e populares.
   teach_page_pl_offerings_english_header: Professional learning offerings that meet
     your needs
   teach_page_pl_offerings_intl_header: Explore as ofertas de aprendizagem profissional
-  teach_page_pl_offerings_list_heading_self_paced: Módulos on-line no ritmo do professor
-  teach_page_pl_offerings_list_desc_self_paced: Esses módulos permitem seu envolvimento
-    no seu próprio ritmo, ao mesmo tempo se concentrando nas áreas mais importantes,
-    conforme as suas necessidades e o seu contexto de ensino.
+  teach_page_pl_offerings_list_heading_self_paced: Módulos on-line individualizados
+  teach_page_pl_offerings_list_desc_self_paced: Esses módulos permitem que você os
+    conduza no seu próprio ritmo e tempo, permitindo-o concentrar-se nas áreas mais
+    importantes, conforme as suas necessidades e o seu contexto de ensino.
   teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
     Workshops
   teach_page_pl_offerings_list_heading_workshops: Workshops
@@ -1088,29 +1223,29 @@ pt:
     que podem estar disponíveis para professores no seu país.
   teach_page_pl_offerings_list_heading_forums: Comunidade de Professores
   teach_page_pl_offerings_list_desc_forums: Um fórum para professores esclarecerem
-    dúvidas e compartilharem melhores práticas, pensamentos, ideias e inspirações.
-    Juntar-se a uma comunidade de educadores incríveis que estão levando a ciência
-    da computação para salas de aula em todo o mundo!
+    dúvidas e compartilharem as melhores práticas, pensamentos, ideias e inspirações.
+    Junte-se a uma comunidade de educadores incríveis que estão levando a ciência
+    da computação para as salas de aula em todo o mundo!
   teach_page_additional_materials_heading: Suporte e materiais adicionais
   teach_page_additional_materials_desc: Além do currículo e da aprendizagem profissional,
     temos muitos materiais de apoio em sala de aula.
-  teach_page_additional_materials_list_heading_01: Educação e carreira
+  teach_page_additional_materials_list_heading_01: Educação Profissional
   teach_page_additional_materials_list_desc_01: Recursos de fácil utilização, projetados
     para ajudar você a iluminar as conexões no mundo real e oferecer aos alunos a
     oportunidade de explorar vários planos de carreira.
   teach_page_additional_materials_list_heading_02: Videoteca
-  teach_page_additional_materials_list_desc_02: Nós oferecemos uma biblioteca em plena
-    expansão, com vídeos educacionais para educadores de todo o mundo, on-line ou
-    em sala de aula. Nossa meta é ampliar nossas iniciativas além do alcance dos nossos
-    currículos.
-  teach_page_additional_materials_list_heading_03: Pôsteres para salas de aula
-  teach_page_additional_materials_list_desc_03: Imprima esses pôsteres com modelos
-    de diversas funções, para você afixar na escola e inspirar os alunos a experimentarem
-    a ciência da computação.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  teach_page_additional_materials_list_desc_02: Oferecemos uma biblioteca em constante
+    atualização com vídeos educacionais para educadores de todo o mundo, seja on-line
+    ou em sala de aula. Nossa meta é ampliar nossas iniciativas para além do alcance
+    dos nossos currículos.
+  teach_page_additional_materials_list_heading_03: Pôsteres para Salas de Aula
+  teach_page_additional_materials_list_desc_03: Imprima esses pôsteres com diversos
+    exemplos inspiradores, para serem afixados na escola e inspirar os alunos a darem
+    uma chance à ciência da computação.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1689,6 +1824,7 @@ pt:
   not_found_desc: A página solicitada não foi encontrada
   not_found_instructions: Verifique o endereço da Web e o reenvie ou escolha um link
     da lista abaixo.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1741,6 +1877,7 @@ pt:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1762,6 +1899,7 @@ pt:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -12297,8 +12435,10 @@ pt:
   tutorial_ai4alldance_string_platforms: Todos os navegadores modernos
   tutorial_ai4allneural_string_platforms: Todos os navegadores modernos
   tutorial_spheroinout_string_platforms: Off-line
-  tutorial_edisonblueprint_string_platforms: Todos os navegadores modernos
-  tutorial_edisonmaze_string_platforms: Todos os navegadores modernos
+  tutorial_edisonblueprint_string_platforms: Todos os navegadores modernos, tablet
+    Android, iPad
+  tutorial_edisonmaze_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
   tutorial_milnefunctions_string_platforms: Todos os navegadores modernos
   tutorial_sasmap_string_platforms: Todos os navegadores modernos, iPad, leitor de
     tela

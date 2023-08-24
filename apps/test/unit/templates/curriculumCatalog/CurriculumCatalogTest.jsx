@@ -42,6 +42,7 @@ describe('CurriculumCatalog', () => {
     isEnglish: false,
     languageNativeName: 'sampleLanguageNativeName',
     isSignedOut: true,
+    isInUS: true,
   };
   let store;
 

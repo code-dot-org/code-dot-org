@@ -184,13 +184,13 @@ Además, para ser incluidas en la lista, todas las actividades deben:
 - No requerir registro
 - No requerir pago (a excepción de las actividades de robótica, que pueden requerir la compra de un robot o kit) 
 
-En el caso de las actividades autodidácticas para nuevos docentes y estudiantes, el comité de revisión buscará si:
+Para actividades autodirigidas para nuevos profesores y alumnos el comité de revisión buscará si:
 
 - Los docentes pueden usar el tutorial o la actividad aunque no tengan experiencia en ciencias de la computación
 - Los estudiantes pueden tener éxito aunque no tengan experiencia en ciencias de la computación
 - Los estudiantes pueden realizar el tutorial sin ayuda de los padres o docentes
 
-Los docentes y los alumnos podrán buscar y filtrar nuestra lista de actividades en función de filtros como el grado, el nivel de experiencia, la materia, el hardware, etc. Por defecto, mostraremos primero los planes de estudio y las actividades que:
+Los docentes y los estudiantes pueden buscar y filtrar nuestra lista de actividades según el grado, nivel de experiencia, asignatura, equipo, etc. Primero mostraremos los planes de lecciones y las actividades que:
 
 - Recibir las mejores calificaciones del comité de evaluación
 - Son actividades autodirigidas de una hora diseñadas para principiantes (estudiantes y docentes)
@@ -204,11 +204,11 @@ Los docentes y los alumnos podrán buscar y filtrar nuestra lista de actividades
 
 ## Sugerencias para diseñar tutoriales autoguiados de una hora
 
-Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/promote/resources#logo) en tu tutorial, pero no es necesario. Si utilizas el logo de la Hora del Código, consulta las directrices de la marca registrada más abajo. <u>Bajo ninguna circunstancia puedes usar el logo y el nombre de Code.org.</u> Ambos son marcas registradas y no pueden aparecer junto a una marca de un tercero sin un permiso expreso por escrito.
+Puedes incluir el [logo de la Hora del Código](https://hourofcode.com/us/promote/resources#logo) en tu tutorial, pero no es obligatorio. Si utilizas el logo de la Hora del Código, consulta las directrices de marca registrada debajo. <u>Bajo ninguna circunstancia puedes usar el logo y el nombre de Code.org.</u> Ambos son marcas registradas y no pueden aparecer junto a una marca de un tercero sin un permiso expreso por escrito.
 
 **Asegúrate de que el estudiante promedio pueda finalizar la actividad sin problemas en una hora.** Puedes agregar una actividad abierta al final para los estudiantes que avancen más rápido durante la lección. Recuerde que la mayoría de los niños son totalmente principiantes para las ciencias de la computación y la programación.
 
-**Incluya las notas del profesor.** La mayoría de las actividades deben ser dirigidas por alumnos. Pero si una actividad debe ser gestionada por el profesor, por favor incluya instrucciones claras y simples en forma de "notas de profesor" en una URL separada enviada con su actividad. No solo los estudiantes son principiantes, algunos docentes también lo son. Incluya información como:
+**Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites: Incluye información como:
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
@@ -217,13 +217,13 @@ Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/pr
 
 **Incorporar feedback al final de la actividad.** (Por ejemplo: "¡Has terminado 10 niveles y has aprendido sobre bucles (loops)! ¡Buen trabajo!
 
-**Anime a los estudiantes a publicar en las redes sociales (donde corresponda) cuando hayan terminado.** Por ejemplo "He hecho una Hora de Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek. ¿Y tú? @Scratch.” Use el HashTag **#HourOfCode** (Con las letras H, O, C en mayúsculas)
+**Anime a los estudiantes a publicar en las redes sociales (donde corresponda) cuando hayan terminado.** Por ejemplo "He hecho una Hora de Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek. ¿Y tú? @Scratch.” Usa el hashtag **#HoraDelCódigo** (con las letras H, D y C en mayúsculas)
 
 **Crea tu actividad en español o en otros idiomas además del inglés.**
 
 **Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven cómo puede mejorar el mundo!
 
-**Asegúrate de que tu tutorial puede ser utilizado en un [paradigma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) de Programación por Parejas.** Esto es especialmente útil para la Hora del Código, ya que muchas aulas no disponen de ordenadores para todos los alumnos.
+**Asegúrate de que tu tutorial pueda ser utilizado en el paradigma de [Programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Esto es particularmente útil para la Hora del Código porque muchas aulas no tienen computadoras para todos los estudiantes.
 
 [**Volver al principio**](#top)
 
@@ -231,15 +231,15 @@ Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/pr
 
 ## Directrices de marca registrada
 
-Hour of Code® y Hora del Código® son marcas registradas de Code.org. Muchos de nuestros socios tutoriales han utilizado nuestras marcas "La Hora del Código" en sus sitios web en relación con sus actividades de La Hora del Código. No queremos impedir este uso, pero queremos asegurarnos de que el uso está dentro de unos límites:
+Hour of Code® y Hora del Código® son marcas registradas de Code.org. Muchos de nuestros socios tutoriales han utilizado nuestras marcas "La Hora del Código" en sus sitios web en relación con sus actividades de La Hora del Código. No queremos evitar este uso, pero queremos asegurarnos de que el uso se encuentre dentro de algunos límites:
 
-1. Utilizar "La Hora del Código" únicamente en relación con las actividades educativas no comerciales de la Educación Informática en el contexto de la campaña de La Hora del Código, y para ningún otro propósito.
-2. Cualquier referencia a la "Hora del Código" debe utilizarse de forma que no sugiera que es su propia marca, sino que hace referencia a la Hora del Código como movimiento de base. Un buen ejemplo: "Participa en la Hora del Código ® en ACMECorp.com". Un mal ejemplo: "Prueba Hour of Code de ACME Corp".
-3. Utiliza un superíndice "®" en los lugares más destacados en los que menciones "La Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
-4. Incluye un texto en la página (o en el pie de página), incluyendo enlaces a los sitios web de La Hora del Código, CSEdWeek y Code.org, que revele lo siguiente: a. Hour of Code® y Hora del Código® son marcas registradas de Code.org; y b. “La '[Hora del Código](http://hourofcode.com/) ® es una iniciativa nacional de [Code.org](http://code.org/) para iniciar a millones de estudiantes en una hora de informática y programación".
-5. No utilices "La Hora del Código" en los nombres de las aplicaciones.
-6. No utilice "La Hora del Código" en relación con cualquier uso o propósito comercial (por ejemplo, colocando su actividad de La Hora del Código detrás de un muro de pago; promocionando otro servicio de pago como parte de su actividad de La Hora del Código; vendiendo mercancía de La Hora del Código).
-7. No utilice "La Hora del Código" en relación con ninguna actividad que requiera un inicio de sesión o la creación de una cuenta.
+1. Utilizar “Hora del Código” únicamente en relación con actividades no comerciales de CS Education en el contexto de la campaña Hora del Código, y para ningún otro propósito.
+2. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la Hora del Código como un movimiento colectivo. Buen ejemplo: “Participa en la Hora del Código® en AcmeCorp.com”. Incorrecto: "Participa en la Hora del Código de ACME Corp".
+3. Usa un superíndice “®” en los lugares más destacados que menciones “Hora del Código”, tanto en tu sitio web como en las descripciones de aplicaciones.
+4. Incluir idioma en la página (o en el pie de página), incluyendo enlaces a los sitios web de Hora del Código, CSEDWeek y Code.org, que revele tanto lo siguiente: a. Hour of Code® y Hora del Código® son marcas registradas de Code.org; y b. “La '[Hora del Código](http://hourofcode.com/) ® es una iniciativa a nivel nacional de [Code.org](http://code.org/) para introducir a millones de estudiantes a una hora de informática y programación informática”.
+5. No utilice “Hora de código” en los nombres de las aplicaciones.
+6. No utilice “Hora del Código” en relación con ningún uso o propósito comercial (por ejemplo, colocar su actividad de Hora del Código detrás de un muro de pago; promover otro servicio pago como parte de su actividad de Hora del Código; vender mercancía de Hora del Código).
+7. No utilice “Hora del Código” en relación con ninguna actividad que requiera un inicio de sesión o la creación de una cuenta.
 
 [**Volver al principio**](#top)
 
@@ -247,15 +247,15 @@ Hour of Code® y Hora del Código® son marcas registradas de Code.org. Muchos d
 
 ## Pixel de seguimiento
 
-Para hacer un seguimiento más preciso de la participación, pedimos a todos los socios de los tutoriales que incluyan una imagen de seguimiento de 1 píxel en la primera página de sus tutoriales de La Hora del Código. La imagen pixelada debe estar sólo en la página de inicio. No lo incluyas en ninguna de las páginas intermedias de tu tutorial.
+Para poder realizar un seguimiento más preciso de la participación, pedimos que todos los tutoriales de la Hora del Código de los socios incluyan una imagen de seguimiento de 1 pixel en la primera página. La imagen de 1 pixel debe estar solo en la página de inicio. No la incluyas en las páginas internas de tu tutorial.
 
-Esto nos permitirá contar los usuarios que hacen tu tutorial de La Hora del Código. Esto hará que el recuento de la participación sea más preciso para tu tutorial.
+Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial.
 
-Si tu tutorial es aprobado e incluido en la página final del tutorial, Code.org te proporcionará un píxel de seguimiento único para que lo integres en tu tutorial. Véase el ejemplo siguiente.
+Si tu tutorial es aprobado e incluido en la página final de tutoriales, Code.org te proporcionará un pixel de seguimiento único para integrarlo en tu tutorial. Mira el ejemplo debajo.
 
-NOTA: esto no es importante en el caso de las aplicaciones instalables (aplicaciones iOS/Android o aplicaciones instalables en el escritorio)
+Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)
 
-Ejemplo de píxeles de seguimiento para la Fiesta de Baile:
+Ejemplo de píxeles de seguimiento para Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 

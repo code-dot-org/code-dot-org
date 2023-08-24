@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: Kaip vadovauti valstybės pareigūnams
 ---
 
 {{ signup_button }}

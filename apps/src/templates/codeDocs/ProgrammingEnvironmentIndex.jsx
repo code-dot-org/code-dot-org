@@ -1,5 +1,3 @@
-// TODO: Define all prop types for this file.
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -52,7 +50,7 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
 const ProgrammingEnvironmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
-  descriotion: PropTypes.string,
+  description: PropTypes.string,
   imageUrl: PropTypes.string,
   showPath: PropTypes.string.isRequired,
 });
