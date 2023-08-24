@@ -357,9 +357,7 @@ export default class FunctionEditor {
     };
   }
 
-  setUpProcedureMapsAfterLoad() {
-    Blockly.Events.disable();
-
+  unifyMainAndHiddenWorkspaceProcedures() {
     const procedureDefinitions = Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .getProcedures();
@@ -369,6 +367,7 @@ export default class FunctionEditor {
       .getProcedures()
       .forEach(procedure => {
         const procedureId = procedure.getId();
+        console.log('found procedure ', procedureId, ' in mainBlockSpace');
         if (
           procedureDefinitions.filter(
             procedureModel => procedureModel.getId() === procedureId
@@ -378,11 +377,16 @@ export default class FunctionEditor {
             Blockly.getHiddenDefinitionWorkspace(),
             procedure
           );
+          console.log('adding procedure ', procedureId, ' to hidden ws');
           Blockly.getHiddenDefinitionWorkspace()
             .getProcedureMap()
             .add(procedureModel);
         }
       });
+  }
+
+  setUpEditorWorkspaceProcedures() {
+    Blockly.Events.disable();
     Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .getProcedures()

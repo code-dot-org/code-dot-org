@@ -42,13 +42,14 @@ export function loadBlocksToWorkspace(workspace, source, procedures) {
 }
 
 function loadProcedureBlocksToWorkspace(source) {
-  console.log('in loadProcedureBlocksToWorkspace');
+  console.log('in loadProcedureBlocksToWorkspace', source);
   if (Blockly.getHiddenDefinitionWorkspace() && source) {
+    //Blockly.functionEditor.unifyMainAndHiddenWorkspaceProcedures();
     Blockly.serialization.workspaces.load(
       source,
       Blockly.getHiddenDefinitionWorkspace()
     );
-    Blockly.functionEditor.setUpProcedureMapsAfterLoad();
+    Blockly.functionEditor.setUpEditorWorkspaceProcedures();
   }
 }
 
@@ -59,17 +60,18 @@ function parseSourceAndProcedures(source, procedures) {
   let blockOrderMap;
   procedures = procedures || '{}';
   if (isXml) {
+    console.log('parsing xml! source is ', source);
     const xml = parseXmlElement(source);
     parsedSource = convertXmlToJson(xml);
     blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     parsedSource = JSON.parse(source);
-    parsedProcedures = JSON.parse(procedures);
   }
+  parsedProcedures = JSON.parse(procedures);
   if (Blockly.useModalFunctionEditor) {
     const procedures = [];
     const otherBlocks = [];
-    console.log({parsedSource});
+    console.log({parsedSourceLength: parsedSource.blocks.blocks.length});
     parsedSource.blocks.blocks.forEach(block => {
       // TODO: we may need to include more types here once behaviors are added.
       if (block.type === 'procedures_defnoreturn') {
@@ -83,6 +85,11 @@ function parseSourceAndProcedures(source, procedures) {
     parsedProcedures.blocks ||= {};
     parsedProcedures.blocks.blocks ||= [];
     parsedProcedures.blocks.blocks.push(...procedures);
+    if (parsedSource.procedures && parsedSource.procedures.length > 0) {
+      parsedProcedures.procedures ||= [];
+      // TODO: need to not add duplicates
+      parsedProcedures.procedures.push(...parsedSource.procedures);
+    }
   }
   return {parsedSource, parsedProcedures, blockOrderMap};
 }
