@@ -8,8 +8,6 @@ export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
   chatMessages: ChatCompletionMessage[];
-  // New user message that is submitted via the user chat message editor.
-  newUserMessage: string;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -17,7 +15,6 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  newUserMessage: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   showWarningModal: true,
@@ -27,9 +24,6 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    setNewUserMessage: (state, action: PayloadAction<string>) => {
-      state.newUserMessage = action.payload;
-    },
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessages.push(action.payload);
     },
@@ -47,7 +41,6 @@ const aichatSlice = createSlice({
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  setNewUserMessage,
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,

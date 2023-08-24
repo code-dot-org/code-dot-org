@@ -10,7 +10,6 @@ import {getChatCompletionMessage} from '../chatApi';
 import {
   AichatState,
   setIsWaitingForChatResponse,
-  setNewUserMessage,
   addChatMessage,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -44,7 +43,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
         : storedMessages[storedMessages.length - 1].id + 1;
 
     // TODO: Ask product about how to display user message with status unknown while message is being sent to backend.
-    dispatch(setNewUserMessage(message));
 
     const appropriateChatMessages = storedMessages.filter(
       msg => msg.status === Status.OK
