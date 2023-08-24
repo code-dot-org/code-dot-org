@@ -24,6 +24,9 @@ module I18n
       result
     end
 
+    # logging to CloudWatch the Size of a file, typically a i18n file, in Bytes.
+    # @param file_path [String] Path of the file which size is logged to CloudWatch.
+    # @param sync_step [String] Step of the sync where the method is used. Options: in, up, down, out.
     def self.report_filesize(file_path, sync_step)
       file_name = File.basename(file_path)
       file_dir = File.dirname(file_path)
