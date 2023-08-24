@@ -40,7 +40,13 @@ class AddMultipleStudents extends Component {
 
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    this.props.addMultipleStudents(value.split('\n'));
+    const studentDataArray = value.split('\n').map(line => {
+      const parts = line.split(',');
+      const name = parts[0].trim();
+      const familyName = parts.length > 1 ? parts[1].trim() : '';
+      return { name, familyName };
+    });
+    this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
