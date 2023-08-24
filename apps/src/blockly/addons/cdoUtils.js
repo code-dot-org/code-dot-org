@@ -22,29 +22,69 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
  * @param {string} source - workspace serialization, either XML or JSON
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
-export function loadBlocksToWorkspace(workspace, source) {
-  let isXml = stringIsXml(source);
-  let stateToLoad;
-  let blockOrderMap;
-  if (isXml) {
-    const xml = parseXmlElement(source);
-    stateToLoad = convertXmlToJson(xml);
-    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
-  } else {
-    stateToLoad = JSON.parse(source);
-  }
-  Blockly.serialization.workspaces.load(stateToLoad, workspace);
+export function loadBlocksToWorkspace(workspace, source, procedures) {
+  console.log('in loadBlocksToWorkspace');
+  // let isXml = stringIsXml(source);
+  // let stateToLoad;
+  // let blockOrderMap;
+  // if (isXml) {
+  //   const xml = parseXmlElement(source);
+  //   stateToLoad = convertXmlToJson(xml);
+  //   blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
+  // } else {
+  //   stateToLoad = JSON.parse(source);
+  // }
+  const {parsedSource, parsedProcedures, blockOrderMap} =
+    parseSourceAndProcedures(source, procedures);
+  Blockly.serialization.workspaces.load(parsedSource, workspace);
+  loadProcedureBlocksToWorkspace(parsedProcedures);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
 
-export function loadProcedureBlocksToWorkspace(source) {
-  if (Blockly.getProcedureWorkspace() && source) {
-    Blockly.cdoUtils.loadBlocksToWorkspace(
-      Blockly.getProcedureWorkspace(),
-      source
+function loadProcedureBlocksToWorkspace(source) {
+  console.log('in loadProcedureBlocksToWorkspace');
+  if (Blockly.getHiddenDefinitionWorkspace() && source) {
+    Blockly.serialization.workspaces.load(
+      source,
+      Blockly.getHiddenDefinitionWorkspace()
     );
-    Blockly.functionEditor.setUpEditorProcedureMap();
+    Blockly.functionEditor.setUpProcedureMapsAfterLoad();
   }
+}
+
+function parseSourceAndProcedures(source, procedures) {
+  let isXml = stringIsXml(source);
+  let parsedSource;
+  let parsedProcedures;
+  let blockOrderMap;
+  procedures = procedures || '{}';
+  if (isXml) {
+    const xml = parseXmlElement(source);
+    parsedSource = convertXmlToJson(xml);
+    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
+  } else {
+    parsedSource = JSON.parse(source);
+    parsedProcedures = JSON.parse(procedures);
+  }
+  if (Blockly.useModalFunctionEditor) {
+    const procedures = [];
+    const otherBlocks = [];
+    console.log({parsedSource});
+    parsedSource.blocks.blocks.forEach(block => {
+      // TODO: we may need to include more types here once behaviors are added.
+      if (block.type === 'procedures_defnoreturn') {
+        procedures.push(block);
+      } else {
+        otherBlocks.push(block);
+      }
+    });
+    parsedSource.blocks.blocks = otherBlocks;
+    console.log({parsedSourceAfterUpdate: parsedSource});
+    parsedProcedures.blocks ||= {};
+    parsedProcedures.blocks.blocks ||= [];
+    parsedProcedures.blocks.blocks.push(...procedures);
+  }
+  return {parsedSource, parsedProcedures, blockOrderMap};
 }
 
 export function setHSV(block, h, s, v) {

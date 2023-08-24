@@ -232,7 +232,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
@@ -673,13 +672,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
 
+    blocklyWrapper.useModalFunctionEditor =
+      options.useModalFunctionEditor || false;
+
     if (options.useModalFunctionEditor) {
       // The modal function editor is currently a work in progress so we are leaving
       // it commented out.
       // TODO: To use the modal function editor, uncomment these lines and update
       // editButtonHandler in procedureBlocks.js.
-      // blocklyWrapper.functionEditor = new FunctionEditor();
-      // blocklyWrapper.functionEditor.init(opt_options);
+      blocklyWrapper.functionEditor = new FunctionEditor();
+      blocklyWrapper.functionEditor.init(opt_options);
     }
 
     return workspace;

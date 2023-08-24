@@ -1236,6 +1236,7 @@ StudioApp.prototype.initReadonly = function (options) {
     rtl: getStore().getState().isRtl,
     scrollbars: false,
   });
+  console.log('in initReadonly?');
   this.loadBlocks(options.blocks);
 };
 
@@ -1243,8 +1244,13 @@ StudioApp.prototype.initReadonly = function (options) {
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
  */
-StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+StudioApp.prototype.loadBlocks = function (source, procedures) {
+  console.log('in studioapp loadBlocks');
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    source,
+    procedures
+  );
 };
 
 /**
@@ -2771,11 +2777,12 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks);
-    this.loadProcedureBlocks(config.level.procedureSource);
+    this.loadBlocks(startBlocks, config.level.procedureSource);
+    // this.loadProcedureBlocks(config.level.procedureSource);
   } catch (e) {
     if (loadLastAttempt) {
       try {
+        console.log('reloading..., e was', e);
         Blockly.mainBlockSpace.clear();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);

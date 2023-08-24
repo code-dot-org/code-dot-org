@@ -357,20 +357,51 @@ export default class FunctionEditor {
     };
   }
 
-  setUpEditorProcedureMap() {
+  setUpProcedureMapsAfterLoad() {
     Blockly.Events.disable();
-    this.procedureWorkspace
+
+    const procedureDefinitions = Blockly.getHiddenDefinitionWorkspace()
+      .getProcedureMap()
+      .getProcedures();
+    console.log({procedureDefinitions});
+    Blockly.mainBlockSpace
       .getProcedureMap()
       .getProcedures()
       .forEach(procedure => {
-        const editorProcedureModel = new ObservableProcedureModel(
+        const procedureId = procedure.getId();
+        if (
+          procedureDefinitions.filter(
+            procedureModel => procedureModel.getId() === procedureId
+          ).length === 0
+        ) {
+          const procedureModel = this.createProcedureModelForWorkspace(
+            Blockly.getHiddenDefinitionWorkspace(),
+            procedure
+          );
+          Blockly.getHiddenDefinitionWorkspace()
+            .getProcedureMap()
+            .add(procedureModel);
+        }
+      });
+    Blockly.getHiddenDefinitionWorkspace()
+      .getProcedureMap()
+      .getProcedures()
+      .forEach(procedure => {
+        const editorProcedureModel = this.createProcedureModelForWorkspace(
           this.editorWorkspace,
-          procedure.getName(),
-          procedure.getId()
+          procedure
         );
 
         this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
       });
     Blockly.Events.enable();
+  }
+
+  createProcedureModelForWorkspace(workspace, procedure) {
+    return new ObservableProcedureModel(
+      workspace,
+      procedure.getName(),
+      procedure.getId()
+    );
   }
 }
