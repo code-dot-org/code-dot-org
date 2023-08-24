@@ -31,7 +31,8 @@ video_player: true
 
   .col-50
     .tutorial-tile
-      = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
+      %div{style: "margin-bottom: -14px"}
+        = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
       .tutorial-info{style: "justify-content: flex-start;"}
         %h2 App Lab in the classroom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
@@ -89,7 +90,7 @@ video_player: true
         %a{href: "/educate/professional-learning"}
           %button Learn more
 
-  %h3.heading-sm
+  %h3.heading-sm{style: "margin-top: 2rem"}
     %a{href: '/csp'} Computer Science Principles
     units that use App Lab
 
@@ -138,7 +139,7 @@ video_player: true
         %strong Data
         %p Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab, but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
 
-  %h3.heading-sm
+  %h3.heading-sm{style: "margin-top: 2rem"}
     %a{href: '/csd'} Computer Science Discoveries
     units that use App Lab
 
@@ -167,7 +168,7 @@ video_player: true
             Adafruit's Circuit Playground
           board.
 
-  %h3.heading-sm
+  %h3.heading-sm{style: "margin-top: 2rem"}
     Flexible Units that use App Lab
 
   %table
@@ -199,7 +200,7 @@ video_player: true
 
 #videos
   %h2 Video library
-  Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
+  %p{style: "margin-bottom: 2rem"} Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
 
   - cspunit3_videos = []
   - cspunit3_videos << { id: 'turtle', category_title: 'Procedural abstraction and top-down design', caption: 'Program a turtle to move around the screen and draw anything from basic shapes to complex designs.', code: 'i2KHYUhtOlM', download_path: '//videos.code.org/2015/csp/applab/turtle.mp4', studio_stage: '/s/cspunit3/lessons/2/levels/1' }
@@ -219,7 +220,7 @@ video_player: true
     // beginning of each video chapter
     - unless video[:category_title].nil_or_empty?
       .clear
-      %h2= video[:category_title]
+      %h3= video[:category_title]
     %div{style: "float:left; padding:10px; width: 275px;"}
       = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'center', download_path: video[:download_path], letterbox: 'false'
 
