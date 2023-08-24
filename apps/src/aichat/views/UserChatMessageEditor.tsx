@@ -1,27 +1,22 @@
-import React, {useState, useContext, useCallback} from 'react';
+import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
-import {ChatWorkspaceContext} from './ChatWorkspace';
 import aichatI18n from '../locale';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {useSelector} from 'react-redux';
-import {AichatLevelProperties} from '../types';
+import {submitChatMessage} from '../redux/aichatRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
-  const systemPrompt = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties)?.systemPrompt
-  );
+
   // TODO: If systemPrompt is undefined, handle this error case.
-  const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;
+  const dispatch = useAppDispatch();
   const handleSubmit = useCallback(() => {
-    onSubmit?.(userMessage, systemPrompt);
+    dispatch(submitChatMessage(userMessage));
     setUserMessage('');
-  }, [onSubmit, userMessage, systemPrompt]);
+  }, [userMessage, dispatch]);
 
   return (
     <div className={moduleStyles.UserChatMessageEditor}>

@@ -79,30 +79,24 @@ const ChatWorkspace: React.FunctionComponent = () => {
   };
 
   return (
-    <ChatWorkspaceContext.Provider value={{onSubmit: onSubmit}}>
-      <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-        {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-        <div
-          id="chat-workspace-conversation"
-          className={moduleStyles.conversationArea}
-        >
-          {storedMessages.map(message => (
-            <ChatMessage message={message} key={message.id} />
-          ))}
-        </div>
-        <div
-          id="chat-workspace-editor"
-          className={moduleStyles.userChatMessageEditor}
-        >
-          <UserChatMessageEditor />
-        </div>
+    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
+      {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
+      <div
+        id="chat-workspace-conversation"
+        className={moduleStyles.conversationArea}
+      >
+        {storedMessages.map(message => (
+          <ChatMessage message={message} key={message.id} />
+        ))}
       </div>
-    </ChatWorkspaceContext.Provider>
+      <div
+        id="chat-workspace-editor"
+        className={moduleStyles.userChatMessageEditor}
+      >
+        <UserChatMessageEditor />
+      </div>
+    </div>
   );
 };
-
-type ChatUtils = {onSubmit: (message: string, systemPrompt: string) => void};
-export const ChatWorkspaceContext: React.Context<ChatUtils | null> =
-  React.createContext<ChatUtils | null>(null);
 
 export default ChatWorkspace;
