@@ -14,8 +14,6 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-gem pristine --all
-
 mispipe "bundle install --verbose" ts
 
 # set up locals.yml
