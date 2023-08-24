@@ -31,11 +31,9 @@ const initialState: AichatState = {
 export const submitChatMessage = createAsyncThunk(
   'aichat/submitChatMessage',
   async (message: string, thunkAPI) => {
-    thunkAPI.dispatch(setIsWaitingForChatResponse(true));
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
     const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
       ?.systemPrompt;
-    // check for undefined systemPrompt
     if (systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
@@ -64,7 +62,6 @@ export const submitChatMessage = createAsyncThunk(
       message,
       appropriateChatMessages
     );
-    thunkAPI.dispatch(setIsWaitingForChatResponse(false));
 
     // Find message in chatMessages and update status.
     thunkAPI.dispatch(
@@ -114,6 +111,18 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
+  },
+  extraReducers: builder => {
+    builder.addCase(submitChatMessage.fulfilled, state => {
+      state.isWaitingForChatResponse = false;
+    });
+    builder.addCase(submitChatMessage.rejected, (state, action) => {
+      state.isWaitingForChatResponse = false;
+      console.error(action.error);
+    });
+    builder.addCase(submitChatMessage.pending, state => {
+      state.isWaitingForChatResponse = true;
+    });
   },
 });
 
