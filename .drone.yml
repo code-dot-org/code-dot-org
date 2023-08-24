@@ -35,15 +35,6 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
-    image: plugins/s3-cache
-    settings:
-      endpoint: s3://code-dot-org
-      debug: true
-      pull: true
-      restore: true
-      filename: unit-tests-cache.tar
-
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:1.8.1
@@ -65,20 +56,6 @@ steps:
       - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/circleci/.rbenv
-    settings:
-      endpoint: s3://code-dot-org
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache.tar
-      mount:
-        - /home/circleci/.rbenv
 
 volumes:
   - name: mysql
