@@ -27,9 +27,13 @@
 }
 
 .tooPersonalMessage {
-    background-color: $lightest_yellow;
+    background-color: $droplet_yellow;
 }
 
 .messageHeaderContainer {
     margin: 5px 0 5px 0;
+}
+
+.unknownStatusMessage {
+    background-color: $lightest_orange;
 }
