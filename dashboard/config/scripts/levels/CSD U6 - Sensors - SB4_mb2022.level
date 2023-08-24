@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:50:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -59,21 +64,17 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
     "encrypted_examples": "YTWiFCFkWMSSk44lObJYPpAxmmKis2YjuqC1SeGvW4/rWeJgm+aJ3dXBHScI\n40QGHrcXnZY9GOpqTIWhIHJohg==\n",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-sensors",
       "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/changing-sensor-scale"
-    ]
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:50:59.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:59.003+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4_2222\"},{\"changed_at\":\"2023-02-09 22:05:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:30:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:59.003+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4_2222\"},{\"changed_at\":\"2023-02-09 22:05:14 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:30:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:09:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,6 +1,6 @@
 {
   "key": "nevada-standards-aligned-kindergarten",
-  "display_name": "Nevada Standards Aligned Kindergarten",
+  "display_name": "Nevada Standards Aligned: Beta - CSF Course A",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -8,7 +8,7 @@
   "marketing_initiative": "CSF",
   "grade_levels": "K",
   "header": "teacher_led",
-  "image": null,
+  "image": "https://images.code.org/f1daf7d33ed372e27232b8a825767cbb-NevadaBetaCatalogCard.png",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",

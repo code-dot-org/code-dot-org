@@ -58,7 +58,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/counter-patterns-with-event",
-      "/courses/csd-2022/guides/if-statements-2"
+      "/courses/csd-2022/guides/if-statements-2",
+      "/maker/setup"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: orange;\"><img data-canonical-image-url=\"image://Sun.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"sunImg\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 200px; margin: 0px;\" data-icon-color=\"#01cbff\" src=\"/level_starter_assets/CSD U6 - If Variables - P2_2022/Sun.png\"><img src=\"/level_starter_assets/CSD U6 - If Variables - P2_2022/BG-Landscape07 (1).png\" data-canonical-image-url=\"image://BG-Landscape07 (1).png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"foregroundImg\" style=\"height: 150px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 310px; margin: 0px;\"></div></div>",
     "starter_assets": {
@@ -76,7 +77,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:08.648+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - P2_2222\"},{\"changed_at\":\"2023-02-07 18:13:19 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 23:19:52 +0000\",\"changed\":[\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:08.648+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - P2_2222\"},{\"changed_at\":\"2023-02-07 18:13:19 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 23:19:52 +0000\",\"changed\":[\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 23:02:10 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

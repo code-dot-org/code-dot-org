@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-23 16:41:18 UTC",
+    "serialized_at": "2023-08-22 17:56:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,6 +75,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2023"
       }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
     }
   ],
   "lessons": [
@@ -86,6 +98,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
         "preparation": "* **(Optional)** Print copies of the U5L1 Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-1-two-dimensional-2d-arrays/37910) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
@@ -104,6 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the U5L2 Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
@@ -122,6 +136,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
         "preparation": "* **(Optional)** Print copies of the U5L3 Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-3-row-major-traversal/37912) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
@@ -140,6 +155,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the U5L4 Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-4-column-major-traversal/37913) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
@@ -158,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
         "preparation": "* **(Optional)** Print copies of the U5L5 Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
@@ -176,6 +193,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
         "preparation": "* **(Optional)** Print copies of the U5L6 Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-6-images-in-the-theater/37915) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
@@ -194,6 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the U5L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-7-2d-array-algorithms/37916) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
@@ -212,6 +231,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the U5L8 Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
@@ -230,6 +250,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
         "preparation": "* **(Optional)** Print copies of the U5L9 Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-9-impacts-of-programs/37918) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
@@ -327,6 +348,51 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Sandbox: Console",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa5-2023"
       }
     }
@@ -887,6 +953,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2023"
       }
+    },
+    {
+      "key": "8f96995d-c274-4241-8bf2-d596c9818d83",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f96995d-c274-4241-8bf2-d596c9818d83",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "0193af50-5a65-4301-bfdf-6c4063ecf06b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0193af50-5a65-4301-bfdf-6c4063ecf06b",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "key": "eda0dfb9-c1d7-406a-833c-c02ffe8a2231",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eda0dfb9-c1d7-406a-833c-c02ffe8a2231",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -1149,18 +1251,6 @@
       }
     },
     {
-      "key": "3e711aa8-8d7f-4c9f-98c7-ae5b904dcfcd",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e711aa8-8d7f-4c9f-98c7-ae5b904dcfcd",
-        "lesson_activity.key": "3c518927-47a7-43a0-ae8f-361600463dec"
-      }
-    },
-    {
       "key": "03d74130-5317-42ec-bfcc-069c03c8290e",
       "position": 1,
       "properties": {
@@ -1379,18 +1469,6 @@
       },
       "seeding_key": {
         "activity_section.key": "cfcea706-6170-44c8-ae28-af8c2af50f5f",
-        "lesson_activity.key": "346bc986-7b49-4d16-9411-73105e4e1bf0"
-      }
-    },
-    {
-      "key": "8066e87c-8161-4462-aef5-3bc3d9230676",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8066e87c-8161-4462-aef5-3bc3d9230676",
         "lesson_activity.key": "346bc986-7b49-4d16-9411-73105e4e1bf0"
       }
     },
@@ -1647,18 +1725,6 @@
       }
     },
     {
-      "key": "554b2866-74eb-41b9-8fc4-7e9747bdf35b",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "554b2866-74eb-41b9-8fc4-7e9747bdf35b",
-        "lesson_activity.key": "72245416-6139-4ec9-9823-0c6aa75b8c81"
-      }
-    },
-    {
       "key": "cf9a3ca1-ee4c-4e00-aa36-17ee316a44a6",
       "position": 1,
       "properties": {
@@ -1878,18 +1944,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e6e7cbf6-85b5-493d-95de-36e4af39c0b8",
-        "lesson_activity.key": "2d2f4265-c814-4d33-9014-2c64464957eb"
-      }
-    },
-    {
-      "key": "9b26f670-7c2b-4a94-8663-7557e2a85ca7",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b26f670-7c2b-4a94-8663-7557e2a85ca7",
         "lesson_activity.key": "2d2f4265-c814-4d33-9014-2c64464957eb"
       }
     },
@@ -2157,18 +2211,6 @@
       }
     },
     {
-      "key": "8259f470-c619-4502-af78-dda99ce1f803",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8259f470-c619-4502-af78-dda99ce1f803",
-        "lesson_activity.key": "1dab5177-ffe8-4957-b14e-5b9a01331235"
-      }
-    },
-    {
       "key": "38bdf2f4-d713-46d8-91e9-3233751ddee6",
       "position": 1,
       "properties": {
@@ -2397,18 +2439,6 @@
       },
       "seeding_key": {
         "activity_section.key": "29c25228-65e3-4c18-8638-30203c737ec5",
-        "lesson_activity.key": "9b17674f-0283-4001-adb6-016328c08449"
-      }
-    },
-    {
-      "key": "eb27dc20-7fb8-44b6-abb0-bc53e4d541b3",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "eb27dc20-7fb8-44b6-abb0-bc53e4d541b3",
         "lesson_activity.key": "9b17674f-0283-4001-adb6-016328c08449"
       }
     },
@@ -2708,18 +2738,6 @@
       }
     },
     {
-      "key": "1493878c-8751-4100-a309-38f0ea179620",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "1493878c-8751-4100-a309-38f0ea179620",
-        "lesson_activity.key": "06bdad0e-cb50-4a01-9c73-24bf60694806"
-      }
-    },
-    {
       "key": "ecbcfeb4-abbe-40c5-8e5e-f673f3108df7",
       "position": 1,
       "properties": {
@@ -2903,18 +2921,6 @@
       },
       "seeding_key": {
         "activity_section.key": "0cebb406-aa86-478c-b080-3987a190eea4",
-        "lesson_activity.key": "51bdf8fe-1ad4-483d-a0d1-47a6d88e2c62"
-      }
-    },
-    {
-      "key": "7fa49a75-ea82-4cdf-8f28-87ed7dabc29e",
-      "position": 5,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7fa49a75-ea82-4cdf-8f28-87ed7dabc29e",
         "lesson_activity.key": "51bdf8fe-1ad4-483d-a0d1-47a6d88e2c62"
       }
     },
@@ -3146,18 +3152,6 @@
       },
       "seeding_key": {
         "activity_section.key": "bcd827b1-fef1-4fd2-88fa-ca72196269cc",
-        "lesson_activity.key": "de7e7c21-6e4a-4457-815b-37c5c418c623"
-      }
-    },
-    {
-      "key": "e445738f-57f2-4f96-bd78-ec567fd4faf7",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "e445738f-57f2-4f96-bd78-ec567fd4faf7",
         "lesson_activity.key": "de7e7c21-6e4a-4457-815b-37c5c418c623"
       }
     },
@@ -4018,6 +4012,48 @@
       "seeding_key": {
         "activity_section.key": "5c57d00a-3bbb-436c-b494-32159715362f",
         "lesson_activity.key": "9828ce90-6363-4b8a-a44f-26b8a31c3684"
+      }
+    },
+    {
+      "key": "37d3b753-1e4d-4029-9e0f-c45ee6f73b18",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37d3b753-1e4d-4029-9e0f-c45ee6f73b18",
+        "lesson_activity.key": "8f96995d-c274-4241-8bf2-d596c9818d83"
+      }
+    },
+    {
+      "key": "18408fd6-6f06-480d-9218-e5934ff6e402",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "18408fd6-6f06-480d-9218-e5934ff6e402",
+        "lesson_activity.key": "0193af50-5a65-4301-bfdf-6c4063ecf06b"
+      }
+    },
+    {
+      "key": "bf21ac3f-6353-4b23-acdc-36e9bef4476b",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf21ac3f-6353-4b23-acdc-36e9bef4476b",
+        "lesson_activity.key": "0193af50-5a65-4301-bfdf-6c4063ecf06b"
+      }
+    },
+    {
+      "key": "13cd279b-fd91-418c-a6aa-748fd6d6594c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "13cd279b-fd91-418c-a6aa-748fd6d6594c",
+        "lesson_activity.key": "eda0dfb9-c1d7-406a-833c-c02ffe8a2231"
       }
     }
   ],
@@ -5571,6 +5607,104 @@
       "level_keys": [
         "CSA U5 Personal Narrative Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "37d3b753-1e4d-4029-9e0f-c45ee6f73b18"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "18408fd6-6f06-480d-9218-e5934ff6e402"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf21ac3f-6353-4b23-acdc-36e9bef4476b"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "13cd279b-fd91-418c-a6aa-748fd6d6594c"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6316,6 +6450,54 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2023",
         "activity_section.key": "749a02be-2608-4aa5-b4db-957f3acc283b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "37d3b753-1e4d-4029-9e0f-c45ee6f73b18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "18408fd6-6f06-480d-9218-e5934ff6e402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "bf21ac3f-6353-4b23-acdc-36e9bef4476b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2023",
+        "activity_section.key": "13cd279b-fd91-418c-a6aa-748fd6d6594c"
       }
     }
   ],
@@ -8901,6 +9083,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

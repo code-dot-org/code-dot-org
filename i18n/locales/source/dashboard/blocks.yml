@@ -1058,6 +1058,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border [DESCRIPTION][0]
       DansBlocks_getMicroscope:
         text: Microscope has [INPUT1][0]
         options:

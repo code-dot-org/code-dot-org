@@ -160,7 +160,7 @@ namespace :seed do
         raise exception, "Error parsing script file #{filepath}: #{exception}"
       end
     rescue
-      rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
+      FileUtils.rm(SEEDED) # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
     end
   end

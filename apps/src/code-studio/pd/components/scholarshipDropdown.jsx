@@ -3,6 +3,9 @@ import React from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 
+// update this to lock scholarships so that scholarship status can't be updated via the UI.
+const locked = false;
+
 const ScholarshipDropdown = ({
   scholarshipStatus,
   dropdownOptions,
@@ -16,7 +19,7 @@ const ScholarshipDropdown = ({
       value={scholarshipStatus}
       onChange={onChange}
       options={dropdownOptions}
-      disabled={!isWorkshopAdmin || disabled}
+      disabled={disabled || (locked && !isWorkshopAdmin)}
     />
   </FormGroup>
 );
