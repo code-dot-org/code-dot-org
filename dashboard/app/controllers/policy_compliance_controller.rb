@@ -47,9 +47,12 @@ class PolicyComplianceController < ApplicationController
       redirect_back fallback_location: lockout_path and return
     end
 
+    parent_email = params.require(:'parent-email')
+    unless Cdo::EmailValidator.email_address?(parent_email)
+      return head :bad_request
+    end
     # Validate that the parent email is not the same as the student email
     # Also remove any subaddressing from the email to prevent abuse
-    parent_email = params.require(:'parent-email')
     sanitized_parent_email = parent_email.sub(/\+[^@]+@/, '@')
     if current_user.hashed_email == Digest::MD5.hexdigest(sanitized_parent_email)
       redirect_back fallback_location: lockout_path and return
@@ -89,13 +92,6 @@ class PolicyComplianceController < ApplicationController
     # Save (will reassign the updated_at date)
     permission_request.save!
 
-    # Update the User
-    Services::ChildAccount.update_compliance(
-      current_user,
-      Policies::ChildAccount::ComplianceState::REQUEST_SENT
-    )
-    current_user.save!
-
     # Send the request email
     ParentMailer.parent_permission_request(
       permission_request.parent_email,
@@ -106,6 +102,13 @@ class PolicyComplianceController < ApplicationController
         only_path: false,
       )
     ).deliver_now
+
+    # Update the User
+    Services::ChildAccount.update_compliance(
+      current_user,
+      Policies::ChildAccount::ComplianceState::REQUEST_SENT
+    )
+    current_user.save!
 
     # Redirect back to the page spawning the request
     redirect_back fallback_location: lockout_path

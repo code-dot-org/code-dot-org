@@ -22,7 +22,8 @@ class CurriculumCatalogController < ApplicationController
       languageNativeName: @language_native_name,
       isSignedOut: @is_signed_out,
       isTeacher: @is_teacher,
-      sections: @sections_for_teacher
+      sections: @sections_for_teacher,
+      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
     }
   end
 end
