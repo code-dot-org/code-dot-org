@@ -3,7 +3,9 @@ require 'test_helper'
 class GoogleClassroomSectionTest < ActiveSupport::TestCase
   test 'from google classroom service without family name import' do
     DCDO.stubs(:get).with('google_classroom_family_name', false).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)    owner = create :teacher
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+
+    owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..50).map do |i|
@@ -43,7 +45,9 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
 
   test 'from google classroom service with family name import' do
     DCDO.stubs(:get).with('google_classroom_family_name', false).returns(true)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)    owner = create :teacher
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+
+    owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..50).map do |i|
