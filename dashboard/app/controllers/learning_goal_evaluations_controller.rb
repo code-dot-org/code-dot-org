@@ -7,6 +7,15 @@ class LearningGoalEvaluationsController < ApplicationController
     render json: learning_goal_evaluation
   end
 
+  def update
+    params.require(:id)
+    learning_goal_evaluation = LearningGoalEvaluation.find_by_id(params[:id])
+    if learning_goal_evaluation
+      learning_goal_evaluation.update(learning_goal_evaluation_params)
+      render json: learning_goal_evaluation
+    end
+  end
+
   private def learning_goal_evaluation_params
     lgep = params.transform_keys(&:underscore)
     lgep = lgep.permit(
