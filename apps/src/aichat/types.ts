@@ -31,7 +31,7 @@ export enum Status {
 }
 
 export interface AichatLevelProperties extends LevelProperties {
-  systemPrompt?: string;
+  systemPrompt: string;
   botTitle?: string;
   botDescription?: string;
 }

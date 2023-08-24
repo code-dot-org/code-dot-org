@@ -10,11 +10,6 @@ $border-radius: 4px;
 }
 
 // Start styles
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
 p {
   @include body-two;
 }
@@ -143,34 +138,6 @@ hr {
 
   &.dark {
     border-top: 1px solid $neutral_dark60;
-  }
-}
-
-// Text links
-p a,
-p a:visited,
-p a:link,
-a,
-a:visited,
-a:link {
-  font-family: $gotham-bold, sans-serif;
-  color: $brand_secondary_default;
-  text-decoration: underline;
-  transition: color ease-in-out .2s;
-
-  &:hover {
-    color: $brand_secondary_dark;
-    text-decoration: underline;
-  }
-}
-
-// Footer links
-a.whitefooterlink {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: $neutral_white;
   }
 }
 
@@ -1032,12 +999,6 @@ section.quote {
     margin: 0 !important;
     width: 100%;
   }
-}
-
-// Overrides styles on the
-// display_video_thumbnail partial
-.video_caption_link {
-  @include figcaption;
 }
 
 // Blog post callout
