@@ -52,7 +52,6 @@ describe('Google Blockly Wrapper', () => {
       'FunctionalBlockUtils',
       'FunctionalTypeColors',
       'FunctionEditor',
-      'functionEditor',
       'gamelab_locale',
       'Generator',
       'geras',

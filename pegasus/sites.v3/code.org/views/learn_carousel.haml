@@ -11,7 +11,7 @@
   -if shuffle
     -items = items.to_a.shuffle.to_h
 
-  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h2.heading-lg{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -unless subheading.nil_or_empty?
     %p!=subheading
