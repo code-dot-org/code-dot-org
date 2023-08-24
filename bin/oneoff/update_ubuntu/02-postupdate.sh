@@ -16,4 +16,4 @@ apt-mark unhold imagemagick libmagickcore-dev libmagickwand-dev;
 /opt/chef/bin/chef-client;
 
 # Finally, run a regular build to get everything working again!
-start-build;
+echo "now kick off a regular build with something like 'start-build'";
