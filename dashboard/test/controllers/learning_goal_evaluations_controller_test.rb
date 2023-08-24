@@ -1,12 +1,14 @@
 require 'test_helper'
 
-class LearningGoalEvaluationControllerTest < ActionController::TestCase
+class LearningGoalEvaluationsControllerTest < ActionController::TestCase
   test 'create learning goal evaluation' do
     learning_goal = create :learning_goal
     user_id = 1
     level_id = 2
     unit_id = 3
-    understanding = 5
+    teacher_id = 4
+    learning_goal_id = learning_goal.id
+    understanding = 6
     feedback = 'abc'
     context = 'def'
 
@@ -14,7 +16,8 @@ class LearningGoalEvaluationControllerTest < ActionController::TestCase
       userId: user_id,
       levelId: level_id,
       unitId: unit_id,
-      learningGoalId: learning_goal.id,
+      learningGoalId: learning_goal_id,
+      teacherId: teacher_id,
       understanding: understanding,
       feedback: feedback,
       context: context
