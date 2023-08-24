@@ -26,10 +26,9 @@ module Services
       # this level and are ready for that file to be updated.
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
 
-      # TODO: Once we've verified we can successfully invoke this method on old
-      # stable levels, uncomment this line so we can begin applying it to levels
-      # under active development.
-      #Services::LevelFiles.reorganize_level_file_into_subdirectory(level)
+      # TODO: Once we've moved all existing level files into the new directory
+      # structure, remove this invocation
+      Services::LevelFiles.reorganize_level_file_into_subdirectory(level)
 
       file_path = Policies::LevelFiles.level_file_path(level)
       FileUtils.mkdir_p(File.dirname(file_path))
