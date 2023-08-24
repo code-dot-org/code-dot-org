@@ -576,6 +576,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -586,12 +588,16 @@ sq:
               display_name: Për Ciklet
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursed-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -606,6 +612,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -616,6 +624,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -626,6 +636,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
         andrea-test:
           lesson_groups:
             required:
@@ -636,6 +648,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
@@ -650,6 +664,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -658,12 +674,16 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
         pre-express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -676,12 +696,18 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Përmbledhja
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Përmbledhja
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -690,6 +716,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -698,6 +726,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -706,12 +736,16 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -720,6 +754,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -728,6 +764,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -736,6 +774,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -744,12 +784,16 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-pilot:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
             required:
               display_name: Përmbledhja
         fit2019-novice:
@@ -772,6 +816,8 @@ sq:
               display_name: Përmbledhja
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -848,6 +894,8 @@ sq:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+        dance-2019:
+          title: Festë vallëzimi
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -860,6 +908,8 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -874,22 +924,30 @@ sq:
               display_name: Përfundimi i projektit të kursit
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
         csp7-pilot:
@@ -904,16 +962,22 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
         coursea-2020:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -922,6 +986,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -930,6 +996,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
@@ -942,6 +1010,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursed-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -956,6 +1026,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -974,10 +1046,14 @@ sq:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -988,10 +1064,14 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         pre-express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1044,12 +1124,16 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -1058,6 +1142,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1065,10 +1151,13 @@ sq:
             lessonGroup-5:
               display_name: Përfundimi i projektit të kursit
         courseb-2021:
+          title: Kursi B (2021)
           description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1079,6 +1168,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
@@ -1091,6 +1182,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursed-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1109,6 +1202,8 @@ sq:
           lesson_groups:
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -1119,10 +1214,14 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursef-2021:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_variables:
               display_name: Për Ciklet
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             csf_for_loops:
               display_name: Për Ciklet
             end_of_course_project:
@@ -1137,6 +1236,8 @@ sq:
           lesson_groups:
             csf_warmup:
               display_name: Parapërgatitje
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -1147,12 +1248,16 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
             lessonGroup-9:
               display_name: Ngjarje
         pre-express-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1163,6 +1268,8 @@ sq:
               display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: variabla
         contagion-pilot:
@@ -1213,6 +1320,8 @@ sq:
               display_name: Lekcioni 4
             Lesson 5:
               display_name: Lekcioni 5
+        outbreak-module:
+          title: Shpërthimi
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1247,6 +1356,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               description: test
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -1267,6 +1380,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -1279,6 +1396,8 @@ sq:
               display_name: Përmbajtja
         spelling-bee:
           title: Bleta Gërmëzuese
+        outbreak-csc:
+          title: Shpërthimi
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1301,6 +1420,8 @@ sq:
               display_name: Përmbajtja
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: variabla
             lessonGroup-4:
@@ -1321,6 +1442,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1330,6 +1453,10 @@ sq:
           title: Kursi A (2022)
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
@@ -1344,6 +1471,7 @@ sq:
               display_name: Për Ciklet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi Express (2022)
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -1352,12 +1480,16 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Listat
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -1376,6 +1508,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1389,6 +1523,8 @@ sq:
           lesson_groups:
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1400,6 +1536,8 @@ sq:
           title: Kursi D (2022)
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             ramp_up:
@@ -1413,18 +1551,25 @@ sq:
           title: Kursi E (2022)
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi F (2022)
         csa1-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1461,10 +1606,15 @@ sq:
           lesson_groups:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi F (2022)
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1572,30 +1722,42 @@ sq:
               display_name: Kushtet
             csp_functions:
               display_name: funksione
+            csp_project:
+              display_name: Projekt
         csp5-2023:
           lesson_groups:
             csp_lists:
               display_name: të dhëna
             csp_loops:
               display_name: cikle
+            csp_project:
+              display_name: Projekt
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
               display_name: Listat
             lessonGroup-3:
               display_name: cikle
+            lessonGroup-5:
+              display_name: Projekt
         angelina-playground:
           lessons:
             lesson-5:
               name: Vlerësimet
         pre-express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
         express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
@@ -1614,6 +1776,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1624,6 +1788,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1635,6 +1801,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1647,6 +1815,8 @@ sq:
           lesson_groups:
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1659,6 +1829,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sprites:
+              display_name: Sprites
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
@@ -1674,35 +1846,43 @@ sq:
         pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Mbyll
+              name: Përmbledhje
         pl-csd-summer-day4:
           lessons:
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Hyrje
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-13:
-              name: Mbyll
+              name: Përmbledhje
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Vlerësim
         coursef-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sprites
             lessonGroup-4:
               display_name: variabla
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
         csa-frq-practice-2022:
@@ -1713,6 +1893,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
         nevada-standards-aligned-kindergarten-2023:
@@ -1722,25 +1904,36 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-6:
               display_name: të dhëna
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: të dhëna
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-6:
               display_name: Ngjarje
             lessonGroup-7:
               display_name: Përfundimi i projektit të kursit
+            lessonGroup-8:
+              display_name: të dhëna
           description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-5:
@@ -1751,6 +1944,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-6:
               display_name: cikle
             lessonGroup-7:
@@ -1763,12 +1958,22 @@ sq:
               display_name: Përsëritjet e Mbivendosura
             lessonGroup-4:
               display_name: funksione
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: Kushtet
+            lessonGroup-4:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-5:
               display_name: variabla
             lessonGroup-7:

@@ -2,26 +2,33 @@ import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 import aichatI18n from '../locale';
-import {ChatMessage} from '../types';
+import {
+  AichatLevelProperties,
+  ChatCompletionMessage,
+  Role,
+  Status,
+} from '../types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {useSelector} from 'react-redux';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 
 interface ChatMessageProps {
-  chatMessage: ChatMessage;
+  message: ChatCompletionMessage;
 }
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
 const isAssistant = (role: string) => {
-  return role === 'assistant';
+  return role === Role.ASSISTANT;
 };
 
 const isUser = (role: string) => {
-  return role === 'user';
+  return role === Role.USER;
 };
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === 'ok') {
+  if (status === Status.OK) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -40,7 +47,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === 'personal') {
+  } else if (status === Status.PERSONAL) {
     return (
       <div
         className={classNames(
@@ -57,7 +64,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
 };
 
 const displayAssistantMessage = (status: string, chatMessageText: string) => {
-  if (status === 'ok') {
+  if (status === Status.OK) {
     return (
       <div
         id={'chat-workspace-message-body'}
@@ -72,30 +79,31 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
-const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
-  chatMessage,
-}) => {
+const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
+  const botTitle =
+    useSelector(
+      (state: {lab: LabState}) =>
+        (state.lab.levelProperties as AichatLevelProperties | undefined)
+          ?.botTitle
+    ) || 'EduBot';
   return (
-    <div id={`ChatMessage id: ${chatMessage.id}`}>
-      {isUser(chatMessage.role) && (
+    <div id={`ChatMessage id: ${message.id}`}>
+      {isUser(message.role) && (
         <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(chatMessage.status, chatMessage.chatMessageText)}
+          {displayUserMessage(message.status, message.chatMessageText)}
         </div>
       )}
 
-      {isAssistant(chatMessage.role) && (
+      {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
           <Typography
             className={moduleStyles.messageHeaderContainer}
             semanticTag="h5"
             visualAppearance="heading-xs"
           >
-            {chatMessage.name} ({chatMessage.role})
+            {botTitle} ({message.role})
           </Typography>
-          {displayAssistantMessage(
-            chatMessage.status,
-            chatMessage.chatMessageText
-          )}
+          {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
     </div>

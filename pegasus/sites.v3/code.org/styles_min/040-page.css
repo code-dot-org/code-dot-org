@@ -1,83 +1,162 @@
+/*
+  Uses color and typography variables from /styles_min/050-theme.css
+
+  See shared/css/typography.scss for more info on how typography
+  styles are used.
+*/
+
 /* for homepage 2.0.. */
 #homepage .clear {
   clear: both;
 }
 /* ..end homepage 2.0 */
 
-h1 {
-  color: #7665a0;
-  font-size: 32px;
-  font-family: 'Gotham 7r', sans-serif;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  line-height: 1.2em;
-}
-
-h2 {
-  color: #00adbc;
-  font-size: 22px;
-  font-family: 'Gotham 5r', sans-serif;
-  margin-top:45px;
-  margin-bottom:25px;
-  line-height: 1.2em;
-}
-
-h3 {
-  color: #5b6770;
-  font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
-  margin-top:25px;
-  margin-bottom:12px;
-  line-height: 1.2em;
-}
-
-h4 {
-  color: #5b6770;
+body {
+  font-family: var(--gotham-regular);
   font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 1.2em;
+  color: var(--neutral_dark);
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
+h1,
+.heading-xxl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 3rem;
+  line-height: 1.16;
+  margin: 1em 0 0.5em 0;
 }
 
-a {
-  font-family: 'Gotham 7r', sans-serif;
+h2,
+.heading-xl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 2.125rem;
+  line-height: 1.24;
+  margin: 1em 0 0.5em 0;
 }
 
+h3,
+.heading-lg {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 1.75rem;
+  line-height: 1.28;
+  margin-bottom: 0.5em;
+}
+
+h4,
+.heading-md {
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
+}
+
+h5,
+.heading-sm {
+  font-family: var(--gotham-bold);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
+}
+
+h6,
+.heading-xs {
+  font-family: var(--gotham-bold);
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-one {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.body-two {
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-three {
+  font-size: 0.875rem;
+  line-height: 1.54;
+  margin-bottom: 1em;
+}
+
+.body-four {
+  font-size: 0.75rem;
+  line-height: 1.64;
+  margin-bottom: 1em;
+}
+
+figcaption,
+.video_caption_link {
+  font-family: var(--gotham-bold);
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.64;
+}
+
+.overline-one {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--brand_primary_default);
+}
+
+.overline-two {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.75rem;
+  line-height: 1.64;
+  color: var(--brand_primary_default);
+}
+
+.overline-three {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.625rem;
+  line-height: 1.76;
+  color: var(--brand_primary_default);
+}
+
+a,
 a:link {
-  color: #7665a0;
-  text-decoration: none;
+  font-family: var(--gotham-bold);
+  color: var(--brand_secondary_default);
+  text-decoration: underline;
+  transition: color ease-in-out .2s;
 }
 
 a:visited {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
+}
+
+a:hover,
+a:active {
+  color: var(--brand_secondary_dark);
+}
+
+a:link:has(*) {
   text-decoration: none;
 }
 
-a:hover, a:active {
-  text-decoration: underline;
-  color: #5b6770;
-}
-
 strong {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal;
+  font-family: var(--gotham-bold);
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
-  font-style: normal;
-}
-
-body {
-  font-family: 'Gotham 4r', sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
-  color: dimgray;
-  margin: 0;
+  font-family: var(--gotham-italics);
 }
 
 li > ul {
@@ -98,7 +177,7 @@ ul li {
 
 ul li:before {
   content: "• ";
-  color: rgb(0, 161, 230);
+  color: var(--neutral_dark);
 }
 
 .invisiblelist li:before {
@@ -110,16 +189,16 @@ img {
 }
 
 th {
-  background-color: rgb(0, 178, 192);
-  color: white;
+  background-color: var(--brand_primary_default);
+  color: var(--neutral_white);
   padding: 15px;
-  border-color: white;
+  border-color: var(--neutral_white);
   border-width: 1px;
   border-style: solid;
 
-  border-top-color: rgb(0, 178, 192);
-  border-left-color: rgb(0, 178, 192);
-  border-right-color: rgb(0, 178, 192);
+  border-top-color: var(--brand_primary_default);
+  border-left-color: var(--brand_primary_default);
+  border-right-color: var(--brand_primary_default);
 }
 
 td {
@@ -136,7 +215,7 @@ td {
   border: 0;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #00adbc;
+  border-top-color: var(--neutral_dark20);
 }
 
 .grey_input {
@@ -152,46 +231,54 @@ td {
 }
 
 #petition_form a {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--gotham-regular);
 }
 
 #petition_form a:link, #petition_form a:visited {
   color: #dcdcdc;
   text-decoration: none;
 }
+
 #petition_form a:hover, #petition_form a:active {
   color: #fff;
   text-decoration: underline;
 }
 
 .listed_supporter{
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--gotham-extra-bold);
   font-weight: normal;
-  color: #7665a0;
 }
 
 .greybox {
-  background-color: rgb(88, 103, 113); color: white; padding: 20px; text-align: center; overflow:hidden;
+  background-color: var(--neutral_dark80);
+  color: var(--neutral_white);
+  padding: 20px;
+  text-align: center;
+  overflow:hidden;
 }
 
 #about_nav {
-  margin: 50px 0 0 0;
+  margin: 3.5rem 0 0 0;
 }
 
 .about_list_item_selected {
-  color: #ff8a00;
-  font-family: 'Gotham 7r', sans-serif;
+  color: var(--brand_secondary_default);
+  font-family: var(--gotham-extra-bold);
 }
 
 a.about_list_item {
-  color: #999c9f;
-  font-family: 'Gotham 5r', sans-serif;
+  color: var(--neutral_dark60);
+  font-family: var(--gotham-bold);
+  text-decoration: none;
 }
 
+a.about_list_item:hover {
+  color: var(--brand_secondary_default);
+}
 
 .button-color-share {
-  background-color: rgb(126, 92, 162);
-  border-color: rgb(126, 92, 162);
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
 }
 
 button {
@@ -199,8 +286,8 @@ button {
   -webkit-user-select: none;
   -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 164, 0) ;
-  border-color: rgb(255, 164, 0) ;
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
   background-image: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -220,10 +307,10 @@ button {
   border-top-style: solid;
   border-top-width: 1px;
   box-sizing: border-box;
-  color: rgb(255, 255, 255);
+  color: var(--neutral_white);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--gotham-regular);
   font-size: 14px;
   font-weight: normal;
   height: 34px;
@@ -245,13 +332,13 @@ button {
   white-space: nowrap;
   word-spacing: 0px;
   writing-mode: lr-tb;
+  transition: all ease-in-out .2s;
 }
 
 .btn-white:hover{
   background-color:#E6E6F3;
   border-color:#adadad;
 }
-
 
 .dropdown {
   border-color: rgb(204, 204, 204);
@@ -265,10 +352,10 @@ button {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_primary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_primary_default);
 }
 
 @media screen and (max-width: 450px) {
@@ -294,11 +381,6 @@ button {
 }
 
 label {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--gotham-bold);
   font-weight: normal;
-}
-
-
-.video_caption_link {
-  font-family: 'Gotham 4r', sans-serif;
 }

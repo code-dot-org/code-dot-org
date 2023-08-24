@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:01:47.000Z",
   "level_num": "custom",
@@ -92,18 +93,21 @@
       "/courses/csd-2022/guides/taking-input-with-getproperty",
       "/courses/csd-2022/guides/designing-screens-with-code",
       "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/maker/setup"
     ],
     "display_name": "LED Sliders",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><input type=\"range\" value=\"255\" min=\"0\" max=\"255\" step=\"1\" id=\"redSlider\" style=\"margin: 0px; padding: 0px; width: 255px; height: 20px; position: absolute; left: 35px; top: 65px;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 58px; height: 18px; position: absolute; left: 130px; top: 35px;\" id=\"redLabel\">Red</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 74px; height: 18px; position: absolute; left: 125px; top: 100px;\" id=\"greenLabel\">Green</label><input type=\"range\" value=\"255\" min=\"0\" max=\"255\" step=\"1\" id=\"greenSlider\" style=\"margin: 0px; padding: 0px; width: 255px; height: 20px; position: absolute; left: 35px; top: 135px;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 63px; height: 18px; position: absolute; left: 125px; top: 170px;\" id=\"blueLabel\">Blue</label><input type=\"range\" value=\"255\" min=\"0\" max=\"255\" step=\"1\" id=\"blueSlider\" style=\"margin: 0px; padding: 0px; width: 255px; height: 20px; position: absolute; left: 35px; top: 205px;\"></div></div>",
     "start_blocks": "var redValue = 255;\r\nvar greenValue = 255;\r\nvar blueValue = 255;\r\n\r\n// 1) Create an onEvent block for the redSlider\r\n// 2) Update the redValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs\r\n\r\n// 1) Create an onEvent block for the greenSlider\r\n// 2) Update the greenValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs\r\n\r\n// 1) Create an onEvent block for the blueSlider\r\n// 2) Update the blueValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs",
     "bubble_choice_description": "Create an app that lets you adjust the LED colors of an app using 3 sliders for red, green, and blue color values",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:47.005+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalG_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:47.005+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalG_2222\"},{\"changed_at\":\"2023-08-16 18:59:01 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

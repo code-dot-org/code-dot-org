@@ -2642,7 +2642,7 @@
           ]
         },
         "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [
@@ -7388,6 +7388,9 @@
         "573b69bd-e7dc-41e2-930f-1368a20d3e15": {
           "progression_name": "ការទស្សន៍ទាយ"
         },
+        "26679730-3364-4598-abd8-b07e9d9f9ad9": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
         "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
           "progression_name": "ការកសាងជំនាញ"
         },
@@ -7851,7 +7854,7 @@
           ]
         },
         "6b2ab9dc-4cdf-4797-a181-ac82354bd22f": {
-          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
+          "description": "[][0]"
         },
         "3db6f33d-50ad-4131-a34a-c9d0cf11c1ce": {
           "tips": [
@@ -10842,7 +10845,7 @@
           ]
         },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
-          "description": "![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
+          "description": "[][0]"
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
@@ -13185,6 +13188,9 @@
         },
         "1aae2f0c-e768-4e5b-a26e-cb17235f4d65": {
           "progression_name": "ការទស្សន៍ទាយ"
+        },
+        "88047116-9c78-4003-99fe-cd24ceb91b93": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
         },
         "f93f7ead-cfbc-494a-bfa3-03ed6ed8e7a4": {
           "progression_name": "ការកសាងជំនាញ"

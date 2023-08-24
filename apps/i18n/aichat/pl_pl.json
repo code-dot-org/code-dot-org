@@ -1,3 +1,6 @@
 {
-  "continue": "Kontynuuj"
+  "aichatWorkspaceHeader": "Czat AI",
+  "continue": "Kontynuuj",
+  "inappropriateUserMessage": "Ta wiadomość została oznaczona jako nieodpowiednia.",
+  "tooPersonalUserMessage": "Ta wiadomość została oznaczona jako zbyt osobista."
 }

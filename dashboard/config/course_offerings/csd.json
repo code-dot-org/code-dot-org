@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "year_long",
   "image": "https://images.code.org/ba01bb385ebd439769626f9c7fe84741-CSD (3x).png",
@@ -14,7 +14,7 @@
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, problem solving, and fun.",
   "professional_learning_program": "code.org/apply",
-  "video": null,
+  "video": "https://www.youtube-nocookie.com/embed/g4qfsH8bc8s/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=g4qfsH8bc8s&wmode=transparent",
   "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 346
 }

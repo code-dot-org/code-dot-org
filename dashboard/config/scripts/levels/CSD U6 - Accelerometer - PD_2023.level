@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:12.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "code_functions": {
       "accelerometer.getOrientation": null,
       "onBoardEvent": null,
@@ -93,7 +94,8 @@
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/accelerometer-events"
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/the-counter-pattern",
     "mini_rubric": "false",
@@ -110,9 +112,8 @@
     "encrypted_examples": "4wfHY+KhWx+zuNzGKCaryI3vs9UHT7n+Got2lTVspJIddR4fwD10EpvBhrhz\nj5S1Dz+rX8FiGuTzW/cKNhU/1g==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:12.223+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:12.223+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PD_2222\"},{\"changed_at\":\"2023-08-16 19:24:17 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

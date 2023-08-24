@@ -148,6 +148,8 @@ fr:
           description_short: Apprenez les concepts fondamentaux de l’Informatique.
         mike-test:
           title: Les bases de l'Informatique
+        vpl-csa-2023:
+          title: Formation professionnelle virtuelle CSA
     resources:
       csd_programming_levels_guide/csd/2022:
         name: Guide des niveaux de programmation CSD

@@ -290,7 +290,7 @@ km:
         personal_login_created_username: 'អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយនឹងusername​ (%{username})និងលេខសម្ងាត់របស់អ្នក។'
   nav:
     header:
-      finished_hoc: "ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។"
+      finished_hoc: "ខ្ញុំបានបញ្ចប់!"
       sign_in_to_save: 'ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ'
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
       course_catalog: "កាតាឡុកវគ្គសិក្សា"
@@ -652,3 +652,4 @@ km:
   behaviors:
     this_sprite: "Sprite មួយនេះ"
   code_org_logo_alt: "ទំព័រដើម Code.org​"
+

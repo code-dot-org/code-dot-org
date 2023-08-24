@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/088ac9d498b2a04b2e9ffadfcefdff7a-Animation.png",
@@ -15,6 +15,6 @@
   "description": "Engaging the same design process that computer scientists use, students learn programming concepts and develop images, animations, interactive art, and games.",
   "professional_learning_program": "code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/PXn9gKiKKFo/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=PXn9gKiKKFo&wmode=transparent",
-  "published_date": null,
+  "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 443
 }

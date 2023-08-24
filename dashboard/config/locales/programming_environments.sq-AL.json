@@ -519,7 +519,8 @@
                 "sprite.width": {
                   "return_value": "Gjerësia e sprite."
                 }
-              }
+              },
+              "name": "Sprites"
             },
             "variables": {
               "expressions": {

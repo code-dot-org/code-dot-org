@@ -176,23 +176,26 @@ uk:
     викладачам у всьому світі викладати з використанням штучного інтелекту і про ШІ.
   curriculum_launch_2023_title: Представляємо неймовірні оновлення нашої навчальної
     програми
-  curriculum_launch_2023_desc: Оновлення CSC, CSP, CSD та багато іншого - плюс новий
-    каталог навчальних програм та перероблена сторінка Teach, щоб допомогти вам знайти
-    все це!
-  in_partnership_with: У партнерстві з
-  afe_partnership_logo_alt: Логотип майбутні інженери Amazon
-  afe_partnership_thanks_desc: Amazon Future Engineer — це комплексна програма від
-    дитинства до кар'єри, яка надихає, навчає та навчає дітей та молоді з низьким
-    рівнем доходу та інших неблагополучних дітей та молодих людей продовжувати кар'єру
-    в галузі інформатики. [Дізнайтеся про наше партнерство] (%{afe_url}).
+  curriculum_launch_2023_desc: Оновлення CSC, CSP, CSD та багато іншого — плюс новий
+    каталог навчальних програм s перероблена сторінка Teach, яка допоможе вам все
+    це знайти!
+  in_partnership_with: 'Партнер:'
+  afe_partnership_logo_alt: Логотип Amazon Future Engineer
+  afe_partnership_thanks_desc: Amazon Future Engineer — це комплексна програма, яка
+    супроводжує користувачів від дитинства до початку кар'єри. Вона надихає, навчає
+    і трену дітей і молодь з низьким рівнем доходу та в інших неблагополучних ситуаціях
+    продовжувати кар'єру в галузі інформатики. [Дізнайтеся більше про наше партнерство]
+    (%{afe_url}).
   grade_level: Рівень класу
   grade_level_label_elementary: Початкова школа
   grade_level_label_middle: Середня школа
   grade_level_label_high: Середня школа
-  teacher_label_csf: Викладач основ CS
+  students_label: Учні
+  teachers_label: Вчителі
+  teacher_label_csf: Викладач основ інформатики
   teacher_label_csd: Вчитель з відкриттів інформатики
-  teacher_label_csp: Учитель принципів CS
-  teacher_label_csc: Вчитель зв'язків CS
+  teacher_label_csp: Викладач принципів інформатики
+  teacher_label_csc: Викладач з інтеграції інформатики
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Необхідні матеріали:'
   optional_materials: 'Додаткові матеріали:'
@@ -201,17 +204,20 @@ uk:
   call_to_action_try_activity: Спробуйте активність
   call_to_action_explore_unit: Досліджуйте одиницю
   call_to_action_explore_curriculum: Дослідіть навчальну програму
-  call_to_action_explore_curriculum_options: Дослідіть варіанти навчальних програм
+  call_to_action_explore_curriculum_options: Дізнайтесь про інші варіанти навчальних
+    програм
+  call_to_action_explore_lessons: Досліджуйте уроки
   call_to_action_explore_modules: Досліджуйте модулі
+  call_to_action_explore_module: Ознайомтеся з модулем
   call_to_action_explore_workshops: Ознайомитися з майстернями
   call_to_action_explore_course: Ознайомтеся з курсом
-  call_to_action_explore_courses: Досліджуйте курси
+  call_to_action_explore_courses: Ознайомтеся з курсами
   call_to_action_explore_full_course: Ознайомтеся з повним курсом
-  call_to_action_explore_widgets: Досліджуйте віджети
-  call_to_action_explore_choice_level: Дослідіть приклад рівня вибору
-  call_to_action_explore_collection: Досліджуйте колекцію
-  call_to_action_explore_unplugged_lesson: Ознайомтеся з відключеними уроками
-  call_to_action_try_app_lab: Спробуйте Лабораторію додатків
+  call_to_action_explore_widgets: Ознайомтеся з віджетами
+  call_to_action_explore_choice_level: Ознайомтеся з прикладами рівня вибору
+  call_to_action_explore_collection: Ознайомтеся з колекцією
+  call_to_action_explore_unplugged_lesson: Ознайомтеся з уроками без комп'ютера
+  call_to_action_try_app_lab: Спробуйте Програмну лабораторію
   call_to_action_view_lesson_plan: Переглянути план уроку
   call_to_action_self_paced_pl: Почніть самостійне професійне навчання
   call_to_action_apply_for_pl: Подати заявку на професійне навчання
@@ -238,19 +244,21 @@ uk:
   call_to_action_see_full_curriculum_catalog: Дивитися повний каталог навчальних програм
   call_to_action_find_self_paced_modules: Знайти модулі з вільним графіком занять
   call_to_action_join_teacher_forums: Приєднатися до форуму вчителів
-  call_to_action_explore_teacher_forums: Досліджуйте форуми вчителів
+  call_to_action_explore_teacher_forums: Ознайомтеся з форумами для викладачів
   call_to_action_explore_career_resources: Ознайомитися з професійними ресурсами
   call_to_action_watch_videos: Переглянути відео
   call_to_action_download_posters: Завантажити постери
   call_to_action_contact_support: Зверніться до служби підтримки Code.org
-  call_to_action_pick_units: Виберіть одиниці
+  call_to_action_pick_units: Виберіть блоки
   call_to_action_focus_on_topic: Зосередьтеся на темі
-  call_to_action_teach_full_intro_course: Викладайте повний вступний курс
-  call_to_action_see_module_details: Див. Деталі модуля
-  call_to_action_start_modules: Пуск модулів
-  call_to_action_see_course_details: Див. Деталі курсу
+  call_to_action_teach_full_intro_course: Викладання повного вступного курсу
+  call_to_action_see_module_details: Докладніше про модуль
+  call_to_action_start_modules: Запуск модулів
+  call_to_action_see_course_details: Докладніше про курс
+  call_to_action_see_lesson_details: Див. Подробиці уроку
   call_to_action_learn_about_approach: Дізнайтеся більше про наш підхід
   call_to_action_try_java_lab: Спробуйте лабораторію Java
+  call_to_action_notify_available: Повідомте мене, коли буде доступно
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -267,10 +275,10 @@ uk:
   aria_label_call_to_action_teaching_maker_microbit: Почніть програму професійного
     навчання «Створення програм з пристроями» (micro:bit)
   aria_label_call_to_action_curriculum_csf: Дослідіть навчальну програму «Основи інформатики»
-  aria_label_call_to_action_curriculum_csf_express: Дослідіть експрес-курс «Основи
-    комп'ютерних наук»
-  aria_label_call_to_action_curriculum_csf_express_pre_reader: Ознайомтеся з курсом
-    Pre-Reader Express «Основи інформатики»
+  aria_label_call_to_action_curriculum_csf_express: Ознайомтеся з експрес-курсом «Основи
+    інформатики»
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Ознайомтеся з експрес-курсом
+    «Основи інформатики для дошкільнят»
   aria_label_call_to_action_curriculum_csd: Дослідіть навчальну програму «Відкриття
     інформатики»
   aria_label_call_to_action_curriculum_csp: Ознайомтеся з навчальною програмою «Принципи
@@ -284,60 +292,76 @@ uk:
   aria_label_call_to_action_curriculum_maker_microbit: Ознайомтеся з навчальною програмою
     «Створення програм за допомогою пристроїв» (micro:bit)
   aria_label_call_to_action_curriculum_creating_apps_with_devices: Ознайомтеся з блоком
-    Створення програм за допомогою пристроїв
-  aria_label_call_to_action_curriculum_problem_solving_computing: Дослідіть блок вирішення
-    проблем та обчислення
-  aria_label_call_to_action_curriculum_web_development: Ознайомтеся з підрозділом
-    веб-розробки
+    «Створення застосунків за допомогою пристроїв»
+  aria_label_call_to_action_curriculum_problem_solving_computing: Ознайомтеся з блоком
+    «Вирішення проблем та обчислення»
+  aria_label_call_to_action_curriculum_web_development: Ознайомтеся з блоком «Веб-розробка»
   aria_label_call_to_action_curriculum_interactive_animations_games: Ознайомтеся з
     блоком «Інтерактивні анімації та ігри»
   aria_label_call_to_action_curriculum_design_process: Ознайомтеся з блоком «Процес
-    проектування»
-  aria_label_call_to_action_curriculum_data_society: Дослідіть підрозділ «Дані та
+    проєктування»
+  aria_label_call_to_action_curriculum_data_society: Ознайомтеся з блоком «Дані й
     суспільство»
-  aria_label_call_to_action_collection_hardware: Ознайомтеся з колекцією обладнання
+  aria_label_call_to_action_collection_hardware: Ознайомтеся з колекцією «Обладнання»
   aria_label_call_to_action_collection_design_purpose: Ознайомтеся з колекцією «Дизайн
     з метою»
-  aria_label_call_to_action_collection_impact_society: Дослідіть колекцію «Вплив у
-    суспільство»
-  aria_label_call_to_action_collection_creativity: Дослідіть колекцію «Творчість»
-  aria_label_call_to_action_collection_coding: Ознайомтеся з колекцією Coding
-  aria_label_call_to_action_collection_data: Ознайомтеся зі збором даних
-  aria_label_call_to_action_module_coding_w_poetry: Дивіться деталі модуля «Кодування
+  aria_label_call_to_action_collection_impact_society: Ознайомтеся з колекцією «Вплив
+    у суспільстві»
+  aria_label_call_to_action_collection_creativity: Ознайомтеся з колекцією «Творчість»
+  aria_label_call_to_action_collection_coding: Ознайомтеся з колекцією «Кодування»
+  aria_label_call_to_action_collection_data: Ознайомтеся з колекцією «Дані»
+  aria_label_call_to_action_module_coding_w_poetry: Докладніше про модуль «Кодування
     за допомогою поезії»
-  aria_label_call_to_action_module_coding_time_capsule: Див. Деталі модуля «Кодування
-    капсули часу»
-  aria_label_call_to_action_module_simulating_marine_ecosystem: Див. Деталі модуля
-    «Моделювання морської екосистеми»
-  aria_label_call_to_action_module_coding_geometric_star_quilt: Див. Деталі модуля
-    Кодування геометричної зіркової ковдри
-  aria_label_call_to_action_module_modeling_animal_adaptations: Див. Деталі модуля
-    Моделювання адаптації тварин
-  aria_label_call_to_action_module_coding_book_covers: Див. Деталі модуля Обкладинки
-    книг кодування
+  aria_label_call_to_action_module_coding_time_capsule: Докладніше про модуль «Пишемо
+    код для капсули часу»
+  aria_label_call_to_action_module_simulating_marine_ecosystem: Докладніше про модуль
+    «Імітація морської екосистеми»
+  aria_label_call_to_action_module_coding_geometric_star_quilt: Докладніше про модуль
+    «Кодування геометричної зіркової ковдри»
+  aria_label_call_to_action_module_modeling_animal_adaptations: Докладніше про модуль
+    «Моделювання адаптації тварин»
+  aria_label_call_to_action_module_coding_book_covers: Докладніше про модуль «Кодування
+    обкладинок книг»
   aria_label_call_to_action_module_coding_interactive_maps: Докладніше про модуль
     Кодування Інтерактивних карт
-  aria_label_call_to_action_csf_course_a: Див. Деталі курсу А
-  aria_label_call_to_action_csf_course_b: Див. Деталі курсу B
-  aria_label_call_to_action_csf_course_c: Див. Деталі курсу C
-  aria_label_call_to_action_csf_course_d: Див. Деталі курсу D
-  aria_label_call_to_action_csf_course_e: Див. Деталі курсу E
-  aria_label_call_to_action_csf_course_f: Див. Деталі курсу F
+  aria_label_call_to_action_csf_course_a: Докладніше про Курс А
+  aria_label_call_to_action_csf_course_b: Докладніше про Курс B
+  aria_label_call_to_action_csf_course_c: Докладніше про Курс C
+  aria_label_call_to_action_csf_course_d: Докладніше про Курс D
+  aria_label_call_to_action_csf_course_e: Докладніше про Курс E
+  aria_label_call_to_action_csf_course_f: Докладніше про Курс F
+  aria_label_call_to_action_ai_pl_101_videos: Дивіться відео AI 101 для вчителів
+  aria_label_call_to_action_ai_teaching_module: Ознайомтеся з модулем навчання штучного
+    інтелекту та машинного навчання
+  aria_label_call_to_action_how_ai_works_lesson_01: Дивіться подробиці уроку «Вступ
+    до машинного навчання»
+  aria_label_call_to_action_how_ai_works_lesson_02: Дивіться подробиці уроку комп'ютерного
+    зору
+  aria_label_call_to_action_how_ai_works_lesson_03: Дивіться подробиці уроку нейронних
+    мереж
+  aria_label_call_to_action_how_ai_works_lesson_04: Дивіться подробиці уроку Чат-боти
+    та моделі великих мов
+  aria_label_call_to_action_how_ai_works_lesson_05: Дивіться подробиці уроку «Генеративні
+    зображення»
+  aria_label_call_to_action_how_ai_works_lesson_06: Дивіться подробиці уроку алгоритмічного
+    упередження
+  aria_label_call_to_action_how_ai_works_lesson_07: Дивіться подробиці нашого Кодексу
+    етики штучного інтелекту
   video_title_professional_learning_program: Програма професійного навчання Code.org
   curriculum_name_csf: Основи інформатики
   curriculum_name_csf_02: Будь-які основи CS (курс A-F)
   curriculum_name_csf_a_f: Основи інформатки A-F
   curriculum_name_csf_express: Експрес
-  curriculum_name_csf_express_pre_reader: Попередній зчитувач Експрес
+  curriculum_name_csf_express_pre_reader: Експрес для дошкільнят
   curriculum_name_csf_course_a: Курс А
-  curriculum_name_csf_course_b: Курс Б
+  curriculum_name_csf_course_b: Курс B
   curriculum_name_csf_course_c: Курс C
   curriculum_name_csf_course_d: Курс D
   curriculum_name_csf_course_e: Курс Е
   curriculum_name_csf_course_f: Курс F
-  curriculum_name_csf_no_device: Немає пристрою/Відключено від мережі
-  curriculum_name_csf_self_paced: Самостійний урок
-  curriculum_name_csf_teacher_led: Учитель вів урок
+  curriculum_name_csf_no_device: Немає пристрою/відключено від мережі
+  curriculum_name_csf_self_paced: Урок для самостійного вивчення
+  curriculum_name_csf_teacher_led: Урок під керівництвом викладача
   curriculum_name_csd: Відкриття інформатики
   curriculum_name_csp: Принципи інформатики
   curriculum_name_csc: Зв'язки в інформатиці
@@ -346,77 +370,78 @@ uk:
   curriculum_name_ai: AI та машинне навчання
   curriculum_name_maker_cp: Створення програм за допомогою пристроїв (Circuit Playground)
   curriculum_name_maker_microbit: Створення програм за допомогою пристроїв (micro:bit)
-  curriculum_name_creating_apps_with_devices: Створення додатків за допомогою пристроїв
+  curriculum_name_creating_apps_with_devices: Створення застосунків за допомогою пристроїв
   curriculum_name_poetry: Кодування за допомогою поезії
   curriculum_name_dance_party: Танцювальна вечірка
   curriculum_name_problem_solving_computing: Вирішення проблем та обчислення
   curriculum_name_web_development: Веб-розробка
   curriculum_name_interactive_animations_games: Інтерактивні анімації та ігри
-  curriculum_name_design_process: Процес проектування
-  curriculum_name_data_society: Дані та суспільство
-  curriculum_desc_csf_express: Навчіться створювати комп'ютерні програми, розвивати
-    навички вирішення проблем та працювати над цікавими завданнями! Створіть ігри
-    та творчі проекти, якими можна поділитися з друзями, родиною та вчителями.
-  curriculum_desc_csf_express_pre_reader: Вивчіть основи блокового кодування з перетягуванням,
-    вирішуючи головоломки та створюючи анімовані сцени. Створіть мистецтво та прості
-    ігри, якими можна поділитися з друзями, родиною та вчителями.
+  curriculum_name_design_process: Процес проєктування
+  curriculum_name_data_society: Дані й суспільство
+  curriculum_desc_csf_express: Навчіться створювати комп'ютерні програми, розвивайте
+    навички вирішення проблем і працюйте над цікавими завданнями! Створюйте ігри та
+    творчі проєкти, якими можна поділитися з друзями, близькими й викладачами.
+  curriculum_desc_csf_express_pre_reader: Вивчайте основи кодування з блоками, які
+    можна перетягувати, вирішуючи головоломки й створюючи анімовані сцени. Створюйте
+    мистецькі проєкти і прості ігри, якими можна поділитися з друзями, близькими й
+    викладачами.
   curriculum_desc_csf_course_a: Програмуйте за допомогою таких команд, як цикли та
-    події. Навчіть студентів співпрацювати з іншими, досліджувати різні методи вирішення
-    проблем, наполегливо стикатися з складними завданнями та дізнаватися про безпеку
-    в Інтернеті.
-  curriculum_desc_csf_course_b: Завдяки відключеним заходам та різноманітним головоломкам
-    студенти вивчать основи програмування, методи співпраці, навички дослідження та
-    критичного мислення, наполегливість перед труднощами та безпеку в Інтернеті.
+    події. Навчайте учнів співпрацювати з іншими, досліджувати різні методи вирішення
+    проблем, наполегливо працювати зі складними завданнями та знайомитися з безпекою
+    в інтернеті.
+  curriculum_desc_csf_course_b: Завдяки безмашинним завданням і різноманітним головоломкам
+    учні засвоюють основи програмування, методи співпраці, навички дослідження й критичного
+    мислення, навчаються наполегливо працювати над труднощами та знайомляться з безпекою
+    в інтернеті.
   curriculum_desc_csf_course_c: Створюйте програми з послідовністю, циклами та подіями.
-    Досліджуйте методи вирішення проблем та розробляйте стратегії побудови позитивних
-    спільнот як онлайн, так і офлайн. Створюйте інтерактивні ігри, якими студенти
-    можуть ділитися.
-  curriculum_desc_csf_course_d: Огляд концепцій, знайдених на попередніх курсах, включаючи
-    цикли та події. Після цього студенти розвинуть своє розуміння алгоритмів, вкладених
-    циклів, циклів, умов тощо.
-  curriculum_desc_csf_course_e: Створіть веселі інтерактивні проекти, які посилюють
-    вивчення безпеки в Інтернеті. Займіться більш складним кодуванням, таким як вкладені
-    цикли, функції та умовні.
-  curriculum_desc_csf_course_f: Подивіться, як користувачі роблять вибір у програмах,
-    які вони використовують. Створюйте різноманітні програми Sprite Lab, які також
-    пропонують вибір для користувача. Вивчіть більш просунуті поняття, включаючи змінні
-    та цикли «для».
+    Досліджуйте методи вирішення проблем і розробляйте стратегії побудови позитивних
+    спільнот як онлайн, так і офлайн. Створюйте інтерактивні ігри, якими учні можуть
+    ділитися з іншими.
+  curriculum_desc_csf_course_d: Огляд концепцій з попередніх курсів, зокрема циклів
+    і подій. Після цього учні розвиватимуть знання алгоритмів, вкладених циклів, циклів
+    while, умовних операторів тощо.
+  curriculum_desc_csf_course_e: Створюйте веселі інтерактивні проєкти, які покращують
+    засвоєння безпеки в інтернеті. Займіться більш складним кодуванням, таким як вкладені
+    цикли, функції та умовні оператори.
+  curriculum_desc_csf_course_f: Подивіться, як саме користувачі роблять вибір у застосунках.
+    Створюйте різноманітні застосунки Sprite Lab, які також пропонують вибір для користувача.
+    Вивчайте більш складні поняття, зокрема змінні та цикли «для».
   curriculum_desc_problem_solving_computing: Використовуйте процес вирішення проблем
-    для вирішення головоломок, викликів та реальних сценаріїв. Дізнайтеся про введення,
-    виведення, зберігання та обробку комп'ютером, щоб допомогти у вирішенні проблем.
-  curriculum_desc_web_development: Створюйте та діліться вмістом на веб-сторінках,
-    досліджуючи творчий потенціал Інтернету. Розвивайте навички критичного споживання,
-    здібності до вирішення проблем та командну роботу під час програмування.
+    для розв'язання головоломок, проблем і роботи з реальними сценаріями. Дізнайтеся
+    про введення, виведення, зберігання та обробку комп'ютером з метою вирішення проблем.
+  curriculum_desc_web_development: Створюйте контент і діліться ним на веб-сторінках,
+    досліджуючи творчі можливості в інтернеті. Розвивайте навички критичного споживання,
+    вирішення проблем і командної роботу під час програмування.
   curriculum_desc_interactive_animations_games: Створюйте програмні зображення, анімацію,
-    інтерактивне мистецтво та ігри. Ознайомтеся з концепціями програмування та процесом
-    проектування.
+    інтерактивне мистецтво та ігри. Знайомтеся з концепціями програмування і процесом
+    проєктування.
   curriculum_desc_design_process: Зосередьтеся на розгляді соціального впливу обчислень.
-    Завдяки викликам дизайну студенти співпереживають потребам інших та розробляють
-    рішення.
-  curriculum_desc_data_society: Підкреслює роль даних у вирішенні проблем та допомогу
-    комп'ютерів у цьому процесі. Покрийте системи представлення та пов'язані з ними
-    проблеми. Дізнайтеся, як збір даних допомагає вирішувати проблеми.
-  curriculum_desc_creating_apps_with_devices: Дослідіть роль фізичних пристроїв у
-    обчислювальній техніці. Розробка програм, які використовують апаратні входи та
-    виходи. Існує версія цього пристрою як для micro:bit, так і для Circuit Playground.
-  collection_hardware: Зосередьтеся на обладнанні
-  collection_hardware_desc: Дає студентам можливість використовувати дані та фізичні
-    пристрої для вирішення проблем.
-  collection_design_purpose: Зосередьтеся на дизайні з метою
-  collection_design_purpose_desc: Надає студентам можливість думати про потреби користувачів
-    під час розробки веб-сайтів та додатків для пристроїв.
-  collection_impact_society: Зосередьтеся на впливі в суспільстві
-  collection_impact_society_desc: Надає студентам можливість думати про інформатику
-    як інструмент вирішення проблем, враховуючи ширші соціальні наслідки.
-  collection_creativity: Зосередьтеся на творчості
-  collection_creativity_desc: Надає студентам можливість бути творчими, коли вони
-    навчаються створювати веб-сайти, анімації та ігри та додатки для пристроїв.
-  collection_coding: Зосередьтеся на кодуванні
-  collection_coding_desc: Надає студентам можливість розвивати свої навички кодування
-    в веб-розробці, іграх та анімації, а також створювати програми для пристроїв.
-  collection_data: Зосередьтеся на даних
-  collection_data_desc: Дає студентам можливість використовувати дані для вирішення
-    проблем.
+    Вирішуючи проблем проєктування, учні більш емпатійно сприймають потреби інших
+    людей і тому розробляють максимально успішні рішення.
+  curriculum_desc_data_society: Це підкреслює роль даних у вирішенні проблем і значення
+    комп'ютерів у цьому процесі. Ви розглядатимете системи представлення інформації
+    та пов'язані з цим проблеми. Крім того, ви дізнаєтеся, як збір даних допомагає
+    вирішувати складні завдання.
+  curriculum_desc_creating_apps_with_devices: Досліджуйте роль фізичних пристроїв
+    в обчислювальних процесах. Розробляйте програми, які використовують апаратні введення
+    й виведення. Існує версія цього блоку як для micro:bit, так і для Circuit Playground.
+  collection_hardware: Зосередження на «Апаратному обладнанні»
+  collection_hardware_desc: Дає учням можливість використовувати дані й фізичні пристрої
+    для вирішення проблем.
+  collection_design_purpose: Зосередження на «Дизайні з метою»
+  collection_design_purpose_desc: Надає учням можливість обмірковувати потреби користувачів
+    під час розробки вебсайтів і застосунків для пристроїв.
+  collection_impact_society: Зосередження на «Впливі у суспільстві»
+  collection_impact_society_desc: Надає учням можливість сприймати інформатику як
+    інструмент вирішення проблем, одночасно враховуючи їхній ширший соціальний вплив.
+  collection_creativity: Зосередження на «Творчості»
+  collection_creativity_desc: Надає учням можливість застосовувати творчість, коли
+    вони навчаються створювати вебсайти, анімації, ігри й застосунки для пристроїв.
+  collection_coding: Зосередження на «Кодуванні»
+  collection_coding_desc: Надає учням можливість розвивати навички кодування для веб-розробки,
+    ігор та анімації, а також створювати застосунки для пристроїв.
+  collection_data: Зосередження на «Даних»
+  collection_data_desc: Дає учням можливість використовувати дані для вирішення проблем.
   module_label_ages: 'Вік:'
   module_label_grades: 'Класи:'
   module_label_curriculum: 'Навчальний план:'
@@ -430,11 +455,15 @@ uk:
   module_label_professional_learning: 'Професійне навчання:'
   module_label_languages: 'Підтримувані мови:'
   module_label_accessibility_features: 'Доступність:'
-  module_label_educator_tool: Інструмент вихователя
-  module_label_educator_course: Виховательний курс
-  module_label_student_tool: Інструмент для студентів
+  module_label_educator_tool: Інструмент педагога
+  module_label_educator_course: Курс педагога
+  module_label_student_tool: Інструмент учня
   module_label_student_product: Продукт
   module_label_student_content_resources: Контент і ресурси
+  module_label_new: Нові
+  module_label_coming_soon: Скоро
+  module_label_video_series: Серія відео
+  module_label_self_paced: Самостійний модуль
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -457,15 +486,19 @@ uk:
   module_grade_9_12_teachers: 9-12 Вчителі
   module_level_beginner: Початківець
   module_level_intermediate: Проміжний
+  module_duration_45_mins: 45 хвилин
+  module_duration_1_hr: 1 година
   module_duration_2_hrs: 2 години
   module_duration_3_hrs: 3 годин
+  module_duration_5_hrs: 5 годин
   module_duration_8_hrs: 8 годин
+  module_duration_20_hrs: 20 годин
   module_duration_35_hrs: 35 годин
   module_duration_lesson: Урок
   module_duration_week: Тиждень
   module_duration_month: Місяць
   module_duration_quarter: Чверть
-  module_duration_semester: семестр
+  module_duration_semester: Семестр
   module_duration_school_year: Навчальний рік
   module_duration_month_quarter: Місяць або квартал
   module_duration_month_semester_year: Місяць, семестр або рік
@@ -482,35 +515,34 @@ uk:
   module_label_teaching_maker_microbit: Навчання Створенню додатків за допомогою пристроїв
     (micro:bit)
   module_subject_english_language_arts: Мистецтво англійської мови
-  module_subject_social_studies: Соціальні дослідження
-  module_subject_science: Наука
+  module_subject_social_studies: Суспільні науки
+  module_subject_science: Природничі науки
   module_subject_math: Математика
   module_name_coding_w_poetry: Кодування за допомогою поезії
-  module_name_coding_time_capsule: Кодування капсули часу
+  module_name_coding_time_capsule: Пишемо код для капсули часу
   module_name_simulating_marine_ecosystem: Імітація морської екосистеми
   module_name_coding_geometric_star_quilt: Кодування геометричної зіркової ковдри
   module_name_modeling_animal_adaptations: Моделювання адаптації тварин
-  module_name_coding_book_covers: Обкладинки книг з кодування
+  module_name_coding_book_covers: Кодування обкладинок книг
   module_name_coding_interactive_maps: Кодування інтерактивних карт
-  module_desc_coding_w_poetry: Дослідіть перетин кодування та мовного мистецтва, створюючи
-    інтерактивні вірші, ілюструючи настрій та тон кодом.
-  module_desc_coding_time_capsule: Створіть цифрову капсулу часу, щоб зафіксувати
-    та зберегти спогади на майбутнє.
-  module_desc_simulating_marine_ecosystem: Використовуйте кодування для моделювання
-    морської екосистеми, досліджуючи взаємозалежності між різними організмами та їх
-    середовищем.
-  module_desc_coding_geometric_star_quilt: Вивчіть код для створення геометричних
+  module_desc_coding_w_poetry: Досліджуйте перетин кодування зі словесністю, створюючи
+    інтерактивні вірші, ілюструючи настрій і тон за допомогою коду.
+  module_desc_coding_time_capsule: Створіть цифрову капсулу часу, аби зафіксувати
+    і зберегти спогади для майбутнього.
+  module_desc_simulating_marine_ecosystem: Використовуйте код для імітації морської
+    екосистеми, досліджуючи взаємозалежності між різними організмами та їхнім середовищем.
+  module_desc_coding_geometric_star_quilt: Вивчайте код для створення геометричних
     візерунків у приголомшливих зіркових ковдрах, поєднуючи математичні концепції
-    з творчим вираженням.
+    з творчим самовираженням.
   module_desc_modeling_animal_adaptations: Використовуйте код для моделювання адаптації
-    тварин, поглиблюючи своє розуміння того, як різні види еволюціонували, щоб вижити
-    у своєму середовищі.
+    тварин, поглиблюючи своє розуміння того, як різні види еволюціонували, аби вижити
+    у певному середовищі.
   module_desc_coding_book_covers: Використовуйте код для створення анімованої обкладинки
-    книги, використовуючи спрайти та текст для передачі персонажів, обстановки, сюжету
-    тощо.
-  module_desc_coding_interactive_maps: Використовуйте кодування для розробки карти,
-    яка розповідає історію, що дозволяє досліджувати географічну інформацію захоплюючим
-    та інтерактивним способом.
+    книги, використовуючи спрайти та текст для відображення персонажів, обстановки,
+    сюжету тощо.
+  module_desc_coding_interactive_maps: Використовуйте код для розробки карти, що розповідає
+    історію. Це дозволяє досліджувати географічну інформацію захоплюючими й інтерактивними
+    способами.
   values_01: Ми вважаємо, що інформатика є основою для всіх студентів
   values_02: Ми прагнемо до справедливості, доступу та можливостей
   values_03: Ми віримо в силу спільної освітньої спільноти
@@ -518,54 +550,56 @@ uk:
   values_05: Діємо з чесністю та прозорістю
   values_06: Ми вважаємо, що широкий вплив вимагає масштабного мислення та цілісного
     дії.
-  heading_professional_learning: Професійне навчання, яке відповідає вашим потребам
+  heading_professional_learning: Професійне навчання, яке відповідає саме вашим потребам
   heading_additional_resources: Додаткові ресурси
-  heading_support_and_questions: Підтримка та питання
-  heading_faq: Часті питання
-  heading_curriculum_at_a_glance: Навчальна програма з першого погляду
-  heading_curricula_at_a_glance: Навчальні програми з першого погляду
-  heading_engaging_projects: Залучення проектів та заходів, які надихають на навчання
-  heading_build_apps: Створюйте додатки
-  heading_widgets: віджети
+  heading_support_and_questions: Служба підтримки й запитання
+  heading_faq: Поширені запитання
+  heading_curriculum_at_a_glance: Короткий огляд навчальної програми
+  heading_curricula_at_a_glance: Короткий огляд навчальних програм
+  heading_engaging_projects: Захоплюючі проєкти й заходи, які надихають на навчання
+  heading_build_apps: Створення застосунків
+  heading_widgets: Віджети
   heading_choice_levels: Рівні вибору
   heading_year_long_intro_course: Річний вступний курс
-  heading_flexible_units: Гнучкі агрегати
+  heading_flexible_units: Гнучкі блоки
   heading_collections: Колекції
   heading_find_a_module: Знайдіть модуль для свого класу
-  heading_no_devices: Немає пристроїв? Ми вас охопили
+  heading_no_devices: Немає пристроїв? Ми вам допоможемо
   heading_java_lab: Лабораторія Java
-  heading_objects_first: Об'єкти спочатку
+  heading_objects_first: Насамперед — об'єкти
+  heading_these_lessons_will: 'Ці уроки будуть:'
   professional_learning_section_desc: Отримайте необхідну підтримку під час підготовки
-    до навчання. Вчителям це подобається, і понад 90% оцінюють його найкращим професійним
-    розвитком за всю історію!
+    до викладання. 90 % викладачів оцінюють це рішення як найкраще з можливих!
   professional_learning_section_desc_short: Отримайте необхідну підтримку під час
-    підготовки до навчання.
-  professional_learning_section_desc_self_paced: Якраз вчасно підтримка, яка дозволяє
-    підготуватися до навчання з упевненістю у своєму графіку.
-  professional_learning_section_block_facilitator_led_workshops: Наша високопідтримуюча
-    програма професійного навчання об'єднає вас з групою вчителів, щоб вчитися один
-    у одного, а також експертів-фасилітаторів, коли ви візьмете перший рік викладання
-    безкоштовної навчальної програми своїм студентам. Цього літа стартують особисті
-    та віртуальні семінари.
+    підготовки до викладання.
+  professional_learning_section_desc_self_paced: Вчасна допомога, яка дозволяє підготуватися
+    до викладання відповідно до вашого графіку.
+  professional_learning_section_block_facilitator_led_workshops: Наша неймовірно корисна
+    Програма професійного навчання об'єднає вас з групою викладачів, де ви зможете
+    вчитися одне у одного, а також з експертами-фасилітаторами під час вашого першого
+    року викладання безкоштовної навчальної програми учням. Цього літа стартують очні
+    й віртуальні семінари.
   professional_learning_section_block_facilitator_led_workshops_csf: Приєднуйтесь
-    до місцевих вчителів для надихаючої та практичної підтримки для впровадження інформатики
-    у вашому класі. Наші регіональні партнери пропонують високоякісні одноденні семінари
-    Code.org для окремих вчителів або для загальношкільної PD. Запишіться на семінар
-    з підвищення кваліфікації поруч з вами!
+    до викладачів неподалік вас для надихаючої та практичної підтримки щодо впровадження
+    інформатики у вашому класі. Наші регіональні партнери пропонують високоякісні
+    одноденні семінари Code.org для окремих викладачів або з метою загальношкільного
+    професійного розвитку. Запишіться на семінар з підвищення кваліфікації поруч з
+    вами!
   professional_learning_section_block_csa: Our highly supportive Professional Learning
     Program will bring you together with a group of teachers to learn from each other
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
-  professional_learning_section_workshops_starting: Особисті та віртуальні майстер-класи
-    починаються цього літа.
-  no_devices_section_subhead: Вперед, переріжте шнур (на деякий час)!
-  no_devices_section_desc: Освіта CS не завжди повинна бути перед екраном, і доступ
-    до пристроїв не повинен бути перешкодою для вивчення концепцій інформатики.
-  support_and_questions_section_subhead: Залишилися питання? Зверніться до нас! Ми
-    тут, щоб допомогти.
-  support_and_questions_section_desc: Наша команда підтримки тут, щоб відповісти на
-    будь-які запитання, які можуть виникнути у вас щодо початку викладання з Code.org.
-    Ви також можете запитати інших вчителів про їхній досвід на наших форумах викладачів.
+  professional_learning_section_workshops_starting: Очні й віртуальні майстер-класи
+    починаються вже цього літа.
+  no_devices_section_subhead: Вперед, переріжте шнур (лише на деякий час)!
+  no_devices_section_desc: Викладання інформатики не завжди має проводитись перед
+    екраном, і доступ до пристроїв не має ставати перешкодою для засвоєння концепцій
+    інформатики.
+  support_and_questions_section_subhead: Залишилися запитання? Зверніться до нас,
+    і ми з радістю допоможемо!
+  support_and_questions_section_desc: Наша команда підтримки відповість на будь-які
+    запитання щодо початку викладання з Code.org. Ви також можете запитати інших педагогів
+    про їхній досвід на наших форумах викладачів.
   blockchain_hero_heading: Як працює блокчейн
   blockchain_hero_desc: Пориньте у світ блокчейну з нашою новою серією відео та супутніми
     уроками «Як працює блокчейн»!
@@ -666,6 +700,11 @@ uk:
   ai_curriculum_grades_03: 'Рівні класу: 3-12'
   ai_curriculum_duration_03: 'Тривалість: 1 година'
   ai_curriculum_btn_aria_label_03: Спробуйте діяльність AI для океанів
+  ai_curriculum_title_04: Як працює AI
+  ai_curriculum_desc_04: Ці уроки доповнюють серію відео «Як працює штучний інтелект».
+    Кожен урок поєднується з одним відео із серії, занурюючись глибше в концепції,
+    представлені у відео.
+  ai_curriculum_btn_aria_label_04: Дізнайтеся, як працює штучний інтелект
   ai_carousel_heading: 'Що кажуть вчителі про AI з Code.org:'
   ai_carousel_quote_01: Цей урок також дав моїм учням можливість побачити, що в системах
     класифікації є елемент думки. Пізніше, коли ми почали бачити, як упередження може
@@ -683,6 +722,10 @@ uk:
   ai_pl_list_04: Розглянемо реальні наслідки штучного інтелекту та машинного навчання.
   ai_pl_list_05: Ознайомтеся з проектами кінця розділу.
   ai_pl_duration: 'Тривалість: 2 години'
+  ai_pl_title: Викладання штучного інтелекту та машинного навчання
+  ai_pl_desc: Вступ до штучного інтелекту та машинного навчання. Навчіть модель машинного
+    навчання за допомогою AI Lab. та взаємодійте з програмами машинного навчання.
+    Розглянемо реальні наслідки штучного інтелекту та машинного навчання.
   ai_video_series_title: Як працює AI
   ai_video_series_desc: З представленням генерального директора Microsoft Сатьї Наделли
     ця серія коротких відео познайомить вас з тим, як працює штучний інтелект і чому
@@ -709,48 +752,140 @@ uk:
   ai_pl_101_hero_heading: Приєднуйтеся до нас у ШІ EmpowerED!
   ai_pl_101_hero_desc: Відкрийте для себе трансформаційний потенціал штучного інтелекту
     (ШІ) в освіті за допомогою нашої безкоштовної серії онлайн-уроків для педагогів.
-  ai_pl_101_hero_presented: Представлено
-  ai_pl_101_intro_heading: Що таке AI 101 для вчителів?
-  ai_pl_101_intro_text: AI 101 для вчителів - це безкоштовна, фундаментальна серія
-    професійного онлайн-навчання для будь-якого вчителя та педагога, який цікавиться
+  ai_pl_101_hero_desc_02: Комплексна серія онлайн-навчання для вчителів.
+  ai_pl_101_hero_presented: 'Представлено:'
+  ai_pl_101_intro_heading: Що таке «Основи ШІ для викладачів»?
+  ai_pl_101_intro_text: "«Основи ШІ для викладачів» — це безкоштовна серія уроків
+    професійного онлайн-навчання для будь-якого викладача й освітянина, який цікавиться
     новаторським світом штучного інтелекту (ШІ) та його трансформаційним потенціалом
-    в освіті. Партнери Code.org, ETS, ISTE, Академія Хана пропонують захоплюючі сесії
-    з відомими експертами, які демістифікують ШІ, вивчать відповідальне впровадження,
-    вирішать упередженість та продемонструють, як навчання на основі штучного інтелекту
-    може революціонізувати результати студентів. Приєднуйтесь до нас у цій подорожі
-    дослідження та розширення можливостей та відкрийте майбутнє викладання з штучним
-    інтелектом та про нього.
+    в освіті. Партнери Code.org, ETS, ISTE, Академія Хана пропонують захоплюючі заняття
+    з відомими експертами, які пояснюють ШІ простою мовою, навчатимуть їх відповідальному
+    впровадженню. В них також обговорюється упередженість і демонструється, як навчання
+    на основі ШІ може революціонізувати успішність учнів. Приєднуйтесь до нас у цій
+    подорожі з дослідження й розширення можливостей і відкрийте для себе майбутнє
+    ШІ та викладання за його допомогою."
   ai_pl_101_partnership_between: Партнерство між
-  ai_pl_101_join_email_title: Підпишіться на ранній доступ до AI 101 для вчителів
-  ai_pl_101_pro_join_email_desc: Будьте першими, хто почує, коли запускається кожен
-    сеанс. Отримуйте оновлення про ресурси AI з Code.org, ETS, ISTE та Академії Хана.
-  ai_pl_101_explore_title: Ресурси, пов'язані з AI
-  ai_pl_101_explore_desc: Ми маємо для вас різноманітні додаткові ресурси від Code.org,
-    ETS, ISTE та Академії Хана для підтримки викладачів у цій новій та зростаючій
-    галузі. Перевірте їх нижче.
-  ai_pl_101_explore_title_1: Ханміго
-  ai_pl_101_explore__desc_1: Навчальний посібник Академії Хана на основі штучного
-    інтелекту дозволяє вчителям перестати витрачати час на підготовчі завдання, які
-    вони не люблять, і зосередитися на тому, що вони люблять - навчанні.
-  ai_pl_101_explore__button_1: Спробуйте Ханміго
+  ai_pl_101_join_email_title: Зареєструйтеся на ранній доступ на «Основи ШІ для викладачів»
+  ai_pl_101_pro_join_email_desc: Першими дізнавайтеся про час запуску кожного заняття.
+    Отримуйте новини про ресурси ШІ від Code.org, ETS, ISTE та Академії Хана.
+  ai_pl_101_explore_title: Ресурси, пов'язані зі ШІ
+  ai_pl_101_explore_desc: Ми підготували для вас різноманітні додаткові ресурси від
+    Code.org, ETS, ISTE та Академії Хана для підтримки викладачів у цій новій та постійно
+    зростаючій галузі. Ознайомтеся з ними нижче.
+  ai_pl_101_explore_title_1: Khanmigo
+  ai_pl_101_explore__desc_1: Навчальний посібник Академії Хана на основі ШІ дозволяє
+    викладачам перестати витрачати час на підготовчі завдання, які їм так не подобаються,
+    і зосередитися на тому, що вони люблять, — навчанні.
+  ai_pl_101_explore__button_1: Спробуйте Khanmigo
   ai_pl_101_explore_title_2: Дослідження штучного інтелекту для педагогів
   ai_pl_101_explore__desc_2: Протягом шести років цей 15-годинний онлайн-курс від
-    ISTE направляє викладачів K-12 щодо основ ШІ для викладання та навчання. Курс
-    пропонується три рази на рік і повністю асинхронний з постійною підтримкою експерта-інструктора.
-  ai_pl_101_explore__button_2: Почніть курс
-  ai_pl_101_explore_title_3: Навчальна програма AI
-  ai_pl_101_explore__desc_3: У навчальній програмі Code.org AI для 3-12 класів учні
-    використовують цікаві заняття, щоб побачити, як комп'ютери вчаться на даних. Навчальна
-    програма також пропонує студентам досліджувати машинне навчання та дані, розмірковуючи
-    над етичними наслідками ШІ.
-  ai_pl_101_explore__button_3: Вивчіть навчальні програми
+    ISTE навчає викладачів 12-річної школи основам ШІ з метою викладання й навчання.
+    Курс пропонується три рази на рік і повністю асинхронний з постійною підтримкою
+    експерта-інструктора.
+  ai_pl_101_explore__button_2: Почати курс
+  ai_pl_101_explore_title_3: Навчальна програма ШІ
+  ai_pl_101_explore__desc_3: У відео й навчальній програмі Code.org AI «Як використовувати
+    ШІ» для 3-12 класів учні вивчають основні принципи ШІ та використовують цікаві
+    дії, аби побачити, як комп’ютери навчаються на основі даних. Відео й навчальна
+    програма також пропонують учням досліджувати машинне навчання і дані, розмірковуючи
+    про етичні наслідки ШІ.
+  ai_pl_101_explore__button_3: Ознайомитися з навчальними програмами
   ai_pl_101_explore_title_4: Інтерактивний критерій ETS
-  ai_pl_101_explore__desc_4: 'Ця платформа для написання з п''яти абзаців навчає учнів
-    через п''ять критичних етапів процесу письма: Підготувати/планувати, писати, переглядати,
-    редагувати, роздумувати. ETS персоналізує досвід написання, використовуючи передові
-    моделі оцінки та AI, допомагаючи вчителям надавати ітераційний зворотний зв''язок
-    та формуючу оцінку протягом усього досвіду написання.'
-  ai_pl_101_explore__button_4: Дослідіть інструмент
+  ai_pl_101_explore__desc_4: 'Ця платформа для написання з п''яти абзаців навчає учнів,
+    використовуючи п''ять критичних етапів процесу письма: підготовка/планування,
+    написання, перегляд, редагування, міркування. ETS персоналізує досвід написання,
+    використовуючи передові моделі оцінки та ШІ, допомагаючи викладачам надавати ітераційний
+    зворотний зв''язок і проміжну оцінку протягом усього досвіду написання.'
+  ai_pl_101_explore__button_4: Ознайомитися з інструментом
+  ai_pl_101_video_title_1: Чат біля каміна з Сал Ханом і Хаді Партові
+  ai_pl_101_video_desc_1: Приєднуйтесь до Сал Хана (Академія Хана) та Хаді Партові
+    (Code.org) для чату біля каміна про використання штучного інтелекту в класі. Очікуйте
+    жвавої дискусії, включаючи деякі з найбільш суперечливих тем, що стосуються ШІ
+    сьогодні.
+  ai_pl_101_video_title_2: Демістифікація штучного інтелекту для освітян
+  ai_pl_101_video_desc_2: Вступ до основ штучного інтелекту, який забезпечить вас
+    фундаментальними знаннями, щоб зрозуміти глибокий вплив ШІ на наше суспільство
+    та його зростаючу актуальність у галузі освіти. Ви отримаєте практичне уявлення
+    про використання ШІ для завдань у класі та економію часу на адміністративних завданнях.
+  ai_pl_101_video_title_3: Трансформація навчання за допомогою штучного інтелекту
+  ai_pl_101_video_desc_3: Дослідіть перетин штучного інтелекту та освіти. Ця сесія
+    досліджує, як ШІ можна поєднувати з педагогікою для покращення навчання студентів.
+    Це обов'язкове відвідування для викладачів, які прагнуть використовувати штучний
+    інтелект для трансформації своєї практики викладання, щоб збагатити навчальний
+    досвід своїх учнів.
+  ai_pl_101_video_title_4: Забезпечення відповідального підходу до штучного інтелекту
+  ai_pl_101_video_desc_4: Вивчіть етичні міркування та найкращі практики щодо включення
+    штучного інтелекту в освітнє середовище. Ця сесія надасть конкретні стратегії,
+    ресурси та реальні приклади, спрямовані на розуміння потенційних упереджень ШІ
+    та етичних міркувань, які з ним пов'язані.
+  ai_pl_101_video_title_5: Принесення штучного інтелекту в клас
+  ai_pl_101_video_desc_5: Ця сесія зосереджена на навчанні штучному інтелекту, оцінці
+    та використанні освітніх інструментів штучного інтелекту та використанні ШІ для
+    оцінювання студентів. Завдяки багатому поєднанню теорії, практичних прикладів
+    та ресурсів, він має на меті дати можливість викладачам орієнтуватися в ландшафті
+    штучного інтелекту та покращувати досвід навчання студентів.
+  ai_pl_101_video_desc_6: 'Дізнайтеся більше про нову технологію, яка спричиняє великі
+    зміни в штучному інтелекті, де представлені два нових відео про моделі великих
+    мов (наприклад, ChatGPT) та генеративний штучний інтелект. Почуйте, як працюють
+    ці нові технології безпосередньо від експертів: Міри Мураті, технічного директора
+    OpenAI, та Крістобаля Валенсуели, генерального директора RunwayML.'
+  how_ai_works_hero_heading: Як працює AI
+  how_ai_works_hero_desc: Пориньте у світ AI з нашою серією відео та супутніми уроками
+    «Як працює AI»!
+  how_ai_works_intro_desc: Ця серія коротких відео та супутніх уроків у класі познайомить
+    вас та ваших учнів з тим, як працює штучний інтелект і чому це важливо. Ви можете
+    вибрати індивідуальні уроки на основі теми, вивчити цілу серію тем в одному класі
+    або викласти всі 7 уроків, щоб дати глибше занурення.
+  how_ai_works_intro_list_01: Знайомтеся зі штучним інтелектом та машинним навчанням
+  how_ai_works_intro_list_02: Пориньте в те, як працює генеративний штучний інтелект,
+    включаючи моделі великих мов (LLM) та генерацію зображень
+  how_ai_works_intro_list_03: Дослідіть упередженість, етику, конфіденційність та
+    відповідальне використання штучного інтелекту
+  how_ai_works_intro_list_04: Торкніться реальних застосувань штучного інтелекту,
+    включаючи комп'ютерний зір
+  how_ai_works_lessons_heading: Уроки AI для вашого класу
+  how_ai_works_lesson_title_01: Вступ до машинного навчання
+  how_ai_works_lesson_desc_01: Дізнайтеся про форму штучного інтелекту під назвою
+    машинне навчання та про те, як вони можуть використовувати процес вирішення проблем,
+    щоб допомогти навчити робота вирішувати проблеми. Беріть участь у заходах машинного
+    навчання, де робот навчається виявляти закономірності у риб.
+  how_ai_works_lesson_title_02: Комп'ютерний зір
+  how_ai_works_lesson_desc_02: Дізнайтеся, як працює комп'ютерний зір. Подивіться
+    відео, що пояснює комп'ютерний зір і те, як комп'ютер «бачить». Потім розробляйте
+    алгоритм, який використовує мережу, щоб вирішити, яке число відображає семисегментний
+    дисплей, і протестуйте його.
+  how_ai_works_lesson_title_03: Нейронні мережі
+  how_ai_works_lesson_desc_03: Дізнайтеся, як працюють нейронні мережі Використовуйте
+    віджети, щоб досліджувати нейронні мережі в руці. Подивіться відео, що пояснює
+    нейронні мережі. Нарешті обговоріть необхідність різноманітних перспектив при
+    створенні рекомендаційних систем.
+  how_ai_works_lesson_title_04: Чат-боти та великі мовні моделі
+  how_ai_works_lesson_desc_04: Дізнайтеся, що таке модель великої мови (LLM) і як
+    вона працює, а потім використовуйте LLM для спільного створення тексту з AI. Нарешті,
+    обговоріть, чи є LLM розумними чи творчими.
+  how_ai_works_lesson_title_05: Генеративні зображення
+  how_ai_works_lesson_desc_05: Дізнайтеся, як AI може генерувати зображення, а потім
+    вивчіть дифузійний віджет AI та обговоріть, чи є ці моделі творчими чи ні.
+  how_ai_works_lesson_title_06: Алгоритмічний упередження
+  how_ai_works_lesson_desc_06: Практикуйте обрізання зображень, щоб виявити упередженість,
+    що лежить в основі алгоритму обрізання Twitter, а потім прочитайте та перегляньте
+    відео про відкриття цього упередженого алгоритму. Нарешті, обговоріть способи
+    розпізнавання та зменшення упередженості в алгоритмах.
+  how_ai_works_lesson_title_07: Наш Кодекс етики AI
+  how_ai_works_lesson_desc_07: Проведіть дослідження, використовуючи статті та відео,
+    які викривають етичні підводні камені в області штучного інтелекту за їх вибором.
+    Зберіть загальнокласовий ресурс «Наш етичний кодекс штучного інтелекту» для творців
+    штучного інтелекту та законодавців у всьому світі.
+  how_ai_works_lessons_in_a_day_title: Як працює штучний інтелект за один день
+  how_ai_works_lessons_in_a_day_desc: У вас є лише день? Існує також можливість представити
+    студентам всю серію за один день. Ідеально підходить для будь-якого вчителя предметної
+    області, який хоче познайомити учнів з штучним інтелектом, або навіть як урок
+    для запрошеного вчителя.
+  how_ai_works_lessons_in_a_day_desc_02: Представте всі відео «Як працює AI» за один
+    день. Студенти стежать за кожним відео, узгоджуючи словниковий запас з відео,
+    а потім відповідаючи на запитання про роздуми про кожне відео.
+  how_ai_works_resources_desc: Хочете дізнатися більше про AI? Ось деякі додаткові
+    ресурси, які можуть допомогти вам та вашим учням розширити навчання.
   ai_vid_intro_caption: Представляємо, як працює AI
   ai_vid_chatbots_caption: Як працюють чат-боти та великі мовні моделі
   ai_vid_creativity_caption: Чи має AI творчість та уяву?
@@ -1085,10 +1220,10 @@ uk:
   teach_page_additional_materials_list_desc_03: Роздрукуйте ці постери з різноманітними
     прикладами для наслідування, щоб повісити їх у своїй школі та надихнути учнів
     спробувати себе в інформатиці.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1097,7 +1232,7 @@ uk:
   csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
-  csp_page_curriculum_glance_tools: Лабораторія додатків
+  csp_page_curriculum_glance_tools: Лабораторія застосунків
   csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csp_page_curriculum_glance_professional_languages: Англійською
@@ -1208,235 +1343,243 @@ uk:
   csp_page_faq_answer_07_04: For more information about our goals and approach to
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
-  csd_page_top_desc: Найбільш гнучкий курс Code.org, що дозволяє викладати кожну одиницю
-    окремо, об'єднати в колекції, які зосереджені на конкретних областях, або як цілий
-    рік курсу. Безкоштовна навчальна програма знайомить студентів із створенням власних
-    веб-сайтів, додатків, анімації, ігор та фізичних обчислювальних систем.
-  csd_page_intro_heading: Гнучка навчальна програма для задоволення ваших потреб
+  csd_page_top_desc: Найбільш гнучкий курс Code.org, що дозволяє викладати кожен блок
+    окремо, об'єднаний у колекції, зосереджені на конкретних областях, або ж у формі
+    річного курсу. Безкоштовна навчальна програма знайомить учнів зі створенням власних
+    вебсайтів, застосунків, анімації, ігор і фізичних обчислювальних систем.
+  csd_page_intro_heading: Гнучка навчальна програма для ваших потреб
   csd_page_intro_list_01: Гнучка вступна навчальна програма
-  csd_page_intro_list_02: Широта тем
+  csd_page_intro_list_02: Широке коло тем
   csd_page_intro_list_03: Попередній досвід не потрібен
-  csd_page_intro_list_04: Створюйте багато різних типів проектів
-  csd_page_intro_list_05: Захоплююче і весело
+  csd_page_intro_list_04: Створюйте багато різних типів проєктів
+  csd_page_intro_list_05: Захоплююче й веселе навчання
   csd_page_quote: Ця навчальна програма є всеосяжною, добре організованою та орієнтованою
-    на студентів! Неймовірна організація в навчальній програмі - це те, що змушує
+    безпосередньо на учнів! Саме неперевершена організація в навчальній програмі змушує
     мене використовувати її рік за роком.
-  csd_page_curriculum_glance_topics: Штучний інтелект, Дані, Веб-дизайн, Фізичні обчислення,
-    Дизайн додатків, Ігри та анімація, Мистецтво та дизайн, Програмування
+  csd_page_curriculum_glance_topics: Штучний інтелект, дані, веб-дизайн, фізичні обчислення,
+    проєктування застосунків, ігри та анімація, мистецтво та дизайн, програмування
   csd_page_curriculum_glance_devices: Laptop, Chromebook
-  csd_page_curriculum_glance_tools: Лабораторія додатків, ігрова лабораторія, AI Lab,
-    веб-лабораторія
+  csd_page_curriculum_glance_tools: Лабораторія застосунків, Ігрова лабораторія, Лабораторія
+    ШІ, Веб-лабораторія
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
   csd_page_curriculum_glance_professional_languages: Англійською
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Вибір правильного курсу CS Discourcies для вашого
-    класу
+  csd_page_pick_a_course_heading: Вибір правильного курсу «Відкриттів інформатики»
+    для вашого класу
   csd_page_pick_a_course_desc: Завдяки різноманітному набору опцій, пропонованих для
-    CS Discopionsies, існує курс для всіх різних потреб.
-  csd_page_pick_a_course_heading_02: Як ви хочете вибрати вміст?
-  csd_page_courses_year_desc: Через 7 одиниць студенти вивчають найрізноманітніші
-    теми.
-  csd_page_courses_year_action_block_desc: 'Вступний курс інформатики, який дає студентам
-    можливість створювати справжні артефакти та займатися інформатикою як середовищем
-    для творчості, спілкування, вирішення проблем та розваг. '
-  csd_page_courses_flexible_units_desc: Кожен блок CS Disceveries можна використовувати
-    самостійно без попереднього досвіду, що дозволяє вибрати точні одиниці, які працюють
-    для вашого класу.
-  csd_page_courses_collections_desc: Пориньте глибше в одну область з набором одиниць,
-    орієнтованих на певну тему.
-  csd_page_faq_question_01: Чи відповідають стандартам відкриття CS?
-  csd_page_faq_answer_01: CS Discoresties було написано з використанням як основи
-    K-12 для комп'ютерних наук, так і стандартів CSTA 2017 року як керівництва. В
-    даний час кожен урок з CS Discesties містить відображення відповідно до відповідних
+    «Відкриттів інформатики», існують курси для кожної потреби.
+  csd_page_pick_a_course_heading_02: Як ви хочете вибирати вміст?
+  csd_page_courses_year_desc: У цих 7 блоках учні засвоюють найрізноманітніші теми.
+  csd_page_courses_year_action_block_desc: 'Вступний курс інформатики, який дає учням
+    можливість створювати справжні артефакти й використовувати інформатику як середовищем
+    для творчості, спілкування, вирішення проблем і розваг. '
+  csd_page_courses_flexible_units_desc: Кожний блок «Відкриттів інформатики» можна
+    використовувати самостійно без попереднього досвіду, що дозволяє ідеально вибирати
+    блоки саме для вашого класу.
+  csd_page_courses_collections_desc: Глибше розгляньте конкретну область завдяки набору
+    блоків, орієнтованих на певну тему.
+  csd_page_faq_question_01: Чи відповідають стандартам «Відкриття інформатики»?
+  csd_page_faq_answer_01: "«Відкриття інформатики» було написано з використанням як
+    основ комп'ютерних наук для 12-річної школи, так і стандартів CSTA 2017 року в
+    якості керівництва. Наразі кожний урок «Відкриттів інформатики» відображає відповідні
     стандартів CSTA 2017 року. [Короткий опис відображень стандартів можна знайти
-    тут] (%{mappings_url}). Версію стандартів Google Sheets можна знайти на [Стандарти
-    CSD] (%{csd_standards_url}).
-  csd_page_faq_question_02: Яким/Де я можу отримати професійний розвиток для цього
-    курсу?
+    тут] (%{mappings_url}). Версію стандартів в Google Sheets можна знайти тут: [Стандарти
+    CSD] (%{csd_standards_url})."
+  csd_page_faq_question_02: Як/де я можу отримати професійне навчання для цього курсу?
   csd_page_faq_answer_02: Наша програма професійного навчання пропонує цілорічну підтримку.
     Програма розпочинається з п'ятиденного літнього семінару, де ви матимете можливість
-    попрацювати з навчальною програмою та зустрітися з іншими вчителями з вашого району.
-    Протягом року ми пропонуємо наступні семінари та підтримку форуму. Вам не потрібен
-    попередній досвід інформатики, щоб почати. І вчителям це подобається! 90% оцінюють
-    його найкращим професійним розвитком за всю історію. [Натисніть тут, щоб подати
-    заявку та дізнатися більше] (%{apply_url}).
-  csd_page_faq_question_03: Я викладаю CS Discevies, але маю менше одного семестру
-    зі своїми студентами. Що б ви порекомендували?
-  csd_page_faq_answer_03_01: Вчителі, які мають обмежений графік, не в змозі викладати
-    всі одиниці відкриттів CS протягом навчального року, тепер можуть легко призначити
-    певний набір одиниць CS Discevies залежно від того, на чому вони хочуть зосередитись.
-    Ці колекції все ще є тими ж точними одиницями, що знаходяться в CS Disceveries,
-    просто згруповані разом на основі наших рекомендацій нижче, щоб глибоко зануритися
-    в певну область відкриттів CS. Кожна колекція становить приблизно один семестр
-    або трохи менше одного семестру. [Натисніть тут, щоб побачити наші параметри колекцій]
-    (%{collections_url}).
-  csd_page_faq_answer_03_02: Для вчителів, які мають ще більш обмежений графік, вони
-    мають можливість призначати лише одну одиницю одночасно з CS Disceviers, не призначаючи
-    весь курс. Ми сподіваємось, що це допоможе підтримувати класи, які викладають
-    блоки CS Discopies, вбудовані в рамках великих курсів або під час викладання інформатики
-    за обмеженим графіком. [Натисніть тут, щоб побачити наші гнучкі одиниці] (%).
-  csd_page_faq_question_04: Які матеріали та матеріали необхідні для CS Disceviros?
+    попрацювати з навчальною програмою й зустрітися з іншими викладачами поряд з вами.
+    Протягом року ми пропонуємо відповідні семінари й підтримку на форумі. Вам не
+    потрібен попередній досвід з інформатики. І вчителям це подобається! 90 % викладачів
+    оцінюють це як найкраще рішення з можливих. [Натисніть тут, щоб подати заявку
+    і дізнатися більше](%{apply_url}).
+  csd_page_faq_question_03: Я викладаю «Відкриття інформатики», але мій час з учнями
+    обмежено менш ніж одним семестром. Що б ви порекомендували?
+  csd_page_faq_answer_03_01: Вчителі, яким не вдавалось викладати всі блоки «Відкриттів
+    інформатики» через обмежений графік, тепер можуть легко вибрати певний набір блоків
+    «Відкриттів інформатики» залежно від того, на чому вони хочуть зосередитись. Ці
+    колекції є тими самими блоками, що містяться в «Відкриттях інформатики», просто
+    їх згруповано разом на основі наших поданих нижче рекомендацій, аби ви могли глибше
+    зануритися в певну область «Відкриттів інформатики». Кожна колекція становить
+    приблизно один семестр або трохи менше семестру. [Натисніть тут, аби переглянути
+    наші параметри колекцій](%{collections_url}).
+  csd_page_faq_answer_03_02: Викладачі, які мають ще більш обмежений графік, мають
+    можливість призначати лише один блок одночасно з «Відкриттями інформатики», не
+    обираючи всього курсу. Ми сподіваємось, що це допоможе для класів, де викладаються
+    блоки «Відкриттів інформатики», вбудовані в рамках великих курсів або під час
+    викладання інформатики за обмеженим графіком. [Натисніть тут, аби переглянути
+    наші гнучкі блоки](%).
+  csd_page_faq_question_04: Які матеріали необхідні для «Відкриттів інформатики»?
   csd_page_faq_answer_04_01: Однією з потенційних витрат, яку слід враховувати при
-    викладанні цього курсу, є друк. Багато уроків мають роздатковий матеріал, який
-    призначений для того, щоб направляти учнів через діяльність. Хоча не потрібно
-    друкувати всі ці роздаткові матеріали, багато з них були розроблені для друку,
-    і ми настійно рекомендуємо друкувати, коли це можливо.
-  csd_page_faq_answer_04_02: 'Крім друку, деякі уроки вимагають типових матеріалів
-    для класу та маніпуляцій, таких як: студентські журнали, плакатний папір, маркери
-    /кольорові олівці, ножиці, папір, клей або стрічка, примітки або індексні картки
-    (або брухт подібного розміру), а також лінійки або якийсь прямий край.'
-  csd_page_faq_answer_04_03: 'На додаток до цих загальних матеріалів курсу, у конкретних
-    підрозділах вимагаються наступні пункти:'
-  csd_page_faq_answer_04_04: Вирішення проблем та обчислення
-  csd_page_faq_answer_04_05: Алюмінієва фольга, ємність для води, копійки (зверніть
-    увагу, що копійки можна замінити якимось іншим видом ваги такого ж розміру). Альтернативні
-    заходи доступні, якщо у вас немає доступу до цих матеріалів.
-  csd_page_faq_answer_04_06: Створення програм за допомогою пристроїв (варіант А і
-    варіант В)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Виробничі матеріали, такі як порожні коробки для серветок
-    або картонні рулони або папір для подряпин
-  csd_page_faq_answer_04_10: "*Примітка: блок «Створення додатків за допомогою пристроїв»
-    має два варіанти реалізації - один для тих, хто використовує схеми дитячих майданчиків,
-    і один для тих, хто використовує micro:bit. Вчителі не повинні купувати обидва
-    набори пристроїв або навчати обидва варіанти одиниць, оскільки вони еквівалентні
-    та охоплюють один і той же вміст."
-  csd_page_faq_question_06: Як CS Discoveries поєднується з іншими курсами Code.org?
-  csd_page_faq_answer_06_01: CS Disceveries розроблено таким чином, щоб природно вписуватися
-    між нашими курсами [Основи CS] (%{csf_url}) та нашим курсом [Принципи CS] (%{csp_url}).
-    Хоча кожен з цих курсів розроблений як відповідна віку точка входу в інформатику,
-    студенти з попереднім досвідом знайдуть багато нових тем для вивчення, і вони
-    переглянуть знайомі теми в нових та складніших контекстах.
-  csc_page_top_desc: Встановлюйте зв'язки між інформатикою (CS) та іншими предметами,
-    такими як математика, мовне мистецтво, наука та суспільствознавство.
-  csc_page_intro_heading: Навчіть CS, охоплюючи основні предметні стандарти
-  csc_page_intro_list_01: Включіть CS в інші предмети
-  csc_page_intro_list_02: Підсилити навчання з інших предметів
-  csc_page_intro_list_03: Відповідають основним предметним стандартам
-  csc_page_intro_list_04: Цікавий спосіб навчити студентів інформатиці
+    викладанні цього курсу, є друк. Багато уроків мають роздаткові матеріали, які
+    направляють учнів через діяльність. Хоча друкувати всі ці роздаткові матеріали
+    не обов'язково, багато з них було розроблено для друку, і ми настійно рекомендуємо
+    друкувати їх, коли це можливо.
+  csd_page_faq_answer_04_02: 'Окрім роздруківок, деякі уроки вимагають типових матеріалів
+    для класу та певних маніпуляцій, як-от: учнівські журнали, плакатний папір, маркери/кольорові
+    олівці, ножиці, папір, клей або ліпка стрічка, ліпкі нотатки чи індексні картки
+    (або будь-які невеличкі аркуші подібного розміру), а також лінійки чи якийсь інші
+    подібні прямі інструменти.'
+  csd_page_faq_answer_04_03: 'На додаток до цих загальних матеріалів для курсу, у
+    конкретних блоках вимагаються наступні предмети:'
+  csd_page_faq_answer_04_04: Розв'язання проблем та обчислення
+  csd_page_faq_answer_04_05: Алюмінієва фольга, ємність для води, монети (зверніть
+    увагу, що монети можна замінити якимось іншим видом ваги такого ж розміру). Якщо
+    у вас немає таких матеріалів, можливі альтернативні види діяльності.
+  csd_page_faq_answer_04_06: Створення застосунків за допомогою пристроїв (варіант
+    А та варіант В)
+  csd_page_faq_answer_04_07: 'Варіант A: набір Circuit Playgrounds для класної кімнати.
+    Дізнайтеся більше тут: [code.org/maker/circuitplayground](%{url}).'
+  csd_page_faq_answer_04_08: 'Варіант B: набір пристроїв micro:bit для класно кімнати.
+    Дізнайтеся більше тут: [code.org/maker/microbit](%{url}).'
+  csd_page_faq_answer_04_09: 'Матеріали для роботи: порожні коробки для серветок,
+    або картонні рулони, або скретч-папір'
+  csd_page_faq_answer_04_10: "*Примітка: блок «Створення застосунків за допомогою
+    пристроїв» має два варіанти реалізації: один для тих, хто використовує Circuit
+    Playgrounds, і один для тих, хто використовує micro:bit. Вчителі не мають купувати
+    обидва набори пристроїв або навчати обидва варіанти блоків, оскільки вони еквівалентні
+    й охоплюють один і той самий зміст."
+  csd_page_faq_question_06: Як «Відкриття інформатики» поєднується з іншими курсами
+    Code.org?
+  csd_page_faq_answer_06_01: "«Відкриття інформатики» розроблено таким чином, щоб
+    вони природно вписувалися між нашими курсами [Основи інформатики](%{csf_url})
+    та [Принципи інформатики](%{csp_url}). Хоча кожен з цих курсів розроблений як
+    відповідна віку точка входу в інформатику, учні з попереднім досвідом знайдуть
+    багато нових тем для вивчення, тому що ці курси розглядають знайомі теми в нових
+    і складніших контекстах."
+  csc_page_top_desc: Встановлюйте зв'язки між інформатикою та іншими предметами, такими
+    як математика, словесність, природничі й суспільні науки.
+  csc_page_intro_heading: Викладайте інформатику, охоплюючи основні предметні стандарти
+  csc_page_intro_list_01: Включайте інформатику в інші предмети
+  csc_page_intro_list_02: Поглиблюйте навчання з інших предметів
+  csc_page_intro_list_03: Виконуйте основні предметні стандарти
+  csc_page_intro_list_04: Цікавий метод викладання інформатики
   csc_page_intro_list_05: Open-ended projects for more personalized learning
   csc_page_intro_list_06: Легко для будь-якого вчителя з будь-яким досвідом
-  csc_page_curriculum_glance_topics: Міждисциплінарний
+  csc_page_curriculum_glance_topics: Міждисциплінарний метод
   csc_page_curriculum_glance_devices: Ноутбук, Chromebook, планшет
-  csc_page_curriculum_glance_tools: Лабораторія Спрайт
-  csc_page_curriculum_glance_professional_learning: Самостійні модулі
+  csc_page_curriculum_glance_tools: Спрайт Лабораторія
+  csc_page_curriculum_glance_professional_learning: Модулі для самостійного навчання
   csc_page_curriculum_glance_professional_languages: Англійською
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: Я дуже ціную, наскільки ретельними та добре продуманими є уроки.
-    Я не знайомий з інформатикою, але з уроками, які ви надаєте, я впевнений у тому,
-    що допомагаю своїм учням зрозуміти поняття та прив'язати їх до нашої навчальної
-    програми.
-  csc_page_find_a_module_desc: Наші поточні пропозиції CS Connections призначені для
-    аудиторій від 3 до 5 класів і розраховані на 1 тиждень 45-хвилинних уроків щодня.
-  csc_page_faq_question_01: Чи відповідає CS Connections стандартам?
-  csc_page_faq_answer_01: Так! CS Connections зіставлено на карту з Загальними основними
-    державними стандартами (CCSS) для ELA та математики, науковими стандартами наступного
-    покоління (NGSS) та Стандартами асоціації вчителів комп'ютерних наук (CSTA).
-  csc_page_faq_question_02: Скільки коштує навчання CS Connections?
+  csc_page_quote: Мені дуже подобається, наскільки ретельно продуманими є уроки. Інформатика
+    нова для мене, але з уроками, які ви надаєте, я впевнено допомагаю своїм учням
+    зрозуміти будь-які поняття та прив'язати їх до нашої навчальної програми.
+  csc_page_find_a_module_desc: Наші поточні пропозиції «Зв'язків в інформатикою» призначені
+    для 3-5 класів і розраховані на 1 тиждень 45-хвилинних уроків щодня.
+  csc_page_faq_question_01: Чи відповідають «Зв'язки в інформатикою» стандартам?
+  csc_page_faq_answer_01: Так! «Зв'язки в інформатикою» зіставлено із Загальними державними
+    стандартами (CCSS) для англійської словесності та математики, Науковими стандартами
+    наступного покоління (NGSS) та Стандартами асоціації викладачів інформатики (CSTA).
+  csc_page_faq_question_02: Скільки коштує навчання «Зв'язки в інформатикою»?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: Яким/Де я можу отримати професійний розвиток для CS Connections?
-  csc_page_faq_answer_03: Ми пропонуємо професійний розвиток для CS Connections для
-    самостійного розвитку. Читаючи, переглядаючи відео, складаючи інтерактивні головоломки
-    та розмірковуючи про своє навчання, ви розвинете власне розуміння, готуючись викладати
-    будь-який з модулів CS Connections у вашому класі. [Почніть тут] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Незабаром відбудеться професійне навчання для
-    CS Connections!
-  csc_page_faq_question_04: Який рекомендований час для навчання CS Connections?
-  csc_page_faq_answer_04: Кожен модуль CS Connections розрахований на тиждень.
-  csc_page_faq_question_05: Які матеріали мені потрібні для CS Connections?
-  csc_page_faq_answer_05: В ідеалі кожен учень матиме власний комп'ютер, а вчителі
-    матимуть проектор для відображення слайд-шоу, яке відповідає кожному уроку.
-  csf_page_top_desc: Безкоштовна річна навчальна програма, яка знайомить студентів
-    з основоположними концепціями інформатики та кидає їм виклик дослідити, як обчислювальна
-    техніка та технології можуть вплинути на світ.
-  csf_page_intro_heading: Безкоштовні та веселі початкові курси для кожного класу
-  csf_page_intro_list_01: Шість курсів, по одному для кожного початкового класу
-  csf_page_intro_list_02: Справедливі вступні курси CS
-  csf_page_intro_list_03: Використовуйте один і той же курс для всіх учнів одного
+  csc_page_faq_question_03: Як/де я можу отримати професійний розвиток для «Зв'язків
+    в інформатикою»?
+  csc_page_faq_answer_03: Ми пропонуємо професійний розвиток для «Зв'язків в інформатикою»
+    для самостійного вивчення. Читаючи, переглядаючи відео, розв'язуючи інтерактивні
+    головоломки й оцінюючи своє навчання, ви розвинете власне розуміння та підготутесь
+    викладати будь-який з модулів «Зв'язків в інформатикою» у вашому класі. [Почніть
+    тут](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Початок професійного навчання «Зв'язків в інформатикою»
+    вже скоро!
+  csc_page_faq_question_04: Який рекомендований час для навчання «Зв'язків в інформатикою»?
+  csc_page_faq_answer_04: Кожен модуль «Зв'язків в інформатикою» розрахований на тиждень.
+  csc_page_faq_question_05: Які матеріали мені потрібні для «Зв'язків в інформатикою»?
+  csc_page_faq_answer_05: В ідеалі кожен учень мусить мати власний комп'ютер, а вчитель
+    - проектор для показу слайд-шоу на кожному уроці.
+  csf_page_top_desc: Безкоштовна річна навчальна програма, яка знайомить учнів з основними
+    концепціями інформатики та пропонує дослідити, як обчислювальна техніка й технології
+    можуть вплинути на світ.
+  csf_page_intro_heading: Безкоштовні й веселі початкові курси для кожного класу
+  csf_page_intro_list_01: Шість курсів, по одному для кожного класу початкової школи
+  csf_page_intro_list_02: Рівні вступні курси з інформатики
+  csf_page_intro_list_03: Використовуйте один і той самий курс для всіх учнів одного
     класу, незалежно від їхнього досвіду
-  csf_page_intro_list_04: Усі курси створюють відповідні точки входу для студентів
-  csf_page_quote: Я викладаю курс з понеділка після семінару. Ми з учнями ЛЮБИМО це
-    (як і їхні вчителі в класі!!!)
-  csf_page_curriculum_glance_topics: Програмування, Інтернет, Ігри та анімація, Мистецтво
-    і дизайн, Дизайн додатків
+  csf_page_intro_list_04: Усі курси створюють відповідні точки входу для учнів
+  csf_page_quote: Я викладаю курс з понеділка після семінару. Ми з учнями ОБОЖНЮЄМО
+    його (як і їхні вчителі в класі!!!)
+  csf_page_curriculum_glance_topics: Програмування, інтернет, ігри та анімація, мистецтво
+    і дизайн, проєктування застосунків
   csf_page_curriculum_glance_devices: Ноутбук, Chromebook, планшет
-  csf_page_curriculum_glance_tools: Лабораторія спрайт, Play Lab
+  csf_page_curriculum_glance_tools: Спрайт-Лабораторія, Лабораторія ігор
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: Арабська, Індонезійська, Каталанська, Китайська
-    спрощена, Китайська традиційна, Чеська, Французька, Німецька, Хінді, Італійська,
-    Японська, Корейська, Каннада, Малайська, Маратхі, Монгольська, Польська, Португальська,
-    Румунська, Російська, Словацька, Тагальська, Тайська, Турецька, Українська, Іспанська,
-    Урду, Іспанська, Узбецька, В'єтнамська
+  csf_page_curriculum_glance_languages: Арабська, індонезійська, каталонська, китайська
+    спрощена, китайська традиційна, чеська, французька, німецька, хінді, італійська,
+    японська, корейська, каннада, малайська, маратхі, монгольська, польська, португальська
+    (бразильська), румунська, російська, словацька, тагальська, тамільська , тайська,
+    турецька, українська, іспанська латамська, урду, іспанська (Іспанія), узбецька,
+    в'єтнамська
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: Вибір правильного курсу CS Fundamentals для вашого
-    класу
+  csf_page_pick_a_course_heading: Вибір правильного курсу «Основ інформатики» для
+    вашого класу
   csf_page_pick_a_course_desc: Завдяки різноманітному набору опцій, пропонованих для
-    CS Fundamentals, існує курс для всіх різних потреб.
-  csf_page_pick_a_course_heading_02: Як ваші учні будуть взаємодіяти зі змістом?
-  csf_page_courses_heading: Курси, спеціально розроблені для вашого початкового класу
-  csf_page_courses_desc: Знайдіть курс для оцінки, яку ви викладаєте. Кожен курс триває
-    приблизно місяць.
-  csf_page_courses_self_paced_heading: Самостійні початкові навчальні програми
-  csf_page_courses_self_paced_desc: Вчителі відіграють вирішальну роль у навчанні
-    студентів, викладаючи нашу відключену діяльність та ведучи дискусії в цілих класах,
-    однак ми визнаємо, що основи CS не завжди викладаються в традиційних умовах класу.
-    Ми пропонуємо два самостійних експрес-курси поряд з курсами A-F. Ці експрес-курси
-    призначені для ситуацій, коли вчителі дозволяють кожному учню працювати в своєму
-    власному темпі самостійно.
-  csf_page_faq_question_01: Чи відповідає CS Fundamentals стандартам?
-  csf_page_faq_answer_01_01: 'CS Fundamentals було написано з використанням як орієнтирів
-    K-12 Framework for Computer Science, так і стандартів CSTA. В даний час кожен
-    урок з CSS Fundamentals містить відображення з відповідними стандартами CSTA.
-    Короткий зміст усіх відображень CSTA для кожного курсу можна знайти за адресою:'
-  csf_page_faq_answer_01_list_01: "[Стандарти курсу А] (%{course_a_url})"
-  csf_page_faq_answer_01_list_02: "[Стандарти курсу B] (%{course_b_url})"
-  csf_page_faq_answer_01_list_03: "[Стандарти курсу C] (%{course_c_url})"
-  csf_page_faq_answer_01_list_04: "[Стандарти курсу D] (%{course_d_url})"
-  csf_page_faq_answer_01_list_05: "[Стандарти курсу E] (%{course_e_url})"
-  csf_page_faq_answer_01_list_06: "[Стандарти курсу F] (%{course_f_url})"
-  csf_page_faq_answer_01_02: Версію стандартів Google Sheets можна знайти за адресою
-    [Стандарти CSF] (%{csf_standards_url}).
-  csf_page_faq_question_02: Як я можу принести CS Fundamentals до всієї моєї школи?
-  csf_page_faq_answer_02: Провідна навчальна програма K-12 CS у Сполучених Штатах,
-    наша початкова програма виявилася ефективною у великих міських шкільних округах,
-    таких як Даллас, а також у невеликих сільських округах Айови. Немає необхідності
-    наймати фахівців для навчання CS. Наша програма унікально розроблена для підтримки
-    вчителів, які є новими в CS, пропонуючи гнучкість для розвитку уроків відповідно
-    до потреб учнів. [Поділіться цією брошурою] (%{brochure_url}) з адміністраторами
-    школи та округу, або [запропонуйте їм заглянути на нашу сторінку адміністраторів]
-    (%{admins_url}) спеціально розроблений для відповіді на найпоширеніші запитання
-    адміністраторів.
-  csf_page_faq_question_03: Скільки коштує викладання основ CS?
-  csf_page_faq_question_04: Яким/Де я можу отримати професійний розвиток для CS Fundamentals?
-  csf_page_faq_answer_04_01: Новичок у викладанні інформатики? Не хвилюйтеся! Більшість
-    наших викладачів ніколи раніше не викладали інформатики. Приєднуйтесь до місцевих
-    вчителів для надихаючої та практичної підтримки для впровадження інформатики у
-    вашому класі. Наші регіональні партнери пропонують високоякісні одноденні семінари
-    Code.org для окремих вчителів або для загальношкільної PD. [Запишіться на семінар
-    з підвищення кваліфікації поруч з вами] (%{sign_up_url})!
+    «Основ інформатики», існують курси для кожної потреби.
+  csf_page_pick_a_course_heading_02: Як ваші учні будуть взаємодіяти з вмістом?
+  csf_page_courses_heading: Курси, спеціально розроблені для вашого класу початкової
+    школи
+  csf_page_courses_desc: Знайдіть курс для класу, в якому ви викладаєте. Кожен курс
+    триває приблизно місяць.
+  csf_page_courses_self_paced_heading: Навчальні програми для початкової школи для
+    самостійного навчання
+  csf_page_courses_self_paced_desc: Викладачі відіграють вирішальну роль у навчанні,
+    адже саме вони проводять заняття без комп'ютера й дискусії з цілими класами, однак
+    ми визнаємо, що «Основ інформатики» не завжди викладаються в традиційних умовах
+    класної кімнати. Ми пропонуємо два самостійні експрес-курси разом з курсами A-F.
+    Ці експрес-курси призначені для ситуацій, коли вчителі дозволяють кожному учню
+    самостійно працювати у власному темпі.
+  csf_page_faq_question_01: Чи відповідають «Основи інформатики» стандартам?
+  csf_page_faq_answer_01_01: "«Основи інформатики» було написано з використанням як
+    основ комп'ютерних наук для 12-річної школи, так і стандартів CSTA. Наразі кожний
+    урок «Основ інформатики» відображає відповідні стандарти CSTA. Короткий опис відображень
+    CSTA для кожного курсу можна знайти тут:"
+  csf_page_faq_answer_01_list_01: "[Стандарти курсу А](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Стандарти курсу B](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Стандарти курсу C](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Стандарти курсу D](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Стандарти курсу E](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Стандарти курсу F](%{course_f_url})"
+  csf_page_faq_answer_01_02: 'Версію стандартів у Google Sheets можна знайти тут:
+    [Стандарти CSF](%{csf_standards_url}).'
+  csf_page_faq_question_02: Як я можу ввести «Основи інформатики» у своїй школі?
+  csf_page_faq_answer_02: Як провідна навчальна програма з інформатики для 1-12 класів
+    у Сполучених Штатах, наша початкова програма виявилася ефективною у великих міських
+    шкільних округах, таких як Даллас, а також у невеликих сільських округах Айови.
+    Для викладання інформатики немає необхідності наймати нових фахівців. Наша програма
+    унікально розроблена для допомоги вчителям, які є новачками в  інформатиці, адже
+    вона пропонує гнучкість для пристосування уроків до потреб учнів. [Поділіться
+    цією брошурою](%{brochure_url}) з адміністраторами школи та округу, або [запропонуйте
+    їм переглянути нашу сторінку адміністраторів](%{admins_url}), спеціально розроблену
+    для відповіді на найпоширеніші запитання адміністраторів.
+  csf_page_faq_question_03: Скільки коштує викладання «Основ інформатики»?
+  csf_page_faq_question_04: Як/де я можу отримати професійний розвиток для «Основ
+    інформатики»?
+  csf_page_faq_answer_04_01: Ви новачок у викладанні інформатики? Не хвилюйтеся! Більшість
+    наших викладачів ніколи раніше не викладали цей предмет. Приєднуйтесь до вчителів
+    поряд з вами та надихайте одне одного, отримуючи допомогу в колі однодумців. Наші
+    регіональні партнери пропонують високоякісні одноденні семінари Code.org для окремих
+    вчителів або для загальношкільного професійного розвитку. [Запишіться на семінар
+    з професійного розвитку поруч з вами](%{sign_up_url})!
   csf_page_faq_answer_04_02: 'Приєднуйтесь до понад 100 000 викладачів, які взяли
-    участь у наших семінарах. Більшість учасників нашого семінару кажуть: «Це найкращий
-    професійний розвиток, який я коли-небудь відвідував». Насправді, [90% учасників
-    рекомендували б нашу програму іншим викладачам] (%{rec_url})!'
-  csf_page_faq_question_05: Який рекомендований час для викладання основ CS?
+    участь у наших семінарах. Більшість учасників наших семінарів кажуть: «Це найкращий
+    розвиток кваліфікації, який мені зустрічався». І дійсно, [90 % учасників рекомендують
+    нашу програму іншим викладачам](%{rec_url})!'
+  csf_page_faq_question_05: Який рекомендований час для навчання «Основ інформатики»?
   csf_page_faq_answer_05: Кожен курс CSF включає 13-17 уроків, розрахованих на 45-хвилинні
     періоди. Ми рекомендуємо всім учням переходити від уроку до уроку в темпі, встановленому
-    викладачем. Існує багато рівнів проектів під керівництвом вчителів, розроблених
-    для того, щоб їх можна було випробувати в унісон, тоді як уроки розвитку навичок
-    можуть бути завершені учнями у власному темпі.
-  csf_page_faq_question_06: Які матеріали мені потрібні для CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+    викладачем. Існує багато рівнів проєктів під керівництвом вчителів, розроблених
+    для того, щоб їх можна було проводити одночасно, тоді як уроки з розвитку навичок
+    учні можуть проходити у власному темпі.
+  csf_page_faq_question_06: Які матеріали мені потрібні для «Основ інформатики»?
+  csf_page_faq_answer_06: На багатьох уроках знадобляться роздаткові матеріали, які
+    допомагають учням виконувати завдання. Ці ресурси можна роздрукувати або роздати
+    в цифровому вигляді. Деякі уроки вимагають типового класного приладдя й посібників.
+    [Відвідайте навчальну програму CSF, аби дізнатися більше](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1648,6 +1791,7 @@ uk:
   not_found_desc: Запитану сторінку не знайдено
   not_found_instructions: Перевірте веб-адресу та повторно надішліть або виберіть
     посилання із нижченаведеного списку.
+  company_code_dot_org: Коде.org
   company_4-H: Молодіжний розвиток 4-H
   company_asa: Альянс позашкільних закладів
   company_asos: АСОС
@@ -1700,6 +1844,7 @@ uk:
   company_evsd: Шкільний округ Східної Веллі
   company_eastonvilleschooldistrict: Шкільний округ Ітонвілл
   company_enumclawschooldistrict: Шкільний округ Енукло
+  company_ets: НАБОРИ
   company_everettsd: Державні школи Еверетта
   company_fsusd: Об'єднаний шкільний округ Ферфілд-Суйсун
   company_fayettecountypublicschools: Державні школи округу Файет
@@ -1721,6 +1866,7 @@ uk:
   company_houstonisd: Незалежний шкільний округ Х'юстона
   company_hcpss: Державні школи округу Говард
   company_idla: Академія цифрового навчання Айдахо
+  company_iste: САЙТ
   company_janesvilleschooldistrict: Шкільний округ Джейнсвілл
   company_johnstoncountyschools: Школи округу Джонстон
   company_lps: Державна школа Лінкольна
@@ -11717,8 +11863,9 @@ uk:
   tutorial_ai4alldance_string_platforms: Всі сучасні браузери
   tutorial_ai4allneural_string_platforms: Всі сучасні браузери
   tutorial_spheroinout_string_platforms: Безмашинна
-  tutorial_edisonblueprint_string_platforms: Всі сучасні браузери
-  tutorial_edisonmaze_string_platforms: Всі сучасні браузери
+  tutorial_edisonblueprint_string_platforms: Всі сучасні браузери, планшет Android,
+    iPad
+  tutorial_edisonmaze_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_milnefunctions_string_platforms: Усі сучасні браузери
   tutorial_sasmap_string_platforms: Всі сучасні браузери, iPad, програма для читання
     з екрану
@@ -12910,90 +13057,93 @@ uk:
     Code.org і розмахують райдужними прапорами, гуляючи поруч з різнокольоровим клопом
     Volkswagen.
   accessibility_hero_heading: Доступність на Code.org
-  accessibility_hero_desc: Ми прагнемо усунути бар'єри, які перешкоджають включенню
-    та повній участі студентів та викладачів з обмеженими можливостями, забезпечуючи,
-    щоб КОЖЕН студент мав доступ до інформатики.
-  accessibility_efforts_title: Наші зусилля на 2023 рік
-  accessibility_efforts_desc: 'Щоб досягти нашої мети — повністю доступної платформи,
-    ми впроваджуємо комплексний план дій, який включає:'
-  accessibility_efforts_card_title_1: Тренінг з внутрішньої доступності
-  accessibility_efforts_card_desc_1: Наші команди з продуктів та інженерів завершать
-    комплексне навчання доступності до грудня 2023 року.
+  accessibility_hero_desc: Ми прагнемо усунути бар'єри, які перешкоджають інклюзії
+    та повній глибокій участі учнів і викладачів з обмеженими можливостями, аби КОЖЕН
+    учень мав доступ до вивчення інформатики.
+  accessibility_efforts_title: Наші цілі на 2023 рік
+  accessibility_efforts_desc: 'Щоб досягти нашої мети — абсолютно доступної платформи,
+    — ми впроваджуємо комплексний план дій, який включає наступне:'
+  accessibility_efforts_card_title_1: Внутрішній тренінг з доступності
+  accessibility_efforts_card_desc_1: Наші робочі та інженерні команди пройдуть комплексне
+    навчання у сфері доступності до грудня 2023 року.
   accessibility_efforts_card_title_2: Аналіз VPAT
-  accessibility_efforts_card_desc_2: Заповнення [Шаблон добровільної доступності продукту]
-    (%{voluntary_url}) для встановлення базового рівня та щорічного вимірювання прогресу.
-    Результати доступні на цій сторінці до вересня 2023 року.
-  accessibility_efforts_card_title_3: Інструменти, що підтримують доступний дизайн
+  accessibility_efforts_card_desc_2: Проходження [VPAT, або Добровільного тестування
+    продукції щодо можливості використання особами з обмеженими можливостями](%{voluntary_url})
+    для встановлення базового рівня та щорічного вимірювання прогресу. Результати
+    доступні на цій сторінці до вересня 2023 року.
+  accessibility_efforts_card_title_3: Інструменти, що підтримують проєктування з урахуванням
+    доступності
   accessibility_efforts_card_desc_3: 'Члени команди матимуть доступ до інструментів,
-    які гарантують, що всі нові функції розроблені та побудовані з урахуванням доступності. '
+    які гарантують, що всі нові функції розроблено й побудовано з урахуванням доступності. '
   accessibility_efforts_card_title_4: Доступна навчальна програма
   accessibility_efforts_card_desc_4: Ми досягнемо [відповідності WCAG Level AA] (%{wcag_url})
-    для перших кількох одиниць принципів інформатики та відкриттів інформатики до
-    грудня 2023 року.
+    для перших кількох блоків Принципів інформатики й Відкриттів в царині інформатики
+    до грудня 2023 року.
   accessibility_explore_title: Ознайомтеся з ресурсами доступності Code.org
-  accessibility_explore_text: Наша сторінка ресурсів для доступності містить вичерпну
-    документацію та вказівки щодо наших функцій та інструментів, включаючи доступні
-    уроки Години коду, захоплюючі читачі, навігацію з клавіатурою та параметри налаштування.
-  accessibility_explore_button: Перегляд сторінки ресурсів для спеціальних можливостей
-  accessibility_help_us_title: Допоможіть нам покращити
-  accessibility_help_us_text: На Code.org ми спритні та чуйні до зворотного зв'язку.
-    Якщо у вас є рекомендації, які допоможуть нам покращити доступність наших інструментів
-    та ресурсів, будь ласка, зв'яжіться з нами. Дякуємо, що допомогли нам зробити
-    інформатику доступною для всіх студентів!
-  accessibility_help_us_button: Розкажіть, як ми можемо покращити
-  accessibility_commit_title: Прихильність Code.org до доступності
-  accessibility_commit_text_1: Code.org вважає, що інформатика є основою для всіх
-    студентів, і ми прагнемо забезпечити рівність, доступ та можливості на нашій платформі
-    та в нашій навчальній програмі.
-  accessibility_commit_text_2: Ми застосовуємо цілісний підхід для підтримки потреб
-    у навчанні всіх студентів і працюємо над усуненням прогалин у доступі до освіти
-    з інформатики для студентів з обмеженими можливостями.
-  accessibility_commit_text_3: Ми починаємо з малого, але будемо вимірювати наш прогрес
-    і постійно повторюватися, поки не зможемо вирішити навіть найскладніші проблеми
-    доступності.
-  accessibility_commit_text_4: На Code.org ми прагнемо постійно покращувати доступність
-    наших інструментів, і ми раді зробити цей важливий крок до більшої справедливості,
-    доступу та можливостей для всіх студентів та викладачів.
-  accessibility_partner_title: Наші партнери та рекомендації
-  accessibility_partner_desc: Ми рекомендуємо наступні ресурси для студентів та викладачів,
-    які шукають більш доступний вміст інформатики.
-  accessibility_card_title_1: Доступ CSS для всіх
-  accessibility_card_text_1: Ресурси для вчителів для забезпечення доступної обчислювальної
-    техніки до середніх шкіл та для старшокласників з обмеженими можливостями для
-    спілкування з наставниками в технологічному просторі.
-  accessibility_card_title_2: Блоки 4 Всі
-  accessibility_card_text_2: Блочне середовище програмування для iPad, яке викладає
-    основні концепції програмування за допомогою робота Dash. Доступно за допомогою
-    VoiceOver, керування комутатором та голосовим управлінням.
-  accessibility_card_title_3: Кодовий джемпер
-  accessibility_card_text_3: Засоб/ресурс фізичного кодування для студентів з вадами
-    зору.
-  accessibility_card_title_4: CSS для всіх
-  accessibility_card_text_4: Організація, яка координує проекти та програми з різними
+  accessibility_explore_text: Наша сторінка ресурсів забезпечення доступності містить
+    вичерпну документацію та вказівки щодо відповідних функцій та інструментів, зокрема
+    доступні уроки Години коду, захоплююче читання, навігацію через клавіатуру й параметри
+    налаштування.
+  accessibility_explore_button: Перегляд сторінки з ресурсами забезпечення доступності
+  accessibility_help_us_title: Для нас важлива ваша думка
+  accessibility_help_us_text: Колектив Code.org дуже гнучкий і завжди радий відповісти
+    на ваші повідомлення. Якщо у вас є рекомендації, які допоможуть нам покращити
+    доступність наших інструментів та ресурсів, будь ласка, зв'яжіться з нами. Дякуємо
+    за те, що допомагаєте нам робити інформатику доступною для всіх учнів!
+  accessibility_help_us_button: Поділіться своєю думкою щодо нашого покращення
+  accessibility_commit_title: Code.org прагне до розширення доступності
+  accessibility_commit_text_1: Code.org вважає, що інформатика є основою знань для
+    всіх учнів, тому ми прагнемо забезпечити рівність, доступність і широкі можливості
+    на нашій платформі й у навчальній програмі.
+  accessibility_commit_text_2: Для забезпечення потреб у навчанні всіх учнів ми застосовуємо
+    цілісний підхід і працюємо над усуненням прогалин у доступі до вивчення інформатики
+    для учнів з обмеженими можливостями.
+  accessibility_commit_text_3: Ми починаємо з малого, але будемо постійно вимірювати
+    наш прогрес і вдосконалюватися, поки не зможемо вирішити навіть найскладніші проблеми
+    стосовно доступності.
+  accessibility_commit_text_4: Code.org прагне постійно розширяти доступність своїх
+    інструментів, і ми щасливі зробити цей важливий крок в напрямку досягнення рівного
+    доступу й можливостей для всіх учнів і викладачів.
+  accessibility_partner_title: Наші партнери й рекомендації
+  accessibility_partner_desc: Для учнів і викладачів, які шукають більш доступний
+    контент у сфері інформатики, ми рекомендуємо наступні ресурси.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Ресурси для викладачів з метою забезпечення доступності
+    комп'ютерної техніки для учнів середньої і старшої школи з обмеженими можливостями
+    для спілкування з наставниками в технологічному просторі.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: Блочне середовище програмування для iPad, де викладаються
+    основні концепції програмування за допомогою робота Dash. Доступне завдяки технологіям
+    VoiceOver, керування перемиканням і голосового управління.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: Ресурс/засіб фізичного кодування для учнів з вадами зору.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: Організація, яка координує проєкти й програми з різними
     організаціями по всій території Сполучених Штатів.
-  accessibility_card_title_5: Код глухих дітей
-  accessibility_card_text_5: Сприяє навчанню в галузі інформатики та технологій, щоб
-    розширити можливості студентів, які є глухими або слабочуючими.
-  accessibility_card_title_6: Кодувати може кожен
+  accessibility_card_title_5: Кодування для дітей з вадами слуху
+  accessibility_card_text_5: Допомагає навчанню в галузі інформатики й технологій
+    з метою розширення можливостей для учнів з повною глухотою або вадами слуху.
+  accessibility_card_title_6: Кодування для кожного
   accessibility_card_text_6: Навчальна програма, розроблена Apple для Swift Playgrounds,
-    яка надає VoiceOver (модифікований TTS) та адаптовану навчальну програму для студентів
-    з потребами доступності.
+    яка надає технологію VoiceOver (модифікований TTS) та адаптовану навчальну програму
+    для учнів з особливими потребами щодо доступності.
   accessibility_card_title_7: Академія Хана
-  accessibility_card_text_7: Постачальник навчальних програм з різними придатками,
-    включаючи підписи, стенограми та можливість зменшити рух анімації та приховувати
-    візуально залежний вміст. Вміщує деякі навчальні програми Code.org, а також додаткові
-    навчальні програми з обчислень.
-  accessibility_card_title_8: Ланцюгові схеми
-  accessibility_card_text_8: Навчальний продукт, який навчає електроніці з електронними
-    компонентами без пайки. Може включати пакет доступу для студентів з вадами зору.
+  accessibility_card_text_7: Постачальник навчальних програм з різними допоміжними
+    додатками, зокрема підписами й субтитрами, транскрипцією й можливістю зменшувати
+    об'єм анімації та приховувати візуальний контент. Містить окремі навчальні програми
+    Code.org, а також додаткові навчальні програми з обчислювальних операцій.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: Навчальний продукт, який навчає основам електроніки через
+    використання швидкозбірних електронних компонентів без пайки. Може включати пакет
+    доступу для учнів з вадами зору.
   accessibility_card_title_9: Сгеро
   accessibility_card_text_9: Інтерактивний роботизований м'яч для кодування та навчальний
-    набір STEM для студентів з інтелектуальними вадами. Потрібно поєднувати з відповідним
-    додатком.
-  accessibility_card_title_10: 'Кворум '
+    набір STEM для учнів з інтелектуальними вадами. Потрібно поєднувати з відповідним
+    застосунком.
+  accessibility_card_title_10: 'Quorum '
   accessibility_card_text_10: Адаптація навчальної програми Code.org AP Computer Science
-    Principls з використанням кворуму, мови, заснованої на фактах, спочатку розробленої
-    для забезпечення доступності для сліпих або студентів з вадами зору.
+    Principles з використанням Quorum, заснованої на доказах мови, спочатку розробленої
+    для забезпечення доступності для учнів зі сліпотою або з вадами зору.
   language_code:
     ar: Арабська
     az: Азербайджанська

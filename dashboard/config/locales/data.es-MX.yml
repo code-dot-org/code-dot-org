@@ -1040,6 +1040,7 @@ es-MX:
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
         function: Funciones
+        generative-ai-cobranded: 'Cómo funciona la IA: IA generativa'
         gumball_events: Hora del Código de Gumball - Eventos
         gumball_intro: Hora del Código de Gumball - introducción
         gumball_repeat: Hora del Código de Gumball - instrucciones Repetir
@@ -1084,6 +1085,7 @@ es-MX:
         infinity_playlab_intro: Laboratorio de juegos - Introducción
         infinity_playlab_repeat_forever: Jugar Lab - repetir para siempre
         lesson_planning: Planificación de lecciones
+        llms-cobranded: 'Cómo funciona la IA: chatbots y modelos de lenguaje grande'
         loop_for: Bloque `contador`
         loop_times: Bloque repetir veces
         loop_until: Bloque Repetir Hasta
