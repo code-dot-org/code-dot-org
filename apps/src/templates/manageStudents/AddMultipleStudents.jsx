@@ -45,10 +45,10 @@ class AddMultipleStudents extends Component {
       if (!!DCDO.get('family-name-features', false)) {
         const parts = line.split(',');
         const name = parts[0].trim();
-        const familyName = parts.length > 1 ? parts[1].trim() : '';
+        const familyName = parts.length > 1 ? parts[1].trim() : null;
         return {name, familyName};
       } else {
-        return {name: line, familyName: ''};
+        return {name: line, familyName: null};
       }
     });
     this.props.addMultipleStudents(studentDataArray);
@@ -83,7 +83,11 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleInstructions()}</div>
+          <div>
+            {!!DCDO.get('family-name-features', false)
+              ? i18n.addStudentsMultipleWithFamilyNameInstructions()
+              : i18n.addStudentsMultipleInstructions()}
+          </div>
           <textarea
             rows="15"
             cols="70"
