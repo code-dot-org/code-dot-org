@@ -346,9 +346,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return '';
   };
 
-  // CDO Blockly does not have a concept of a procedure workspace,
+  // CDO Blockly does not have a concept of a hidden definition workspace,
   // so we return undefined here.
-  blocklyWrapper.getProcedureWorkspace = () => {
+  blocklyWrapper.getHiddenDefinitionWorkspace = () => {
     return undefined;
   };
 
