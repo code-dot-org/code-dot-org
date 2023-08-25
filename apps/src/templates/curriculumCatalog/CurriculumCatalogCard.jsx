@@ -312,6 +312,8 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
           isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
           availableResources={availableResources}
         />
       )}

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-21 21:50:42 UTC",
+    "serialized_at": "2023-08-24 16:35:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1772,7 +1772,7 @@
       "key": "87e9dcc7-068e-4a5c-aac8-a1cdfb73f243",
       "position": 2,
       "properties": {
-        "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 2 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
+        "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 1 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
         "duration": "10",
         "name": "Odometer Activity",
         "remarks": true,
