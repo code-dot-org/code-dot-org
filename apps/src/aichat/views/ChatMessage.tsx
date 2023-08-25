@@ -60,11 +60,11 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
     );
   } else if (status === Status.UNKNOWN) {
     return (
-      <img
-        src="/blockly/media/aichat/typing-animation.gif"
-        alt={'Waiting for response'}
-        className={moduleStyles.waitingForResponse}
-      />
+      <div
+        className={classNames(moduleStyles.message, moduleStyles.userMessage)}
+      >
+        {chatMessageText}
+      </div>
     );
   } else {
     return null;

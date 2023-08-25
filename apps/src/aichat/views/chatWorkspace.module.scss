@@ -29,3 +29,11 @@ $default-spacing: 2px;
   height: $message-editor-height;
   box-sizing: border-box;
 }
+
+.hideWaitingForResponse {
+  display: none;
+}
+
+.waitingForResponse {
+  width: 50px;
+}
