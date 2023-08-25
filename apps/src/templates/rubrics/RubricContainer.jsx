@@ -36,6 +36,7 @@ export default function RubricContainer({
   teacherHasEnabledAi,
   reportingData,
 }) {
+  // TODO: [AITT-113] Also check if viewing the right level to give feedback
   const canProvideFeedback = !!studentLevelInfo;
   const {lesson} = rubric;
   return (
