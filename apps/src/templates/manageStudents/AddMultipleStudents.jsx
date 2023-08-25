@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {addMultipleAddRows} from './manageStudentsRedux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -41,10 +42,14 @@ class AddMultipleStudents extends Component {
   add = () => {
     const value = this.refs.studentsTextBox.value;
     const studentDataArray = value.split('\n').map(line => {
-      const parts = line.split(',');
-      const name = parts[0].trim();
-      const familyName = parts.length > 1 ? parts[1].trim() : '';
-      return {name, familyName};
+      if (!!DCDO.get('family-name-features', false)) {
+        const parts = line.split(',');
+        const name = parts[0].trim();
+        const familyName = parts.length > 1 ? parts[1].trim() : '';
+        return {name, familyName};
+      } else {
+        return {name: line, familyName: ''};
+      }
     });
     this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
