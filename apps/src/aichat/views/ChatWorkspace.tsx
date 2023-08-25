@@ -19,6 +19,25 @@ const ChatWorkspace: React.FunctionComponent = () => {
     tapFeet: false,
   });
 
+  const [startingTick, setStartingTick] = useState(new Date().getTime());
+  const [currentTick, setCurrentTick] = useState(0);
+
+  React.useEffect(() => {
+    console.log(`initializing interval`);
+    const interval = setInterval(() => {
+      updateTime();
+    }, 1000 / 60);
+
+    return () => {
+      console.log(`clearing interval`);
+      clearInterval(interval);
+    };
+  }, []); // has no dependency - this will be called on-component-mount
+
+  const updateTime = () => {
+    setCurrentTick(new Date().getTime());
+  };
+
   const onSubmit = async (message: string) => {
     const lastMessageId =
       storedMessages.length === 0
@@ -59,6 +78,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
+  const tick = ((currentTick - startingTick) / 500) % 22;
+
   return (
     <ChatWorkspaceContext.Provider value={{onSubmit: onSubmit}}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
@@ -67,8 +88,9 @@ const ChatWorkspace: React.FunctionComponent = () => {
           headerText={aichatI18n.aichatWorkspaceHeader()}
         >
           <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-            <BehaviorBot danceState={danceState} />
+            <BehaviorBot currentTick={tick} danceState={danceState} />
           </div>
+          <div>{tick}</div>
           <div
             id="chat-workspace-conversation"
             className={moduleStyles.conversationArea}

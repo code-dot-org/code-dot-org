@@ -1,68 +1,56 @@
 import React, {useState} from 'react';
 import Bot, {BotState} from './Bot';
 
+function pairwise(arr: [], func: Function) {
+  for (var i = 0; i < arr.length - 1; i++) {
+    func(arr[i], arr[i + 1]);
+  }
+}
+
 interface MovingBotProps {
+  currentTick: number;
   moves: any;
 }
 
-const MovingBot: React.FunctionComponent<MovingBotProps> = ({moves}) => {
-  const [botState, setBotState] = useState({
-    head: [100, 0],
-    hand0: [25, 130],
-    hand1: [250, 130],
-    foot0: [60, 290],
-    foot1: [210, 290],
-  });
-
-  React.useEffect(() => {
-    console.log(`initializing interval`);
-    const interval = setInterval(() => {
-      updateTime();
-    }, 1000 / 60);
-
-    return () => {
-      console.log(`clearing interval`);
-      clearInterval(interval);
-    };
-  }, []); // has no dependency - this will be called on-component-mount
-
+const MovingBot: React.FunctionComponent<MovingBotProps> = ({
+  currentTick,
+  moves,
+}) => {
   function easeInExpo(t: number, b: number, c: number, d: number) {
     return t == 0 ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
   }
 
-  const updateTime = () => {
-    const ticks = new Date().getTime() % 500;
+  let headX, headY;
 
-    let headX, headY;
+  pairwise(moves[0].steps, (move: any, nextMove: any) => {
+   /* if (move.type !== 'head') {
+      return;
+    }*/
 
-    for (const move of moves) {
-      if (move.type !== 'head') {
-        continue;
-      }
+    if (move.time <= currentTick && nextMove.time > currentTick) {
+      /*const firstStep = ticks < 250 ? move.steps[0] : move.steps[1];
+      const secondStep = ticks < 250 ? move.steps[1] : move.steps[0];*/
 
-      const firstStep = ticks < 250 ? move.steps[0] : move.steps[1];
-      const secondStep = ticks < 250 ? move.steps[1] : move.steps[0];
+      const startX = move.x;
+      const startY = move.y;
+      const endX = nextMove.x;
+      const endY = nextMove.y;
 
-      const startX = firstStep.x;
-      const startY = firstStep.y;
-      const endX = secondStep.x;
-      const endY = secondStep.y;
-
-      const progress = ticks < 250 ? ticks / 250 : (ticks - 250) / 250;
+      const progress = (currentTick - move.time) / (nextMove.time - move.time);
 
       const easedProgress = easeInExpo(progress, 0, 1, 1);
 
       headX = startX + (endX - startX) * easedProgress;
       headY = startY + (endY - startY) * easedProgress;
     }
+  });
 
-    setBotState({
-      head: [headX, headY],
-      hand0: [25, 130],
-      hand1: [250, 130],
-      foot0: [60, 290],
-      foot1: [210, 290],
-    });
+  const botState = {
+    head: [headX, headY],
+    hand0: [25, 130],
+    hand1: [250, 130],
+    foot0: [60, 290],
+    foot1: [210, 290],
   };
 
   // Convert moves into current coordinates of each piece, based on current time.
