@@ -37,8 +37,10 @@ class TestFastSnapshotRestore < Minitest::Test
   end
 
   def expect_api(*requests)
-    assert_equal(requests.map(&:first).map {|(op, params)| {operation_name: op, params: params}},
-      EC2.api_requests.map {|req| req.slice(:operation_name, :params)})
+    assert_equal(
+      requests.map(&:first).map {|(op, params)| {operation_name: op, params: params}},
+      EC2.api_requests.map {|req| req.slice(:operation_name, :params)}
+    )
   end
 
   def test_create

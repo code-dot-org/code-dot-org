@@ -54,12 +54,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index, params: {user_q: other_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal([
+    assert_equal(
       [
-        [submissions.first.id, nil, submissions.first.updated_at],
-        [submissions.second.id, 'escalated', submissions.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']})
+        [
+          [submissions.first.id, nil, submissions.first.updated_at],
+          [submissions.second.id, 'escalated', submissions.second.updated_at]
+        ]
+      ],
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
@@ -82,12 +85,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index, params: {user_q: unmigrated_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal([
+    assert_equal(
       [
-        [submissions.first.id, nil, submissions.first.updated_at],
-        [submissions.second.id, 'escalated', submissions.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']})
+        [
+          [submissions.first.id, nil, submissions.first.updated_at],
+          [submissions.second.id, 'escalated', submissions.second.updated_at]
+        ]
+      ],
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
@@ -171,20 +177,23 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal([
+    assert_equal(
       [
-        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
-        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+        [
+          [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+          [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+        ],
+        [
+          [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
+          [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
+        ],
+        [
+          [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+          [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+        ]
       ],
-      [
-        [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
-        [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
-      ],
-      [
-        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
-        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
-      ]
-    ], response['submissions'].map {|submission| submission['review_ids']})
+      response['submissions'].map {|submission| submission['review_ids']}
+    )
 
     # Verify expected pagination metadata
     assert_equal(
