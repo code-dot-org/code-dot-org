@@ -382,7 +382,7 @@ export const addMultipleAddRows = studentDataArray => {
     for (let i = 0; i < studentDataArray.length; i++) {
       const {name, familyName} = studentDataArray[i];
 
-      // Do not add rows with no name
+      // Do not add rows with no display name
       if (name === '') {
         continue;
       }
