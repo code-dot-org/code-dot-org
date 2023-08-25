@@ -5,11 +5,7 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {evidenceLevelShape} from './rubricShapes';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevels({
@@ -52,9 +48,9 @@ export default function EvidenceLevels({
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyTwoText className={style.evidenceLevelLabel}>
+            <BodyThreeText className={style.evidenceLevelLabel}>
               {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-            </BodyTwoText>
+            </BodyThreeText>
             <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
           </div>
         ))}

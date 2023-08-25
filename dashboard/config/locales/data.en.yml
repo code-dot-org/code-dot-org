@@ -805,6 +805,7 @@ en:
         code-break: Take a Code Break
         blockchain-introd: 'How Blockchain Works: Introduction'
         ai-ethis: Ethics & AI
+        how-ai-works-lessons: 'How AI Works: Lessons Overview'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

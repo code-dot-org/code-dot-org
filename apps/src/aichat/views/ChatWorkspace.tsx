@@ -24,6 +24,10 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.chatMessages
   );
 
+  const isWaitingForChatResponse = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  );
+
   const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
@@ -50,6 +54,15 @@ const ChatWorkspace: React.FunctionComponent = () => {
         {storedMessages.map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={
+            isWaitingForChatResponse
+              ? moduleStyles.waitingForResponse
+              : moduleStyles.hideWaitingForResponse
+          }
+        />
       </div>
       <div
         id="chat-workspace-editor"
