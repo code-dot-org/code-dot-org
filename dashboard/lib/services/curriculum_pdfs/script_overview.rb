@@ -37,10 +37,10 @@ module Services
         # Check S3 to see if we've already generated an overview PDF for the
         # given script
         def script_overview_pdf_exists_for?(script)
-          AWS::S3.cached_exists_in_bucket?(
-            S3_BUCKET,
-            get_script_overview_pathname(script).to_s
-          )
+          pathname = get_script_overview_pathname(script).to_s
+          Rails.cache.fetch("CurriculumPdfs/ScriptOverview/pdf_exists/#{pathname}") do
+            AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+          end
         end
 
         # Generate a PDF containing not only the Unit page itself but also

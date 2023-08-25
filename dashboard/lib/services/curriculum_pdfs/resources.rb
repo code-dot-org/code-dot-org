@@ -104,10 +104,10 @@ module Services
         # Check s3 to see if we've already generated a resource rollup PDF for
         # the given script
         def script_resources_pdf_exists_for?(script)
-          AWS::S3.cached_exists_in_bucket?(
-            S3_BUCKET,
-            get_script_resources_pathname(script).to_s
-          )
+          pathname = get_script_resources_pathname(script).to_s
+          Rails.cache.fetch("CurriculumPdfs/Resources/pdf_exists/#{pathname}") do
+            AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+          end
         end
 
         # Generates a title page for the given lesson; this is used in the
