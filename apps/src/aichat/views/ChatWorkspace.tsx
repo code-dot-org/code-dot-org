@@ -39,6 +39,18 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
 
+  const showWaitingAnimation = () => {
+    if (isWaitingForChatResponse) {
+      return (
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={moduleStyles.waitingForResponse}
+        />
+      );
+    }
+  };
+
   // When the level changes, clear the chat message history.
   useEffect(() => {
     dispatch(clearChatMessages());
@@ -54,15 +66,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         {storedMessages.map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={
-            isWaitingForChatResponse
-              ? moduleStyles.waitingForResponse
-              : moduleStyles.hideWaitingForResponse
-          }
-        />
+        {showWaitingAnimation()}
       </div>
       <div
         id="chat-workspace-editor"
