@@ -56,19 +56,19 @@ export default function RubricContainer({
               </Heading5>
               <div className={style.studentMetadata}>
                 {studentLevelInfo.timeSpent && (
-                  <BodyThreeText className={style.singleMetadata}>
+                  <BodyThreeText className={style.singleMetadatum}>
                     <FontAwesome icon="clock" />
                     <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
                   </BodyThreeText>
                 )}
-                <BodyThreeText className={style.singleMetadata}>
+                <BodyThreeText className={style.singleMetadatum}>
                   <FontAwesome icon="rocket" />
                   {i18n.numAttempts({
                     numAttempts: studentLevelInfo.attempts || 0,
                   })}
                 </BodyThreeText>
                 {studentLevelInfo.lastAttempt && (
-                  <BodyThreeText className={style.singleMetadata}>
+                  <BodyThreeText className={style.singleMetadatum}>
                     <FontAwesome icon="calendar" />
                     <span>
                       {formatLastAttempt(studentLevelInfo.lastAttempt)}
