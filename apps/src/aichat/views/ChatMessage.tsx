@@ -18,7 +18,6 @@ interface ChatMessageProps {
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
-const WAITING_FOR_CHAT_RESPONSE = aichatI18n.waitingForChatResponse();
 
 const isAssistant = (role: string) => {
   return role === Role.ASSISTANT;
@@ -61,14 +60,11 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
     );
   } else if (status === Status.UNKNOWN) {
     return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.unknownStatusMessage
-        )}
-      >
-        {WAITING_FOR_CHAT_RESPONSE}
-      </div>
+      <img
+        src="/blockly/media/aichat/typing-animation.gif"
+        alt={'Waiting for response'}
+        className={moduleStyles.waitingForResponse}
+      />
     );
   } else {
     return null;
