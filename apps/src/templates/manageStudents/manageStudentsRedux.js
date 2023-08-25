@@ -379,11 +379,21 @@ export const addStudents = studentIds => {
 export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
     let studentData = {};
-    for (let i = 0; i < studentDataArray.length; i++) {
-      const {name, familyName} = studentDataArray[i];
+    const studentData = studentDataArray
+      .filter(data => data.name)
+      .reduce((accumulator, data) => {
+        const newId = addRowIdCounter--;
 
-      // Do not add rows with no display name
-      if (name === '') {
+        return {
+          ...accumulator,
+          [newId]: {
+            ...blankNewStudentRow,
+            name: data.name,
+            familyName: data.familyName,
+            id: newId,
+          },
+        };
+      }, {});
         continue;
       }
 
