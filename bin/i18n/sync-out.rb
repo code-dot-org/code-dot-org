@@ -201,56 +201,6 @@ module I18n
       end
     end
 
-    def self.parse_file(path)
-      case File.extname(path)
-      when '.yaml', '.yml'
-        YAML.load_file(path)
-      when '.json'
-        JSON.parse(File.read(path))
-      else
-        raise "do not know how to parse file #{path.inspect}"
-      end
-    end
-
-    def self.sanitize_file_and_write(loc_path, dest_path)
-      loc_data = parse_file(loc_path)
-      sanitize_data_and_write(loc_data, dest_path)
-    end
-
-    def self.sanitize_data_and_write(data, dest_path)
-      sorted_data = sort_and_sanitize(data)
-
-      dest_data =
-        case File.extname(dest_path)
-        when '.yaml', '.yml'
-          sorted_data.to_yaml
-        when '.json'
-          JSON.pretty_generate(sorted_data)
-        else
-          raise "do not know how to serialize localization data to #{dest_path}"
-        end
-
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.write(dest_path, dest_data)
-    end
-
-    def self.sort_and_sanitize(hash)
-      hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
-        case value
-        when Hash
-          # ensure we always call sort_and_sanitize on the hash to avoid top-level empty objects
-          sorted_hash = sort_and_sanitize(value)
-          result[key] = sorted_hash unless sorted_hash.empty?
-        when Array
-          result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
-        when String
-          result[key] = value.gsub(/\\r/, "\r") unless value.empty?
-        else
-          result[key] = value unless value.nil?
-        end
-      end
-    end
-
     # Wraps hash in correct format to be loaded by our i18n backend.
     # This will most likely be JSON file data due to Crowdin only
     # setting the locale for yml files.
@@ -331,13 +281,13 @@ module I18n
         type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
         existing_data = File.exist?(type_file) ?
-                          parse_file(type_file).dig(locale, "data", type) || {} :
+                          I18nScriptUtils.parse_file(type_file).dig(locale, "data", type) || {} :
                           {}
 
         merged_data = existing_data.deep_merge(translations.sort.to_h)
         type_data = wrap_with_locale(merged_data, locale, type)
 
-        sanitize_data_and_write(type_data, type_file)
+        I18nScriptUtils.sanitize_data_and_write(type_data, type_file)
       end
     end
 
@@ -390,9 +340,9 @@ module I18n
             # JSON files in this directory need the root key to be set to the locale
             loc_data = JSON.parse(File.read(loc_file))
             loc_data = wrap_with_locale(loc_data, locale, basename)
-            sanitize_data_and_write(loc_data, destination)
+            I18nScriptUtils.sanitize_data_and_write(loc_data, destination)
           else
-            sanitize_file_and_write(loc_file, destination)
+            I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
           end
         end
 
@@ -407,63 +357,7 @@ module I18n
 
           basename = File.basename(loc_file, '.json')
           destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          sanitize_file_and_write(loc_file, destination)
-        end
-
-        ### ml-playground strings to Apps directory
-        Dir.glob("#{locale_dir}/external-sources/ml-playground/mlPlayground.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          basename = File.basename(loc_file, '.json')
-          destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          sanitize_file_and_write(loc_file, destination)
-        end
-
-        ### Merge ml-playground datasets into apps' mlPlayground JSON
-        Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
-          ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
-          dataset_id = File.basename(loc_file, '.json')
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          external_translations = parse_file(loc_file)
-          next if external_translations.empty?
-
-          # Merge new translations
-          existing_translations = File.exist?(ml_playground_path) ? parse_file(ml_playground_path) || {} : {}
-          existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
-          existing_translations['datasets'][dataset_id] = external_translations
-          sanitize_data_and_write(existing_translations, ml_playground_path)
-        end
-
-        ### Blockly Core
-        # Blockly doesn't know how to fall back to English, so here we manually and
-        # explicitly default all untranslated strings to English.
-        blockly_english = JSON.parse(File.read("i18n/locales/source/blockly-core/core.json"))
-        Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          translations = JSON.parse(File.read(loc_file))
-          # Create a hash containing all translations, with English strings in
-          # place of any missing translations. We do this as 'english merge
-          # translations' rather than 'translations merge english' to ensure that
-          # we include all the keys from English, regardless of which keys are in
-          # the translations hash.
-          translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
-            translation.empty? ? english : translation
-          end
-          translations_with_fallback = sort_and_sanitize(translations_with_fallback)
-
-          # Replaced the original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
-          # to generate js translation files right away only for the "changed files"
-          js_translations = translations_with_fallback.each_with_object('') do |(i18n_key, i18n_val), js_string|
-            js_string << "Blockly.Msg.#{i18n_key} = #{JSON.dump(i18n_val)};\n"
-          end
-          destination = CDO.dir(File.join('apps/lib/blockly', "#{js_locale}.js"))
-          FileUtils.mkdir_p(File.dirname(destination))
-          File.write(destination, js_translations)
+          I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
         end
 
         ### Pegasus markdown
@@ -496,12 +390,12 @@ module I18n
           programming_env = File.basename(loc_file, '.json')
           destination = "dashboard/config/locales/programming_environments.#{locale}.json"
           programming_env_data = File.exist?(destination) ?
-                                   parse_file(destination).dig(locale, "data", "programming_environments") || {} :
+                                   I18nScriptUtils.parse_file(destination).dig(locale, "data", "programming_environments") || {} :
                                    {}
           programming_env_data[programming_env] = loc_data[programming_env]
           # JSON files in this directory need the root key to be set to the locale
           programming_env_data = wrap_with_locale(programming_env_data, locale, "programming_environments")
-          sanitize_data_and_write(programming_env_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
         ### Standards
@@ -519,18 +413,18 @@ module I18n
           # Frameworks
           destination = "dashboard/config/locales/frameworks.#{locale}.json"
           framework_data = File.exist?(destination) ?
-                             parse_file(destination).dig(locale, "data", "frameworks") || {} :
+                             I18nScriptUtils.parse_file(destination).dig(locale, "data", "frameworks") || {} :
                              {}
           framework_data[framework] = {
             "name" => loc_data["name"]
           }
           framework_data = wrap_with_locale(framework_data, locale, "frameworks")
-          sanitize_data_and_write(framework_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
 
           # Standard Categories
           destination = "dashboard/config/locales/standard_categories.#{locale}.json"
           category_data = File.exist?(destination) ?
-                            parse_file(destination).dig(locale, "data", "standard_categories") || {} :
+                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standard_categories") || {} :
                             {}
           (loc_data["categories"] || {}).keys.each do |category|
             category_data[category] = {
@@ -538,12 +432,12 @@ module I18n
             }
           end
           category_data = wrap_with_locale(category_data, locale, "standard_categories")
-          sanitize_data_and_write(category_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(category_data, destination)
 
           # Standards
           destination = "dashboard/config/locales/standards.#{locale}.json"
           standard_data = File.exist?(destination) ?
-                            parse_file(destination).dig(locale, "data", "standards") || {} :
+                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standards") || {} :
                             {}
           (loc_data["standards"] || {}).keys.each do |standard|
             standard_data[standard] = {
@@ -551,13 +445,13 @@ module I18n
             }
           end
           standard_data = wrap_with_locale(standard_data, locale, "standards")
-          sanitize_data_and_write(standard_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
 
         ### Pegasus
         loc_file = "#{locale_dir}/pegasus/mobile.yml"
         destination = "pegasus/cache/i18n/#{locale}.yml"
-        sanitize_file_and_write(loc_file, destination)
+        I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
       end
 
       puts "Distribution finished!"
