@@ -1,5 +1,5 @@
 const mysql = require("mysql");
-const { sendCfnResponse } = require("./cfn-response");
+const { sendCfnResponse } = require("./common/cfn-response");
 
 exports.handler = async (event, context) => {
   // TODO: Mask password fields.
