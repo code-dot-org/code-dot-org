@@ -256,10 +256,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
       Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
     },
-    loadProcedureBlocksToWorkspace(source) {
-      // This is a no-op for CDO Blockly as this is only for Google Blockly.
-      // CDO handles procedure blocks differently.
-    },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
@@ -345,6 +341,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.getPointerBlockImageUrl = () => {
     return '';
   };
+
+  // No-op for CDO Blockly.
+  blocklyWrapper.setHiddenDefinitionWorkspace = _ => {};
 
   // CDO Blockly does not have a concept of a hidden definition workspace,
   // so we return undefined here.

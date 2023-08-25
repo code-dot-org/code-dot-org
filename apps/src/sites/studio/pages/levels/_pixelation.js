@@ -481,7 +481,8 @@ function initProjects() {
       teacherHasConfirmedUploadWarning: function () {
         return undefined;
       },
-      getProcedureSource: function () {
+      setInitialHiddenDefinitions: function (_) {},
+      getHiddenDefinitions: function () {
         return null;
       },
       getLevelSource: function () {
