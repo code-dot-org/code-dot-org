@@ -459,7 +459,12 @@ class ManageStudentsTable extends Component {
         selectedColumn,
       }),
     });
-    if (selectedColumn === COLUMNS.FAMILY_NAME) {
+    if (
+      !!DCDO.get('family-name-features', false) &&
+      this.props.participantType === 'student' &&
+      selectedColumn === COLUMNS.FAMILY_NAME
+    ) {
+      // Only in non-PL sections, only when DCDO flag is on.
       this.props.setSortByFamilyName(
         true,
         this.props.sectionId,

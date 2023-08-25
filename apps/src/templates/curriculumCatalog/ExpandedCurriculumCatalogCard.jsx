@@ -29,6 +29,8 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
   isInUS,
+  imageSrc,
+  imageAltText,
 }) => {
   const iconData = {
     ideal: {
@@ -83,16 +85,28 @@ const ExpandedCurriculumCatalogCard = ({
                       {description}
                     </BodyTwoText>
                   </div>
-                  <div className={style.videoContainer}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      style={{border: 'none'}}
-                      src={video}
-                      title=""
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
+                  <div className={style.mediaContainer}>
+                    {video ? (
+                      <div className={style.videoContainer}>
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          style={{border: 'none'}}
+                          src={video}
+                          title=""
+                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : (
+                      <div className={style.imageContainer}>
+                        <img
+                          src={imageSrc}
+                          alt={imageAltText}
+                          style={{height: '100%'}}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className={style.linksContainer}>
@@ -230,5 +244,7 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
   isInUS: PropTypes.bool,
+  imageSrc: PropTypes.string,
+  imageAltText: PropTypes.string,
 };
 export default ExpandedCurriculumCatalogCard;
