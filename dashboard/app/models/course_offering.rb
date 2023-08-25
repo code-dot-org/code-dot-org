@@ -482,7 +482,7 @@ class CourseOffering < ApplicationRecord
         filtered_resources&.map do |resource|
           type = resource["properties"]["type"]
           type = "Slide Deck" if type == "Slides"
-          type = "Answer Key" if type == "Exemplars"
+          type = "Answer Key" if type == "Exemplar"
           expanded_card_resources[type] ||= resource["url"]
         end
       end
