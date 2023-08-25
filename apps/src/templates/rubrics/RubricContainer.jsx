@@ -47,7 +47,7 @@ export default function RubricContainer({
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <Heading2>{studentLevelInfo.name}</Heading2>
-            <div>
+            <div className={style.levelAndStudentDetails}>
               <Heading5>
                 {i18n.lessonNumbered({
                   lessonNumber: lesson.position,

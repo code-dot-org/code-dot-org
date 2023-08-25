@@ -57,13 +57,27 @@
   align-items: flex-start;
   gap: 1.5rem;
   align-self: stretch;
+}
 
-  .singleMetadatum {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.levelAndStudentDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  h5 {
     margin-bottom: 0;
   }
+}
+
+.singleMetadatum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+p.singleMetadatum {
+  margin-bottom: 0;
 }
 
 .learningGoalContainer {
