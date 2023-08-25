@@ -28,7 +28,7 @@ const isUser = (role: string) => {
 };
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK) {
+  if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -56,14 +56,6 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         )}
       >
         {TOO_PERSONAL_MESSAGE}
-      </div>
-    );
-  } else if (status === Status.UNKNOWN) {
-    return (
-      <div
-        className={classNames(moduleStyles.message, moduleStyles.userMessage)}
-      >
-        {chatMessageText}
       </div>
     );
   } else {
