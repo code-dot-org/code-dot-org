@@ -28,6 +28,9 @@ const initialState: AichatState = {
 };
 
 // THUNKS
+
+// This thunk's callback function submits a user chat message to the chat completion endpoint,
+// waits for a chat completion response, and updates the user message state.
 export const submitChatMessage = createAsyncThunk(
   'aichat/submitChatMessage',
   async (message: string, thunkAPI) => {
