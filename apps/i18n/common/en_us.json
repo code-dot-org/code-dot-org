@@ -46,7 +46,7 @@
   "addSectionNameHint": "e.g., Intro to CS - Period 2",
   "addStudents": "Add students",
   "addStudentsMultiple": "Add multiple students",
-  "addStudentsMultipleInstructions": "Type or paste the names of your students, one per line.",
+  "addStudentsMultipleInstructions": "Type or paste the display names of your students, one per line. Optionally, you can include their family name after a comma on the same line.",
   "addStudentsManageMyOwn": "Create and manage my own list of students",
   "addStudentsSyncThirdParty": "Sync my list of students from an existing classroom section in a third party tool",
   "addStudentsToSectionInstructions": "Choose how you want to add your students:",
