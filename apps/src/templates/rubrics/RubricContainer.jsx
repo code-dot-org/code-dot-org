@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import {
+  BodyThreeText,
   Heading2,
   Heading5,
   Heading6,
@@ -55,26 +56,24 @@ export default function RubricContainer({
               </Heading5>
               <div className={style.studentMetadata}>
                 {studentLevelInfo.timeSpent && (
-                  <div className={style.singleMetadata}>
+                  <BodyThreeText className={style.singleMetadata}>
                     <FontAwesome icon="clock" />
                     <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
-                  </div>
+                  </BodyThreeText>
                 )}
-                <div className={style.singleMetadata}>
+                <BodyThreeText className={style.singleMetadata}>
                   <FontAwesome icon="rocket" />
-                  <span>
-                    {i18n.numAttempts({
-                      numAttempts: studentLevelInfo.attempts || 0,
-                    })}
-                  </span>
-                </div>
+                  {i18n.numAttempts({
+                    numAttempts: studentLevelInfo.attempts || 0,
+                  })}
+                </BodyThreeText>
                 {studentLevelInfo.lastAttempt && (
-                  <div className={style.singleMetadata}>
+                  <BodyThreeText className={style.singleMetadata}>
                     <FontAwesome icon="calendar" />
                     <span>
                       {formatLastAttempt(studentLevelInfo.lastAttempt)}
                     </span>
-                  </div>
+                  </BodyThreeText>
                 )}
               </div>
             </div>
