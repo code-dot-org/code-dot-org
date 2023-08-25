@@ -46,7 +46,7 @@ export const submitChatMessage = createAsyncThunk(
       msg => msg.status === Status.OK
     );
 
-    // Create the new user ChatCompleteMessage and add to chatMessages
+    // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
