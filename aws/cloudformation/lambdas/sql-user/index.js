@@ -6,15 +6,8 @@ exports.handler = async (event, context) => {
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
 
   const props = event.ResourceProperties;
-  const {
-    Name: name,
-    ClientHost: clientHost,
-    Password: password,
-    Databases: databases,
-    Privileges: privileges,
-  } = props;
-
-  let physicalResourceId = event.PhysicalResourceId || name;
+  
+  let physicalResourceId = event.PhysicalResourceId || props.Name;
 
   const connection = mysql.createConnection({
     host: props.DBServerHost,
