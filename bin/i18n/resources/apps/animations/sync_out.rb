@@ -2,6 +2,7 @@
 
 require 'fileutils'
 require 'json'
+require 'ruby-progressbar'
 
 require_relative '../../../../animation_assets/manifest_builder'
 require_relative '../../../i18n_script_utils'
@@ -11,36 +12,56 @@ module I18n
   module Resources
     module Apps
       module Animations
-        module SyncOut
+        class SyncOut
           def self.perform
-            manifest_builder = ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
+            new.execute
+          end
 
-            PegasusLanguages.get_crowdin_name_and_locale.each do |pegasus_lang|
+          def execute
+            pegasus_languages.each.with_index(1) do |pegasus_lang, next_lang_idx|
+              progress_bar.title = progress_bar_title(next_lang_idx)
+
+              crowdin_sprintlab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME, SPRITELAB_FILE_NAME))
+              next unless File.exist?(crowdin_sprintlab_file_path)
+
               locale = pegasus_lang[:locale_s]
 
-              crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME))
-              next unless File.directory?(crowdin_locale_dir)
-
-              # Move files for directory like `i18n/locales/Italian/animations` to `i18n/locales/it-IT/animations`
-              i18n_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME))
-              FileUtils.mkdir_p(i18n_locale_dir)
-              FileUtils.cp_r File.join(crowdin_locale_dir, '.'), i18n_locale_dir
-              FileUtils.rm_r crowdin_locale_dir
+              i18n_sprintlab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME, SPRITELAB_FILE_NAME))
+              FileUtils.mv crowdin_sprintlab_file_path, i18n_sprintlab_file_path, force: true
+              FileUtils.rm_r File.dirname(crowdin_sprintlab_file_path)
 
               next if locale == 'en-US'
 
-              Dir[File.join(i18n_locale_dir, '**/*.json')].each do |filepath|
-                # e.g., '/animations/spritelab_animation_library.json'
-                i18n_source_file_subpath = filepath[/^.*(\/#{DIR_NAME}\/.*)$/o, 1]
-                next unless I18nScriptUtils.file_changed?(locale, i18n_source_file_subpath)
-
-                puts "Distributing Apps animations #{locale} i18n file: #{filepath}"
-                js_locale = I18nScriptUtils.to_js_locale(locale)
-                translations = JSON.load_file(filepath)
-                # Use js_locale here as the animation library is used by apps
-                manifest_builder.upload_localized_manifest(js_locale, translations)
-              end
+              js_locale = I18nScriptUtils.to_js_locale(locale)
+              translations = JSON.load_file(i18n_sprintlab_file_path)
+              sprintlab_manifest_builder.upload_localized_manifest(js_locale, translations)
+            ensure
+              progress_bar.increment
             end
+          end
+
+          private
+
+          def pegasus_languages
+            @pegasus_languages ||= PegasusLanguages.get_crowdin_name_and_locale
+          end
+
+          def progress_bar_title(pegasus_lang_idx = 0)
+            title = 'Apps/animations sync-out'
+            pegasus_lang = pegasus_languages[pegasus_lang_idx]
+            pegasus_lang ? "#{title} [#{pegasus_lang[:locale_s]}]" : title
+          end
+
+          def progress_bar
+            @progress_bar ||= ProgressBar.create(
+              total: pegasus_languages.size,
+              title: progress_bar_title,
+              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
+            )
+          end
+
+          def sprintlab_manifest_builder
+            @sprintlab_manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
           end
         end
       end

@@ -11,15 +11,36 @@ module I18n
   module Resources
     module Apps
       module Animations
-        module SyncIn
-          SPRITELAB_FILE_NAME = 'spritelab_animation_library.json'.freeze
-
+        class SyncIn
           def self.perform
-            FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
+            new.execute
+          end
 
-            animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
+          def execute
+            progress_bar.start
+
+            FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
+            progress_bar.progress = 1
+
+            animation_strings = sprintlab_manifest_builder.get_animation_strings
+            progress_bar.progress = 95
 
             File.write(File.join(I18N_SOURCE_DIR_PATH, SPRITELAB_FILE_NAME), JSON.pretty_generate(animation_strings))
+
+            progress_bar.finish
+          end
+
+          private
+
+          def sprintlab_manifest_builder
+            @sprintlab_manifest_builder ||= ManifestBuilder.new({spritelab: true, quiet: true})
+          end
+
+          def progress_bar
+            @progress_bar ||= ProgressBar.create(
+              title: 'Apps/animations sync-in',
+              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
+            )
           end
         end
       end
