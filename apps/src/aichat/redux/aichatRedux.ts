@@ -19,12 +19,15 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
+  // Denotes if there is an error with the chat completion response
+  chatMessageError: boolean;
 }
 
 const initialState: AichatState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   showWarningModal: true,
+  chatMessageError: false,
 };
 
 // THUNKS
@@ -37,6 +40,8 @@ export const submitChatMessage = createAsyncThunk(
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
     const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
       ?.systemPrompt;
+    // TODO: move a check for undefined systemPrompt to AIchatView and throw an error dialog
+    // there if systemPrompt is undefined.
     if (systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
@@ -120,6 +125,7 @@ const aichatSlice = createSlice({
     });
     builder.addCase(submitChatMessage.rejected, (state, action) => {
       state.isWaitingForChatResponse = false;
+      state.chatMessageError = true;
       console.error(action.error);
     });
     builder.addCase(submitChatMessage.pending, state => {
