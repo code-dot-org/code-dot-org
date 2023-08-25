@@ -131,34 +131,34 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
-        JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
+        JSON.parse(@response.body).map {|r| r['id']})
     end
 
     test 'quick view if not admin returns applications without incomplete apps and with filter' do
       sign_in @program_manager
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
     test "quick view returns applications with regional partner filter unset" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers'}
       assert_response :success
-      assert_equal [
+      assert_equal([
         @csd_teacher_application.id,
         @csd_teacher_application_with_partner.id,
         @csd_incomplete_application_with_partner.id
       ],
-        JSON.parse(@response.body).map {|r| r['id']}
+        JSON.parse(@response.body).map {|r| r['id']})
     end
 
     test "quick view returns applications with regional partner filter set to no partner" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: 'none'}
       assert_response :success
-      assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
     # TODO: remove this test when workshop_organizer is deprecated

@@ -48,7 +48,7 @@ class LevelLoader
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
-      Level.import! new_level_names.map {|name| {name: name}}
+      Level.import!(new_level_names.map {|name| {name: name}})
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
