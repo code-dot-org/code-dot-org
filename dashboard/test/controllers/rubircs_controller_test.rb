@@ -29,6 +29,9 @@ class RubricsControllerTest < ActionController::TestCase
       }
     end
 
+    response_json = JSON.parse(response.body)
     assert assigns(:learning_goal)
+    assert_equal level_id, response_json['level_id']
+    assert_equal lesson_id, response_json['lesson_id']
   end
 end
