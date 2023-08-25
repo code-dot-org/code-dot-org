@@ -198,10 +198,9 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace(),
       name
     );
-    const mainProcedure = new ObservableProcedureModel(
+    const mainProcedure = this.createProcedureModelForWorkspace(
       Blockly.mainBlockSpace,
-      hiddenProcedure.getName(),
-      hiddenProcedure.getId()
+      hiddenProcedure
     );
 
     // Add the model to the procedure and main workspaces so we know
@@ -221,11 +220,11 @@ export default class FunctionEditor {
     // we don't need to mirror this event as we set up the procedure
     // in the other workspaces above.
     Blockly.Events.disable();
-    const editorProcedureModel = new ObservableProcedureModel(
+    const editorProcedureModel = this.createProcedureModelForWorkspace(
       this.editorWorkspace,
-      hiddenProcedure.getName(),
-      hiddenProcedure.getId()
+      hiddenProcedure
     );
+
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
 
@@ -357,46 +356,31 @@ export default class FunctionEditor {
     };
   }
 
-  unifyMainAndHiddenWorkspaceProcedures() {
-    const procedureDefinitions = Blockly.getHiddenDefinitionWorkspace()
+  // Copy all procedure models from the hidden definition workspace to the editor workspace,
+  // if they are not already present in the editor workspace.
+  // This is needed when the hidden definition workspace is initialized with at least one
+  // procedure, so that the editor workspace knows about those procedures.
+  setUpEditorWorkspaceProcedures() {
+    Blockly.Events.disable();
+    const procedureDefinitions = this.editorWorkspace
       .getProcedureMap()
       .getProcedures();
-    console.log({procedureDefinitions});
-    Blockly.mainBlockSpace
+    Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .getProcedures()
       .forEach(procedure => {
         const procedureId = procedure.getId();
-        console.log('found procedure ', procedureId, ' in mainBlockSpace');
         if (
           procedureDefinitions.filter(
             procedureModel => procedureModel.getId() === procedureId
           ).length === 0
         ) {
           const procedureModel = this.createProcedureModelForWorkspace(
-            Blockly.getHiddenDefinitionWorkspace(),
+            this.editorWorkspace,
             procedure
           );
-          console.log('adding procedure ', procedureId, ' to hidden ws');
-          Blockly.getHiddenDefinitionWorkspace()
-            .getProcedureMap()
-            .add(procedureModel);
+          this.editorWorkspace.getProcedureMap().add(procedureModel);
         }
-      });
-  }
-
-  setUpEditorWorkspaceProcedures() {
-    Blockly.Events.disable();
-    Blockly.getHiddenDefinitionWorkspace()
-      .getProcedureMap()
-      .getProcedures()
-      .forEach(procedure => {
-        const editorProcedureModel = this.createProcedureModelForWorkspace(
-          this.editorWorkspace,
-          procedure
-        );
-
-        this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
       });
     Blockly.Events.enable();
   }
