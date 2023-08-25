@@ -1242,21 +1242,14 @@ StudioApp.prototype.initReadonly = function (options) {
 /**
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
+ * @param {string | undefined} hiddenDefinitions Text representation of hidden procedure definitions (JSON)
  */
-StudioApp.prototype.loadBlocks = function (source, procedures) {
+StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
   Blockly.cdoUtils.loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     source,
-    procedures
+    hiddenDefinitions
   );
-};
-
-/**
- * Load the editor with blocks.
- * @param {string} source Text representation of procedure blocks (JSON).
- */
-StudioApp.prototype.loadProcedureBlocks = function (source) {
-  Blockly.cdoUtils.loadProcedureBlocksToWorkspace(source);
 };
 
 /**
@@ -2775,12 +2768,10 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks, config.level.procedureSource);
-    // this.loadProcedureBlocks(config.level.procedureSource);
+    this.loadBlocks(startBlocks, config.level.hiddenDefinitions);
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        console.log('reloading..., e was', e);
         Blockly.mainBlockSpace.clear();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);

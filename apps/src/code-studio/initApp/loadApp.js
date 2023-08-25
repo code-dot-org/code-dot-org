@@ -460,8 +460,8 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
-  setInitialProcedureSource(procedureSource) {
-    getAppOptions().level.procedureSource = procedureSource;
+  setInitialHiddenDefinitions(hiddenDefinitions) {
+    getAppOptions().level.hiddenDefinitions = hiddenDefinitions;
   },
   setInRestrictedShareMode(inRestrictedShareMode) {
     getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
@@ -516,16 +516,16 @@ const sourceHandler = {
     }
     return Promise.resolve(); // Return an insta-resolved promise.
   },
-  // Get the source from the procedure workspace, if any. Otherwise return null.
-  // Procedures will only exist for Google Blockly levels.
-  getProcedureSource() {
+  // Get the source from the hidden defintion workspace, if any. Otherwise return undefined.
+  // Hidden definitions will only exist for Google Blockly levels.
+  getHiddenDefinitions() {
     if (window.Blockly && Blockly.getHiddenDefinitionWorkspace()) {
       return Blockly.cdoUtils.getCode(
         Blockly.getHiddenDefinitionWorkspace(),
         true
       );
     }
-    return null;
+    return undefined;
   },
 };
 

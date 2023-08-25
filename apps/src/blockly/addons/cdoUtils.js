@@ -21,21 +21,26 @@ import experiments from '@cdo/apps/util/experiments';
  * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
  * @param {string} source - workspace serialization, either XML or JSON
- * @param {*} stateToLoad - modern workspace serialization, may not be present
+ * @param {[string]} hiddenDefinitions - hidden definitions serialization, in JSON. Only used in Google Blockly labs.
  */
 export function loadBlocksToWorkspace(workspace, source, hiddenDefintions) {
   const {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
-    parseSourceAndProcedures(source, hiddenDefintions);
+    prepareSourcesForWorkspaces(source, hiddenDefintions);
   Blockly.serialization.workspaces.load(parsedSource, workspace);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
-  loadProcedureBlocksToWorkspace(parsedHiddenDefinitions);
+  loadHiddenDefinitionBlocksToWorkspace(parsedHiddenDefinitions);
 }
 
-function loadProcedureBlocksToWorkspace(source) {
+/**
+ * Load hidden definition blocks to the hidden definition workspace, if it exists.
+ * @param {Object} source Blockly serialization of hidden definition blocks.
+ */
+function loadHiddenDefinitionBlocksToWorkspace(source) {
   if (
     experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR) &&
     Blockly.getHiddenDefinitionWorkspace() &&
-    source
+    source &&
+    Blockly.functionEditor
   ) {
     Blockly.serialization.workspaces.load(
       source,
@@ -45,9 +50,23 @@ function loadProcedureBlocksToWorkspace(source) {
   }
 }
 
-function parseSourceAndProcedures(source, procedures) {
+/**
+ * Prepare source and hidden definitions for loading to workspaces. This includes
+ * parsing from string to a Blockly serialization object, and moving any procedures from source
+ * to hidden definitions if they should be hidden. Moving procedures to hidden definitions will only
+ * occur on first load of a level, when the source is XML. After that all hidden definitions will be
+ * correctly stored in hiddenDefinitions.
+ * @param {string} source - workspace serialization, either XML or JSON
+ * @param {[string]} hiddenDefinitions - hidden definitions serialization, in JSON.
+ *  Only used in Google Blockly labs.
+ * @returns {parsedSource: Object, parsedHiddenDefinitions: Object, blockOrderMap: Object}
+ *  parsedSource and parsedHiddenDefinitions are Blockly serialization objects.
+ *  blockOrderMap is only used when source is XML,
+ *  and is an map of blocks to their positions on the workspace.
+ */
+function prepareSourcesForWorkspaces(source, hiddenDefinitions) {
   let {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
-    getProceduresAndSourceAsJson(source, procedures);
+    parseSourceAndHiddenDefinitions(source, hiddenDefinitions);
   // TODO: When we add behaviors, we should always hide behavior blocks.
   const procedureTypesToHide = [];
   if (
@@ -64,12 +83,20 @@ function parseSourceAndProcedures(source, procedures) {
   return {parsedSource, parsedHiddenDefinitions, blockOrderMap};
 }
 
-function getProceduresAndSourceAsJson(source, procedures) {
+/**
+ * Convert source and hidden definitions to parsed json objects. If source was xml,
+ * convert to json before parsing. Also create a block order map if source was xml, which will
+ * allow us to correctly place blocks on the workspace.
+ * @param {string} source - workspace serialization, either XML or JSON
+ * @param {[string]} hiddenDefinitions - hidden definitions serialization, in JSON. Only used in Google Blockly labs.
+ * @returns {parsedSource: Object, parsedHiddenDefinitions: Object, blockOrderMap: Object}
+ */
+function parseSourceAndHiddenDefinitions(source, hiddenDefinitions) {
   let isXml = stringIsXml(source);
   let parsedSource;
   let parsedHiddenDefinitions;
   let blockOrderMap;
-  procedures = procedures || '{}';
+  hiddenDefinitions = hiddenDefinitions || '{}';
   if (isXml) {
     const xml = parseXmlElement(source);
     parsedSource = convertXmlToJson(xml);
@@ -77,7 +104,7 @@ function getProceduresAndSourceAsJson(source, procedures) {
   } else {
     parsedSource = JSON.parse(source);
   }
-  parsedHiddenDefinitions = JSON.parse(procedures);
+  parsedHiddenDefinitions = JSON.parse(hiddenDefinitions);
   return {parsedSource, parsedHiddenDefinitions, blockOrderMap};
 }
 
