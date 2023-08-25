@@ -53,6 +53,8 @@ CROWDIN_TEST_PROJECTS = {
 }
 
 class I18nScriptUtils
+  PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
+
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
   # output and dumping a whole lot of output into slack all at once.
