@@ -378,7 +378,6 @@ export const addStudents = studentIds => {
 // Creates a new RowType.NEW_STUDENT for each name in the array.
 export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
-    let studentData = {};
     const studentData = studentDataArray
       .filter(data => data.name)
       .reduce((accumulator, data) => {
@@ -394,21 +393,6 @@ export const addMultipleAddRows = studentDataArray => {
           },
         };
       }, {});
-        continue;
-      }
-
-      // Create a new uniqueId for the newStudentRow
-      const newId = addRowIdCounter;
-      addRowIdCounter = addRowIdCounter - 1;
-
-      // Create student data for each student name.
-      studentData[newId] = {
-        ...blankNewStudentRow,
-        name: name,
-        familyName: familyName,
-        id: newId,
-      };
-    }
     dispatch(addMultipleRows(studentData));
   };
 };
