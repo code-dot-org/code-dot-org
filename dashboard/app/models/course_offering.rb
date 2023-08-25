@@ -462,7 +462,7 @@ class CourseOffering < ApplicationRecord
   def get_available_resources(locale_code='en-us')
     acceptable_types = ['Answer Key', 'Activity Guides', 'Slides', 'Exemplar', 'Slide Deck', 'Rubric']
     lessons = latest_published_version(locale_code).units.first.lessons
-    if !lessons.empty?
+    unless lessons.empty?
       lesson_plan = lessons.first.lesson_plan_html_url
       expanded_card_resources = {"Lesson Plan" => lesson_plan}
       found_types = Set.new
@@ -481,8 +481,8 @@ class CourseOffering < ApplicationRecord
         end
         filtered_resources&.map do |resource|
           type = resource["properties"]["type"]
-          type = (type == "Slides") ? "Slide Deck" : type
-          type = (type == "Exemplar") ? "Answer Key" : type
+          type = "Slide Deck" if type == "Slides"
+          type = "Answer Key" if type == "Exemplars"
           expanded_card_resources[type] ||= resource["url"]
         end
       end
