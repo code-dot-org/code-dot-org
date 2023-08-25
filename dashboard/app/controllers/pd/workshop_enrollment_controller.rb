@@ -39,8 +39,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
-      @enrollment.email = current_user.email
-      @enrollment.email_confirmation = current_user.email
+      application_alt_email = latest_accepted_application.form_data_hash["alternateEmail"]
+      @enrollment.email = application_alt_email ? application_alt_email : current_user.email
+      @enrollment.email_confirmation = application_alt_email ? application_alt_email : current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
@@ -221,5 +222,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       user: current_user,
       status: 'accepted'
       ).any?
+  end
+
+  private def latest_accepted_application
+    Pd::Application::TeacherApplication.where(
+      user: current_user,
+      status: 'accepted'
+    ).order(application_year: :desc).first
   end
 end

@@ -132,6 +132,48 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test 'teacher enrollment email defaults to user email if no alternate email in application' do
+    teacher = create :teacher
+    sign_in teacher
+
+    workshop = create :workshop, organizer: @organizer, num_sessions: 1
+
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    new_form_data_hash = application.form_data_hash
+    new_form_data_hash['alternateEmail'] = nil
+    application.update(form_data_hash: new_form_data_hash)
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    assert_nil app_alt_email
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+
+    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
+
+    refute_equal enrollment_email, app_alt_email
+    assert_equal enrollment_email, teacher.email
+  end
+
+  test 'teacher enrollment email uses application alternate email if available' do
+    teacher = create :teacher
+    sign_in teacher
+
+    workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+
+    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
+
+    refute_equal enrollment_email, teacher.email
+    assert_equal enrollment_email, app_alt_email
+  end
+
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollment form' do
     # Note - organizers can see the form, but cannot enroll in their own workshops.
