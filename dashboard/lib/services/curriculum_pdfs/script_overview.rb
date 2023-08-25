@@ -38,9 +38,12 @@ module Services
         # given script
         def script_overview_pdf_exists_for?(script)
           pathname = get_script_overview_pathname(script).to_s
-          Rails.cache.fetch("CurriculumPdfs/ScriptOverview/pdf_exists/#{pathname}") do
-            AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
-          end
+          cache_key = "CurriculumPdfs/ScriptOverview/pdf_exists/#{pathname}"
+          return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
+
+          result = AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+          CDO.shared_cache.write(cache_key, result)
+          return result
         end
 
         # Generate a PDF containing not only the Unit page itself but also
