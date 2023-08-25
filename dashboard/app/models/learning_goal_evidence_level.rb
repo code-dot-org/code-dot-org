@@ -19,6 +19,14 @@ class LearningGoalEvidenceLevel < ApplicationRecord
 
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
+  def summarize
+    {
+      id: id,
+      understanding: understanding,
+      teacherDescription: teacher_description
+    }
+  end
+
   def seeding_key(seed_context)
     my_learning_goal = seed_context.learning_goals.find {|lg| lg.id == learning_goal_id}
     my_key = {

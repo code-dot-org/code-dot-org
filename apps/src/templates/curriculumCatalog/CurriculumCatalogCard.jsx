@@ -32,6 +32,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradesArray,
@@ -50,9 +51,11 @@ const CurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
+    courseKey={courseKey}
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: courseDisplayName,
@@ -88,11 +91,13 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    isInUS={isInUS}
     {...props}
   />
 );
 
 CurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
@@ -124,9 +129,11 @@ CurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
+  courseKey,
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
@@ -156,6 +163,7 @@ const CustomizableCurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -165,7 +173,7 @@ const CustomizableCurriculumCatalogCard = ({
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayNameWithLatestYear,
+        curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
       }
@@ -299,6 +307,9 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
         />
       )}
     </div>
@@ -306,6 +317,7 @@ const CustomizableCurriculumCatalogCard = ({
 };
 
 CustomizableCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
@@ -341,6 +353,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 export default connect(

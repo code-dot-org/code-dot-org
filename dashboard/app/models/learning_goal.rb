@@ -22,6 +22,16 @@ class LearningGoal < ApplicationRecord
 
   before_create :generate_key
 
+  def summarize
+    {
+      key: key,
+      learningGoal: learning_goal,
+      aiEnabled: ai_enabled,
+      tips: tips,
+      evidenceLevels: learning_goal_evidence_levels.map(&:summarize)
+    }
+  end
+
   def seeding_key(seed_context)
     my_rubric = seed_context.rubrics.find {|r| r.id == rubric_id}
     my_key = {

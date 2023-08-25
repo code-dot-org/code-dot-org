@@ -17,6 +17,12 @@ class Rubric < ApplicationRecord
   belongs_to :level
   belongs_to :lesson
 
+  def summarize
+    {
+      learningGoals: learning_goals.map(&:summarize)
+    }
+  end
+
   accepts_nested_attributes_for :learning_goals
 
   def seeding_key(seed_context)
