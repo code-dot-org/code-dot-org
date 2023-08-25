@@ -6,7 +6,6 @@ import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
 import {snakeCase} from 'lodash';
 
-const FORM_ID = 'rubrics-container';
 const RUBRIC_PATH = '/rubrics';
 
 export default function RubricsContainer({
@@ -25,6 +24,7 @@ export default function RubricsContainer({
             id: 'learningGoal-1',
             learningGoal: '',
             aiEnabled: false,
+            position: 1,
           },
         ]
   );
@@ -43,17 +43,25 @@ export default function RubricsContainer({
     return `learningGoal-${learningGoalNumber}`;
   };
 
-  const addNewConceptHandler = event => {
-    event.preventDefault();
-
+  const emptyKeyConcept = () => {
     const newKey = generateLearningGoalKey();
     const newId = newKey;
-    const startingData = {
+    const nextPosition =
+      Math.max(...learningGoalList.map(obj => obj.position)) + 1;
+
+    return {
       key: newKey,
       id: newId,
       learningGoal: '',
       aiEnabled: false,
+      position: nextPosition,
     };
+  };
+
+  const addNewConceptHandler = event => {
+    event.preventDefault();
+
+    const startingData = emptyKeyConcept();
 
     const oldLearningGoalList = learningGoalList;
 
@@ -68,27 +76,12 @@ export default function RubricsContainer({
     setLearningGoalList(updatedLearningGoalList);
   };
 
-  const handleAiEnabledChange = idToUpdate => {
-    const newLearningGoalData = learningGoalList.map(learningGoal => {
-      if (idToUpdate === learningGoal.id) {
-        const updatedAiValue = !learningGoal.aiEnabled;
-        return {
-          ...learningGoal,
-          ['aiEnabled']: updatedAiValue,
-        };
-      } else {
-        return learningGoal;
-      }
-    });
-    setLearningGoalList(newLearningGoalData);
-  };
-
-  const handleLearningGoalNameChange = (updatedName, idToUpdate) => {
+  const updateLearningGoal = (idToUpdate, keyToUpdate, newValue) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
         return {
           ...learningGoal,
-          ['learningGoal']: updatedName,
+          [keyToUpdate]: newValue,
         };
       } else {
         return learningGoal;
@@ -130,9 +123,9 @@ export default function RubricsContainer({
       },
       body: JSON.stringify(rubric_data),
     })
-      .then(response => {
-        let redirectUrl = response.url;
-        navigateToHref(redirectUrl);
+      .then(response => response.json())
+      .then(data => {
+        navigateToHref(data.redirectUrl);
       })
       .catch(err => {
         console.error('Error saving rubric:' + err);
@@ -140,7 +133,7 @@ export default function RubricsContainer({
   };
 
   function transformKeys(startingList) {
-    let newList = [];
+    const newList = [];
 
     startingList.forEach(item => {
       let newItem = {};
@@ -160,7 +153,7 @@ export default function RubricsContainer({
   // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
   //  "submittable" is in the properties of each level in the list.
   return (
-    <form id={FORM_ID}>
+    <div>
       <Heading1>Create or modify your rubric</Heading1>
       <BodyTwoText>
         This rubric will be used for {unitName}, lesson {lessonNumber}.
@@ -169,7 +162,7 @@ export default function RubricsContainer({
       <div style={styles.containerStyle}>
         <label>Choose a level for this rubric to be evaluated on</label>
         <select
-          id={'rubric_level_id'}
+          id="rubric_level_id"
           required={true}
           onChange={handleDropdownChange}
           value={selectedLevelForAssessment}
@@ -183,11 +176,10 @@ export default function RubricsContainer({
       </div>
 
       <RubricEditor
-        handleAiEnabledChange={handleAiEnabledChange}
         learningGoalList={learningGoalList}
         addNewConcept={addNewConceptHandler}
         deleteItem={id => deleteKeyConcept(id)}
-        handleLearningGoalNameChange={handleLearningGoalNameChange}
+        updateLearningGoal={updateLearningGoal}
       />
       <div style={styles.bottomRow}>
         <Button
@@ -197,7 +189,7 @@ export default function RubricsContainer({
           size={Button.ButtonSize.narrow}
         />
       </div>
-    </form>
+    </div>
   );
 }
 

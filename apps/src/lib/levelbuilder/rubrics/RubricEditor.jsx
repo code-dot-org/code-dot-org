@@ -7,8 +7,7 @@ export default function RubricEditor({
   addNewConcept,
   deleteItem,
   learningGoalList,
-  handleAiEnabledChange,
-  handleLearningGoalNameChange,
+  updateLearningGoal,
 }) {
   const renderLearningGoalItems = learningGoalList.map(goal => {
     return (
@@ -17,8 +16,7 @@ export default function RubricEditor({
         id={goal.id}
         key={goal.id}
         exisitingLearningGoalData={goal}
-        handleAiEnabledChange={handleAiEnabledChange}
-        handleLearningGoalNameChange={handleLearningGoalNameChange}
+        updateLearningGoal={updateLearningGoal}
       />
     );
   });
@@ -41,8 +39,7 @@ export default function RubricEditor({
 
 RubricEditor.propTypes = {
   learningGoalList: PropTypes.array,
-  handleAiEnabledChange: PropTypes.func,
   deleteItem: PropTypes.func,
   addNewConcept: PropTypes.func,
-  handleLearningGoalNameChange: PropTypes.func,
+  updateLearningGoal: PropTypes.func,
 };

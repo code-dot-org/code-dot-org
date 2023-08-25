@@ -36,19 +36,14 @@ class LearningGoal < ApplicationRecord
     self.key = SecureRandom.uuid
   end
 
-  def summarize
+  def summarize_for_rubric_edit
     {
       id: id,
       rubricId: rubric_id,
       position: position,
       learningGoal: learning_goal,
       aiEnabled: ai_enabled,
+      learning_goal_evidence_levels: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
     }
-  end
-
-  def summarize_for_rubric_edit
-    summary = summarize
-    summary[:learning_goal_evidence_levels] = learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
-    summary
   end
 end

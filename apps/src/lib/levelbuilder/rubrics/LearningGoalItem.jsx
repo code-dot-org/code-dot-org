@@ -8,8 +8,7 @@ import Button from '../../../templates/Button';
 export default function LearningGoalItem({
   deleteItem,
   exisitingLearningGoalData,
-  handleAiEnabledChange,
-  handleLearningGoalNameChange,
+  updateLearningGoal,
 }) {
   const [updatedAiEnabled, setUpdatedAiEnabled] = useState(
     exisitingLearningGoalData.aiEnabled
@@ -19,18 +18,22 @@ export default function LearningGoalItem({
     exisitingLearningGoalData.learningGoal
   );
 
-  const [learningGoalData] = useState(exisitingLearningGoalData);
-
   const handleCheckboxChange = () => {
-    setUpdatedAiEnabled(!updatedAiEnabled);
-    handleAiEnabledChange(learningGoalData.id);
+    const newAiEnabledValue = !updatedAiEnabled;
+    setUpdatedAiEnabled(newAiEnabledValue);
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'aiEnabled',
+      newAiEnabledValue
+    );
   };
 
   const handleKeyConceptChange = event => {
     setUpdatedKeyConcept(event.target.value);
-    handleLearningGoalNameChange(
-      event.target.value,
-      exisitingLearningGoalData.id
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'learningGoal',
+      event.target.value
     );
   };
 
@@ -83,9 +86,8 @@ export default function LearningGoalItem({
 
 LearningGoalItem.propTypes = {
   deleteItem: PropTypes.func,
-  handleAiEnabledChange: PropTypes.func,
   exisitingLearningGoalData: PropTypes.object,
-  handleLearningGoalNameChange: PropTypes.func,
+  updateLearningGoal: PropTypes.func,
 };
 
 const styles = {
