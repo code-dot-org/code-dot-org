@@ -3,7 +3,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
-import DancingBot from './DancingBot';
+import BehaviorBot from './bot/BehaviorBot';
 import aichatI18n from '../locale';
 import {ChatCompletionMessage} from '../types';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
@@ -67,7 +67,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
           headerText={aichatI18n.aichatWorkspaceHeader()}
         >
           <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-            <DancingBot danceState={danceState} />
+            <BehaviorBot danceState={danceState} />
           </div>
           <div
             id="chat-workspace-conversation"
