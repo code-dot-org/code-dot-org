@@ -31,10 +31,14 @@ section.why-teach-cs {
 
 section.free-curriculum {
 
+  div.content-wrapper {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
   figure {
     background: url("/images/teach-page-students.png") center no-repeat;
     background-size: cover;
-    margin: 2.5rem 0 1rem;
     height: auto;
 
     @media screen and (max-width: $width-md) {

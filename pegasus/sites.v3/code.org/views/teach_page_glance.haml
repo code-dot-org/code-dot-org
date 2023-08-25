@@ -1,0 +1,21 @@
+-# Can only be used on rebranded pages that use the
+-# "design-system-pegasus.scss" stylesheet.
+
+-# FontAwesome icons
+- icon_party_horn = "fa-solid fa-party-horn"
+- icon_lightbulb_on = "fa-solid fa-lightbulb-on"
+- icon_sparkles = "fa-solid fa-sparkles"
+- icon_language = "fa-solid fa-language"
+- icon_link = "fa-solid fa-link"
+
+- items_index = 5
+- icons = [icon_party_horn, icon_lightbulb_on, icon_sparkles, icon_language, icon_link]
+- descriptions = [hoc_s(:teach_page_free_curriculum_list_desc_01), hoc_s(:teach_page_free_curriculum_list_desc_02), hoc_s(:teach_page_free_curriculum_list_desc_03), hoc_s(:teach_page_free_curriculum_list_desc_04), hoc_s(:teach_page_free_curriculum_list_desc_05)]
+
+.at-a-glance.grid-container.col-50
+  %ul.flex-container.flex-direction-column
+    - items_index.times do |index|
+      %li
+        %i{class: "#{icons[index]}"}
+        %p
+          = descriptions[index]

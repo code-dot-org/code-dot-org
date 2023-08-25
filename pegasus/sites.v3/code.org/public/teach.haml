@@ -4,12 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
-
--# FontAwesome icons
-- icon_party_horn = "fa-solid fa-party-horn"
-- icon_lightbulb_on = "fa-solid fa-lightbulb-on"
-- icon_link = "fa-solid fa-link"
+%link{href: "/css/generated/page/teach-styles.css", rel: "stylesheet"}
 
 %section.top
   .wrapper
@@ -77,51 +72,26 @@ theme: responsive_full_width
         %span •
         =hoc_s(:teacher_label_csd)
 
-%section.free-curriculum
+%section.free-curriculum.bg-neutral-light
   .wrapper
     %h2.centered
       =hoc_s(:teach_page_free_curriculum_heading)
     %p.centered
       =hoc_s(:teach_page_free_curriculum_desc)
-    %div.flex-container.justify-space-between.wrap-reverse
-      %ul.icon-bullet-list.full-width.col-60
-        %li
-          %div
-            %i{class: "#{icon_party_horn}"}
-          .text-wrapper
-            %h3=hoc_s(:teach_page_free_curriculum_list_heading_01)
-            %p.no-margin-bottom
-              =hoc_s(:teach_page_free_curriculum_list_desc_01)
-        %li
-          %div
-            %i{class: "#{icon_lightbulb_on}"}
-          .text-wrapper
-            %h3=hoc_s(:teach_page_free_curriculum_list_heading_02)
-            %p.no-margin-bottom
-              =hoc_s(:teach_page_free_curriculum_list_desc_02)
-        %li.no-margin-bottom
-          %div
-            %i{class: "#{icon_link}"}
-          .text-wrapper
-            %h3=hoc_s(:teach_page_free_curriculum_list_heading_03)
-            %p.no-margin-bottom
-              =hoc_s(:teach_page_free_curriculum_list_desc_03)
-      %figure.rounded-corners.col-33{style: "float: right"}
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse
+      = view :teach_page_glance
+      %figure.rounded-corners.col-45{style: "float: right"}
     .clear
     %hr.dark
     %div.centered
       %h4=hoc_s(:teach_page_free_curriculum_heading_02)
       %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
-        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
+        %a.link-button{href: "/educate/curriculum/elementary-school"}
           =hoc_s(:grade_level_label_elementary)
-        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
+        %a.link-button{href: "/educate/curriculum/middle-school"}
           =hoc_s(:grade_level_label_middle)
-        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
+        %a.link-button{href: "/educate/curriculum/high-school"}
           =hoc_s(:grade_level_label_high)
-
-%section.resources.bg-neutral-light
-  .wrapper
-    = view :resources_tabs
 
 %section.curriculum-offerings
   .wrapper
@@ -136,6 +106,10 @@ theme: responsive_full_width
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: CDO.studio_url("/catalog")}
         =hoc_s(:call_to_action_see_full_curriculum_catalog)
+
+%section.resources.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
 
 %section.pl-offerings.bg-neutral-light.centered
   .wrapper

@@ -1156,3 +1156,34 @@ section.quote {
     }
   }
 }
+
+.at-a-glance {
+  background: $neutral-white;
+  border: 1px solid $neutral_dark10;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+
+  ul {
+    margin: 0;
+    gap: 1.25rem;
+
+    li {
+      all: unset;
+      font-size: 1rem;
+      margin: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+
+      &:before {
+        display: none;
+      }
+
+      p {
+        @include body-two;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+}
