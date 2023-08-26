@@ -5,11 +5,16 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSP",
   "grade_levels": "9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/6bf3cb2094d2c1016446ba78ba1607f6-Self paced app lab.png",
   "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Go at your own pace with this introduction to the App Lab programming environment, in which students use JavaScript to create interactive apps.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2020-03-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

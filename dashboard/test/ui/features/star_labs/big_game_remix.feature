@@ -3,7 +3,6 @@ Feature: Big Game Remix
 
   Background:
     Given I am on "http://studio.code.org/s/allthethings/lessons/13/levels/6?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then element "#runButton" is visible
 

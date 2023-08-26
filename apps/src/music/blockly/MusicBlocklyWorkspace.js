@@ -1,45 +1,29 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
-import {MUSIC_BLOCKS} from './musicBlocks';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
-import FieldSounds from './FieldSounds';
-import FieldPattern from './FieldPattern';
-import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, REMOTE_STORAGE} from '../constants';
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import {
-  DEFAULT_TRACK_NAME_EXTENSION,
-  DYNAMIC_TRIGGER_EXTENSION,
-  FIELD_CHORD_TYPE,
-  FIELD_PATTERN_TYPE,
-  FIELD_SOUNDS_TYPE,
-  PLAY_MULTI_MUTATOR,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import {
-  dynamicTriggerExtension,
-  getDefaultTrackNameExtension,
-  playMultiMutator,
-} from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
-import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
-import musicI18n from '../locale';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor(appOptions) {
+  constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
+    this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
-    this.channel = {};
-    this.projectManager = this.getProjectManager(appOptions);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -50,40 +34,21 @@ export default class MusicBlocklyWorkspace {
    * Initialize the Blockly workspace
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
-   * @param {*} player reference to a {@link MusicPlayer}
-   * @param {*} toolboxAllowList optional object with allowed toolbox entries
+   * @param {*} isReadOnlyWorkspace is the workspace readonly
+   * @param {*} toolbox information about the toolbox
+   *
    */
-  init(container, onBlockSpaceChange, player, toolboxAllowList) {
-    this.container = container;
-
-    Blockly.Extensions.register(
-      DYNAMIC_TRIGGER_EXTENSION,
-      dynamicTriggerExtension
-    );
-
-    Blockly.Extensions.register(
-      DEFAULT_TRACK_NAME_EXTENSION,
-      getDefaultTrackNameExtension(player)
-    );
-
-    Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
-
-    for (let blockType of Object.keys(MUSIC_BLOCKS)) {
-      Blockly.Blocks[blockType] = {
-        init: function () {
-          this.jsonInit(MUSIC_BLOCKS[blockType].definition);
-        },
-      };
-
-      Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
+  init(container, onBlockSpaceChange, isReadOnlyWorkspace, toolbox) {
+    if (this.workspace) {
+      this.workspace.dispose();
     }
 
-    Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
-    Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
-    Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
+    this.container = container;
+
+    const toolboxBlocks = getToolbox(toolbox);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(toolboxAllowList),
+      toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
@@ -93,25 +58,12 @@ export default class MusicBlocklyWorkspace {
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
       },
+      readOnly: isReadOnlyWorkspace,
     });
-
-    // Remove two default entries in the toolbox's Functions category that
-    // we don't want.
-    delete Blockly.Blocks.procedures_defreturn;
-    delete Blockly.Blocks.procedures_ifreturn;
-
-    // Rename the new function placeholder text for Music Lab specifically.
-    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
-      musicI18n.blockly_functionNamePlaceholder();
-
-    Blockly.setInfiniteLoopTrap();
 
     this.resizeBlockly();
 
-    // Set initial blocks.
-    this.loadCode();
-
-    Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+    this.workspace.addChangeListener(onBlockSpaceChange);
 
     this.workspace.registerButtonCallback('createVariableHandler', button => {
       Blockly.Variables.createVariableButtonHandler(
@@ -138,9 +90,14 @@ export default class MusicBlocklyWorkspace {
    * @param {*} scope Global scope to provide the execution runtime
    */
   compileSong(scope) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
+    this.triggerIdToStartType = {};
 
     const topBlocks = this.workspace.getTopBlocks();
 
@@ -237,6 +194,10 @@ export default class MusicBlocklyWorkspace {
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
           args: ['startPosition'],
         };
+        // Also save the value of the trigger start field at compile time so we can
+        // compute the correct start time at each invocation.
+        this.triggerIdToStartType[this.triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME);
       }
     });
 
@@ -273,7 +234,9 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      console.warn('executeCompiledSong called before compileSong.');
+      Lab2MetricsReporter.logWarning(
+        'executeCompiledSong called before compileSong.'
+      );
       return;
     }
 
@@ -309,14 +272,44 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  getProject() {
-    return {
-      source: Blockly.serialization.workspaces.save(this.workspace),
-      channel: this.channel,
-    };
+  hasTrigger(id) {
+    return !!this.codeHooks[this.triggerIdToEvent(id)];
+  }
+
+  /**
+   * Given the exact current playback position, get the start position of the trigger,
+   * adjusted based on when the trigger should play (immediately, next beat, or next measure).
+   */
+  getTriggerStartPosition(id, currentPosition) {
+    const triggerStart = this.triggerIdToStartType[this.triggerIdToEvent(id)];
+    if (!triggerStart) {
+      console.warn('No compiled trigger with ID: ' + id);
+      return;
+    }
+
+    switch (triggerStart) {
+      case TriggerStart.IMMEDIATELY:
+        return currentPosition;
+      case TriggerStart.NEXT_BEAT:
+        return Math.ceil(currentPosition * 4) / 4;
+      case TriggerStart.NEXT_MEASURE:
+        return Math.ceil(currentPosition);
+    }
+  }
+
+  getCode() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return {};
+    }
+    return Blockly.serialization.workspaces.save(this.workspace);
   }
 
   getAllBlocks() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return [];
+    }
     return this.workspace.getAllBlocks();
   }
 
@@ -349,86 +342,53 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  async loadCode() {
-    const projectResponse = await this.projectManager.load();
-    if (!projectResponse.ok) {
-      if (projectResponse.status === 404) {
-        // This is expected if the user has never saved before.
-        this.loadDefaultCode();
-      }
-
-      // TODO: Error handling
+  // Load the workspace with the given code.
+  loadCode(code) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
       return;
     }
-
-    const {source, channel} = await projectResponse.json();
-    this.channel = channel;
-    if (source && source.source) {
-      const exitingCodeJson = JSON.parse(source.source);
-      Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
-    } else {
-      this.loadDefaultCode();
-    }
-  }
-
-  saveCode(forceSave = false) {
-    this.projectManager.save(forceSave);
-  }
-
-  hasUnsavedChanges() {
-    return this.projectManager.hasUnsavedChanges();
-  }
-
-  loadDefaultCode() {
-    const defaultCodeFilename = 'defaultCode' + getBlockMode();
-    const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
-    Blockly.serialization.workspaces.load(defaultCode, this.workspace);
-    this.saveCode();
+    this.workspace.clearUndo();
+    Blockly.serialization.workspaces.load(code, this.workspace);
   }
 
   callUserGeneratedCode(fn, args = []) {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      // swallow error. should we also log this somewhere?
-      if (console) {
-        console.log(e);
-      }
+      Lab2MetricsReporter.logError('Error running user generated code', e);
     }
   }
 
-  updateToolbox(allowList) {
-    const toolbox = getToolbox(allowList);
-    this.workspace.updateToolbox(toolbox);
+  undo() {
+    this.undoRedo(false);
   }
 
-  // Get the project manager for the current storage type.
-  // If no storage type is specified in AppConfig, use remote storage.
-  getProjectManager(appOptions) {
-    let storageType = AppConfig.getValue('storage-type');
-    if (!storageType) {
-      storageType = REMOTE_STORAGE;
-    }
-    storageType = storageType.toLowerCase();
-
-    if (storageType === REMOTE_STORAGE) {
-      return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
-        appOptions,
-        appOptions.channel,
-        this.getProject.bind(this)
-      );
-    } else {
-      return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.LOCAL,
-        appOptions,
-        this.getLocalStorageKeyName(),
-        this.getProject.bind(this)
-      );
-    }
+  redo() {
+    this.undoRedo(true);
   }
 
-  addSaveEventListener(event, listener) {
-    this.projectManager.addEventListener(event, listener);
+  canUndo() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return false;
+    }
+    return this.workspace.getUndoStack().length > 0;
+  }
+
+  canRedo() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return false;
+    }
+    return this.workspace.getRedoStack().length > 0;
+  }
+
+  undoRedo(redo) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
+    this.workspace.undo(redo);
   }
 }

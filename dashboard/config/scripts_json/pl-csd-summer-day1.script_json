@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-27 11:34:40 UTC",
+    "serialized_at": "2023-07-05 19:05:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -45,7 +45,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Purpose:**\nThis session serves as both a welcome and an opportunity to begin building community within the cohort. Participants will be asked to reflect on their personal CS journey. This activity will serve as a foundation for reflections that will occur throughout the day centered around understanding self.\n\n**Objectives:**\n\n* Participants feel a sense of belonging in the program cohort\n\n**Suggested time:** 30 minutes\n",
+        "overview": "**Purpose:**\nThis session serves as both a welcome and an opportunity to begin building community within the cohort. Participants will be asked to reflect on their personal CS journey. This activity will serve as a foundation for reflections that will occur throughout the day centered around understanding self.\n\n**Objectives:**\n\n* Participants feel a sense of belonging in the program cohort\n\n**Suggested time:** 25 minutes\n",
         "student_overview": "**You will:**\n\n* Get to know your program cohort"
       },
       "seeding_key": {
@@ -62,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high level understanding of the overall themes and structure of the CS Discoveries course\n* Participants are aware of CS Discoveries course collections and how and why they would assign them to their students\n\n\n**Suggested time:** 50 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high level understanding of the overall themes and structure of the CS Discoveries course.\n* Be made aware of CS Discoveries course collections and how and why you can assign them to their students. \n"
+        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n* Participants are aware of CS Discoveries course collections and how and why they would assign them to their students\n\n\n**Suggested time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n* Be made aware of CS Discoveries course collections and how and why you can assign them to their students. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -79,8 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nThis session is an opportunity for participants to have time to explore lesson plans and lessons in Code Studio. Participants should leave the session with a basic understanding of how to navigate these resources on the Code.org site. This navigation will be practiced throughout the week.\n\n**Objectives:**\n\n* Participants know what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Participants know how to access lesson materials as a teacher and student.\n* Participants can access materials for their cohort’s professional learning on the Code.org platform.\n\n\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Learn what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Learn how to access lesson materials as a teacher and student\n* Learn how to access materials for the cohort’s professional learning on the Code.org platform\n"
+        "overview": "**Purpose:**\nThis session is an opportunity for participants to have time to explore lesson plans and lessons in Code Studio. Participants should leave the session with a basic understanding of how to navigate these resources on the Code.org site. This navigation will be practiced throughout the week.\n\n**Objectives:**\n\n* Participants know what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Participants know how to access lesson materials as a teacher and student.\n* Participants can access materials for their cohort’s professional learning on the Code.org platform.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Learn what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Learn how to access lesson materials as a teacher and student\n* Learn how to access materials for your cohort’s professional learning on the Code.org platform\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -90,14 +90,14 @@
     },
     {
       "key": "lesson-6",
-      "name": "Unit 1: The Problem Solving Process in CS Dicoveries ",
+      "name": "Unit 1: The Problem Solving Process in CS Discoveries ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis session serves as an introduction to the Problem-Solving Process in CS Discoveries. Participants will get an overview of the process and experience a learning activity from Unit 1 to see it in action. While this is not a model lesson, participants will still be taking on the perspective of students.\n\n**Objectives:**\n\n* Participants understand each step of the Problem-Solving Process and make connections with their prior teaching experience\n* Participants experience a Problem-Solving Process activity to empathize with their students\n\n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Gain an understanding of each step of the Problem-Solving Process and make connections with your prior teaching experience\n* Experience a Problem-Solving Process activity to empathize with your students"
+        "overview": "**Purpose:**\nThis session serves as an introduction to the Problem-Solving Process in CS Discoveries. Participants will get an overview of the process and experience a learning activity from Unit 1 to see it in action. While this is not a model lesson, participants will still be taking on the perspective of students.\n\n**Objectives:**\n\n* Participants understand each step of the Problem-Solving Process\n* Participants experience a Problem-Solving Process activity to empathize with their students\n\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You will:**\n\n* Gain an understanding of each step of the Problem-Solving Process\n* Experience a Problem-Solving Process activity to empathize with your students"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -106,12 +106,29 @@
       }
     },
     {
-      "key": "lesson-7",
-      "name": "Intro to Unit 2 - Web Development",
+      "key": "lesson-11",
+      "name": "The Problem Solving Process in CSD",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThe previous session gives participants an introduction to the Problem-Solving Process in Unit 1 - Problem Solving and Computing. This session builds on that experience by drawing a through line between all seven CS Discoveries units to show how the Problem-Solving Process is a foundational piece of the course.\n\n\n**Objectives:**\n\n* Participants see the big picture of Unit 1.\n* Participants know what the Input Output Storage Processing model is.\n* Participants understand the role of the Problem Solving Process in the CS Discoveries curriculum.\n* Participants explore the Problem-Solving Process lessons in units 2-7 in a jigsaw activity.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* See the big picture of Unit 2.\n* Know what the Input Output Storage Processing model is.\n* Understand the role if the Problem Solving Process in the CS Discoveries curriculum\n* Explore the Problem-Solving Process lessons in units 2-7 in a jigsaw activity."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day1"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Intro to Unit 2 - Web Development",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThis session comes just before the first Unit 2 - Web Development model lesson. The goal of this session, Model Lesson #1, and Model Lesson #2 is to ensure that participants feel comfortable using HTML and CSS. With this knowledge, participants have a foundation for the rest of the lessons in this unit.\n\n**Objectives:**\n\n* Participants see the big picture of Unit 2 - Web Development\n* Participants know what HTML and CSS are\n\n\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* See the big picture of Unit 2 - Web Development\n* Get an introduction to HTML and CSS "
@@ -125,13 +142,13 @@
     {
       "key": "Intro to HTML",
       "name": "Model Lesson 1 - U2L2 Intro to HTML",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n* **Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n* **Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose**:\n* **Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n* **Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n* **Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
         "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
@@ -144,12 +161,12 @@
     {
       "key": "lesson-8",
       "name": "Pair Programming and Debugging",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nThis session is a time for participants to learn about the following:\n* Pair programming - tool and pedagogy\n* Debugging - Web Lab tools and pedagogy\n* Choice Levels - User interface and pedagogy\n* Mini Projects - overview of the purpose\n\n**Objectives:**\n\n* Participants know how to use the pair programming feature, Web Lab debugging tools, and the choice level user interface in the teacher dashboard\n* Participants can use Code.org's course system to set up a class and keep track of student progress\n\n\n**Suggested time:** 40 minutes",
+        "overview": "**Purpose:**\nThis session is a time for participants to learn about the following:\n* Pair programming - tool and pedagogy\n* Debugging - Web Lab tools and pedagogy\n* Choice Levels - User interface and pedagogy\n* Mini Projects - overview of the purpose\n\n**Objectives:**\n\n* Participants know how to use the pair programming feature, Web Lab debugging tools, and the choice level user interface in the teacher dashboard\n* Participants can use Code.org's course system to set up a class and keep track of student progress\n\n\n**Suggested time:** 35 minutes",
         "student_overview": "**You will:**\n\n* Learn how to use the pair programming feature, Web Lab debugging tools, and the choice level user interface in the teacher dashboard\n* Use Code.org's course system to set up a class and keep track of student progress\n"
       },
       "seeding_key": {
@@ -161,13 +178,13 @@
     {
       "key": "Styling Text with CSS",
       "name": "Model Lesson 2 - U2L6 Styling Text with CSS",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n* **Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n* **Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2022/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
+        "overview": "**Purpose**:\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n* **Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n* **Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
         "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we change the style of text on a web page?\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
@@ -179,14 +196,14 @@
     },
     {
       "key": "lesson-9",
-      "name": "Journaling and Dicussion ",
-      "absolute_position": 9,
+      "name": "Journaling and Discussion ",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nIn this session, participants will dig deeper into the teaching and learning strategies for journaling and discussion. The goal is for participants to get ideas for how they might incorporate these strategies into their classroom routines.\n\n**Objectives:**\n\n* Participants have brainstormed ideas for incorporating journaling and discussion into their classroom routines and procedures\n\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n*  Brainstorm ideas for incorporating journaling and discussion into their classroom routines and procedures"
+        "student_overview": "**You will:**\n\n*  Brainstorm ideas for incorporating journaling and discussion into your classroom routines and procedures"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -197,10 +214,10 @@
     {
       "key": "lesson-10",
       "name": "Day 1 Wrap Up ",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "**Purpose:**\n* Wrap up the themes of the day\n* Pulse check on teachers through gots and needs/survey\n\n\n**Objectives:**\n\n* Share gots and needs for the day.\n* Take the daily survey\n\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Share gots and needs for the day.\n* Take the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/1\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 1 Survey</a> \n"
@@ -257,6 +274,18 @@
       "seeding_key": {
         "lesson_activity.key": "90ea0047-c411-4f46-bd1d-00d55ecec950",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-day1"
+      }
+    },
+    {
+      "key": "f68758e7-559d-4e45-b01f-658da9649b08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f68758e7-559d-4e45-b01f-658da9649b08",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-day1"
       }
@@ -436,6 +465,16 @@
       }
     },
     {
+      "key": "3e3f4fb2-2438-4c77-a489-3fa2009f4b1a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3e3f4fb2-2438-4c77-a489-3fa2009f4b1a",
+        "lesson_activity.key": "f68758e7-559d-4e45-b01f-658da9649b08"
+      }
+    },
+    {
       "key": "88ac46ca-c13c-45ce-8532-f6ec1cd7a117",
       "position": 1,
       "properties": {
@@ -547,7 +586,7 @@
       "key": "60bb3251-ebb7-436a-9f36-5bc942eae93c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -631,7 +670,7 @@
       "key": "34ffc9b3-f642-48bc-ab40-9b80fe5c4de1",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd2/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
         "progression_name": "Video: Intro to Web Lab - Part 1",
         "tips": [
           {
@@ -678,7 +717,7 @@
       "key": "4d503e69-1ea5-4d47-a44d-5f96f1c3d1cd",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd2/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
         "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
@@ -941,7 +980,7 @@
       "key": "74b1b967-39a5-488e-a0b9-514cf66fb598",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd2/2023] video in the slides and discuss the CSS video as a class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd/2023] video in the slides and discuss the CSS video as a class.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1003,7 +1042,7 @@
       "key": "817bb4ce-3c7f-41ea-8392-de540bd4ba8f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd2/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.\n",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {

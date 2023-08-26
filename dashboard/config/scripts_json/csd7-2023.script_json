@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 20:39:48 UTC",
+    "serialized_at": "2023-08-02 20:01:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -97,7 +98,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
@@ -1761,7 +1762,7 @@
       "key": "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd7/2023] video in the slides\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd/2023] video in the slides\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1871,7 +1872,7 @@
       "key": "17a8f41e-a04a-458c-b1fb-1fe9dbe02126",
       "position": 5,
       "properties": {
-        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they used to train the A.I. Bot. </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "17a8f41e-a04a-458c-b1fb-1fe9dbe02126",
@@ -2444,7 +2445,7 @@
       "key": "55387713-ad24-4c3a-bc5e-01c36365cb09",
       "position": 1,
       "properties": {
-        "description": "Students will be researching applications of artificial intelligence and machine learning on the internet. You can provide students with copies of the [r innovations_in_ai_research_areas_-_student_resource/csd7/2023] guide to help students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy application of AI may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**\n"
+        "description": "Students will be researching applications of artificial intelligence and machine learning on the internet. You can provide students with copies of the [r innovations_in_ai_research_areas_-_student_resource/csd/2023] guide to help students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy application of AI may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**\n"
       },
       "seeding_key": {
         "activity_section.key": "55387713-ad24-4c3a-bc5e-01c36365cb09",
@@ -2535,7 +2536,7 @@
       "key": "df1405e9-c528-4415-a56b-5a2e2fb03ea2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r seeing_ai/csd7/2023] video in the slides. Prompt students with the Questions to Consider before starting the video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r seeing_ai/csd/2023] video in the slides. Prompt students with the Questions to Consider before starting the video."
       },
       "seeding_key": {
         "activity_section.key": "df1405e9-c528-4415-a56b-5a2e2fb03ea2",
@@ -2613,7 +2614,7 @@
       "key": "61872898-7714-4f96-a5ef-26a93d81e786",
       "position": 10,
       "properties": {
-        "description": "**Distribute:** Pass out the [r innovations_in_ai_-_activity_guide/csd7/2023] to each student. "
+        "description": "**Distribute:** Pass out the [r innovations_in_ai_-_activity_guide/csd/2023] to each student. "
       },
       "seeding_key": {
         "activity_section.key": "61872898-7714-4f96-a5ef-26a93d81e786",
@@ -2635,7 +2636,7 @@
       "key": "6b797630-e3f7-455e-87e3-2fb5bf40ca1a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/csd7/2023] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/csd/2023] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "6b797630-e3f7-455e-87e3-2fb5bf40ca1a",
@@ -2952,7 +2953,7 @@
       "key": "2e7fc7ac-7f2c-4e89-aca3-65269e994aae",
       "position": 16,
       "properties": {
-        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/csd7/2023] video.",
+        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/csd/2023] video.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2969,7 +2970,7 @@
       "key": "98b78b3d-1bca-4e0c-9084-7a1c471759f6",
       "position": 17,
       "properties": {
-        "description": " **Distribute:** pass out the [r patterns_in_data_1/csd7/2023] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "description": " **Distribute:** pass out the [r patterns_in_data_1/csd/2023] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3541,7 +3542,7 @@
       "key": "224ff10a-dd14-4631-8ba8-3c7e2d785105",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd7/2023]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd/2023]",
         "tips": [
           {
             "type": "teachingTip",
@@ -3570,7 +3571,7 @@
       "key": "ca8c7c22-43b2-4d68-a73e-73f551b75328",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd7/2023] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd7/2023] to each student.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd/2023] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd/2023] to each student.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4264,7 +4265,7 @@
       "key": "7d86b193-0a1a-4179-b5dc-9f3834fffbd9",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai_training_data_bias/csd7/2023] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai_training_data_bias/csd/2023] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4312,7 +4313,7 @@
       "key": "0b4948ac-ba5a-4d2c-88fd-6195f61feac4",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r model_cards/csd7/2023] activity guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which shows the Book Recommender app from yesterday and a partially completed model card.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r model_cards/csd/2023] activity guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which shows the Book Recommender app from yesterday and a partially completed model card.",
         "progression_name": "Book Recommender Model Card"
       },
       "seeding_key": {
@@ -4455,7 +4456,7 @@
       "key": "ee6678ed-b811-49c4-bf7f-649420290f0d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/csd7/2023] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/csd/2023] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
         "duration": "5",
         "name": "Model Cards in AI Lab",
         "tips": [
@@ -4474,7 +4475,7 @@
       "key": "1a991eb4-4bac-460c-9f58-229af8c52e8f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first three levels represent the zoo dataset in AI Lab where students can train a model. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r zoo_models/csd7/2023] activity guide to each student."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first three levels represent the zoo dataset in AI Lab where students can train a model. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r zoo_models/csd/2023] activity guide to each student."
       },
       "seeding_key": {
         "activity_section.key": "1a991eb4-4bac-460c-9f58-229af8c52e8f",
@@ -5032,7 +5033,7 @@
       "key": "92851ec1-81e7-430b-89f0-c6153c03c4fe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r zombie_prediction/csd7/2023] activity guide to each student.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r zombie_prediction/csd/2023] activity guide to each student.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5183,7 +5184,7 @@
       "key": "d3c71625-2f22-4f74-af43-4f45137a38ff",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r numerical_accuracy/csd7/2023] to each student\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r numerical_accuracy/csd/2023] to each student\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5461,7 +5462,7 @@
       "key": "2b2c3c49-4b05-4d27-890e-f87305fb4b00",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/csd7/2023] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/csd/2023] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.",
         "name": "Investigating Data",
         "tips": [
           {
@@ -5479,7 +5480,7 @@
       "key": "1252d395-a94d-4da3-b791-53166b69774e",
       "position": 6,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/csd7/2023] to each student.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab_1/csd/2023] to each student.\n\n",
         "progression_name": "Safari Model"
       },
       "seeding_key": {
@@ -5966,7 +5967,7 @@
       "key": "eae60534-cb15-4ca3-9c9b-00af3cf271cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/csd7/2023] video to setup the activity they will complete today.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/csd/2023] video to setup the activity they will complete today.",
         "tips": [
           {
             "type": "teachingTip",
@@ -6007,7 +6008,7 @@
       "key": "0a70d48a-473d-487f-a621-714ce2feefef",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/csd7/2023] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/csd7/2023] handout. \n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/csd/2023] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/csd/2023] handout. \n\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6100,7 +6101,7 @@
       "key": "b73d943d-99db-4fb8-8e53-b33464b18f8b",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Pass out a copy of \n[r create_an_ml_app_-_project_guide/csd7/2023] to each student."
+        "description": "**Distribute:** Pass out a copy of \n[r create_an_ml_app_-_project_guide/csd/2023] to each student."
       },
       "seeding_key": {
         "activity_section.key": "b73d943d-99db-4fb8-8e53-b33464b18f8b",
@@ -6421,7 +6422,7 @@
       "key": "6d0d899c-5b42-43c6-912d-8aa6e4ad2785",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of [r 5_why_s_-_activity_guide/csd7/2023]. The first two boxes are filled out to match the slides. The remaining three boxes should be filled in by students.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of [r 5_why_s_-_activity_guide/csd/2023]. The first two boxes are filled out to match the slides. The remaining three boxes should be filled in by students.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6533,7 +6534,7 @@
       "key": "f2283791-3e27-4934-9686-6ab5805312bb",
       "position": 16,
       "properties": {
-        "description": "**Distribute:** Pass out copies of the [r app_brainstorm_-_activity_guide/csd7/2023]. The issue statement at the top has already been filled in. \n",
+        "description": "**Distribute:** Pass out copies of the [r app_brainstorm_-_activity_guide/csd/2023]. The issue statement at the top has already been filled in. \n",
         "duration": "20",
         "name": "App Brainstorm"
       },
@@ -6688,7 +6689,7 @@
       "key": "73ba04b1-4a25-4307-830a-8559573955ee",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r survey_planning_-_activity_guide/csd7/2023] to each student. Part of the activity guide has already been filled in.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r survey_planning_-_activity_guide/csd/2023] to each student. Part of the activity guide has already been filled in.\n\n",
         "duration": "15",
         "name": "Designing Questions"
       },
@@ -7026,7 +7027,7 @@
       "key": "71e374ca-dda6-42e3-9364-a3b32196d5f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r view_and_download_survey_data/csd7/2023] video in the alides. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r view_and_download_survey_data/csd/2023] video in the alides. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -7241,7 +7242,7 @@
       "key": "860a70be-6e28-4256-8976-9ccdd594592e",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r cleaning_survey_data/csd7/2023] video in the slides. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r cleaning_survey_data/csd/2023] video in the slides. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -7372,7 +7373,7 @@
       "key": "4d12300d-c18a-42f1-bfed-7a855f3c0f5f",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Pass out the [r troubleshooting_models_-_activity_guide/csd7/2023]. Students will record data from their investigation here.",
+        "description": "**Distribute:** Pass out the [r troubleshooting_models_-_activity_guide/csd/2023]. Students will record data from their investigation here.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -7769,7 +7770,7 @@
       "key": "7f0599a5-4928-4442-b5df-079fc6d939ca",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Give students copies of the [r design_an_ai_app_-_project_guide/csd7/2023].\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n",
+        "description": "**Distribute:** Give students copies of the [r design_an_ai_app_-_project_guide/csd/2023].\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n",
         "name": "Activity",
         "tips": [
           {
@@ -7787,7 +7788,7 @@
       "key": "bf9bfd4a-0b2b-4ac7-812c-d99ed30d9bc3",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an issue statement they would like to address with machine learning. Encourage students to use the 5 Why's strategy from the previous lessons. You may even decide to have some copies of the [r 5_why_s_-_activity_guide/csd7/2023] available for students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an issue statement they would like to address with machine learning. Encourage students to use the 5 Why's strategy from the previous lessons. You may even decide to have some copies of the [r 5_why_s_-_activity_guide/csd/2023] available for students.",
         "name": "Step 1 - Choose an Issue Statement",
         "tips": [
           {
@@ -7870,7 +7871,7 @@
       "key": "07b875ec-ae94-42a9-8b61-7a91a3f21df9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students make a copy of [r survey_template_google_form_/csd7/2023]. This is the same template from the previous lesson to create their survey. Students can re-watch the video on how to use the template and make sure their data is protected.\n\nStudents should create their survey in Google Forms. Once the survey is ready, they can plan how they would like to distribute it. Once students reach this stage, they may need to pause while people complete their survey and they collect data.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students make a copy of [r survey_template_google_form_/csd/2023]. This is the same template from the previous lesson to create their survey. Students can re-watch the video on how to use the template and make sure their data is protected.\n\nStudents should create their survey in Google Forms. Once the survey is ready, they can plan how they would like to distribute it. Once students reach this stage, they may need to pause while people complete their survey and they collect data.\n",
         "name": "Step 4 - Create Your Survey",
         "tips": [
           {
@@ -7943,7 +7944,7 @@
       "key": "537d1e11-4e45-4dd2-9216-ce37aa67f1d5",
       "position": 4,
       "properties": {
-        "description": "**Complete a Model Card:** Once their model is trained and saved from AI Lab, they should spend time creating the model card for their data. You can provide two options for students to create their model card:\n\n- [r model_card_-_printable_template/csd7/2023] - You can print out a model card for each student, or provide poster paper for a student to use to create their model card. They should use previous model cards as examples of what to include. Students can also use post-its or notecards to complete the Label and Features section of their model cards. These cards can then be displayed around the room as a tangible representation of their work during this unit\n- [r model_card_-_digital_template/csd7/2023] - Have students make a copy of the Model Card digital template that they can edit. Any _italicized_ text in [brackets] can be replaced with their own words. They can also create copies of the digital post-it notes for the Label and Features screen. These digital versions can be posted on a virtual gallery along with their apps as a way to represent their work during this unit."
+        "description": "**Complete a Model Card:** Once their model is trained and saved from AI Lab, they should spend time creating the model card for their data. You can provide two options for students to create their model card:\n\n- [r model_card_-_printable_template/csd/2023] - You can print out a model card for each student, or provide poster paper for a student to use to create their model card. They should use previous model cards as examples of what to include. Students can also use post-its or notecards to complete the Label and Features section of their model cards. These cards can then be displayed around the room as a tangible representation of their work during this unit\n- [r model_card_-_digital_template/csd/2023] - Have students make a copy of the Model Card digital template that they can edit. Any _italicized_ text in [brackets] can be replaced with their own words. They can also create copies of the digital post-it notes for the Label and Features screen. These digital versions can be posted on a virtual gallery along with their apps as a way to represent their work during this unit."
       },
       "seeding_key": {
         "activity_section.key": "537d1e11-4e45-4dd2-9216-ce37aa67f1d5",
@@ -12303,7 +12304,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -14432,6 +14433,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

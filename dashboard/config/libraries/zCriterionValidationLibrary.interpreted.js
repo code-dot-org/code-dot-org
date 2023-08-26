@@ -806,7 +806,7 @@ function trackSpriteSpeech(spriteId) {
     validationProps.previous.spriteSpeeches = {};
   }
   
-  validationProps.spriteSpeeches[spriteId] = getSpeechForSpriteId(spriteIds[0]);
+  validationProps.spriteSpeeches[spriteId] = getSpeechForSpriteId(spriteId);
 }
 
 /**

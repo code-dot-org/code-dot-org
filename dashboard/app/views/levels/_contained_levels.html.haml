@@ -14,6 +14,6 @@
       - if level_class == "multi"
         = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: sublevel_last_attempt, level: contained_level, tight_layout: true}
       - elsif level_class == "free_response"
-        = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
+        = render partial: 'levels/free_response', locals: {in_level_group: false, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
 
 %div{style: 'clear: both;'}

@@ -15,9 +15,6 @@ import {
   stubComponentInitialization,
   restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
-import experiments from '@cdo/apps/util/experiments';
-import ChromeSerialPort from 'chrome-serialport';
-import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -61,16 +58,18 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
-    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
     circuitPlaygroundBoardSetup();
+    sinon.stub(CircuitPlaygroundBoard, 'openWebSerial').callsFake(() => {
+      return Promise.resolve();
+    });
   });
 
   afterEach(() => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
+    sinon.restore();
   });
 
   function circuitPlaygroundBoardSetup() {
@@ -100,13 +99,12 @@ describe('CircuitPlaygroundBoard', () => {
   );
 
   describe(`connect()`, () => {
-    // Remove these lines when maker-captouch is on by default.
-    before(() => experiments.setEnabled('maker-captouch', true));
-    after(() => experiments.setEnabled('maker-captouch', false));
-
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(23);
+        // The CP board contains 16 'prewiredComponents_' which are assigned by
+        // function createCircuitPlaygroundComponents which include components, board,
+        // and JS_CONSTANTS.
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -118,13 +116,6 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonL).to.be.a('object');
         expect(board.prewiredComponents_.buttonR).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad0).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad2).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad3).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad6).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
         expect(board.prewiredComponents_.ANALOG).to.be.a('number');

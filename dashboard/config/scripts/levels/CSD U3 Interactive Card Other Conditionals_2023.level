@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -171,7 +176,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Other Conditionals\r\nThe _surprise_ in your card comes from conditionals that don't directly respond to user input, but to some other element of your card. This could be triggered by a variable that gets updated as the user interacts with your card, or a Sprite moving into a certain part of the screen.\r\n\r\n# Do This\r\nFor each of the remaining items on your interactions table:\r\n\r\n* Add an `if` block (or `if-else` block if you need a fallback action) inside the draw loop.\r\n* Add the appropriate Boolean comparison block to the condition (eg. `<`, `>`, or `==`).\r\n* Add the necessary actions inside the `if` block.\r\n\r\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?",
+    "long_instructions": "# Other Conditionals\r\nThe _surprise_ in your card comes from conditionals that don't directly respond to user input, but to some other element of your card. This could be triggered by a variable that gets updated as the user interacts with your card, or a Sprite moving into a certain part of the screen.\r\n\r\n# Do This\r\nFor each of the remaining items on your interactions table from your project guide:\r\n\r\n1) Add an [`if()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) block (or [`if()/else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock) block if you need a fallback action) inside the draw loop.\r\n* Add the appropriate Boolean comparison block to the condition (eg. [`<`(#FFB74D)](/docs/ide/gamelab/expressions/lessThanOperator), [`>`(#FFB74D)](/docs/ide/gamelab/expressions/greaterThanOperator), or [`==`(#FFB74D)](/docs/ide/applab/expressions/equalityOperator)).\r\n* Add the necessary actions inside the [`if()`(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) block.\r\n\r\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -200,7 +205,7 @@
     "show_debug_watch": "true",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "DbcgLWAhhndBAdrxA7uWLPE9O1Sxc+OHht5SFng84il6gYSghqyEPJ+2FdO1\n4x04\n",
     "hide_share_and_remix": "false",
@@ -228,13 +233,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:59:13.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:13.361+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Other Conditionals_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Other Conditionals_2022\"},{\"changed_at\":\"2023-03-09 17:46:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:13.361+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Other Conditionals_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Other Conditionals_2022\"},{\"changed_at\":\"2023-03-09 17:46:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-22 17:01:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 16:39:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:44:25 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

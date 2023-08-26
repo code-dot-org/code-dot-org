@@ -89,7 +89,7 @@ class DSLDefined < Level
   end
 
   def self.setup(data, md5=nil)
-    level = find_or_create_by({name: data[:name]})
+    level = find_or_create_by({name: data[:name].strip})
     level.send(:write_attribute, 'properties', {})
 
     level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
@@ -238,7 +238,7 @@ class DSLDefined < Level
   end
 
   private def delete_level_file
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 end
 

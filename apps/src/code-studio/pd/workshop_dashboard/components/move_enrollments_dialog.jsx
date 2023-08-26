@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class MoveEnrollmentsDialog extends React.Component {
   static propTypes = {

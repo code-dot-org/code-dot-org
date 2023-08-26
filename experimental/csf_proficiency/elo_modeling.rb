@@ -97,7 +97,7 @@ def new_proficiency(prior, difficulty, user_level_data)
   actual = perfect_without_hints(*user_level_data)
   expected = get_expected_score(prior, difficulty)
   post = prior + (KAPPA * (actual - expected))
-  [[0.0, post].max, 6.0].min
+  post.clamp(0.0, 6.0)
 end
 
 # @param user_level_data [...]

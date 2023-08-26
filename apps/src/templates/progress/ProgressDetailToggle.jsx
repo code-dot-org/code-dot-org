@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
-import {setIsSummaryView, hasGroups} from '@cdo/apps/code-studio/progressRedux';
+import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
+import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 

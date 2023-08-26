@@ -135,7 +135,9 @@ $droplet_white: $white;
 
 // Oceans: deep blue background.
 $oceans_deep_blue: rgb(2, 0, 28);
-$music_black: #000;
+
+// Dark theme background (used by default in Music Lab)
+$dark_black: #121212;
 
 // ===----===----===---- Phase 1 Colors: ----===----===----===
 // Brand
@@ -178,3 +180,16 @@ $neutral_dark: #292F36;
 $google_brand_color: #0F9D58;
 $microsoft_brand_color: #FFB900;
 $facebook_brand_color: #3B5998;
+
+// ===----===----===---- Design system colors: ----===----===----===
+
+$light_primary_100: #ABDFE5;
+$light_primary_500: #0093A4;
+$light_primary_700: #008291;
+
+$light_gray_200: #D4D5D7;
+$light_gray_300: #BFC1C3;
+$light_gray_500: #94979B;
+$light_gray_700: #6A6E73;
+
+$light_affirmative_100: #E2F1E2;

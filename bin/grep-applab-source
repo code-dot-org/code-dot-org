@@ -9,6 +9,8 @@ MAX_THREADS = 200
 # Must be a multiple of MAX_THREADS.
 LOG_INCREMENT = 1000
 
+HEADERS = %w{owner_storage_id match project_url}
+
 if ARGV.length < 2 || ARGV.length.odd?
   warn "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
   exit(1)
@@ -31,7 +33,7 @@ end
 commands = ARGV.map(&:to_s).map(&:strip).each_slice(2).to_a.map do |regex, filename|
   # print tsv headers
   File.open(filename, 'w') do |file|
-    file << (%w{owner_storage_id match project_url}.join("\t") + "\n")
+    file << (HEADERS.join("\t") + "\n")
   end
 
   # construct regex

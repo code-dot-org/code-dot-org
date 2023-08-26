@@ -61,13 +61,14 @@ export default function VersionUnitDropdowns({
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
-        {courseOffering && (
-          <AssignmentVersionSelector
-            selectedCourseVersionId={sectionCourse.versionId}
-            courseVersions={prepareCourseVersions()}
-            onChangeVersion={id => updateCourseVersion(id)}
-          />
-        )}
+        {Object.values(prepareCourseVersions()).length > 1 &&
+          courseOffering && (
+            <AssignmentVersionSelector
+              selectedCourseVersionId={sectionCourse.versionId}
+              courseVersions={prepareCourseVersions()}
+              onChangeVersion={id => updateCourseVersion(id)}
+            />
+          )}
         {sectionCourse?.versionId &&
           orderedUnits &&
           Object.entries(orderedUnits).length > 1 && (

@@ -1,7 +1,12 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2023-02-06T19:26:02.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "properties": {
-    "video_key": "csc-mapmakers-intro",
+    "video_key": "CSF_SpriteLab_Intro_v2",
     "instructions_important": "false",
     "display_name": "This is Sprite Lab",
     "skip_dialog": true,
@@ -10,13 +15,8 @@
     "name_suffix": "_2023",
     "encrypted": "false"
   },
-  "game_id": 54,
-  "published": true,
-  "created_at": "2023-02-06T19:26:02.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:02.132+00:00\",\"changed\":[\"cloned from \\\"CourseF_video_introSpriteLab_-2022-2\\\"\"],\"cloned_from\":\"CourseF_video_introSpriteLab_-2022-2\"},{\"changed_at\":\"2023-03-28 15:13:30 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:02.132+00:00\",\"changed\":[\"cloned from \\\"CourseF_video_introSpriteLab_-2022-2\\\"\"],\"cloned_from\":\"CourseF_video_introSpriteLab_-2022-2\"},{\"changed_at\":\"2023-03-28 15:13:30 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-29 21:38:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 22:20:43 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -93,7 +93,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
     assert Pd::Workshop.exclude_summer.exclude? teachercon
-    assert Pd::Workshop.exclude_summer.include? @workshop
+    assert_includes(Pd::Workshop.exclude_summer, @workshop)
   end
 
   test 'managed_by' do
@@ -417,7 +417,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only teachers attended workshop get follow up emails' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
 
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
@@ -429,7 +429,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up all teachers attended workshop get follow up emails' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -440,7 +440,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -459,9 +459,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
-    workshop_31d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 31.days
-    workshop_30d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
-    workshop_29d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 29.days
+    workshop_31d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 31.days
+    workshop_30d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
+    workshop_29d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 29.days
 
     create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
@@ -514,7 +514,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'start date filters' do
-    pivot_date = Date.today
+    pivot_date = Time.zone.today
     workshop_before = create :workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
     # Start in the middle of the day. Since the filter is by date, this should be included in all the queries.
     workshop_pivot = create :workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
@@ -557,26 +557,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'future scope' do
     future_workshops = [
       # Today
-      a = create(:workshop, sessions_from: Date.today),
+      a = create(:workshop, sessions_from: Time.zone.today),
 
       # Next week
-      b = create(:workshop, sessions_from: Date.today + 1.week)
+      b = create(:workshop, sessions_from: Time.zone.today + 1.week)
     ]
 
     # Excluded (not future) workshops:
     # Last week
-    c = create :workshop, sessions_from: Date.today - 1.week
+    c = create :workshop, sessions_from: Time.zone.today - 1.week
     # Today, but ended
-    d = create :workshop, :ended, sessions_from: Date.today
+    d = create :workshop, :ended, sessions_from: Time.zone.today
     # Next week, but ended
-    e = create :workshop, :ended, sessions_from: Date.today + 1.week
+    e = create :workshop, :ended, sessions_from: Time.zone.today + 1.week
 
     workshop_ids = [a, b, c, d, e].map(&:id)
     assert_equal future_workshops, Pd::Workshop.where(id: workshop_ids).future
   end
 
   test 'end date filters' do
-    pivot_date = Date.today
+    pivot_date = Time.zone.today
     workshop_before = create :workshop, ended_at: pivot_date - 1.week
     # End in the middle of the day. Since the filter is by date, this should be included in all the queries.
     workshop_pivot = create :workshop, ended_at: pivot_date + 8.hours
@@ -598,7 +598,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
     workshops = Array.new(5) do |i|
-      build :workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
+      build :workshop, num_sessions: rand(1..5), sessions_from: Time.zone.today + i.days
     end
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -765,9 +765,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'teacher enrollment'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'teacher enrollment')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -785,9 +785,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'organizer workshop'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'organizer workshop')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -804,9 +804,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'facilitator'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'facilitator')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'facilitator reminders are skipped when the facilitator is also the organizer' do
@@ -876,8 +876,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
-      session1 = create(:pd_session, start: Date.today + 15.days),
-      session2 = create(:pd_session, start: Date.today + 20.days)
+      session1 = create(:pd_session, start: Time.zone.today + 15.days),
+      session2 = create(:pd_session, start: Time.zone.today + 20.days)
     ]
     assert_equal session1.start, workshop.workshop_starting_date
     assert_equal session2.start, workshop.workshop_ending_date
@@ -885,12 +885,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'workshop date range string for single session workshop' do
     workshop = create :workshop, num_sessions: 1
-    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+    assert_equal Time.zone.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
   end
 
   test 'workshop date range string for multi session workshop' do
     workshop = create :workshop, num_sessions: 2
-    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
+    assert_equal "#{Time.zone.today.strftime('%B %e, %Y')} - #{Time.zone.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do
@@ -1321,10 +1321,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest' do
-    target = create :workshop, sessions_from: Date.today + 1.week
+    target = create :workshop, sessions_from: Time.zone.today + 1.week
 
-    x = create :workshop, sessions_from: Date.today + 2.weeks
-    y = create :workshop, sessions_from: Date.today - 2.weeks
+    x = create :workshop, sessions_from: Time.zone.today + 2.weeks
+    y = create :workshop, sessions_from: Time.zone.today - 2.weeks
 
     ids = [target, x, y].map(&:id)
 
@@ -1332,9 +1332,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest is independent of creation order' do
-    x = create :workshop, sessions_from: Date.today - 2.weeks
-    target = create :workshop, sessions_from: Date.today + 1.week
-    y = create :workshop, sessions_from: Date.today + 2.weeks
+    x = create :workshop, sessions_from: Time.zone.today - 2.weeks
+    target = create :workshop, sessions_from: Time.zone.today + 1.week
+    y = create :workshop, sessions_from: Time.zone.today + 2.weeks
 
     ids = [x, target, y].map(&:id)
 
@@ -1352,18 +1352,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :csp_summer_workshop, sessions_from: Date.today + 1.day
+    target = create :csp_summer_workshop, sessions_from: Time.zone.today + 1.day
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :csp_summer_workshop, sessions_from: Date.today + 1.week
+    same_subject_farther = create :csp_summer_workshop, sessions_from: Time.zone.today + 1.week
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
-    different_subject_closer = create :workshop, sessions_from: Date.today,
+    different_subject_closer = create :workshop, sessions_from: Time.zone.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :csp_summer_workshop, sessions_from: Date.today
+    create :csp_summer_workshop, sessions_from: Time.zone.today
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
     assert_equal target, found
@@ -1373,7 +1373,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher = create :teacher
 
     # 2 workshops on the same day
-    workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
+    workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Time.zone.today - 1.day
 
     # Attend first session from one
     create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
@@ -1394,8 +1394,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     other_teacher = create :teacher
 
     # 2 workshops on the same day for each course
-    csd_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
-    csp_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
+    csd_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Time.zone.today - 1.day, course: COURSE_CSD
+    csp_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Time.zone.today - 1.day, course: COURSE_CSP
 
     # Enroll in the first of each
     create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]
@@ -1427,28 +1427,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     csf_workshop = create :workshop, course: COURSE_CSF
     potential_organizer_ids = csf_workshop.potential_organizers.ids
 
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? program_manager.id
-    assert potential_organizer_ids.include? csf_facilitator.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, program_manager.id)
+    assert_includes(potential_organizer_ids, csf_facilitator.id)
     # don't include other types of facilitators
-    refute potential_organizer_ids.include? csd_facilitator.id
+    refute_includes(potential_organizer_ids, csd_facilitator.id)
 
     # non-csf workshop without regional partner has workshop admins and all program managers in list
     csd_workshop = create :workshop, course: COURSE_CSD
     potential_organizer_ids = csd_workshop.potential_organizers.ids
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? program_manager.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, program_manager.id)
     # facilitators cannot be organizers for non-csf workshops
-    refute potential_organizer_ids.include? csd_facilitator.id
+    refute_includes(potential_organizer_ids, csd_facilitator.id)
 
     # non-csf workshop with a regional partner has only that regional partner's program managers, and all workshop admins
     workshop_partner = create :regional_partner
     workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
     csd_workshop.regional_partner = workshop_partner
     potential_organizer_ids = csd_workshop.potential_organizers.ids
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? workshop_partner_program_manager.id
-    refute potential_organizer_ids.include? program_manager.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, workshop_partner_program_manager.id)
+    refute_includes(potential_organizer_ids, program_manager.id)
   end
 
   test 'virtual workshops don\'t automatically suppress email' do
@@ -1520,9 +1520,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must not require teacher application' do
+  test 'CSD academic year workshop must require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
+    assert workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do
@@ -1574,6 +1574,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   def today
-    Date.today.in_time_zone
+    Time.zone.today
   end
 end

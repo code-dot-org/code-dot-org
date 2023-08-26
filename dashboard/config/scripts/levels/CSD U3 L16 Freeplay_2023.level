@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:00:41.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -106,7 +111,7 @@
     "long_instructions": "# Food Combos\r\n\r\nUse what you've learned so far to create an animation of two foods that combine into a new, different food when they touch!\r\n\r\nFor example, when a jar of peanut butter and a jar of jelly touch they disappear and turn into a peanut butter and jelly sandwich or when a potato and a jar of ketchup touch, they disappear and turn into french fries with a side of ketchup!\r\n\r\nWhen you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png) to send it to your Projects Gallery.",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "show_debug_watch": "true",
@@ -139,13 +144,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:00:41.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:41.905+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L16 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L16 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 23:37:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 01:17:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:41.905+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L16 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L16 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 23:37:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 01:17:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:04:08 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:52:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

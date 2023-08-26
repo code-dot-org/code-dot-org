@@ -21,7 +21,7 @@ export default class LibraryIdCopier extends React.Component {
           type="text"
           ref={channelId => (this.channelId = channelId)}
           onClick={event => event.target.select()}
-          readOnly="true"
+          readOnly
           value={channelId}
           style={styles.copy}
         />

@@ -2,7 +2,6 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
-  include User::GenderExperimentHelper
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -101,9 +100,6 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
-    gender = params.dig(:user, :gender)
-    gender_input_type = gender_input_type?(request, session)
-
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(
@@ -123,7 +119,6 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
-      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup', current_user)
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -213,7 +208,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
-  # from cached pages which will not populate the CSRF token
+  # from cached pages which will not populate the CSRF token. This also skips lockout policy
+  # checks since those depend on the age being set.
   def set_age
     return head(:forbidden) unless current_user
     current_user.update(age: params[:user][:age]) if current_user.age.blank?
@@ -438,6 +434,7 @@ class RegistrationsController < Devise::RegistrationsController
       :current_password,
       :password_confirmation,
       :gender,
+      :gender_student_input,
       :name,
       :locale,
       :age,
@@ -446,6 +443,8 @@ class RegistrationsController < Devise::RegistrationsController
       :full_address,
       :terms_of_service_version,
       :provider,
+      :us_state,
+      :country_code,
       school_info_attributes: [
         :country,
         :school_type,

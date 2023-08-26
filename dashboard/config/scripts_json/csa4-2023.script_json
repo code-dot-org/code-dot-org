@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-09 21:07:01 UTC",
+    "serialized_at": "2023-08-22 17:50:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -74,6 +75,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2023"
       }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
     }
   ],
   "lessons": [
@@ -86,7 +99,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What can I make with The Theater?**\n\nIn this unit, students explore data visualizations and consider how they can create their own visuals to tell a story about a dataset. Students start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods they can use to create drawings, show images, and play sounds. They then practice using these methods to create simple drawings and visuals and consider how they can use The Theater to create animations and visualizations of the dataset they used for their Data for Social Good Project.",
-        "preparation": "* Preview the *Welcome to The Theater* video\n* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-1-the-theater/37897) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L1 Guided Notes (one for each student)\n* Preview the *Welcome to The Theater* video\n* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-1-the-theater/37897) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I make with The Theater?**\n\nIn this unit, you explore data visualizations and consider how you can create your own visuals to tell a story about a dataset. You start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods you can use to create drawings, show images, and play sounds. You then practice using these methods to create simple drawings and visuals and consider how you can use The Theater to create animations and visualizations of the dataset you used for your Data for Social Good Project."
       },
       "seeding_key": {
@@ -103,8 +116,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use static variables and methods?**\n\nStudents have written instance variables and methods that require an object to be created. In this lesson, students learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. Students explore the functionality of static variables and methods, then practice using these to solve problems.",
-        "preparation": "* Preview the *Static Variables* and *Static Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-2-static-variables-and-methods/37898) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L2 Guided Notes (one for each student)\n* Preview the *Static Variables* and *Static Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-2-static-variables-and-methods/37898) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use static variables and methods?**\n\nYou have written instance variables and methods that require an object to be created. In this lesson, you learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. You explore the functionality of static variables and methods, then practice using these to solve problems."
       },
       "seeding_key": {
@@ -121,8 +135,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
-        "preparation": "* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-3-the-math-class/37899) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L3 Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-3-the-math-class/37899) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the `Math` class?**\n\nYou have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, you learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. You explore the documentation for the `Math` class to identify its methods and learn about their functionalities. You then practice creating and using constants and calling methods in the `Math` class."
       },
       "seeding_key": {
@@ -139,8 +154,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is casting useful for in a program?**\n\nStudents have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, students learn about casting operators and how they can be used to temporarily convert a value to a different type. They explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. Students also learn how to use casting operators to round a `double` value to the nearest integer.",
-        "preparation": "* Preview the *Casting* video\n* Print copies of the Investigating Casting handout (one for each student)\n* Print copies of the Dataset Summaries handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-4-casting-and-rounding/37900) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L4 Guided Notes (one for each student)\n* Preview the *Casting* video\n* Print copies of the Investigating Casting handout (one for each student)\n* Print copies of the Dataset Summaries handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-4-casting-and-rounding/37900) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is casting useful for in a program?**\n\nYou have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, you learn about casting operators and how they can be used to temporarily convert a value to a different type. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. You also learn how to use casting operators to round a `double` value to the nearest integer."
       },
       "seeding_key": {
@@ -157,8 +173,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
-        "preparation": "* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-5-random/37901) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L5 Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-5-random/37901) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, you learn about the functionality of `Math.random()` and discover its benefits and limitations. You consider how you can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs you use every day. You then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array."
       },
       "seeding_key": {
@@ -175,8 +192,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I check if two objects are equal?**\n\nIn this lesson, students discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. They revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. Students then practice overriding the `equals()` method in a class and comparing objects for equality.",
-        "preparation": "* Preview the *Aliasing* and *The equals() Method* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-6-object-aliases-and-equality/37902) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L6 Guided Notes (one for each student)\n* Preview the *Aliasing* and *The equals() Method* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-6-object-aliases-and-equality/37902) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if two objects are equal?**\n\nIn this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. You then practice overriding the `equals()` method in a class and comparing objects for equality."
       },
       "seeding_key": {
@@ -193,8 +211,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. They also learn how to use the `length()` method in the `String` class to find the length of a `String` object. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
-        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-7-nested-if-statements/37903) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-7-nested-if-statements/37903) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You also learn how to use the `length()` method in the `String` class to find the length of a `String` object. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
       },
       "seeding_key": {
@@ -211,8 +230,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
-        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L8 Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
       },
       "seeding_key": {
@@ -229,8 +249,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are De Morgan's Laws?**\n\nIn this lesson, students learn about De Morgan's Laws and how they are applied to Boolean expressions. They explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
-        "preparation": "* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-9-de-morgans-laws/37905) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L9 Guided Notes (one for each student)\n* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-9-de-morgans-laws/37905) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
       },
       "seeding_key": {
@@ -247,8 +268,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, students expand their knowledge of selection statements to evaluate and implement multi-selection statements. They explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students then practice writing algorithms using multi-selection statements to solve problems.",
-        "preparation": "* Preview the *Multi-Selection Statements* video\n* Print copies of the Unit 4 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-10-multi-selection-statements/37906) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L10 Guided Notes (one for each student)\n* Preview the *Multi-Selection Statements* video\n* Print copies of the Unit 4 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-10-multi-selection-statements/37906) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, you expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You then practice writing algorithms using multi-selection statements to solve problems."
       },
       "seeding_key": {
@@ -344,6 +366,51 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa4-2023"
       }
     }
@@ -946,6 +1013,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2023"
       }
+    },
+    {
+      "key": "17bbd616-f845-4539-8453-df807868dcca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17bbd616-f845-4539-8453-df807868dcca",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "key": "42b68eca-7aaf-4901-9937-5f1aa3f2b197",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42b68eca-7aaf-4901-9937-5f1aa3f2b197",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "key": "a2da60b4-a311-4011-8f1c-67ec34492002",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2da60b4-a311-4011-8f1c-67ec34492002",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -1008,7 +1111,7 @@
       "key": "68c0124e-7396-421e-bdcb-a2175b223c75",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: The Theater"
       },
       "seeding_key": {
@@ -1515,18 +1618,6 @@
       }
     },
     {
-      "key": "a1dd856c-325c-42a2-824e-d09ed678b535",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1dd856c-325c-42a2-824e-d09ed678b535",
-        "lesson_activity.key": "1c683b64-8dcf-4c2f-9e71-0f6ac59fefe0"
-      }
-    },
-    {
       "key": "d8dfee33-3555-4cfd-9d25-a771dfd8a141",
       "position": 1,
       "properties": {
@@ -1841,18 +1932,6 @@
       }
     },
     {
-      "key": "945cb879-4ce8-49c5-a3d8-d2c6673be5ae",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "945cb879-4ce8-49c5-a3d8-d2c6673be5ae",
-        "lesson_activity.key": "3a5a461a-d1b9-4a29-8ffe-779df8c74575"
-      }
-    },
-    {
       "key": "1d7b6781-8f9b-4070-9d9b-797b0123c5e1",
       "position": 1,
       "properties": {
@@ -2152,18 +2231,6 @@
       },
       "seeding_key": {
         "activity_section.key": "6a4f7573-3017-4f41-8e17-fd3574b0c4cc",
-        "lesson_activity.key": "aeb3363f-1343-40c7-ac5d-2860545bee09"
-      }
-    },
-    {
-      "key": "316e821a-6634-4506-be69-08d3c7068f27",
-      "position": 8,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "316e821a-6634-4506-be69-08d3c7068f27",
         "lesson_activity.key": "aeb3363f-1343-40c7-ac5d-2860545bee09"
       }
     },
@@ -2476,18 +2543,6 @@
       }
     },
     {
-      "key": "f23f2b3a-bcbe-4c4b-b8dc-6576a9dba246",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "f23f2b3a-bcbe-4c4b-b8dc-6576a9dba246",
-        "lesson_activity.key": "5f23beae-afcd-42b4-930a-c28ebf1dcb78"
-      }
-    },
-    {
       "key": "4a3d089e-319e-4626-a0bc-782f63aecb0d",
       "position": 1,
       "properties": {
@@ -2779,18 +2834,6 @@
       }
     },
     {
-      "key": "3e8513f7-e6c7-40be-b9fe-45902e56567b",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e8513f7-e6c7-40be-b9fe-45902e56567b",
-        "lesson_activity.key": "d98d5bf3-ef68-4764-b9a0-a9503c701e36"
-      }
-    },
-    {
       "key": "3c6b28cb-327b-4660-bb3a-a7ca39e3db9f",
       "position": 1,
       "properties": {
@@ -3027,18 +3070,6 @@
       },
       "seeding_key": {
         "activity_section.key": "cb3a6393-bdf2-43e8-8bbf-fefb06d04856",
-        "lesson_activity.key": "494e273c-da1d-46ae-b5bf-3fa6eb347145"
-      }
-    },
-    {
-      "key": "0d08704c-3876-47f2-a75c-14dc9e2110f3",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d08704c-3876-47f2-a75c-14dc9e2110f3",
         "lesson_activity.key": "494e273c-da1d-46ae-b5bf-3fa6eb347145"
       }
     },
@@ -3328,18 +3359,6 @@
       }
     },
     {
-      "key": "ea79620e-41d6-4a92-9808-1f0ff7fe543e",
-      "position": 8,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea79620e-41d6-4a92-9808-1f0ff7fe543e",
-        "lesson_activity.key": "3df641ba-872c-4d2d-b4a9-98e1e539e467"
-      }
-    },
-    {
       "key": "dfec1400-bc5e-42d3-af20-3f2f93bbc873",
       "position": 1,
       "properties": {
@@ -3578,18 +3597,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7b50fcfe-508c-4f84-b258-3e93f7acb312",
-        "lesson_activity.key": "d42124c1-0888-4500-a85d-71fca9d9ccd4"
-      }
-    },
-    {
-      "key": "5a6b029b-e876-41e0-979a-60b11fa95427",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "5a6b029b-e876-41e0-979a-60b11fa95427",
         "lesson_activity.key": "d42124c1-0888-4500-a85d-71fca9d9ccd4"
       }
     },
@@ -3835,18 +3842,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7ecd756f-5552-49cd-9a43-26cc3873377f",
-        "lesson_activity.key": "a453b1f2-e1ef-4f6c-a936-322ffdc9c67f"
-      }
-    },
-    {
-      "key": "4a47e2a5-eb04-470d-b867-c59bb2c8be7c",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a47e2a5-eb04-470d-b867-c59bb2c8be7c",
         "lesson_activity.key": "a453b1f2-e1ef-4f6c-a936-322ffdc9c67f"
       }
     },
@@ -4703,6 +4698,48 @@
       "seeding_key": {
         "activity_section.key": "2a68fa60-cbfc-4b0f-b351-358206526244",
         "lesson_activity.key": "6163bf3d-10d6-413e-9f29-56bc1cf6b78c"
+      }
+    },
+    {
+      "key": "9a2bc93e-99b2-4a64-abfe-c62f8d1a6fb0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9a2bc93e-99b2-4a64-abfe-c62f8d1a6fb0",
+        "lesson_activity.key": "17bbd616-f845-4539-8453-df807868dcca"
+      }
+    },
+    {
+      "key": "da834d99-f4f7-45fc-b5c8-270e057a0671",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "da834d99-f4f7-45fc-b5c8-270e057a0671",
+        "lesson_activity.key": "42b68eca-7aaf-4901-9937-5f1aa3f2b197"
+      }
+    },
+    {
+      "key": "92b4b6fe-d22c-48b8-b90d-3dbc56f8dde3",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "92b4b6fe-d22c-48b8-b90d-3dbc56f8dde3",
+        "lesson_activity.key": "42b68eca-7aaf-4901-9937-5f1aa3f2b197"
+      }
+    },
+    {
+      "key": "2080395d-9bcc-4845-8046-aedd8184b548",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2080395d-9bcc-4845-8046-aedd8184b548",
+        "lesson_activity.key": "a2da60b4-a311-4011-8f1c-67ec34492002"
       }
     }
   ],
@@ -6431,6 +6468,104 @@
       "level_keys": [
         "CSA U4 Abstract Data Art Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "9a2bc93e-99b2-4a64-abfe-c62f8d1a6fb0"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "da834d99-f4f7-45fc-b5c8-270e057a0671"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "92b4b6fe-d22c-48b8-b90d-3dbc56f8dde3"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "2080395d-9bcc-4845-8046-aedd8184b548"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7261,6 +7396,54 @@
         "script.name": "csa4-2023",
         "activity_section.key": "eef16038-eee3-43e7-bc14-f1f4bdb0c1c0"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "9a2bc93e-99b2-4a64-abfe-c62f8d1a6fb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "da834d99-f4f7-45fc-b5c8-270e057a0671"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "92b4b6fe-d22c-48b8-b90d-3dbc56f8dde3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa4-2023",
+        "activity_section.key": "2080395d-9bcc-4845-8046-aedd8184b548"
+      }
     }
   ],
   "resources": [
@@ -7286,6 +7469,126 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_asphalt_art_project_planning_guide_2"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1V_8-7_OBAbVxDhCKnG_hKQErsHjvTbeYyI7H_E8IE90/edit?usp=sharing",
+      "key": "_exemplar_u4l10_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l10_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Wflv_3heg-pTeuUv3GGOTKPPv5GqVENaCAPaV0TVwrE/edit?usp=sharing",
+      "key": "_exemplar_u4l1_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l1_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1AuN6ZG62jztFvdFHNorec0juGbeT4Jfc-lB80cS8HcY/edit?usp=sharing",
+      "key": "_exemplar_u4l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1cN6wLSG5mfEgc6b1oSer-G2N8plEmAdYDFF3vKvkxYM/edit?usp=sharing",
+      "key": "_exemplar_u4l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XYtQEQVob_LoRvUB-rH22HGylw6WH9C19jcm_l6r3QA/edit?usp=sharing",
+      "key": "_exemplar_u4l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1bVkcOV1NldlHKasM8qQq5TssX4cyGduHWxjqBxzAdUg/edit?usp=sharing",
+      "key": "_exemplar_u4l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1l-fE7hHBACKDqa64pPfaK9VRFmMVm_Al9eCYiKfrmh4/edit?usp=sharing",
+      "key": "_exemplar_u4l6_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l6_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1kuyZi5h14CF0y6hGxALtsq03yYxxQjMDn0AzsBDSE8g/edit?usp=sharing",
+      "key": "_exemplar_u4l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1aVXJF88_RWFr-Hzf382gqaL37BB3AFFKnfK33SyZZQs/edit?usp=sharing",
+      "key": "_exemplar_u4l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U4L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1RiPYV7KSsxCD-hzyKL5ij3-xtCk5wacTrNg9m4N6dsk/edit?usp=sharing",
+      "key": "_exemplar_u4l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u4l9_guided_notes"
       }
     },
     {
@@ -7697,6 +8000,30 @@
       }
     },
     {
+      "name": "CSA Unit 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1fQ5U_CHAs_Mbgc47Cf9CdH-HU12llSLl9N7_fiSSJWg/edit?usp=sharing",
+      "key": "csa_unit_4_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_4_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 4 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1xTZ59R5AF6pSndiIsfqNkuGnAzsTchl6wODx-67Fe1Q/edit?usp=sharing",
+      "key": "csa_unit_4_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_4_word_wall_cards"
+      }
+    },
+    {
       "name": "Dataset Summaries",
       "url": "https://docs.google.com/document/d/1OJNEj5YfQe7giilD4n1A7Zf-vResAHLS3xSzUZQWGuY/edit?usp=sharing",
       "key": "dataset_summaries",
@@ -7757,6 +8084,18 @@
       },
       "seeding_key": {
         "resource.key": "finding_patterns"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
       }
     },
     {
@@ -7932,7 +8271,7 @@
     },
     {
       "name": "The equals() Method",
-      "url": "https://youtu.be/F1WhwH4abX4",
+      "url": "https://youtu.be/60JCBG05Sac",
       "key": "the_equals_method",
       "properties": {
         "audience": "Student",
@@ -8019,6 +8358,32 @@
       }
     },
     {
+      "name": "U4L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1W-C4EUeersGF_Gywpd6JvrXXVNRH_KgcKEZpRZxap6w/edit?usp=sharing",
+      "key": "u4l1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l1_guided_notes"
+      }
+    },
+    {
+      "name": "U4L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1-qO2fBPVwjbHXi9dvrLFOK8cakR69zPbPabNAMg311U/edit?usp=sharing",
+      "key": "u4l1_guided_notes_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l1_guided_notes_1"
+      }
+    },
+    {
       "name": "U4L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1vN8hgpWP2mm99PzLUTMzvQWgAmhJUAdlSv0t5BpRO7k/edit?usp=sharing",
       "key": "u4l2_extra_practice",
@@ -8029,6 +8394,19 @@
       },
       "seeding_key": {
         "resource.key": "u4l2_extra_practice"
+      }
+    },
+    {
+      "name": "U4L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1JglCDhQYDRgWqnswiJsdVgpXPx2Z508lU2HLG4agiOU/edit?usp=sharing",
+      "key": "u4l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l2_guided_notes"
       }
     },
     {
@@ -8045,6 +8423,19 @@
       }
     },
     {
+      "name": "U4L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1DXD-1q10_8ISiNVnEcBXDuuUJYTbn_-bw94vZ2fM8qM/edit?usp=sharing",
+      "key": "u4l3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l3_guided_notes"
+      }
+    },
+    {
       "name": "U4L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1uf4TNAyfv_-DFyDoaMJVmqnMHBt8wsnHkod1tchphMI/edit?usp=sharing",
       "key": "u4l4_extra_practice",
@@ -8055,6 +8446,19 @@
       },
       "seeding_key": {
         "resource.key": "u4l4_extra_practice"
+      }
+    },
+    {
+      "name": "U4L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XDbddQtd-6TIHAgg3QFLDIRyDj4VL-S0W2OScnRuUXM/edit?usp=sharing",
+      "key": "u4l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l4_guided_notes"
       }
     },
     {
@@ -8071,6 +8475,19 @@
       }
     },
     {
+      "name": "U4L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1V86gycODJBKkzEptwa0IgDSQBeluP00NKFPRXa36AtY/edit?usp=sharing",
+      "key": "u4l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l5_guided_notes"
+      }
+    },
+    {
       "name": "U4L6 Extra Practice",
       "url": "https://docs.google.com/document/d/1YVOiViY6uMBgShNJdpHJGhHCEYo_IY_ar-hEu26OdtU/edit?usp=sharing",
       "key": "u4l6_extra_practice",
@@ -8081,6 +8498,19 @@
       },
       "seeding_key": {
         "resource.key": "u4l6_extra_practice"
+      }
+    },
+    {
+      "name": "U4L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1xKGZgl8DkbacVK0clIvbeB81LvDrvTHF7Z66sawohXs/edit?usp=sharing",
+      "key": "u4l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l6_guided_notes"
       }
     },
     {
@@ -8097,6 +8527,19 @@
       }
     },
     {
+      "name": "U4L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1E7rVpmESMuoOEQlg1Vgybbhh1sXHMzJQSkSv4zqXWAU/edit?usp=sharing",
+      "key": "u4l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l7_guided_notes"
+      }
+    },
+    {
       "name": "U4L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1UwWnEAvQD80wLadTBNOqb0-yNXc1b67nT-2c9WI4hJg/edit?usp=sharing",
       "key": "u4l8_extra_practice",
@@ -8110,6 +8553,19 @@
       }
     },
     {
+      "name": "U4L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1EKx3X5JAe2QtdKvGKW08cocdlU9sAr1E682fwM6BF1E/edit?usp=sharing",
+      "key": "u4l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l8_guided_notes"
+      }
+    },
+    {
       "name": "U4L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1WtW5w4OSXoGVjuXbEf1KhdLwwS31xjA5n1BsHRC1aGY/edit?usp=sharing",
       "key": "u4l9_extra_practice",
@@ -8120,6 +8576,19 @@
       },
       "seeding_key": {
         "resource.key": "u4l9_extra_practice"
+      }
+    },
+    {
+      "name": "U4L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1cfexcnFv5_YB2SLG3jSmkhSyrcHvVjrZK9WZM3z740Q/edit?usp=sharing",
+      "key": "u4l9_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l9_guided_notes"
       }
     },
     {
@@ -8245,7 +8714,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l6_guided_notes"
       }
     },
     {
@@ -8287,13 +8756,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l6_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l7_guided_notes"
       }
     },
     {
@@ -8329,7 +8798,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l7_guided_notes"
       }
     },
     {
@@ -8341,7 +8810,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l8_guided_notes"
       }
     },
     {
@@ -8389,13 +8858,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l9_guided_notes"
       }
     },
     {
@@ -8437,13 +8906,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l9_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l10_guided_notes"
       }
     },
     {
@@ -8485,7 +8954,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l1_guided_notes"
       }
     },
     {
@@ -8557,7 +9026,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l1_guided_notes"
       }
     },
     {
@@ -8599,7 +9068,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l1_guided_notes_1"
       }
     },
     {
@@ -8611,7 +9080,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l2_guided_notes"
       }
     },
     {
@@ -8653,13 +9122,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l2_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l3_guided_notes"
       }
     },
     {
@@ -8719,13 +9188,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l3_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l4_guided_notes"
       }
     },
     {
@@ -8779,13 +9248,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l4_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "_exemplar_unit_4_guide"
+        "resource.key": "_exemplar_u4l5_guided_notes"
       }
     },
     {
@@ -8821,7 +9290,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_4_guide"
+        "resource.key": "u4l5_guided_notes"
       }
     }
   ],
@@ -8847,6 +9316,24 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_4_slides",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_4_word_wall_cards",
+        "script.name": "csa4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
         "script.name": "csa4-2023"
       }
     },
@@ -9418,6 +9905,27 @@
   "lessons_standards": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.H.1"
@@ -9460,9 +9968,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9484,6 +10013,13 @@
         "lesson.key": "lesson-12",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9512,6 +10048,55 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9579,6 +10164,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.1"
@@ -9603,6 +10195,20 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9635,6 +10241,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.3"
@@ -9646,9 +10259,32 @@
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.D.4"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

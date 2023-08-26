@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -61,7 +66,7 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"00e0552e-f867-4555-bf47-8029f948702d\": {\r\n      \"name\": \"flyMan_fly\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/TAsnayFhAThGm7NUOUD4lQ/00e0552e-f867-4555-bf47-8029f948702d.png?version=_JIeGMsTaNOy5X0zKrvDNaTPlVq.oyjc\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 139\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_JIeGMsTaNOy5X0zKrvDNaTPlVq.oyjc\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "encrypted_examples": "noqH7jzfEETtkPmwrmdJIOfEMZRz1sF2pPMN5eHof+QZKQgrBLV5AmLSnVgU\nY6ned/wh0gBeR7I3RDHkSuP87A==\n",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -85,13 +90,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:03:09.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:09.059+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Call Draw Loop_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Call Draw Loop_2022\"},{\"changed_at\":\"2023-01-20 22:24:23 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 22:25:30 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 22:26:54 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:21:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:09.059+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Call Draw Loop_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Call Draw Loop_2022\"},{\"changed_at\":\"2023-01-20 22:24:23 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 22:25:30 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-20 22:26:54 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:21:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:17:24 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

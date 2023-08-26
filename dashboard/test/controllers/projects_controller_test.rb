@@ -181,7 +181,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'send to phone' do
     get :edit, params: {key: 'playlab', channel_id: 'my_channel_id'}
-    assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
+    assert_includes(@response.body, '"send_to_phone_url":"http://test.host/sms/send"')
   end
 
   test 'applab and gamelab edit gets redirected if under 13' do
@@ -423,5 +423,59 @@ class ProjectsControllerTest < ActionController::TestCase
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
+  end
+
+  test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}/view", key: 'music', channel_id: channel_id, readonly: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to /edit redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
+
+  test 'on lab2 levels navigating to a share URL redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to a share URL redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
+
+  test 'on lab2 levels navigating to an embed URL redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to an embed URL redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
   end
 end

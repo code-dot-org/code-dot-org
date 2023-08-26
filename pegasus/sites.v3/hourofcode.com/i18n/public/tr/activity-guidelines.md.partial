@@ -79,9 +79,9 @@ Ayrıca farklı konu alanları için tasarlanmış ders planları da sunuyoruz. 
 
 Hour of Code etkinliğinin amacı, yeni başlayanlara bilgisayar bilimi veya programlamayı ilk kez tanıtmaktır. Ton şu olmalıdır:
 
-- Yaşı, cinsiyeti, ırkı veya yeteneği/engeli ne olursa olsun herkes bilgisayar bilimini öğrenebilir. 
+- Yaşı, cinsiyeti, ırkı veya yeteneği/engeli ne olursa olsun herkes bilgisayar bilimini öğrenebilir.
 - Bilgisayar bilimi çok çeşitli alanlara ve ilgi alanlarına bağlıdır. Herkes öğrenmelidir!
-- Öğrencileri, ebeveynleriyle/arkadaşlarıyla veya çevrimiçi olarak paylaşılabilecek benzersiz bir şey yaratmaya teşvik edin. 
+- Öğrencileri, ebeveynleriyle/arkadaşlarıyla veya çevrimiçi olarak paylaşılabilecek benzersiz bir şey yaratmaya teşvik edin.
 
 Aktiviteler; döngüler, koşullar, şifreleme veya İnternetin nasıl çalıştığı gibi, bir bilgisayar bilimi kavramını öğretmelidir. Aktivitelerde, bilgisayar biliminin gerçek dünyadaki meslekler, olaylar veya tarih ile nasıl bağlantılı olduğu da öğretilebilir. Örneğin bir hedef kitle veya amaç için anlamlı uygulamalar yapmak üzere UX tasarımını öğretmek. Kavramlardan ziyade programlamanın sözdizimine odaklanan aktiviteleri tercih etmiyoruz. Örneğin HTML öğreten aktiviteleri listeye alır ama öne çıkarmayız. Benzer şekilde, bir algoritma veya sürecin nasıl modelleneceğini öğrenmek yerine, yapılandırma seçeneklerini belirlemeye/değiştirmeye odaklanan blok programlama derslerini de tercih etmiyoruz.
 
@@ -123,7 +123,7 @@ Oluşturabileceğiniz çok çeşitli öğretici ve ders planları hakkında fiki
 
 #### Ders Planlarını gönderirken ihtiyacınız olacak ek şeyler
 
-* Ders planınıza bağlantı verin. Bu bir web sayfası, dropbox bağlantısı, google drive veya benzeri bir hizmet olabilir. 
+* Ders planınıza bağlantı verin. Bu bir web sayfası, dropbox bağlantısı, google drive veya benzeri bir hizmet olabilir.
 * Öğretmenin ders planınızı yapması için hangi yazılıma ve/veya donanıma ihtiyacı olacak (Scratch? Robotlar? Hiçbir şey?)
 
 #### Çevrimiçi Aktiviteleri gönderirken ihtiyacınız olacak ek şeyler
@@ -182,7 +182,7 @@ Değerlendirme komitesi, aktiviteye üretim kalitesinde (kötü hatalar veya kul
 Ek olarak, listeye alınması için tüm aktivitelerin:
 
 - Bir devlet okulu sınıfına uygun olması gerekir (silah yok, açık/yetişkin içeriği yok, dini içerik yok vb.)
-- Kayıt gerektirmemesi gerekir 
+- Kayıt gerektirmemesi gerekir
 - Paralı olmaması gerekir (robotik faaliyetler istisnaidir; bunlar robot/kit satın almayı gerektirebilir) Yeni öğretmenler ve öğrenciler için kendi kendine yönlendirmeli aktivitelerde değerlendirme komitesi aşağıdakileri araştıracaktır:
 
 Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler için inceleme komitesi aşağıdakileri araştıracaktır:
@@ -213,7 +213,7 @@ Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler içi
 
 - Öğretici en iyi hangi platformlarda ve tarayıcılarda çalışıyor?
 - Akıllı telefonlarda çalışıyor mu? Tabletlerde?
-- Çiftli programlamayı öneriyor musunuz? 
+- Çiftli programlamayı öneriyor musunuz?
 - Sınıfta kullanım için dikkat edilmesi gerekenler? Örneğin video varsa öğretmene videoları projeksiyon kullanarak tüm sınıfın görebileceği şekilde izletmesini tavsiye edin
 
 **Etkinliğin sonuna geri bildirim ekleyin.** (Örn. "10 seviyeyi tamamladınız ve döngüleri öğrendiniz! İyi iş!")
@@ -276,4 +276,4 @@ Lütfen etkinliğinizi ağınıza tanıtın! Onları Hour of Code sayfanıza yö
 
 [**Başa dön**](#top)
 
-{{ signup_button }}<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

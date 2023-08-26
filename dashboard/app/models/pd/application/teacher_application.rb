@@ -927,6 +927,7 @@ module Pd::Application
       principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
       school_stats = get_latest_school_stats(school_id)
+      simple_columns = [:title_i_status, :students_total, :urm_percent]
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
@@ -947,7 +948,7 @@ module Pd::Application
         end
         CSV_COLUMNS[:nces].each do |k|
           if school_stats
-            if [:title_i_status, :students_total, :urm_percent].include? k
+            if simple_columns.include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
             elsif k == :rural_status
               row.push(school_stats.rural_school?)

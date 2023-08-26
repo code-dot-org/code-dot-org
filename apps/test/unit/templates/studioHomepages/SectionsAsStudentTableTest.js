@@ -87,6 +87,7 @@ describe('SectionsAsStudentTable', () => {
     });
   });
 
+  // Does not display sections with improper login type formats
   it('shows section codes correctly', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />

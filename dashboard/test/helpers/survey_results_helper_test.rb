@@ -48,7 +48,7 @@ class SurveyResultsHelperTest < ActionView::TestCase
     stubs(:request).returns(stub(location: stub(try: "RD")))
     follower = create :follower, user: @teacher
     follower.student_user.update(age: 10)
-    assert show_diversity_survey? SurveyResult::DIVERSITY_2023
+    refute show_diversity_survey? SurveyResult::DIVERSITY_2023
   end
 
   test 'show nps survey' do

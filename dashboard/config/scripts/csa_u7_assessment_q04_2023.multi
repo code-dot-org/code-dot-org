@@ -26,3 +26,21 @@ Which of the following code segments should replace missing code so that the `ad
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `addCurrencyToPurse` method is intended to add a specified amount to the `currency` instance variable and then return the new total amount of currency.
+
+The missing code needs to:
+
+1. Add the specified `amount` to the `currency`.
+
+2. Return the new total `currency`.
+
+So, the correct code to accomplish this would be:
+
+```
+currency = currency + amount;
+return currency;
+```
+
+This code first adds `amount` to `currency`, increasing the value of `currency` by `amount`. It then returns the updated value of `currency`, which is the new total amount of money in the purse. This will ensure the `addCurrencyToPurse` method works as intended: adding an amount to the purse and then returning the new total amount.
+MARKDOWN

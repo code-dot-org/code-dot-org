@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "bb4b340b-e46c-4087-958f-dc66d12ba1a3",
+          "notice": "Time Capsules (Fall 2022 Pilot) is being deprecated",
+          "details": "We are in the process of fully removing the Time Capsules (Fall 2022 Pilot) content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Time Capsules (Fall 2022 Pilot) content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -12,7 +24,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-timecapsule",
-    "serialized_at": "2023-02-06 19:23:16 UTC",
+    "serialized_at": "2023-06-27 22:27:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

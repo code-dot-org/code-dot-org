@@ -1,0 +1,15 @@
+#lockout-container{
+  data: {
+    request_date: @request_date.iso8601,
+    delete_date: @delete_date.iso8601,
+    pending_email: @pending_email,
+    api_url: url_for(
+      action: :child_account_consent,
+      controller: :policy_compliance
+    ),
+    student_email: @student_email,
+  }
+}
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/sessions/lockout.js')}

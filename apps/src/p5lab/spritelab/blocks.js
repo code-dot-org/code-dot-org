@@ -3,13 +3,13 @@ import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
 import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import experiments from '@cdo/apps/util/experiments';
-import {parseSoundPathString} from '@cdo/apps/p5lab/utils';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -76,7 +76,7 @@ function getAllBehaviors() {
   });
   behaviors.sort();
   if (allowBehaviorEditing || behaviors.length === 0) {
-    behaviors.push([noBehaviorLabel, Blockly.FieldDropdown.NO_OPTIONS_MESSAGE]);
+    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
   }
   return behaviors;
 }
@@ -237,25 +237,16 @@ const customInputTypes = {
         getStore().getState().pageConstants &&
         getStore().getState().pageConstants.showAnimationMode
       ) {
-        buttons = experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
-          ? [
-              {
-                text: i18n.backgroundMode(),
-                action: () => {
-                  getStore().dispatch(
-                    changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
-                  );
-                },
-              },
-            ]
-          : [
-              {
-                text: i18n.more(),
-                action: () => {
-                  getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
-                },
-              },
-            ];
+        buttons = [
+          {
+            text: i18n.backgroundMode(),
+            action: () => {
+              getStore().dispatch(
+                changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
+              );
+            },
+          },
+        ];
       }
       currentInputRow
         .appendField(inputConfig.label)
@@ -299,10 +290,23 @@ const customInputTypes = {
         }
       }
       block.thumbnailSize = 32;
+      // Try to get the image url for this block. If we find one,
+      // initialize the field with the image and short string.
+      // Otherwise, initialize the field with the long string and a 1 pixel
+      // wide empty image.
+      const imageUrl = Blockly.getPointerBlockImageUrl(
+        block,
+        spriteLabPointers
+      );
+      // We set the width to 1 so we don't show a blank space when there is no
+      // image (we can't set a width of 0). We keep the height the same no matter what
+      // because blockly doesn't seem to support us changing the height after initialization.
+      const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
+      const label = imageUrl.length > 0 ? block.shortString : block.longString;
       currentInputRow
-        .appendField(block.longString)
+        .appendField(label)
         .appendField(
-          new Blockly.FieldImage('', 1, block.thumbnailSize),
+          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },
@@ -403,8 +407,7 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       const invalidBehavior =
-        block.getFieldValue(arg.name) ===
-        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE;
+        block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
       const behaviorId = Blockly.JavaScript.variableDB_?.getName(
         block.getFieldValue(arg.name),
         'PROCEDURE'
@@ -418,10 +421,7 @@ const customInputTypes = {
     },
     openEditor(e) {
       e.stopPropagation();
-      if (
-        this.getFieldValue('BEHAVIOR') ===
-        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
-      ) {
+      if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
         Blockly.behaviorEditor.openWithNewFunction();
       } else {
         Blockly.behaviorEditor.openEditorForFunction(
@@ -472,6 +472,7 @@ export default {
   costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 

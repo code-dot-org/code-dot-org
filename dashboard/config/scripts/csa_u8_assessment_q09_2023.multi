@@ -37,3 +37,28 @@ What value will be returned by the call `bSearch(inputList, 0, 9, 55)`?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+Let's analyze the code to understand why:
+
+1. The method `bSearch` is called with the `ArrayList` `myList`, `low = 0`, `high = 9`, and `target = 55`.
+
+2. The variable `mid` is calculated as `(high + low) / 2`, which gives `(9 + 0) / 2 = 4`.
+
+3. The first conditional statement checks if `target` is less than `myList.get(mid)`. In this case, `target` is `55` and `myList.get(mid)` is `3`. Since `55` is greater than `3`, the first conditional statement is not satisfied.
+
+4. The second conditional statement checks if `target` is greater than `myList.get(mid)`. In this case, `target` is `55` and `myList.get(mid)` is `3`. Since `55` is greater than `3`, the second conditional statement is satisfied.
+
+5. The second conditional statement makes a recursive call to `bSearch` with updated values: `myList`, `low = mid + 1`, `high = 9`, and `target = 55`.
+
+6. In the recursive call, the variable `mid` is calculated as `(high + low) / 2`, which gives `(9 + 5) / 2 = 7`.
+
+7. The first conditional statement is not satisfied, as `target` is still greater than `myList.get(mid)`.
+
+8. The second conditional statement is not satisfied, as `target` is still greater than `myList.get(mid)`.
+
+9. The third conditional statement checks if `myList.get(mid)` equals `target`. In this case, `myList.get(mid)` is `13` and `target` is `55`. Since they are not equal, the third conditional statement is not satisfied.
+
+10. Since none of the conditional statements in the recursive call are satisfied, the method returns `-1`.
+
+Therefore, the value returned by the call `bSearch(inputList, 0, 9, 55)` is `-1`, indicating that the target value of `55` is not found in the `ArrayList` `inputList` between the elements at indices `0` and `9`.
+MARKDOWN

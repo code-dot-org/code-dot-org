@@ -28,6 +28,7 @@ use_my_apps: true
 build_dashboard: true
 build_pegasus: true
 build_apps: true
+build_i18n: true
 localize_apps: true
 dashboard_enable_pegasus: true
 dashboard_workers: 5

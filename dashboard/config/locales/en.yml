@@ -73,6 +73,7 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
+        us_state: 'State'
 
   beta: "beta"
   hello: "Hello world"
@@ -83,6 +84,7 @@ en:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_level: Next level
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
@@ -213,6 +215,9 @@ en:
     parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
     parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
     parent_account_email_label: "Parent/Guardian Email"
+    us_state: 'State'
+    us_state_dropdown_options:
+      other: "I live somewhere not listed here"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -281,6 +286,9 @@ en:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
+    parent_permission_request_subject: "Parental consent needed for your child's access to Code.org"
+    parent_permission_reminder_subject: "Reminder, parental consent needed for your child's access to Code.org"
+    parent_permission_confirmation_subject: "Thank you for approving your child's access to Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -366,6 +374,7 @@ en:
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab Documentation"
+      project_beats_documentation: "Project Beats Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -1183,7 +1192,7 @@ en:
       workshop_facilitator: 'Workshop Facilitator'
       workshop_course: 'Workshop Course'
       email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Male'
@@ -1192,17 +1201,34 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brazil'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'Dominican Republic'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        jamaica: 'Jamaica'
+        kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaysia'
+        maldives: 'Maldives'
         mexico: 'Mexico'
+        mongolia: 'Mongolia'
+        new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Slovakia'
+        south_korea: 'South Korea'
+        spain: 'Spain'
         thailand: 'Thailand'
+        trinidad_and_tobago: 'Trinidad and Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1251,6 +1277,8 @@ en:
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        csa: 'CS A'
+        other: 'Other'
         not_applicable: "Not applicable"
       email_opt_in:
         opt_in_yes: 'Yes'
@@ -1311,6 +1339,7 @@ en:
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
       confirm_login: 'Select "Confirm" to log in with your Google account.'
+    setup_page_title: 'Maker Setup'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1346,3 +1375,7 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
+    button: "View new curriculum"
+

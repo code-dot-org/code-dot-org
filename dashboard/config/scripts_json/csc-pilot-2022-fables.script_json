@@ -4,17 +4,28 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "f3a5a008-ca37-4d26-9981-0028572f0bb4",
+          "notice": "Fables Pilot is being deprecated",
+          "details": "We are in the process of fully removing the Fables Pilot content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Fables Pilot content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-2022-fables",
       "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-fables",
-    "serialized_at": "2022-06-17 14:14:10 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2023-06-27 22:24:06 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

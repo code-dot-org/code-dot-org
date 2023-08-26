@@ -37,12 +37,12 @@ export default class LessonAgenda extends Component {
               <li style={{marginLeft: 15}} key={section.key}>
                 {section.duration > 0 && (
                   <a
-                    href={`#section-${section.key}`}
+                    href={`#activity-section-${section.key}`}
                   >{`${section.displayName}`}</a>
                 )}
                 {section.duration === 0 && (
                   <a
-                    href={`#section-${section.key}`}
+                    href={`#activity-section-${section.key}`}
                   >{`${section.displayName}`}</a>
                 )}
               </li>

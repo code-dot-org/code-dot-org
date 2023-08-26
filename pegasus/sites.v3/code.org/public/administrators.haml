@@ -5,7 +5,9 @@ theme: responsive_full_width
 
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %script{src: webpack_asset_path('js/code.org/public/administrators.js')}
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/administrators-styles.css", rel: "stylesheet"}
+
 
 -# FontAwesome icons
 - icon_laptop_file = "fa-solid fa-laptop-file"
@@ -19,17 +21,17 @@ theme: responsive_full_width
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
-    .text-wrapper.col-60
+    .text-wrapper
       %h1{style: "color: white"} Code.org District Partner Program
-      %h2{style: "color: white"} Bring computer science to your district.
-      %p{style: "color: white"} Learn how you can partner with Code.org to teach your students about the careers of the future.
+      %p.heading-sm{style: "color: white"} Bring computer science to your district.
+      %p.no-margin-bottom{style: "color: white"} Learn how you can partner with Code.org to teach your students about the careers of the future.
     .clear
     %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
 
 %section.bg-neutral-light{style: "display: block !important"}
   .wrapper
     %h2 Code.org District Partner Program
-    %p As AI and emerging technologies transform nearly every aspect of our lives, Code.org is leading a movement to ensure that K-12 students are equipped to adapt to the realities of a rapidly evolving knowledge economy. For more than a decade, Code.org has partnered with educators to advocate for not just policy change, but the resources necessary to expand access to high quality computer science (CS) curriculum and professional learning experiences.
+    %p.body-three As AI and emerging technologies transform nearly every aspect of our lives, Code.org is leading a movement to ensure that K-12 students are equipped to adapt to the realities of a rapidly evolving knowledge economy. For more than a decade, Code.org has partnered with educators to advocate for not just policy change, but the resources necessary to expand access to high quality computer science (CS) curriculum and professional learning experiences.
     %div.col-50{style: "margin-bottom: 1em"}
       %p <strong>District leaders around the United States can now partner with Code.org directly, at no cost to:</strong>
       %ul
@@ -55,7 +57,7 @@ theme: responsive_full_width
           %i{class: "#{icon_laptop_file}"}
         .text-wrapper
           %h3 Turnkey K-12 computer science curriculum
-          %p Get a complete, free <a href="https://studio.code.org/courses?view=teacher" target="_blank" rel="noopener noreferrer">open source K-12 program</a> and learning platform to introduce computer science at any grade.
+          %p Get a complete, free <a href="https://code.org/teach" target="_blank" rel="noopener noreferrer">open source K-12 program</a> and learning platform to introduce computer science at any grade.
       %li
         %div
           %i{class: "#{icon_chalkboard_user}"}
@@ -91,7 +93,7 @@ theme: responsive_full_width
           %i{class: "#{icon_smile}"}
         .text-wrapper
           %h3 Amazon Future Engineer Benefits
-          %p Eligible schools can receive paid 1-year CSTA membership for teachers, Amazon classroom resources, first access to career exploration offerings, awards, scholarships, and more. 
+          %p Eligible schools can receive paid 1-year CSTA membership for teachers, Amazon classroom resources, first access to career exploration offerings, awards, scholarships, and more.
       %li
         %div
           %i{class: "#{icon_money_check_dollar_pen}"}
@@ -135,7 +137,7 @@ theme: responsive_full_width
 
 %section.bg-primary-light{style: "display: block !important"}
   .wrapper
-    %p.heading-sm.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
+    %p.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
 
 %a{id: 'email-signup-form'}
 %section{style: "display: block !important"}
@@ -170,7 +172,7 @@ theme: responsive_full_width
       %p Code.org offers a number of scholarships and discounts for teachers attending our professional development workshops. Other funding sources, like Perkins funds and state funding, may also be available to you. <a href="/educate/professional-learning/contact-regional-partner" target="_blank" rel="noopener noreferrer">Contact your Regional Partner</a> to learn more about the funding options available.
     %details
       %summary What type of class schedule are the courses designed for?
-      %p Schools and teachers have the flexibility to teach our CS Fundamentals and CS Discoveries courses in the way that best fits with their school schedules. CS Principles and CSA should be taught as full-year courses. Our curriculum guides and PL programs provide guidance. Learn more about our various offerings at <a href="/teach" target="_blank" rel="noopener noreferrer">code.org/teach</a>.
+      %p Schools and teachers have the flexibility to teach our CS Fundamentals and CS Discoveries courses in the way that best fits with their school schedules. CS Principles and CSA should be taught as full-year courses. Our PL programs provide guidance. Learn more about our various offerings at <a href="/teach" target="_blank" rel="noopener noreferrer">code.org/teach</a>.
     %details
       %summary Do high school computer science courses count toward graduation?
       %p <a href="https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#" target="_blank" rel="noopener noreferrer">Take a look here</a> to see if your state allows computer science courses to count toward graduation (click the “Count” tab near the top).
@@ -182,16 +184,20 @@ theme: responsive_full_width
   .wrapper
     %h2 Additional Resources
     .action-block__wrapper.action-block__wrapper--two-col
-      .action-block.action-block--one-col
-        %h3 Amazon Future Engineer
-        %img{src: "/images/marketing/fill-400x250/AFE-El-Paso-4.jpg", alt: ""}
-        %p{style: "height: 70px"} Special support for teachers at underserved schools. Find out if your school is eligible.
-        %a.link-button{href: "/afe"} Learn more
-      .action-block.action-block--one-col
-        %h3 District Case Studies
-        %img{src: "/images/marketing/fill-400x250/2018_HoC-392.jpg", alt: ""}
-        %p{style: "height: 70px"} See how three different districts are bringing CS to their students.
-        %a.link-button{href: "https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 Amazon Future Engineer
+          %img{src: "/images/marketing/fill-400x250/AFE-El-Paso-4.jpg", alt: ""}
+          %p Special support for teachers at underserved schools. Find out if your school is eligible.
+        .content-footer
+          %a.link-button{href: "/afe"} Learn more
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3 District Case Studies
+          %img{src: "/images/marketing/fill-400x250/2018_HoC-392.jpg", alt: ""}
+          %p See how three different districts are bringing CS to their students.
+        .content-footer
+          %a.link-button{href: "https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy"} Learn more
   .clear
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::ADMIN_PAGE_VISITED_EVENT

@@ -4,7 +4,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Breadcrumb} from 'react-bootstrap';
+import {Breadcrumb} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class Header extends React.Component {
   static contextTypes = {

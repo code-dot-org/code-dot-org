@@ -51,7 +51,6 @@ describe('Enroll Form', () => {
     grades_teaching: ['Pre-K'],
     csf_intro_intent: 'Yes',
     attended_csf_intro_workshop: 'Yes',
-    csf_has_physical_curriculum_guide: 'Yes',
     years_teaching: '10',
     years_teaching_cs: '5',
     taught_ap_before: 'Yes',
@@ -212,7 +211,6 @@ describe('Enroll Form', () => {
       'role',
       'grades_teaching',
       'attended_csf_intro_workshop',
-      'csf_has_physical_curriculum_guide',
     ];
     const requiredParams = {
       ...baseParams,

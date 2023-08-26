@@ -44,7 +44,6 @@ class AnimationPicker extends React.Component {
     channelId: PropTypes.string.isRequired,
     allowedExtensions: PropTypes.string,
     libraryManifest: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
@@ -116,7 +115,6 @@ class AnimationPicker extends React.Component {
           onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
           playAnimations={this.props.playAnimations}
           libraryManifest={this.props.libraryManifest}
-          hideUploadOption={this.props.hideUploadOption}
           hideAnimationNames={this.props.hideAnimationNames}
           navigable={this.props.navigable}
           defaultQuery={this.props.defaultQuery}

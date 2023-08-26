@@ -8,12 +8,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-05-09 16:22:19 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-07-25 22:10:48 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -44,8 +45,8 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and use events to make them interactive. \n\nStudents will code an event-based cause-and-effect model in Sprite Lab to demonstrate how species survive by adapting to their environments over time. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n- Pair Programming: Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/vgkahOzFH2Q) and visit this Support [page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n",
-        "purpose": "This lesson provides an engaging and interactive learning experience that integrates science and technology. By using code to model a cause-and-effect relationship, students can explore how animals adapt to their environments and gain a deeper understanding of the natural world. Later, this lesson encourages creativity and self-expression by allowing students to personalize their models with their own unique style and ideas.",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914166)).\n* Consider these related extension options ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914168)) to explore after the last lesson.\n\n#####Optional\n- Pair Programming - Decide if you want students to engage in pair programming. Watch this <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support</a> page for more information about pair programming.\n",
+        "purpose": "This lesson provides an engaging and interactive learning experience that integrates science and technology. By using code to model a cause-and-effect relationship, students can explore how animals adapt to their environments and gain a deeper understanding of the natural world. Later, this module encourages creativity and self-expression by allowing students to personalize their models with their own unique style and ideas.",
         "student_overview": "In this lesson, you will model how animals adapt to their environments over time. You’ll learn to code how giraffes got their long necks, how bunnies have changed their fur color to hide better, and how birds have developed different shaped beaks."
       },
       "seeding_key": {
@@ -63,8 +64,8 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this CS and science-integrated lesson, students will use behaviors in computer science to represent animal survival behaviors. When students use `behaviors` in Sprite Lab, they are giving their sprite a set of instructions to execute over and over like an animation. First, students will try out different pre-defined behaviors, including migratory patterns for whales and butterflies, bird dances used to attract a mate, and fish traveling in groups. Then, students will practice modifying and coding their own animal behaviors.    ",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
-        "purpose": "By using coding to model animal group behaviors, students can explore the patterns and dynamics of social animals in a hands-on and immersive way. This lesson encourages students to apply their coding skills in a meaningful and relevant context. With the \"Upload My Own\" sprite costume and background feature, students can create an environment that is entirely their own. ",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Provide writing materials for the warm-up reflection and wrap-up exit ticket.\n* Consider these related extension options ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/2#activity-4165453)) to explore after the last lesson.\n",
+        "purpose": "By using coding to model animal group behaviors, students can explore the patterns and dynamics of social animals in a hands-on and immersive way. This lesson encourages students to apply their coding skills in a meaningful and relevant context. Students will be able work creatively by choosing the backgrounds, sprites, and behaviors, allowing them to make unique projects.",
         "student_overview": "Today you will explore many animals and their (sometimes silly) behaviors. Animals have developed certain movements and behaviors to survive and reproduce. Your code will control sprite animations in the playspace. "
       },
       "seeding_key": {
@@ -81,9 +82,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this CS and science-integrated lesson, students will learn how to edit animal behaviors in code. First, students will make a prediction about a fox’s mystery behavior. Then, in the following levels they will use the “edit” button to debug different animal behaviors, including speed, direction, and rotation style. Finally, students will use their new skills to code a unique tropical bird mating dance! \n\nAt the end of class, students will share out their custom projects with their classmates. Students will have a chance to reflect on what they have learned about behaviors in code and animal behaviors in real life. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: \n   - Complete [Animal Adaptations: Lesson 1 & 2](https://studio.code.org/s/csc-adaptations-2023/lessons/1/levels/1)\n   - Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n   - Complete [CSF: Course F, Sprites in Action](https://studio.code.org/s/coursef/lessons/4/levels/1)\n",
-        "purpose": "Today, you will make predictions about mystery behaviors and debug animal behaviors that aren’t working right. Then, you’ll use your skills to code a unique tropical bird mating dance! "
+        "overview": "In this CS and science-integrated lesson, students will learn how to edit animal behaviors in code. First, students will make a prediction about a fox’s mystery behavior. Then, in the following levels they will use the “edit” button to debug different animal behaviors, including speed, direction, and rotation style. Finally, students will choose an environmental change scenario and use their own creative code to model a new & unique animal adaptation! \n\nAt the end of class, students will share out their custom projects with their classmates. Students will have a chance to reflect on what they have learned about behaviors in code and animal behaviors in real life. \n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n* Consider these related extension options ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/3#activity-4233684)) to explore after this lesson.\n\n",
+        "purpose": "Students will make predictions about mystery behaviors and debug animal behaviors that aren’t working right. Then, they will use their skills to code a unique animal adaptation that has never been seen before by imagining a sudden change in environment. With the \"Upload My Own\" sprite costume and background feature, students can create an environment that is entirely their own."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -94,8 +95,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "3d238b5e-6102-4c78-afc7-9f5beffd3741",
+      "key": "46a069d2-b327-475f-8c2a-949cf06d6ccb",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46a069d2-b327-475f-8c2a-949cf06d6ccb",
+        "lesson.key": "Modeling Animal Adaptations (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "key": "3d238b5e-6102-4c78-afc7-9f5beffd3741",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up "
@@ -109,7 +123,7 @@
     },
     {
       "key": "5bd537e7-45bb-4968-a883-d8ba598753fb",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Main Activity"
@@ -123,13 +137,26 @@
     },
     {
       "key": "87d33249-e0bc-4144-943d-b6403e852d17",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up "
       },
       "seeding_key": {
         "lesson_activity.key": "87d33249-e0bc-4144-943d-b6403e852d17",
+        "lesson.key": "Modeling Animal Adaptations (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "key": "a418e7ac-0146-460d-89e6-0acc14aefbb6",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a418e7ac-0146-460d-89e6-0acc14aefbb6",
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023"
@@ -178,6 +205,19 @@
       }
     },
     {
+      "key": "59dd1048-c18b-43fb-a14c-4feb2887a274",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59dd1048-c18b-43fb-a14c-4feb2887a274",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
       "key": "e280ae49-7bb9-4bc9-8dd6-a8c5de968600",
       "position": 1,
       "properties": {
@@ -218,9 +258,38 @@
         "lesson_group.key": "",
         "script.name": "csc-adaptations-2023"
       }
+    },
+    {
+      "key": "40033029-9a13-473d-9a2a-e6f090865876",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40033029-9a13-473d-9a2a-e6f090865876",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-adaptations-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "04e8f7f8-668f-4eba-865e-6fe94028acd0",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this <a href=\"https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4\" target=\"_blank\">Living Things Change Video</a>  (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. <a href=\"https://studio.code.org/s/coursef-2023/lessons/3\" target=\"_blank\">CSF Making Sprites</a> is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04e8f7f8-668f-4eba-865e-6fe94028acd0",
+        "lesson_activity.key": "46a069d2-b327-475f-8c2a-949cf06d6ccb"
+      }
+    },
     {
       "key": "9861853d-f4bb-4d00-a1e2-49c860164ac2",
       "position": 1,
@@ -313,7 +382,6 @@
       "key": "df0bd3a8-03f0-476f-96a7-4af00d394a69",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Intro” video\n",
         "duration": "20",
         "name": "Animal Adaptations - Skill Building"
       },
@@ -323,8 +391,20 @@
       }
     },
     {
-      "key": "171021f3-2af5-4219-a401-0cb6f6a02d7c",
+      "key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
+        "progression_name": "Video: Animal Adaptations Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
+        "lesson_activity.key": "5bd537e7-45bb-4968-a883-d8ba598753fb"
+      }
+    },
+    {
+      "key": "171021f3-2af5-4219-a401-0cb6f6a02d7c",
+      "position": 3,
       "properties": {
         "description": "In today’s coding lesson you will create models of several animal adaptations. Computer science can help us model how a change occurs. You can code your models to be interactive, like coding all of the fireflies to light up when you press the down arrow key. Let’s get started.",
         "remarks": true
@@ -336,7 +416,7 @@
     },
     {
       "key": "3d82e301-876e-4d61-9d8e-ea0a4281c088",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n**Adaptations:** Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators. \n"
       },
@@ -346,38 +426,10 @@
       }
     },
     {
-      "key": "e377eaef-2dd9-4d18-ae01-668948e84f5a",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e377eaef-2dd9-4d18-ae01-668948e84f5a",
-        "lesson_activity.key": "5bd537e7-45bb-4968-a883-d8ba598753fb"
-      }
-    },
-    {
-      "key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
+      "key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
-        "progression_name": "Video: Animal Adaptations Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
-        "lesson_activity.key": "5bd537e7-45bb-4968-a883-d8ba598753fb"
-      }
-    },
-    {
-      "key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
-      "position": 6,
-      "properties": {
-        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Leve 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
+        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Level 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
@@ -386,7 +438,7 @@
     },
     {
       "key": "6cd421bc-f05a-44d2-98c0-bfbe428fe3e7",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -396,11 +448,27 @@
       }
     },
     {
+      "key": "e377eaef-2dd9-4d18-ae01-668948e84f5a",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">pair programming</a>.  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e377eaef-2dd9-4d18-ae01-668948e84f5a",
+        "lesson_activity.key": "5bd537e7-45bb-4968-a883-d8ba598753fb"
+      }
+    },
+    {
       "key": "ec67c018-2d09-4c5b-9d78-2bc119193420",
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Hello World: Programming with Events” video\n\n**Level 6**: Video introduction of events in computer science\n",
-        "duration": "5",
+        "duration": "1",
         "name": "Events Video",
         "progression_name": "Video: Hello World: Programming with Events"
       },
@@ -413,8 +481,8 @@
       "key": "788c7de5-02fd-4ed3-a0b4-099d610a6e6a",
       "position": 9,
       "properties": {
-        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. = When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing.This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
-        "duration": "10",
+        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing. This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
+        "duration": "14",
         "name": "Animal Adaptations - Skill Building",
         "progression_name": "Skill Building"
       },
@@ -427,13 +495,40 @@
       "key": "9b011b7d-ac36-4362-bf14-0a9c4c6a33ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1,000 of years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
         "duration": "5",
         "name": "Discuss"
       },
       "seeding_key": {
         "activity_section.key": "9b011b7d-ac36-4362-bf14-0a9c4c6a33ec",
         "lesson_activity.key": "87d33249-e0bc-4144-943d-b6403e852d17"
+      }
+    },
+    {
+      "key": "a4d9b9b3-742d-4389-9e89-f1a51d709361",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4d9b9b3-742d-4389-9e89-f1a51d709361",
+        "lesson_activity.key": "a418e7ac-0146-460d-89e6-0acc14aefbb6"
+      }
+    },
+    {
+      "key": "6829c72f-0868-4e1e-98ad-979b6b52effd",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**Science Content:**  \n- <a href=\"https://studio.code.org/s/csc-ecosystems-2023\" target=\"_blank\">CSC Module: Simulating a Marine Ecosystem Lessons 1-3</a> \n- <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Project: Modeling Life Cycles in Sprite Lab</a> \n- <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n- Play the <a href=\"https://askabiologist.asu.edu/peppered-moths-game/play.html\" target=\"_blank\">peppered moth game</a> to simulate changes in moth population due to pollution and predation and observe how a species can change over time.\n\n\n**Computer Science Concepts:**  \n- Sprite Lab Basics: <a href=\"https://code.org/helloworld\" target=\"_blank\">Hello World</a>\n- Simulations:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulating Experiments</a> & <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Outbreak</a> \n- Events: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Dance Party</a> \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6829c72f-0868-4e1e-98ad-979b6b52effd",
+        "lesson_activity.key": "a418e7ac-0146-460d-89e6-0acc14aefbb6"
       }
     },
     {
@@ -494,7 +589,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 1** is designed to ensure that students are staying with the class and does not contain any code.\n\nThe slides for **Levels 2-10** can be used to preview or review the students independent work time. Or it may be helpful to advance the slides throughout the lesson to match the pace of your students as they work independently. \n"
+            "markdown": "**Level 1** is designed to ensure that students are staying with the class and does not contain any code.\n\nThe slides for **Levels 2-10** can be used to preview or review the students' independent work time. Or it may be helpful to advance the slides throughout the lesson to match the pace of your students as they work independently. \n"
           }
         ]
       },
@@ -507,7 +602,7 @@
       "key": "b880121b-cfa3-46c6-a2ab-4f8da12ae0d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Behaviors Intro\" slide\n\n**Level 1:** Level 1 is an informational level comparing behaviors in nature with behaviors in computer science. Consider asking a student to read each section aloud and describe the pictures. Highlight for students that the behavior block is a green block connected to a `sprite begins` block. In this case, the block on screen shows the sprite `moving northwest`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Migration\" slide\n\n**Level 2:**  Level 2 models whale migration. Students add a new block to the program that begins the behavior ‘moving NSEW with arrow keys’ After clicking the run button, the whale will move in the direction of the arrow keys pressed. Students can use the arrow keys below the playspace or on their keyboard. In order to pass the level, students should model that whales migrate both north (up arrow key) and south (down arrow key).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 4 - Behaviors in CS  \" slide\n\n**Levels 3-4:** In Levels 3 - 4, students experiment with beginning and stopping behaviors. They can test out different behaviors to gain an understanding of how changing the code changes the animation of the bug sprites. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Dancing Birds \" slide\n\n**Levels 5-7:**  Levels 5-7 use the natural bird dancing behavior to explore layering different behaviors with code. These three levels are linked, meaning students’ code will carry over from level to level so they can build on it. In level 5, students begin one behavior for the bird sprite. In level 6, they add a second behavior so the sprite is doing both behaviors at the same time. In level 7, students add a `when key pressed` event that triggers a third behavior for the bird sprite. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Behaviors Intro\" slide\n\n**Level 1:** Level 1 is an informational level comparing behaviors in nature with behaviors in computer science. Consider asking a student to read each section aloud and describe the pictures. Highlight for students that the behavior block is a green block connected to a `sprite begins` block. In this case, the block on screen shows the sprite `moving swimming left and right`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Migration\" slide\n\n**Level 2:**  Level 2 models whale migration. Students add a new block to the program that begins the behavior ‘moving NSEW with arrow keys’ After clicking the run button, the whale will move in the direction of the arrow keys pressed. Students can use the arrow keys below the playspace or on their keyboard. In order to pass the level, students should model that whales migrate north (up arrow key).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 4 - Behaviors in CS  \" slide\n\n**Levels 3-4:** In Levels 3 - 4, students experiment with beginning and stopping behaviors. They can test out different behaviors to gain an understanding of how changing the code changes the animation of the bug sprites. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Dancing Birds \" slide\n\n**Levels 5-7:**  Levels 5-7 use the natural bird dancing behavior to explore layering different behaviors with code. These three levels are linked, meaning students’ code will carry over from level to level so they can build on it. In level 5, students begin one behavior for the bird sprite. In level 6, they add a second behavior so the sprite is doing both behaviors at the same time. In level 7, students add a `when key pressed` event that triggers a third behavior for the bird sprite. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -568,7 +663,7 @@
       "key": "528d1ae0-f10a-4d66-9ef6-1b68fdf33140",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:**\n- _Why do bears hibernate in the winter?_ \n- _If these bears lived in areas without a winter, how might they adapt to their new environment?_ \n- _What would change about the bear?_ \n\n\n**Do This:** Have students examine the picture of the hibernating bear. Read the prompt as well as the words in the word bank, out loud. Allow students 3-5 minutes to write their responses. Choose to share in partners or as a group. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:**\n- _Why do bears hibernate in the winter?_ \n- _If these bears lived in areas without a winter, how might they adapt to their new environment?_ \n- _What would change about the bear?_ \n\n**Discussion Goal:** Students should make the connection that bear hibernate because of less food in the winter, and if they lived in an area without winter, they probably would not hibernate. Example: The bear would get stronger because it won't lose weight hibernating during the winter.\n\n\n**Do This:** Have students examine the picture of the hibernating bear. Read the prompt as well as the words in the word bank, out loud. Allow students 3-5 minutes to write their responses. Choose to share in partners or as a group. \n",
         "duration": "10",
         "name": "Reflect"
       },
@@ -597,12 +692,39 @@
       "key": "b92cf50f-e810-4bd5-9e9f-c71a1de91a0c",
       "position": 3,
       "properties": {
-        "description": "Well done, coders!\n\nNext time, we’ll learn how to edit behaviors and how to make our own. The next lesson ends with a challenge to imagine and code a new animal adaptation!\n",
+        "description": "Well done, coders!\n\nNext time, we’ll learn how to edit behaviors and make our own. By the end of the next lesson, you will take on the challenge of imagining and coding a new animal adaptation!\n",
         "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b92cf50f-e810-4bd5-9e9f-c71a1de91a0c",
         "lesson_activity.key": "5b88d4ce-a149-47bd-81fa-1faeab11b7d7"
+      }
+    },
+    {
+      "key": "3f4b6cf2-180b-48f8-8db4-d6fec0b3b3cb",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f4b6cf2-180b-48f8-8db4-d6fec0b3b3cb",
+        "lesson_activity.key": "59dd1048-c18b-43fb-a14c-4feb2887a274"
+      }
+    },
+    {
+      "key": "84ab8f28-b727-4b06-b5a8-ffed92d44877",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**Science Content:**  \n- <a href=\"https://studio.code.org/s/csc-ecosystems-2023\" target=\"_blank\">CSC Module: Simulating a Marine Ecosystem Lessons 1-3</a> \n- <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Project: Modeling Life Cycles in Sprite Lab</a> \n- <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n- Play the <a href=\"https://askabiologist.asu.edu/peppered-moths-game/play.html\" target=\"_blank\">peppered moth game</a> to simulate changes in moth population due to pollution and predation and observe how a species can change over time.\n\n\n**Computer Science Concepts:**  \n- Sprite Lab Basics: <a href=\"https://code.org/helloworld\" target=\"_blank\">Hello World</a>\n- Simulations:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulating Experiments</a> & <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Outbreak</a> \n- Events: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Dance Party</a> \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "84ab8f28-b727-4b06-b5a8-ffed92d44877",
+        "lesson_activity.key": "59dd1048-c18b-43fb-a14c-4feb2887a274"
       }
     },
     {
@@ -622,7 +744,7 @@
       "key": "2848c1f5-3e42-4890-8bf0-cb0caf207e56",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Have students move to their computers and sign in. Students will work through the levels at their own speed.  \n\nCirculate the room to support students. Encourage them to read the instructions carefully and click on the lightbulb for hints on each level if they get stuck. \n\n**Level 1:** Level 1 is an informational level that explains how to edit behaviors.  Review as a class. ",
+        "description": "**Do This:** Have students move to their computers and sign in. Students should do the first two levels with the class.\n\n**Level 1:** Level 1 is an informational level that explains how to edit behaviors.  Review as a class. ",
         "duration": "2",
         "name": "Introduction",
         "progression_name": "Introduction"
@@ -670,7 +792,7 @@
       "key": "ae43f5f0-d656-4a78-b865-de1912732745",
       "position": 4,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  Show “Level 8 - Code Your Own Adaptations \" slide\n\n**Level 8:** Level 8 is a choice level with three different scenarios of environmental changes. Students will choose an animal and code a new behavior that models an adaptation the animal might need to survive the new environment. \n",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  Show “Level 9 - Code Your Own Adaptations\" slide\n\n**Level 9:** Level 9 is a choice level with three different scenarios of environmental changes. Students will choose an animal and code a new behavior that models an adaptation the animal might need to survive the new environment. \n",
         "duration": "8",
         "name": "Choice Level",
         "progression_name": "Choice"
@@ -684,7 +806,7 @@
       "key": "0ace60b8-6ee7-487a-bf1c-988eb7c527cc",
       "position": 5,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 9 - Share Your Project\" slide\n\n**Level 10:**  Level 10 includes prompts to support students in sharing their projects with a partner or in small groups. \n\n*Now that you have coded a survival adaptation, it's time to share it out!\nAs you view your classmates' projects consider the following questions:*\n- Did you choose the same environment scenario or different ones?\n- Did they use any of the same coding blocks?\n- Do you think the animal would survive the environment change? Why or why not?\n",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 10 - Share Your Project\" slide\n\n**Level 10:**  Level 10 includes prompts to support students in sharing their projects with a partner or in small groups. \n\n*Now that you have coded a survival adaptation, it's time to share it out!\nAs you view your classmates' projects consider the following questions:*\n- Did you choose the same environment scenario or different ones?\n- Did they use any of the same coding blocks?\n- Do you think the animal would survive the environment change? Why or why not?\n",
         "duration": "2",
         "name": "Share Out",
         "progression_name": "Share Out"
@@ -698,7 +820,7 @@
       "key": "4aa4f76e-e005-45dc-9f19-530ab829547e",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Partner Reflection\" slide\n\n**Do This:** Have students pair up or gather in small groups. Read one question at a time and allow both partners time to share before moving on to the next question. Gather students self evaluation through a fist of five, on a sticky note or scrap paper or other collection method used in your classroom. ",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Partner Reflection\" slide\n\n**Do This:** Have students pair up or gather in small groups. Read one question at a time and allow both partners time to share before moving on to the next question. Gather students self evaluation through a fist of five, on a sticky note or scrap paper or other collection method used in your classroom. \n\n- What did you learn about sprites?\n- What did you learn about animals?\n- Which level was the most challenging?\n",
         "duration": "5",
         "name": "Partner Reflection"
       },
@@ -717,6 +839,33 @@
       "seeding_key": {
         "activity_section.key": "dccce9e9-c5bf-4d4e-aabb-6f26de6049a5",
         "lesson_activity.key": "ba46bcef-cf00-4785-950a-63f6922f70b7"
+      }
+    },
+    {
+      "key": "1ed09ab6-cec1-4783-acea-f30a60c1a688",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ed09ab6-cec1-4783-acea-f30a60c1a688",
+        "lesson_activity.key": "40033029-9a13-473d-9a2a-e6f090865876"
+      }
+    },
+    {
+      "key": "344490db-b576-434e-b89d-94c93ed0a957",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**Science Content:**  \n- <a href=\"https://studio.code.org/s/csc-ecosystems-2023\" target=\"_blank\">CSC Module: Simulating a Marine Ecosystem Lessons 1-3</a> \n- <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Project: Modeling Life Cycles in Sprite Lab</a> \n- <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n- Play the <a href=\"https://askabiologist.asu.edu/peppered-moths-game/play.html\" target=\"_blank\">peppered moth game</a> to simulate changes in moth population due to pollution and predation and observe how a species can change over time.\n\n\n**Computer Science Concepts:**  \n- Sprite Lab Basics: <a href=\"https://code.org/helloworld\" target=\"_blank\">Hello World</a>\n- Simulations:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulating Experiments</a> & <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Outbreak</a> \n- Events: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Dance Party</a> \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "344490db-b576-434e-b89d-94c93ed0a957",
+        "lesson_activity.key": "40033029-9a13-473d-9a2a-e6f090865876"
       }
     }
   ],
@@ -1836,6 +1985,28 @@
   ],
   "resources": [
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Modeling Animal Adaptations",
       "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
       "key": "ecosystems",
@@ -1846,6 +2017,88 @@
       },
       "seeding_key": {
         "resource.key": "ecosystems"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_1"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_2"
+      }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-adaptations-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Modeling Animal Adaptations ",
+      "url": "/s/csc-adaptations-2023/standards",
+      "key": "standards_in_modeling_animal_adaptations",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_modeling_animal_adaptations"
+      }
+    },
+    {
+      "name": "Vocabulary in Modeling Animal Adaptations ",
+      "url": "/s/csc-adaptations-2023/vocab",
+      "key": "vocabulary_in_modeling_animal_adaptations",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_modeling_animal_adaptations"
       }
     }
   ],
@@ -1858,8 +2111,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Modeling Animal Adaptations (pilot)",
+        "resource.key": "helpful_hints_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "ecosystems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "helpful_hints"
       }
     },
     {
@@ -1867,10 +2132,51 @@
         "lesson.key": "lesson-3",
         "resource.key": "ecosystems"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "helpful_hints_2"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_modeling_animal_adaptations",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_modeling_animal_adaptations",
+        "script.name": "csc-adaptations-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -2043,6 +2349,12 @@
         "lesson.key": "lesson-3",
         "vocabulary.key": "event"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "evolution"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -2067,6 +2379,16 @@
       "seeding_key": {
         "lesson.key": "Modeling Animal Adaptations (pilot)",
         "objective.key": "24aecd42-56d2-46ee-a935-a25970ea4e3a"
+      }
+    },
+    {
+      "key": "317eb9d8-664f-496f-80eb-0029f2a0dafc",
+      "properties": {
+        "description": "Develop models of behavioral adaptations with code."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "317eb9d8-664f-496f-80eb-0029f2a0dafc"
       }
     },
     {
@@ -2112,7 +2434,7 @@
     {
       "key": "846b7d3c-56e3-44b4-80dd-47431ae2a040",
       "properties": {
-        "description": "Illustrate examples of migration and increased survival in groups."
+        "description": "Illustrate examples of increased survival in groups."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -2150,6 +2472,16 @@
       }
     },
     {
+      "key": "d0c5f886-4268-4eb7-b499-fa86868fda17",
+      "properties": {
+        "description": "Show how animals evolve and change as a result of changes in their environment."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "d0c5f886-4268-4eb7-b499-fa86868fda17"
+      }
+    },
+    {
       "key": "e89ead7e-816f-4133-b72e-09f37281c69c",
       "properties": {
         "description": "Develop models of behavioral adaptations with code."
@@ -2162,7 +2494,7 @@
     {
       "key": "ecd731ff-0e81-46d4-bf79-407f4be474d7",
       "properties": {
-        "description": "Explain hibernation as a survival mechanism using scientific language."
+        "description": "Explain migration as a survival mechanism using scientific language."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",

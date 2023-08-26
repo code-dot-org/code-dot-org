@@ -1,9 +1,14 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:04:27.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 26 Puzzle 17](../../26/levels/17) and `displaceEnemies` in [Lesson 25 Puzzle 12](../../25/levels/12) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
+    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 27 Puzzle 16](../../27/levels/16) and `displaceEnemies` in [Lesson 26 Puzzle 11](../../26/levels/11) as examples.\r\n\r\nFor each interaction:\r\n1. Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -65,13 +70,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:04:27.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game interactions_2022\\\"\"],\"cloned_from\":\"CSD U3 game interactions_2022\"},{\"changed_at\":\"2023-03-09 17:55:51 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game interactions_2022\\\"\"],\"cloned_from\":\"CSD U3 game interactions_2022\"},{\"changed_at\":\"2023-03-09 17:55:51 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:07:53 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-02 22:52:52 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

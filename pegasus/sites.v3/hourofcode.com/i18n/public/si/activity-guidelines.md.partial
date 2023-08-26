@@ -9,271 +9,271 @@ layout: wide
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Hour of Code™ සහ පරිගණක විද්යා අධ්යාපන සතිය සඳහා නිබන්ධන සහ පාඩම් නිර්මාණය කිරීම හා ඉදිරිපත් කිරීම සඳහා මාර්ගෝපදේශ
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org හි Code.org සහ Hour of Code වෙබ් අඩවි වල විවිධ Hour of Code™ ක්රියාකාරකම්, පාඩම් සහ වීඩියෝ සත්කාරකත්වය සපයයි. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+පරිගණක විද්යා මූලධර්මයක් පැහැදිලි කරන ඔබේම ස්වයං මාර්ගෝපදේශ නිබන්ධනයක්, ගුරුවරයා විසින් මෙහෙයවන පාඩම හෝ රොබෝටික්/නිෂ්පාදක ක්රියාකාරකම් ඉදිරිපත් කිරීමට අවශ්යද? මෙම ගෝලීය ව්යාපාරයට සම්බන්ධ වී ලොව පුරා සිටින සහභාගිවන්නන්ට පැයක කේතයකින් ආරම්භ කිරීමට හෝ බහු-පාඩම්, දිවා කාලීන හෝ සතියක් පුරා ක්රියාකාරකම් සමඟ තවදුරටත් යාමට උදව් කරන්න.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**මාර්ගෝපදේශ කියවීමෙන් පසු, අපගේ [Hour Code™ ක්රියාකාරකම් ඉදිරිපත් කිරීමේ පිටුව](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)හරහා ඔබේ ක්රියාකාරකම් ඉදිරිපත් කළ හැකිය. ඔබට ඕනෑම වේලාවක ක්රියාකාරකමක් ඉදිරිපත් කළ හැකිය, නමුත් ඕනෑම දින දර්ශන වර්ෂයකට ඇතුළත් කිරීමේ අවසාන දිනය ඔක්තෝබර් 1 වේ. (උදාහරණයක් ලෙස, 1 ඔක්තෝබර් 2023 න් පසු ලැබෙන ඕනෑම ක්රියාකාරකමක් 2023 හි පැය කේතය සඳහා ලැයිස්තුගත නොකෙරේ.)** ඔබගේ ක්රියාකාරකම් ඉදිරිපත් කිරීම පිළිබඳව ඔබට කිසියම් ප්රශ්නයක් ඇත්නම්, කරුණාකර අප වෙත ළඟා වන්න support@code.org.
 
-A few tips:
+ඉඟි කිහිපයක්:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **ක්රියාකාරකම් එකකට වඩා ඉදිරිපත් කරන්න**: ඔබ විවිධ මට්ටම්, විවිධ වයස් කාණ්ඩ හෝ වෙනත් කාණ්ඩ සඳහා ක්රියාකාරකම් ගොඩනගා ඇත්නම්, අපි ඔබේ ක්රියාකාරකම් වෙන වෙනම ලැයිස්තුගත කරමු, එවිට සෑම ගුරුවරයෙකුටම ඔවුන්ගේ පන්ති කාමරය සඳහා නිවැරදි දේ සොයාගත හැකිය. එක් එක් නිබන්ධනය හෝ ක්රියාකාරකම් තනි තනිව ඉදිරිපත් කරන්න. මෑත වසරවලදී අප දැක ඇති ඉදිරිපත් කිරීම් ගණන සැලකිල්ලට ගෙන, එක් හවුල්කරුවෙකුට **ක්රියාකාරකම්** ක් දක්වා සමාලෝචනය කිරීමට අපට කාලය ලැබෙනු ඇත. ඊට පසු, Hour of Code ආරම්භ වීමට පෙර හැකි තරම් සමාලෝචනය කිරීමට අපි උපරිම උත්සාහයක් දරමු.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **ආරම්භක පාඩම් වලින් ඔබ්බට**: පළමු වරට පරිගණක විද්යාව ඉගෙන ගන්නා ගුරුවරුන් සහ සිසුන් සඳහා පාඩම් වලට අමතරව, අපි තව ටිකක් ඉදිරියට යාමට අවශ්ය පරිගණක විද්යාව-බුද්ධිමත් පන්ති කාමර සඳහා ඉගෙනුම් අත්දැකීම් ලැයිස්තුගත කරමු! මූලික කරුණු සමඟ දැනටමත් සැපපහසු පන්ති සඳහා පාඩම් ඉදිරිපත් කිරීමෙන් අපට උදව් කරන්න.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **විෂය ක්ෂේත්ර**: පරිගණක විද්යාව ගණිතයට ඒකාබද්ධ කරන විශිෂ්ට පාඩම් අදහසක් තිබේද? ඉතිහාසය? භාෂා කලා? විද්යාව? කලාව? නැත්නම් වෙනත් විෂයයක්? පැය කේතය ඔවුන්ගේ විෂය ක්ෂේත්රයට සම්බන්ධ කිරීමට අවශ්ය ගුරුවරුන්ගෙන් අපට ඉල්ලීම් ගණනාවක් තිබේ. ගුරුවරුන්ට ඔවුන්ගේ පන්ති කාමර වර්ගය සඳහා පෙරහන් කළ හැකිය (ශ්රේණියේ සංගීත කණ්ඩායම හෝ විෂය ක්ෂේත්රය) එබැවින් විවිධ ශ්රේණියේ පටි සඳහා සෑම ප්රධාන විෂය ක්ෂේත්රයකටම CS සම්බන්ධ කරන පන්ති කාමර ක්රියාකාරකම් හෝ පාඩම් සැලසුම් ලබා දීම සඳහා හිඩැස් පිරවීම සඳහා අපට ඔබේ උදව් අවශ්ය වේ. සාමාන්ය CS ක්රියාකාරකම් සොයන ගුරුවරුන් සඳහා “පරිගණක විද්යා” කාණ්ඩයක් ද අපි දිගටම කරගෙන යන්නෙමු.
 
 <a id="top"></a>
 
-## Index:
+## දර්ශකය:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [ඉදිරිපත් කළ යුතු දේ](#whatsubmit)
+- [කේතය™ ක්රියාකාරකම් පැය නිර්මාණය කිරීම සඳහා පොදු මාර්ගෝපදේශ](#guidelines)
+- [ඉදිරිපත් කරන්නේ කෙසේද?](#submit)
+- [ක්රියාකාරකම් ඇගයීමට ලක් කරන ආකාරය](#inclusion)
+- [ඔබේ ක්රියාකාරකම් සැලසුම් කිරීම සඳහා යෝජනා](#design)
+- [වෙළඳ ලකුණු මාර්ගෝපදේශ](#tm)
+- [පික්සෙල් ලුහුබැඳීම](#pixel)
+- [ඔබේ ක්රියාකාරකම් ප්රවර්ධනය කිරීම, CSEDWeek, සහ පැය කේතය](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## ඉදිරිපත් කළ යුතු දේ
 
 **Self-guided puzzle or game ([example](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+මෙම ක්රියාකාරකම් සැලසුම් කර ඇත්තේ සිසුන්ට නිබන්ධනයක් හරහා ස්වයං මෙහෙයවීමට ය. ඔවුන්ට ගුරුවරයෙකුගෙන් හෝ ගුරුවරයෙකුගෙන් බොහෝ උපදෙස් අවශ්ය නොවේ.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**ගුරු පහසුකම් සහිත පාඩම ([උදාහරණ](https://studio.code.org/s/course1/lessons/2/levels/1), [සැකිල්ල](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+දැන් අධ්යාපනඥයින් සිය දහස් ගණනක් Hour of Code අත්හදා බලා ඇති අතර, බොහෝ පන්ති කාමර පරිගණක විද්යාවේ මූලික කරුණු උගන්වන වඩාත් නිර්මාණාත්මක ක්රියාකාරකම් සඳහා සූදානම් වේ. වඩාත් දියුණු ගුරුවරුන්ට දේවානුභාවයෙන් සොයා ගැනීමට උපකාර කිරීම සඳහා, අපි පැය කේත ප්රවීණයන් සඳහා “ගුරු නායකත්වයෙන් යුත්” පාඩම් සහ ක්රියාකාරකම් සැලසුම් එකතු කර සුව කරමු.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+පළපුරුදු ගුරුවරුන් සඳහා අප විසින් එළිදකින එක් ක්රියාකාරකමක් වන්නේ “විවෘත වැලිපිල්ල” නිර්මාණය කිරීමේ ව්යාපෘති ය. තමන්ගේම යෙදුමක්, ක්රීඩාවක්, වෙබ් අඩවියක් හෝ වෙනත් ව්යාපෘතියක් තැනීමට සිසුන් දිරිමත් කරන ක්රියාකාරකම්. නිසි ලෙස පහසුකම් සපයන්නේ නම්, වඩාත් විවෘත ක්රියාකාරකම් මගින් පරිගණක විද්යාවේ නිර්මාණාත්මක ස්වභාවය වඩාත් හොඳින් ප්රදර්ශනය කළ හැකිය.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+සමහර අධ්යාපන ators යින් මාර්ගෝපදේශ ප්රහේලිකාවක්/ක්රීඩා අත්දැකීමකට වඩා සාම්ප්රදායික පාඩම් ආකෘතියක් අනුගමනය කරන Hour of Code ක්රියාකාරකම් සඳහා සත්කාරකත්වය සැපයීමට කැමති විය හැකිය.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+ඔබේ පාඩම් සැලැස්ම සඳහා ඔබට මෙම [අච්චුව](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) සමඟ ආරම්භ කළ හැකිය.
 
-**Activities for teachers in other subjects/fields**
+**වෙනත් විෂයයන්/ක්ෂේත්රවල ගුරුවරුන් සඳහා ක්රියාකාරකම්**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+විවිධ විෂය ක්ෂේත්ර සඳහා නිර්මාණය කර ඇති පාඩම් සැලසුම් ද අපි ඇතුළත් කරමු. උදාහරණයක් ලෙස, ජ්යාමිතිය පන්තියක කේතය ඉගැන්වීම සඳහා පැයක පාඩම් සැලැස්මක්. නැතහොත් ඉංග්රීසි පන්තිය සඳහා පිඩ්-ලිබ් ව්යායාමයක්. නැතහොත් ඉතිහාස පන්තිය සඳහා නිර්මාණාත්මක ප්රශ්නාවලිය-නිර්මාණය කිරීමේ ක්රියාකාරකමක්. වෙනත් විෂය ක්ෂේත්රයන්හි ගුරුවරුන් බඳවා ගැනීමට මෙය උපකාරී වන අතර, ඔවුන්ගේ ක්ෂේත්රයට ආවේණික වූ පැය කේත ක්රියාකාරකම් සඳහා මඟ පෙන්වීම සඳහා CS වලට විවිධ විෂය ක්ෂේත්රයන්ට බලපෑම් කළ හැකි හා වැඩිදියුණු කළ හැකි ආකාරය නිරූපණය කරයි.
 
-Examples:
+උදාහරණ:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- මිරර් රූප (කලා ගුරුවරයෙකු සඳහා ක්රියාකාරකමක්)
+- භෞතික විද්යා ගුරුවරයෙකු සඳහා ආර්ඩුයිනෝ ක්රියාකාරකමක්
+- ඉතිහාස ගුරුවරයෙකු සඳහා තාක්ෂණ ක්රියාකාරකම් පිළිබඳ ඉතිහාසයක්
+- හා බලන්න [මෙම ලැයිස්තුව](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) අධ්යාපනඥයින් සිට වැඩි අදහස් සඳහා (හෝ අන් අය ආස්වාදයක් ලැයිස්තුවට ඔබේ ම එකතු)
 
-**For students with special needs**
+**විශේෂ අවශ්යතා සහිත සිසුන් සඳහා**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+විශේෂ අවශ්යතා සිසුන් සඳහා නිර්මාණය කර ඇති ක්රියාකාරකමක් හෝ නිබන්ධනයක් ඔබ නිර්මාණය කරන්නේ නම්, කරුණාකර විස්තරයෙන් එය අමතන්න. විශේෂයෙන්, දෘශ්යාබාධිත අය සඳහා විකල්ප ඉතා අල්පය. ඔබේ ක්රියාකාරකම් මෙම ප්රේක්ෂකයින් සඳහා නිර්මාණය කර ඇත්නම් කරුණාකර අපට දන්වන්න.
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## කේත ක්රියාකාරකම් පැය නිර්මාණය කිරීම සඳහා පොදු මාර්ගෝපදේශ
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+පැය කේතයේ පරමාර්ථය වන්නේ ආරම්භකයින්ට පරිගණක විද්යාවේ හෝ ක්රමලේඛනයේ ප්රවේශ විය හැකි පළමු රසයක් ලබා දීමයි. ස්වරය විය යුත්තේ:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- වයස, ස්ත්රී පුරුෂ භාවය, ජාතිය හෝ හැකියාව/ආබාධිතභාවය නොසලකා ඕනෑම කෙනෙකුට පරිගණක විද්යාව ඉගෙන ගත හැකිය.
+- පරිගණක විද්යාව විවිධාකාර ක්ෂේත්ර හා අවශ්යතා සමඟ සම්බන්ධ වේ. සෑම කෙනෙකුම එය ඉගෙන ගත යුතුය!
+- දෙමාපියන්/මිතුරන් සමඟ හෝ මාර්ගගතව බෙදා ගත හැකි අද්විතීය දෙයක් නිර්මාණය කිරීමට සිසුන් දිරිමත් කරන්න.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+ක්රියාකාරකම් මඟින් ලූප, කොන්දේසි, සංකේතනය හෝ අන්තර්ජාලය ක්රියා කරන ආකාරය වැනි පරිගණක විද්යා සංකල්පයක් ඉගැන්විය යුතුය. ක්රියාකාරකමකට පරිගණක විද්යාව සැබෑ ලෝකයේ වෘත්තීන්, සිදුවීම් හෝ ඉතිහාසය සමඟ සම්බන්ධ වන ආකාරය ගැන ඉගැන්විය හැකිය. උදාහරණයක් ලෙස, ප්රේක්ෂකයෙකුට හෝ හේතුවක් සඳහා අර්ථවත් වන යෙදුම් සෑදීම සඳහා යූඑක්ස් නිර්මාණය ඉගැන්වීම. සංකල්පවලට වඩා ක්රමලේඛනයේ වාක්ය ඛණ්ඩය කෙරෙහි අවධානය යොමු කරන ක්රියාකාරකම් අපි අධෛර්යමත් කරමු. උදාහරණයක් ලෙස, අපි HTML උගන්වන ක්රියාකාරකම් ලැයිස්තුගත කරන්නෙමු, නමුත් ඉස්මතු නොකෙරේ. ඒ හා සමානව, ඇල්ගොරිතමයක් හෝ ක්රියාවලියක් ආදර්ශනය කරන්නේ කෙසේදැයි ඉගෙන ගැනීමට වඩා වින්යාස විකල්ප සැකසීම/වෙනස් කිරීම කෙරෙහි අවධානය යොමු කරන අවහිර ක්රමලේඛන පාඩම් අපි අධෛර්යමත් කරමු.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). යෙදුම-ස්ථාපනය අවශ්ය ක්රියාකාරකම්, ඩෙස්ක්ටොප් යෙදුම, හෝ ක්රීඩාව-කොන්සෝලය අත්දැකීම් හරි නමුත් පරමාදර්ශී නොවේ. ලියාපදිංචි වීම හෝ ගෙවීම අවශ්ය ක්රියාකාරකම් අපි ලැයිස්තුගත නොකරමු. (රොබෝ තාක්ෂණ ක්රියාකාරකම් සඳහා රොබෝ තාක්ෂණය මිලදී ගැනීම අවශ්ය වේ.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*ශිෂ්ය නායකත්වයෙන් යුත් (ස්වයං-මාර්ගෝපදේශ) ආකෘතිය:* මුල් පැය සංග්රහයේ මුල් පැය ගොඩනඟා ඇත්තේ ස්වයං මාර්ගෝපදේශ නිබන්ධන හෝ පාඩම් වල සාර්ථකත්වය මත වන අතර එය විකල්පයක් ලෙස ගුරුවරයාට පහසුකම් සපයයි. පවතින විකල්ප ඕනෑ තරම් තිබේ, නමුත් ඔබට නව එකක් නිර්මාණය කිරීමට අවශ්ය නම්, මෙම ක්රියාකාරකම් ඔවුන් තනිවම වැඩ කරන ශිෂ්ය සඳහා විනෝද විය හැකි නිසා නිර්මාණය කළ යුතුය, හෝ පන්ති කාමරයේ කාගේ ගුරුවරයාට අවම විනිවිදක දැක්මට හෝ CS පසුබිමක් ඇත. ඔවුන් විවෘත-අවසන් පැයක්-දිගු අභියෝගය විරුද්ධ ලෙස සිසුන් සඳහා උපදෙස් ලබා දිය යුතුය. නිබන්ධනය සහ ක්රමලේඛන වේදිකාව අතර ටැබ් හෝ කවුළු මාරු කිරීම වළක්වා ගැනීම සඳහා උපදෙස් සහ නිබන්ධන කෙලින්ම ක්රමලේඛන වේදිකාවට ඒකාබද්ධ වේ.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+ඔබට නිර්මාණය කළ හැකි විවිධාකාර නිබන්ධන සහ පාඩම් සැලසුම් පිළිබඳ හැඟීමක් ලබා ගැනීම සඳහා, පිවිසෙන්න [පැය කේත ක්රියාකාරකම් පිටුව](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## ඉදිරිපත් කරන්නේ කෙසේද?
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+[පැය සංග්රහයේ™ ක්රියාකාරකම් ඉදිරිපත් කිරීමේ පිටුව](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) වෙත පිවිස ඔබේ ක්රියාකාරකම ඉදිරිපත් කිරීමට ප්රශ්න සම්පූර්ණ කරන්න.
 
-What you’ll need:
+ඔබට අවශ්ය දේ:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* ඉදිරිපත් කරන ලද ක්රියාකාරකම් නියෝජනය කරන ප්රාථමික සම්බන්ධතාවයේ නම සහ විද්යුත් තැපෑල
+* ක්රියාකාරකමේ නම (නමට “පැය සංග්රහයේ” ඇතුළත් කළ නොහැක)
+* URL එක ක්රියාකාරකමට සබැඳිය
+* ක්රියාකාරකම් විස්තරයක් (උපරිම අක්ෂර ගණන: 400) 
+    * කරුණාකර එය ප්රධාන වශයෙන් ශිෂ්ය-මඟ පෙන්වන හෝ ගුරු පහසුකම් තිබේද යන්න විස්තරයට ඇතුළත් කරන්න. මීට අමතරව, සමහර පාසල් කේත ක්රියාකාරකම් පැය පොදු හරය හෝ ඊළඟ පරම්පරාවේ විද්යා ප්රමිතීන්ට ආමන්ත්රණය කරන්නේ දැයි දැන ගැනීමට උනන්දු වෙති. ක්රියාකාරකම නිශ්චිත ප්රමිතීන්ට ආමන්ත්රණය කරන්නේ නම්, මෙම තොරතුරු ඇතුළත් කිරීම සලකා බලන්න.
+* අපේක්ෂිත පරිශීලකයින් සඳහා නිර්දේශිත ශ්රේණියේ මට්ටම (ය). ශ්රේණියට සුදුසු පරිගණක විද්යා සංකල්ප සඳහා ඔබට \[පරිගණක විද්යා ගුරු සංගමයේ K-12 ප්රමිති\] (https://k12cs.org/framework-statements-by-grade-band/) වෙත යොමු විය හැකිය. උදාහරණ ශ්රේණියේ මට්ටම් වලට ඇතුළත් වන්නේ: 
+    * බාලාංශ - 1 ශ්රේණිය (වයස අවුරුදු 4-6)
+    * ශ්රේණි 2-5 (වයස අවුරුදු 7-10)
+    * 6-8 ශ්රේණි (වයස අවුරුදු 11-13)
+    * ශ්රේණි 9+ (වයස අවුරුදු 14+)
+* ඔබගේ ක්රියාකාරකම් ආවරණය කරන විෂය ක්ෂේත්ර ලැයිස්තුවක් (පරිගණක විද්යාවට අමතරව). උදාහරණයක් ලෙස, ගණිත ගුරුවරයෙකුට කෝණ හෝ පැරබෝලස් ගැන ඉගැන්වීමට ඔබේ ක්රියාකාරිත්වය භාවිතා කළ හැකි නම්, ගණිතය ලෙස ලැයිස්තු ගත කරන්න. ඔබට වාචික/නාම පද/යනාදිය උගන්වන පිස්සු ලිබ්ස් ක්රියාකාරිත්වයක් තිබේ නම්. භාෂා කලාවන් තෝරන්න.
+* ඔබේ ක්රියාකාරකම් උගන්වන ක්රමලේඛන භාෂා ලැයිස්තුවක්. එනම් C/C++, ජාවා, ජාවාස්ක්රිප්ට්, ආදිය. හෝ භාෂා ස්වාධීන (බහු භාෂාවලින් ඉගැන්විය හැකි පාඩම් සැලසුම් සඳහා)
+* සහාය දක්වන ස්වාභාවික භාෂා ලැයිස්තුවක්. සටහන: භාෂා-හඳුනාගැනීම ක්රියාකාරකම් සපයන්නාගේ වගකීමයි; අපි සියලු පරිශීලකයින් ලබා දී ඇති තනි URL එක වෙත හරවා එවන්නෙමු.
+* ඔබේ ක්රියාකාරකම් භාවිතා කිරීමට අධ්යාපනඥයෙකුට තිබිය යුතු අත්දැකීම් මොනවාද? (උදා: ආරම්භක හෝ සුවපහසු.) තවද, සිසුන්ට තිබිය යුතු අත්දැකීම් මොනවාද? ඔබ වඩාත් දියුණු Hour of Code™ ක්රියාකාරකම් සකස් කිරීමට කැමති නම්, කරුණාකර ඔබේ ක්රියාකාරකම් විස්තරයේ අවශ්ය පූර්ව දැනුම ඇතුළත් කරන්න.
+* ඔබේ ක්රියාකාරකම්වල දිග 
+    * පැය 1 ක් පමණි
+    * පසු විපරම් පා course මාලාවක් සමඟ පැය 1 යි
+    * පැය 2-6 (පාඩම් කිහිපයක් විය හැකිය)
+* ඔබේ ක්රියාකාරකමට ඒවා තිබේ නම්, ප්රවේශ්යතා නවාතැන් ලැයිස්තුවක්. තිර රීඩර් අනුකූලතාව, පෙළ-සිට-කථන හැකියාවන්, ඉහළ ප්රතිවිරුද්ධ වර්ණ භාවිතා කිරීම හෝ ආබාධ සහිත ඉගෙන ගන්නන් සඳහා සාදන ලද වෙනත් නවාතැන් ඇතුළත් වේ.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### පාඩම් සැලසුම් ඉදිරිපත් කිරීමේදී ඔබට අවශ්ය අමතර දේවල්
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* ඔබගේ පාඩම් සැලැස්මට සම්බන්ධ වන්න. මෙය වෙබ් පිටුවක්, ඩ්රොප්බොක්ස් සබැඳියක්, ගූගල් ඩ්රයිව් හෝ සමාන සේවාවක් විය හැකිය.
+* ඔබේ පාඩම් සැලැස්ම කිරීමට ගුරුවරයාට අවශ්ය මෘදුකාංග සහ/හෝ දෘඩාංග මොනවාද (සීරීම්? රොබෝවරු? කිසිවක් නැත?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### සබැඳි ක්රියාකාරකම් ඉදිරිපත් කිරීමේදී ඔබට අවශ්ය අමතර දේවල්
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* ඔබේ සංවිධානයේ නම සහ ලාංඡනය
+* එය COPPA අනුකූලද නැද්ද යන්න
+* ගුරු සටහන් සඳහා URL සබැඳියක් (අත්යවශ්ය නොවේ)
+* පරීක්ෂණ/අනුකූල වේදිකා ලැයිස්තුවක්: 
+    * වෙබ් පදනම් කරගත්: ඔබ විසින් පරීක්ෂා කර ඇති වේදිකා මොනවාද? 
+        * OS - මැක්, වින් සහ වෙනත් අනුවාදයන්
+        * බ්රව්සර් - IE11, එජ්, ෆයර්ෆොක්ස්, ක්රෝම්, සෆාරි
+        * iOS ජංගම සෆාරි (ජංගම-වීමත)
+        * ඇන්ඩ්රොයිඩ් ක්රෝම් (ජංගම-වීමත)
+    * වෙබ් අඩවි පදනම් කරගත් නොවන: ස්වදේශීය කේතය සඳහා වේදිකාව නියම කරන්න (මැක්, වින්, iOS, ඇන්ඩ්රොයිඩ්, XBox, වෙනත්)
+    * ඉවත් කර ඇත
+* කේත ක්රියාකාරකම් පැය වල තිර රුව හෝ අලෙවිකරණ රූපය. කරුණාකර 4:3 මානයන් සහිත අවම වශයෙන් එක් රූපයක්වත් යවන්න. එය අවම වශයෙන් 520px විසින් 390px විය යුතුය. ඉංග්රීසි නොවන කථිකයන් සඳහා එය වඩාත් පහසුවෙන් ප්රවේශ විය හැකි කිරීම සඳහා මෙම රූපයේ කිසිදු පෙළක් තිබිය යුතුය (ඔබේ ලාංඡනය හැර). සුදුසු රූපයක් සපයා නොමැති නම්, අපි ඔබගේ නිබන්ධනයේ අපගේම තිර රුවක් ගත හැකිය, නැතහොත් එය ලැයිස්තුගත නොකිරීමට අපට තෝරා ගත හැකිය. සියලුම රූප.jpg, .jpeg, හෝ.png වෙත URL සබැඳියක් ලෙස ඉදිරිපත් කළ යුතුය.
+* සහභාගීත්වය වඩාත් නිවැරදිව නිරීක්ෂණය කිරීම සඳහා, තෙවන පාර්ශවීය නිබන්ධන හවුල්කරුවන් ඔවුන්ගේ පැය කේත නිබන්ධන වල පළමු පිටුවේ 1-පික්සල් ලුහුබැඳීමේ රූප ඇතුළත් කළ යුතුය. වැඩි විස්තර සඳහා පහත [ට්රැකින් පික්සල්](#pixel) කොටස බලන්න.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * සමාජ මාධ්යවල බෙදාගන්න ඔවුන් සංග්රහයේ පැය සම්පූර්ණ කළ බව
+    * ඔවුන් සංග්රහයේ පැය සම්පූර්ණ කළ බවට සහතිකයක් ලබා ගන්න
+    * පැය සංග්රහයේ ක්රියාකාරකම් සඳහා ඉහළම සහභාගීත්ව අනුපාත ඇති රටවල්/නගර පිළිබඳ ප්රමුඛ පුවරු බලන්න
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (විකල්ප) පහත සඳහන් ක්රියාකාරකම් ප්රමිතික පිළිබඳ වාර්තාවක් ඉල්ලා සිටින මාර්ගගත සමීක්ෂණ/ආකෘති සබැඳියක් සමඟ අපට පසු විපරම් කළ හැකිය: 
+    * සබැඳි ක්රියාකාරකම් සඳහා (විශේෂයෙන් ස්මාර්ට්ෆෝන්/ටැබ්ලට් යෙදුම්): 
+        * පරිශීලකයන් සංඛ්යාව
+        * කාර්යය අවසන් කළ කීදෙනෙක්
+        * කාර්යය සඳහා සාමාන්ය කාලය
+        * සියලුම පරිශීලකයින්ට වඩා ලියා ඇති කේත පේළි ගණන
+        * තව දුරටත් ඉගෙනීම දිගටම කරගෙන ගිය ආකාරය (කාර්යය අවසන් කර ඔබේ වෙබ් අඩවියේ අතිරේක කාර්යයන් වෙත යන ඕනෑම පරිශීලකයෙකු ලෙස මනිනු ලැබේ)
+    * නොබැඳි ක්රියාකාරකම් සඳහා 
+        * ක්රියාකාරකම් කඩදාසි අනුවාදය බාගත කිරීම් ගණන (අදාළ නම්)
 
-#### Additional things you’ll need when submitting Robotics
+#### රොබෝ තාක්ෂණය ඉදිරිපත් කිරීමේදී ඔබට අවශ්ය අමතර දේවල්
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* ඔබ රොබෝ තාක්ෂණ ක්රියාකාරකමක් ඉදිරිපත් කරන්නේ නම්, රොබෝ තාක්ෂණය සඳහා සිසුවෙකුට පිරිවැය අප දැනගත යුතුය.
+* වෙබ් අඩවියට ඇතුළත් කිරීම සඳහා රොබෝ තාක්ෂණ ක්රියාකාරකම් ඇගයීම සඳහා, විචාරකයින් වෙත නියැදි කට්ටල යැවීමට අපට ඔබට අවශ්ය වනු ඇත.
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## ක්රියාකාරකම් ඇගයීමට ලක් කරන ආකාරය
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+පරිගණක විද්යා අධ්යාපන ators යින්ගේ විවිධ කමිටුවක් ගුණාත්මක හා ප්රමාණාත්මක නිර්ණායක මත පදනම්ව ඉදිරිපත් කිරීම් ශ්රේණිගත කරනු ඇත. මූලික නිර්ණායකයන්ට ගැලපෙන සියලුම ක්රියාකාරකම් ලැයිස්තුගත කෙරේ. ගුරුවරුන්ට ඔවුන්ගේ පන්ති කාමරය සඳහා හොඳම ක්රියාකාරකම් සොයා ගැනීමට පෙරීමට හා වර්ග කිරීමට හැකි වනු ඇත.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+ක්රියාකාරකම් සහ පාඩම් සැලසුම් ඇගයීම සඳහා වන රුබ්රික් විසින් සියලු ක්රියාකාරකම් පිළිබඳ පහත සඳහන් නිර්ණායක සොයා බලා ඒ අනුව ඒවා ශ්රේණිගත කරනු ඇත:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- ඉහළ නිෂ්පාදන ගුණාත්මකභාවය
+- සියලු ජන විකාශ කණ්ඩායම් විසින් ඉගෙනුම් ප්රවර්ධනය (esp. තරුණ කාන්තාවන්, ආන්තික වාර්ගික හා ජනවාර්ගික කණ්ඩායම්වල සිසුන් සහ ආබාධ සහිත සිසුන් වැනි CS හි අඩු නියෝජනය කරන සිසුන්)
+- අධ්යාපනික (පරිගණක විද්යා සංකල්ප හොඳින් උගන්වයි)
+- විනෝදජනක හා ආකර්ශනීය
+- ඔවුන් බෙදා හදා ගත හැකි සුවිශේෂී දෙයක් නිර්මාණය කිරීමට සිසුන් දිරිමත් (තරුණ සිසුන් සඳහා: දෙමාපියන් හා පන්තියේ මිතුරන් සමග. පැරණි සිසුන් සඳහා: අන්තර්ජාලයේ)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+සමාලෝචන කමිටුව ක්රියාකාරකම් නිෂ්පාදන ගුණාත්මක භාවයේ ශුන්යයක් ලෙස තක්සේරු කරන්නේ නම් (නරක දෝෂ හෝ උපදෙස් නිසා), අඩු නියෝජනය කරන කණ්ඩායම්වල ඉගෙනීම ප්රවර්ධනය කිරීමේදී (ජාතිවාදී/ලිංගික ද්රව්ය නිසා), අධ්යාපනික වටිනාකමින් (සීඑස් සංකල්ප උගන්වන්නේ නැත), හෝ විනෝදය/නිරත වීම (සිසුන්ට වැඩ කිරීමට අපහසු/අධෛර්යමත් වීම හේතුවෙන්), ක්රියාකාරකම් ලැයිස්තුගත නොකෙරේ.
 
-In addition, in order to be listed, all activities must:
+ඊට අමතරව, ලැයිස්තුගත කිරීම සඳහා, සියලු ක්රියාකාරකම් කළ යුතුය:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- පොදු පාසල් පන්ති කාමරයක් සඳහා සුදුසු වන්න (තුවක්කු නැත, පැහැදිළි/පරිණත අන්තර්ගතයක් නැත, ආගමික අන්තර්ගතයක් ආදිය)
+- ලියාපදිංචි වීමක් අවශ්ය නොවේ
+- ගෙවීමක් අවශ්ය නොවේ (රොබෝ තාක්ෂණ ක්රියාකාරකම් සඳහා ව්යතිරේකයක් සඳහා රොබෝ/කට්ටල මිලදී ගැනීම අවශ්ය වේ)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+නව ගුරුවරුන් සහ සිසුන් සඳහා ස්වයං යොමු ක්රියාකාරකම් සඳහා සමාලෝචන කමිටුව විසින් සොයනු ඇත:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- පරිගණක විද්යාවේ පසුබිමක් නොමැති ගුරුවරුන්ට නිබන්ධනය හෝ ක්රියාකාරකම් භාවිතා කළ හැකිය
+- පරිගණක විද්යාවේ කිසිදු පසුබිමක් නොමැතිව සිසුන්ට සාර්ථක විය හැකිය
+- දෙමාපියන්ගේ හෝ ගුරු මග පෙන්වීමකින් තොරව සිසුන්ට නිබන්ධනය හරහා යොමු කළ හැකිය
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+ශ්රේණිය, අත්දැකීම් මට්ටම, විෂය, දෘඩාංග වැනි පෙරහන් මත පදනම්ව අපගේ ක්රියාකාරකම් ලැයිස්තුව සෙවීමට සහ පෙරීමට ගුරුවරුන්ට සහ සිසුන්ට හැකි වේ. පෙරනිමියෙන්, අපි පළමුව පාඩම් සැලසුම් සහ ක්රියාකාරකම් පෙන්වන්නෙමු:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- සමාලෝචන කමිටුවෙන් ඉහළම ශ්රේණිගත කිරීම් ලබා ගන්න
+- ආරම්භකයින් (සිසුන් සහ ගුරුවරුන්) සඳහා නිර්මාණය කර ඇති පැයක් ස්වයං මෙහෙයවන ක්රියාකාරකම් ද
+- පුළුල් පරාසයක පරිශීලකයින්ට ආයාචනය කරන්න (වේදිකා, භාෂා සහ වයස් හරහා)
+- ස්ථාපනය අවශ්ය නොවේ
+- මේ වසරේ අලුත් ද
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## පැයක ස්වයං මාර්ගෝපදේශක නිබන්ධන සැලසුම් කිරීම සඳහා යෝජනා
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+ඔබගේ නිබන්ධනයේ [පැය සංග්රහයේ ලාංඡනය](https://hourofcode.com/us/promote/resources#logo) ඇතුළත් කළ හැකිය, නමුත් මෙය අවශ්ය නොවේ. ඔබ Hour of Code ලාංඡනය භාවිතා කරන්නේ නම්, පහත වෙළඳ ලකුණු මාර්ගෝපදේශ බලන්න. <u>කිසිදු තත්වයක් යටතේ Code.org ලාංඡනය සහ නම භාවිතා කළ නොහැක.</u> දෙකම වෙළඳ ලකුණු කර ඇති අතර, ප්රකාශිත ලිඛිත අවසරයකින් තොරව 3 වන පාර්ශවීය වෙළඳ නාමයක් සමඟ සම-මිශ්ර කළ නොහැක.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**සාමාන්ය ශිෂ්යයාට පැයක් තුළ සුවපහසු ලෙස අවසන් කළ හැකි බවට වග බලා ගන්න.** පාඩම හරහා වඩාත් ඉක්මණින් ගමන් කරන සිසුන් සඳහා අවසානයේ විවෘත ක්රියාකාරකමක් එක් කිරීම සලකා බලන්න. බොහෝ ළමයින් පරිගණක විද්යාව හා කේතීකරණ සඳහා නිරපේක්ෂ ආරම්භකයින් වනු ඇති බව මතක තබා ගන්න.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**ගුරු සටහන් ඇතුළත් කරන්න.** බොහෝ ක්රියාකාරකම් ශිෂ්ය-යොමු කළ යුතුය, නමුත් ක්රියාකාරකමක් ගුරුවරයෙකු විසින් පහසුකම් සපයන්නේ නම් හෝ කළමනාකරණය කරන්නේ නම්, කරුණාකර ඔබේ ක්රියාකාරකම් සමඟ ඉදිරිපත් කරන වෙනම URL එකක ගුරු සටහන් ස්වරූපයෙන් ගුරුවරයා සඳහා පැහැදිලි හා සරල උපදෙස් ඇතුළත් කරන්න. සිසුන් නවක වදය පමණක් නොව, සමහර ගුරුවරුන් ද වේ. වැනි තොරතුරු ඇතුළත් කරන්න:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- නිබන්ධනය වඩාත් හොඳින් ක්රියාත්මක වන්නේ කුමන වේදිකා සහ බ්රව්සර් ද?
+- එය ස්මාර්ට් ෆෝන් වල ක්රියා කරයිද? ටැබ්ලට්?
+- ඔබ යුගල වැඩසටහන්කරණය නිර්දේශ කරනවාද?
+- පන්ති කාමරයක භාවිතා කිරීම සඳහා සලකා බැලිය යුතු කරුණු? උදා: වීඩියෝ තිබේ නම්, මුළු පන්ති කාමරයටම එකට බැලීම සඳහා ප්රක්ෂේපිත තිරයක වීඩියෝ පෙන්වන ලෙස ගුරුවරුන්ට උපදෙස් දෙන්න
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**ක්රියාකාරකම අවසානයේ ප්රතිපෝෂණය සංස්ථාගත කරන්න.** (උදා: “ඔබ මට්ටම් 10 ක් අවසන් කර ලූප ගැන ඉගෙන ගත්තා! නියම රැකියාවක්!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**සමාජ මාධ්ය වෙත පළ කිරීමට සිසුන් දිරිමත් (සුදුසු අවස්ථාවලදී) ඔවුන් අවසන් තියෙනවා විට.** උදාහරණයක් ලෙස “මම ________ සමඟ පැය කේතයක් කර ඇත්තෙමි ඔබට තිබේද? #HourOfCode” හෝ “මම #HourOfCode හි කොටසක් ලෙස #CSEdWeek කර ඇත්තෙමි. ඔබට තිබේද? @Scratch.” **#HourOfCode** හැෂ් ටැගය භාවිතා කරන්න (H, O, C ලොකු අකුරු සමඟ)
 
-**Create your activity in Spanish or in other languages besides English.**
+**ඔබේ ක්රියාකාරකම් ස්පා Spanish ් in භාෂාවෙන් හෝ ඉංග්රීසියට අමතරව වෙනත් භාෂාවලින් සාදන්න.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**ක්රියාකාරිත්වය සමාජීය වශයෙන් වැදගත් සන්දර්භයකට පැහැදිලි කිරීම හෝ සම්බන්ධ කිරීම.** පරිගණක ක්රමලේඛනය සුපිරි බලයක් බවට පත්වන්නේ එය වඩා හොඳ ලෝකය වෙනස් කරන්නේ කෙසේදැයි සිසුන් දකින විට!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**ඔබගේ නිබන්ධනය [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) සුසමාදර්ශයක භාවිතා කළ හැකි බවට වග බලා ගන්න.** බොහෝ පන්ති කාමරවල 1:1 සියලුම සිසුන් සඳහා දෘඩාංග නොමැති නිසා මෙය පැය සංග්රහයේ සඳහා විශේෂයෙන් ප්රයෝජනවත් වේ.
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## වෙළඳ ලකුණු මාර්ගෝපදේශ
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® සහ හෝරා ඩෙල් කෝඩිගෝ® යනු Code.org හි ලියාපදිංචි වෙළඳ ලකුණු වේ. අපගේ නිබන්ධන හවුල්කරුවන් බොහෝ දෙනෙක් අපගේ “පැය ඔෆ් කේතයේ” වෙළඳ ලකුණු ඔවුන්ගේ වෙබ් අඩවි වල ඔවුන්ගේ පැය කේත ක්රියාකාරකම් සම්බන්ධව භාවිතා කර ඇත. මෙම භාවිතය වැළැක්වීමට අපට අවශ්ය නැත, නමුත් භාවිතය සීමාවන් කිහිපයක් තුළ වැටෙන බවට වග බලා ගැනීමට අපට අවශ්යය:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. සංග්රහයේ පැය උද්ඝෝෂනයේ සන්දර්භය තුළ වාණිජ නොවන CS අධ්යාපන ක්රියාකාරකම් සම්බන්ධව පමණක් “සංග්රහයේ පැය” භාවිතා කරන්න, සහ වෙනත් කිසිදු අරමුණක් සඳහා.
+2. “පැය ඔෆ් කෝඩ්” පිළිබඳ ඕනෑම සඳහනක් එය ඔබේම වෙළඳ නාමයක් යැයි යෝජනා නොකරන විලාසිතාවක භාවිතා කළ යුතුය, නමුත් එය බිම් මට්ටමේ ව්යාපාරයක් ලෙස පැය සංග්රහයේ සඳහන් කරයි. හොඳ උදාහරණයක්: “Acmecorp.com හි සංග්රහයේ පැය සඳහා සහභාගී වන්න”. නරක උදාහරණය: “ACME කෝප් විසින් කේතය පැය උත්සාහ කරන්න”.
+3. ඔබේ වෙබ් අඩවියේ සහ යෙදුම් විස්තරවල “Hour of Code” ඔබ සඳහන් කරන වඩාත් කැපී පෙනෙන ස්ථානවල “®” සුපිරි පිටපතක් භාවිතා කරන්න.
+4. පිටුවේ (හෝ පාදකයේ) භාෂාව ඇතුළත් කරන්න, කේත පැය, CSEdWeek සහ Code.org වෙබ් අඩවි වලට සබැඳි ඇතුළුව, පහත සඳහන් කරුණු දෙකම අනාවරණය කරයි: a. පැය සංග්රහයේ® සහ හෝරා ඩෙල් කෝඩිගෝ® යනු Code.org හි ලියාපදිංචි වෙළඳ ලකුණු වේ; සහ ආ. “[Hour of Code](http://hourofcode.com/) ® යනු [Code.org](http://code.org/) විසින් මිලියන ගණනක් සිසුන් පරිගණක විද්යාව සහ පරිගණක ක්රමලේඛනය පැයකට හඳුන්වා දීම සඳහා රටපුරා මුලපිරීමකි.”
+5. යෙදුම් නාමවල “පැය සංග්රහයේ” භාවිතා නොකරන්න.
+6. ඕනෑම වාණිජමය භාවිතයක් හෝ අරමුණක් සම්බන්ධයෙන් “සංග්රහයේ පැය” භාවිතා නොකරන්න (උදා: ගෙවීම් පවුරක් පිටුපස ඔබේ පැය කේත ක්රියාකාරකම් තැබීම; ඔබේ පැය කේත ක්රියාකාරකම්වල කොටසක් ලෙස වෙනත් ගෙවුම් සේවාවක් ප්රවර්ධනය කිරීම; පැය කේත වෙළඳ භාණ්ඩ විකිණීම).
+7. පිවිසුමක් හෝ ගිණුම් නිර්මාණය කිරීමක් අවශ්ය ඕනෑම ක්රියාකාරකමක් සම්බන්ධව “පැය සංග්රහයේ” භාවිතා නොකරන්න.
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## පික්සෙල් ලුහුබැඳීම
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+සහභාගීත්වය වඩාත් නිවැරදිව නිරීක්ෂණය කිරීම සඳහා සෑම නිබන්ධන හවුල්කරුවෙකුටම ඔවුන්ගේ පැය සංග්රහයේ නිබන්ධන වල පළමු පිටුවේ 1-පික්සල් ෙසොයා ගැනීෙම් රූපයක් ඇතුළත් කරන ලෙස අපි ඉල්ලා සිටිමු. පික්සල්-රූපය ආරම්භක පිටුවේ පමණක් විය යුතුය. ඔබගේ නිබන්ධනයේ කිසිදු අතුරු පිටුවක ඇතුළත් නොකරන්න.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+ඔබගේ පැය කේත නිබන්ධනය කරන පරිශීලකයින් ගණන් කිරීමට මෙය අපට ඉඩ සලසයි. එය ඔබගේ නිබන්ධනය සඳහා වඩාත් නිවැරදි සහභාගීත්ව ගණනය කිරීම් වලට තුඩු දෙනු ඇත.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+ඔබගේ නිබන්ධනය අනුමත කර අවසාන නිබන්ධන පිටුවට ඇතුළත් කර ඇත්නම්, Code.org ඔබට ඔබේ නිබන්ධනයට ඒකාබද්ධ වීමට අද්විතීය ලුහුබැඳීමේ පික්සෙල් එකක් ලබා දෙනු ඇත. පහත උදාහරණය බලන්න.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+සටහන: ස්ථාපනය කළ හැකි යෙදුම් සඳහා මෙය කිරීම වැදගත් නොවේ (iOS/Android යෙදුම්, හෝ ඩෙස්ක්ටොප්-ස්ථාපනය යෙදුම්)
 
-Example tracking pixels for Dance Party:
+නර්තන සාදය සඳහා උදාහරණ ලුහුබැඳීමේ පික්සල්:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## ඔබේ ක්රියාකාරකම් ප්රවර්ධනය කිරීම, CSEDWeek, සහ පැය කේතය
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+කරුණාකර ඔබේ ක්රියාකාරකම් ඔබේ ජාලයට ප්රවර්ධනය කරන්න! ඔබේ පැය සංග්රහයේ පිටුවට ඒවා යොමු කරන්න. ඔබගේ පරිශීලකයින් ඔබගේ ක්රියාකාරකම් පිළිබඳව ඔබෙන් ලැබෙන තැපැල් වලට ප්රතිචාර දැක්වීමට බොහෝ සෙයින් ඉඩ ඇත. පරිගණක විද්යා අධ්යාපන සතිය තුළ ජාත්යන්තර පැය කේත ව්යාපාරය භාවිතා කරන්න, අන් අයට සම්බන්ධ වීමට ආරාධනා කිරීමට පරිශීලකයින් දිරිමත් කිරීමට නිදහසට කරුණක් ලෙස සහ තවත් සිසුන් වෙත ළඟා වීමට අපට උදව් කරන්න!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- ඔබේ වෙබ් අඩවියේ කේතය සහ CSEDWeek හි පැය විශේෂාංගය. උදා: <http://www.tynker.com/hour-of-code>
+- #HourOfCode හැෂ් ටැගය භාවිතා කරමින් සමාජ මාධ්ය, සාම්ප්රදායික මාධ්ය, තැපැල් ලැයිස්තු ආදිය භාවිතා කරමින් පැය සංග්රහයේ ප්රවර්ධනය කරන්න (ලොකු අකුරු සහිත H, O, C)
+- දේශීය සිදුවීමක් සත්කාරකත්වය හෝ දේශීය පාසල්වල හෝ ප්රජා කණ්ඩායම්වල උත්සවයක් පැවැත්වීමට ඔබේ සේවකයින්ගෙන් ඉල්ලා සිටින්න.
+- වැඩි විස්තර සඳහා අපගේ [සම්පත් කට්ටලය](https://hourofcode.com/us/promote) බලන්න.
 
-[**Back to the top**](#top)
+[**ආපසු ඉහළට**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

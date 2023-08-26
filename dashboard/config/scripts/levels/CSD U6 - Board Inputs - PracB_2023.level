@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:12:22.000Z",
   "level_num": "custom",
@@ -57,7 +58,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/39327fe55ee3497a3e9fbb8e37feed82-image-1650057325225.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Emoji Reactions\r\n\r\nMake an app that starts with a neutral emoji on the screen. When the user presses `down` the left button, it changes to a happy face. When the user presses `down` the right button, it changes to a sad face. When the user lets `up` either button, it changes back to a neutral face.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) :::details [When the user presses the left button, show a happy face]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the user presses `\"down\"` on `buttonL`.\r\n    - Use a [`setProperty()`(#fff176)](/docs/applab/setProperty/) block to update the `image` of the emoji to a happy face (`icon://fa-smile-o`)\r\n    :::\r\n2) ::: details [When the user presses the right button, show a sad face]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the user presses `\"down\"` on `buttonR`.\r\n    - Use a [`setProperty()`(#fff176)](/docs/applab/setProperty/) block to update the `image` of the emoji to a frown face (`icon://fa-frown-o`)\r\n    :::\r\n3) ::: details [When a user releases the left button, show a neutral face]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the user presses `\"up\"` on `buttonL`.\r\n    - Use a [`setProperty()`(#fff176)](/docs/applab/setProperty/) block to update the `image` of the emoji to a neutral face (`icon://fa-meh-o`)\r\n    :::\r\n4) ::: details [When the user releases the left button, show a neutral face]\r\n\t- Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the user presses `\"up\"` on `buttonL`.\r\n    - Use a [`setProperty()`(#fff176)](/docs/applab/setProperty/) block to update the `image` of the emoji to a neutral face (`icon://fa-meh-o`)\r\n    :::\r\n\r\n**Run Your Code!** When you hold a button, the emoji should change to a happy or sad emoji. When you release the button, it should change back to the neutral emoji.",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -71,20 +72,19 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
-    "palette_category_at_start": "Circuit",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-meh-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"faceImage\" style=\"height: 220px; width: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 35px; top: 90px; margin: 0px;\"></div></div>",
     "display_name": "Emoji Reactions",
     "bubble_choice_description": "Change the emoji reactions based on button presses",
     "thumbnail_url": "https://images.code.org/e6810d27a28507057d9963cd0f8f6cbe-image-1650057342115.gif",
-    "start_blocks": "//1) When the user presses the left button, show a happy face\r\n\r\n//2) When the user presses the right button, show a sad face\r\n\r\n//3) When a user releases the left button, show a neutral face\r\n\r\n//4) When the user releases the left button, show a neutral face\r\n",
+    "start_blocks": "//1) When the user presses the left button, show a happy face\r\n\r\n//2) When the user presses the right button, show a sad face\r\n\r\n//3) When a user releases the left button, show a neutral face\r\n\r\n//4) When the user releases the right button, show a neutral face\r\n",
     "encrypted_examples": "owkPmDO9tP+Vb6Omfu2R1GLYgrFFJBvUwYB7UXKIW8E21cPdA7R2j32PR/X1\n5jLlgd7kPQpndtM+PXnwAap5xg==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:22.966+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:22.966+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracB_2222\"},{\"changed_at\":\"2023-07-21 19:54:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-16 17:08:43 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

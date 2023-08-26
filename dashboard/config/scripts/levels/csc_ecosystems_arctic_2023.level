@@ -15,7 +15,7 @@
     ],
     "helper_libraries": [
       "NativeSpriteLab",
-      "zBehaviorWatcherMike"
+      "zCriterionValidationLibrary"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
@@ -24,9 +24,9 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Change the background so there is more ice for the polar bear to hunt on. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/199611c938cf9ad852ec5db5ce31a3d0/csc_ecosystems_arctic_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The polar bear needs to be bigger! Change its size to be more than 30.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/04f358b2858addf9f0927b1ac1b4dfee/csc_ecosystems_arctic_2023.mp3\"}]",
     "instructions_important": "false",
-    "long_instructions": "##Welcome to the Arctic! \r\n\r\n**The polar bear is way too tiny this arctic ecosystem simulation. Can you set the size of the polar bear at the start of the simulation?**<br> <br>\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation!\r\n\r\n___\r\n\r\n##Modify, observe, & record\r\n\r\n\r\n- Change the number on the `set polar bear size` block under <code style=\"color:black; background-color:#FFBD46\">When Run</code>.\r\n\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch how the simulation has changed. \r\n- Is the polar bear's size more realistic?\r\n\r\n***Record your observations in your Ecologists Notebook.***",
+    "long_instructions": "##Welcome to the Arctic\r\n\r\n**Climate change is melting sea ice and making it harder for polar bears to find food.** The bears aren't growing to their full size.\r\n\r\n- **Observe:** Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation!\r\n\r\n- **Modify:** Change the <code style=\"color:black; background-color:#B3B2FB\">background</code> to include more ice. Then increase the number on the <code style=\"color:black; background-color:#5ED5DD\">set polar bear size</code>  block under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch how the simulation has changed. Is the polar bear's size more realistic?",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -40,147 +40,150 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "start_animations": "{\"orderedKeys\":[\"ffc9483d-7391-4906-b1c9-c533c1300845\",\"b96e60d7-6b54-41b5-8837-ddac4b5a0fa2\",\"2d20cd72-a9bb-42ae-85dd-0da13fd940c3\",\"a1ad8aaa-9d25-4b93-b57b-14dee839c687\"],\"propsByKey\":{\"a1ad8aaa-9d25-4b93-b57b-14dee839c687\":{\"name\":\"background_landscape_27\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:15 UTC\",\"pngLastModified\":\"2020-12-01 23:21:15 UTC\",\"version\":\"VpwihnIZHRGXXcnx3Nza.vAUZ3S9herY\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/VpwihnIZHRGXXcnx3Nza.vAUZ3S9herY/category_backgrounds/background_landscape_27.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2d20cd72-a9bb-42ae-85dd-0da13fd940c3\":{\"name\":\"polarbear\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":270},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:03 UTC\",\"pngLastModified\":\"2021-01-19 23:45:03 UTC\",\"version\":\"51LWgRbZ8dQmbR3aIfL9h2W_seMwxwF6\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/51LWgRbZ8dQmbR3aIfL9h2W_seMwxwF6/category_animals/polarbear.png\",\"sourceSize\":{\"x\":400,\"y\":270}},\"b96e60d7-6b54-41b5-8837-ddac4b5a0fa2\":{\"name\":\"seal\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":219},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:54 UTC\",\"pngLastModified\":\"2021-01-19 23:44:55 UTC\",\"version\":\"ww1kKGagOUWxXMbwT0x6gFzCcKdCxgFx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ww1kKGagOUWxXMbwT0x6gFzCcKdCxgFx/category_animals/seal.png\",\"sourceSize\":{\"x\":398,\"y\":219}},\"ffc9483d-7391-4906-b1c9-c533c1300845\":{\"name\":\"cuteanimals_tuna\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:26 UTC\",\"pngLastModified\":\"2021-09-02 22:04:08 UTC\",\"version\":\"s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6./category_animals/cuteanimals_tuna.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"98cd00e8-e18b-4781-bcd8-904231a29b27\",\"a7ef61e8-aa75-4eef-8b1c-6f73f8e7a168\",\"a9c1789b-61e5-4056-b825-c8530874e73f\",\"46fafd0a-0545-44ef-b0a8-06642a0c4d45\",\"102d400b-c876-4227-b1dc-f59fe47712d4\"],\"propsByKey\":{\"102d400b-c876-4227-b1dc-f59fe47712d4\":{\"name\":\"arctic-small-iceb\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-05-12T18:49:54.000Z\",\"pngLastModified\":\"2023-05-12T18:49:54.000Z\",\"version\":\"baF6hJN.EALAz0dBDpZCfSuuV8W75i.A\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/baF6hJN.EALAz0dBDpZCfSuuV8W75i.A/arctic-small-iceb.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"46fafd0a-0545-44ef-b0a8-06642a0c4d45\":{\"name\":\"arctic-larege-iceb\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-05-12T18:50:06.000Z\",\"pngLastModified\":\"2023-05-12T18:50:06.000Z\",\"version\":\"TpVV8Y8JpU2JZVJ84EdOLBeH3yqe2VoI\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/TpVV8Y8JpU2JZVJ84EdOLBeH3yqe2VoI/arctic-larege-iceb.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a9c1789b-61e5-4056-b825-c8530874e73f\":{\"name\":\"polarbear\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":270},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:45:03 UTC\",\"pngLastModified\":\"2021-01-19 23:45:03 UTC\",\"version\":\"51LWgRbZ8dQmbR3aIfL9h2W_seMwxwF6\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/51LWgRbZ8dQmbR3aIfL9h2W_seMwxwF6/category_animals/polarbear.png\",\"sourceSize\":{\"x\":400,\"y\":270}},\"a7ef61e8-aa75-4eef-8b1c-6f73f8e7a168\":{\"name\":\"seal\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":219},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:54 UTC\",\"pngLastModified\":\"2021-01-19 23:44:55 UTC\",\"version\":\"ww1kKGagOUWxXMbwT0x6gFzCcKdCxgFx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ww1kKGagOUWxXMbwT0x6gFzCcKdCxgFx/category_animals/seal.png\",\"sourceSize\":{\"x\":398,\"y\":219}},\"98cd00e8-e18b-4781-bcd8-904231a29b27\":{\"name\":\"cuteanimals_tuna\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:26 UTC\",\"pngLastModified\":\"2021-09-02 22:04:08 UTC\",\"version\":\"s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6./category_animals/cuteanimals_tuna.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "instructions_icon": "bear",
     "name_suffix": "_2023",
     "standalone_app_name": "spritelab",
-    "display_name": "Arctic Ecologist!",
-    "bubble_choice_description": "The polar bear is way too tiny this arctic ecosystem simulation. Can you set the size of the polar bear at the start of the simulation?",
-    "thumbnail_url": "https://images.code.org/39e395c41db50344f36e349bd43c8135-arctic.jpg",
+    "display_name": "Arctic Ecologist",
+    "bubble_choice_description": "**Climate change** is melting sea ice and making it harder for polar bears to find food.<br><br>\r\nThe bears aren't growing to their full size.<br><br>**Polar ecologists, can you help?**",
+    "thumbnail_url": "https://images.code.org/0750e45af109990b285bd147f2089891-arctic.jpg",
+    "validation_code": "if (World.frameCount == 1) {\r\n    setFailTime(150);\r\n    setDelayTime(90); \r\n\r\n    //Check that there is a different background\r\n    addCriteria(function() {\r\n      return getBackground() === \"arctic-larege-iceb\";\r\n    }, \"changeBackground\"); \r\n\r\n    //Check that the polar bear's (polarbear) size is changed to something more than 30\r\n    addCriteria(function() {\r\n        var polarBearId = getExactlyOneSpriteIdFromCostumes(['polarbear']);\r\n        return getProp({id: polarBearId}, \"scale\") > 30;\r\n      }, \"cscEcosystemsPolarBear\"); //It looks like the polar bear is still too small. Change the number on `set bear size` to something more than 30.\r\n  \r\n\r\n  }\r\ngetHelperVars();\r\n  check();\r\n\r\n",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "9efcY4RAAiIgOeoQUQIIyszRdjbAbaKB4hVgtyGi/xnBCViaNnSanJSIqO0L\nXpO9zbTMzX0UpQ8Haz6eePZXbg==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2023-05-09T22:04:37.779+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_marsh_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_marsh_2023\"},{\"changed_at\":\"2023-05-09 22:07:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:08:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:10:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:12:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:13:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:20:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:21:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:24:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:26:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:48:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:48:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:49:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:50:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:51:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:16:51 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:19:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:25:25 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:34:48 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-05-09T22:04:37.779+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_marsh_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_marsh_2023\"},{\"changed_at\":\"2023-05-09 22:07:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:08:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:10:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:12:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:13:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:20:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:21:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:24:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:26:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:48:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:48:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:49:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:50:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:51:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:16:51 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:19:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:25:25 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:34:48 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 14:19:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:21:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:24:48 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:26:26 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 22:35:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 23:13:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:44:59 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:46:36 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 21:27:41 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-12 18:26:06 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:32:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:34:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:53:00 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:53:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:54:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:56:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 18:57:57 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 19:01:58 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 19:04:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 19:05:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 19:52:47 +0000\",\"changed\":[\"start_blocks\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 20:06:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-18 18:56:13 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-18 18:56:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-18 18:58:09 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-18 18:58:51 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-18 18:59:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-05-19 20:14:20 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-23 16:12:57 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-23 16:14:56 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-23 20:17:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-25 19:08:33 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-25 19:09:07 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-25 19:09:48 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
-          <field name="NAME">ArcticSetup</field>
+          <field name="NAME" id="newGrowthSetup">newGrowthSetup</field>
           <statement name="STACK">
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"background_landscape_27"</field>
+            <block type="ecosystems_makeNumSpritesWithinRange">
+              <field name="NUM">5</field>
+              <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
+              <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"polarbear"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":7,"y":104}</field>
-                    </block>
-                  </value>
+                <block type="ecosystems_makeNumSpritesWithinRange">
+                  <field name="NUM">1</field>
+                  <field name="ANIMATION_NAME">"seal"</field>
+                  <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
                   <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <field name="NUM">10</field>
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                          <field name="ANIMATION">"cuteanimals_tuna"</field>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_locationAt">
-                              <value name="X">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <field name="NUM">400</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="Y">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <field name="NUM">220</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
+                      <value name="VAL">
+                        <block type="math_number" can_disconnect_from_parent="false">
+                          <field name="NUM">50</field>
                         </block>
-                      </statement>
+                      </value>
                       <next>
-                        <block type="controls_repeat_ext">
-                          <value name="TIMES">
-                            <block type="math_number">
-                              <field name="NUM">4</field>
+                        <block type="gamelab_setProp">
+                          <field name="PROPERTY">"speed"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_getAllSprites"/>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" can_disconnect_from_parent="false">
+                              <field name="NUM">3</field>
                             </block>
                           </value>
-                          <statement name="DO">
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"seal"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_locationAt">
-                                  <value name="X">
-                                    <block type="math_random_int">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <field name="NUM">1</field>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <field name="NUM">400</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <value name="Y">
-                                    <block type="math_random_int">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <field name="NUM">150</field>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <field name="NUM">250</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </statement>
                           <next>
-                            <block type="gamelab_setProp">
-                              <field name="PROPERTY">"scale"</field>
+                            <block type="gamelab_addBehaviorSimple">
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                                   <field name="ANIMATION">"cuteanimals_tuna"</field>
                                 </block>
                               </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
+                                  <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                      <field name="ANIMATION">"seal"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
+                                      <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <field name="NAME">ArcticSetup</field>
+          <statement name="STACK">
+            <block type="gamelab_makeNewSpriteAnon">
+              <field name="ANIMATION_NAME">"polarbear"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":332,"y":163}</field>
+                </block>
+              </value>
+              <next>
+                <block type="ecosystems_makeNumSpritesWithinRange">
+                  <field name="NUM">10</field>
+                  <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
+                  <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
+                  <next>
+                    <block type="ecosystems_makeNumSpritesWithinRange">
+                      <field name="NUM">4</field>
+                      <field name="ANIMATION_NAME">"seal"</field>
+                      <field name="RANGE">{x1:0, x2:400, y1:150, y2:250}</field>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <field name="PROPERTY">"scale"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                              <field name="ANIMATION">"cuteanimals_tuna"</field>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" can_disconnect_from_parent="false">
+                              <field name="NUM">50</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setProp">
+                              <field name="PROPERTY">"speed"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"polarbear"</field>
+                                </block>
+                              </value>
                               <value name="VAL">
-                                <block type="math_number" can_disconnect_from_parent="false">
-                                  <field name="NUM">50</field>
+                                <block type="math_number">
+                                  <field name="NUM">3</field>
                                 </block>
                               </value>
                               <next>
                                 <block type="gamelab_setProp">
                                   <field name="PROPERTY">"speed"</field>
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"polarbear"</field>
-                                    </block>
+                                    <block type="gamelab_getAllSprites"/>
                                   </value>
                                   <value name="VAL">
                                     <block type="math_number">
@@ -188,33 +191,34 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_setProp">
-                                      <field name="PROPERTY">"speed"</field>
+                                    <block type="gamelab_addBehaviorSimple">
                                       <value name="SPRITE">
-                                        <block type="gamelab_getAllSprites"/>
+                                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                          <field name="ANIMATION">"seal"</field>
+                                        </block>
                                       </value>
-                                      <value name="VAL">
-                                        <block type="math_number">
-                                          <field name="NUM">3</field>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
+                                          <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="gamelab_addBehaviorSimple">
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                              <field name="ANIMATION">"seal"</field>
+                                              <field name="ANIMATION">"cuteanimals_tuna"</field>
                                             </block>
                                           </value>
                                           <value name="BEHAVIOR">
                                             <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                              <field name="BEHAVIOR">new Behavior(wandering, [])</field>
+                                              <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="gamelab_addBehaviorSimple">
                                               <value name="SPRITE">
                                                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                                  <field name="ANIMATION">"cuteanimals_tuna"</field>
+                                                  <field name="ANIMATION">"polarbear"</field>
                                                 </block>
                                               </value>
                                               <value name="BEHAVIOR">
@@ -222,20 +226,6 @@
                                                   <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_addBehaviorSimple">
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                                      <field name="ANIMATION">"polarbear"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="BEHAVIOR">
-                                                    <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                                      <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -260,18 +250,23 @@
             <block type="procedures_callnoreturn">
               <mutation name="ArcticSetup"/>
               <next>
-                <block type="gamelab_setProp">
-                  <field name="PROPERTY">"scale"</field>
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                      <field name="ANIMATION">"polarbear"</field>
+                <block type="gamelab_setBackgroundImageAs">
+                  <field name="IMG">"arctic-small-iceb"</field>
+                  <next>
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                          <field name="ANIMATION">"polarbear"</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" can_disconnect_from_parent="false">
+                          <field name="NUM">30</field>
+                        </block>
+                      </value>
                     </block>
-                  </value>
-                  <value name="VAL">
-                    <block type="math_number" can_disconnect_from_parent="false">
-                      <field name="NUM">10</field>
-                    </block>
-                  </value>
+                  </next>
                 </block>
               </next>
             </block>
@@ -329,158 +324,6 @@
               </value>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="newGrowthSetup">newGrowthSetup</field>
-          <statement name="STACK">
-            <block type="controls_repeat_ext">
-              <value name="TIMES">
-                <block type="math_number">
-                  <field name="NUM">5</field>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"cuteanimals_tuna"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_locationAt">
-                      <value name="X">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <field name="NUM">400</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="Y">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <field name="NUM">110</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <next>
-                <block type="controls_repeat_ext">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <field name="NUM">1</field>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"seal"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_locationAt">
-                          <value name="X">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">400</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="Y">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">150</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">250</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="gamelab_setProp">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                          <field name="ANIMATION">"cuteanimals_tuna"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number" can_disconnect_from_parent="false">
-                          <field name="NUM">50</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_setProp">
-                          <field name="PROPERTY">"speed"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_getAllSprites"/>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_number" can_disconnect_from_parent="false">
-                              <field name="NUM">3</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_addBehaviorSimple">
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                  <field name="ANIMATION">"cuteanimals_tuna"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                  <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_addBehaviorSimple">
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                      <field name="ANIMATION">"seal"</field>
-                                    </block>
-                                  </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                      <field name="BEHAVIOR">new Behavior(wandering, [])</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

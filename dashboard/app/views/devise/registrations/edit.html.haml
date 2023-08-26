@@ -1,3 +1,4 @@
+- require '../shared/middleware/helpers/experiments'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -64,6 +65,10 @@
     .field
       = f.label t('signup_form.age'), class: "label-bold"
       = f.select :age, User::AGE_DROPDOWN_OPTIONS
+    - if experiment_value('gender', request)
+      .field
+        = f.label :gender_student_input, t('signup_form.gender'), class: "label-bold"
+        = f.text_field :gender_student_input, maxlength: 50
   - if resource.teacher?
     .field
       = f.label :school, class: "label-bold"

@@ -1,0 +1,142 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-ai-pl-webinar {
+  background-image: url(/images/ai/pl/101/hero--1.png), url(/images/ai/pl/101/hero--2.png);
+  background-position: left center, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #360161;
+  background-size: contain, 470px;
+
+  &__by {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    flex-wrap: wrap;
+
+    img {
+      margin: 16px 32px 16px 0;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    background-position: calc(14vw - 350px) center, right bottom
+  }
+
+  @media screen and (max-width: 1279px) {
+    background-size: contain, 370px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    background-image: none;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-position: bottom center;
+    background-image: url(/images/ai/pl/101/hero--2-m.png);
+    background-size: 300px;
+    padding-bottom: 200px;
+
+    &__by {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    &__list {
+      align-items: center;
+      margin-left: 0;
+      flex-wrap: wrap;
+
+      img {
+        margin: 12px 24px 12px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.partnership-ai {
+  background: $neutral_light;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 3rem;
+  }
+
+  @media screen and(max-width: $width-md) {
+    &__logo {
+      height: 35px;
+
+      &--iste {
+        height: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    &__list {
+      align-items: center;
+      justify-content: center;
+      gap: 0 1rem;
+    }
+
+    &__logo {
+      margin: 20px;
+      height: 30px;
+
+      &--iste {
+        height: 24px;
+      }
+
+      &--ets {
+        height: 34px;
+      }
+    }
+  }
+}
+
+.img {
+  &--max {
+    max-width: 100%;
+  }
+}
+
+.video-101 {
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  .action-block {
+    margin-bottom: 2rem;
+    background: $neutral_white;
+  }
+
+  &__image,
+  &__video {
+
+    @media (min-width: 971px) {
+      margin: 20px 0 20px 20px;
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+.partnership-ai + #clearboth + .desktop-feature {
+  display: none;
+}

@@ -49,12 +49,15 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   end
 
   # Managed resource stacks other than the Code.org application.
-  %I(vpc iam ami data lambda alerting).each do |stack|
+  simple_stacks = %I(lambda alerting)
+  rack_stacks = %I(ami data)
+  other_stacks = %I(vpc iam)
+  (other_stacks + rack_stacks + simple_stacks).each do |stack|
     namespace stack do
       timed_task_with_logging :environment do
         stack_name = ENV['STACK_NAME']
-        stack_name ||= stack.to_s if [:lambda, :alerting].include? stack
-        stack_name ||= "#{stack.upcase}#{"-#{rack_env}" if [:ami, :data].include? stack}"
+        stack_name ||= stack.to_s if simple_stacks.include?(stack)
+        stack_name ||= "#{stack.upcase}#{"-#{rack_env}" if rack_stacks.include?(stack)}"
 
         Dir.chdir aws_dir('cloudformation')
         require 'cdo/aws/cloud_formation'

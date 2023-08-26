@@ -4,7 +4,7 @@ class FakeController < ApplicationController
   include Api::CsvDownload
 end
 
-class Api::CsvDownloadTest < ::ActionController::TestCase
+class Api::CsvDownloadTest < ActionController::TestCase
   setup do
     @controller = FakeController.new
   end

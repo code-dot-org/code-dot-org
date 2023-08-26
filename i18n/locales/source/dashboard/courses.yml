@@ -245,10 +245,10 @@ en:
 
             -   Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
 
-            -   You can find the _Curriculum Guide_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+            -   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'23-'24"
         self-paced-pl-physical-computing-2022:
-          title: 'Teaching Creating Apps with Devices '
+          title: Teaching Creating Apps with Devices (Circuit Playground)
           description_short: ''
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
@@ -297,10 +297,10 @@ en:
             -   You can access the [Course Syllabus][3] and [Getting Started Guide][4] to learn more about the course and get started.
           version_title: "'23-'24"
         focus-on-creativity-2023:
-          title: Focus on Creativity
+          title: Focus on Creativity (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
-            Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
+            Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
 
             **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
           description_teacher: |-
@@ -313,10 +313,10 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: "'23-24"
         focus-on-hardware-2023:
-          title: Focus on Hardware
+          title: Focus on Hardware (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
-            Focus on Hardware is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to use data and physical devices to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+            Focus on Hardware is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to use data and physical devices to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
 
             **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
           description_teacher: |-
@@ -329,10 +329,10 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: ''
         focus-on-data-2023:
-          title: Focus on Data
+          title: Focus on Data (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
-            Focus on Data is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to use data to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+            Focus on Data is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to use data to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
 
             **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
           description_teacher: |-
@@ -345,10 +345,10 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: ''
         focus-on-design-with-purpose-2023:
-          title: Focus on Design with Purpose
+          title: Focus on Design with Purpose (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
-            Focus on Design with Purpose is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about the needs of users while designing websites and apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+            Focus on Design with Purpose is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to think about the needs of users while designing websites and apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
 
             **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
           description_teacher: |-
@@ -361,7 +361,7 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: ''
         focus-on-coding-2023:
-          title: Focus on Coding
+          title: Focus on Coding (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -377,10 +377,10 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: ''
         focus-on-impact-in-society-2023:
-          title: Focus on Impact in Society
+          title: Focus on Impact in Society (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
-            Focus on Impact in Society is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about computer science as a tool to solve problems while considering the broader social impacts of various aspects of computer science. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+            Focus on Impact in Society is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to think about computer science as a tool to solve problems while considering the broader social impacts of various aspects of computer science. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
 
             **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
           description_teacher: |-
@@ -417,30 +417,105 @@ en:
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students using micro:bits.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
           version_title: ''
         pl-csd-summer-2023:
-          title: 'CS Discoveries Summer Workshop '
+          title: CSD In-Person PL Workshop Course
           description_short: ''
-          description_student: "**You will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
-          description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in your understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
+          description_student: "**You will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in your understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
           version_title: ''
         virtual-pl-csd-summer-2023:
-          title: virtual-pl-csd-summer-2023
+          title: CSD Virtual PL Workshop Course
+          description_short: ''
+          description_student: "**You will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in your understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
+          version_title: ''
+        self-paced-pl-csp-2023:
+          title: Teaching CS Principles
+          description_short: ''
+          description_student: "## Welcome\n\n##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.\n\n### Find the learning that works for you\n\n##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n### Pick your content\n\n##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started."
+          description_teacher: "## Welcome\n\n##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.\n\n### Find the learning that works for you\n\n##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n### Pick your content\n\n##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started."
+          version_title: 22-23
+        self-paced-pl-aiml-2023:
+          title: 'Preparing to Teach AI and Machine Learning '
+          description_short: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
+          description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
+          version_title: ''
+        vpl-csp-2023:
+          title: CS Principles Virtual PL Workshop Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csa-2023:
+          title: CSA Virtual Professional Learning
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csd-2023:
+          title: CSD Virtual Professional Learning
           description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: ''
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-20/
-      teacher_forum/csd/2020:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd
       curriculum/csd/2017:
         name: Curriculum
         url: https://curriculum.code.org/csd-1718/
       teacher_forum_6/csd/2017:
         name: Teacher Forum
         url: https://forum.code.org/c/csd
+      curriculum/csd/2018:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-18/
+      teacher_forum_6/csd/2018:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2019:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-19/
+      teacher_forum/csd/2019:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2020:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-20/
+      teacher_forum/csd/2020:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      all_code/csd/2021:
+        name: All Code
+        url: "/courses/csd-2021/code"
+      all_resources_1/csd/2021:
+        name: All Resources
+        url: "/courses/csd-2021/resources"
+      all_standards_1/csd/2021:
+        name: All Standards
+        url: "/courses/csd-2021/standards"
+      all_vocabulary_1/csd/2021:
+        name: All Vocabulary
+        url: "/courses/csd-2021/vocab"
+      csd_curriculum_guide/csd/2021:
+        name: CSD Curriculum Guide
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Guide to Assessment
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_debugging/csd/2021:
+        name: CSD Guide to Debugging
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        name: CSD Guide to Differentiation
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        name: CSD Guide to Using Resources
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        name: CSD Implementation Guide
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        name: Getting Started with CSD
+        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
       all_code_5/csd/2022:
         name: All Code
         url: "/courses/csd-2022/code"
@@ -480,12 +555,6 @@ en:
       csd_programming_levels_guide/csd/2022:
         name: CSD Programming Levels Guide
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-19/
-      teacher_forum/csd/2019:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd
       all_code_2/csd/2023:
         name: All Code
         url: "/courses/csd-2023/code"
@@ -501,6 +570,9 @@ en:
       csd_changelog_23-_24/csd/2023:
         name: CSD Changelog '23-'24
         url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
+      csd_course_standards_csta_alignment/csd/2023:
+        name: CSD Course Standards CSTA Alignment
+        url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing
       csd_guide_to_assessment/csd/2023:
         name: CSD Guide to Assessment
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view
@@ -534,42 +606,3 @@ en:
       csd_syllabus/csd/2023:
         name: CSD Syllabus
         url: https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view
-      all_code/csd/2021:
-        name: All Code
-        url: "/courses/csd-2021/code"
-      all_resources_1/csd/2021:
-        name: All Resources
-        url: "/courses/csd-2021/resources"
-      all_standards_1/csd/2021:
-        name: All Standards
-        url: "/courses/csd-2021/standards"
-      all_vocabulary_1/csd/2021:
-        name: All Vocabulary
-        url: "/courses/csd-2021/vocab"
-      csd_curriculum_guide/csd/2021:
-        name: CSD Curriculum Guide
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: CSD Guide to Assessment
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2021:
-        name: CSD Guide to Debugging
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        name: CSD Guide to Differentiation
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        name: CSD Guide to Using Resources
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        name: CSD Implementation Guide
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Getting Started with CSD
-        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
-      curriculum/csd/2018:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-18/
-      teacher_forum_6/csd/2018:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd

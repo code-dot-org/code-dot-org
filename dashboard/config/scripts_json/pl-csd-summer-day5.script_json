@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-27 11:38:49 UTC",
+    "serialized_at": "2023-05-12 17:37:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -62,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is rooted in the curriculum values. Participants have an opportunity to look back on the week to reflect on where they saw these values come through. Participants also begin to prepare for the year by setting up their class sections in Code Studio.\n\n\n**Objectives:**\n* Participants know how to submit feedback to Code.org\n* Participants have set up class sections on Code Studio\n\n**Suggested Time:** 45 minutes",
+        "overview": "**Purpose:**\nThis session is rooted in the curriculum values. Participants have an opportunity to look back on the week to reflect on where they saw these values come through. Participants also begin to prepare for the year by setting up their class sections in Code Studio.\n\n\n**Objectives:**\n* Participants know how to submit feedback to Code.org\n* Participants have set up class sections on Code Studio\n\n**Suggested Time:** 35 minutes",
         "student_overview": "**You will:**\n* Learn how to submit feedback to Code.org\n* Set up class sections on Code Studio"
       },
       "seeding_key": {
@@ -79,8 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 45 minutes",
-        "student_overview": "\n\n**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how they can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
+        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -97,7 +97,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 45 minutes",
-        "student_overview": "**You will:**\n* Share implementation ideas with each other teachers\n* Write down ideas you would like to implement in their classroom"
+        "student_overview": "**You will:**\n* Share implementation ideas with other teachers\n* Write down ideas you would like to implement in your classroom"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -164,7 +164,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nCelebrate a wonderful week!\n\n\n**Objectives:**\n* Participants feel a part of the larger Code.org community\n* Participants celebrate the work they did throughout the week\n",
+        "overview": "**Purpose:**\nCelebrate a wonderful week!\n\n\n**Objectives:**\n* Participants feel a part of the larger Code.org community\n* Participants celebrate the work they did throughout the week\n\n**Suggested Time:** 45 minutes",
         "student_overview": "**You will:**\n\n* Celebrate the work you did throughout the week"
       },
       "seeding_key": {

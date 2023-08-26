@@ -2,22 +2,27 @@
 #
 # Table name: course_offerings
 #
-#  id                   :integer          not null, primary key
-#  key                  :string(255)      not null
-#  display_name         :string(255)      not null
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  category             :string(255)      default("other"), not null
-#  is_featured          :boolean          default(FALSE), not null
-#  assignable           :boolean          default(TRUE), not null
-#  curriculum_type      :string(255)
-#  marketing_initiative :string(255)
-#  grade_levels         :string(255)
-#  header               :string(255)
-#  image                :string(255)
-#  cs_topic             :string(255)
-#  school_subject       :string(255)
-#  device_compatibility :string(255)
+#  id                               :integer          not null, primary key
+#  key                              :string(255)      not null
+#  display_name                     :string(255)      not null
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  category                         :string(255)      default("other"), not null
+#  is_featured                      :boolean          default(FALSE), not null
+#  assignable                       :boolean          default(TRUE), not null
+#  curriculum_type                  :string(255)
+#  marketing_initiative             :string(255)
+#  grade_levels                     :string(255)
+#  header                           :string(255)
+#  image                            :string(255)
+#  cs_topic                         :string(255)
+#  school_subject                   :string(255)
+#  device_compatibility             :string(255)
+#  description                      :string(255)
+#  professional_learning_program    :string(255)
+#  video                            :string(255)
+#  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
@@ -28,10 +33,11 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
-  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -43,6 +49,11 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'code.org/professional-development-workshops',
+    '6-12 Workshops': 'code.org/apply',
+  }
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -52,7 +63,6 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
-
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -87,14 +97,45 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
-  def latest_published_version
+  # @param locale_code [String] User or request locale. Optional.
+  # @return [CourseVersion] Returns the latest stable version in a course family supported in the given locale.
+  #   If the locale is in English or the latest stable version is nil (either because previous versions are not
+  #   supported in given locale or because the only version(s) are in a 'preview' state), then return the latest
+  #   launched (a.k.a. published) version.
+  def latest_published_version(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    unless locale_str&.start_with?('en')
+      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      return latest_stable_version.course_version unless latest_stable_version.nil?
+    end
+
     course_versions.select do |cv|
       cv.content_root.launched?
     end.max_by(&:version_year)
   end
 
-  def path_to_latest_published_version
-    latest_published_version.content_root.link
+  def path_to_latest_published_version(locale_code = 'en-us')
+    return nil unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.link
+  end
+
+  def display_name_with_latest_year(locale_code = 'en-us')
+    return localized_display_name unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.localized_assignment_family_title
+  end
+
+  def course_id
+    return unless latest_published_version&.content_root_type == 'UnitGroup'
+    latest_published_version.content_root.id
+  end
+
+  def script_id
+    return unless latest_published_version&.content_root_type == 'Unit'
+    latest_published_version.content_root.id
+  end
+
+  def standalone_unit?
+    latest_published_version&.content_root_type == 'Unit'
   end
 
   def self.should_cache?
@@ -158,6 +199,16 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.professional_learning_and_self_paced_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+      {
+        id: co.id,
+        key: co.key,
+        display_name: co.display_name,
+      }
+    end
+  end
+
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
     single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
@@ -213,9 +264,18 @@ class CourseOffering < ApplicationRecord
   end
 
   def duration
+    return nil unless latest_published_version
     co_units = latest_published_version.units
     co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+  end
+
+  def translated?(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    return true if locale_str&.start_with?('en')
+
+    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    !latest_stable_version.nil?
   end
 
   def summarize_for_edit
@@ -232,21 +292,38 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
-  def summarize_for_catalog
+  def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
-      display_name: display_name,
+      display_name: localized_display_name,
+      display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: path_to_latest_published_version
+      course_version_path: path_to_latest_published_version(locale_code),
+      course_version_id: latest_published_version(locale_code)&.id,
+      course_id: course_id,
+      course_offering_id: id,
+      script_id: script_id,
+      is_standalone_unit: standalone_unit?,
+      is_translated: translated?(locale_code),
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
     }
   end
 
@@ -264,7 +341,12 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
@@ -320,6 +402,10 @@ class CourseOffering < ApplicationRecord
 
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
+  end
+
+  def instruction_type
+    course_versions&.first&.content_root&.instruction_type
   end
 
   def grade_levels_list

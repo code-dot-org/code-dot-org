@@ -1,10 +1,16 @@
+- require 'cpa'
+- location = Geocoder.search(request.ip).try(:first)
+- country_code = location&.country_code.to_s.upcase
+-# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
+- us_ip = ['US', 'RD'].include?(country_code)
+- require '../shared/middleware/helpers/experiments'
 - content_for(:head) do
   %meta{name: "robots", content: "noindex"}/
 
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
-  - display_captcha = current_user && current_user.display_captcha?
+  - display_captcha = current_user && current_user.display_join_section_captcha?
   = form_tag(student_user_new_path) do
     = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
     - if display_captcha
@@ -32,7 +38,7 @@
 
   #signup
     .row
-      .span8.signupblock
+      .span10.signupblock
         = form_for(@user, url: { action: :student_register }) do |f|
 
           = hidden_field_tag :section_code, params[:section_code]
@@ -41,58 +47,51 @@
           = f.hidden_field :hashed_email
 
           .itemblock
-            .labelblock
-              = t('activerecord.attributes.user.name')
+            = f.label :name, t('activerecord.attributes.user.name')
             = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true
           %br/
           .itemblock
-            .labelblock
-              = t('activerecord.attributes.user.email')
+            = f.label :email, t('activerecord.attributes.user.email')
             = f.email_field :email, class: 'input-xlarge fieldblock'
           %br/
           - if f.object.password_required?
             .itemblock
-              .labelblock
-                = t('activerecord.attributes.user.password')
+              = f.label :password, t('activerecord.attributes.user.password')
               = f.password_field :password, class: 'input-xlarge fieldblock'
               %span#password_message
             %br/
             .itemblock
-              .labelblock
-                = t('activerecord.attributes.user.password_confirmation')
+              = f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation')
               = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
             %span#password_message_confirmation
             %br/
             - if user_type == User::TYPE_TEACHER
               .itemblock
-                .labelblock
-                  = t('signup_form.school_name')
+                = f.label :school, t('signup_form.school_name')
                 = f.text_field :school, class: 'input-xlarge fieldblock'
               %br/
               .itemblock
-                .labelblock
-                  = t('signup_form.school_address')
+                = f.label :full_address, t('signup_form.school_address')
                 = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 255
               %br/
 
               = f.hidden_field :age, value: '21'
             - if user_type == User::TYPE_STUDENT
               .itemblock
-                .labelblock
-                  = t('signup_form.age')
+                = f.label :age, t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              - if ask_gender_experiment?(request, session.id.to_s)
-                - gender_input_type = gender_input_type?(request, session)
-                - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'section_signup')
-                - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
-                  .itemblock
-                    .labelblock
-                      = t('signup_form.gender')
-                    - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
-                      = f.select :gender, gender_options
-                    - else
-                      = f.text_field :gender
-            %br/
+              %br/
+              - if us_ip && Cpa.cpa_experience(request)
+                .itemblock
+                  = f.label :us_state, t('signup_form.us_state')
+                  = f.select :us_state, us_state_options, include_blank: true
+                  = f.hidden_field :country_code, value: country_code
+                %br/
+              - if experiment_value('gender', request)
+                .itemblock
+                  = f.label :gender_student_input, t('signup_form.gender')
+                  = f.text_field :gender_student_input, maxlength: 50
+                %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 
         #student-terms

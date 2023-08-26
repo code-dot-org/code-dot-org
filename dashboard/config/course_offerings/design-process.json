@@ -1,15 +1,20 @@
 {
   "key": "design-process",
-  "display_name": "design-process",
+  "display_name": "The Design Process",
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
-  "header": null,
-  "image": null,
+  "header": "teacher_led",
+  "image": "https://images.code.org/8dabad09a9e6629d9a6f967b0954ee93-CSD Standalone.png",
   "cs_topic": "art_and_design,app_design",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Through design challenges, a team project, and building an app prototype, this unit prompts students to consider the broader social impacts of computer science.",
+  "professional_learning_program": "code.org/apply",
+  "video": null,
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 443
 }

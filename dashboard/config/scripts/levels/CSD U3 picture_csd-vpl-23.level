@@ -1,0 +1,87 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2023-05-15T21:35:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      },
+      "fill": null,
+      "ellipse": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "text_mode_at_start": "blocks",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[]",
+    "long_instructions": "<img src=\"https://images.code.org/ed26831040f3fe0d3792402a2ae18431-image-1528743133929.40.05 PM.png\" style=\"width:200px; float:right; margin-left:20px\">\r\n\r\n# Draw a Car\r\n\r\nIn the previous lesson you and your partner created several interesting images, like the car in the image to the right. This time, your task is to create the image of the car using code.\r\n\r\n# Do This\r\n\r\n1) Use the [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) and [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) blocks to draw the car.\r\n2) Make sure you are using the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block to give the shapes the correct color.\r\n\t- Hint: Pay attention to the order of your blocks so that the red tires are in the front of the drawing.\r\n",
+    "display_name": "Draw a Car",
+    "parent_level_id": 18446,
+    "name_suffix": "_csd-vpl-23",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/ed26831040f3fe0d3792402a2ae18431-image-1528743133929.40.05 PM.png",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Recreate the car from the last lesson using code.",
+    "libraries_enabled": "false",
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
+    "validation_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-15T21:35:05.866+00:00\",\"changed\":[\"cloned from \\\"CSD U3 picture_2023\\\"\"],\"cloned_from\":\"CSD U3 picture_2023\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -17,7 +17,7 @@ module Pd::Foorm
     end
 
     test 'creates question details for CSD rollup' do
-      questions_to_summarize = @rollup_configuration[:"CS Discoveries"]
+      questions_to_summarize = @rollup_configuration[:'CS Discoveries']
       question_details = RollupHelper.get_question_details_for_rollup(@parsed_forms_csd, questions_to_summarize)
 
       expected_question_details = {
@@ -63,7 +63,7 @@ module Pd::Foorm
     end
 
     test 'creates question details for both general and facilitator questions' do
-      questions_to_summarize = @rollup_configuration[:"CS Fundamentals"]
+      questions_to_summarize = @rollup_configuration[:'CS Fundamentals']
       csf_forms = FoormParser.parse_forms([@csf_intro_post])
       question_details = RollupHelper.get_question_details_for_rollup(csf_forms, questions_to_summarize)
       expected_facilitator_question = {
@@ -95,7 +95,7 @@ module Pd::Foorm
       @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5, inconsistent_form])
       question_details = RollupHelper.get_question_details_for_rollup(
         @parsed_forms,
-        @rollup_configuration[:"CS Discoveries"]
+        @rollup_configuration[:'CS Discoveries']
       )
 
       assert_nil question_details[:expertise_rating]

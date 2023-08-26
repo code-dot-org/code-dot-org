@@ -10,20 +10,45 @@ $border-radius: 4px;
 }
 
 // Start styles
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 14px !important; // this will be changed to 16px in Phase II of the rebrand launch
-  color: $neutral-dark;
+p {
+  @include body-two;
 }
 
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
-section.bg-primary-light { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
+section.bg-primary-light {
+  background-color: rgba($brand_primary_light, .5);
+
+  p {
+    @include strong;
+
+    &.body-three {
+      @include body-three;
+    }
+  }
+
+  a { color: $neutral_dark !important;
+    &:hover { color: $brand_secondary_dark !important; }
+    &.link-button { color: $neutral_white !important; }
+  }
+}
+
+// Show elements based on screen size
+.show-desktop {
+  display: block;
+  @media (max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.show-tablet-and-mobile {
+  display: none;
+  @media (max-width: $width-lg) {
+    display: block;
+  }
+}
 
 // Centers a block-level element
 .centered { text-align: center !important; }
@@ -35,10 +60,40 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 .no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
+// Sets fixed height on icon container to maintain consistent
+// spacing when icons have varying widths and heights
+i.fa-fw {
+  line-height: 1.25em;
+}
+
 .icon::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+// Flex container
+// Use classes to determine flexbox characteristics
+.flex-container {
+  display: flex;
+
+  &.flex-direction-column { flex-direction: column; }
+  &.flex-direction-row { flex-direction: row; }
+  &.justify-space-between { justify-content: space-between }
+  &.justify-center { justify-content: center }
+  &.justify-end { justify-content: end; }
+  &.align-content-baseline { align-content: baseline; }
+  &.align-items-center { align-items: center; }
+  &.align-items-start { align-items: flex-start; }
+  &.wrap { flex-wrap: wrap; }
+  &.wrap-reverse { flex-wrap: wrap-reverse; }
+}
+
+// Grid container
+// Apply class to containers that use grid, but declare
+// column/row characteristics on a case-by-case basis
+.grid-container {
+  display: grid;
 }
 
 // Line divider for use between sections
@@ -46,10 +101,10 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 // a section that starts with an h2
 div.divider {
   max-width: 960px;
-  margin: 1em auto 0;
+  margin: 1rem auto 0;
 
   @media screen and (max-width: $width-md) {
-    padding: 0 2em;
+    padding: 0 2rem;
   }
 
   hr {
@@ -60,31 +115,29 @@ div.divider {
   }
 }
 
-// Text links
-p a,
-p a:visited,
-p a:link,
-a,
-a:visited,
-a:link {
-  font-family: $gotham-bold, sans-serif;
-  color: $brand_secondary_default;
-  text-decoration: underline;
-  transition: color ease-in-out .2s;
-
-  &:hover {
-    color: $brand_secondary_dark;
-    text-decoration: underline;
-  }
+// Add rounded corners to an element
+.rounded-corners {
+  border-radius: $border-radius;
 }
 
-// Footer links
-a.whitefooterlink {
-  text-decoration: none;
+// Add border to an element
+.has-border {
+  border: 1px solid $neutral_dark10;
+}
 
-  &:hover {
-    text-decoration: underline;
-    color: $neutral_white;
+// Add a thick box shadow to an element
+// See code.org/teach for an example
+.box-shadow-primary {
+  box-shadow: 8px 8px 0 $brand_primary_light;
+}
+
+// Lines (<hr>)
+hr {
+  border-top: 1px solid $neutral_dark20;
+  margin: 3rem 0;
+
+  &.dark {
+    border-top: 1px solid $neutral_dark60;
   }
 }
 
@@ -99,14 +152,18 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625em 2em;
-  margin: 0.5em 0;
-  font-size: 1em;
+  padding: .625rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
   font-family: 'Gotham 5r', sans-serif;
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
+
+  @media screen and (max-width: $width-sm) {
+    font-size: 0.875rem;
+  }
 
   &:hover {
     color: white;
@@ -131,11 +188,22 @@ input[type=submit] {
 a.link-button {
   &.secondary {
     background: none;
-    border-color: $neutral-dark;
-    color: $neutral-dark;
+    border-color: $neutral_dark;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
+    }
+  }
+
+  &.white {
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
+
+    &:hover {
+      background: $neutral_dark10;
+      border-color: $neutral_dark10;
     }
   }
 
@@ -143,7 +211,7 @@ a.link-button {
     .flex-wrapper {
       display: flex;
       align-items: center;
-      gap: 0 .75em;
+      gap: 0 .75rem;
     }
   }
 }
@@ -153,33 +221,25 @@ a.link-button {
 // (not homepage or campaign pages)
 .hero-banner-basic {
   position: relative;
+  overflow: hidden;
 
   .text-wrapper {
     position: relative;
     z-index: 1;
   }
-
-  img {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-
-    @media screen and (max-width: $width-md) {
-      display: none;
-    }
-  }
-
 }
 
 // Unordered lists
 ul {
-  margin: 1em;
+  margin: 1rem;
+
+  li p {
+    @include body-three;
+  }
 
   // Lists that use icons next to content
   &.icon-bullet-list {
-    margin: 2em 0 1em;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -196,8 +256,9 @@ ul {
       padding-left: 0 !important;
       text-indent: 0 !important;
       display: flex;
-      width: 48%;
-      margin: 1.5em 0;
+      width: 47%;
+      margin: 1.5rem 0;
+      gap: 1rem;
 
       @media screen and (max-width: $width-sm) {
         width: 100%;
@@ -207,42 +268,41 @@ ul {
         content: none;
       }
 
-      div > i {
-        width: 40px;
-        text-align: center;
-      }
-
       i {
-        font-size: 2.25em;
-        margin: 2px 16px 0 0;
+        font-size: 1.875rem;
       }
 
       h3 {
         @include heading-sm;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        @include body-three;
       }
     }
   }
 
   // Lists that have an arrow shape as li backgrounds
   &.arrow-list {
-    margin: 1em 0;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     li {
-      height: 12em;
+      height: 12rem;
       background: $brand_primary_light;
       position: relative;
-      padding: 1.5em 2.5em;
+      padding: 1.5rem 2.5rem;
       text-indent: 0 !important;
       display: flex;
       align-content: start;
       flex-wrap: wrap;
-      margin: 1.5em 0;
+      margin: 1.5rem 0;
 
       @media screen and (max-width: $width-md) {
-        padding: 1em 1em 1em 2em;
+        padding: 1rem 1rem 1rem 2rem;
       }
 
       @media screen and (max-width: $width-sm) {
@@ -261,28 +321,28 @@ ul {
         bottom: 0;
         width: 0;
         height: 0;
-        border-left: 1em solid $neutral_white;
-        border-top: calc(12em / 2) solid transparent;
-        border-bottom: calc(12em / 2) solid transparent;
+        border-left: 1rem solid $neutral_white;
+        border-top: calc(12rem / 2) solid transparent;
+        border-bottom: calc(12rem / 2) solid transparent;
       }
 
       &:before {
         content: '';
         position: absolute;
-        right: -1em;
+        right: -1rem;
         bottom: 0;
         width: 0;
         height: 0;
-        border-left: 1em solid $brand_primary_light;
-        border-top: calc(12em / 2) solid transparent;
-        border-bottom: calc(12em / 2) solid transparent;
+        border-left: 1rem solid $brand_primary_light;
+        border-top: calc(12rem / 2) solid transparent;
+        border-bottom: calc(12rem / 2) solid transparent;
       }
 
       &:nth-child(1) {
         background: rgba($brand_primary_light, .4);
 
         &:before {
-          border-left: 1em solid rgba($brand_primary_light, .4);
+          border-left: 1rem solid rgba($brand_primary_light, .4);
         }
       }
 
@@ -290,7 +350,7 @@ ul {
         background: rgba($brand_primary_light, .6);
 
         &:before {
-          border-left: 1em solid rgba($brand_primary_light, .6);
+          border-left: 1rem solid rgba($brand_primary_light, .6);
         }
       }
     }
@@ -298,17 +358,17 @@ ul {
 
   // Lists of links with icons
   &.link-list {
-    margin: 2em 0 1em;
+    margin: 2rem 0 0;
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    gap: 1em 3em;
+    gap: 1rem 3rem;
 
     li {
       text-indent: 0 !important;
       padding: 0;
       display: flex;
-      gap: 0 0.75em;
+      gap: 0 0.5rem;
 
       &::before {
         content: none;
@@ -316,8 +376,6 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 3px 0 0;
-        vertical-align: text-bottom;
 
         &:before {
           color: $brand_secondary_default;
@@ -326,8 +384,9 @@ ul {
       }
 
       a {
-        @include heading-sm;
+        @include heading-xs;
         color: $brand_secondary_default;
+        margin-bottom: 0;
       }
 
       &:hover {
@@ -339,9 +398,34 @@ ul {
     }
   }
 
+  // Lists that show supporters or other text content in a table format
+  &.supporters-list {
+    margin: 3rem auto;
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $width-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      all: unset;
+      text-align: center;
+
+      &:before {
+        content: "";
+      }
+    }
+  }
+
   li {
     line-height: 1.4;
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 
     &:before {
       color: $neutral-dark;
@@ -367,7 +451,7 @@ ol.steps-list {
     flex-wrap: wrap;
     text-align: center;
     width: 20%;
-    margin: 3em 0 2.5em;
+    margin: 3rem 0 2.5rem;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
@@ -388,7 +472,7 @@ ol.steps-list {
       display: block;
       width: 2em;
       height: 2em;
-      margin: 0 auto 0.5em;
+      margin: 0 auto 0.5rem;
       line-height: 1.7;
       border: 2px solid;
       border-radius: 100%;
@@ -414,11 +498,15 @@ ol.steps-list {
     @include heading-sm;
     width: 100%;
   }
+
+  p {
+    @include body-three;
+  }
 }
 
 // FAQs
 details {
-  padding: 1.5em 1em 1em;
+  padding: 1.5rem 1rem 1rem;
   border-bottom: 1px solid $neutral_dark80;
   transition: background ease-in-out .2s;
 
@@ -427,9 +515,7 @@ details {
   }
 
   summary {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    margin-bottom: .5em;
+    @include heading-xs;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -463,6 +549,10 @@ details {
     font: var(--fa-font-solid);
     content: "\f106";
   }
+
+  p {
+    @include body-three;
+  }
 }
 
 // Forms
@@ -471,17 +561,18 @@ form {
   label {
     display: block;
     text-align: left;
+    font-size: 1rem;
   }
 
   input, select {
     display: block;
     width: 100%;
-    margin: .25em auto 1em;
-    padding: 0.5em;
+    margin: .25rem auto 1.5rem;
+    padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
     font-family: $gotham-regular, sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     transition: all ease-in-out .2s;
 
     &:focus {
@@ -491,7 +582,7 @@ form {
 
   button,
   &[type=submit] {
-    margin-top: 1em;
+    margin-top: 1rem;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
@@ -501,42 +592,23 @@ form {
 
 // Action blocks wrappers
 .action-block__wrapper {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 1.25rem;
 
-  @media screen and (max-width: $width-md) {
-    flex-wrap: wrap;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-.action-block__wrapper--two-col {
-  justify-content: space-between;
-
-  & > .action-block--one-col {
-    width: 49%;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 1em;
+  &.action-block__wrapper--three-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
-}
 
-.action-block__wrapper--three-col {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 960px;
-
-  & > .action-block--one-col {
-    width: 32%;
-    margin-top: 1.25em;
-
-    @media screen and (max-width: $width-md) {
-      width: 49%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -551,28 +623,42 @@ form {
 
   h3 {
     width: 100%;
+    @include heading-md;
   }
 
-  p.overline {
-    color: $brand_primary_default;
-    width: 100%;
+  p {
+    @include body-three;
+
+    &.overline {
+      @include overline-two;
+      color: $brand_primary_default;
+      width: 100%;
+    }
   }
 
-  figure.video-responsive {
-    margin-bottom: 1em;
+  figure {
+
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
-    margin: 0 1em 1em;
+    margin: 0 1rem 1rem;
+    @include body-three;
   }
 
   &.secondary {
 
     h3 {
-      font-family: $gotham-bold, sans-serif;
-      font-size: 1.25em;
-      margin-bottom: 0.5em;
+      @include heading-sm;
     }
+  }
+
+  // Hides the unused caption div from the
+  // display_video_thumbnail partial
+  .video_caption_link {
+    display: none;
   }
 }
 
@@ -581,7 +667,16 @@ form {
 // height consistency between cards in a wrapper
 .action-block--one-col {
   flex-wrap: wrap;
-  padding: 1em 1.5em;
+  flex-direction: column;
+  padding: 1.25rem;
+
+  // Align copy or button(s) to the bottom of a block when
+  // blocks are vastly different heights due to content length
+  // — use .content-wrapper and .content-footer as seen on
+  // views/maker_curriculum_microbit.haml
+  &.flex-space-between {
+    justify-content: space-between;
+  }
 
   @media screen and (max-width: $width-md) {
     height: 100%;
@@ -589,12 +684,15 @@ form {
 
   img {
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 
   a.link-button {
     width: 100%;
     text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 1rem 0 0;
   }
 }
 
@@ -604,7 +702,11 @@ form {
   overflow: hidden;
 
   .text-wrapper {
-    padding: 1em 1.5em;
+    padding: 1rem 1.5rem;
+  }
+
+  h3 {
+    @include heading-sm;
   }
 
   figure.video-responsive {
@@ -624,10 +726,74 @@ form {
   }
 }
 
+// Carousels
+// Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
+.carousel-wrapper {
+  margin: 2rem 0 0;
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 1rem;
+  }
+
+  // Set a min-height inline on the .carousel div
+  // inside .carousel-wrapper to account for varying
+  // quote lengths and prevent vertical height changes
+  .carousel {
+    overflow: hidden;
+
+    @media screen and (max-width: $width-md) {
+      height: unset !important;
+      overflow: unset;
+    }
+  }
+
+  // The plugin we're using disappears when <html dir="rtl">
+  // - updating the inset value fixes it; it does remove the swiping
+  // animation between slides on desktop, but keeps the content
+  .slides.rtl {
+    inset: 0 !important;
+  }
+
+  p {
+    font-family: $barlowSemiCondensed-medium, sans-serif;
+  }
+
+  .pagination {
+    margin: 1rem 0 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 3rem;
+    }
+
+    &.left-align {
+      text-align: left;
+
+      @media screen and (max-width: $width-md) {
+        text-align: center;
+      }
+
+      a:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a{
+      background: $brand_primary_light;
+
+      &.selected {
+        background: $brand_primary_default;
+      }
+
+      &:focus {
+        @include focus-outline;
+      }
+    }
+  }
+}
+
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
-// – uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .quotes-wrapper {
 
   img {
@@ -640,29 +806,11 @@ form {
 
     @media screen and (max-width: $width-sm) {
       display: block;
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
     }
   }
 
   .carousel-wrapper {
-    font-family: $barlowSemiCondensed-medium, sans-serif;
-    margin: 2em 0 0;
-
-    @media screen and (max-width: $width-sm) {
-      padding-bottom: 1em;
-    }
-
-    // Set a min-height inline on the .carousel div
-    // inside .carousel-wrapper to account for varying
-    // quote lengths and prevent vertical height changes
-    .carousel {
-      overflow: hidden;
-
-      @media screen and (max-width: $width-md) {
-        height: unset !important;
-        overflow: unset;
-      }
-    }
 
     .with-image {
       display: flex;
@@ -677,7 +825,7 @@ form {
       img {
         width: 150px;
         height: 150px;
-        margin-right: 3em;
+        margin-right: 3rem;
 
         @media screen and (max-width: $width-md) {
           display: block;
@@ -690,12 +838,11 @@ form {
     }
 
     p {
-      font-family: $barlowSemiCondensed-medium, sans-serif;
-      font-size: 1.25em;
+      font-size: 1.25rem;
 
       &.quote-text {
-        font-size: 1.5em;
-        line-height: 1.2;
+        font-size: 1.5rem;
+        line-height: 1.3;
 
         &:before, &:after {
           font: var(--fa-font-solid);
@@ -718,27 +865,105 @@ form {
       color: $brand_accent_default;
       margin: 0 2px;
     }
+  }
+}
 
-    .pagination {
-      text-align: left;
-      margin: 1em 0 0 0;
+// Photo slideshow carousel
+// See code.org/educate/professional-learning/middle-high
+// and /views/pl_middle_high_carousel.haml for an example
+.photo-carousel-wrapper {
+
+  .with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    @media screen and (max-width: $width-md) {
+      gap: 3rem;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    img {
+      width: 450px;
+      height: auto;
+      border-radius: 1rem;
+
+      @media screen and (max-width: $width-md) {
+        width: 300px;
+      }
 
       @media screen and (max-width: $width-sm) {
-        margin-top: 3em;
-      }
-
-      a{
-        background: $brand_primary_light;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &.selected {
-          background: $brand_primary_default;
-        }
+        width: 100%;
       }
     }
+  }
+
+  p {
+    font-size: 1.25rem;
+
+    @media screen and (max-width: $width-md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .pagination {
+    margin-top: 2rem;
+
+    @media screen and (max-width: $width-md) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+// Individual quote section
+// See code.org/teach for an example
+section.quote {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 15%;
+  background-color: $neutral-dark;
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $neutral_white;
+    font-family: $barlowSemiCondensed-medium;
+
+    &.quote-text {
+      font-size: 1.35rem;
+
+      &.large {
+        font-size: 1.5rem;
+      }
+
+      &:before, &:after {
+        font: var(--fa-font-solid);
+        color: $brand_primary_default;
+      }
+
+      &::before {
+        content: "\f10d";
+        margin: 0 8px 0 0;
+      }
+
+      &::after {
+        content: "\f10e";
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+
+  span {
+    color: $brand_accent_default;
+    margin: 0 2px;
   }
 }
 
@@ -759,13 +984,20 @@ form {
 // Video series
 // - see example: code.org/blockchain
 .video-series {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1.25rem;
+  margin-top: 2rem;
 
-  figure {
-    width: 49%;
-    margin-top: 1.25em;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Overrides styles on the
+  // display_video_thumbnail partial
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
   }
 }
 
@@ -775,14 +1007,152 @@ form {
   .wrapper{
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 1rem;
   }
 
   i {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .text-wrapper {
     width: 100%;
+  }
+}
+
+// Resources tabs section
+// Works with resources_tabs.haml partial
+// See code.org/teach for an example
+.resources-tabs{
+  margin-top: 2rem;
+  min-height: 408px;
+
+  nav {
+    border-bottom: 6px solid $brand_primary_default;
+    margin: 0 0 3rem;
+    align-items: end;
+
+    button.tab {
+      color: $neutral_dark;
+      background: $neutral_white;
+      border: 1px solid $neutral_dark20;
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+      padding: 0.75rem 0.25rem 0.7rem;
+      margin: 0;
+      width: 11.75rem;
+      cursor: pointer;
+      white-space: normal;
+      height: -webkit-fit-content;
+
+      &:hover {
+        background-color: $neutral_dark10;
+      }
+
+      // Selected tab's styles
+      &.active,
+      &.active:focus:not(:focus-visible) {
+        background-color: $brand_primary_default;
+        color: $neutral_white;
+        border-color: $brand_primary_default;
+      }
+
+      &:focus {
+        outline: unset;
+        border-color: $brand_primary_default;
+        background-color: $neutral_dark10;
+        color: $neutral_dark;
+      }
+    }
+  }
+
+  div.content {
+    text-align: left;
+  }
+
+  // Hides tab content
+  div.content {
+    display: none;
+
+    // Shows tab content
+    &.show {
+      display: initial;
+    }
+  }
+
+  .video_caption_link {
+    margin-bottom: 0;
+  }
+
+  &.show-tablet-and-mobile {
+    height: unset;
+
+    details {
+      padding-left: 0;
+      padding-right: 0;
+
+      summary {
+        @include heading-md;
+      }
+    }
+
+    .flex-container {
+      align-items: start;
+      flex-direction: row-reverse;
+      gap: 2rem;
+
+      @media screen and (max-width: $width-sm) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    figure {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      display: none;
+    }
+  }
+}
+
+// Curriculum at a glance section
+// Works with curriculum_glance_section.haml partial
+// See code.org/educate/csp for an example
+.curriculum-glance {
+  background: $neutral-white;
+  border: 1px solid $neutral_dark10;
+  border-radius: $border-radius;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    gap: 1.25rem;
+
+    li {
+      all: unset;
+      font-size: 1rem;
+      margin: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+
+      &:before {
+        display: none;
+      }
+
+      p {
+        @include body-two;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
   }
 }

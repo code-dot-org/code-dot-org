@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 import sinon from 'sinon';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   serverSectionFromSection,
 } from '../teacherDashboard/teacherSectionsRedux';
@@ -12,12 +12,12 @@ import {
   plCourses,
   topPlCourse,
   topCourse,
-  taughtSections,
+  joinedStorySections,
   joinedPlSections,
-  joinedSections,
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
-const serverSections = taughtSections.map(serverSectionFromSection);
+const serverSections = joinedStorySections.map(serverSectionFromSection);
+const joinedPlServerSections = joinedPlSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
@@ -34,175 +34,101 @@ const serverCourses = [
   },
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('Homepages/Teachers/TeacherHomepage', module)
-    .addStoryTable([
-      {
-        name: 'Teacher Homepage - no courses, no sections',
-        description:
-          'Teacher Homepage - teacher does not have course progress, nor do they have sections',
-        story: () => {
-          withFakeServer();
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={[]}
-                plCourses={[]}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - courses, no sections',
-        description:
-          'Teacher Homepage - teacher has course progress, but does not have sections',
-        story: () => {
-          withFakeServer({courses: serverCourses});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                topCourse={topCourse}
-                courses={courses}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - no courses, sections',
-        description:
-          'Teacher Homepage - teacher does not have course progress, but does have sections',
-        story: () => {
-          withFakeServer({sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={[]}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - courses and sections',
-        description:
-          'Teacher Homepage - teacher does have course progress, and does have sections',
-        story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={courses}
-                topCourse={topCourse}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
-        description:
-          'Teacher Homepage - teacher does have course progress, and does have sections they own and sections in which they are a student',
-        story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={courses}
-                topCourse={topCourse}
-                joinedStudentSections={joinedSections}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - student and pl courses, sections, joinedStudentSections',
-        description:
-          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
-        story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={courses}
-                topCourse={topCourse}
-                plCourses={plCourses}
-                topPlCourse={topPlCourse}
-                joinedStudentSections={joinedSections}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-      {
-        name: 'Teacher Homepage - courses, sections and joinedPlSections',
-        description:
-          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
-        story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={courses}
-                topCourse={topCourse}
-                plCourses={plCourses}
-                topPlCourse={topPlCourse}
-                joinedStudentSections={[]}
-                joinedPlSections={joinedPlSections}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        },
-      },
-    ]);
+export default {
+  title: 'TeacherHomepage',
+  component: TeacherHomepage,
+};
+
+const Template = args => {
+  withFakeServer(args.fakeServerArgs);
+  return (
+    <Provider store={reduxStore({teacherSections})}>
+      <TeacherHomepage
+        announcements={[announcement]}
+        isEnglish={true}
+        showCensusBanner={false}
+        {...args.props}
+      />
+    </Provider>
+  );
+};
+
+export const NoCoursesNoSections = Template.bind({});
+NoCoursesNoSections.args = {
+  fakeServerArgs: {},
+  props: {
+    courses: [],
+    plCourses: [],
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
+};
+
+export const CoursesNoSections = Template.bind({});
+CoursesNoSections.args = {
+  fakeServerArgs: {courses: serverCourses},
+  props: {
+    topCourse: topCourse,
+    courses: courses,
+    joinedStudentSections: [],
+    joinedPlSections: [],
+  },
+};
+
+export const NoCoursesSections = Template.bind({});
+NoCoursesSections.args = {
+  fakeServerArgs: {sections: serverSections},
+  props: {
+    courses: [],
+    joinedStudentSections: joinedStorySections,
+    joinedPlSections: [],
+  },
+};
+
+export const CoursesSections = Template.bind({});
+CoursesSections.args = {
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    joinedStudentSections: joinedStorySections,
+    joinedPlSections: [],
+  },
+};
+
+export const StudentAndPLCoursesSectionsStudentSections = Template.bind({});
+StudentAndPLCoursesSectionsStudentSections.args = {
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: serverSections,
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    plCourses: plCourses,
+    topPlCourse: topPlCourse,
+    joinedStudentSections: joinedStorySections,
+    joinedPlSections: [],
+  },
+};
+
+export const CoursesSectionsAndJoinedPLSections = Template.bind({});
+CoursesSectionsAndJoinedPLSections.args = {
+  fakeServerArgs: {
+    courses: serverCourses,
+    sections: [].concat(serverSections, joinedPlServerSections),
+  },
+  props: {
+    courses: courses,
+    topCourse: topCourse,
+    plCourses: plCourses,
+    topPlCourse: topPlCourse,
+    joinedStudentSections: joinedStorySections,
+    joinedPlSections: joinedPlSections,
+  },
 };
 
 function withFakeServer({courses = [], sections = []} = {}) {
@@ -223,5 +149,10 @@ function withFakeServer({courses = [], sections = []} = {}) {
     'GET',
     '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
+  );
+  server.respondWith(
+    'GET',
+    '/dashboardapi/sections/available_participant_types',
+    successResponse({availableParticipantTypes: ['student', 'teacher']})
   );
 }

@@ -17,6 +17,8 @@ export default class ReCaptchaDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string.isRequired,
     siteKey: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -32,19 +34,44 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   componentDidMount() {
+    this.loadCaptcha();
+  }
+
+  // The dialog is not fully unmounted when isOpen is set to false,
+  // but the captcha is removed from the DOM.
+  // Thus, we need to force re-render the captcha each time the dialog is opened.
+  componentDidUpdate(prevProps) {
+    if (prevProps.isOpen && !this.props.isOpen) {
+      this.setState({submitButtonEnabled: false});
+      this.cleanUpCaptcha();
+    }
+    if (!prevProps.isOpen && this.props.isOpen) {
+      this.loadCaptcha();
+    }
+  }
+
+  componentWillUnmount() {
+    this.cleanUpCaptcha();
+  }
+
+  loadCaptcha() {
     //Add reCaptcha and associated callbacks.
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
+    script.async = true;
+    script.defer = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
     script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
   }
 
-  componentWillUnmount() {
+  cleanUpCaptcha() {
     const captchaScript = document.getElementById('captcha');
-    captchaScript.remove();
+    if (captchaScript) {
+      captchaScript.remove();
+    }
   }
 
   onCaptchaVerification(token) {
@@ -64,17 +91,19 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel, submitText} = this.props;
+    const {siteKey, isOpen, handleCancel, submitText, title, children} =
+      this.props;
     return (
       <div>
         <BaseDialog
           useUpdatedStyles
           fixedWidth={600}
-          uncloseable={true}
+          handleClose={handleCancel}
           style={styles.dialog}
           isOpen={isOpen}
         >
-          <h3>{i18n.verifyNotBot()}</h3>
+          <h3>{title || i18n.verifyNotBot()}</h3>
+          {children}
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
@@ -93,7 +122,7 @@ export default class ReCaptchaDialog extends React.Component {
             <Button
               text={submitText}
               onClick={this.handleSubmit}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={!this.state.submitButtonEnabled}
             />
           </DialogFooter>

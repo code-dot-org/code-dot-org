@@ -78,7 +78,7 @@ describe('CheckboxDropdown', function () {
     };
 
     const wrapper = mount(<CheckboxDropdown {...propsWithSelectFunction} />);
-    const selectAllButton = wrapper.find('#select-all');
+    const selectAllButton = wrapper.find('button#select-all');
 
     assert(selectAllButton.exists());
     expect(optionsSelected).to.have.lengthOf(0);
@@ -98,7 +98,7 @@ describe('CheckboxDropdown', function () {
     };
 
     const wrapper = mount(<CheckboxDropdown {...propsWithClearFunction} />);
-    const clearAllButton = wrapper.find('#clear-all');
+    const clearAllButton = wrapper.find('button#clear-all');
 
     assert(clearAllButton.exists());
     expect(optionsSelected).to.have.lengthOf(Object.keys(colorOptions).length);

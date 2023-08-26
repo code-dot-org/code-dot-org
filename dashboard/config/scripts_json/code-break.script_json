@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "code-break",
-    "serialized_at": "2023-04-28 19:14:49 UTC",
+    "serialized_at": "2023-05-17 14:04:31 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -221,6 +221,7 @@
       "key": "828716e4-50d0-4425-af4b-b59ed3861aa4",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -234,6 +235,7 @@
       "key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -247,6 +249,7 @@
       "key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -260,6 +263,7 @@
       "key": "d7528407-dad0-42f2-ae05-2b8c6544c072",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -273,6 +277,7 @@
       "key": "895d72ec-d79c-46b3-9d08-0160dada56c7",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -286,6 +291,7 @@
       "key": "666298c3-b5cd-48f5-b73a-b33648ec48ac",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -299,6 +305,7 @@
       "key": "872d67b2-6652-476c-8834-681378b93cb1",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -312,6 +319,7 @@
       "key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -325,6 +333,7 @@
       "key": "e94389ca-3039-48e2-97b1-dd938f6906de",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -338,6 +347,7 @@
       "key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -351,6 +361,7 @@
       "key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -364,6 +375,7 @@
       "key": "38dfa240-3cae-47c3-a37c-54d87f87a124",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {

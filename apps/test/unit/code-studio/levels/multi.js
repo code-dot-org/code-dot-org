@@ -2,7 +2,11 @@ import {assert, expect} from 'chai';
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {
+  LegacyTooFewDialog,
+  LegacyIncorrectDialog,
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {TestResults} from '../../../../src/constants';
 
 describe('multi', () => {
   const levelId = 1028;
@@ -214,7 +218,7 @@ describe('multi', () => {
   });
 
   describe('getResult', () => {
-    it('returns correct data for valid result', () => {
+    it('returns correct data for valid result when allowMultipleAttempts is true', () => {
       const multi = new Multi(
         levelId,
         id,
@@ -225,7 +229,7 @@ describe('multi', () => {
         answersFeedback,
         lastAttemptString,
         containedMode,
-        allowMultipleAttempts
+        true
       );
       multi.clickItem(1);
       const result = multi.getResult(true);
@@ -235,8 +239,31 @@ describe('multi', () => {
         result: true,
         errorDialog: undefined,
         submitted: false,
+        testResult: undefined,
         valid: true,
       });
+    });
+
+    it('returns correct data for incorrect answer when allowMultipleAttempts is false', () => {
+      const multi = new Multi(
+        levelId,
+        id,
+        app,
+        standalone,
+        numAnswers,
+        answers,
+        answersFeedback,
+        lastAttemptString,
+        containedMode,
+        false
+      );
+      multi.clickItem(0);
+      const result = multi.getResult(true);
+
+      assert.equal(result.response, 0);
+      assert.equal(result.result, false);
+      assert.equal(result.errorDialog.type, LegacyIncorrectDialog);
+      assert.equal(result.testResult, TestResults.CONTAINED_LEVEL_RESULT);
     });
 
     it('returns a TooFewDialog for too few answers', () => {

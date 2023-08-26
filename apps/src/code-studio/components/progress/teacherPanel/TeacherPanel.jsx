@@ -23,10 +23,8 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  hasLockableLessons,
-  queryUserProgress,
-} from '@cdo/apps/code-studio/progressRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
@@ -34,6 +32,10 @@ import {
   getStudentsForSection,
   queryLockStatus,
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import DCDO from '@cdo/apps/dcdo';
+
+const TEACHER_PANEL = 'TeacherPanel';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -244,6 +246,15 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
+          {!!DCDO.get('family-name-features', false) && (
+            <SortByNameDropdown
+              sortByStyles={styles.sortBy}
+              selectStyles={styles.select}
+              sectionId={sectionId}
+              unitName={unitName}
+              source={TEACHER_PANEL}
+            />
+          )}
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
@@ -294,6 +305,14 @@ const styles = {
   },
   teacherDashboardLink: {
     fontSize: 11,
+  },
+  sortBy: {
+    display: 'block',
+    textAlign: 'center',
+  },
+  select: {
+    width: 180,
+    margin: '0px 10px 5px',
   },
 };
 

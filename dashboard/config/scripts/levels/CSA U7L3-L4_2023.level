@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-04-11T14:01:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">play()</code> method that takes a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> parameter instead of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Song</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Playlist</code> object.\r\n\r\nIn this method, have the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MusicPlayer</code> class print a message saying that the input is invalid. Call this method with a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> as a parameter, and observe the output.",
@@ -14,16 +19,12 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U7L3-L1 Overloaded PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U7L3-L1 Overloaded PBT_2023"
+    "teacher_markdown": "Students notice that when the `play()` method is called with a `String`, Java finds the version of the `play()` method that has a `String` parameter and executes it."
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-04-11T14:01:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:01:19.945+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L3_2023\"},{\"changed_at\":\"2023-04-11 14:01:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 14:51:42 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:01:19.945+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L3_2023\"},{\"changed_at\":\"2023-04-11 14:01:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 14:51:42 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:08:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

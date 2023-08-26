@@ -1,5 +1,6 @@
 @dashboard_db_access
 @no_mobile
+@no_safari
 
 Feature: Teacher Application
 

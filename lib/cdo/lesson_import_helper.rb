@@ -98,6 +98,7 @@ module LessonImportHelper
 
   def self.create_lesson_vocabularies(cb_vocab, course_version_id)
     return [] if cb_vocab.blank?
+    detailed_courses = %w(csd csp)
     cb_vocab.map do |cb_vocabulary|
       raise unless cb_vocabulary['word']
       key = cb_vocabulary['word'].downcase.tr(" ", "_")
@@ -106,8 +107,9 @@ module LessonImportHelper
         key: key
       )
       vocab.word = cb_vocabulary['word']
+      course_key = CourseVersion.find(course_version_id).course_offering.key
       vocab.definition =
-        if ['csd', 'csp'].include? CourseVersion.find(course_version_id).course_offering.key
+        if detailed_courses.include?(course_key)
           cb_vocabulary['detailDef']
         else
           cb_vocabulary['simpleDef']
@@ -163,6 +165,7 @@ module LessonImportHelper
 
     sections = []
     name = ''
+    valid_prefixes = [1, 2]
     sorted_matches.each do |match|
       case match[:type]
       when 'tip'
@@ -180,7 +183,7 @@ module LessonImportHelper
         pullthrough_match = match[:match]
         # If the syntax takes the form of [code-studio], [code-studio 1-<length>], or [code-studio 2-<length>],
         # add the level activity sections here.
-        if pullthrough_match[1].blank? || ([1, 2].include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
+        if pullthrough_match[1].blank? || (valid_prefixes.include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
           level_sections = create_activity_sections_by_progression(levels, lesson_activity_id)
           sections += level_sections
           levels.clear
@@ -247,7 +250,7 @@ module LessonImportHelper
 
   def self.create_lesson_activities(activities_data, levels, lesson)
     position = 1
-    activities = activities_data.map do |a|
+    activities = activities_data.filter_map do |a|
       if a['name'] == 'Lesson Modifications' && convert_virtual_lesson_modification_activity_to_announcement(a, lesson)
         nil
       else
@@ -263,7 +266,7 @@ module LessonImportHelper
         lesson_activity.activity_sections = create_activity_sections(a['content'].strip_utf8mb4, lesson_activity.id, levels)
         lesson_activity
       end
-    end.compact
+    end
 
     # Create a lesson with all the levels in them
     # TODO use the [code-studio] syntax from CB instead

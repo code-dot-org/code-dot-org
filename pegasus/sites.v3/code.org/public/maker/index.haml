@@ -1,11 +1,11 @@
 ---
-title: Become a Maker | Learn about Physical Computing | Code.org
+title: Become a Maker | Learn about Physical Computing
 theme: responsive_full_width
 ---
 
-%script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
-%link{href: '/css/generated/maker-styles.css', rel: 'stylesheet'}
+%script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/maker-styles.css", rel: "stylesheet"}
 
 -# FontAwesome icons
 - icon_microchip = "fa-solid fa-microchip"
@@ -15,10 +15,10 @@ theme: responsive_full_width
 %section.hero-banner-basic{style: "background: #00736E"}
   .wrapper
     %div.flex-container
-      %div.text-wrapper.col-40
+      %div.text-wrapper.col-50
         %h1{style: "color: white"} Become a Maker
         %p{style: "color: white"} Explore your creativity with physical computing.
-      %div.col-60
+      %div.col-30.flex-container.justify-end
         %img{src: "/images/maker/maker-skinny-banner-img-left.svg", alt: ""}
         %img{src: "/images/maker/maker-skinny-banner-img-right.svg", alt: ""}
     .clear
@@ -27,8 +27,8 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper.col-60
       %h2 What is a Maker?
-      %p.heading-sm Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more.
-      %p Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
+      %p <strong>Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more.</strong>
+      %p.body-three Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
     %div.col-33{style: "float: right"}
       %img{src: "/images/maker/maker-students-cp.png", alt: "", style: "width: 100%; margin-top: .75em"}
     .clear
@@ -52,13 +52,13 @@ theme: responsive_full_width
             %i{class: "#{icon_microchip}"}
           .text-wrapper
             %h3 Real-world applications
-            %p Using a physical device can help students engage and connect the actions on a screen to their impact in the real world.
+            %p.no-margin-bottom Using a physical device can help students engage and connect the actions on a screen to their impact in the real world.
         %li
           %div
             %i{class: "#{icon_hands_clapping}"}
           .text-wrapper
             %h3 Inclusion and engagement
-            %p According to a BBC survey, female students described feeling more confident after exposure to physical computing.
+            %p.no-margin-bottom According to a BBC survey, female students described feeling more confident after exposure to physical computing.
         %li.no-margin-bottom
           %div
             %i{class: "#{icon_face_smile}"}
@@ -73,7 +73,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the Circuit Playground
-    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2022?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
+    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
 
 = view :section_divider_line
 
@@ -82,7 +82,7 @@ theme: responsive_full_width
   .wrapper
     %h2 Curriculum using the micro:bit
     %p Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
-    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit"
+    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit-2023")
 
 %section.bg-neutral-light
   .wrapper

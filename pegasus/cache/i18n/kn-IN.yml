@@ -1,780 +1,555 @@
 ---
 kn-IN:
-  hour_of_code: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  hello: ಹಲೋ ವರ್ಲ್ಡ್
-  'yes': ಹೌದು
-  'no': ಇಲ್ಲ
-  select_language: ದಯವಿಟ್ಟು ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ
-  upgrade_ie_message: Code.org ಶೀಘ್ರದಲ್ಲೇ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸ್ಪ್ಲೋರರ್ 8, 9, ಮತ್ತು 10 ಗೆ
-    ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
-  upgrade_ie_message_csedweek: CSEDweek.org ಶೀಘ್ರದಲ್ಲೇ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸ್ಪ್ಲೋರರ್ 8, 9,
-    ಮತ್ತು 10 ಗೆ ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
-  en: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ
-  computer_science_edweek: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ
+  20-hour_name: ವರ್ಧಿತ ಕೋರ್ಸ್
+  accelerated_gradelevel: ವಯಸ್ಸು 10-18
+  accelerated_name: ವರ್ಧಿತ ಕೋರ್ಸ್
+  account_sign_up_child_accept_terms: Code.org ಸೇವೆಗಳನ್ನು ಬಳಸಲು ನಾನು ನನ್ನ ಪೋಷಕರು ಅಥವಾ
+    ಕಾನೂನುಬದ್ಧ ಪೋಷಕರ ಅನುಮತಿಯನ್ನು ಹೊಂದಿದ್ದೇನೆ ಎಂದು ನಾನು ದೃಢೀಕರಿಸುತ್ತೇನೆ.
+  account_sign_up_email_opt_in: ನಮ್ಮ ಕೋರ್ಸ್‌ಗಳು, ಸ್ಥಳೀಯ ಅವಕಾಶಗಳು ಅಥವಾ ಇತರ ಕಂಪ್ಯೂಟರ್
+    ವಿಜ್ಞಾನ ಸುದ್ದಿಗಳಿಗೆ ನವೀಕರಣಗಳ ಕುರಿತು ನಾವು ನಿಮಗೆ ಇಮೇಲ್ ಮಾಡಬಹುದೇ? (ಸರಿಸುಮಾರು ತಿಂಗಳಿಗೊಮ್ಮೆ)
+  ai_activity: ಚಟುವಟಿಕೆ
+  ai_and_ethics: ಎಐ ಮತ್ತು ನೈತಿಕತೆ
+  ai_and_ethics_tile_description: ಎಐ ನೈತಿಕ ಪರಿಣಾಮಗಳ ಮೇಲೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಪ್ರತಿಫಲಿಸುತ್ತಾರೆ.
+    ನಂತರ, ಎಐ ಕ್ರಿಯೇಟರ್‌ಗಳು ಮತ್ತು ಜನಪ್ರತಿನಿಧಿಗಳಿಗೆ ಎಲ್ಲೆಡೆ "ಎಥಿಕ್ಸ್‌ ಎಐ ಕೋಡ್" ಸಂಪನ್ಮೂಲವನ್ನು
+    ರಚಿಸಲು ಒಟ್ಟಾಗಿ ಕೆಲಸ ಮಾಡಿ.
+  ai_audience: ಪ್ರೇಕ್ಷಕರು
+  ai_cognimates: ಕಾಗ್ನಿಮೇಟ್ಸ್
+  ai_cognimates_description: ಗೇಮ್ಸ್ ಬಿಲ್ಡ್‌ ಮಾಡುವುದು, ರೋಬೋಟ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡುವುದು
+    ಮತ್ತು ತರಬೇತಿಗಾಗಿ ಎಐ ಎಜುಕೇಶನ್‌ ಪ್ಲಾಟ್‌ಫಾರಂ.
+  ai_description: ವಿವರಣೆ
+  ai_ecs: 'ಇಸಿಎಸ್‌: ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್‌ (ಎಐ)'
+  ai_ecs_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನಾವರಣಗೊಳಿಸಲು (ಇಸಿಎಸ್‌) ಪಠ್ಯಕ್ರಮಕ್ಕೆ ಹೊಸ ಪರ್ಯಾಯ
+    ಪಠ್ಯಕ್ರಮ ಘಟಕ.
+  ai_elements: ಎಐ ಅಂಶಗಳು
+  ai_elements_description: ರಿಯಾಕ್ಟರ್ ಮತ್ತು ಯುನಿವರ್ಸಿಟಿ ಆಫ್‌ ಹೆಲ್ಸಿಂಕಿ ರಚಿಸಿದ ಉಚಿತ
+    ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳ ಸರಣಿ.
+  ai_ethics_lesson_plan: ಎಐ ಮತ್ತು ಎಥಿಕ್ಸ್ ಪಠ್ಯ ಯೋಜನೆ
+  ai_ethics_panel_description_1: ನಮ್ಮ ಕೆಲವು ಎಐ ಪರಿಣಿತರೊಂದಿಗೆ ಇನ್ನಷ್ಟು ಆಳವಾಗಿ ಹೋಗಿ!
+    ಅಲ್ಗೊರಿದಮ್ ಬಯಾಸ್ ಮತ್ತು ಕೆಲಸದ ಭವಿಷ್ಯದ ಬಗ್ಗೆ ಪ್ರಮುಖ ಸಮಸ್ಯೆಗಳನ್ನು ಈ ಪ್ಯಾನೆಲ್ ಚರ್ಚೆಯು
+    ಪ್ರಸ್ತಾಪಿಸುತ್ತದೆ.
+  ai_ethics_panel_description_2: ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್‌ನ ನೈತಿಕತೆಗೆ ಉತ್ತಮ ಪರಿಚಯ!
+  ai_ethics_panel_header: ಎಐ ಪ್ಯಾನೆಲ್ ಚರ್ಚೆಯ ನೈತಿಕತೆಗಳನ್ನು ಅನಾವರಣಗೊಳಿಸುವುದು
+  ai_for_oceans: ಎಐ ಫಾರ್ ಓಶಿಯನ್ಸ್
+  ai_for_oceans_lesson_plan: ಪಠ್ಯ ಯೋಜನೆ
+  ai_for_oceans_tile_description: ಕಸವನ್ನು ಗುರುತಿಸಲು ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಮುದ್ರವನ್ನು
+    ಸ್ವಚ್ಛಗೊಳಿಸಲು ಎಐಗೆ ಸಹಾಯ ಮಾಡಿ! ತರಬೇತಿ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್ ಬಗ್ಗೆ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು
+    ಎಐ ಹೇಗೆ ಪರಿಹರಿಸಬಹುದು ಎಂಬ ಬಗ್ಗೆ ಕಲಿಯಿರಿ. ನೋಡಿ
+  ai_google: ಗೂಗಲ್‌ನೊಂದಿಗೆ ಎಐ ಪ್ರಯೋಗಗಳು
+  ai_google_description: ಚಿತ್ರಗಳು, ಡ್ರಾಯಿಂಗ್‌ಗಳು, ಭಾಷೆ, ಸಂಗೀತ ಮತ್ತು ಇನ್ನಷ್ಟರ ಮೂಲಕ
+    ಮಶಿನ್‌ ಲರ್ನಿಂಗ್ ಅನ್ನು ಅನಾವರಣಗೊಳಿಸಲು ಆರಂಭಿಸಿ.
+  ai_ibm_machine_learning_for_kids: 'ಐಬಿಎಂ: ಮಕ್ಕಳಿಗಾಗಿ ಮಶಿನ್ ಲರ್ನಿಂಗ್‌'
+  ai_in_partnership_with: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
+  ai_k_12_audience: ಕೆ-12 (ಓದುವಿಕೆ ಅಗತ್ಯವಿದೆ)
+  ai_machine_learning_for_kids: ಮಕ್ಕಳಿಗಾಗಿ ಮಶಿನ್ ಲರ್ನಿಂಗ್‌
+  ai_machine_learning_for_kids_description: ಪಠ್ಯ, ಸಂಖ್ಯೆಗಳು ಅಥವಾ ಚಿತ್ರಗಳೊಂದಿಗೆ ಮಶಿನ್‌
+    ಲರ್ನಿಂಗ್‌ ಮಾಡೆಲ್‌ಗೆ ತರಬೇತಿ ನೀಡಿ ಮತ್ತು ಸ್ಕ್ರಾಚ್‌ನಲ್ಲಿ ಗೇಮ್ಸ್‌ ಮಾಡಲು ಇದನ್ನು ಬಳಸಿ.
+  ai_microsoft_thanks: 21 ನೇ ಶತಮಾನದಲ್ಲಿ ಯಶಸ್ವಿಯಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಕೌಶಲಗಳನ್ನು
+    ಕಲಿಯಲು ಅವಕಾಶವನ್ನು ಪ್ರತಿ ಮಗುವೂ ಹೊಂದಿರಬೇಕು ಎಂಬ ಧ್ಯೇಯ ಮತ್ತು ಗುರಿಗೆ ಬೆಂಬಲಿಸುತ್ತಿರುವುದಕ್ಕೆ
+    Microsoft ಗೆ ನಾವು ಧನ್ಯವಾದವನ್ನು ತಿಳಿಸುತ್ತೇವೆ.
+  ai_microsoft_workshop: ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನಿಂದ ಉಚಿತ ವರ್ಚುವಲ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಳು
+  ai_microsoft_workshop_description: ಉಚಿತ ಸ್ಟೆಮ್ ಮತ್ತು ಕೋಡಿಂಗ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಳ ಮೂಲಕ
+    ಕುತೂಹಲವನ್ನು ಮೂಡಿಸಿ.
+  ai_minecraft_description: 'ಪಠ್ಯ ಯೋಜನೆ, ವೀಡಿಯೋಗಳು, ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಪಠ್ಯಕ್ರಮ ಮತ್ತು
+    ಶಿಕ್ಷಕರ ತರಬೇತಿಗಳನ್ನೂ ಒಳಗೊಂಡು ಉಚಿತ ಸಂಪನ್ಮೂಲಗ ಪ್ರವೇಶಾವಕಾಶ. (ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಎಜುಕೇಶನ್
+    ಎಡಿಶನ್ ಅಗತ್ಯವಿದೆ)'
+  ai_quick_draw: ತ್ವರಿತ, ಡ್ರಾ!
+  ai_quick_draw_description: ಡೂಡ್ಲಿಂಗ್‌ ಅನ್ನು ನ್ಯೂರಲ್‌ ನೆಟ್‌ವರ್ಕ್‌ ಗುರುತಿಸಲು ಕಲಿಯಬಹುದೇ?
+  ai_seeing_ai: ಎಐ ನೋಡುವುದು
+  ai_seeing_ai_description: ನಿಮ್ಮ ಸುತ್ತಲಿನ ವಿಶ್ವವನ್ನು ವಿವಿಧ ಭಾಷೆಗಳಲ್ಲಿ ಹೇಳುವ ಒಂದು
+    ಉಚಿತ ಆಪ್‌.
+  ai_teachable_machine: ಬೋಧಿಸಬಹುದಾದ ಮಶಿನ್
+  ai_teachable_machine_description: ನಿಮ್ಮದೇ ಚಿತ್ರಗಳು, ಧ್ವನಿಗಳು ಮತ್ತು ಪೋಸ್‌ಗಳನ್ನು ಗುರುತಿಸಲು
+    ಕಂಪ್ಯೂಟರ್‌ಗೆ ತರಬೇತಿ ನೀಡಿ.
+  ai_try_activity: ಚಟುವಟಿಕೆ ಪ್ರಯತ್ನಿಸಿ
+  ai_zooniverse: ಝೂನಿವರ್ಸ್‌ - ಸ್ನಾಪ್‌ಶಾಟ್ ಮೌಂಟೇನ್‌ ಝೆಬ್ರಾ
+  ai_zooniverse_description: ಚಿತ್ರಗಳಲ್ಲಿ ವಿಭಿನ್ನ ಪ್ರಾಣಿಗಳನ್ನು ಗುರುತಿಸುವ ಮೂಲಕ ಅಳಿವಿನಂಚಿನಲ್ಲಿರುವ
+    ಕೇಪ್ ಮೌಂಟೇನ್ ಝೆಬ್ರಾ ರಕ್ಷಿಸಲು ಸಹಾಯ ಮಾಡಿ.
+  all_ages: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  allcancode_gradelevel: ವಯಸ್ಸು 5-10
   anybody_can_learn: ಯಾರಾದರೂ ಕಲಿಯಬಹುದು.
-  learn_now: ಈಗ ಕಲಿಯಿರಿ
-  petition_message: ಪ್ರತಿ ಶಾಲೆಯಲ್ಲಿರುವ ಪ್ರತಿಯೊಬ್ಬ ವಿದ್ಯಾರ್ಥಿಗೂ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು
-    ಕಲಿಯುವ ಅವಕಾಶವಿರಬೇಕು
-  petition_sign_message: 'ನೀವು ಒಪ್ಪಿದರೆ, ನಿಮ್ಮ ಹೆಸರಿಗೆ ಸಹಿ ಮಾಡಿ ಮತ್ತು # ಇತರರೊಂದಿಗೆ
-    ನಮ್ಮ ಮೇಲಿಂಗ್ ಪಟ್ಟಿಗೆ ಸೇರಿಕೊಳ್ಳಿ.'
-  petition_join_others: 'ಸೇರಲು # ಇತರರು'
-  name: ಹೆಸರು
-  email: ಇಮೇಲ್
-  zipcode: ZIP ಕೋಡ್ ಅಥವಾ ದೇಶದ
-  submit: ಸಲ್ಲಿಸಿ
-  twentyhours_heading: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕೋರ್ಸ್ಗೆ ನಮ್ಮ ಪರಿಚಯ ಪ್ರಯತ್ನಿಸಿ
-  twentyhours_text: ಕೋಡ್ ನಿಮ್ಮ ಮೊದಲ ಅವರ್ ಮುಕ್ತಾಯಗೊಂಡ? ಈ ಅನುಸರಣಾ ಕೋರ್ಸ್ನಲ್ಲಿ ಇನ್ನಷ್ಟು
-    ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ತಿಳಿಯಿರಿ.
-  og_title: 'Code.org: ಯಾರಾದರೂ ಕಲಿಯಬಹುದು'
-  csedweek_og_title: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ
-  hoc2014_heading: ಸೇರಲು <a href="http://hourofcode.com">ಕೋಡ್ ಗಂಟೆ</a><br/>ಡಿಸೆಂಬರ್
-    8 - 14, 2014<br/>
-  hoc2014_students: ವಿದ್ಯಾರ್ಥಿಗಳು
-  hoc2014_try: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  hoc2014_teachers: ಶಿಕ್ಷಕರು
-  hoc2014_host: ಇದು ಹೋಸ್ಟ್
-  hoc2014_everyone: ಪ್ರತಿಯೊಬ್ಬರೂ
-  hoc2014_whatishoc: ಕೋಡ್ ಗಂಟೆ ಏನು?
-  csedweek_map_search_reset: ಮರುಹೊಂದಿಸಿ
-  cded_sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
-  cded_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  try_now: ಈಗ ಪ್ರಯತ್ನಿಸಿ
+  applab_gradelevel: ವಯಸ್ಸು 13+
+  applab_name: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್
+  applab_tile_start_tutorial: ಪ್ರಾರಂಭಿಸಿ
+  applab_tile_subtitle: ಬ್ಲಾಕ್ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಬಳಸಿ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ನಲ್ಲಿ ನಿಮ್ಮದೇ
+    ಆಪ್ ರಚಿಸಿ. ಅಥವಾ ಪಠ್ಯ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ನೊಂದಿಗೆ ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನಿಮ್ಮ ಕೌಶಲಗಳನ್ನು
+    ತೆಗೆದುಕೊಳ್ಳಿ. (ಇಂಗ್ಲಿಷ್‌ ಮಾತ್ರ)
+  applab_tile_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
+  are_you_teacher: ನೀವು ಶಿಕ್ಷಕರಾ?
+  artist_gradelevel: ವಯಸ್ಸು 8-108
+  artist_name: ಆರ್ಟಿಸ್ಟ್
+  basketball_name: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
+  beginner: ಬಿಗಿನರ್ಸ್
+  beyond_hoc: ಒಂದು ಗಂಟೆ ಮೀರಿ
+  beyond_hour_message: ನಮ್ಮೊಂದಿಗೆ ಹೋಗುವ ಕೀಪ್ <a href='http://studio.code.org'>ಇತರ
+    ಶಿಕ್ಷಣ</a>, ಅಥವಾ ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳನ್ನು ನೋಡಿ <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ
+    ಮೀರಿ ತಿಳಿಯಿರಿ</a>.
+  bitsbox_gradelevel: ಪ್ರಾಥಮಿಕ
+  blockly_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  blockly_name: ಬ್ಲಾಕಿಲಿ
+  boxisland_gradelevel: ಪ್ರಾಥಮಿಕ
+  boy: ಹುಡುಗ
+  boys: ಹುಡುಗರು
+  boys_team: ಬಾಲಕರ ತಂಡ
+  california_button: ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   california_heading: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಸಲು ನಿಮ್ಮ ಶಾಲೆಗೆ ಕೇಳಿ
   california_text: ಯಾವುದೇ ಶಿಕ್ಷಕ ನಮ್ಮ ಒದಗಿಸುತ್ತವೆ <a href='http://studio.code.org/'>ಉಚಿತ
     ಶಿಕ್ಷಣ</a>. ಯಾವುದೇ ಪ್ರಾಥಮಿಕ ಶಾಲೆಯ <a href='http://code.org/educate/k5'>ಕಂಪ್ಯೂಟರ್
     ವಿಜ್ಞಾನ ಕಲಿಸಬಹುದು</a>. ನಮ್ಮೊಂದಿಗೆ <a href='http://code.org/educate/districts'>ಪಾಲುದಾರರಿಗೆ
     ಪ್ರೌ schools ಶಾಲೆಗಳನ್ನು ಕೇಳಿ.
-  california_button: ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
-  flappy_heading: Code.org ಗೆ Flappy ಜನ್ಮದಿನ
-  flappy_text: Code.org ಕೇವಲ 1 ವರ್ಷ ಹಳೆಯದಾಗಿದೆ.<br/><br/> ನಿಮ್ಮ ಸ್ವಂತ ಕಸ್ಟಮ್ ಮಾಡುವ
-    ಮೂಲಕ ನಮ್ಮೊಂದಿಗೆ ಸೆಲೆಬ್ರೇಟ್ <b>ಫ್ಲಾಪಿ</b> ಆಟ. ನಿಮ್ಮ ಸ್ವಂತ ನಿಯಮಗಳನ್ನು ಕೋಡ್ ಮಾಡಿ,
-    ಮತ್ತು ಅದನ್ನು ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ!
-  view_english_site: ಇಂಗ್ಲೀಷ್ ಸೈಟ್ ವೀಕ್ಷಿಸಿ
-  non_english_tutorials: 'ಟ್ಯುಟೋರಿಯಲ್ ಬಹು ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸಲಾಗಿದೆ:'
-  write_your_first_program: ನಿಮ್ಮ ಮೊದಲ ಕಂಪ್ಯೂಟರ್ ಪ್ರೋಗ್ರಾಮ್‌ ಬರೆಯಿರಿ
-  learn_cs_concepts: ಡ್ರ್ಯಾಗ್ ಮತ್ತು ಡ್ರಾಪ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ನೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ನ
-    ಮೂಲ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ತಿಳಿಯಿರಿ. ಇದು ಬಿಲ್ ಗೇಟ್ಸ್, ಮಾರ್ಕ್ ಜುಕರ್ಬರ್ಗ್, ಆಂಗ್ರಿ ಬರ್ಡ್ಸ್
-    ಮತ್ತು ಪ್ಲಾಂಟ್ಸ್ ವರ್ಸಸ್ ಜೋಂಬಿಸ್ ಅವರ ಆಟದಂತಹ ಟ್ಯುಟೋರಿಯಲ್ ವೀಡಿಯೋ ಉಪನ್ಯಾಸಗಳನ್ನು ಹೊಂದಿದೆ.
-    ಪುನರಾವರ್ತನೆ-ಕುಣಿಕೆಗಳು, ನಂತರ ಹೇಳಿಕೆಗಳು ಮತ್ತು ಮೂಲ ಕ್ರಮಾವಳಿಗಳನ್ನು ಕಲಿಯಿರಿ.
-  all_ages: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  beginner: ಬಿಗಿನರ್ಸ್
-  n_participants: "# ಭಾಗವಹಿಸುವವರು"
-  go: ಹೋಗು
-  thank_you_: ಧನ್ಯವಾದಗಳು!
-  congratulations: ಅಭಿನಂದನೆಗಳು!
-  get_a_certificate_of_achievement: ಸಾಧನೆಯ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪಡೆಯಿರಿ
-  third_party_gradelevel_kto8: ಗ್ರೇಡ್‌ ಕೆ-8
-  third_party_gradelevel_kto2: ಗ್ರೇಡ್‌ ಕೆ-2
-  third_party_gradelevel_2to8: ಗ್ರೇಡ್‌ 2-8
-  third_party_gradelevel_4to12: ಗ್ರೇಡ್‌ 4-12
-  third_party_gradelevel_6plus: ಗ್ರೇಡ್‌ 6+
-  enter_valid_email: ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ
-  get_a_certificate_message: ನಾವು ನಿಮಗೆ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ಹೇಗೆ ಮಾಹಿತಿಯನ್ನು ಕಳುಹಿಸುತ್ತೇವೆ
-    <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ ಮೀರಿ ತಿಳಿಯಿರಿ</a>
-  get_a_certificate_message_after: ಅದನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಲು ಅಥವಾ ಮುದ್ರಿಸಲು ಪ್ರಮಾಣಪತ್ರದ
-    ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ. ಈಗ, ನಮ್ಮ ಜೊತೆ ಹೋಗುವ ಇರಿಸಿಕೊಳ್ಳಲು <a href='http://studio.code.org'>ಇತರ
-    ಶಿಕ್ಷಣ</a>, ಅಥವಾ ಹೆಚ್ಚು ಆಯ್ಕೆಗಳನ್ನು ನೋಡಿ <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ ಮೀರಿ
-    ತಿಳಿಯಿರಿ</a>.
-  thanks_for_submitting: ಸಲ್ಲಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು!
-  if_you_enjoyed: ನೀವು ಕಲಿಯುವುದನ್ನು ಆನಂದಿಸಿದರೆ, ಅದನ್ನು ಪ್ರಯತ್ನಿಸಲು ಸ್ನೇಹಿತರನ್ನು ಕೇಳಿ!
-    ಇಡೀ ಪ್ರಪಂಚವು ಕಲಿಯಬೇಕೆಂದು ನಾವು ಬಯಸುತ್ತೇವೆ.
-  personalize_certificate: ನಿಮ್ಮ ಪ್ರಮಾಣಪತ್ರವನ್ನು ವೈಯಕ್ತೀಕರಿಸಿ
-  print_ice_art_from_frozen: ಫ್ರೋಜನ್ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳಿಂದ ಐಸ್ ಆರ್ಟ್ ಪ್ರಿಂಟ್ ಮಾಡಿ
-  share_achievement: ನಿಮ್ಮ ಸಾಧನೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
-  beyond_hour_message: ನಮ್ಮೊಂದಿಗೆ ಹೋಗುವ ಕೀಪ್ <a href='http://studio.code.org'>ಇತರ
-    ಶಿಕ್ಷಣ</a>, ಅಥವಾ ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳನ್ನು ನೋಡಿ <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ
-    ಮೀರಿ ತಿಳಿಯಿರಿ</a>.
-  leaderboards_for_hoc: ಕೋಡ್ನ ಅವರ್ಗಾಗಿ ಲೀಡರ್ಬೋರ್ಡ್ಗಳು.
-  support_url: http://support.code.org/
-  country: ದೇಶ
+  carousel_heading_international: ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಪಾಲುದಾರ ಟ್ಯುಟೋರಿಯಲ್
+  cded_sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+  cded_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
   city: ನಗರ
-  gender: ಲಿಂಗ
-  boys: ಹುಡುಗರು
-  girls: ಗರ್ಲ್ಸ್
-  give_my_hour: 'ನನ್ನ ಅವರ್ ನೀಡಿ:'
-  girls_team: ಬಾಲಕಿಯರ ತಂಡ
-  boys_team: ಬಾಲಕರ ತಂಡ
-  tell_the_world: ಜಗತ್ತಿಗೆ ಹೇಳಿ!
-  thanks_for_voting: ಮತದಾನಕ್ಕೆ ಧನ್ಯವಾದಗಳು!
-  share_on_facebook: ಫೇಸ್ಬುಕ್ ಮೇಲೆ ಹಂಚಿಕೊಳ್ಳಿ
-  share_on_twitter: ಟ್ವಿಟರ್ ನಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ
-  get_started: ಪ್ರಾರಂಭಿಸಿ
-  i_agree: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
-  participant_select: "- ಆಯ್ಕೆಮಾಡಿ -"
-  participant_student: ವಿದ್ಯಾರ್ಥಿ
-  participant_parent: ಪೋಷಕರು
-  participant_educator: ಶಿಕ್ಷಕ
-  participant_engineer: ಸಾಫ್ಟ್ವೇರ್ ಇಂಜಿನಿಯರ್
-  participant_other: ಮೇಲಿನ ಯಾವುದೂ
-  i_am_a: ನಾನು
-  never_spam: ನಾವು ನಿಮ್ಮನ್ನು ಎಂದಿಗೂ ಸ್ಪ್ಯಾಮ್ ಮಾಡುವುದಿಲ್ಲ
-  enter_country: ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಹೊರಗೆ ಇದ್ದರೆ ದೇಶವನ್ನು ನಮೂದಿಸಿ
-  used_infrequent_updates: ಅಪರೂಪದ ನವೀಕರಣಗಳಿಗಾಗಿ ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ
-  privacy_practices_children: ಮಕ್ಕಳಿಗೆ ನಮ್ಮ ಗೌಪ್ಯತೆ ಅಭ್ಯಾಸಗಳನ್ನು ನೋಡಿ
-  petition_thankyou: ಅರ್ಜಿಗೆ ಸಹಿ ಹಾಕಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು
-  continue_learning_header: ಒಂದು ಗಂಟೆ ಮೀರಿ ಕಲಿಕೆ ಮುಂದುವರಿಸಿ
-  continue_learning_body: ಸಾಕಷ್ಟು ಆಯ್ಕೆಗಳಿವೆ. ನೀವು ಆನ್ಲೈನ್ನಲ್ಲಿ ಅಥವಾ ಸ್ಥಳೀಯ ಶಾಲೆಯಲ್ಲಿ
-    ಅಥವಾ ಬೇಸಿಗೆ ಶಿಬಿರದಲ್ಲಿ ಕಲಿಯಬಹುದು.
-  learn_next_level: ಮತ್ತೊಂದು Code.org ಕೋರ್ಸ್ ಪ್ರಯತ್ನಿಸಿ
-  learn_online: ಇತರ ಕೋರ್ಸ್ಗಳನ್ನು ಆನ್ಲೈನ್ನಲ್ಲಿ ಪ್ರಯತ್ನಿಸಿ
-  learn_classes: ಸ್ಥಳೀಯ ತರಗತಿಗಳನ್ನು ಹುಡುಕಿ
-  just_did_hoc: 'ನಾನು #HourOfCode ಮಾಡಿದ್ದೇನೆ - ಅದನ್ನು ಪರಿಶೀಲಿಸಿ! @codeorg'
-  just_did_accelerated: ನಾನು ಈಗಷ್ಟೇ ವರ್ಧಿತ ಕೋರ್ಸ್ ಅನ್ನು ಮುಗಿಸಿದ್ದೇನೆ - ಪರಿಶೀಲಿಸಿ!
-    @codeorg
-  learn_hoc: ಕೋಡ್ ಒಂದು ಗಂಟೆ ತಿಳಿಯಿರಿ
-  beyond_hoc: ಒಂದು ಗಂಟೆ ಮೀರಿ
-  what_gender: ನೀವು ಯಾವ ಲಿಂಗ?
-  girl: ಹುಡುಗಿ
-  boy: ಹುಡುಗ
-  help_recruit_coders: ನಿಮ್ಮ ತಂಡಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡರ್ಗಳನ್ನು ನೇಮಿಸಿಕೊಳ್ಳಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ!
-  help_recruit: ನಮಗೆ ಹೆಚ್ಚು ಕೋಡರ್ಗಳನ್ನು ನೇಮಕ ಸಹಾಯ!
-  lines_of_code: ಓವರ್ <b># ಕೋಡ್</b> ರ ಸಾಲುಗಳು ದಿನಾಂಕಕ್ಕೆ ಬರೆಯಲಾಗಿದೆ.
-  lines_of_code_alt: "<b>#</b> ವಿದ್ಯಾರ್ಥಿಗಳು ಬರೆದ ಕೋಡ್ನ ಸಾಲುಗಳು"
-  who_has_done_hoc: 'ಯಾರು #HourOfCode ಮಾಡಿದ್ದಾರೆ? @codeorg'
-  hoc_leaderboards: ಕೋಡ್ ಲೀಡರ್ಬೋರ್ಡ್ಗಳು ಗಂಟೆ
-  students_and_lines: "%{students} ವಿದ್ಯಾರ್ಥಿಗಳು ಕೋಡ್ ಅವರ್ ಮಾಡಿದ ಮತ್ತು ಬರೆದಿದ್ದಾರೆ
-    %{lines} ಕೋಡ್ ಸಾಲುಗಳನ್ನು."
-  start_hoc: ಈಗ ಕೋಡ್ ಅವರ್ ಪ್ರಾರಂಭಿಸಿ
-  contact_form_topic_press: ಪತ್ರಿಕಾ/ಮಾಧ್ಯಮ (ಸಂದರ್ಶನ ಅಥವಾ ಮಾತನಾಡುವ ನಿಶ್ಚಿತಾರ್ಥ)
-  studiobar_elementary_title: ಪ್ರಾಥಮಿಕ ಶಿಕ್ಷಣ
-  studiobar_elementary_body: ಕೆ&#8209;5 ಗಾಗಿ ನಮ್ಮ ಮೂರು ಹೊಸ ಕೋರ್ಸ್ಗಳು
-  studiobar_dance_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-  studiobar_hoc_title: ಕೋಡ್ ಗಂಟೆ
-  studiobar_hoc_body: ಆಂಗ್ರಿ ಬರ್ಡ್ಸ್ ಕೋಡ್ ತಿಳಿಯಿರಿ
-  studiobar_flappy_title: ಫ್ಲಾಪಿ ಕೋಡ್
-  studiobar_flappy_body: ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ವಂತ Flappy ಆಟದ ಹಂಚಿಕೊಳ್ಳಿ
-  studiobar_teacher_title: ಶಿಕ್ಷಕರಿಗೆ ಮಾಡಿದ
-  studiobar_teacher_body: ನಿಮ್ಮ ತರಗತಿಯಲ್ಲಿ Code.org ಅನ್ನು ಪರಿಚಯಿಸಿ
-  studiobar_frozen_title: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  studiobar_frozen_body: ಆನಾ ಮತ್ತು ಎಲ್ಸಾಸಹಿತ ವಿಂಟರ್ ವಂಡರ್‌ಲ್ಯಾಂಡ್‌ ರಚಿಸಿ
-  homepage_slot_text_hoc: ಕೋಡ್ ಗಂಟೆ
-  homepage_slot_text_frozen: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಫ್ರೋಜನ್
-  homepage_slot_text_flappy: ಫ್ಲಾಪಿ ಕೋಡ್
-  homepage_action_text_sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
-  homepage_action_text_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  homepage_action_text_girlvideo: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
-  homepage_signpetition_dropdown_text: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
-  homepage_slot_text_title_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  homepage_slot_text_blurb_hoc_2022: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
-  homepage_slot_text_link_hoc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  homepage_slot_text_title_students: ವಿದ್ಯಾರ್ಥಿಗಳು
-  homepage_slot_text_link_middle: ಮಧ್ಯಮ ಶಾಲೆ
-  homepage_slot_text_link_high: ಹೈಸ್ಕೂಲ್
-  homepage_slot_text_link_thebadguys: ಬ್ಯಾಡ್ ಗೈಸ್ ಜೊತೆ ಕೋಡ್
-  homepage_gallery_header: "%{project_count} ಮಿಲಿಯನ್‌ಗೂ ಹೆಚ್ಚು Code.org ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು
-    ರಚಿಸಲಾಗಿದೆ"
-  contact_form_topic_student: ನಾನು ವಿದ್ಯಾರ್ಥಿಯಾಗಿದ್ದೇನೆ
-  contact_form_topic_parent: ನಾನು ಪೋಷಕ ಮನುಷ್ಯ
-  contact_form_topic_teacher: ನಾನು ಶಿಕ್ಷಕ/ಶಿಕ್ಷಕನಾಗಿದ್ದೇನೆ
-  contact_form_topic_outside_us: ನಾನು ಅಮೇರಿಕಾದ ಹೊರಗೆ ಮನುಷ್ಯ.
-  contact_form_topic_contribution: ದತ್ತಿ ಕೊಡುಗೆ
-  contact_form_topic_partner: ನಾನು ಪಾಲುದಾರರಾಗಲು ಬಯಸುತ್ತೇನೆ
-  contact_form_topic_other: ಇತರೆ
-  contact_form_label_topic: ವಿಷಯ
-  contact_form_label_email: ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ
-  contact_form_label_message: ಸಂದೇಶ
-  contact_form_label_submit: ಸಂದೇಶ ಕಳುಹಿಸಿ
   class_submission_in_school: ಶಾಲೆಯಲ್ಲಿ
-  class_submission_in_school_daily_programming_course: ಡೈಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಕೋರ್ಸ್
   class_submission_in_school_ap_computer_science: ಎಪಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ
+  class_submission_in_school_daily_programming_course: ಡೈಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಕೋರ್ಸ್
+  class_submission_in_school_exploring_computer_science: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್
   class_submission_in_school_full_university_cs_curriculum: ಪೂರ್ಣ ವಿಶ್ವವಿದ್ಯಾಲಯ ಸಿಎಸ್
     ಪಠ್ಯಕ್ರಮ
+  class_submission_in_school_other: ಶಾಲೆಯಲ್ಲಿ ಇತರ
   class_submission_in_school_robotics_club: ರೊಬೊಟಿಕ್ಸ್ ಕ್ಲಬ್
   class_submission_in_school_summer_school_cs_program: ಬೇಸಿಗೆ ಶಾಲೆಯ ಸಿಎಸ್ ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ
-  class_submission_in_school_exploring_computer_science: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್
-  class_submission_in_school_other: ಶಾಲೆಯಲ್ಲಿ ಇತರ
+  class_submission_languages_other: ಇತರ ಭಾಷೆ (ಗಳು)
+  class_submission_level_college: ಕಾಲೇಜು
+  class_submission_level_elementary: ಪ್ರಾಥಮಿಕ
+  class_submission_level_high_school: ಹೈಸ್ಕೂಲ್
+  class_submission_level_middle_school: ಮಧ್ಯಮ ಶಾಲೆ
+  class_submission_level_preschool: ಶಾಲಾಪೂರ್ವ
+  class_submission_level_vocational: ವೃತ್ತಿಪರ
+  class_submission_online: ಆನ್ಲೈನ್
+  class_submission_online_other: ಇತರೆ ಆನ್ಲೈನ್
+  class_submission_online_programming_class: ಆನ್ಲೈನ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ವರ್ಗ
+  class_submission_online_teacher_resource: ಆನ್ಲೈನ್ ಶಿಕ್ಷಕ ಸಂಪನ್ಮೂಲ
   class_submission_out_of_school: ಶಾಲೆಯಿಂದ ಹೊರಗಿದೆ
-  class_submission_out_of_school_summer_camp: ಬೇಸಿಗೆ ಶಿಬಿರ
   class_submission_out_of_school_afterschool_program: ಶಾಲಾ ನಂತರದ ಕಾರ್ಯಕ್ರಮ
   class_submission_out_of_school_all-day_workshop: ಎಲ್ಲಾ ದಿನ ಕಾರ್ಯಾಗಾರ (1 ವಾರದವರೆಗೆ)
   class_submission_out_of_school_multi-week_workshop: ಬಹು ವಾರದ ಕಾರ್ಯಾಗಾರ
   class_submission_out_of_school_other: ಶಾಲೆಯಿಂದ ಹೊರಬರುವ ಇತರ
-  class_submission_online: ಆನ್ಲೈನ್
-  class_submission_online_programming_class: ಆನ್ಲೈನ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ವರ್ಗ
-  class_submission_online_teacher_resource: ಆನ್ಲೈನ್ ಶಿಕ್ಷಕ ಸಂಪನ್ಮೂಲ
-  class_submission_online_other: ಇತರೆ ಆನ್ಲೈನ್
-  class_submission_level_preschool: ಶಾಲಾಪೂರ್ವ
-  class_submission_level_elementary: ಪ್ರಾಥಮಿಕ
-  class_submission_level_middle_school: ಮಧ್ಯಮ ಶಾಲೆ
-  class_submission_level_high_school: ಹೈಸ್ಕೂಲ್
-  class_submission_level_college: ಕಾಲೇಜು
-  class_submission_level_vocational: ವೃತ್ತಿಪರ
-  class_submission_languages_other: ಇತರ ಭಾಷೆ (ಗಳು)
-  videos_more: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳನ್ನು ಒಳಗೊಂಡ ಇನ್ನಷ್ಟು <a href='%{inspiring_videos_playlist}'>ಸ್ಫೂರ್ತಿದಾಯಕ
-    ವೀಡಿಯೋಗಳು</a>
-  videos_more_markdown: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳ ಇನ್ನಷ್ಟು [ಸ್ಫೂರ್ತಿದಾಯಕ
-    ವೀಡಿಯೋಗಳು](%{inspiring_videos_playlist})
-  starwars_subtitle: ಕೋಡ್ ಸಹಿತ ಗ್ಯಾಲಾಕ್ಸಿ ನಿರ್ಮಿಸುವುದು
-  starwars_javascript_title: ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌
-  starwars_javascript_description: ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌
-    ಬಳಸಿ.
-  starwars_javascript_specs: ಇಂಗ್ಲಿಷ್ ಮಾತ್ರ | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು | ವಯಸ್ಸು 11+
-  starwars_blocks_title: ಬ್ಲಾಕ್‌ಗಳು
-  starwars_blocks_description: ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಬಳಸಿ.
-  starwars_blocks_specs: ಹಲವು ಭಾಷೆಗಳು | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು, ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ಗಳು, ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು
-    | ವಯಸ್ಸು 6 -106
-  mc_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
-  mc_gradelevel: ವಯಸ್ಸು 6-106
-  minecraft_tutorials: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು
-  minecraft_agent_button: ಪ್ರಾರಂಭಿಸಿ
-  minecraft_designer_description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು
-    ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
-  minecraft_designer_button: ಪ್ರಾರಂಭಿಸಿ
-  minecraft_adventurer_button: ಪ್ರಾರಂಭಿಸಿ
-  minecraft_no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
-  minecraft_download_adventurer: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅಡ್ವೆಂಚರರ್‌ನ ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು
-    ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.
-  minecraft_subtitle: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
-  minecraft_og_designer: ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ಗೆ ಹೊಸ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ವಾಪಸಾಗಿದೆ.
-    ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ನ ನಿಮ್ಮದೇ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಕ್ರಿಯೇಚರ್‌ಗಳನ್ನು
-    ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಿ.
-  minecraft_og_agent: ಅವರ್ ಆಫ್‌ ಕೋಡ್‌ಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ವಾಪಸಾಗಿದೆ ಹಾಗೂ ನೀವು ಹೀರೋ ಆಗಿದ್ದೀರಿ!
-    ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಬಯೋಮ್ಸ್‌ ಮೂಲಕ ಪಯಣಿಸಲು ಕೋಡ್ ಬರೆಯಿರಿ.
-  sports_page_title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಸ್ಪೋರ್ಟ್ಸ್
-  sports_og_title: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
-  sports_video_title: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
-  sports_select_theme: ನಿಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್ ಥೀಮ್‌ ಆಯ್ಕೆ ಮಾಡಿ
-  sports_basketball_title: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
-  sports_featured_athletes: ಫೀಚರ್ಡ್‌ ಅಥ್ಲೀಟ್‌ಗಳನ್ನು ನೋಡಿ
-  sports_athletes_title: ಫೀಚರ್ಡ್‌ ಅಥ್ಲೀಟ್‌ಗಳು
-  watch_inspirational_videos: ನೀವು ಆರಂಭಿಸುವುದಕ್ಕೂ ಮೊದಲು, ಈ ಒಂದು ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳನ್ನು
-    ವೀಕ್ಷಿಸಿ
-  video_title_cs_is_everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
-  video_title_inspire_girl: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
-  video_title_cs_intro: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
-  video_title_schools_dont_teach: ಬಹುತೇಕ ಶಾಲೆಗಳು ಬೋಧಿಸದೇ ಇರುವುದು
-  video_title_obama: ಕಂಪ್ಯೂಟರ್‌ ಸೈನ್ಸ್‌ ಕುರಿತು ಅಧ್ಯಕ್ಷ ಒಬಾಮಾ
-  video_title_hoc_is_here: ಅವರ್ ಆಫ್ ಕೋಡ್ ಇಲ್ಲಿದೆ - ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
-  video_title_anybody_can_learn: ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
-  video_title_steph_curry: ಸ್ಟೆಪ್‌ ಕರ್‍ರಿ ಜೊತೆಗೆ ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  video_title_my_name_is_aracely: ನನ್ನ ಹೆಸರು ಅರ್ಸೆಲಿ
-  no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
-  download_offline: ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಿಕೊಳ್ಳಿ.
-  are_you_teacher: ನೀವು ಶಿಕ್ಷಕರಾ?
-  volunteer_engineer_submission_field_name: ಹೆಸರು
-  volunteer_engineer_submission_field_description: ವಿವರಣೆ
-  volunteer_engineer_submission_field_email: ಇಮೇಲ್ ವಿಳಾಸ
-  volunteer_engineer_submission_field_email_placeholder: ಇಮೇಲ್ ವಿಳಾಸ
-  volunteer_engineer_submission_field_email_preference_privacy: "(ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು
-    ನೋಡಿ)"
-  volunteer_engineer_submission_field_email_preference_yes: ಹೌದು
-  volunteer_engineer_submission_field_email_preference_no: ಇಲ್ಲ
-  volunteer_engineer_submission_submit: ಸಲ್ಲಿಸಿ
-  volunteer_engineer_submission_commitment_uncertain: ಅನಿಶ್ಚಿತ
-  volunteer_engineer_submission_commitment_one_hr_per_week: ವಾರಕ್ಕೆ 1 ಗಂಟೆ
-  volunteer_engineer_submission_commitment_three_hrs_per_week: ವಾರಕ್ಕೆ 3 ಗಂಟೆಗಳ
-  volunteer_engineer_submission_commitment_five_hrs_per_week: ವಾರಕ್ಕೆ 5 ಗಂಟೆಗಳ
-  volunteer_engineer_submission_commitment_now_and_then: ಪ್ರತಿ ಈಗ ತದನಂತರ
-  volunteer_engineer_submission_commitment_more: ಇನ್ನಷ್ಟು
-  volunteer_engineer_submission_location_flexibility_onsite: ಶಾಲೆಯಲ್ಲಿ ಆನ್-ಸೈಟ್ಗೆ
-    ಭೇಟಿ ನೀಡಿ (1-2 ಗಂಟೆಗಳು ತರಗತಿಯಲ್ಲಿ ಅಥವಾ ಶಾಲಾ ಅಸೆಂಬ್ಲಿಯಲ್ಲಿ)
-  volunteer_engineer_submission_location_flexibility_remote: ದೂರದಿಂದಲೇ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ
-    ಪ್ರಶ್ನೋತ್ತರ (ಕಿರು ವಿಡಿಯೋ ಕಾನ್ಫರೆನ್ಸ್ ಮೂಲಕ)
-  volunteer_engineer_submission_location_flexibility_curriculum: ತೆರೆದ ಮೂಲ ಪಠ್ಯಕ್ರಮ
-    ಯೋಜನೆಗಳಿಗೆ ಕೊಡುಗೆ
-  volunteer_engineer_submission_experience_unspecified: ನಿರ್ದಿಷ್ಟಪಡಿಸದ
-  volunteer_engineer_submission_experience_university_student_or_researcher: ವಿಶ್ವವಿದ್ಯಾಲಯ
-    ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ವಿದ್ಯಾರ್ಥಿ
-  volunteer_engineer_submission_experience_software_professional: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರ್
-    ಅಥವಾ ತಾಂತ್ರಿಕ ತಜ್ಞ
-  petition_age: ವಯಸ್ಸು
-  dashboard_landing_title: ಶಿಕ್ಷಕರ ಮುಖಪುಟ
-  dashboard_landing_welcome: ಹೊಸ ಮತ್ತು ಸುಧಾರಿತ ಶಿಕ್ಷಕ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಸ್ವಾಗತ.
-  dashboard_landing_video: ಈ ವೀಡಿಯೊ ವೀಕ್ಷಿಸಿ
-  dashboard_landing_watch_video: ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳ ಪ್ರವಾಸಕ್ಕಾಗಿ!
-  dashboard_landing_view_as_student: ವಿದ್ಯಾರ್ಥಿಯಾಗಿ ಈ ಸೈಟ್ ವೀಕ್ಷಿಸಿ
-  dashboard_landing_students_title: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು
-  dashboard_landing_students_manage: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ ಮತ್ತು ನಿರ್ವಹಿಸಿ
-  dashboard_landing_news_title: K-5 ಶಿಕ್ಷಕ ಸಂಪನ್ಮೂಲಗಳು (ಇಂಗ್ಲಿಷ್ನಲ್ಲಿ ಮಾತ್ರ)
+  class_submission_out_of_school_summer_camp: ಬೇಸಿಗೆ ಶಿಬಿರ
+  classicmaze_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+  codebytes_skinny_banner_english_only: ಇಂಗ್ಲಿಷ್-ಮಾತ್ರ
+  codecademy_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
+  codecademy_gradelevel: ಹೈಸ್ಕೂಲ್
+  codehs_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
+  codehs_gradelevel: ಹೈಸ್ಕೂಲ್
+  codeintl_gradelevel: ವಯಸ್ಸು 4-104
+  codeintl_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+  codeorg_beyond_gradelevel: ವಯಸ್ಸು 4-104
+  codeorg_gradelevel: ವಯಸ್ಸು 4-104
+  codeorg_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+  codespark_gradelevel: ಪ್ರಾಥಮಿಕ
+  codesters_gradelevel: ವಯಸ್ಸು 12-14
+  compatibility_unsupported_browser_markdown: ನಿಮ್ಮ ಬ್ರೌಸರ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು
+    ನಿಮ್ಮ ಬ್ರೌಸರ್ ಅನ್ನು [ನಮ್ಮ ಬೆಂಬಲಿತ ಬ್ರೌಸರ್‌ಗಳಲ್ಲಿ ಒಂದಕ್ಕೆ](%{supported_browsers_url})
+    ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ. ನೀವು ಪುಟವನ್ನು ವೀಕ್ಷಿಸಲು ಪ್ರಯತ್ನಿಸಬಹುದು, ಆದರೆ ಕಾರ್ಯವನ್ನು ಮುರಿಯಬಹುದು
+    ಎಂದು ನಿರೀಕ್ಷಿಸಬಹುದು.
+  computer_science_edweek: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ
+  condcards_gradelevel: ವಯಸ್ಸು 8-12
+  congratulations: ಅಭಿನಂದನೆಗಳು!
+  contact_form_label_email: ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ
+  contact_form_label_message: ಸಂದೇಶ
+  contact_form_label_submit: ಸಂದೇಶ ಕಳುಹಿಸಿ
+  contact_form_label_topic: ವಿಷಯ
+  contact_form_topic_contribution: ದತ್ತಿ ಕೊಡುಗೆ
+  contact_form_topic_other: ಇತರೆ
+  contact_form_topic_outside_us: ನಾನು ಅಮೇರಿಕಾದ ಹೊರಗೆ ಮನುಷ್ಯ.
+  contact_form_topic_parent: ನಾನು ಪೋಷಕ ಮನುಷ್ಯ
+  contact_form_topic_partner: ನಾನು ಪಾಲುದಾರರಾಗಲು ಬಯಸುತ್ತೇನೆ
+  contact_form_topic_press: ಪತ್ರಿಕಾ/ಮಾಧ್ಯಮ (ಸಂದರ್ಶನ ಅಥವಾ ಮಾತನಾಡುವ ನಿಶ್ಚಿತಾರ್ಥ)
+  contact_form_topic_student: ನಾನು ವಿದ್ಯಾರ್ಥಿಯಾಗಿದ್ದೇನೆ
+  contact_form_topic_teacher: ನಾನು ಶಿಕ್ಷಕ/ಶಿಕ್ಷಕನಾಗಿದ್ದೇನೆ
+  continue_learning_body: ಸಾಕಷ್ಟು ಆಯ್ಕೆಗಳಿವೆ. ನೀವು ಆನ್ಲೈನ್ನಲ್ಲಿ ಅಥವಾ ಸ್ಥಳೀಯ ಶಾಲೆಯಲ್ಲಿ
+    ಅಥವಾ ಬೇಸಿಗೆ ಶಿಬಿರದಲ್ಲಿ ಕಲಿಯಬಹುದು.
+  continue_learning_header: ಒಂದು ಗಂಟೆ ಮೀರಿ ಕಲಿಕೆ ಮುಂದುವರಿಸಿ
+  country: ದೇಶ
+  course1_gradelevel: ವಯಸ್ಸು 4-6
+  course2_gradelevel: ವಯಸ್ಸು 6-18
+  course3_gradelevel: ವಯಸ್ಸು 8-18
+  course4_gradelevel: ವಯಸ್ಸು 10-18
+  coursea-2017_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-2017_name: ಕೋರ್ಸ್‌ ಎ (2017)
+  coursea-2017_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ.
+  coursea-2018_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-2018_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ.
+  coursea-2019_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-2019_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ.
+  coursea-2020_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-2021_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-2022_gradelevel: ವಯಸ್ಸು 4-7
+  coursea-draft_name: ಕೋರ್ಸ್‌ ಎ
+  coursea_gradelevel: ವಯಸ್ಸು 4-7
+  coursea_name: ಕೋರ್ಸ್‌ ಎ
+  coursea_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+  courseb-2017_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-2017_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
+    ಇದೆ.)
+  courseb-2018_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-2018_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
+    ಇದೆ.)
+  courseb-2019_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-2019_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
+    ಇದೆ.)
+  courseb-2020_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-2021_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-2022_gradelevel: ವಯಸ್ಸು 5-8
+  courseb-draft_name: ಕೋರ್ಸ್‌ ಬಿ
+  courseb_gradelevel: ವಯಸ್ಸು 5-8
+  courseb_name: ಕೋರ್ಸ್‌ ಬಿ
+  courseb_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
+    (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
+    ಇದೆ.)
+  coursec-2017_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-2017_name: ಕೋರ್ಸ್‌ ಬಿ (2017)
+  coursec-2017_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
+    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+  coursec-2018_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-2018_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
+    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+  coursec-2019_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-2019_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
+    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+  coursec-2020_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-2021_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-2022_gradelevel: ವಯಸ್ಸು 6-10
+  coursec-draft_name: ಕೋರ್ಸ್‌ ಸಿ
+  coursec_gradelevel: ವಯಸ್ಸು 6-10
+  coursec_name: ಕೋರ್ಸ್‌ ಸಿ
+  coursec_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
+    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+  coursed-2017_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2017_name: ಕೋರ್ಸ್‌ ಡಿ (2017)
+  coursed-2017_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
+    ಮುಂದುವರಿಯಿರಿ.
+  coursed-2018_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2018_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
+    ಮುಂದುವರಿಯಿರಿ.
+  coursed-2019_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2019_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
+    ಮುಂದುವರಿಯಿರಿ.
+  coursed-2020_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2021_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2021_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
+  coursed-2022_gradelevel: ವಯಸ್ಸು 7-11
+  coursed-2022_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
+  coursed-draft_name: ಕೋರ್ಸ್‌ ಡಿ
+  coursed_gradelevel: ವಯಸ್ಸು 7-11
+  coursed_name: ಕೋರ್ಸ್‌ ಡಿ
+  coursed_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕವರ್
+    ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
+    ಮುಂದುವರಿಯಿರಿ.
+  coursee-2017_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-2017_name: ಕೋರ್ಸ್‌ ಇ (2017)
+  coursee-2017_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
+  coursee-2018_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-2018_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
+  coursee-2019_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-2019_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
+  coursee-2020_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-2021_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-2022_gradelevel: ವಯಸ್ಸು 8-12
+  coursee-draft_name: ಕೋರ್ಸ್‌ ಇ
+  coursee_gradelevel: ವಯಸ್ಸು 8-12
+  coursee_name: ಕೋರ್ಸ್‌ ಇ
+  coursee_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ತ್ವರಿತವಾಗಿ
+    ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
+  coursef-2017_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-2017_name: ಕೋರ್ಸ್‌ ಎಫ್‌ (2017)
+  coursef-2017_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
+    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+  coursef-2018_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-2018_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
+    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+  coursef-2019_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-2019_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
+    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+  coursef-2020_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-2021_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-2022_gradelevel: ವಯಸ್ಸು 9-13
+  coursef-draft_name: ಕೋರ್ಸ್‌ ಎಫ್‌
+  coursef_gradelevel: ವಯಸ್ಸು 9-13
+  coursef_name: ಕೋರ್ಸ್‌ ಎಫ್‌
+  coursef_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
+    ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+  cs_for_good: ಉತ್ತಮ ಅಂಶಗಳಿಗಾಗಿ ಸಿಎಸ್‌
+  cs_for_good_tile_description: ಹೆಚ್ಚು ಸಮಾನ ಮತ್ತು ಸುಸ್ಥಿರ ಜಗತ್ತನ್ನು ನಿರ್ಮಿಸುವಲ್ಲಿ
+    ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಹಿಸಬಹುದಾದ ಪಾತ್ರದ ಬಗ್ಗೆ ನಾವು ಆಳವಾಗಿ ಯೋಚಿಸಲು ಅವರಿಗೆ ಸ್ಫೂರ್ತಿ ಮೂಡಿಸುವ
+    ಸಂಪನ್ಮೂಲಗಳು.
+  csedweek_map_search_reset: ಮರುಹೊಂದಿಸಿ
+  csedweek_og_title: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ
+  csfirst_gradelevel: ವಯಸ್ಸು 9-14
+  dashboard_action_cancel: ರದ್ದುಮಾಡಿ
+  dashboard_action_confirm: ಅಳಿಸಿ?
+  dashboard_action_delete: ಅಳಿಸಿ
+  dashboard_action_delete_no: ಇಲ್ಲ
+  dashboard_action_delete_yes: ಹೌದು
+  dashboard_action_done: ಮುಗಿದಿದೆ
+  dashboard_announce_learn_more_button: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  dashboard_assessments_none: ಹೆಚ್ಚಿನ ಶಿಕ್ಷಕರು ತಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಪ್ರಗತಿಯನ್ನು “ಪ್ರಗತಿ
+    ವೀಕ್ಷಿಸಿ” ಟ್ಯಾಬ್ ಬಳಸಿ ಅಳೆಯುತ್ತಾರೆ. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹೆಚ್ಚುವರಿ ಮೌಲ್ಯಮಾಪನಗಳನ್ನು
+    ನೀಡುವಲ್ಲಿ ನೀವು ಆಸಕ್ತಿ ಹೊಂದಿದ್ದರೆ, ಪಾಠ ಯೋಜನೆಗಳಲ್ಲಿ ಶಿಫಾರಸು ಮಾಡಲಾದ ಪ್ರಶ್ನೆಗಳು ಮತ್ತು
+    ವಲಯಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು. ಇವುಗಳನ್ನು Code.org ನ ಹೊರಗೆ ಮಾಡಲಾಗುತ್ತದೆ.
+  dashboard_classroom_strategies: ಶಿಕ್ಷಕರಿಗೆ ತರಗತಿ ತಂತ್ರಗಳು
+  dashboard_correctness_correct: ಸರಿ
+  dashboard_course1: 'ಕೋರ್ಸ್ 1:'
+  dashboard_course2: 'ಕೋರ್ಸ್ 2:'
+  dashboard_course3: 'ಕೋರ್ಸ್ 3:'
+  dashboard_course_ecs: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್
+  dashboard_curriculum_overview: ಕೆ 5 ಪಠ್ಯಕ್ರಮ ಅವಲೋಕನ
+  dashboard_debugging: 'ಡೀಬಗ್ ಮಾಡುವುದು:'
+  dashboard_error_other_section: ನಿಮ್ಮ ಸ್ವಂತ ವಿಭಾಗಗಳ ನಡುವೆ ನೀವು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಬದಲಿಸುತ್ತಿದ್ದರೆ,
+    ಡ್ರಾಪ್‌ಡೌನ್‌ನಿಂದ ನಿಮ್ಮ ವಿಭಾಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಬೇರೆ ಶಿಕ್ಷಕರ
+    ವಿಭಾಗಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಲು 'ಇತರೆ ವಿಭಾಗ' ಮಾತ್ರ ಆಯ್ಕೆಮಾಡಿ.
+  dashboard_framework: ಚೌಕಟ್ಟು
+  dashboard_glossary: ಗ್ಲಾಸರಿ
+  dashboard_grade_k: ಕೆ
+  dashboard_grade_other: ಇತರೆ
+  dashboard_implementation_guide: ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ
+  dashboard_landing_available_courses: ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಸ್ತುತ
+    ಲಭ್ಯವಿರುವ ಕೋರ್ಸ್ಗಳು ಇಲ್ಲಿವೆ.
+  dashboard_landing_available_title: ಲಭ್ಯವಿರುವ ಶಿಕ್ಷಣ
+  dashboard_landing_educator_blog: ನಮ್ಮ ಎಜುಕೇಟರ್ ಬ್ಲಾಗ್‌ನಲ್ಲಿ ನಮ್ಮ ವಸ್ತುಗಳಿಗೆ ಸುದ್ದಿ
+    ಮತ್ತು ನವೀಕರಣಗಳ ಬಗ್ಗೆ ಓದಿ
+  dashboard_landing_loading: ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...
   dashboard_landing_new_beta: ಹೊಸ! K-5 ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ನಮ್ಮ ಬೀಟಾ ಕೋರ್ಸ್ಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ.
   dashboard_landing_new_k5courses: ಹೊಸ! K-5 ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ನಮ್ಮ ಶಿಕ್ಷಣವನ್ನು ಪ್ರಯತ್ನಿಸಿ.
-  dashboard_landing_useful_links: ಇತರ ಉಪಯುಕ್ತ ಲಿಂಕ್ಗಳು
+  dashboard_landing_news_title: K-5 ಶಿಕ್ಷಕ ಸಂಪನ್ಮೂಲಗಳು (ಇಂಗ್ಲಿಷ್ನಲ್ಲಿ ಮಾತ್ರ)
   dashboard_landing_office_hours: ವೈಯಕ್ತಿಕವಾಗಿ ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ! ನಮ್ಮ ಮಾಸಿಕ ವೀಡಿಯೊ
     ಕಚೇರಿ ಸಮಯವನ್ನು ಭೇಟಿ ಮಾಡಿ.
   dashboard_landing_print_certificates: ಈ ಕೋರ್ಸ್ ಮುಗಿಸಿದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು
     ಮುದ್ರಿಸಿ
-  dashboard_landing_educator_blog: ನಮ್ಮ ಎಜುಕೇಟರ್ ಬ್ಲಾಗ್‌ನಲ್ಲಿ ನಮ್ಮ ವಸ್ತುಗಳಿಗೆ ಸುದ್ದಿ
-    ಮತ್ತು ನವೀಕರಣಗಳ ಬಗ್ಗೆ ಓದಿ
-  dashboard_landing_video_player: ನಿಮ್ಮ ಶಾಲೆಯಲ್ಲಿ ನಮ್ಮ ಹೊಸ ವೀಡಿಯೊ ಪ್ಲೇಯರ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ
-  dashboard_landing_progress_title: ಮುಖ್ಯ ವರ್ಗ ಪ್ರಗತಿ
   dashboard_landing_progress_biggest: ಇದು ನಿಮ್ಮ ದೊಡ್ಡ ವಿಭಾಗಕ್ಕೆ ಪ್ರಗತಿಯಾಗಿದೆ.
+  dashboard_landing_progress_title: ಮುಖ್ಯ ವರ್ಗ ಪ್ರಗತಿ
+  dashboard_landing_students_manage: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ ಮತ್ತು ನಿರ್ವಹಿಸಿ
+  dashboard_landing_students_title: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು
+  dashboard_landing_teacher_forum: ವೃತ್ತಿಪರ ಕಲಿಕಾ ಸಮುದಾಯಕ್ಕೆ ಸೇರಿ.
+  dashboard_landing_title: ಶಿಕ್ಷಕರ ಮುಖಪುಟ
+  dashboard_landing_useful_links: ಇತರ ಉಪಯುಕ್ತ ಲಿಂಕ್ಗಳು
+  dashboard_landing_video: ಈ ವೀಡಿಯೊ ವೀಕ್ಷಿಸಿ
+  dashboard_landing_video_player: ನಿಮ್ಮ ಶಾಲೆಯಲ್ಲಿ ನಮ್ಮ ಹೊಸ ವೀಡಿಯೊ ಪ್ಲೇಯರ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ
+  dashboard_landing_view_as_student: ವಿದ್ಯಾರ್ಥಿಯಾಗಿ ಈ ಸೈಟ್ ವೀಕ್ಷಿಸಿ
   dashboard_landing_view_progress: "%{biggest_section}ಗಾಗಿ ಪ್ರಗತಿಯನ್ನು ವೀಕ್ಷಿಸಿ"
-  dashboard_landing_available_title: ಲಭ್ಯವಿರುವ ಶಿಕ್ಷಣ
-  dashboard_landing_available_courses: ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಸ್ತುತ
-    ಲಭ್ಯವಿರುವ ಕೋರ್ಸ್ಗಳು ಇಲ್ಲಿವೆ.
-  dashboard_course_ecs: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್
-  dashboard_landing_loading: ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...
-  dashboard_action_cancel: ರದ್ದುಮಾಡಿ
-  dashboard_action_delete: ಅಳಿಸಿ
-  dashboard_action_delete_yes: ಹೌದು
-  dashboard_action_delete_no: ಇಲ್ಲ
-  dashboard_action_confirm: ಅಳಿಸಿ?
-  dashboard_action_done: ಮುಗಿದಿದೆ
-  dashboard_navigation_home_page: ಶಿಕ್ಷಕರ ಮುಖಪುಟದಲ್ಲಿ
-  dashboard_navigation_section_community: ಬೆಂಬಲ
+  dashboard_landing_watch_video: ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳ ಪ್ರವಾಸಕ್ಕಾಗಿ!
+  dashboard_landing_welcome: ಹೊಸ ಮತ್ತು ಸುಧಾರಿತ ಶಿಕ್ಷಕ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಸ್ವಾಗತ.
+  dashboard_login_none: ಇಮೇಲ್
+  dashboard_login_picture: ಚಿತ್ರ
+  dashboard_login_word: ಪದ
   dashboard_navigation_add_students: ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ
+  dashboard_navigation_home_page: ಶಿಕ್ಷಕರ ಮುಖಪುಟದಲ್ಲಿ
+  dashboard_navigation_lesson_plans_resources: ಪಠ್ಯಕ್ರಮದ ಮಾನದಂಡಗಳು
   dashboard_navigation_manage_students: ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ
   dashboard_navigation_section: 'ವಿಭಾಗ: %{section_name}'
+  dashboard_navigation_section_community: ಬೆಂಬಲ
+  dashboard_navigation_section_teacher_progress: ನಿಮ್ಮ ಕೋರ್ಸ್ ಪ್ರಗತಿ
   dashboard_navigation_student: 'ವಿದ್ಯಾರ್ಥಿ: %{student_name}'
-  dashboard_progress_not_started: ಆರಂಭಿಸಿಲ್ಲ
-  dashboard_progress_in_progress: ಪ್ರಗತಿಯಲ್ಲಿದೆ
-  dashboard_progress_completed_too_many_blocks: ಪೂರ್ಣಗೊಂಡಿದೆ, ಹಲವಾರು ಬ್ಲಾಕ್‌ಗಳು
+  dashboard_overview: ಮುನ್ನೋಟ
+  dashboard_pre-express: 'ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್:'
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">ಇಲ್ಲಿ
+    ಕ್ಲಿಕ್ ಮಾಡಿ</a> ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಂಚಬಹುದಾದ ಅಥವಾ ಮುದ್ರಿಸಬಹುದಾದ ನಮ್ಮ ಗೌಪ್ಯತೆ
+    ಡಾಕ್ಯುಮೆಂಟ್ಗಾಗಿ.
   dashboard_progress_completed_perfect: ಪೂರ್ಣಗೊಂಡಿದೆ, ಪರಿಪೂರ್ಣವಾಗಿದೆ
+  dashboard_progress_completed_too_many_blocks: ಪೂರ್ಣಗೊಂಡಿದೆ, ಹಲವಾರು ಬ್ಲಾಕ್‌ಗಳು
   dashboard_progress_furthest_level_attempted: ಹೆಚ್ಚಿನ ಮಟ್ಟದ ಪ್ರಯತ್ನ
+  dashboard_progress_in_progress: ಪ್ರಗತಿಯಲ್ಲಿದೆ
+  dashboard_progress_not_started: ಆರಂಭಿಸಿಲ್ಲ
+  dashboard_progress_pair_programming: ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
   dashboard_progress_submitted: ಸಲ್ಲಿಸಲಾಗಿದೆ
-  dashboard_sections_new_section: ಹೊಸ ವಿಭಾಗ
+  dashboard_puzzle: ಪಝಲ್
+  dashboard_puzzle_solving: 'ಒಗಟು ಪರಿಹರಿಸುವ:'
+  dashboard_sections_account_creation_question: ವಿದ್ಯಾರ್ಥಿಯ ಖಾತೆಯನ್ನು ಯಾರು ರಚಿಸುತ್ತಾರೆ?
+  dashboard_sections_assign_hoc_script_msg: ನಮ್ಮ ಸೈಟ್ ಅವರ್ ಆಫ್ ಕೋಡ್‌ಗೆ ಸ್ವೀಕರಿಸುವ
+    ದಟ್ಟಣೆಯ ಪ್ರಮಾಣದಿಂದಾಗಿ ಡಿಸೆಂಬರ್ 3 - 11 ರಿಂದ ಈ ಕೋರ್ಸ್‌ನಲ್ಲಿ ಪ್ರಗತಿಯನ್ನು ಉಳಿಸಲು ನಮಗೆ
+    ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ ಎಂಬುದನ್ನು ದಯವಿಟ್ಟು ಗಮನಿಸಿ. ಈ ಟ್ಯುಟೋರಿಯಲ್‌ನಲ್ಲಿ ಉಳಿದೆಲ್ಲವೂ ನಿರೀಕ್ಷೆಯಂತೆ
+    ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿರುತ್ತದೆ. ನೀವು ಇನ್ನೂ ಕೋರ್ಸ್ ಅನ್ನು ನಿಯೋಜಿಸಬಹುದು ಮತ್ತು ಭಾಗವಹಿಸುವ
+    ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ನೀಡಬಹುದು. (ಹೆಚ್ಚಿನ ಶಿಕ್ಷಕರು <a href='%{certificate_url}'>ಇವುಗಳನ್ನು
+    ಮುಂಚಿತವಾಗಿ ಮುದ್ರಿಸುತ್ತಾರೆ</a>.) ನಾವು ವರ್ಷದ ಪ್ರತಿ ಪರ್ಯಾಯ ವಾರದಲ್ಲೂ ವಿದ್ಯಾರ್ಥಿಗಳ
+    ಪ್ರಗತಿಯನ್ನು ಉಳಿಸುತ್ತೇವೆ ಮತ್ತು ವರದಿ ಮಾಡುತ್ತೇವೆ.
+  dashboard_sections_choose_secret: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಖಾತೆಗಳನ್ನು ಒದಗಿಸಲು ನೀವು
+    ಬಯಸಿದರೆ, ಆ ವಿಭಾಗಕ್ಕೆ <b>ಪದ</b> ಅಥವಾ <b>ಚಿತ್ರ</b> ನ ರಹಸ್ಯ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ.
+  dashboard_sections_close: ಮುಚ್ಚಿ
+  dashboard_sections_email_question: ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳು ಮಾನ್ಯವಾದ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು
+    ಹೊಂದಿದ್ದಾರೆಯೇ?
   dashboard_sections_jumbotron_instruction: ಹೊಸ ವಿಭಾಗಗಳನ್ನು ರಚಿಸಿ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
     ಸೇರಿಸಿ. ವಿಭಾಗಗಳು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸಣ್ಣ ಗುಂಪುಗಳಾಗಿ ಸಂಘಟಿಸಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತವೆ,
     ಆದ್ದರಿಂದ ನೀವು ಅವರ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಬಹುದು ಮತ್ತು ಅವರ ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸಬಹುದು.
-  dashboard_sections_table_section: ವಿಭಾಗ
-  dashboard_sections_table_secret: ಲಾಗಿನ್ ಕೌಟುಂಬಿಕತೆ
-  dashboard_sections_table_grade: ಗ್ರೇಡ್
-  dashboard_sections_table_course: ಕೋರ್ಸ್
-  dashboard_sections_table_students: ವಿದ್ಯಾರ್ಥಿಗಳು
-  dashboard_sections_table_code: ವಿಭಾಗ ಕೋಡ್
   dashboard_sections_name: 'ವಿಭಾಗ ಹೆಸರು:'
-  dashboard_sections_choose_secret: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಖಾತೆಗಳನ್ನು ಒದಗಿಸಲು ನೀವು
-    ಬಯಸಿದರೆ, ಆ ವಿಭಾಗಕ್ಕೆ <b>ಪದ</b> ಅಥವಾ <b>ಚಿತ್ರ</b> ನ ರಹಸ್ಯ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ.
-  dashboard_sections_secret_word: ಎ <b>ಪದ</b> ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ರಹಸ್ಯ ಪದವನ್ನು ಹೊಂದಿಸಲು
-    ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ.
-  dashboard_sections_secret_picture: ಎ <b>ಚಿತ್ರ</b> ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ರಹಸ್ಯ ಚಿತ್ರವನ್ನು
-    ಹೊಂದಿಸಲು ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ, ಇನ್ನೂ ಟೈಪ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದ ಕಿರಿಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
-    ಸೂಕ್ತವಾಗಿದೆ.
+  dashboard_sections_new_section: ಹೊಸ ವಿಭಾಗ
+  dashboard_sections_one_per_teacher: ಪ್ರತಿ ಶಿಕ್ಷಕರಿಗೆ ಒಂದು ವಿಭಾಗದಲ್ಲಿ ಮಾತ್ರ ವಿದ್ಯಾರ್ಥಿಗಳು
+    ಇರಬಹುದು. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಈ ಹೊಸ ವಿಭಾಗಕ್ಕೆ ಸೇರಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅವರ ಹಳೆಯ
+    ವಿಭಾಗವನ್ನು ಬಿಡಲಾಗುತ್ತದೆ.
+  dashboard_sections_other_section: ಇತರ ಶಿಕ್ಷಕರು
+  dashboard_sections_picture_account_creation: Code.org ನಿಗದಿಪಡಿಸಿದ ಚಿತ್ರ
+  dashboard_sections_print_secrets: ನಂತರ ನೀವು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರತ್ಯೇಕವಾಗಿ ವಿತರಿಸಲು
+    ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ಹೊಂದಿರುವ ಕಾರ್ಡ್ಗಳ ಹಾಳೆಯನ್ನು ಮುದ್ರಿಸಬಹುದು.
   dashboard_sections_secret_none: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮದೇ ಆದ ಪಾಸ್ವರ್ಡ್ಗಳನ್ನು ಆರಿಸುವುದು
     ಸೇರಿದಂತೆ ತಮ್ಮದೇ ಆದ ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸಬೇಕೆಂದು ನೀವು ಬಯಸಿದರೆ, <b>ಯಾವುದೂ</b>ನ ರಹಸ್ಯ
     ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ.
-  dashboard_sections_print_secrets: ನಂತರ ನೀವು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರತ್ಯೇಕವಾಗಿ ವಿತರಿಸಲು
-    ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ಹೊಂದಿರುವ ಕಾರ್ಡ್ಗಳ ಹಾಳೆಯನ್ನು ಮುದ್ರಿಸಬಹುದು.
+  dashboard_sections_secret_picture: ಎ <b>ಚಿತ್ರ</b> ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ರಹಸ್ಯ ಚಿತ್ರವನ್ನು
+    ಹೊಂದಿಸಲು ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ, ಇನ್ನೂ ಟೈಪ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದ ಕಿರಿಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
+    ಸೂಕ್ತವಾಗಿದೆ.
+  dashboard_sections_secret_word: ಎ <b>ಪದ</b> ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ರಹಸ್ಯ ಪದವನ್ನು ಹೊಂದಿಸಲು
+    ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ.
   dashboard_sections_switch_section: 'ಸ್ವಿಚ್ ವಿಭಾಗ:'
-  dashboard_sections_close: ಮುಚ್ಚಿ
+  dashboard_sections_table_code: ವಿಭಾಗ ಕೋಡ್
+  dashboard_sections_table_course: ಕೋರ್ಸ್
+  dashboard_sections_table_grade: ಗ್ರೇಡ್
+  dashboard_sections_table_pairing_allowed: ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+  dashboard_sections_table_secret: ಲಾಗಿನ್ ಕೌಟುಂಬಿಕತೆ
+  dashboard_sections_table_section: ವಿಭಾಗ
+  dashboard_sections_table_stage_extras: ಹಂತ ಎಕ್ಸ್‌ಟ್ರಾ
+  dashboard_sections_table_students: ವಿದ್ಯಾರ್ಥಿಗಳು
+  dashboard_sequence: ಅನುಕ್ರಮ
+  dashboard_stage: ಹಂತ
+  dashboard_standards: ಮಾನದಂಡಗಳು
+  dashboard_student: ವಿದ್ಯಾರ್ಥಿ
+  dashboard_student_worksheet: ವಿದ್ಯಾರ್ಥಿ ವರ್ಕ್ಶೀಟ್
   dashboard_students_add_multiple: 'ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಹೆಸರುಗಳನ್ನು ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದರಂತೆ
     ಟೈಪ್ ಮಾಡಿ ಅಥವಾ ಅಂಟಿಸಿ:'
+  dashboard_students_completed_levels: ಪೂರ್ಣಗೊಂಡ ಮಟ್ಟಗಳು
+  dashboard_students_female: ಸ್ತ್ರೀ
+  dashboard_students_join_link: ತಮ್ಮದೇ ಆದ ಖಾತೆಗಳನ್ನು ರಚಿಸಲು ಮತ್ತು ನಿಮ್ಮ ವಿಭಾಗಕ್ಕೆ
+    ಸೇರಲು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತಿಳಿಸಿ
+  dashboard_students_male: ಪುರುಷ
+  dashboard_students_name: 'ಹೆಸರು: '
   dashboard_students_new_section: ನೀವು ಹೊಸ ವಿಭಾಗವನ್ನು ರಚಿಸಿದ್ದೀರಿ! ಈಗ ಬಳಸಿ ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು
     ಸೇರಿಸಿ <b>ವಿದ್ಯಾರ್ಥಿ ಸೇರಿಸಿ</b> ಮತ್ತು <b>ಅನೇಕ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ</b> ಮೇಲಿನ
     ಗುಂಡಿಗಳು.
-  dashboard_students_name: 'ಹೆಸರು: '
-  dashboard_students_male: ಪುರುಷ
-  dashboard_students_female: ಸ್ತ್ರೀ
-  dashboard_students_completed_levels: ಪೂರ್ಣಗೊಂಡ ಮಟ್ಟಗಳು
-  dashboard_students_total_lines: ಕೋಡ್ ಸಾಲುಗಳು
-  dashboard_students_share_section: "<a href=%{join_url}>%{join_url}</a> ಗೆ ಹೋಗಲು
-    ಮತ್ತು ವಿಭಾಗ ಕೋಡ್ನಲ್ಲಿ ಟೈಪ್ ಮಾಡಲು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಕೇಳಿ (%{section_code})"
+  dashboard_students_no_email: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಇಮೇಲ್ ವಿಳಾಸಗಳನ್ನು ಹೊಂದಿಲ್ಲದಿದ್ದರೆ,
+    ಅಥವಾ ನೀವು ಅವರಿಗೆ ಖಾತೆಗಳನ್ನು ರಚಿಸಲು ಬಯಸಿದರೆ, ಈ ವಿಭಾಗದ ರಹಸ್ಯ ರೀತಿಯ <b>ಪದ</b> ಅಥವಾ
+    <b>ಚಿತ್ರ</b>ಬದಲಾಯಿಸಲು.
   dashboard_students_print_info: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಲಾಗಿನ್ ಮಾಹಿತಿಯೊಂದಿಗೆ ಕಾರ್ಡ್ಗಳನ್ನು
     ಮುದ್ರಿಸಿ.
+  dashboard_students_print_page: ಈ ಪುಟವನ್ನು ಮುದ್ರಿಸಿ
   dashboard_students_reset_picture: ನೀವು ಆಯ್ಕೆ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಯ ರಹಸ್ಯ
     ಚಿತ್ರವನ್ನು ಮರುಹೊಂದಿಸಬಹುದು <b>ರಹಸ್ಯ ತೋರಿಸಿ</b> ತದನಂತರ <b>ರಹಸ್ಯ ಮರುಹೊಂದಿಸಿ</b>.
     ಆ ವಿದ್ಯಾರ್ಥಿಯು ಸೈನ್ ಇನ್ ಮಾಡಿದಾಗ ಬಳಸಲು ಹೊಸ ರಹಸ್ಯ ಚಿತ್ರವನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ.
   dashboard_students_reset_word: 'ನೀವು ಆಯ್ಕೆ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಯ ರಹಸ್ಯ ಪದಗಳನ್ನು
     ಮರುಹೊಂದಿಸಬಹುದು <b>ರಹಸ್ಯ ತೋರಿಸಿ</b> ತದನಂತರ <b>ರಹಸ್ಯ ಮರುಹೊಂದಿಸಿ</b>. ಆ ವಿದ್ಯಾರ್ಥಿಯು
     ಸೈನ್ ಇನ್ ಮಾಡಿದಾಗ ಬಳಸಲು ಹೊಸ ಜೋಡಿ ರಹಸ್ಯ ಪದಗಳನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ. '
-  dashboard_students_join_link: ತಮ್ಮದೇ ಆದ ಖಾತೆಗಳನ್ನು ರಚಿಸಲು ಮತ್ತು ನಿಮ್ಮ ವಿಭಾಗಕ್ಕೆ
-    ಸೇರಲು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತಿಳಿಸಿ
-  dashboard_students_no_email: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಇಮೇಲ್ ವಿಳಾಸಗಳನ್ನು ಹೊಂದಿಲ್ಲದಿದ್ದರೆ,
-    ಅಥವಾ ನೀವು ಅವರಿಗೆ ಖಾತೆಗಳನ್ನು ರಚಿಸಲು ಬಯಸಿದರೆ, ಈ ವಿಭಾಗದ ರಹಸ್ಯ ರೀತಿಯ <b>ಪದ</b> ಅಥವಾ
-    <b>ಚಿತ್ರ</b>ಬದಲಾಯಿಸಲು.
-  dashboard_students_print_page: ಈ ಪುಟವನ್ನು ಮುದ್ರಿಸಿ
+  dashboard_students_share_section: "<a href=%{join_url}>%{join_url}</a> ಗೆ ಹೋಗಲು
+    ಮತ್ತು ವಿಭಾಗ ಕೋಡ್ನಲ್ಲಿ ಟೈಪ್ ಮಾಡಲು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಕೇಳಿ (%{section_code})"
+  dashboard_students_total_lines: ಕೋಡ್ ಸಾಲುಗಳು
   dashboard_students_url: ನೇರ URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">ಇಲ್ಲಿ
-    ಕ್ಲಿಕ್ ಮಾಡಿ</a> ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಂಚಬಹುದಾದ ಅಥವಾ ಮುದ್ರಿಸಬಹುದಾದ ನಮ್ಮ ಗೌಪ್ಯತೆ
-    ಡಾಕ್ಯುಮೆಂಟ್ಗಾಗಿ.
+  dashboard_teacher: ಶಿಕ್ಷಕ
+  dashboard_teacher_worksheet: ಶಿಕ್ಷಕ ವರ್ಕ್ಶೀಟ್
   dashboard_view_all_lesson_plans: ಕೋರ್ಸ್ಗಳಿಗೆ ಸಂಪೂರ್ಣ ಪಠ್ಯಕ್ರಮವನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಿ
     1-4
-  dashboard_course1: 'ಕೋರ್ಸ್ 1:'
-  dashboard_course2: 'ಕೋರ್ಸ್ 2:'
-  dashboard_course3: 'ಕೋರ್ಸ್ 3:'
-  dashboard_pre-express: 'ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್:'
-  dashboard_curriculum_overview: ಕೆ 5 ಪಠ್ಯಕ್ರಮ ಅವಲೋಕನ
-  dashboard_overview: ಮುನ್ನೋಟ
-  dashboard_framework: ಚೌಕಟ್ಟು
-  dashboard_standards: ಮಾನದಂಡಗಳು
-  dashboard_implementation_guide: ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ
-  dashboard_glossary: ಗ್ಲಾಸರಿ
-  dashboard_classroom_strategies: ಶಿಕ್ಷಕರಿಗೆ ತರಗತಿ ತಂತ್ರಗಳು
-  dashboard_debugging: 'ಡೀಬಗ್ ಮಾಡುವುದು:'
-  dashboard_puzzle_solving: 'ಒಗಟು ಪರಿಹರಿಸುವ:'
-  dashboard_student_worksheet: ವಿದ್ಯಾರ್ಥಿ ವರ್ಕ್ಶೀಟ್
-  dashboard_teacher_worksheet: ಶಿಕ್ಷಕ ವರ್ಕ್ಶೀಟ್
-  dashboard_grade_k: ಕೆ
-  dashboard_grade_other: ಇತರೆ
-  dashboard_login_word: ಪದ
-  dashboard_login_picture: ಚಿತ್ರ
-  dashboard_login_none: ಇಮೇಲ್
-  dashboard_stage: ಹಂತ
-  dashboard_puzzle: ಪಝಲ್
-  dashboard_correctness_correct: ಸರಿ
-  stats_hoc_2013_heading: 'ಕಳೆದ ವರ್ಷದ ಅವರ್ ಆಫ್ ಕೋಡ್ನಿಂದ ನಂಬಲಾಗದ ಅಂಕಿಅಂಶಗಳು. ಒಂದು ವಾರದಲ್ಲಿ
-    ಮಾತ್ರ:'
-  stats_hoc_2013_image_alt: 2013 ಅವರ್ ಆಫ್ ಕೋಡ್ ನಿಂದ ಅಂಕಿಅಂಶಗಳು
-  dashboard_teacher: ಶಿಕ್ಷಕ
-  dashboard_student: ವಿದ್ಯಾರ್ಥಿ
-  dashboard_sections_email_question: ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳು ಮಾನ್ಯವಾದ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು
-    ಹೊಂದಿದ್ದಾರೆಯೇ?
-  dashboard_sections_account_creation_question: ವಿದ್ಯಾರ್ಥಿಯ ಖಾತೆಯನ್ನು ಯಾರು ರಚಿಸುತ್ತಾರೆ?
-  dashboard_sections_picture_account_creation: Code.org ನಿಗದಿಪಡಿಸಿದ ಚಿತ್ರ
-  learn_more: ಈಗ ಪ್ರಯತ್ನಿಸಿ
-  learn_sign_up_button: ಸೈನ್ ಅಪ್ ಮಾಡಿ
-  hoc2014_try_new_tutorial: ಬೀಟಾದಲ್ಲಿ ನಮ್ಮ ಹೊಸ ಅವರ್ ಆಫ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  hoc2014_try_frozen: ಫ್ರೋಜನ್‌ನಿಂದ ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಸಹಿತ ಕಲಾಕಾರರು
-  carousel_heading_international: ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಪಾಲುದಾರ ಟ್ಯುಟೋರಿಯಲ್
-  frozen_name: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಕೋಡ್ ಮಾಡುವುದು
-  starwars_name: 'ಸ್ಟಾರ್‌ ವಾರ್ಸ್‌: ಕೋಡ್ ಬಳಸಿ ಗ್ಯಾಲಾಕ್ಸಿ ನಿರ್ಮಿಸುವುದು'
-  codeorg_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
-  codeintl_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
-  blockly_name: ಬ್ಲಾಕಿಲಿ
-  hourofcode_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
-  infinity_name: ಇನ್‌ಫಿನಿಟಿ ಪ್ಲೇ ಲ್ಯಾಬ್
-  coursea-draft_name: ಕೋರ್ಸ್‌ ಎ
-  coursea_name: ಕೋರ್ಸ್‌ ಎ
-  courseb-draft_name: ಕೋರ್ಸ್‌ ಬಿ
-  courseb_name: ಕೋರ್ಸ್‌ ಬಿ
-  coursec-draft_name: ಕೋರ್ಸ್‌ ಸಿ
-  coursec_name: ಕೋರ್ಸ್‌ ಸಿ
-  coursed-draft_name: ಕೋರ್ಸ್‌ ಡಿ
-  coursed_name: ಕೋರ್ಸ್‌ ಡಿ
-  coursee-draft_name: ಕೋರ್ಸ್‌ ಇ
-  coursee_name: ಕೋರ್ಸ್‌ ಇ
-  coursef-draft_name: ಕೋರ್ಸ್‌ ಎಫ್‌
-  coursef_name: ಕೋರ್ಸ್‌ ಎಫ್‌
-  coursea-2017_name: ಕೋರ್ಸ್‌ ಎ (2017)
-  coursec-2017_name: ಕೋರ್ಸ್‌ ಬಿ (2017)
-  coursed-2017_name: ಕೋರ್ಸ್‌ ಡಿ (2017)
-  coursee-2017_name: ಕೋರ್ಸ್‌ ಇ (2017)
-  coursef-2017_name: ಕೋರ್ಸ್‌ ಎಫ್‌ (2017)
-  coursed-2021_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
-  coursed-2022_name: ಕೋರ್ಸ್‌ ಡಿ (2021)
-  pre-express-2018_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2018)
-  pre-express-2019_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2019)
-  pre-express-2020_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2020)
-  accelerated_name: ವರ್ಧಿತ ಕೋರ್ಸ್
-  pre-express_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್
-  20-hour_name: ವರ್ಧಿತ ಕೋರ್ಸ್
-  classicmaze_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
-  minecraft_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
-  starwarsblocks_name: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
-  hoc-encryption_name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
-  basketball_name: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
-  applab_gradelevel: ವಯಸ್ಸು 13+
-  codeorg_gradelevel: ವಯಸ್ಸು 4-104
-  codeintl_gradelevel: ವಯಸ್ಸು 4-104
-  tynker_gradelevel: ವಯಸ್ಸು 5-13
-  lightbot_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  thinkersmith_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  condcards_gradelevel: ವಯಸ್ಸು 8-12
-  lightbotintl_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  codehs_gradelevel: ಹೈಸ್ಕೂಲ್
-  codecademy_gradelevel: ಹೈಸ್ಕೂಲ್
-  processing_gradelevel: ಹೈಸ್ಕೂಲ್
-  robomind_gradelevel: ವಯಸ್ಸು 8-13
-  codespark_gradelevel: ಪ್ರಾಥಮಿಕ
-  kodable_gradelevel: ಪ್ರಾಥಮಿಕ
-  tynkerapp_gradelevel: ವಯಸ್ಸು 5-13
-  robomindnl_gradelevel: ವಯಸ್ಸು 8-13
+  download_offline: ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಿಕೊಳ್ಳಿ.
+  email: ಇಮೇಲ್
+  en: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ
+  enter_country: ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಹೊರಗೆ ಇದ್ದರೆ ದೇಶವನ್ನು ನಮೂದಿಸಿ
+  enter_valid_email: ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ
   flappy_gradelevel: ವಯಸ್ಸು 6-106
-  bitsbox_gradelevel: ಪ್ರಾಥಮಿಕ
-  makeschool_gradelevel: ಹೈಸ್ಕೂಲ್
-  touchdevelop_gradelevel: ಹೈಸ್ಕೂಲ್
-  blockly_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  kodableunplugged_gradelevel: ವಯಸ್ಸು 8-13
-  projguts_gradelevel: ವಯಸ್ಸು 10-13
-  hourofcode_gradelevel: ವಯಸ್ಸು 6-106
+  flappy_heading: Code.org ಗೆ Flappy ಜನ್ಮದಿನ
+  flappy_shortcode: ಫ್ಲಾಪ್
+  flappy_text: Code.org ಕೇವಲ 1 ವರ್ಷ ಹಳೆಯದಾಗಿದೆ.<br/><br/> ನಿಮ್ಮ ಸ್ವಂತ ಕಸ್ಟಮ್ ಮಾಡುವ
+    ಮೂಲಕ ನಮ್ಮೊಂದಿಗೆ ಸೆಲೆಬ್ರೇಟ್ <b>ಫ್ಲಾಪಿ</b> ಆಟ. ನಿಮ್ಮ ಸ್ವಂತ ನಿಯಮಗಳನ್ನು ಕೋಡ್ ಮಾಡಿ,
+    ಮತ್ತು ಅದನ್ನು ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ!
+  footer_about: ಬಗ್ಗೆ
+  footer_partners: ಪಾಲುದಾರರು
+  footer_powered_by_aws: Amazon ವೆಬ್ ಸೇವೆಗಳು ಮತ್ತು "AWS ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ" ಲೋಗೋ
+    Amazon.com, Inc. ಅಥವಾ ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಮತ್ತು/ಅಥವಾ ಇತರ ದೇಶಗಳಲ್ಲಿ ಅದರ ಅಂಗಸಂಸ್ಥೆಗಳ
+    ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳಾಗಿವೆ.
+  footer_privacy_policy: ಗೌಪ್ಯತಾ ನೀತಿ
+  footer_support: ಬೆಂಬಲ
+  footer_terms: ನಿಯಮಗಳು
   frozen_gradelevel: ವಯಸ್ಸು 8-108
-  starwars_gradelevel: ವಯಸ್ಸು 6-106
-  playlab_gradelevel: ವಯಸ್ಸು 6-14
-  infinity_gradelevel: ವಯಸ್ಸು 6-14
-  artist_gradelevel: ವಯಸ್ಸು 8-108
-  monstercoding_gradelevel: ವಯಸ್ಸು 5-13
-  allcancode_gradelevel: ವಯಸ್ಸು 5-10
-  csfirst_gradelevel: ವಯಸ್ಸು 9-14
-  boxisland_gradelevel: ಪ್ರಾಥಮಿಕ
-  codesters_gradelevel: ವಯಸ್ಸು 12-14
-  texasinstruments_gradelevel: ವಯಸ್ಸು 13-16
-  course1_gradelevel: ವಯಸ್ಸು 4-6
-  course2_gradelevel: ವಯಸ್ಸು 6-18
-  course3_gradelevel: ವಯಸ್ಸು 8-18
-  course4_gradelevel: ವಯಸ್ಸು 10-18
-  coursea_gradelevel: ವಯಸ್ಸು 4-7
-  courseb_gradelevel: ವಯಸ್ಸು 5-8
-  coursec_gradelevel: ವಯಸ್ಸು 6-10
-  coursed_gradelevel: ವಯಸ್ಸು 7-11
-  coursee_gradelevel: ವಯಸ್ಸು 8-12
-  coursef_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2017_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2017_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2017_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2017_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2017_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2017_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2018_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2018_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2018_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2018_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2018_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2018_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2019_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2019_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2019_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2019_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2019_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2019_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2020_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2020_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2020_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2020_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2020_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2020_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2021_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2021_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2021_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2021_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2021_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2021_gradelevel: ವಯಸ್ಸು 9-13
-  coursea-2022_gradelevel: ವಯಸ್ಸು 4-7
-  courseb-2022_gradelevel: ವಯಸ್ಸು 5-8
-  coursec-2022_gradelevel: ವಯಸ್ಸು 6-10
-  coursed-2022_gradelevel: ವಯಸ್ಸು 7-11
-  coursee-2022_gradelevel: ವಯಸ್ಸು 8-12
-  coursef-2022_gradelevel: ವಯಸ್ಸು 9-13
-  accelerated_gradelevel: ವಯಸ್ಸು 10-18
+  frozen_name: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಕೋಡ್ ಮಾಡುವುದು
   frozen_shortdescription: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಐಸ್‌ನ ಮ್ಯಾಜಿಕ್ ಮತ್ತು ಸೌಂದರ್ಯವನ್ನು ಅನಾವರಣಗೊಳಿಸುತ್ತಿದ್ದಂತೆಯೇ
     ಕೋಡ್ ಅನ್ನು ನಾವು ಬಳಸೋಣ.
-  starwars_shortdescription: ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ
-    ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ.
-  infinity_shortdescription: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು
-    ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
-  coursea_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
-  courseb_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
-    (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
-    ಇದೆ.)
-  coursec_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
-    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
-  coursed_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕವರ್
-    ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
-    ಮುಂದುವರಿಯಿರಿ.
-  coursee_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ತ್ವರಿತವಾಗಿ
-    ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
-  coursef_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
-  coursea-2017_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ.
-  courseb-2017_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
-    ಇದೆ.)
-  coursec-2017_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
-    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
-  coursed-2017_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
-    ಮುಂದುವರಿಯಿರಿ.
-  coursee-2017_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
-  coursef-2017_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
-    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
-  coursea-2018_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ.
-  courseb-2018_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
-    ಇದೆ.)
-  coursec-2018_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
-    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
-  coursed-2018_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
-    ಮುಂದುವರಿಯಿರಿ.
-  coursee-2018_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
-  coursef-2018_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
-    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
-  coursea-2019_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ.
-  courseb-2019_shortdescription_congrats: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
-    ಪರಿಚಯ. (ಕೋರ್ಸ್‌-ಎ ರೀತಿಯೇ ಇದೆ, ಆದರೆ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನಷ್ಟು ವೈವಿಧ್ಯತೆ
-    ಇದೆ.)
-  coursec-2019_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ
-    ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
-  coursed-2019_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಇಂದ ತ್ವರಿತವಾಗಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ಕವರ್ ಮಾಡಿ, ನಂತರ ಅಲ್ಗೊರಿದಂಗಳು, ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು, ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಇನ್ನಷ್ಟರೊಂದಿಗೆ
-    ಮುಂದುವರಿಯಿರಿ.
-  coursee-2019_shortdescription_congrats: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
-    ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
-  coursef-2019_shortdescription_congrats: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ
-    ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
-  starwars_longdescription: ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ
-    ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ.
-  playlab_longdescription: ಸ್ಟೋರಿ ರಚಿಸಿ ಅಥವಾ ಪ್ಲೇ ಲ್ಯಾಬ್‌ ಜೊತೆಗೆ ಒಂದು ಗೇಮ್ ಮಾಡಿ! ಪ್ರಾಣಿಗಳು,
-    ಪೈರೇಟ್‌ಗಳು, ಝೊಂಬೀಗಳು, ನಿಂಜಾಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು ಹಲವು ಅಕ್ಷರಗಳನ್ನು ಚಲಿಸುವಂತೆ ಮಾಡಿ,
-    ಧ್ವನಿ ಹೊರಡಿಸಿ, ಪಾಯಿಂಟ್‌ಗಳನ್ನು ಸ್ಕೋರ್ ಮಾಡಿ ಮತ್ತು ಫೈರ್‌ಬಾಲ್‌ಗಳನ್ನೂ ಥ್ರೋ ಮಾಡಿ!
-  codeorg_beyond_gradelevel: ವಯಸ್ಸು 4-104
-  tynker_beyond_gradelevel: ವಯಸ್ಸು 5-13
-  lightbot_beyond_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
-  codecademy_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  kodable_beyond_gradelevel: ಪ್ರಾಥಮಿಕ
-  scratchjr_beyond_gradelevel: ಪ್ರಾಥಮಿಕ
+  gamelab_name: ಗೇಮ್ ಲ್ಯಾಬ್
+  gender: ಲಿಂಗ
+  get_a_certificate_message: ನಾವು ನಿಮಗೆ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ಹೇಗೆ ಮಾಹಿತಿಯನ್ನು ಕಳುಹಿಸುತ್ತೇವೆ
+    <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ ಮೀರಿ ತಿಳಿಯಿರಿ</a>
+  get_a_certificate_message_after: ಅದನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಲು ಅಥವಾ ಮುದ್ರಿಸಲು ಪ್ರಮಾಣಪತ್ರದ
+    ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ. ಈಗ, ನಮ್ಮ ಜೊತೆ ಹೋಗುವ ಇರಿಸಿಕೊಳ್ಳಲು <a href='http://studio.code.org'>ಇತರ
+    ಶಿಕ್ಷಣ</a>, ಅಥವಾ ಹೆಚ್ಚು ಆಯ್ಕೆಗಳನ್ನು ನೋಡಿ <a href='/learn/beyond'>ಒಂದು ಗಂಟೆ ಮೀರಿ
+    ತಿಳಿಯಿರಿ</a>.
+  get_a_certificate_of_achievement: ಸಾಧನೆಯ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪಡೆಯಿರಿ
+  get_started: ಪ್ರಾರಂಭಿಸಿ
+  girl: ಹುಡುಗಿ
+  girls: ಗರ್ಲ್ಸ್
+  girls_team: ಬಾಲಕಿಯರ ತಂಡ
+  give_my_hour: 'ನನ್ನ ಅವರ್ ನೀಡಿ:'
+  go: ಹೋಗು
   hacketyhack_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  robomind_beyond_gradelevel: ವಯಸ್ಸು 8-13
-  makeschool_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  touchdevelop_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  codehs_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  kidsruby_beyond_gradelevel: ವಯಸ್ಸು 12+
-  w3schools_beyond_gradelevel: ವಯಸ್ಸು 12+
-  mozilla_beyond_gradelevel: ವಯಸ್ಸು 12+
-  processing_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
-  compatibility_unsupported_browser_markdown: ನಿಮ್ಮ ಬ್ರೌಸರ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು
-    ನಿಮ್ಮ ಬ್ರೌಸರ್ ಅನ್ನು [ನಮ್ಮ ಬೆಂಬಲಿತ ಬ್ರೌಸರ್‌ಗಳಲ್ಲಿ ಒಂದಕ್ಕೆ](%{supported_browsers_url})
-    ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ. ನೀವು ಪುಟವನ್ನು ವೀಕ್ಷಿಸಲು ಪ್ರಯತ್ನಿಸಬಹುದು, ಆದರೆ ಕಾರ್ಯವನ್ನು ಮುರಿಯಬಹುದು
-    ಎಂದು ನಿರೀಕ್ಷಿಸಬಹುದು.
-  flappy_shortcode: ಫ್ಲಾಪ್
-  header_my_dashboard: ನನ್ನ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್
-  header_courses: ಕೋರ್ಸ್‌ಗಳು
-  header_course_catalog: ಕೋರ್ಸ್ ಕ್ಯಾಟಲಾಗ್
-  header_project_gallery: ಪ್ರಾಯೋಜನೆಗಳು
-  header_sections: ವಿಭಾಗಗಳು
-  header_professional_learning: ವೃತ್ತಿಪರ ಕಲಿಕೆ
-  header_educate_overview: ಕ್ಷಕರ ಅವಲೋಕನ
-  header_educate_elementary: ಪ್ರಾಥಮಿಕ ಶಾಲೆ
-  header_educate_middle: ಮಧ್ಯಮ ಶಾಲೆ
-  header_educate_high: ಪ್ರೌಢಶಾಲೆ
-  header_educate_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  header_educate_partner: ಮ್ಮೊಂದಿಗೆ ಪಾಲುದಾರರಾಗಿ
-  header_educate_beyond: Code.org ಮೀರಿ
-  header_educate_inspire: ವಿದ್ಯಾರ್ಥಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
-  header_educate_community: ಆನ್‌ಲೈನ್ ಸಮುದಾಯ
-  header_educate_requirements: ತಾಂತ್ರಿಕ ಅವಶ್ಯಕತೆಗಳು
-  header_educate_tools: ಪರಿಕರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು
-  header_about_us: ನಮ್ಮ ಬಗ್ಗೆ
-  header_about_leadership: ನಾಯಕತ್ವ
+  header_about: ಬಗ್ಗೆ
+  header_about_contact: ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ
   header_about_donors: ದಾನಿಗಳು
+  header_about_evaluation: ಮೌಲೀಕರಣ
+  header_about_faqs: ಎಫ್‌ಎಕ್ಯೂಗಳು
+  header_about_jobs: ಉದ್ಯೋಗಗಳು
+  header_about_leadership: ನಾಯಕತ್ವ
+  header_about_news: ನ್ಯೂಸ್ರೂಮ್
   header_about_partners: ಪಾಲುದಾರರು
   header_about_team: ಸಂಪೂರ್ಣ ತಂಡ
-  header_about_news: ನ್ಯೂಸ್ರೂಮ್
-  header_about_evaluation: ಮೌಲೀಕರಣ
-  header_about_jobs: ಉದ್ಯೋಗಗಳು
-  header_about_contact: ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ
-  header_about_faqs: ಎಫ್‌ಎಕ್ಯೂಗಳು
-  header_learn: ತಿಳಿಯಿರಿ
-  header_teach: ಬೋಧಿಸಿ
+  header_about_us: ನಮ್ಮ ಬಗ್ಗೆ
+  header_course_catalog: ಕೋರ್ಸ್ ಕ್ಯಾಟಲಾಗ್
+  header_courses: ಕೋರ್ಸ್‌ಗಳು
+  header_documentation: ದಾಖಲೆ
+  header_educate_beyond: Code.org ಮೀರಿ
+  header_educate_community: ಆನ್‌ಲೈನ್ ಸಮುದಾಯ
+  header_educate_elementary: ಪ್ರಾಥಮಿಕ ಶಾಲೆ
+  header_educate_high: ಪ್ರೌಢಶಾಲೆ
+  header_educate_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  header_educate_inspire: ವಿದ್ಯಾರ್ಥಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
+  header_educate_middle: ಮಧ್ಯಮ ಶಾಲೆ
+  header_educate_overview: ಕ್ಷಕರ ಅವಲೋಕನ
+  header_educate_partner: ಮ್ಮೊಂದಿಗೆ ಪಾಲುದಾರರಾಗಿ
+  header_educate_requirements: ತಾಂತ್ರಿಕ ಅವಶ್ಯಕತೆಗಳು
+  header_educate_tools: ಪರಿಕರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು
   header_help_us: ಸಹಾಯ ಮಾಡಿ
-  header_about: ಬಗ್ಗೆ
-  header_report_bug: ತೊಂದರೆ ವರದಿ ಮಾಡು
+  header_incubator: ಇನ್ಕ್ಯುಬೇಟರ್
+  header_learn: ತಿಳಿಯಿರಿ
   header_legal_privacy: ಗೌಪ್ಯತಾ ನೀತಿ
   header_legal_tos: ಸೇವೆಯ ಷರತ್ತುಗಳು
+  header_my_dashboard: ನನ್ನ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್
+  header_professional_learning: ವೃತ್ತಿಪರ ಕಲಿಕೆ
+  header_project_gallery: ಪ್ರಾಯೋಜನೆಗಳು
+  header_report_bug: ತೊಂದರೆ ವರದಿ ಮಾಡು
+  header_sections: ವಿಭಾಗಗಳು
+  header_teach: ಬೋಧಿಸಿ
+  header_teacher_community: ಶಿಕ್ಷಕ ಸಮುದಾಯ
   header_tutorials: ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು
-  header_documentation: ದಾಖಲೆ
-  user_header_label: ಹಾಯ್ %{username}
-  user_header_team: ತಂಡ
-  user_header_settings: ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು
-  user_header_logout: ಸೈನ್ ಔಟ್
-  user_header_signin: ಸೈನ್ ಇನ್
-  user_header_artist: ಆರ್ಟಿಸ್ಟ್
-  user_header_dance: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-  user_header_minecraft: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
-  user_header_flappy: ಫ್ಲಾಪಿ
-  user_header_view_my_projects: ನನ್ನ ಯೋಜನೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ
-  view_all_sections: ಎಲ್ಲಾ ವಿಭಾಗಗಳು
-  applab_tile_subtitle: ಬ್ಲಾಕ್ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಬಳಸಿ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ನಲ್ಲಿ ನಿಮ್ಮದೇ
-    ಆಪ್ ರಚಿಸಿ. ಅಥವಾ ಪಠ್ಯ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ನೊಂದಿಗೆ ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನಿಮ್ಮ ಕೌಶಲಗಳನ್ನು
-    ತೆಗೆದುಕೊಳ್ಳಿ. (ಇಂಗ್ಲಿಷ್‌ ಮಾತ್ರ)
-  applab_tile_start_tutorial: ಪ್ರಾರಂಭಿಸಿ
-  applab_tile_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
-  account_sign_up_email_opt_in: ನಮ್ಮ ಕೋರ್ಸ್‌ಗಳು, ಸ್ಥಳೀಯ ಅವಕಾಶಗಳು ಅಥವಾ ಇತರ ಕಂಪ್ಯೂಟರ್
-    ವಿಜ್ಞಾನ ಸುದ್ದಿಗಳಿಗೆ ನವೀಕರಣಗಳ ಕುರಿತು ನಾವು ನಿಮಗೆ ಇಮೇಲ್ ಮಾಡಬಹುದೇ? (ಸರಿಸುಮಾರು ತಿಂಗಳಿಗೊಮ್ಮೆ)
-  account_sign_up_child_accept_terms: Code.org ಸೇವೆಗಳನ್ನು ಬಳಸಲು ನಾನು ನನ್ನ ಪೋಷಕರು ಅಥವಾ
-    ಕಾನೂನುಬದ್ಧ ಪೋಷಕರ ಅನುಮತಿಯನ್ನು ಹೊಂದಿದ್ದೇನೆ ಎಂದು ನಾನು ದೃಢೀಕರಿಸುತ್ತೇನೆ.
-  hoc_overview_dance_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-  hoc_overview_dance_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರ ಜೊತೆಗೆ ಹಂಚಿಕೊಳ್ಳುವುದಕ್ಕಾಗಿ ಒಂದು ಡ್ಯಾನ್ಸ್‌
-    ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಕೇಟಿ ಪೆರ್‍ರಿ, ಮಡೋನಾ, ಜೆ. ಬಾಲ್ವಿನ್, ಸಿಯಾ, ಕೀತ್‌ ಅರ್ಬನ್‌,
-    ಸಿಯಾರಾ ಮತ್ತು ಇನ್ನೂ 25 ಜನರನ್ನು ಒಳಗೊಂಡಿದೆ!
-  hoc_overview_dance_2019_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-    ಕೋಡ್ ಮಾಡಿ. ಕೇಟಿ ಪೆರ್‍ರಿ, ಶಾನ್ ಮೆಂಡೆಸ್‌, ಪ್ಯಾನಿಕ್! ಅಟ್‌ ದಿ ಡಿಸ್ಕೋ, ಲಿಲ್ ನಾಸ್‌ ಎಕ್ಸ್‌,
-    ಜೋನಸ್‌ ಬ್ರದರ್ಸ್‌, ನಿಕಿ ಮಿನಾಜ್ ಮತ್ತು ಇನ್ನೂ 34 ಜನರನ್ನು ಒಳಗೊಂಡಿದೆ!
-  hoc_overview_dance_2022_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು
-    ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ
-    “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
-  hoc_overview_hello_world_2022_subtitle: ನೀವು ರಚಿಸುವ ಜಗತ್ತಿನಲ್ಲಿ ಸಂವಾದಾತ್ಮಕ ಅಕ್ಷರಗಳನ್ನು
-    ಕೋಡ್ ಮಾಡಲು ನಾಲ್ಕು ಮೋಜಿನ ಥೀಮ್‌ಗಳಿಂದ ಆರಿಸಿಕೊಳ್ಳಿ
-  hoc_overview_hello_world_2022_alt_text: ಅನಿಮೇಟೆಡ್ ಗಗನಯಾತ್ರಿ ಮತ್ತು ಪ್ರಾಣಿಗಳ ಪಾತ್ರಗಳು
-    ಭೂಮಿಯ ಒಂದು ವಿವರಣೆಯ ಸುತ್ತ ತೇಲುತ್ತವೆ
-  hoc_overview_title: Code.org ನಿಂದ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು
-  hoc_overview_subtitle_markdown: "[ಅವರ್ ಆಫ್ ಕೋಡ್] (https://hourofcode.com) ಎಂಬುದು
-    ಜಾಗತಿಕ ಚಳವಳಿಯಾಗಿದ್ದು, 180+ ದೇಶಗಳಲ್ಲಿ ಕೋಟ್ಯಂತರ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ತಲುಪುತ್ತಿದೆ. ಅವರ್
-    ಆಫ್‌ ಕೋಡ್ ಈವೆಂಟ್ ಅನ್ನು ಯಾರಾದರೂ, ಎಲ್ಲಾದರೂ ಆಯೋಜಿಸಬಹುದು ಅಥವಾ 500 ಕ್ಕೂ ಹೆಚ್ಚು ಒಂದು
-    ಗಂಟೆಯ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳ ಪೈಕಿ ಯಾವುದನ್ನಾದರೂ ಟ್ರೈ ಮಾಡಬಹುದು. ಇವು 45 ಕ್ಕೂ ಹೆಚ್ಚು ಭಾಷೆಗಳಲ್ಲಿ
-    ಲಭ್ಯವಿವೆ."
-  hoc_overview_partner_activities_title: ಪಾರ್ಟ್ನರ್‌ಗಳಿಂದ ಇನ್ನಷ್ಟು ಚಟುವಟಿಕೆಗಳು
-  hoc_overview_partner_activities_body: ಎಲ್ಲ ವಯಸ್ಸುಗಳು ಮತ್ತು ಅನುಭವ ಮಟ್ಟಗಳಿಗೆ 500 ಕ್ಕೂ
-    ಹೆಚ್ಚು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಚಟುವಟಿಕೆಗಳನ್ನು ಅವರ್ ಆಪ್‌ ಕೋಡ್ ವೆಬ್‌ಸೈಟ್ ಹೊಂದಿದ್ದು, ಇದನ್ನು
-    Code.org ಮತ್ತು ಪಾರ್ಟ್ನರ್‌ಗಳು ಡೆವಲಪ್‌ ಮಾಡಿದ್ದಾರೆ.
-  hoc_overview_partner_activities_link: ಚಟುವಟಿಕೆಗಳನ್ನು ನೋಡಿ
-  hoc_overview_start_tutorial: ಪ್ರಾರಂಭಿಸಿ
-  hoc_overview_view_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
-  hoc2018_creativity_create: ರಚಿಸಿ
+  hello: ಹಲೋ ವರ್ಲ್ಡ್
+  help_recruit: ನಮಗೆ ಹೆಚ್ಚು ಕೋಡರ್ಗಳನ್ನು ನೇಮಕ ಸಹಾಯ!
+  help_recruit_coders: ನಿಮ್ಮ ತಂಡಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡರ್ಗಳನ್ನು ನೇಮಿಸಿಕೊಳ್ಳಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ!
+  hoc-encryption_name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
+  hoc2014_everyone: ಪ್ರತಿಯೊಬ್ಬರೂ
+  hoc2014_heading: ಸೇರಲು <a href="http://hourofcode.com">ಕೋಡ್ ಗಂಟೆ</a><br/>ಡಿಸೆಂಬರ್
+    8 - 14, 2014<br/>
+  hoc2014_host: ಇದು ಹೋಸ್ಟ್
+  hoc2014_students: ವಿದ್ಯಾರ್ಥಿಗಳು
+  hoc2014_teachers: ಶಿಕ್ಷಕರು
+  hoc2014_try: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  hoc2014_try_frozen: ಫ್ರೋಜನ್‌ನಿಂದ ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಸಹಿತ ಕಲಾಕಾರರು
+  hoc2014_try_new_tutorial: ಬೀಟಾದಲ್ಲಿ ನಮ್ಮ ಹೊಸ ಅವರ್ ಆಫ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  hoc2014_whatishoc: ಕೋಡ್ ಗಂಟೆ ಏನು?
   hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
     ಕೋರ್ಸ್‌ಗಳೊಂದಿಗೆ</a> ಮುಂದೆ ಸಾಗಿ
-  hoc2018_mc_page_title: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು
-  hoc2018_mc_designer_description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು
-    ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
-  hoc2018_mc_start: ಪ್ರಾರಂಭಿಸಿ
-  hoc2018_mc_no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
-  hoc2018_mc_download_adventurer: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅಡ್ವೆಂಚರರ್‌ನ ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು
-    ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.
-  hoc2018_mc_educators_box2_button: ಡೌನ್‌ಲೋಡ್
-  hoc2018_mc_educators_box3_title: ಉಚಿತ ವಿದ್ಯಾರ್ಥಿ ವರ್ಕ್‌ಶಾಪ್‌ಗೆ ಹಾಜರಾಗಿ
-  hoc2018_mc_educators_box3_desc: ಉಚಿತ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಾಗಿ ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿನಮೈಕ್ರೋಸಾಫ್ಟ್‌
-    ಸ್ಟೋರ್‌ಗೆ ಭೇಟಿ ನೀಡಿ. ಎಲ್ಲ ಕೌಶಲ ಮಟ್ಟಗಳು, ಆರು ಮತ್ತು ಹೆಚ್ಚಿನ ವಯಸ್ಸಿನ ಭಾಗೀದಾರರಿಗೆ.
-  hoc2018_mc_educators_box3_button: ವರ್ಕ್‌ಶಾಪ್‌ ಕಂಡುಕೊಳ್ಳಿ
-  hoc2022_mc_educators_box3_desc_markdown: 'ಈ ಬೇಡಿಕೆಯ ಮೇರೆಗಿನ [ಉಚಿತ ಕೋರ್ಸ್] (%{free_course_link})
-    ಬಳಸಿಕೊಳ್ಳಿ ಅಥವಾ ಅತಿಥಿ ಶಿಕ್ಷಕರೊಂದಿಗೆ ಲೈವ್ ಅವರ್ ಆಫ್ ಕೋಡ್ ಕಾರ್ಯಾಗಾರಕ್ಕೆ ಹಾಜರಾಗಲು
-    ನಿಮ್ಮ ಸಂಪೂರ್ಣ ತರಗತಿಯನ್ನು ನೋಂದಾಯಿಸಿ. CSEW, ಡಿಸೆಂಬರ್ 6 — 11 ರ ಅವಧಿಯಲ್ಲಿ ಹಲವು ಬಾರಿ
-    ಒದಗಿಸಲಾಗುತ್ತದೆ. '
-  hoc2022_mc_educators_box3_button: ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ
-  hoc2018_mc_educators_box4_title: ಇನ್ನಷ್ಟು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಆಕ್ಸೆಸ್
-    ಮಾಡಿ
-  hoc2018_mc_educators_box4_button: ಸಂಪನ್ಮೂಲಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ
-  hoc2022_mc_educators_box4_desc: ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯಿಂದ ಬೆಂಬಲಿತವಾದ ಬ್ಲಾಕ್‌ನಿಂದ ಪೈಥಾನ್‌ವರೆಗೆ
-    200 ಗಂಟೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪಠ್ಯಕ್ರಮದೊಂದಿಗೆ ಕೆ -12 ಕಲಿಕೆದಾರರಲ್ಲಿ STEM ಉತ್ಸಾಹವನ್ನು
-    ಪ್ರೇರೇಪಿಸಿ.
-  hoc2022_mc_educators_box4_button: ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ
-  hoc2018_mc_watch_videos: ನೀವು ಆರಂಭಿಸುವುದಕ್ಕೂ ಮೊದಲು, ಈ ಒಂದು ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳನ್ನು
-    ವೀಕ್ಷಿಸಿ
-  hoc2018_mc_videos_more: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳನ್ನು ಒಳಗೊಂಡ ಇನ್ನಷ್ಟು <a
-    href='%{inspiring_videos_playlist}'>ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳು</a>
-  hoc2018_mc_video_title_steph_curry: ಸ್ಟೆಪ್‌ ಕರ್‍ರಿ ಜೊತೆಗೆ ಅವರ್ ಆಫ್‌ ಕೋಡ್
-  hoc2018_mc_video_title_sports: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
-  hoc2018_mc_video_title_cs_is_everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
-  hoc2018_mc_video_title_inspire_girl: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
-  hoc2018_mc_video_title_cs_intro: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
-  hoc2018_mc_video_title_schools_dont_teach: ಬಹುತೇಕ ಶಾಲೆಗಳು ಬೋಧಿಸದೇ ಇರುವುದು
-  hoc2018_mc_video_title_obama: ಕಂಪ್ಯೂಟರ್‌ ಸೈನ್ಸ್‌ ಕುರಿತು ಅಧ್ಯಕ್ಷ ಒಬಾಮಾ
-  hoc2018_mc_video_title_hoc_is_here: ಅವರ್ ಆಫ್ ಕೋಡ್ ಇಲ್ಲಿದೆ - ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
-  hoc2018_mc_video_title_anybody_can_learn: ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
-  hoc2018_mc_video_title_my_name_is_aracely: ನನ್ನ ಹೆಸರು ಅರ್ಸೆಲಿ
-  hoc2018_mc_homepage_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  hoc2018_mc_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
-  hoc2018_mc_minecraft_education: Minecraft ಶಿಕ್ಷಣ
-  hoc2018_mc_continue_learning: Minecraft ನೊಂದಿಗೆ ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ.
-  hoc2018_mc_go_to_mc_education: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಶಿಕ್ಷಣಕ್ಕೆ ಹೋಗಿ
-  hoc2018_dance_party_main_heading: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-  hoc2018_dance_party_subheading: ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ ಟ್ರಾನ್ಸ್‌ಲೇಟ್‌ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿ
-  hoc2018_dance_party_box_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
-  hoc2018_dance_party_box_description: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್‌
-    ಪಾರ್ಟಿ ಕೋಡ್ ಮಾಡಿ!
-  hoc2018_dance_party_button: ಪ್ರಾರಂಭಿಸಿ
-  hoc2018_dance_keep_on_dancing_box_title: ಡ್ಯಾನ್ಸ್‌ ಮಾಡುತ್ತಿರಿ
-  hoc2018_dance_keep_on_dancing_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ
-    ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
-  hoc2018_dance_keep_on_dancing_specs: ಭಾಷೆ | ಫಾರ್ಮ್ಯಾಟ್‌ | ವಯಸ್ಸು 13+
-  hoc2018_dance_keep_on_dancing_button: ಆರಂಭ ಭಾಗ 2
-  hoc2018_dance_teacher_resources_title: ಶಿಕ್ಷಕರ ಸಂಪನ್ಮೂಲಗಳು
-  hoc2018_dance_teacher_resources_tile1_description: ಪಠ್ಯ ಯೋಜನೆಗಳು, ಪ್ರಮಾಣಪತ್ರಗಳು
-    ಮತ್ತು ಮ್ಯೂಸಿಕ್‌ ಫಿಲ್ಟರಿಂಗ್.
-  hoc2018_dance_teacher_resources_tile1_button: ಪಠ್ಯ ಯೋಜನೆ
-  hoc2018_dance_teacher_resources_tile2_title: ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ ಅನ್‌ಪ್ಲಗ್ಡ್‌
-  hoc2018_dance_teacher_resources_tile2_description: ಯಾವುದೇ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಅಗತ್ಯವಿಲ್ಲ!
-    ಒಟ್ಟಾಗಿ ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿಯನ್ನು ಕೋರಿಯಾಗ್ರಾಫ್‌ ಮಾಡಲು ಕೋಡಿಂಗ್‌ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ.
-  hoc2018_dance_teacher_resources_tile2_button: ಅನ್‌ಪ್ಲಗ್‌ ಆಕ್ಟಿವಿಟಿ
-  hoc2018_dance_featured_student_creations_title: ವೈಶಿಷ್ಟ್ಯಗೊಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿ ಕ್ರಿಯೇಶನ್ಸ್‌
-  hoc2018_dance_videos_section_heading: ಪ್ರಭಾವ ಪಡೆಯಿರಿ
-  hoc2018_dance_video_title_what_is_creativity: ಕ್ರಿಯಾಶೀಲತೆ ಎಂದರೇನು?
-  hoc2018_dance_view_creativity_video_playlist: ಕ್ರಿಯಾಶೀಲತೆ ಎಂದರೇನು? ಸಂಪೂರ್ಣ ಸಿರೀಸ್‌
-    ವೀಕ್ಷಿಸಿ (5 ನಿಮಿಷ)
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
+  hoc2018_creativity_create: ರಚಿಸಿ
+  hoc2018_dance_amazon_about_future_engineer_button: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  hoc2018_dance_amazon_about_future_engineer_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಶಿಕ್ಷಣಕ್ಕೆ
+    ಪ್ರವೇಶಾವಕಾಶವನ್ನು ಹೆಚ್ಚಿಸಲು ಅಮೆಜಾನ್‌ನ ಕಿಂಡರ್‌ಗಾರ್ಟನ್‌ನಿಂದ ವೃತ್ತಿ ಕಾರ್ಯಕ್ರಮದವರೆಗೆ
+    ಇನ್ನಷ್ಟನ್ನು ತಿಳಿಯಿರಿ. ನಮ್ಮ ಬೇಸಿಗೆ ಕ್ಯಾಂಪ್‌ಗಳು, ಹೈಸ್ಕೂಲ್ ಸಿಎಸ್ ತರಗತಿಗಳು, ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳು
+    ಮತ್ತು ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಳ್ಳುವುದು ಹೇಗೆ ಎಂಬ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ಮಾಹಿತಿಯನ್ನು
+    ಕಂಡುಕೊಳ್ಳಿ.
+  hoc2018_dance_amazon_future_engineer_footer: "* ಈ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಬಳಸಿದ ಸಂಗೀತದ
+    ಕಲಾಕಾರರು Code.org ಗೆ ತಮ್ಮ ಸಂಗೀತದ ಬಳಕೆಯ ಲೈಸೆನ್ಸಿಂಗ್‌ ಭಾಗವಾಗಿ ಅಮೆಜಾನ್‌ಗೆ ಪ್ರಾಯೋಜನೆ
+    ಅಥವಾ ಶಿಫಾರಸನ್ನು ಮಾಡುತ್ತಿಲ್ಲ."
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್
+    ಇಂಜಿನಿಯರ್ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: ಅಮೆಜಾನ್‌ ಫ್ಯೂಚರ್
     ಇಂಜಿನಿಯರ್‌* ಎಂಬುದು ಸಮಗ್ರ ಬಾಲ್ಯದಿಂದ ವೃತ್ತಿಯವರೆಗಿನ ಪ್ರೋಗ್ರಾಮ್ ಆಗಿದ್ದು, ಕಡಿಮೆ ಆದಾಯದ
     ಮತ್ತು ಇತರ ಅವಕಾಶ ವಂಚಿತ ಮಕ್ಕಳು ಮತ್ತು ಯುವಕರು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನಲ್ಲಿ ವೃತ್ತಿಗಳನ್ನು
@@ -784,28 +559,77 @@ kn-IN:
     ಫ್ಯೂಚರ್ ಇಂಜಿನಿಯರ್‌* ಎಂಬುದು ಸಮಗ್ರ ಬಾಲ್ಯದಿಂದ ವೃತ್ತಿಯವರೆಗಿನ ಪ್ರೋಗ್ರಾಮ್ ಆಗಿದ್ದು, ಕಡಿಮೆ
     ಆದಾಯದ ಮತ್ತು ಇತರ ಅವಕಾಶ ವಂಚಿತ ಮಕ್ಕಳು ಮತ್ತು ಯುವಕರು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನಲ್ಲಿ ವೃತ್ತಿಗಳನ್ನು
     ರೂಪಿಸಿಕೊಳ್ಳಲು ಅನುವಾಗುತ್ತದೆ. [ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ](%{amazon_future_engineer_link})
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್
-    ಇಂಜಿನಿಯರ್ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
-  hoc2018_dance_amazon_about_future_engineer_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಶಿಕ್ಷಣಕ್ಕೆ
-    ಪ್ರವೇಶಾವಕಾಶವನ್ನು ಹೆಚ್ಚಿಸಲು ಅಮೆಜಾನ್‌ನ ಕಿಂಡರ್‌ಗಾರ್ಟನ್‌ನಿಂದ ವೃತ್ತಿ ಕಾರ್ಯಕ್ರಮದವರೆಗೆ
-    ಇನ್ನಷ್ಟನ್ನು ತಿಳಿಯಿರಿ. ನಮ್ಮ ಬೇಸಿಗೆ ಕ್ಯಾಂಪ್‌ಗಳು, ಹೈಸ್ಕೂಲ್ ಸಿಎಸ್ ತರಗತಿಗಳು, ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳು
-    ಮತ್ತು ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಳ್ಳುವುದು ಹೇಗೆ ಎಂಬ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ಮಾಹಿತಿಯನ್ನು
-    ಕಂಡುಕೊಳ್ಳಿ.
-  hoc2018_dance_amazon_future_engineer_footer: "* ಈ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಬಳಸಿದ ಸಂಗೀತದ
-    ಕಲಾಕಾರರು Code.org ಗೆ ತಮ್ಮ ಸಂಗೀತದ ಬಳಕೆಯ ಲೈಸೆನ್ಸಿಂಗ್‌ ಭಾಗವಾಗಿ ಅಮೆಜಾನ್‌ಗೆ ಪ್ರಾಯೋಜನೆ
-    ಅಥವಾ ಶಿಫಾರಸನ್ನು ಮಾಡುತ್ತಿಲ್ಲ."
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
+  hoc2018_dance_featured_student_creations_title: ವೈಶಿಷ್ಟ್ಯಗೊಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿ ಕ್ರಿಯೇಶನ್ಸ್‌
+  hoc2018_dance_keep_on_dancing_box_title: ಡ್ಯಾನ್ಸ್‌ ಮಾಡುತ್ತಿರಿ
+  hoc2018_dance_keep_on_dancing_button: ಆರಂಭ ಭಾಗ 2
+  hoc2018_dance_keep_on_dancing_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ
+    ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
+  hoc2018_dance_keep_on_dancing_specs: ಭಾಷೆ | ಫಾರ್ಮ್ಯಾಟ್‌ | ವಯಸ್ಸು 13+
   hoc2018_dance_measure_colon: 'அளவீடு:'
-  hoc2018_mc_with_microsoft: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
+  hoc2018_dance_party_box_description: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್‌
+    ಪಾರ್ಟಿ ಕೋಡ್ ಮಾಡಿ!
+  hoc2018_dance_party_box_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+  hoc2018_dance_party_button: ಪ್ರಾರಂಭಿಸಿ
+  hoc2018_dance_party_main_heading: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+  hoc2018_dance_party_subheading: ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ ಟ್ರಾನ್ಸ್‌ಲೇಟ್‌ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿ
+  hoc2018_dance_teacher_resources_tile1_button: ಪಠ್ಯ ಯೋಜನೆ
+  hoc2018_dance_teacher_resources_tile1_description: ಪಠ್ಯ ಯೋಜನೆಗಳು, ಪ್ರಮಾಣಪತ್ರಗಳು
+    ಮತ್ತು ಮ್ಯೂಸಿಕ್‌ ಫಿಲ್ಟರಿಂಗ್.
+  hoc2018_dance_teacher_resources_tile2_button: ಅನ್‌ಪ್ಲಗ್‌ ಆಕ್ಟಿವಿಟಿ
+  hoc2018_dance_teacher_resources_tile2_description: ಯಾವುದೇ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಅಗತ್ಯವಿಲ್ಲ!
+    ಒಟ್ಟಾಗಿ ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿಯನ್ನು ಕೋರಿಯಾಗ್ರಾಫ್‌ ಮಾಡಲು ಕೋಡಿಂಗ್‌ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ.
+  hoc2018_dance_teacher_resources_tile2_title: ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ ಅನ್‌ಪ್ಲಗ್ಡ್‌
+  hoc2018_dance_teacher_resources_title: ಶಿಕ್ಷಕರ ಸಂಪನ್ಮೂಲಗಳು
+  hoc2018_dance_video_title_what_is_creativity: ಕ್ರಿಯಾಶೀಲತೆ ಎಂದರೇನು?
+  hoc2018_dance_videos_section_heading: ಪ್ರಭಾವ ಪಡೆಯಿರಿ
+  hoc2018_dance_view_creativity_video_playlist: ಕ್ರಿಯಾಶೀಲತೆ ಎಂದರೇನು? ಸಂಪೂರ್ಣ ಸಿರೀಸ್‌
+    ವೀಕ್ಷಿಸಿ (5 ನಿಮಿಷ)
+  hoc2018_mc_continue_learning: Minecraft ನೊಂದಿಗೆ ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ.
+  hoc2018_mc_designer_description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು
+    ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
+  hoc2018_mc_download_adventurer: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅಡ್ವೆಂಚರರ್‌ನ ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು
+    ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.
+  hoc2018_mc_educators_box2_button: ಡೌನ್‌ಲೋಡ್
+  hoc2018_mc_educators_box3_button: ವರ್ಕ್‌ಶಾಪ್‌ ಕಂಡುಕೊಳ್ಳಿ
+  hoc2018_mc_educators_box3_desc: ಉಚಿತ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಾಗಿ ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿನಮೈಕ್ರೋಸಾಫ್ಟ್‌
+    ಸ್ಟೋರ್‌ಗೆ ಭೇಟಿ ನೀಡಿ. ಎಲ್ಲ ಕೌಶಲ ಮಟ್ಟಗಳು, ಆರು ಮತ್ತು ಹೆಚ್ಚಿನ ವಯಸ್ಸಿನ ಭಾಗೀದಾರರಿಗೆ.
+  hoc2018_mc_educators_box3_title: ಉಚಿತ ವಿದ್ಯಾರ್ಥಿ ವರ್ಕ್‌ಶಾಪ್‌ಗೆ ಹಾಜರಾಗಿ
+  hoc2018_mc_educators_box4_button: ಸಂಪನ್ಮೂಲಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ
+  hoc2018_mc_educators_box4_title: ಇನ್ನಷ್ಟು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಆಕ್ಸೆಸ್
+    ಮಾಡಿ
+  hoc2018_mc_go_to_mc_education: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಶಿಕ್ಷಣಕ್ಕೆ ಹೋಗಿ
+  hoc2018_mc_homepage_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  hoc2018_mc_minecraft_education: Minecraft ಶಿಕ್ಷಣ
+  hoc2018_mc_no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
+  hoc2018_mc_page_title: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು
+  hoc2018_mc_start: ಪ್ರಾರಂಭಿಸಿ
+  hoc2018_mc_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
   hoc2018_mc_thank_microsoft: 21 ನೇ ಶತಮಾನದಲ್ಲಿ ಯಶಸ್ವಿಯಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಕೌಶಲಗಳನ್ನು
     ಕಲಿಯಲು ಅವಕಾಶವನ್ನು ಪ್ರತಿ ಮಗುವೂ ಹೊಂದಿರಬೇಕು ಎಂಬ ಧ್ಯೇಯ ಮತ್ತು ಗುರಿಗೆ ಬೆಂಬಲಿಸುತ್ತಿರುವುದಕ್ಕೆ
     Microsoft ಗೆ ನಾವು ಧನ್ಯವಾದವನ್ನು ತಿಳಿಸುತ್ತೇವೆ.
+  hoc2018_mc_video_title_anybody_can_learn: ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
+  hoc2018_mc_video_title_cs_intro: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
+  hoc2018_mc_video_title_cs_is_everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
+  hoc2018_mc_video_title_hoc_is_here: ಅವರ್ ಆಫ್ ಕೋಡ್ ಇಲ್ಲಿದೆ - ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
+  hoc2018_mc_video_title_inspire_girl: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
+  hoc2018_mc_video_title_my_name_is_aracely: ನನ್ನ ಹೆಸರು ಅರ್ಸೆಲಿ
+  hoc2018_mc_video_title_obama: ಕಂಪ್ಯೂಟರ್‌ ಸೈನ್ಸ್‌ ಕುರಿತು ಅಧ್ಯಕ್ಷ ಒಬಾಮಾ
+  hoc2018_mc_video_title_schools_dont_teach: ಬಹುತೇಕ ಶಾಲೆಗಳು ಬೋಧಿಸದೇ ಇರುವುದು
+  hoc2018_mc_video_title_sports: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
+  hoc2018_mc_video_title_steph_curry: ಸ್ಟೆಪ್‌ ಕರ್‍ರಿ ಜೊತೆಗೆ ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  hoc2018_mc_videos_more: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳನ್ನು ಒಳಗೊಂಡ ಇನ್ನಷ್ಟು <a
+    href='%{inspiring_videos_playlist}'>ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳು</a>
+  hoc2018_mc_watch_videos: ನೀವು ಆರಂಭಿಸುವುದಕ್ಕೂ ಮೊದಲು, ಈ ಒಂದು ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳನ್ನು
+    ವೀಕ್ಷಿಸಿ
+  hoc2018_mc_with_microsoft: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
+  hoc2019_dance_previous_versions: |-
+    ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯ ಹಿಂದಿನ ಆವೃತ್ತಿಯನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?
+    2018 ರಿಂದ [ಭಾಗ 1](%{dance_2018_link}) ಮತ್ತು [ಭಾಗ 2](%{dance_extras_2018_link}) ಆರಂಭಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.
   hoc2019_mc_mee_description1: 'ಹೊಸ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್ ಆಫ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್‌ ಈಗ ವಿಂಡೋಸ್,
     ಮ್ಯಾಕ್ ಮತ್ತು ಐಪ್ಯಾಡ್‌ಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಎಜುಕೇಶನ್ ಎಡಿಶನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ. ಕೋಡಿಂಗ್‌ನ
     ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳ ಜೊತೆಗೆ ಎಐ ಎಕ್ಸ್‌ಪ್ಲೋರ್‌ ಮಾಡಿ!'
   hoc2019_mc_more_coding_resources: ಇನ್ನಷ್ಟು ಕೋಡಿಂಗ್‌ ಸಂಪನ್ಮೂಲಗಳು
-  hoc2019_dance_previous_versions: |-
-    ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯ ಹಿಂದಿನ ಆವೃತ್ತಿಯನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ?
-    2018 ರಿಂದ [ಭಾಗ 1](%{dance_2018_link}) ಮತ್ತು [ಭಾಗ 2](%{dance_extras_2018_link}) ಆರಂಭಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.
   hoc2020_mc_available_code_org: Code.org ನಲ್ಲಿ ಲಭ್ಯವಿದೆ
   hoc2020_mc_available_mee: 'ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಎಜುಕೇಶನ್ ಎಡಿಟಶನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ'
   hoc2020_mc_mee_description: 'ಹೊಸ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್ ಆಪ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್‌ ಈಗ ವಿಂಡೋಸ್,
@@ -813,127 +637,351 @@ kn-IN:
     ಕೋಡಿಂಗ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಲ ಜೊತೆಗೆ ವೈವಿಧ್ಯತೆ ಮತ್ತು
     ಸಮಗ್ರತೆಯನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ! ಪಠ್ಯ ಯೋಜನೆ, ವೀಡಿಯೋಗಳು, ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪಠ್ಯಕ್ರಮ,
     ಸಮಾನತೆ ಅಧ್ಯಾಯಗಳು ಮತ್ತು ಶಿಕ್ಷಕರ ತರಬೇತಿಗಳೂ ಸೇರಿದಂತೆ ಉಚಿತ ಸಂಪನ್ಮೂಲಗಳ ಆಕ್ಸೆಸ್‌ ಮಾಡಿ.'
-  hoc2021_mc_mee_title: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಟೈಮ್ ಕ್ರಾಫ್ಟ್
+  hoc2021_mc_mee_ai_description: 'ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಎಐ ಅನ್ನು ಅರಿತುಕೊಳ್ಳಿ ಮತ್ತು
+    ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ಕೋಡ್ ಮಾಡಲು ಕಲಿಯಿರಿ.'
+  hoc2021_mc_mee_ai_title: ಎಐ ಫಾರ್ ಗುಡ್
   hoc2021_mc_mee_description: 'ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಹಿಂತಿರುಗಿ ಮತ್ತು ಕೋಡ್ ಮಾಡಲು ಕಲಿಯಿರಿ!
     ಹೊಸ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಈಗ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ನಲ್ಲಿ ಲಭ್ಯವಿದೆ: ವಿಂಡೋಸ್,
     ಮ್ಯಾಕ್, ಕ್ರೋಮ್‌ಬುಕ್ ಮತ್ತು ಐಪ್ಯಾಡ್‌ ಗಾಗಿ ಶಿಕ್ಷಣ ಆವೃತ್ತಿ. ಉಚಿತ ಶಿಕ್ಷಕರ ಸಂಪನ್ಮೂಲಗಳು,
     ತರಬೇತಿಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ.'
-  hoc2021_mc_mee_villages_title: ಎರಡು ಹಳ್ಳಿಗಳ ಕಥೆ
+  hoc2021_mc_mee_title: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಟೈಮ್ ಕ್ರಾಫ್ಟ್
   hoc2021_mc_mee_villages_description: 'ಕೋಡಿಂಗ್ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ಮೈನ್‌ಕ್ರಾಫ್ಟ್:
     ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ವೈವಿಧ್ಯತೆ ಮತ್ತು ಒಳಗೊಳ್ಳುವಿಕೆಗಳನ್ನು
     ಅರಿತುಕೊಳ್ಳಿ.'
-  hoc2021_mc_mee_ai_title: ಎಐ ಫಾರ್ ಗುಡ್
-  hoc2021_mc_mee_ai_description: 'ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಎಐ ಅನ್ನು ಅರಿತುಕೊಳ್ಳಿ ಮತ್ತು
-    ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ಕೋಡ್ ಮಾಡಲು ಕಲಿಯಿರಿ.'
-  hoc2022_mc_mee_title: Minecraft ಎಸ್ಕೇಪ್ ಎಸ್ಟೇಟ್
+  hoc2021_mc_mee_villages_title: ಎರಡು ಹಳ್ಳಿಗಳ ಕಥೆ
+  hoc2022_banner_description: ಬ್ರಹ್ಮಾಂಡವನ್ನು ಅನ್ವೇಷಿಸಿ, ಗೋಲ್ ಮಾಡಿ, ನಡೆಯನ್ನು ವಿಜ್ರಂಭಿಸಿ
+    - ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನ್ನು ಪ್ರಯೋಗಿಸಲು ಹಲವು ವಿಧಾನಗಳಿವೆ!
+  hoc2022_banner_title: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
+  hoc2022_cta_primary: ಹೊಸದೇನಿದೆ ಎಂದು ನೋಡಿ
+  hoc2022_cta_secondary: ಇನ್ನಷ್ಟು ಚಟುವಟಿಕೆಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  hoc2022_landing_page_banner_alt_left: ಬಾಹ್ಯಾಕಾಶದಲ್ಲಿ ಶನಿಯ ಪಕ್ಕದಲ್ಲಿ ಏಲಿಯನ್‌ ನೃತ್ಯ
+  hoc2022_landing_page_banner_alt_right: ರಾಕೆಟ್ ಟೇಕ್ ಆಫ್ ಮುಂದೆ ಬಾಹ್ಯಾಕಾಶದಲ್ಲಿ ಸಾಕರ್
+    ಚೆಂಡನ್ನು ಡ್ರಿಬ್ಲಿಂಗ್ ಮಾಡುವ ರೋಬೋಟ್
+  hoc2022_landing_page_create_description: ವಿಚಿತ್ರವಾದ್ದನ್ನು ಮತ್ತು ಅದ್ಭುತವಾದ್ದನ್ನು
+    ರಚಿಸಿ!
+  hoc2022_landing_page_create_title: ರಚಿಸಿ
+  hoc2022_landing_page_explore_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನೊಂದಿಗೆ ಹೊಸ ಜಗತ್ತುಗಳಿಗೆ
+    ಬಾಗಿಲುಗಳನ್ನು ತೆರೆಯಿರಿ!
+  hoc2022_landing_page_explore_title: ಅನ್ವೇಷಿಸಿ
+  hoc2022_landing_page_play_description: ಕ್ಷೇತ್ರಕ್ಕಿಳಿಯಿರಿ ಮತ್ತು ಸ್ಕೋರ್ ಮಾಡಿ!
+  hoc2022_mc_educators_box3_button: ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ
+  hoc2022_mc_educators_box3_desc_markdown: 'ಈ ಬೇಡಿಕೆಯ ಮೇರೆಗಿನ [ಉಚಿತ ಕೋರ್ಸ್] (%{free_course_link})
+    ಬಳಸಿಕೊಳ್ಳಿ ಅಥವಾ ಅತಿಥಿ ಶಿಕ್ಷಕರೊಂದಿಗೆ ಲೈವ್ ಅವರ್ ಆಫ್ ಕೋಡ್ ಕಾರ್ಯಾಗಾರಕ್ಕೆ ಹಾಜರಾಗಲು
+    ನಿಮ್ಮ ಸಂಪೂರ್ಣ ತರಗತಿಯನ್ನು ನೋಂದಾಯಿಸಿ. CSEW, ಡಿಸೆಂಬರ್ 6 — 11 ರ ಅವಧಿಯಲ್ಲಿ ಹಲವು ಬಾರಿ
+    ಒದಗಿಸಲಾಗುತ್ತದೆ. '
+  hoc2022_mc_educators_box4_button: ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ
+  hoc2022_mc_educators_box4_desc: ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯಿಂದ ಬೆಂಬಲಿತವಾದ ಬ್ಲಾಕ್‌ನಿಂದ ಪೈಥಾನ್‌ವರೆಗೆ
+    200 ಗಂಟೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪಠ್ಯಕ್ರಮದೊಂದಿಗೆ ಕೆ -12 ಕಲಿಕೆದಾರರಲ್ಲಿ STEM ಉತ್ಸಾಹವನ್ನು
+    ಪ್ರೇರೇಪಿಸಿ.
   hoc2022_mc_mee_description: 'ಮುಂಜಾನೆ ನಿಗೂಢ ಮಹಲಿನಿಂದ ತಪ್ಪಿಸಿಕೊಳ್ಳಿ ಮತ್ತು ಒಂದು ಮಿಲಿಯನ್
     ಪಚ್ಚೆಗಳನ್ನು ಸಂಪಾದಿಸಿ! ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ನ ಹೊಸ Minecraft ಅವರ್ ಈಗ Minecraft: ವಿಂಡೋಸ್,
     ಮ್ಯಾಕ್, ಕ್ರೋಮ್‌ಬುಕ್, ಐಪ್ಯಾಡ್ ಮತ್ತು ಮೊಬೈಲ್‌ಗಾಗಿ ಶಿಕ್ಷಣ ಆವೃತ್ತಿ ಲಭ್ಯವಿದೆ. ಉಚಿತ ಬೋಧಕ
     ಸಂಪನ್ಮೂಲಗಳು, ತರಬೇತಿಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ.'
   hoc2022_mc_mee_timecraft_description: 'Minecraft: ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ಈ ಉಚಿತ ಕೋಡಿಂಗ್
     ಪಾಠದಲ್ಲಿ ಭವಿಷ್ಯವನ್ನು ಉಳಿಸಲು ಹಿಮ್ಮುಖವಾಗಿ ಪ್ರಯಾಣಿಸಿ.'
-  footer_powered_by_aws: Amazon ವೆಬ್ ಸೇವೆಗಳು ಮತ್ತು "AWS ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ" ಲೋಗೋ
-    Amazon.com, Inc. ಅಥವಾ ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಮತ್ತು/ಅಥವಾ ಇತರ ದೇಶಗಳಲ್ಲಿ ಅದರ ಅಂಗಸಂಸ್ಥೆಗಳ
-    ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳಾಗಿವೆ.
-  codebytes_skinny_banner_english_only: ಇಂಗ್ಲಿಷ್-ಮಾತ್ರ
-  footer_privacy_policy: ಗೌಪ್ಯತಾ ನೀತಿ
-  footer_about: ಬಗ್ಗೆ
-  footer_partners: ಪಾಲುದಾರರು
-  footer_support: ಬೆಂಬಲ
-  footer_terms: ನಿಯಮಗಳು
-  ai_for_oceans_lesson_plan: ಪಠ್ಯ ಯೋಜನೆ
-  ai_for_oceans_tile_description: ಕಸವನ್ನು ಗುರುತಿಸಲು ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಮುದ್ರವನ್ನು
-    ಸ್ವಚ್ಛಗೊಳಿಸಲು ಎಐಗೆ ಸಹಾಯ ಮಾಡಿ! ತರಬೇತಿ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್ ಬಗ್ಗೆ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು
-    ಎಐ ಹೇಗೆ ಪರಿಹರಿಸಬಹುದು ಎಂಬ ಬಗ್ಗೆ ಕಲಿಯಿರಿ. ನೋಡಿ
+  hoc2022_mc_mee_title: Minecraft ಎಸ್ಕೇಪ್ ಎಸ್ಟೇಟ್
+  hoc_leaderboards: ಕೋಡ್ ಲೀಡರ್ಬೋರ್ಡ್ಗಳು ಗಂಟೆ
+  hoc_overview_dance_2019_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+    ಕೋಡ್ ಮಾಡಿ. ಕೇಟಿ ಪೆರ್‍ರಿ, ಶಾನ್ ಮೆಂಡೆಸ್‌, ಪ್ಯಾನಿಕ್! ಅಟ್‌ ದಿ ಡಿಸ್ಕೋ, ಲಿಲ್ ನಾಸ್‌ ಎಕ್ಸ್‌,
+    ಜೋನಸ್‌ ಬ್ರದರ್ಸ್‌, ನಿಕಿ ಮಿನಾಜ್ ಮತ್ತು ಇನ್ನೂ 34 ಜನರನ್ನು ಒಳಗೊಂಡಿದೆ!
+  hoc_overview_dance_2022_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು
+    ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ
+    “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
+  hoc_overview_dance_subtitle: ನಿಮ್ಮ ಸ್ನೇಹಿತರ ಜೊತೆಗೆ ಹಂಚಿಕೊಳ್ಳುವುದಕ್ಕಾಗಿ ಒಂದು ಡ್ಯಾನ್ಸ್‌
+    ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಕೇಟಿ ಪೆರ್‍ರಿ, ಮಡೋನಾ, ಜೆ. ಬಾಲ್ವಿನ್, ಸಿಯಾ, ಕೀತ್‌ ಅರ್ಬನ್‌,
+    ಸಿಯಾರಾ ಮತ್ತು ಇನ್ನೂ 25 ಜನರನ್ನು ಒಳಗೊಂಡಿದೆ!
+  hoc_overview_dance_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+  hoc_overview_hello_world_2022_alt_text: ಅನಿಮೇಟೆಡ್ ಗಗನಯಾತ್ರಿ ಮತ್ತು ಪ್ರಾಣಿಗಳ ಪಾತ್ರಗಳು
+    ಭೂಮಿಯ ಒಂದು ವಿವರಣೆಯ ಸುತ್ತ ತೇಲುತ್ತವೆ
+  hoc_overview_hello_world_2022_subtitle: ನೀವು ರಚಿಸುವ ಜಗತ್ತಿನಲ್ಲಿ ಸಂವಾದಾತ್ಮಕ ಅಕ್ಷರಗಳನ್ನು
+    ಕೋಡ್ ಮಾಡಲು ನಾಲ್ಕು ಮೋಜಿನ ಥೀಮ್‌ಗಳಿಂದ ಆರಿಸಿಕೊಳ್ಳಿ
+  hoc_overview_partner_activities_body: ಎಲ್ಲ ವಯಸ್ಸುಗಳು ಮತ್ತು ಅನುಭವ ಮಟ್ಟಗಳಿಗೆ 500 ಕ್ಕೂ
+    ಹೆಚ್ಚು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಚಟುವಟಿಕೆಗಳನ್ನು ಅವರ್ ಆಪ್‌ ಕೋಡ್ ವೆಬ್‌ಸೈಟ್ ಹೊಂದಿದ್ದು, ಇದನ್ನು
+    Code.org ಮತ್ತು ಪಾರ್ಟ್ನರ್‌ಗಳು ಡೆವಲಪ್‌ ಮಾಡಿದ್ದಾರೆ.
+  hoc_overview_partner_activities_link: ಚಟುವಟಿಕೆಗಳನ್ನು ನೋಡಿ
+  hoc_overview_partner_activities_title: ಪಾರ್ಟ್ನರ್‌ಗಳಿಂದ ಇನ್ನಷ್ಟು ಚಟುವಟಿಕೆಗಳು
+  hoc_overview_start_tutorial: ಪ್ರಾರಂಭಿಸಿ
+  hoc_overview_subtitle_markdown: "[ಅವರ್ ಆಫ್ ಕೋಡ್] (https://hourofcode.com) ಎಂಬುದು
+    ಜಾಗತಿಕ ಚಳವಳಿಯಾಗಿದ್ದು, 180+ ದೇಶಗಳಲ್ಲಿ ಕೋಟ್ಯಂತರ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ತಲುಪುತ್ತಿದೆ. ಅವರ್
+    ಆಫ್‌ ಕೋಡ್ ಈವೆಂಟ್ ಅನ್ನು ಯಾರಾದರೂ, ಎಲ್ಲಾದರೂ ಆಯೋಜಿಸಬಹುದು ಅಥವಾ 500 ಕ್ಕೂ ಹೆಚ್ಚು ಒಂದು
+    ಗಂಟೆಯ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳ ಪೈಕಿ ಯಾವುದನ್ನಾದರೂ ಟ್ರೈ ಮಾಡಬಹುದು. ಇವು 45 ಕ್ಕೂ ಹೆಚ್ಚು ಭಾಷೆಗಳಲ್ಲಿ
+    ಲಭ್ಯವಿವೆ."
+  hoc_overview_title: Code.org ನಿಂದ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು
+  hoc_overview_view_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
+  homepage_action_text_girlvideo: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
+  homepage_action_text_sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+  homepage_action_text_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  homepage_banner_20k_teachers_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_40k_teachers_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_privacy_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_text_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_below_hero_announcement_link_text: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_gallery_header: "%{project_count} ಮಿಲಿಯನ್‌ಗೂ ಹೆಚ್ಚು Code.org ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು
+    ರಚಿಸಲಾಗಿದೆ"
+  homepage_signpetition_dropdown_text: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
+  homepage_slot_text_blurb_hoc_2022: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
+  homepage_slot_text_flappy: ಫ್ಲಾಪಿ ಕೋಡ್
+  homepage_slot_text_frozen: ಆನಾ ಮತ್ತು ಎಲ್ಸಾ ಜೊತೆಗೆ ಫ್ರೋಜನ್
+  homepage_slot_text_hoc: ಕೋಡ್ ಗಂಟೆ
+  homepage_slot_text_link_elementary: 'ಪ್ರಾಥಮಿಕ ಶಾಲೆ
+
+    '
+  homepage_slot_text_link_high: ಹೈಸ್ಕೂಲ್
+  homepage_slot_text_link_hoc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  homepage_slot_text_link_middle: ಮಧ್ಯಮ ಶಾಲೆ
+  homepage_slot_text_link_thebadguys: ಬ್ಯಾಡ್ ಗೈಸ್ ಜೊತೆ ಕೋಡ್
+  homepage_slot_text_teacher: ಶಿಕ್ಷಕರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌
+  homepage_slot_text_title_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  homepage_slot_text_title_students: ವಿದ್ಯಾರ್ಥಿಗಳು
+  hour_of_code: ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  hourofcode_gradelevel: ವಯಸ್ಸು 6-106
+  hourofcode_name: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
   how_ai_works: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ
   how_ai_works_tile_description: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂದು ತಿಳಿಯಿರಿ ಮತ್ತು ಈ ಸಣ್ಣ
     ವೀಡಿಯೋಗಳ ಸರಣಿಯೊಂದಿಗೆ ಇದು ಯಾಕೆ ಪ್ರಮುಖ ಎಂದು ತಿಳಿಯಿರಿ. ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸಿಇಒ ಸತ್ಯ ನಾದೆಳ್ಲ
     ಮತ್ತು ವಿವಿಧ ಪರಿಣಿತರನ್ನು ಇದು ಒಳಗೊಂಡಿದೆ.
-  watch_the_videos: ವೀಡಿಯೋಗಳನ್ನು ವೀಕ್ಷಿಸಿ
-  ai_and_ethics: ಎಐ ಮತ್ತು ನೈತಿಕತೆ
-  ai_and_ethics_tile_description: ಎಐ ನೈತಿಕ ಪರಿಣಾಮಗಳ ಮೇಲೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಪ್ರತಿಫಲಿಸುತ್ತಾರೆ.
-    ನಂತರ, ಎಐ ಕ್ರಿಯೇಟರ್‌ಗಳು ಮತ್ತು ಜನಪ್ರತಿನಿಧಿಗಳಿಗೆ ಎಲ್ಲೆಡೆ "ಎಥಿಕ್ಸ್‌ ಎಐ ಕೋಡ್" ಸಂಪನ್ಮೂಲವನ್ನು
-    ರಚಿಸಲು ಒಟ್ಟಾಗಿ ಕೆಲಸ ಮಾಡಿ.
-  view_lesson_plan: ಪಠ್ಯ ಯೋಜನೆ ನೋಡಿ
-  ai_in_partnership_with: ಇವರ ಪಾಲುದಾರಿಕೆಯೊಂದಿಗೆ
-  ai_microsoft_thanks: 21 ನೇ ಶತಮಾನದಲ್ಲಿ ಯಶಸ್ವಿಯಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಕೌಶಲಗಳನ್ನು
-    ಕಲಿಯಲು ಅವಕಾಶವನ್ನು ಪ್ರತಿ ಮಗುವೂ ಹೊಂದಿರಬೇಕು ಎಂಬ ಧ್ಯೇಯ ಮತ್ತು ಗುರಿಗೆ ಬೆಂಬಲಿಸುತ್ತಿರುವುದಕ್ಕೆ
-    Microsoft ಗೆ ನಾವು ಧನ್ಯವಾದವನ್ನು ತಿಳಿಸುತ್ತೇವೆ.
-  ai_ethics_panel_header: ಎಐ ಪ್ಯಾನೆಲ್ ಚರ್ಚೆಯ ನೈತಿಕತೆಗಳನ್ನು ಅನಾವರಣಗೊಳಿಸುವುದು
-  ai_ethics_panel_description_1: ನಮ್ಮ ಕೆಲವು ಎಐ ಪರಿಣಿತರೊಂದಿಗೆ ಇನ್ನಷ್ಟು ಆಳವಾಗಿ ಹೋಗಿ!
-    ಅಲ್ಗೊರಿದಮ್ ಬಯಾಸ್ ಮತ್ತು ಕೆಲಸದ ಭವಿಷ್ಯದ ಬಗ್ಗೆ ಪ್ರಮುಖ ಸಮಸ್ಯೆಗಳನ್ನು ಈ ಪ್ಯಾನೆಲ್ ಚರ್ಚೆಯು
-    ಪ್ರಸ್ತಾಪಿಸುತ್ತದೆ.
-  ai_ethics_lesson_plan: ಎಐ ಮತ್ತು ಎಥಿಕ್ಸ್ ಪಠ್ಯ ಯೋಜನೆ
-  ai_ethics_panel_description_2: ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್‌ನ ನೈತಿಕತೆಗೆ ಉತ್ತಮ ಪರಿಚಯ!
-  cs_for_good: ಉತ್ತಮ ಅಂಶಗಳಿಗಾಗಿ ಸಿಎಸ್‌
-  cs_for_good_tile_description: ಹೆಚ್ಚು ಸಮಾನ ಮತ್ತು ಸುಸ್ಥಿರ ಜಗತ್ತನ್ನು ನಿರ್ಮಿಸುವಲ್ಲಿ
-    ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ವಹಿಸಬಹುದಾದ ಪಾತ್ರದ ಬಗ್ಗೆ ನಾವು ಆಳವಾಗಿ ಯೋಚಿಸಲು ಅವರಿಗೆ ಸ್ಫೂರ್ತಿ ಮೂಡಿಸುವ
-    ಸಂಪನ್ಮೂಲಗಳು.
-  view_resources: ಸಂಪನ್ಮೂಲಗಳನ್ನು ನೋಡಿ
+  i_agree: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
+  i_am_a: ನಾನು
+  if_you_enjoyed: ನೀವು ಕಲಿಯುವುದನ್ನು ಆನಂದಿಸಿದರೆ, ಅದನ್ನು ಪ್ರಯತ್ನಿಸಲು ಸ್ನೇಹಿತರನ್ನು ಕೇಳಿ!
+    ಇಡೀ ಪ್ರಪಂಚವು ಕಲಿಯಬೇಕೆಂದು ನಾವು ಬಯಸುತ್ತೇವೆ.
   imagine_cup_junior: ಕಪ್ ಜ್ಯೂನಿಯರ್ ಊಹಿಸಿ
   imagine_cup_junior_tile_description: ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನ ಎಐ ಫಾರ್ ಗುಡ್ ಉಪಕ್ರಮಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
     ಈ ಜಾಗತಿಕ ಎಐ ಫಾರ್ ಗುಡ್ ಸವಾಲು ಪರಿಚಯಿಸುತ್ತದೆ ಮತ್ತು ಎಐ ಪವರ್‌ ಮೂಲಕ ವಿಶ್ವದಲ್ಲಿನ ಸಮಸ್ಯೆಗಳನ್ನು
     ಪರಿಹರಿಸಲು ಅವರನ್ನು ಸಬಲವಾಗಿಸುತ್ತದೆ.
-  ai_activity: ಚಟುವಟಿಕೆ
-  ai_description: ವಿವರಣೆ
-  ai_seeing_ai: ಎಐ ನೋಡುವುದು
-  ai_seeing_ai_description: ನಿಮ್ಮ ಸುತ್ತಲಿನ ವಿಶ್ವವನ್ನು ವಿವಿಧ ಭಾಷೆಗಳಲ್ಲಿ ಹೇಳುವ ಒಂದು
-    ಉಚಿತ ಆಪ್‌.
-  ai_quick_draw: ತ್ವರಿತ, ಡ್ರಾ!
-  ai_quick_draw_description: ಡೂಡ್ಲಿಂಗ್‌ ಅನ್ನು ನ್ಯೂರಲ್‌ ನೆಟ್‌ವರ್ಕ್‌ ಗುರುತಿಸಲು ಕಲಿಯಬಹುದೇ?
-  ai_teachable_machine: ಬೋಧಿಸಬಹುದಾದ ಮಶಿನ್
-  ai_teachable_machine_description: ನಿಮ್ಮದೇ ಚಿತ್ರಗಳು, ಧ್ವನಿಗಳು ಮತ್ತು ಪೋಸ್‌ಗಳನ್ನು ಗುರುತಿಸಲು
-    ಕಂಪ್ಯೂಟರ್‌ಗೆ ತರಬೇತಿ ನೀಡಿ.
-  ai_google: ಗೂಗಲ್‌ನೊಂದಿಗೆ ಎಐ ಪ್ರಯೋಗಗಳು
-  ai_google_description: ಚಿತ್ರಗಳು, ಡ್ರಾಯಿಂಗ್‌ಗಳು, ಭಾಷೆ, ಸಂಗೀತ ಮತ್ತು ಇನ್ನಷ್ಟರ ಮೂಲಕ
-    ಮಶಿನ್‌ ಲರ್ನಿಂಗ್ ಅನ್ನು ಅನಾವರಣಗೊಳಿಸಲು ಆರಂಭಿಸಿ.
-  ai_zooniverse: ಝೂನಿವರ್ಸ್‌ - ಸ್ನಾಪ್‌ಶಾಟ್ ಮೌಂಟೇನ್‌ ಝೆಬ್ರಾ
-  ai_zooniverse_description: ಚಿತ್ರಗಳಲ್ಲಿ ವಿಭಿನ್ನ ಪ್ರಾಣಿಗಳನ್ನು ಗುರುತಿಸುವ ಮೂಲಕ ಅಳಿವಿನಂಚಿನಲ್ಲಿರುವ
-    ಕೇಪ್ ಮೌಂಟೇನ್ ಝೆಬ್ರಾ ರಕ್ಷಿಸಲು ಸಹಾಯ ಮಾಡಿ.
-  ai_audience: ಪ್ರೇಕ್ಷಕರು
-  ai_minecraft_description: 'ಪಠ್ಯ ಯೋಜನೆ, ವೀಡಿಯೋಗಳು, ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಪಠ್ಯಕ್ರಮ ಮತ್ತು
-    ಶಿಕ್ಷಕರ ತರಬೇತಿಗಳನ್ನೂ ಒಳಗೊಂಡು ಉಚಿತ ಸಂಪನ್ಮೂಲಗ ಪ್ರವೇಶಾವಕಾಶ. (ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಎಜುಕೇಶನ್
-    ಎಡಿಶನ್ ಅಗತ್ಯವಿದೆ)'
-  ai_k_12_audience: ಕೆ-12 (ಓದುವಿಕೆ ಅಗತ್ಯವಿದೆ)
-  ai_microsoft_workshop: ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನಿಂದ ಉಚಿತ ವರ್ಚುವಲ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಳು
-  ai_microsoft_workshop_description: ಉಚಿತ ಸ್ಟೆಮ್ ಮತ್ತು ಕೋಡಿಂಗ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಳ ಮೂಲಕ
-    ಕುತೂಹಲವನ್ನು ಮೂಡಿಸಿ.
-  ai_machine_learning_for_kids: ಮಕ್ಕಳಿಗಾಗಿ ಮಶಿನ್ ಲರ್ನಿಂಗ್‌
-  ai_machine_learning_for_kids_description: ಪಠ್ಯ, ಸಂಖ್ಯೆಗಳು ಅಥವಾ ಚಿತ್ರಗಳೊಂದಿಗೆ ಮಶಿನ್‌
-    ಲರ್ನಿಂಗ್‌ ಮಾಡೆಲ್‌ಗೆ ತರಬೇತಿ ನೀಡಿ ಮತ್ತು ಸ್ಕ್ರಾಚ್‌ನಲ್ಲಿ ಗೇಮ್ಸ್‌ ಮಾಡಲು ಇದನ್ನು ಬಳಸಿ.
-  ai_ibm_machine_learning_for_kids: 'ಐಬಿಎಂ: ಮಕ್ಕಳಿಗಾಗಿ ಮಶಿನ್ ಲರ್ನಿಂಗ್‌'
-  ai_ecs: 'ಇಸಿಎಸ್‌: ಆರ್ಟಿಫಿಶಿಯಲ್ ಇಂಟಲಿಜೆನ್ಸ್‌ (ಎಐ)'
-  ai_ecs_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನಾವರಣಗೊಳಿಸಲು (ಇಸಿಎಸ್‌) ಪಠ್ಯಕ್ರಮಕ್ಕೆ ಹೊಸ ಪರ್ಯಾಯ
-    ಪಠ್ಯಕ್ರಮ ಘಟಕ.
-  ai_elements: ಎಐ ಅಂಶಗಳು
-  ai_elements_description: ರಿಯಾಕ್ಟರ್ ಮತ್ತು ಯುನಿವರ್ಸಿಟಿ ಆಫ್‌ ಹೆಲ್ಸಿಂಕಿ ರಚಿಸಿದ ಉಚಿತ
-    ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳ ಸರಣಿ.
-  ai_cognimates: ಕಾಗ್ನಿಮೇಟ್ಸ್
-  ai_cognimates_description: ಗೇಮ್ಸ್ ಬಿಲ್ಡ್‌ ಮಾಡುವುದು, ರೋಬೋಟ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡುವುದು
-    ಮತ್ತು ತರಬೇತಿಗಾಗಿ ಎಐ ಎಜುಕೇಶನ್‌ ಪ್ಲಾಟ್‌ಫಾರಂ.
-  ai_try_activity: ಚಟುವಟಿಕೆ ಪ್ರಯತ್ನಿಸಿ
-  outbreak_tile_title: ಹರಡುವಿಕೆ
+  infinity_gradelevel: ವಯಸ್ಸು 6-14
+  infinity_name: ಇನ್‌ಫಿನಿಟಿ ಪ್ಲೇ ಲ್ಯಾಬ್
+  infinity_shortdescription: ಡಿಸ್ನೆ ಇನ್‌ಫಿನಿಟಿ ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಲು
+    ಪ್ಲೇ ಲ್ಯಾಬ್ ಬಳಸಿ.
+  just_did_accelerated: ನಾನು ಈಗಷ್ಟೇ ವರ್ಧಿತ ಕೋರ್ಸ್ ಅನ್ನು ಮುಗಿಸಿದ್ದೇನೆ - ಪರಿಶೀಲಿಸಿ!
+    @codeorg
+  just_did_hoc: 'ನಾನು #HourOfCode ಮಾಡಿದ್ದೇನೆ - ಅದನ್ನು ಪರಿಶೀಲಿಸಿ! @codeorg'
+  kidsruby_beyond_gradelevel: ವಯಸ್ಸು 12+
+  kodable_beyond_gradelevel: ಪ್ರಾಥಮಿಕ
+  kodable_gradelevel: ಪ್ರಾಥಮಿಕ
+  kodableunplugged_gradelevel: ವಯಸ್ಸು 8-13
+  leaderboards_for_hoc: ಕೋಡ್ನ ಅವರ್ಗಾಗಿ ಲೀಡರ್ಬೋರ್ಡ್ಗಳು.
+  learn_classes: ಸ್ಥಳೀಯ ತರಗತಿಗಳನ್ನು ಹುಡುಕಿ
+  learn_cs_concepts: ಡ್ರ್ಯಾಗ್ ಮತ್ತು ಡ್ರಾಪ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ನೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ನ
+    ಮೂಲ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ತಿಳಿಯಿರಿ. ಇದು ಬಿಲ್ ಗೇಟ್ಸ್, ಮಾರ್ಕ್ ಜುಕರ್ಬರ್ಗ್, ಆಂಗ್ರಿ ಬರ್ಡ್ಸ್
+    ಮತ್ತು ಪ್ಲಾಂಟ್ಸ್ ವರ್ಸಸ್ ಜೋಂಬಿಸ್ ಅವರ ಆಟದಂತಹ ಟ್ಯುಟೋರಿಯಲ್ ವೀಡಿಯೋ ಉಪನ್ಯಾಸಗಳನ್ನು ಹೊಂದಿದೆ.
+    ಪುನರಾವರ್ತನೆ-ಕುಣಿಕೆಗಳು, ನಂತರ ಹೇಳಿಕೆಗಳು ಮತ್ತು ಮೂಲ ಕ್ರಮಾವಳಿಗಳನ್ನು ಕಲಿಯಿರಿ.
+  learn_hoc: ಕೋಡ್ ಒಂದು ಗಂಟೆ ತಿಳಿಯಿರಿ
+  learn_more: ಈಗ ಪ್ರಯತ್ನಿಸಿ
+  learn_next_level: ಮತ್ತೊಂದು Code.org ಕೋರ್ಸ್ ಪ್ರಯತ್ನಿಸಿ
+  learn_now: ಈಗ ಕಲಿಯಿರಿ
+  learn_online: ಇತರ ಕೋರ್ಸ್ಗಳನ್ನು ಆನ್ಲೈನ್ನಲ್ಲಿ ಪ್ರಯತ್ನಿಸಿ
+  learn_sign_up_button: ಸೈನ್ ಅಪ್ ಮಾಡಿ
+  lightbot_beyond_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  lightbot_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  lightbotintl_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  lines_of_code: ಓವರ್ <b># ಕೋಡ್</b> ರ ಸಾಲುಗಳು ದಿನಾಂಕಕ್ಕೆ ಬರೆಯಲಾಗಿದೆ.
+  lines_of_code_alt: "<b>#</b> ವಿದ್ಯಾರ್ಥಿಗಳು ಬರೆದ ಕೋಡ್ನ ಸಾಲುಗಳು"
+  makeschool_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
+  makeschool_gradelevel: ಹೈಸ್ಕೂಲ್
+  mc_gradelevel: ವಯಸ್ಸು 6-106
+  mc_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
+  minecraft_adventurer_button: ಪ್ರಾರಂಭಿಸಿ
+  minecraft_agent_button: ಪ್ರಾರಂಭಿಸಿ
+  minecraft_designer_button: ಪ್ರಾರಂಭಿಸಿ
+  minecraft_designer_description: ನಿಮ್ಮ ಸ್ವಂತ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು
+    ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಜೀವಿಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ.
+  minecraft_download_adventurer: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅಡ್ವೆಂಚರರ್‌ನ ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು
+    ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.
+  minecraft_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
+  minecraft_no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
+  minecraft_og_agent: ಅವರ್ ಆಫ್‌ ಕೋಡ್‌ಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ವಾಪಸಾಗಿದೆ ಹಾಗೂ ನೀವು ಹೀರೋ ಆಗಿದ್ದೀರಿ!
+    ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಬಯೋಮ್ಸ್‌ ಮೂಲಕ ಪಯಣಿಸಲು ಕೋಡ್ ಬರೆಯಿರಿ.
+  minecraft_og_designer: ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ಗೆ ಹೊಸ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ವಾಪಸಾಗಿದೆ.
+    ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ನ ನಿಮ್ಮದೇ ಆವೃತ್ತಿಯಲ್ಲಿ ಪ್ರಾಣಿಗಳು ಮತ್ತು ಇತರ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಕ್ರಿಯೇಚರ್‌ಗಳನ್ನು
+    ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಿ.
+  minecraft_subtitle: ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್
+  minecraft_tile_alt: ಎರಡು Minecraft ಪಾತ್ರಗಳು, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸ್, ಹವಳ, ಡಾಲ್ಫಿನ್‌ಗಳು
+    ಮತ್ತು ಕೆಲ್ಪ್‌ನೊಂದಿಗೆ ಜಲವಾಸಿ Minecraft ದೃಶ್ಯವನ್ನು ತೋರಿಸುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ
+  minecraft_tutorials: ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು
+  monstercoding_gradelevel: ವಯಸ್ಸು 5-13
+  mozilla_beyond_gradelevel: ವಯಸ್ಸು 12+
+  n_participants: "# ಭಾಗವಹಿಸುವವರು"
+  name: ಹೆಸರು
+  never_spam: ನಾವು ನಿಮ್ಮನ್ನು ಎಂದಿಗೂ ಸ್ಪ್ಯಾಮ್ ಮಾಡುವುದಿಲ್ಲ
+  'no': ಇಲ್ಲ
+  no_internet: ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?
+  non_english_tutorials: 'ಟ್ಯುಟೋರಿಯಲ್ ಬಹು ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸಲಾಗಿದೆ:'
+  og_title: 'Code.org: ಯಾರಾದರೂ ಕಲಿಯಬಹುದು'
   outbreak_tile_subtitle: ಮಾನ್‌‌ಸ್ಟರ್‌ ಟೌನ್‌ಗೆ ವೈರಸ್ ಸೋಂಕು ತಗುಲಿದೆ! ಸೋಂಕಿನ ಕುರಿತು
     ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ ಮತ್ತು ಮಾನಸ್ಟರ್ ಟೌನ್‌ನ ನೆರೆಹೊರೆಯವರಿಗೆ ಏನಾಗುತ್ತದೆ ಎಂಬುದರ
     ಕುರಿತು ತಿಳಿಸಿ.
+  outbreak_tile_title: ಹರಡುವಿಕೆ
+  participant_educator: ಶಿಕ್ಷಕ
+  participant_engineer: ಸಾಫ್ಟ್ವೇರ್ ಇಂಜಿನಿಯರ್
+  participant_other: ಮೇಲಿನ ಯಾವುದೂ
+  participant_parent: ಪೋಷಕರು
+  participant_select: "- ಆಯ್ಕೆಮಾಡಿ -"
+  participant_student: ವಿದ್ಯಾರ್ಥಿ
+  personalize_certificate: ನಿಮ್ಮ ಪ್ರಮಾಣಪತ್ರವನ್ನು ವೈಯಕ್ತೀಕರಿಸಿ
+  petition_age: ವಯಸ್ಸು
+  petition_join_others: 'ಸೇರಲು # ಇತರರು'
+  petition_message: ಪ್ರತಿ ಶಾಲೆಯಲ್ಲಿರುವ ಪ್ರತಿಯೊಬ್ಬ ವಿದ್ಯಾರ್ಥಿಗೂ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು
+    ಕಲಿಯುವ ಅವಕಾಶವಿರಬೇಕು
+  petition_sign_message: 'ನೀವು ಒಪ್ಪಿದರೆ, ನಿಮ್ಮ ಹೆಸರಿಗೆ ಸಹಿ ಮಾಡಿ ಮತ್ತು # ಇತರರೊಂದಿಗೆ
+    ನಮ್ಮ ಮೇಲಿಂಗ್ ಪಟ್ಟಿಗೆ ಸೇರಿಕೊಳ್ಳಿ.'
+  petition_thankyou: ಅರ್ಜಿಗೆ ಸಹಿ ಹಾಕಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು
+  playlab_gradelevel: ವಯಸ್ಸು 6-14
+  playlab_longdescription: ಸ್ಟೋರಿ ರಚಿಸಿ ಅಥವಾ ಪ್ಲೇ ಲ್ಯಾಬ್‌ ಜೊತೆಗೆ ಒಂದು ಗೇಮ್ ಮಾಡಿ! ಪ್ರಾಣಿಗಳು,
+    ಪೈರೇಟ್‌ಗಳು, ಝೊಂಬೀಗಳು, ನಿಂಜಾಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು ಹಲವು ಅಕ್ಷರಗಳನ್ನು ಚಲಿಸುವಂತೆ ಮಾಡಿ,
+    ಧ್ವನಿ ಹೊರಡಿಸಿ, ಪಾಯಿಂಟ್‌ಗಳನ್ನು ಸ್ಕೋರ್ ಮಾಡಿ ಮತ್ತು ಫೈರ್‌ಬಾಲ್‌ಗಳನ್ನೂ ಥ್ರೋ ಮಾಡಿ!
+  playlab_name: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
+  pre-express-2018_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2018)
+  pre-express-2019_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2019)
+  pre-express-2020_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2020)
+  pre-express_name: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್
+  print_ice_art_from_frozen: ಫ್ರೋಜನ್ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳಿಂದ ಐಸ್ ಆರ್ಟ್ ಪ್ರಿಂಟ್ ಮಾಡಿ
+  privacy_practices_children: ಮಕ್ಕಳಿಗೆ ನಮ್ಮ ಗೌಪ್ಯತೆ ಅಭ್ಯಾಸಗಳನ್ನು ನೋಡಿ
+  processing_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
+  processing_gradelevel: ಹೈಸ್ಕೂಲ್
+  projguts_gradelevel: ವಯಸ್ಸು 10-13
+  robomind_beyond_gradelevel: ವಯಸ್ಸು 8-13
+  robomind_gradelevel: ವಯಸ್ಸು 8-13
+  robomindnl_gradelevel: ವಯಸ್ಸು 8-13
+  scratchjr_beyond_gradelevel: ಪ್ರಾಥಮಿಕ
+  select_language: ದಯವಿಟ್ಟು ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ
+  share_achievement: ನಿಮ್ಮ ಸಾಧನೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ
+  share_on_facebook: ಫೇಸ್ಬುಕ್ ಮೇಲೆ ಹಂಚಿಕೊಳ್ಳಿ
+  share_on_twitter: ಟ್ವಿಟರ್ ನಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ
+  sports_athletes_title: ಫೀಚರ್ಡ್‌ ಅಥ್ಲೀಟ್‌ಗಳು
+  sports_basketball_title: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
+  sports_featured_athletes: ಫೀಚರ್ಡ್‌ ಅಥ್ಲೀಟ್‌ಗಳನ್ನು ನೋಡಿ
+  sports_og_title: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
+  sports_page_title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಸ್ಪೋರ್ಟ್ಸ್
+  sports_select_theme: ನಿಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್ ಥೀಮ್‌ ಆಯ್ಕೆ ಮಾಡಿ
+  sports_video_title: ನಿಮ್ಮ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ. ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಿರಿ.
+  start_hoc: ಈಗ ಕೋಡ್ ಅವರ್ ಪ್ರಾರಂಭಿಸಿ
+  starwars_blocks_description: ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಬಳಸಿ.
+  starwars_blocks_specs: ಹಲವು ಭಾಷೆಗಳು | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು, ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ಗಳು, ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು
+    | ವಯಸ್ಸು 6 -106
+  starwars_blocks_title: ಬ್ಲಾಕ್‌ಗಳು
+  starwars_gradelevel: ವಯಸ್ಸು 6-106
+  starwars_javascript_description: ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌
+    ಬಳಸಿ.
+  starwars_javascript_specs: ಇಂಗ್ಲಿಷ್ ಮಾತ್ರ | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು | ವಯಸ್ಸು 11+
+  starwars_javascript_title: ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌
+  starwars_longdescription: ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ
+    ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ.
+  starwars_name: 'ಸ್ಟಾರ್‌ ವಾರ್ಸ್‌: ಕೋಡ್ ಬಳಸಿ ಗ್ಯಾಲಾಕ್ಸಿ ನಿರ್ಮಿಸುವುದು'
+  starwars_shortdescription: ಡ್ರಾಯ್ಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ದೂರದ
+    ಗ್ಯಾಲಾಕ್ಸಿಯಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್‌ ವಾರ್ಸ್ ಗೇಮ್‌ ರಚಿಸಿ.
+  starwars_subtitle: ಕೋಡ್ ಸಹಿತ ಗ್ಯಾಲಾಕ್ಸಿ ನಿರ್ಮಿಸುವುದು
+  starwarsblocks_name: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
+  stats_hoc_2013_heading: 'ಕಳೆದ ವರ್ಷದ ಅವರ್ ಆಫ್ ಕೋಡ್ನಿಂದ ನಂಬಲಾಗದ ಅಂಕಿಅಂಶಗಳು. ಒಂದು ವಾರದಲ್ಲಿ
+    ಮಾತ್ರ:'
+  stats_hoc_2013_image_alt: 2013 ಅವರ್ ಆಫ್ ಕೋಡ್ ನಿಂದ ಅಂಕಿಅಂಶಗಳು
+  students_and_lines: "%{students} ವಿದ್ಯಾರ್ಥಿಗಳು ಕೋಡ್ ಅವರ್ ಮಾಡಿದ ಮತ್ತು ಬರೆದಿದ್ದಾರೆ
+    %{lines} ಕೋಡ್ ಸಾಲುಗಳನ್ನು."
+  studiobar_dance_title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+  studiobar_elementary_body: ಕೆ&#8209;5 ಗಾಗಿ ನಮ್ಮ ಮೂರು ಹೊಸ ಕೋರ್ಸ್ಗಳು
+  studiobar_elementary_title: ಪ್ರಾಥಮಿಕ ಶಿಕ್ಷಣ
+  studiobar_flappy_body: ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ವಂತ Flappy ಆಟದ ಹಂಚಿಕೊಳ್ಳಿ
+  studiobar_flappy_title: ಫ್ಲಾಪಿ ಕೋಡ್
+  studiobar_frozen_body: ಆನಾ ಮತ್ತು ಎಲ್ಸಾಸಹಿತ ವಿಂಟರ್ ವಂಡರ್‌ಲ್ಯಾಂಡ್‌ ರಚಿಸಿ
+  studiobar_frozen_title: ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  studiobar_hoc_body: ಆಂಗ್ರಿ ಬರ್ಡ್ಸ್ ಕೋಡ್ ತಿಳಿಯಿರಿ
+  studiobar_hoc_title: ಕೋಡ್ ಗಂಟೆ
+  studiobar_teacher_body: ನಿಮ್ಮ ತರಗತಿಯಲ್ಲಿ Code.org ಅನ್ನು ಪರಿಚಯಿಸಿ
+  studiobar_teacher_title: ಶಿಕ್ಷಕರಿಗೆ ಮಾಡಿದ
+  submit: ಸಲ್ಲಿಸಿ
+  support_url: http://support.code.org/
+  tell_the_world: ಜಗತ್ತಿಗೆ ಹೇಳಿ!
+  texasinstruments_gradelevel: ವಯಸ್ಸು 13-16
+  text-compression_name: ಪಠ್ಯ ಕಂಪ್ರೆಶನ್
+  thank_you_: ಧನ್ಯವಾದಗಳು!
+  thanks_for_submitting: ಸಲ್ಲಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು!
+  thanks_for_voting: ಮತದಾನಕ್ಕೆ ಧನ್ಯವಾದಗಳು!
+  thinkersmith_gradelevel: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
+  third_party_gradelevel_2to8: ಗ್ರೇಡ್‌ 2-8
+  third_party_gradelevel_4to12: ಗ್ರೇಡ್‌ 4-12
+  third_party_gradelevel_6plus: ಗ್ರೇಡ್‌ 6+
+  third_party_gradelevel_kto2: ಗ್ರೇಡ್‌ ಕೆ-2
+  third_party_gradelevel_kto8: ಗ್ರೇಡ್‌ ಕೆ-8
   top_hoc_tutorial_applab_alt_text: ನೀಲಿ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ನಕ್ಷತ್ರಗಳು ಮತ್ತು ಬೆಳಕಿನ ಕಿರಣಗಳನ್ನು
     ಹೊರಸೂಸುವ ಟಚ್ ಸ್ಕ್ರೀನ್ ಟ್ಯಾಬ್ಲೆಟ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸುವ ತೋರು ಬೆರಳನ್ನು ಹೊಂದಿರುವ ಕಂದು
     ಕೈ
-  minecraft_tile_alt: ಎರಡು Minecraft ಪಾತ್ರಗಳು, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸ್, ಹವಳ, ಡಾಲ್ಫಿನ್‌ಗಳು
-    ಮತ್ತು ಕೆಲ್ಪ್‌ನೊಂದಿಗೆ ಜಲವಾಸಿ Minecraft ದೃಶ್ಯವನ್ನು ತೋರಿಸುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ
-  hoc2022_banner_title: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
-  hoc2022_banner_description: ಬ್ರಹ್ಮಾಂಡವನ್ನು ಅನ್ವೇಷಿಸಿ, ಗೋಲ್ ಮಾಡಿ, ನಡೆಯನ್ನು ವಿಜ್ರಂಭಿಸಿ
-    - ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನ್ನು ಪ್ರಯೋಗಿಸಲು ಹಲವು ವಿಧಾನಗಳಿವೆ!
-  hoc2022_cta_primary: ಹೊಸದೇನಿದೆ ಎಂದು ನೋಡಿ
-  hoc2022_cta_secondary: ಇನ್ನಷ್ಟು ಚಟುವಟಿಕೆಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ
-  hoc2022_landing_page_explore_title: ಅನ್ವೇಷಿಸಿ
-  hoc2022_landing_page_explore_description: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನೊಂದಿಗೆ ಹೊಸ ಜಗತ್ತುಗಳಿಗೆ
-    ಬಾಗಿಲುಗಳನ್ನು ತೆರೆಯಿರಿ!
-  hoc2022_landing_page_play_description: ಕ್ಷೇತ್ರಕ್ಕಿಳಿಯಿರಿ ಮತ್ತು ಸ್ಕೋರ್ ಮಾಡಿ!
-  hoc2022_landing_page_create_title: ರಚಿಸಿ
-  hoc2022_landing_page_create_description: ವಿಚಿತ್ರವಾದ್ದನ್ನು ಮತ್ತು ಅದ್ಭುತವಾದ್ದನ್ನು
-    ರಚಿಸಿ!
-  hoc2022_landing_page_banner_alt_left: ಬಾಹ್ಯಾಕಾಶದಲ್ಲಿ ಶನಿಯ ಪಕ್ಕದಲ್ಲಿ ಏಲಿಯನ್‌ ನೃತ್ಯ
-  hoc2022_landing_page_banner_alt_right: ರಾಕೆಟ್ ಟೇಕ್ ಆಫ್ ಮುಂದೆ ಬಾಹ್ಯಾಕಾಶದಲ್ಲಿ ಸಾಕರ್
-    ಚೆಂಡನ್ನು ಡ್ರಿಬ್ಲಿಂಗ್ ಮಾಡುವ ರೋಬೋಟ್
+  touchdevelop_beyond_gradelevel: ಹೈಸ್ಕೂಲ್
+  touchdevelop_gradelevel: ಹೈಸ್ಕೂಲ್
   try_it_yourself: ನೀವೆ ಮಾಡಿನೋಡಿ!
+  try_now: ಈಗ ಪ್ರಯತ್ನಿಸಿ
+  twentyhours_heading: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕೋರ್ಸ್ಗೆ ನಮ್ಮ ಪರಿಚಯ ಪ್ರಯತ್ನಿಸಿ
+  twentyhours_text: ಕೋಡ್ ನಿಮ್ಮ ಮೊದಲ ಅವರ್ ಮುಕ್ತಾಯಗೊಂಡ? ಈ ಅನುಸರಣಾ ಕೋರ್ಸ್ನಲ್ಲಿ ಇನ್ನಷ್ಟು
+    ಕೋರ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು ತಿಳಿಯಿರಿ.
+  tynker_beyond_gradelevel: ವಯಸ್ಸು 5-13
+  tynker_gradelevel: ವಯಸ್ಸು 5-13
+  tynkerapp_gradelevel: ವಯಸ್ಸು 5-13
+  upgrade_ie_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  upgrade_ie_message: Code.org ಶೀಘ್ರದಲ್ಲೇ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸ್ಪ್ಲೋರರ್ 8, 9, ಮತ್ತು 10 ಗೆ
+    ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
+  upgrade_ie_message_csedweek: CSEDweek.org ಶೀಘ್ರದಲ್ಲೇ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸ್ಪ್ಲೋರರ್ 8, 9,
+    ಮತ್ತು 10 ಗೆ ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
+  used_infrequent_updates: ಅಪರೂಪದ ನವೀಕರಣಗಳಿಗಾಗಿ ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ
+  user_header_artist: ಆರ್ಟಿಸ್ಟ್
+  user_header_dance: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+  user_header_flappy: ಫ್ಲಾಪಿ
+  user_header_gamelab: ಗೇಮ್ ಲ್ಯಾಬ್
+  user_header_label: ಹಾಯ್ %{username}
+  user_header_logout: ಸೈನ್ ಔಟ್
+  user_header_minecraft: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
+  user_header_playlab: ಲ್ಯಾಬ್ ಪ್ಲೇ ಮಾಡಿ
+  user_header_settings: ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು
+  user_header_signin: ಸೈನ್ ಇನ್
+  user_header_team: ತಂಡ
+  user_header_view_my_projects: ನನ್ನ ಯೋಜನೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ
+  video_title_anybody_can_learn: ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
+  video_title_cs_intro: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪರಿಚಯ
+  video_title_cs_is_everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
+  video_title_hoc_is_here: ಅವರ್ ಆಫ್ ಕೋಡ್ ಇಲ್ಲಿದೆ - ಯಾರು ಬೇಕಾದರೂ ಕಲಿಯಬಹುದು
+  video_title_inspire_girl: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
+  video_title_my_name_is_aracely: ನನ್ನ ಹೆಸರು ಅರ್ಸೆಲಿ
+  video_title_obama: ಕಂಪ್ಯೂಟರ್‌ ಸೈನ್ಸ್‌ ಕುರಿತು ಅಧ್ಯಕ್ಷ ಒಬಾಮಾ
+  video_title_schools_dont_teach: ಬಹುತೇಕ ಶಾಲೆಗಳು ಬೋಧಿಸದೇ ಇರುವುದು
+  video_title_steph_curry: ಸ್ಟೆಪ್‌ ಕರ್‍ರಿ ಜೊತೆಗೆ ಅವರ್ ಆಫ್‌ ಕೋಡ್
+  videos_more: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳನ್ನು ಒಳಗೊಂಡ ಇನ್ನಷ್ಟು <a href='%{inspiring_videos_playlist}'>ಸ್ಫೂರ್ತಿದಾಯಕ
+    ವೀಡಿಯೋಗಳು</a>
+  videos_more_markdown: ರೋಲ್ ಮಾಡೆಲ್‌ಗಳು ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳ ಇನ್ನಷ್ಟು [ಸ್ಫೂರ್ತಿದಾಯಕ
+    ವೀಡಿಯೋಗಳು](%{inspiring_videos_playlist})
+  view_all_sections: ಎಲ್ಲಾ ವಿಭಾಗಗಳು
+  view_course: ಕೋರ್ಸ್‌ ವೀಕ್ಷಿಸಿ
+  view_english_site: ಇಂಗ್ಲೀಷ್ ಸೈಟ್ ವೀಕ್ಷಿಸಿ
+  view_lesson_plan: ಪಠ್ಯ ಯೋಜನೆ ನೋಡಿ
+  view_resources: ಸಂಪನ್ಮೂಲಗಳನ್ನು ನೋಡಿ
+  volunteer_engineer_submission_commitment_five_hrs_per_week: ವಾರಕ್ಕೆ 5 ಗಂಟೆಗಳ
+  volunteer_engineer_submission_commitment_more: ಇನ್ನಷ್ಟು
+  volunteer_engineer_submission_commitment_now_and_then: ಪ್ರತಿ ಈಗ ತದನಂತರ
+  volunteer_engineer_submission_commitment_one_hr_per_week: ವಾರಕ್ಕೆ 1 ಗಂಟೆ
+  volunteer_engineer_submission_commitment_three_hrs_per_week: ವಾರಕ್ಕೆ 3 ಗಂಟೆಗಳ
+  volunteer_engineer_submission_commitment_uncertain: ಅನಿಶ್ಚಿತ
+  volunteer_engineer_submission_experience_software_professional: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರ್
+    ಅಥವಾ ತಾಂತ್ರಿಕ ತಜ್ಞ
+  volunteer_engineer_submission_experience_university_student_or_researcher: ವಿಶ್ವವಿದ್ಯಾಲಯ
+    ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ವಿದ್ಯಾರ್ಥಿ
+  volunteer_engineer_submission_experience_unspecified: ನಿರ್ದಿಷ್ಟಪಡಿಸದ
+  volunteer_engineer_submission_field_description: ವಿವರಣೆ
+  volunteer_engineer_submission_field_email: ಇಮೇಲ್ ವಿಳಾಸ
+  volunteer_engineer_submission_field_email_placeholder: ಇಮೇಲ್ ವಿಳಾಸ
+  volunteer_engineer_submission_field_email_preference_no: ಇಲ್ಲ
+  volunteer_engineer_submission_field_email_preference_privacy: "(ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು
+    ನೋಡಿ)"
+  volunteer_engineer_submission_field_email_preference_yes: ಹೌದು
+  volunteer_engineer_submission_field_name: ಹೆಸರು
+  volunteer_engineer_submission_location_flexibility_curriculum: ತೆರೆದ ಮೂಲ ಪಠ್ಯಕ್ರಮ
+    ಯೋಜನೆಗಳಿಗೆ ಕೊಡುಗೆ
+  volunteer_engineer_submission_location_flexibility_onsite: ಶಾಲೆಯಲ್ಲಿ ಆನ್-ಸೈಟ್ಗೆ
+    ಭೇಟಿ ನೀಡಿ (1-2 ಗಂಟೆಗಳು ತರಗತಿಯಲ್ಲಿ ಅಥವಾ ಶಾಲಾ ಅಸೆಂಬ್ಲಿಯಲ್ಲಿ)
+  volunteer_engineer_submission_location_flexibility_remote: ದೂರದಿಂದಲೇ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ
+    ಪ್ರಶ್ನೋತ್ತರ (ಕಿರು ವಿಡಿಯೋ ಕಾನ್ಫರೆನ್ಸ್ ಮೂಲಕ)
+  volunteer_engineer_submission_submit: ಸಲ್ಲಿಸಿ
+  w3schools_beyond_gradelevel: ವಯಸ್ಸು 12+
+  watch_inspirational_videos: ನೀವು ಆರಂಭಿಸುವುದಕ್ಕೂ ಮೊದಲು, ಈ ಒಂದು ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೋಗಳನ್ನು
+    ವೀಕ್ಷಿಸಿ
+  watch_the_videos: ವೀಡಿಯೋಗಳನ್ನು ವೀಕ್ಷಿಸಿ
+  what_gender: ನೀವು ಯಾವ ಲಿಂಗ?
+  who_has_done_hoc: 'ಯಾರು #HourOfCode ಮಾಡಿದ್ದಾರೆ? @codeorg'
+  write_your_first_program: ನಿಮ್ಮ ಮೊದಲ ಕಂಪ್ಯೂಟರ್ ಪ್ರೋಗ್ರಾಮ್‌ ಬರೆಯಿರಿ
+  'yes': ಹೌದು
+  zipcode: ZIP ಕೋಡ್ ಅಥವಾ ದೇಶದ

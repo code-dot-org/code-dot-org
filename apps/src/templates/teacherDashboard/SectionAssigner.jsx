@@ -16,7 +16,7 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
-    isOnCoursePage: PropTypes.bool,
+    isAssigningCourse: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux provided
@@ -55,7 +55,7 @@ class SectionAssigner extends Component {
       selectedSectionId,
       forceReload,
       assignmentName,
-      isOnCoursePage,
+      isAssigningCourse,
       isStandAloneUnit,
       participantAudience,
     } = this.props;
@@ -91,7 +91,7 @@ class SectionAssigner extends Component {
               assignmentName={assignmentName}
               sectionName={selectedSection.name}
               reassignConfirm={this.onReassignConfirm}
-              isOnCoursePage={isOnCoursePage}
+              isAssigningCourse={isAssigningCourse}
               isStandAloneUnit={isStandAloneUnit}
               participantAudience={participantAudience}
             />

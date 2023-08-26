@@ -54,10 +54,11 @@ class SingleSignOn
     decoded = Base64.decode64(parsed["sso"])
     decoded_hash = Rack::Utils.parse_query(decoded)
 
+    valid_bool_values = %w(true false)
     ACCESSORS.each do |k|
       val = decoded_hash[k.to_s]
       if BOOLS.include? k
-        val = ["true", "false"].include?(val) ? val == "true" : nil
+        val = valid_bool_values.include?(val) ? val == "true" : nil
       end
       sso.send("#{k}=", val)
     end

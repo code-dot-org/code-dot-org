@@ -1,115 +1,101 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
+
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
-class MultipleSectionsAssigner extends Component {
-  static propTypes = {
-    courseId: PropTypes.number,
-    assignmentName: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    forceReload: PropTypes.bool,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
-    scriptId: PropTypes.number,
-    reassignConfirm: PropTypes.func,
-    isOnCoursePage: PropTypes.bool,
-    isStandAloneUnit: PropTypes.bool,
-    participantAudience: PropTypes.string,
-    // Redux
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    unassignSection: PropTypes.func.isRequired,
-    assignToSection: PropTypes.func.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.number,
-  };
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
-  constructor(props) {
-    super(props);
+import moduleStyle from './multiple-sections-assigner.module.scss';
 
-    let initialSectionsAssignedToCourseList = [];
+const MultipleSectionsAssigner = ({
+  courseId,
+  assignmentName,
+  onClose,
+  courseOfferingId,
+  courseVersionId,
+  scriptId,
+  reassignConfirm = () => {},
+  isAssigningCourse,
+  isStandAloneUnit,
+  participantAudience,
+  onAssignSuccess,
+  sectionDirections = i18n.chooseSectionsDirections(),
+  // Redux
+  sections,
+  unassignSection,
+  assignToSection,
+  updateHiddenScript,
+}) => {
+  let initialSectionsAssigned = [];
 
-    // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-    if (!this.props.isOnCoursePage) {
-      if (this.props.isStandAloneUnit) {
-        for (let i = 0; i < this.props.sections.length; i++) {
-          if (
-            this.props.courseVersionId ===
-            this.props.sections[i].courseVersionId
-          ) {
-            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
-          }
-        }
-      } else {
-        for (let i = 0; i < this.props.sections.length; i++) {
-          if (this.props.scriptId === this.props.sections[i].unitId) {
-            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
-          }
+  // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
+  if (!isAssigningCourse) {
+    if (isStandAloneUnit) {
+      for (let i = 0; i < sections.length; i++) {
+        if (courseVersionId === sections[i].courseVersionId) {
+          initialSectionsAssigned.push(sections[i]);
         }
       }
-    } else if (this.props.isOnCoursePage) {
-      // checks to see if this is coming from the COURSE landing page
-      for (let i = 0; i < this.props.sections.length; i++) {
-        if (this.props.courseId === this.props.sections[i].courseId) {
-          initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+    } else {
+      for (let i = 0; i < sections.length; i++) {
+        if (scriptId === sections[i].unitId) {
+          initialSectionsAssigned.push(sections[i]);
         }
       }
     }
-
-    this.state = {
-      currentSectionsAssigned: initialSectionsAssignedToCourseList,
-      initialSectionsAssigned: initialSectionsAssignedToCourseList,
-    };
+  } else if (isAssigningCourse) {
+    // checks to see if this is coming from the COURSE landing page
+    for (let i = 0; i < sections.length; i++) {
+      if (courseId === sections[i].courseId) {
+        initialSectionsAssigned.push(sections[i]);
+      }
+    }
   }
 
-  handleChangedCheckbox = currentSection => {
-    const isUnchecked = this.state.currentSectionsAssigned.some(
+  const [currentSectionsAssigned, setCurrentSectionsAssigned] = useState(
+    initialSectionsAssigned
+  );
+
+  const handleChangedCheckbox = currentSection => {
+    const isUnchecked = currentSectionsAssigned.some(
       s => s.code === currentSection.code
     );
     if (isUnchecked) {
-      this.setState(state => {
-        const newList = state.currentSectionsAssigned.filter(
-          s => s.code !== currentSection.code
-        );
-        return {currentSectionsAssigned: newList};
-      });
+      const newList = currentSectionsAssigned.filter(
+        s => s.code !== currentSection.code
+      );
+      setCurrentSectionsAssigned(newList);
     } else {
-      this.setState(state => {
-        const newList = [...state.currentSectionsAssigned];
-        newList.push(currentSection);
-        return {currentSectionsAssigned: newList};
-      });
+      const newList = [...currentSectionsAssigned];
+      newList.push(currentSection);
+      setCurrentSectionsAssigned(newList);
     }
   };
 
-  reassignSections = () => {
-    const {
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId,
-      assignToSection,
-      isOnCoursePage,
-    } = this.props;
+  const reassignSections = () => {
     // Assign any courses that need to be assigned
-    for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
-      const needsToBeAssigned = !this.state.initialSectionsAssigned.some(
-        s => s.code === this.state.currentSectionsAssigned[i].code
+    for (let i = 0; i < currentSectionsAssigned.length; i++) {
+      const needsToBeAssigned = !initialSectionsAssigned.some(
+        s => s.code === currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
-        if (isOnCoursePage) {
-          const sectionId = this.state.currentSectionsAssigned[i].id;
-          assignToSection(
+        if (isAssigningCourse) {
+          const sectionId = currentSectionsAssigned[i].id;
+          assignToSectionWithConfirmation(
             sectionId,
             courseId,
             courseOfferingId,
@@ -117,44 +103,47 @@ class MultipleSectionsAssigner extends Component {
             scriptId
           );
         } else {
-          this.unhideAndAssignUnit(this.state.currentSectionsAssigned[i]);
+          unhideAndAssignUnit(currentSectionsAssigned[i]);
         }
       }
     }
 
     // If any sections need to be removed from being assigned, remove them
-    for (let i = 0; i < this.state.initialSectionsAssigned.length; i++) {
-      const isSectionToBeRemoved = !this.state.currentSectionsAssigned.some(
-        s => s.code === this.state.initialSectionsAssigned[i].code
+    for (let i = 0; i < initialSectionsAssigned.length; i++) {
+      const isSectionToBeRemoved = !currentSectionsAssigned.some(
+        s => s.code === initialSectionsAssigned[i].code
       );
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isOnCoursePage || this.props.isStandAloneUnit
-          ? this.props.unassignSection(
-              this.state.initialSectionsAssigned[i].id,
-              ''
-            )
-          : this.assignCourseWithoutUnit(this.state.initialSectionsAssigned[i]);
+        isAssigningCourse || isStandAloneUnit
+          ? unassignSection(initialSectionsAssigned[i].id, '')
+          : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
     }
     // close dialogue
-    this.props.reassignConfirm();
-    this.props.onClose();
+    reassignConfirm();
+    onClose();
   };
 
-  unhideAndAssignUnit = section => {
-    const {
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId,
-      assignToSection,
-      updateHiddenScript,
-    } = this.props;
+  const selectAllHandler = () => {
+    let newSectionsAssigned = [...currentSectionsAssigned];
+    for (let i = 0; i < sections.length; i++) {
+      // if the section is NOT in currentSections assigned, assign it
+      const isSectionToBeAssigned = !currentSectionsAssigned.some(
+        s => s.code === sections[i].code
+      );
+      if (isSectionToBeAssigned) {
+        newSectionsAssigned.push(sections[i]);
+      }
+    }
+    setCurrentSectionsAssigned(newSectionsAssigned);
+  };
+
+  const unhideAndAssignUnit = section => {
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
@@ -164,11 +153,9 @@ class MultipleSectionsAssigner extends Component {
   };
 
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
-  assignCourseWithoutUnit = section => {
-    const {courseId, courseOfferingId, courseVersionId, assignToSection} =
-      this.props;
+  const assignCourseWithoutUnit = section => {
     const sectionId = section.id;
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
@@ -177,131 +164,107 @@ class MultipleSectionsAssigner extends Component {
     );
   };
 
-  isAssignableToSection = sectionParticipantType => {
-    return sectionParticipantType === this.props.participantAudience;
+  const assignToSectionWithConfirmation = (
+    sectionId,
+    courseId,
+    courseOfferingId,
+    courseVersionId,
+    scriptId
+  ) => {
+    onAssignSuccess
+      ? assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        ).then(onAssignSuccess)
+      : assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        );
   };
 
-  selectAllHandler = () => {
-    for (let i = 0; i < this.props.sections.length; i++) {
-      // if the section is NOT in currentSections assigned, assign it
-      const isSectionToBeAssigned = !this.state.currentSectionsAssigned.some(
-        s => s.code === this.props.sections[i].code
-      );
-      if (isSectionToBeAssigned) {
-        this.setState(state => {
-          const newList = [...state.currentSectionsAssigned];
-          newList.push(this.props.sections[i]);
-          return {currentSectionsAssigned: newList};
-        });
-      }
-    }
+  const isAssignableToSection = sectionParticipantType => {
+    return sectionParticipantType === participantAudience;
   };
 
-  render() {
-    const {sections, assignmentName, onClose} = this.props;
-
-    return (
-      <BaseDialog isOpen={true} handleClose={onClose}>
-        <div style={styles.header} className="uitest-confirm-assignment-dialog">
-          {i18n.chooseSectionsPrompt({assignmentName})}
-        </div>
-        <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
-        <div style={styles.header} className="uitest-confirm-assignment-dialog">
-          {i18n.yourSectionsList()}
-        </div>
-        <hr />
-        <div style={styles.grid}>
+  return (
+    <AccessibleDialog onClose={onClose}>
+      <div tabIndex="0" className={moduleStyle.modalHeader}>
+        <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
+      </div>
+      <div className={moduleStyle.sectionsDirections}>
+        <BodyTwoText>{sectionDirections}</BodyTwoText>
+      </div>
+      <div className={moduleStyle.sectionList}>
+        <Heading5>{i18n.yourSectionsList()}</Heading5>
+        <div className={moduleStyle.sectionListOptionsContainer}>
           {sections &&
             sections.map(
               section =>
-                this.isAssignableToSection(section.participantType) && (
-                  <TeacherSectionOption
+                isAssignableToSection(section.participantType) && (
+                  <Checkbox
                     key={section.id}
-                    section={section}
-                    isChecked={
-                      !!this.state.currentSectionsAssigned.some(
+                    checked={
+                      !!currentSectionsAssigned.some(
                         s => s.code === section.code
                       )
                     }
-                    assignedSections={this.state.currentSectionsAssigned}
-                    onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
-                    editedValue={section.isAssigned}
+                    onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                    name={section.id}
+                    label={section.name}
                   />
                 )
             )}
         </div>
-        <a
-          style={styles.selectAllSectionsLabel}
-          onClick={this.selectAllHandler}
-          className="select-all-sections"
-        >
-          Select All
-        </a>
-        <div style={{textAlign: 'right'}}>
-          <Button
-            text={i18n.dialogCancel()}
-            onClick={onClose}
-            color={Button.ButtonColor.gray}
-          />
-          <Button
-            id="confirm-assign"
-            text={i18n.confirmAssignment()}
-            style={{marginLeft: 5}}
-            onClick={this.reassignSections}
-            color={Button.ButtonColor.orange}
-          />
-        </div>
-      </BaseDialog>
-    );
-  }
-}
+        <Button
+          id="select-all-sections"
+          text={i18n.selectAll()}
+          onClick={selectAllHandler}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
 
-const styles = {
-  header: {
-    fontSize: 16,
-    marginBottom: 5,
-    fontWeight: 'bold',
-  },
-  content: {
-    fontSize: 14,
-    marginBottom: 10,
-    marginTop: 10,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: '33% 33% 34%',
-  },
-  functionSelector: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '10px 10px 10px 0',
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
-  },
-  selectAllFunctionsLabel: {
-    margin: 0,
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  selectAllSectionsLabel: {
-    fontFamily: "'Gotham 5r', sans-serif",
-    fontSize: 16,
-    cursor: 'pointer',
-    color: color.link_color,
-    ':hover': {
-      color: color.link_color,
-    },
-  },
+      <div className={moduleStyle.buttonContainer}>
+        <Button
+          text={i18n.dialogCancel()}
+          onClick={onClose}
+          color={Button.ButtonColor.neutralDark}
+        />
+        <Button
+          id="confirm-assign"
+          text={i18n.confirmAssignment()}
+          onClick={reassignSections}
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
+    </AccessibleDialog>
+  );
+};
+
+MultipleSectionsAssigner.propTypes = {
+  courseId: PropTypes.number,
+  assignmentName: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+  courseOfferingId: PropTypes.number,
+  courseVersionId: PropTypes.number,
+  scriptId: PropTypes.number,
+  reassignConfirm: PropTypes.func,
+  isAssigningCourse: PropTypes.bool.isRequired,
+  isStandAloneUnit: PropTypes.bool,
+  participantAudience: PropTypes.string,
+  onAssignSuccess: PropTypes.func,
+  sectionDirections: PropTypes.string,
+  // Redux
+  sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  unassignSection: PropTypes.func.isRequired,
+  assignToSection: PropTypes.func.isRequired,
+  updateHiddenScript: PropTypes.func.isRequired,
 };
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;

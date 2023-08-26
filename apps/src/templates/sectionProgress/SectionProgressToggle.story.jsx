@@ -1,56 +1,41 @@
 import React from 'react';
 import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
 import {ViewType} from './sectionProgressConstants';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
-export default storybook => {
-  function isSummaryTrue() {
-    return {
-      name: 'Summary view toggle on',
-      story: () => (
-        <SectionProgressToggle
-          currentView={ViewType.SUMMARY}
-          setCurrentView={() => {
-            console.log('Toggle view.');
-          }}
-          scriptId={1}
-        />
-      ),
-    };
-  }
+export default {
+  title: 'SectionProgressToggle',
+  component: SectionProgressToggle,
+};
 
-  function isSummaryFalse() {
-    return {
-      name: 'Detail view toggle on',
-      story: () => (
-        <SectionProgressToggle
-          currentView={ViewType.DETAIL}
-          setCurrentView={() => {
-            console.log('Toggle view.');
-          }}
-          scriptId={1}
-        />
-      ),
-    };
-  }
+const Template = args => {
+  const store = createStore(
+    combineReducers({
+      isRtl,
+    })
+  );
 
-  function isStandardsTrue() {
-    return {
-      name: 'Standards view toggle on',
-      story: () => (
-        <SectionProgressToggle
-          currentView={ViewType.STANDARDS}
-          showStandardsToggle={true}
-          setCurrentView={() => {
-            console.log('Toggle view.');
-          }}
-          scriptId={1}
-        />
-      ),
-    };
-  }
+  return (
+    <Provider store={store}>
+      <SectionProgressToggle
+        setCurrentView={() => console.log('Toggle view.')}
+        scriptId={1}
+        {...args}
+      />
+    </Provider>
+  );
+};
 
-  storybook
-    .storiesOf('Progress/SectionProgressToggle', module)
-    .withReduxStore()
-    .addStoryTable([isSummaryTrue(), isSummaryFalse(), isStandardsTrue()]);
+export const SummaryView = Template.bind({});
+SummaryView.args = {currentView: ViewType.SUMMARY};
+
+export const DetailsView = Template.bind({});
+DetailsView.args = {currentView: ViewType.DETAIL};
+
+export const StandardsView = Template.bind({});
+StandardsView.args = {
+  currentView: ViewType.STANDARDS,
+  showStandardsToggle: true,
 };

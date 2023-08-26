@@ -4,17 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "e9fd3049-5fa9-491d-bd11-fd27ac848f29",
+          "notice": "Ecosystems Pilot is being deprecated",
+          "details": "We are in the process of fully removing the Ecosystems Pilot content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Ecosystems Pilot content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-2022-ecosystems",
       "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-ecosystems",
-    "serialized_at": "2022-07-25 00:56:44 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2023-06-27 22:21:55 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1021,6 +1032,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_location_ecosystems"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1043,6 +1057,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_click_ecosystems"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,

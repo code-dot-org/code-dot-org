@@ -8,12 +8,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-05-04 15:40:10 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-07-25 22:17:35 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,10 +44,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites on a map. \n\nThis lesson serves two main purposes: (1) to offer an example of an interactive Tour Guide app and (2) to introduce students to coding in Sprite Lab. Sprite Lab is an open-ended coding environment that uses block-based code. Students will learn the basics of Sprite Lab throughout this lesson to plan and build their Tour Guide app in the following lessons. \n\nIn this integrated lesson, students learn social studies concepts by creating a map with code. To begin, students will examine several examples of maps and discuss what features make up the map. In the wrap-up, students will discuss the role of a map maker. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n- [Optional] Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this [video](https://youtu.be/CHipUGfL_0M). \n",
+        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites on a map. \n\nThis lesson serves two main purposes: (1) to offer an example of coding an interactive map and (2) to introduce students to coding in Sprite Lab. Sprite Lab is an open-ended coding environment that uses block-based code. Students will learn the basics of Sprite Lab throughout this lesson to plan and build their interactive map in the following lessons. \n\nIn this integrated lesson, students learn social studies concepts by creating a map with code. To begin, students will examine several examples of maps and discuss what features make up the map. In the wrap-up, students will discuss the role of a map maker. \n\n*Note:  The maps and images will not be a perfect fit in all cases. Fortunately, there is a Sprite Upload tool and access to the Animation Library students can use in the freeplay levels that allow for customization.*\n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n\n#####Optional:\n- Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n- Pair Programming - Decide if you want students to engage in pair programming. Watch this <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support</a> page for more information about pair programming.\n- Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">video</a>.\n\n",
         "purpose": "Students create a tour guide app in an interactive learning experience that integrates multiple subject areas. By combining computer science concepts with geography content, the lesson aims to help students develop a deeper understanding of both subjects and see their connections. This lesson is meant to allow students to apply their coding skills in a real-world context by creating a tour guide app that highlights important landmarks, cultural events, and historical sites in a particular geographic location.",
-        "student_overview": "In this lesson, you will explore maps! Maps help you figure out where to go. They also tell stories about the people who make up a place. \n\nWith code, you will animate sprites on a map to create a Tour Guide app."
+        "student_overview": "In this lesson, you will explore maps! Maps help you figure out where to go. They also tell stories about the people who make up a place. \n\nWith code, you will animate sprites on a background to create an interactive map."
       },
       "seeding_key": {
         "lesson.key": "US Landmarks",
@@ -63,7 +64,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this **unplugged** lesson, students will create a project plan for their tour guide app. Creating a plan is an important first step before starting to code. Educators are encouraged to customize this project to fit within the context of topics or standards currently being taught.  See below for suggestions.  \n\n**Suggestions:**\n- Students can map a local area such as their home, classroom, or school. \n- Students can create a tour of a state they are studying in class. \n- The instructor can link the mapping project to another area of study or research, like Ancient civilizations. \n",
-        "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print an [Activity Guide](https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview) for each student\n* Review [Activity Guide - Teacher Key](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview)",
+        "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print a <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">Project Plan</a> for each student\n* Review <a href=\"https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview\" target=\"_blank\">Project Plan - Teacher Key</a>\n\n",
         "purpose": "The purpose of this lesson is to provide a structured and thoughtful approach to the design and development of each student's app. By using an activity guide to plan their app, students can explore and organize their ideas, make informed decisions about what information to include, and prepare themselves for the coding phase of the project.",
         "student_overview": "In this lesson, you will make a plan for your mapping landmarks project. Planning what you will code before jumping in is always good practice. \n"
       },
@@ -81,8 +82,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students use their project plans from the previous class to create their interactive map. Students may be at varying stages of their plan. This lesson begins with a Check-in to see whether some students may need some extra time planning. \n\nOnce students move to computers, they will follow a level progression that walks them through the process of setting a background, creating a tour guide, making it say “Welcome,” making it move, and adding at least 2 landmarks that trigger the tour guide to say something when touched. Note that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.\n\nThe lesson ends in a quick gallery walk in preparation of the next lesson, where students share their projects with the class. ",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Prepare to return student handouts from the previous lesson. \n- Consider strategies of support for students that may not feel confident or ready to start their creative project. \n- [Optional] Code your own map as an exemplar for students\n\n",
+        "overview": "In this lesson, students use their project plans from the previous class to create their interactive map. Students may be at varying stages of their plan.\n\nOnce students move to computers, they will follow a level progression that walks them through the process of setting a background, creating a tour guide, making it say “Welcome,” making it move, and adding at least 2 landmarks that trigger the tour guide to say something when touched. \n\nNote that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.\n\nThe lesson ends in a quick gallery walk in preparation of the next lesson, where students share their projects with the class. ",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Prepare to return planning guides from the previous lesson. \n- Consider strategies of support for students that may not feel confident or ready to start their creative project. \n- Consider these related extensions options ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n\n#####Optional:\n- Code your own map as an exemplar for students\n- Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n\n\n",
         "purpose": "This lesson aims to provide a rich and engaging learning experience that combines computer science and geography and helps students develop a range of skills and competencies that are relevant in today's world. By coding their own tour guide app, students can explore a particular location's geographic features, cultural events, and historical sites. They can express their understanding and appreciation of this location through code and technology. The lesson also emphasizes the importance of planning, problem-solving, and self-expression in coding.",
         "student_overview": "Now it’s time to create your map with a tour guide who visits each landmark. You will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. "
       },
@@ -101,7 +102,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "This is the final lesson in this module and is meant to celebrate all the hard work so far. Students will complete a personal reflection on their final project. Then, the whole class will present their project to their peers. Before the presentations begin, you will discuss tips for an effective presentation, including audience expectations.",
-        "preparation": "- Print a [Landmarks Map Reflection & Observation](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview) handout for each student.",
+        "preparation": "- Print a ***<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">Coding Interactive Maps Reflections & Observations</a>** handout for each student.\n- Consider these related **extensions options ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/4#activity-4335272))**",
         "purpose": "This lesson allows students to share their tour guide app with their peers for feedback. This provides an opportunity for students to receive constructive criticism, reflect on their work, and make improvements to their projects. By sharing their app with their peers, students can receive feedback on their work and learn from the successes and challenges of their classmates.",
         "student_overview": "In this last lesson, you will have the chance to present your project to the rest of your class! First, you will take some time to reflect on your hard work in programming your digital landmark mark map. Then you will discuss some presentation tips and show off your hard work! "
       },
@@ -114,8 +115,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe",
+      "key": "2acd0565-f462-437c-9be3-66bd44962646",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2acd0565-f462-437c-9be3-66bd44962646",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -129,7 +143,7 @@
     },
     {
       "key": "821193be-e0aa-4907-b138-b2869eb91048",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 25,
         "name": "Activity"
@@ -143,13 +157,26 @@
     },
     {
       "key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "6524d6fb-6d11-46b4-b1d6-0ae8c76f2a2f",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6524d6fb-6d11-46b4-b1d6-0ae8c76f2a2f",
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023"
@@ -198,6 +225,18 @@
       }
     },
     {
+      "key": "96724ddf-1baf-477f-a60a-940c2e60cab4",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96724ddf-1baf-477f-a60a-940c2e60cab4",
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
       "key": "137b154d-841f-40a6-a82d-a529733048ea",
       "position": 1,
       "properties": {
@@ -234,6 +273,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "fad0a6c3-f811-47f8-820c-a7bd4a653ec3",
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "7e075c0a-a90f-4777-8608-896d8ead5846",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e075c0a-a90f-4777-8608-896d8ead5846",
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023"
@@ -280,9 +332,38 @@
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023"
       }
+    },
+    {
+      "key": "a4e2aefd-57e5-4975-8aeb-29ea63eca238",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4e2aefd-57e5-4975-8aeb-29ea63eca238",
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "4acb696c-b168-4868-996d-4d721669b233",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies Content:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: <a href=\"https://oladaniel.com/maps\" target=\"_blank\">Maps by Aleksandra and Daniel Mizielinski</a>, <a href=\"https://bghennessy.com/f/the-once-upon-a-time-map-book\" target=\"_blank\">The Once Upon a Time Map Book by BG Hennessy</a>, or <a href=\"https://www.youtube.com/watch?v=LRy3daJLhtg\" target=\"_blank\">City Atlas: Travel the World with 30 City Maps by Georgia Cherry</a>.\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (i.e. recess or field trip) create a topographical map using play-dough or salt dough.\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. <a href=\"https://studio.code.org/s/coursef-2023/lessons/3\" target=\"_blank\">CS Fundamentals Course F Lesson 3</a> is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4acb696c-b168-4868-996d-4d721669b233",
+        "lesson_activity.key": "2acd0565-f462-437c-9be3-66bd44962646"
+      }
+    },
     {
       "key": "dd3b64c1-8c3c-4ecc-b928-c22f09f097b2",
       "position": 1,
@@ -383,7 +464,7 @@
       "position": 2,
       "properties": {
         "description": "Computer science can make maps interactive!  Today, we’ll use Sprite Lab to learn the basics of coding. You will create a virtual tour guide with code to make your map come to life. Remember to read the instructions carefully and have fun. ",
-        "progression_name": "Mapmakers Video",
+        "progression_name": "Interactive Maps Intro Video",
         "remarks": true
       },
       "seeding_key": {
@@ -443,7 +524,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Levels 2-9 are designed to be self-paced. Students may progress at different speeds. You can consider setting up pair programming with students you know will need extra support or focus. If you plan to have your students pair program, watch [this video](https://youtu.be/vgkahOzFH2Q) with your class. Learn more about how to set Pair Programming up [here](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-). \n\nIf your students are using Sprite Lab for the first time, refer to this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_49) resource. \n"
+            "markdown": "Levels 2-9 are designed to be self-paced. Students may progress at different speeds. You can consider setting up pair programming with students you know will need extra support or focus. If you plan to have your students pair program, watch <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> with your class. Learn more about how to set up Pair Programming <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">here</a>. \n\nIf your students are using Sprite Lab for the first time, refer to this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a> resource. "
           }
         ]
       },
@@ -518,6 +599,23 @@
       }
     },
     {
+      "key": "0eceafe8-8739-4d5e-9036-ff3271ed3127",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and maps. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies Content:** \n- Drama game: Students take turns taking on the role of tour guide. They pull a location out of a hat. They describe that place but never say where it is. After 30 seconds, the class tries to guess the location. If no one guesses correctly, the tour guide can continue their tour for an additional 30 seconds before more students guess again. \n\n- Watch a professional tour guide: Look through this <a href=\"https://www.youtube.com/@Expedia/playlists\" target=\"_blank\">playlist</a> of 3-5 minutes long videos and select a location your class would be excited about. \n\n**Computer Science Content:** \n\n- To continue learning about all that sprites can be programmed to do, try <a href=\"https://studio.code.org/s/coursef-2023/lessons/4\" target=\"_blank\">CS Fundamentals Course F Lesson 4</a>. Students will learn a greater variety of event blocks and sprite behaviors.\n\n- The <a href=\"https://levelbuilder-studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Module: Coding a Time Capsule</a> offers an opportunity to students to practice very similar skills within a different context. In Coding a Time Capsule, students write short poems representing a specific period.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0eceafe8-8739-4d5e-9036-ff3271ed3127",
+        "lesson_activity.key": "6524d6fb-6d11-46b4-b1d6-0ae8c76f2a2f"
+      }
+    },
+    {
       "key": "4275a2bd-e02f-4117-89f1-876831439048",
       "position": 1,
       "properties": {
@@ -545,7 +643,7 @@
       "key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Before you give students their graphic organizer, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
+        "description": "**Do This:** Before you give students their planning guide, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
       },
       "seeding_key": {
         "activity_section.key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
@@ -650,7 +748,7 @@
       "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing). "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">Project Plan</a>. \n"
       },
       "seeding_key": {
         "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
@@ -677,7 +775,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students can choose from the Animation Library of 1000+ sprite costumes to add to their project. You could show a blank Sprite Lab project [example](https://studio.code.org/projects/spritelab/new), click on the “Costumes” tab above the playspace, click the “+ New Costume” button, and scroll through the Animation library to spark inspiration. \n\n[Optional] Students can also upload their own sprite costumes and backgrounds. First, let students know they should never add any identifiable information to their images, like their full name, address, etc. Then, show students this Sprite Upload video. If there is time in class, allow students to take out their computers to find and save images they want to add to their projects\n"
+            "markdown": "Students can choose from the Animation Library of 1000+ sprite costumes to add to their project. You could show a blank Sprite Lab project <a href=\"https://studio.code.org/projects/spritelab/new\" target=\"_blank\">example</a>, click on the “Costumes” tab above the playspace, click the “+ New Costume” button, and scroll through the Animation library to spark inspiration. \n\n[Optional] Students can also upload their own sprite costumes and backgrounds. First, let students know they should never add any identifiable information to their images, like their full name, address, etc. Then, show students this Sprite Upload video. If there is time in class, allow students to take out their computers to find and save images they want to add to their projects\n"
           }
         ]
       },
@@ -704,7 +802,7 @@
       "key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Instruct students to flip to the last page of the activity guide and begin drawing their map and landmarks.  If students are struggling with drawing their ideas, remind them that these maps are meant to give them a starting place when choosing their project background and landmarks next class.",
+        "description": "**Do This:** Instruct students to flip to the last page of the planning guide and begin drawing their map and landmarks.  If students are struggling with drawing their ideas, remind them that these maps are meant to give them a starting place when choosing their project background and landmarks next class.",
         "progression_name": "Unplugged Activity"
       },
       "seeding_key": {
@@ -740,7 +838,7 @@
       "key": "75b373b0-403d-48ba-9d1b-2bb7157f9273",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Have students pair up and present their activity guides to each other, as if they were a tour guide of their region. Have each partner give feedback and answer the questions on the board as time allows."
+        "description": "**Do This:** Have students pair up and present their planning guides to each other, as if they were a tour guide of their region. Have each partner give feedback and answer the questions on the board as time allows."
       },
       "seeding_key": {
         "activity_section.key": "75b373b0-403d-48ba-9d1b-2bb7157f9273",
@@ -771,6 +869,24 @@
       }
     },
     {
+      "key": "c5ce6d60-3146-48ee-9ffc-ae37676efc13",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and maps. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "name": "Extension Opportunities",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies Content:** \n- Drama game: Students take turns taking on the role of tour guide. They pull a location out of a hat. They describe that place but never say where it is. After 30 seconds, the class tries to guess the location. If no one guesses correctly, the tour guide can continue their tour for an additional 30 seconds before more students guess again. \n\n- Watch a professional tour guide: Look through this <a href=\"https://www.youtube.com/@Expedia/playlists\" target=\"_blank\">playlist</a> of 3-5 minutes long videos and select a location your class would be excited about. \n\n**Computer Science Content:** \n\n- To continue learning about all that sprites can be programmed to do, try <a href=\"https://studio.code.org/s/coursef-2023/lessons/4\" target=\"_blank\">CS Fundamentals Course F Lesson 4</a>. Students will learn a greater variety of event blocks and sprite behaviors.\n\n- The <a href=\"https://levelbuilder-studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Module: Coding a Time Capsule</a> offers an opportunity to students to practice very similar skills within a different context. In Coding a Time Capsule, students write short poems representing a specific period.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c5ce6d60-3146-48ee-9ffc-ae37676efc13",
+        "lesson_activity.key": "96724ddf-1baf-477f-a60a-940c2e60cab4"
+      }
+    },
+    {
       "key": "2653bd3b-c45a-4b37-8c4c-539f5f753c6a",
       "position": 1,
       "properties": {
@@ -792,7 +908,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is a moment to check in to see how each student is feeling about their project. Here are suggestions for how to respond to students who: \n\n(1) give a thumbs up ... say \"great!\" and that you might tap them to check in with a classmate who might be feeling so-so or thumbs down. \n\n(2) give a thumb sideways ... talk to the person next to you. Chat about what's making you feel so-so about your project. What could make you feel good about starting your project? \n\n(3) give a thumbs down ... tell these students that you will check in with them once independent time starts.\n\nIf there are students feeling like they need significant support to get started, you may consider some pair programming and/or scaffolding the level of creativity of the project. To narrow the scope, you can provide some students with a new version of the planning [handout](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/view) that you have filled out. By making some of the decisions about which costumes, starting location, and text to use, students will be able to move along with more focus. "
+            "markdown": "This is a moment to check in to see how each student is feeling about their project. Here are suggestions for how to respond to students who: \n\n(1) give a thumbs up ... say \"great!\" and that you might tap them to check in with a classmate who might be feeling so-so or thumbs down. \n\n(2) give a thumb sideways ... talk to the person next to you. Chat about what's making you feel so-so about your project. What could make you feel good about starting your project? \n\n(3) give a thumbs down ... tell these students that you will check in with them once independent time starts.\n\nIf there are students feeling like they need significant support to get started, you may consider some pair programming and/or scaffolding the level of creativity of the project. To narrow the scope, you can provide some students with a new version of the <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">project plan</a>\nthat you have filled out. By making some of the decisions about which costumes, starting location, and text to use, students will be able to move along with more focus. "
           }
         ]
       },
@@ -805,7 +921,7 @@
       "key": "6f9028e9-b332-442e-aa41-bb849d96241a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
       },
       "seeding_key": {
         "activity_section.key": "6f9028e9-b332-442e-aa41-bb849d96241a",
@@ -828,7 +944,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning guide if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -997,10 +1113,27 @@
       }
     },
     {
+      "key": "b66b3bf0-0f31-4031-b9bb-17884bdbfde9",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and maps. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies Content:** \n- Drama game: Students take turns taking on the role of tour guide. They pull a location out of a hat. They describe that place but never say where it is. After 30 seconds, the class tries to guess the location. If no one guesses correctly, the tour guide can continue their tour for an additional 30 seconds before more students guess again. \n\n- Watch a professional tour guide: Look through this <a href=\"https://www.youtube.com/@Expedia/playlists\" target=\"_blank\">playlist</a> of 3-5 minutes long videos and select a location your class would be excited about. \n\n**Computer Science Content:** \n\n- To continue learning about all that sprites can be programmed to do, try <a href=\"https://studio.code.org/s/coursef-2023/lessons/4\" target=\"_blank\">CS Fundamentals Course F Lesson 4</a>. Students will learn a greater variety of event blocks and sprite behaviors.\n\n- The <a href=\"https://levelbuilder-studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Module: Coding a Time Capsule</a> offers an opportunity to students to practice very similar skills within a different context. In Coding a Time Capsule, students write short poems representing a specific period.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b66b3bf0-0f31-4031-b9bb-17884bdbfde9",
+        "lesson_activity.key": "7e075c0a-a90f-4777-8608-896d8ead5846"
+      }
+    },
+    {
       "key": "e2aedfe4-331c-4ac2-bb34-3b220ecffd1e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the Local Landmarks Map Reflection [handout](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview).\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the ***<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">Coding Interactive Maps Reflections & Observations</a>** handout.\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1148,6 +1281,23 @@
         "activity_section.key": "8f4cc9e4-7521-4d30-8347-435113197288",
         "lesson_activity.key": "46d989c4-49fa-4afd-88af-36cc80f89959"
       }
+    },
+    {
+      "key": "09f6e185-5518-4cde-a609-15cdc678d177",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and maps. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies Content:** \n- Drama game: Students take turns taking on the role of tour guide. They pull a location out of a hat. They describe that place but never say where it is. After 30 seconds, the class tries to guess the location. If no one guesses correctly, the tour guide can continue their tour for an additional 30 seconds before more students guess again. \n\n- Watch a professional tour guide: Look through this <a href=\"https://www.youtube.com/@Expedia/playlists\" target=\"_blank\">playlist</a> of 3-5 minutes long videos and select a location your class would be excited about. \n\n**Computer Science Content:** \n\n- To continue learning about all that sprites can be programmed to do, try <a href=\"https://studio.code.org/s/coursef-2023/lessons/4\" target=\"_blank\">CS Fundamentals Course F Lesson 4</a>. Students will learn a greater variety of event blocks and sprite behaviors.\n\n- The <a href=\"https://levelbuilder-studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Module: Coding a Time Capsule</a> offers an opportunity to students to practice very similar skills within a different context. In Coding a Time Capsule, students write short poems representing a specific period.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "09f6e185-5518-4cde-a609-15cdc678d177",
+        "lesson_activity.key": "a4e2aefd-57e5-4975-8aeb-29ea63eca238"
+      }
     }
   ],
   "script_levels": [
@@ -1158,14 +1308,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_mapmakers_intro_video_2023"
         ],
-        "progression": "Mapmakers Video"
+        "progression": "Interactive Maps Intro Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_mapmakers_intro_video_2023"
         ],
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
@@ -1173,7 +1323,7 @@
         "activity_section.key": "8bcb0fbe-c14b-4fd7-887a-519d7523a6d6"
       },
       "level_keys": [
-        "CourseF_video_introSpriteLab_2023"
+        "csc_mapmakers_intro_video_2023"
       ]
     },
     {
@@ -1605,9 +1755,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "CourseF_video_introSpriteLab_2023",
+        "level.key": "csc_mapmakers_intro_video_2023",
         "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_mapmakers_intro_video_2023"
         ],
         "lesson.key": "US Landmarks",
         "lesson_group.key": "",
@@ -1822,7 +1972,7 @@
   ],
   "resources": [
     {
-      "name": "Activity Guide Planning",
+      "name": "Project Plan [Key]",
       "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
       "key": "activity_guide_planning",
       "properties": {
@@ -1835,7 +1985,7 @@
       }
     },
     {
-      "name": "Activity Guide Planning",
+      "name": "Project Plan",
       "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview",
       "key": "activity_guide_planning_1",
       "properties": {
@@ -1845,6 +1995,41 @@
       },
       "seeding_key": {
         "resource.key": "activity_guide_planning_1"
+      }
+    },
+    {
+      "name": "Books about Maps List",
+      "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+      "key": "books_about_maps_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/download",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "books_about_maps_list"
+      }
+    },
+    {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
       }
     },
     {
@@ -1861,6 +2046,30 @@
       }
     },
     {
+      "name": "Helpful Hints for teachers and learners\t",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Coding Interactive Maps Rubric",
+      "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
+      "key": "interactive_map_rubric",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/download",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_map_rubric"
+      }
+    },
+    {
       "name": "Coding Interactive Maps",
       "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
       "key": "lesson_slides",
@@ -1874,6 +2083,19 @@
       }
     },
     {
+      "name": "List of books about maps",
+      "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+      "key": "list_of_books_about_maps",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/download",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "list_of_books_about_maps"
+      }
+    },
+    {
       "name": "Local Landmarks Map Reflection & Observation",
       "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview",
       "key": "local_landmarks_map_reflection_observation",
@@ -1884,6 +2106,37 @@
       },
       "seeding_key": {
         "resource.key": "local_landmarks_map_reflection_observation"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-mappinglandmarks-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Coding Interactive Maps",
+      "url": "/s/csc-mappinglandmarks-2023/standards\t",
+      "key": "standards_in_mapping_landmarks",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_mapping_landmarks"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding Interactive Maps",
+      "url": "/s/csc-mappinglandmarks-2023/vocab\t",
+      "key": "vocabulary_in_coding",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding"
       }
     }
   ],
@@ -1927,7 +2180,19 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "resource.key": "interactive_map_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "resource.key": "books_about_maps_list"
       }
     },
     {
@@ -1959,10 +2224,51 @@
         "lesson.key": "US Landmarks",
         "resource.key": "lesson_slides"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "resource.key": "list_of_books_about_maps"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_mapping_landmarks",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -2080,83 +2386,123 @@
   ],
   "objectives": [
     {
-      "key": "080a5204-8346-4ff4-9203-b779c67be2bc",
+      "key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8",
       "properties": {
-        "description": "Students will learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the `when touches` event to make their program interactive."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "080a5204-8346-4ff4-9203-b779c67be2bc"
-      }
-    },
-    {
-      "key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e",
-      "properties": {
-        "description": "Students will use cardinal directions to navigate a map."
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "objective.key": "4cd30fb3-8178-41f4-91b4-88fca7538c9e"
-      }
-    },
-    {
-      "key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637",
-      "properties": {
-        "description": "Students will write a plan for their digital mapping landmarks project."
+        "description": "Reflect on the role of a map maker to develop a deeper appreciation for the purpose and value of maps as tools for understanding the world around them."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "b3fc8e73-7d09-48b5-820c-2cc6c3674637"
+        "objective.key": "1a27b887-2aa2-4f1b-8137-85395c9d1db8"
       }
     },
     {
-      "key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a",
+      "key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb",
       "properties": {
-        "description": "Use strategies for an effective presentation. "
+        "description": "Identify ways in which maps can vary based on the mapmaker's decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb"
+      }
+    },
+    {
+      "key": "46412626-979f-4311-a180-f4e43809b4db",
+      "properties": {
+        "description": "Demonstrate geographic knowledge, coding skills and creativity by coding an interactive map with personally relevant and important landmarks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "46412626-979f-4311-a180-f4e43809b4db"
+      }
+    },
+    {
+      "key": "80a85b7e-ae26-4786-98ed-9632de96ea24",
+      "properties": {
+        "description": "Given a series of maps showing different components, students will analyze and compare the different purposes of each map. "
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "80a85b7e-ae26-4786-98ed-9632de96ea24"
+      }
+    },
+    {
+      "key": "829ee795-fac0-4509-8b25-cd11f443e52e",
+      "properties": {
+        "description": "Demonstrate an understanding of the power of using code to make a map interactive, engaging users and enhance geographic understanding. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
-        "objective.key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a"
+        "objective.key": "829ee795-fac0-4509-8b25-cd11f443e52e"
       }
     },
     {
-      "key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a",
+      "key": "84fb7001-86ee-4932-8d58-b6122037e146",
       "properties": {
-        "description": "Students will use maps and other simple geographic models to identify cultural and environmental characteristics of places."
+        "description": "Learn the basics of Sprite Lab by creating multiple sprites, changing their location, setting their size property, making the sprite “speak,” assigning a behavior, and using the when touches event to make their program interactive."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "84fb7001-86ee-4932-8d58-b6122037e146"
+      }
+    },
+    {
+      "key": "98520886-dfc7-4343-a7ba-c32e0a8b043f",
+      "properties": {
+        "description": "Students will develop a written plan outlining the steps they will take to code their digital mapping landmarks project, including identifying key features, planning the layout, and describing the purpose of their map."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
-        "objective.key": "cab7afb5-f6c7-49f0-b52d-e63dafc3af4a"
+        "objective.key": "98520886-dfc7-4343-a7ba-c32e0a8b043f"
       }
     },
     {
-      "key": "d01d5982-2f53-4d84-a553-63093a58c8ac",
+      "key": "ac701f5c-93be-48e3-b614-d5be26d5b11d",
       "properties": {
-        "description": "Understand the power of using code to make a map interactive"
+        "description": "Engage in a personal reflection on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
-        "objective.key": "d01d5982-2f53-4d84-a553-63093a58c8ac"
+        "objective.key": "ac701f5c-93be-48e3-b614-d5be26d5b11d"
       }
     },
     {
-      "key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a",
+      "key": "ade6631d-16d1-43dd-a955-09eba7039e81",
       "properties": {
-        "description": "Students will create a digital map of an area with key landmarks. "
+        "description": "Write thoughtful observations and provide constructive evaluations of peer projects, offering feedback and suggestions for improvement. "
       },
       "seeding_key": {
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a"
+        "lesson.key": "Project Share Out",
+        "objective.key": "ade6631d-16d1-43dd-a955-09eba7039e81"
       }
     },
     {
-      "key": "f908e942-e501-4ad4-8946-36c717955216",
+      "key": "f5a42772-0ecb-42e3-825f-81dc236b9151",
       "properties": {
-        "description": "Students will use text to explain the importance and/or significance of landmarks in the area. "
+        "description": "Practice effective presentation strategies when showcasing the interactive map to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "f5a42772-0ecb-42e3-825f-81dc236b9151"
+      }
+    },
+    {
+      "key": "f625be86-4b66-4421-8a7c-f724fd230eb5",
+      "properties": {
+        "description": "Utilize coding skills to incorporate text explanations within the interactive map to communicate the significance of landmarks."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",
-        "objective.key": "f908e942-e501-4ad4-8946-36c717955216"
+        "objective.key": "f625be86-4b66-4421-8a7c-f724fd230eb5"
+      }
+    },
+    {
+      "key": "fdb3a900-9efd-4710-8096-6108ed735cb6",
+      "properties": {
+        "description": "Use decomposition by breaking down their digital mapping landmarks project into smaller tasks as they plan their map project."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "fdb3a900-9efd-4710-8096-6108ed735cb6"
       }
     }
   ],

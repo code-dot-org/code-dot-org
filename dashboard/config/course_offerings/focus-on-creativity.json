@@ -1,15 +1,20 @@
 {
   "key": "focus-on-creativity",
-  "display_name": "focus-on-creativity",
+  "display_name": "Focus on Creativity (CS Discoveries)",
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
-  "header": null,
-  "image": "https://images.code.org/f523fa29351f95344b333e31c25f94e9-Creativity.png",
+  "header": "collections",
+  "image": "https://images.code.org/cd5ff79244f8d172d659126259d2be03-Creativity.png",
   "cs_topic": "art_and_design,app_design,games_and_animations,web_design",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "What will you create? This unit empowers students to be creative as they make websites, animations, games, and apps for devices. ",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/aAS3K93_Nks/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=aAS3K93_Nks&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 443
 }

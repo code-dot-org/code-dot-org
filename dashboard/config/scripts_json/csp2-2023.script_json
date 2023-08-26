@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 20:59:13 UTC",
+    "serialized_at": "2023-08-02 21:02:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -557,7 +557,7 @@
       "key": "066b93eb-b6ca-4229-9738-c3e09a104b77",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [Unit 2 Journal](\thttps://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the Unit 2 Journal ([Digital](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link\t\n)/[Interactive Notebook](https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link\t\n)) or have students set up this unit's section in their CSP journals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2138,7 +2138,6 @@
       "position": 1,
       "properties": {
         "description": "Yesterday you began researching for your Internet Dilemma Policy One Pager. Today you will write the One Pager and then share what you've learned.",
-        "duration": "3",
         "name": "Warm Up",
         "remarks": true,
         "tips": [
@@ -2216,8 +2215,8 @@
       "key": "df3f0929-1a29-4cd5-a509-2d1132fdffc1",
       "position": 6,
       "properties": {
-        "description": "These dilemmas are tough - that's what makes a good dilemma. But hopefully you can now understand why it is so important to understand how the Internet works. You are now prepared to thoughtfully engage in these types of conversations that you may hear politicians talking about or read about in the news.",
-        "duration": "2",
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "duration": "5",
         "name": "Wrap Up",
         "remarks": true
       },
@@ -2227,8 +2226,19 @@
       }
     },
     {
-      "key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+      "key": "8d75807d-8f74-4f75-991d-4333901e348d",
       "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Two in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d75807d-8f74-4f75-991d-4333901e348d",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+      "position": 8,
       "properties": {
         "description": "---"
       },
@@ -2239,7 +2249,7 @@
     },
     {
       "key": "39bb44c6-502b-48e9-84a5-c78b27f9103c",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "####Assessment: Submit\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students turn in the Project Guide for assessment."
       },
@@ -2250,7 +2260,7 @@
     },
     {
       "key": "2e5946e6-b245-4236-b2db-703e774e77cf",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3047,24 +3057,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp2-2022/resources",
-      "key": "all_resources_1",
+      "url": "/s/csp2-2023/resources",
+      "key": "all_resources_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_13"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp2-2022/standards",
-      "key": "all_standards_1",
+      "url": "/s/csp2-2023/standards",
+      "key": "all_standards_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_1"
+        "resource.key": "all_standards_13"
       }
     },
     {
@@ -3093,14 +3103,61 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Two",
+      "url": "https://drive.google.com/file/d/1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_two",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_two"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "course_vocabulary"
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "name": "CSP Unit 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1TCbTiyJC7hDJs43AjMBlo_wjAbvZhfGc8NCs654mLKc/edit?usp=drive_link",
+      "key": "csp_unit_2_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_2_slides"
+      }
+    },
+    {
+      "name": "CSP Unit 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1TCbTiyJC7hDJs43AjMBlo_wjAbvZhfGc8NCs654mLKc/edit?usp=drive_link",
+      "key": "csp_unit_2_slides_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_2_slides_1"
       }
     },
     {
@@ -3402,7 +3459,7 @@
       }
     },
     {
-      "name": "Unit 2 Journal",
+      "name": "Unit 2 Journal - Digital",
       "url": "https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link",
       "key": "unit_2_journal",
       "properties": {
@@ -3411,6 +3468,30 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_journal"
+      }
+    },
+    {
+      "name": "Unit 2 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/1PtznQoPehn41MPOofC3DtMbV0yQ05e35SlrfgKIbJcA/edit?usp=drive_link",
+      "key": "unit_2_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_example"
+      }
+    },
+    {
+      "name": "Unit 2 Journal - Interactive Notebook",
+      "url": "https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link",
+      "key": "unit_2_journal_-_interactive_notebook",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_interactive_notebook"
       }
     },
     {
@@ -3503,6 +3584,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_two"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
         "resource.key": "exemplar_internet_dilemmas"
       }
     },
@@ -3563,7 +3656,25 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
+        "resource.key": "csp_unit_2_slides_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
         "resource.key": "unit_2_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "unit_2_journal_-_example"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "unit_2_journal_-_interactive_notebook"
       }
     },
     {
@@ -3582,19 +3693,25 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_13",
         "script.name": "csp2-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_1",
+        "resource.key": "all_standards_13",
         "script.name": "csp2-2023"
       }
     },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_2_slides",
         "script.name": "csp2-2023"
       }
     },
@@ -3639,16 +3756,276 @@
         "resource.key": "unit_2_journal",
         "script.name": "csp2-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_interactive_notebook",
+        "script.name": "csp2-2023"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "bandwidth",
+      "word": "Bandwidth",
+      "definition": "the maximum amount of data that can be sent in a fixed amount of time, usually measured in bits per second",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bandwidth"
+      }
+    },
+    {
+      "key": "computing_device",
+      "word": "Computing Device",
+      "definition": "a machine that can run a program, including computers, tablets, servers, routers, and smart sensors",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_device"
+      }
+    },
+    {
+      "key": "computing_network",
+      "word": "Computing Network",
+      "definition": "a group of interconnected computing devices capable of sending or receiving data.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_network"
+      }
+    },
+    {
+      "key": "computing_system",
+      "word": "Computing System",
+      "definition": "a group of computing devices and programs working together for a common purpose",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_system"
+      }
+    },
+    {
+      "key": "digital_divide",
+      "word": "Digital Divide",
+      "definition": " differing access to computing devices and the Internet, based on socioeconomic, geographic, or demographic characteristics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "key": "domain_name_system_dns_",
+      "word": "Domain Name System (DNS)",
+      "definition": "the system responsible for translating domain names like example.com into IP addresses",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "key": "fault_tolerant",
+      "word": "Fault Tolerant",
+      "definition": "Can continue to function even in the event of individual component failures. This is important because elements of complex systems like a computer network fail at unexpected times, often in groups.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "fault_tolerant"
+      }
+    },
+    {
+      "key": "hypertext_transfer_protocol_http_",
+      "word": "HyperText Transfer Protocol (HTTP)",
+      "definition": "the protocol used for transmitting web pages over the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
+      "key": "internet_protocol_ip_",
+      "word": "Internet Protocol (IP)",
+      "definition": "a protocol for sending data across the Internet that assigns unique numbers (IP addresses) to each connected device",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "internet_protocol_ip_"
+      }
+    },
+    {
+      "key": "ip_address",
+      "word": "IP Address",
+      "definition": "The unique number assigned to each device on the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "key": "packet",
+      "word": "Packet",
+      "definition": "A chunk of data sent over a network. Larger messages are divided into packets that may arrive at the destination in order, out-of-order, or not at all",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "packet"
+      }
+    },
+    {
+      "key": "path",
+      "word": "Path",
+      "definition": "the series of connections between computing devices on a network starting with a sender and ending with a receiver",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "path"
+      }
+    },
+    {
+      "key": "protocol",
+      "word": "Protocol",
+      "definition": "An agreed-upon set of rules that specify the behavior of some system",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "protocol"
+      }
+    },
+    {
+      "key": "redundancy",
+      "word": "Redundancy",
+      "definition": "The inclusion of extra components so that a system can continue to work even if individual components fail, for example by  having more than one path between any two connected devices in a network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "redundancy"
+      }
+    },
+    {
+      "key": "router",
+      "word": "Router",
+      "definition": "A type of computer that forwards data across a network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "router"
+      }
+    },
+    {
+      "key": "world_wide_web",
+      "word": "World Wide Web",
+      "definition": "a system of linked pages, programs, and files",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "world_wide_web"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "vocabulary.key": "bandwidth"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "vocabulary.key": "computing_device"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "vocabulary.key": "computing_network"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "vocabulary.key": "computing_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "vocabulary.key": "path"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "vocabulary.key": "world_wide_web"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "vocabulary.key": "packet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "vocabulary.key": "fault_tolerant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "vocabulary.key": "redundancy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "vocabulary.key": "router"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "vocabulary.key": "internet_protocol_ip_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "vocabulary.key": "protocol"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4231,6 +4608,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

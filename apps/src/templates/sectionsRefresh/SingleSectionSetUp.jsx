@@ -28,6 +28,7 @@ export default function SingleSectionSetUp({
           <input
             required
             type="text"
+            id="uitest-section-name-setup"
             className={moduleStyles.classNameTextField}
             value={section.name}
             onChange={e => updateSection('name', e.target.value)}

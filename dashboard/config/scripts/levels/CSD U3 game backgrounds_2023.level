@@ -1,9 +1,14 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:04:25.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Create your Backgrounds\r\n\r\nNext, you'll create all of the background functions that you need for your game.  Some games only have one background, and others have more than one that's chosen according to user score or another aspect of gameplay.  You'll need to create a function for each separate background in your game.  You'll write the code to choose the correct background in the next level.\r\n\r\n* [Show me the block to create a new function](#triggercallout=callout1)\r\n* [Show me the area in the code to put my function](#triggercallout=callout2)\r\n\r\nAfter you create your functions, test them by calling them inside the draw loop, one background per test.\r\n\r\n* [Show me the block to call my function](#triggercallout=callout3)",
+    "long_instructions": "# Create your Backgrounds\r\n\r\nNext, you'll create at least three different backgrounds in your game.  Your game needs to use different backgrounds that are displayed according to the user's score or another aspect of gameplay.  You'll need to create a function for each separate background in your game.  You'll write the code to choose the correct background in the next level.\r\n\r\n* [Show me the block to create a new function](#triggercallout=callout1)\r\n* [Show me the area in the code to put my function](#triggercallout=callout2)\r\n\r\nAfter you create your functions, test them by calling them inside the draw loop, one background per test.\r\n\r\n* [Show me the block to call my function](#triggercallout=callout3)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -65,13 +70,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:04:25.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:25.976+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game backgrounds_2022\\\"\"],\"cloned_from\":\"CSD U3 game backgrounds_2022\"},{\"changed_at\":\"2023-03-09 17:53:26 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:25.976+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game backgrounds_2022\\\"\"],\"cloned_from\":\"CSD U3 game backgrounds_2022\"},{\"changed_at\":\"2023-03-09 17:53:26 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:45:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:46:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 19:17:50 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

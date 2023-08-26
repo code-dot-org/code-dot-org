@@ -329,7 +329,7 @@ def get_value(spreadsheet, year, state, tab, column_row)
       value = row[get_column_from_column_row(column_row)]
     end
   rescue Exception
-    puts "  YEAR: #{year}. STATE_NAME: #{state}. FIXED_TAB: #{fixed_tab}. "\
+    puts "  YEAR: #{year}. STATE_NAME: #{state}. FIXED_TAB: #{fixed_tab}. " \
       "COLUMN_ROW: #{column_row}."
     raise
   end

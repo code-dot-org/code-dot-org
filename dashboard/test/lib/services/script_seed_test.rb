@@ -68,7 +68,7 @@ module Services
       #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, and Vocabulary.
+      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
@@ -90,7 +90,7 @@ module Services
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
       # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(86) do
+      assert_queries(98) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -683,6 +683,46 @@ module Services
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
+    test 'seed updates learning goals' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.update!(learning_goal: 'Updated Learning Goal')
+        rubric.learning_goals.create!(learning_goal: 'New Learning Goal', position: rubric.learning_goals.count + 1, key: "new-learning-goal-#{rubric.id}")
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Learning Goal', 'New Learning Goal'],
+        rubric.learning_goals.map(&:learning_goal)
+      )
+    end
+
+    test 'seed updates learning goal evidence level' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.update!(teacher_description: 'Updated Evidence Level')
+        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 2)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Evidence Level', 'Description for teacher', 'New Evidence Level'],
+        rubric.learning_goals.first.learning_goal_evidence_levels.map(&:teacher_description)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -718,6 +758,9 @@ module Services
       expected_counts['Objective'] -= 4
       expected_counts['LessonsStandard'] -= 4
       expected_counts['LessonsOpportunityStandard'] -= 4
+      expected_counts['Rubric'] -= 2
+      expected_counts['LearningGoal'] -= 2
+      expected_counts['LearningGoalEvidenceLevel'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -753,6 +796,9 @@ module Services
       expected_counts['Objective'] -= 2
       expected_counts['LessonsStandard'] -= 2
       expected_counts['LessonsOpportunityStandard'] -= 2
+      expected_counts['Rubric'] -= 1
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -1082,6 +1128,47 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes learning goal' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 1, rubric.learning_goals.count
+        rubric.learning_goals.first.delete
+        assert_equal 0, rubric.learning_goals.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes learning goal evidence level' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 2, rubric.learning_goals.first.learning_goal_evidence_levels.count
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.delete
+        assert_equal 1, rubric.learning_goals.first.learning_goal_evidence_levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoalEvidenceLevel'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find standard if framework matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)
@@ -1168,7 +1255,7 @@ module Services
       [
         Unit, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard, Rubric, LearningGoal, LearningGoalEvidenceLevel
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -1222,6 +1309,11 @@ module Services
         assert_standards_equal(
           s1.lessons.map(&:opportunity_standards).flatten,
           s2.lessons.map(&:opportunity_standards).flatten,
+        )
+        assert_equal(s1.lessons.filter_map(&:rubric).count, s2.lessons.filter_map(&:rubric).count)
+        assert_learning_goals_equal(
+          s1.lessons.filter_map(&:rubric).map(&:learning_goals).flatten,
+          s2.lessons.filter_map(&:rubric).map(&:learning_goals).flatten
         )
       end
     end
@@ -1296,6 +1388,20 @@ module Services
       end
     end
 
+    def assert_learning_goals_equal(learning_goals1, learning_goals2)
+      assert_equal learning_goals1.count, learning_goals2.count
+      learning_goals1.zip(learning_goals2).each do |lg1, lg2|
+        assert_attributes_equal(lg1, lg2, ['rubric_id'])
+      end
+    end
+
+    def assert_learning_goal_evidence_levels_equal(learning_goal_evidence_levels1, learning_goal_evidence_levels2)
+      assert_equal learning_goal_evidence_levels1.count, learning_goal_evidence_levels2.count
+      learning_goals_evidence_levels1.zip(learning_goal_evidence_levels2).each do |lgel1, lgel2|
+        assert_attributes_equal(lgel1, lgel2, ['learning_goal_id'])
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
@@ -1315,7 +1421,10 @@ module Services
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       num_standards_per_lesson: 2,
-      with_unit_group: false
+      with_unit_group: false,
+      num_rubrics_per_lesson: 1,
+      num_learning_goals_per_rubric: 1,
+      num_learning_goal_evidence_levels_per_learning_goal: 2
     )
       # Avoid randomly generated characters at the start of the name prefix,
       # to help avoid flaky tests. The name_prefix gets used in various fields,
@@ -1432,6 +1541,17 @@ module Services
         (1..num_standards_per_lesson).each do |s|
           standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
           LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
+        end
+
+        next if lesson.levels.empty?
+        (1..num_rubrics_per_lesson).each do |_r|
+          rubric = create :rubric, lesson: lesson, level: lesson.levels.last
+          (1..num_learning_goals_per_rubric).each do |lg|
+            learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
+            (0...num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
+              create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
+            end
+          end
         end
       end
 

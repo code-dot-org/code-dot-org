@@ -44,6 +44,9 @@ class UserPermission < ApplicationRecord
     PROGRAM_MANAGER = 'program_manager'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
+    # Grants access to use AI Chat API
+    AI_CHAT_ACCESS = 'ai_chat_access'.freeze,
+
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack
@@ -73,10 +76,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Updating UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Updating UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end
@@ -89,10 +92,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Deleting UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Deleting UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end

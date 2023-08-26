@@ -198,15 +198,6 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
-  test 'converts from and to XML level format' do
-    name = 'Test level convert'
-    level = LevelLoader.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
-    xml = level.to_xml
-    xml2 = LevelLoader.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
-    level.destroy
-    assert_equal xml, xml2
-  end
-
   def create_custom_block(name, pool, block_text, args, category: 'Events')
     [{
       name: name,
@@ -222,7 +213,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'localized shared_blocks' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -288,7 +279,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'original object is not mutated' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -334,7 +325,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'nil is returned if level_objects is blank' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -364,7 +355,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'does not return a translated string if block text does not exist' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -425,7 +416,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'does not return translated strings when I18n translation does not exist' do
-    test_locale = :"es-ST"
+    test_locale = :'es-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -491,7 +482,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'option that contains a period in the key is translated' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -500,8 +491,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "vérifier la {LEVEL}",
             "options" => {
               "LEVEL" => {
-                "LEVELS.Whole": "Entier",
-                "LEVELS.Half": "Moitié",
+                'LEVELS.Whole': "Entier",
+                'LEVELS.Half': "Moitié",
               }
             }
           }
@@ -535,7 +526,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'localizes authored hints' do
-    test_locale = :"es-MX"
+    test_locale = :'es-MX'
     level_name = 'test_localize_authored_hints'
 
     I18n.locale = test_locale
@@ -576,12 +567,12 @@ class BlocklyTest < ActiveSupport::TestCase
   test 'localizes authored hints with embedded behavior block' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    test_locale = :"es-MX"
+    test_locale = :'es-MX'
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
-      oración de muestra: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
+      oración de muestra: <xml><block type="gamelab_addBehaviorSimple" uservisible="false"><value name="SPRITE"><block type="gamelab_getAllSprites"></block></value><value name="BEHAVIOR"><block type="gamelab_behavior_get"><mutation></mutation><title name="VAR">wandering</title></block></value></block></xml>.
 
-      El <xml><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></xml> bloque
+      El <xml><block type="sprite_parameter_get"><title name="VAR">this sprite</title></block></xml> bloque
       This block is found in the **Behaviors** category of the toolbox.
     HINT
 
@@ -800,7 +791,7 @@ class BlocklyTest < ActiveSupport::TestCase
   end
 
   test 'handles bad authored hint localization data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_authored_hints'
     I18n.locale = test_locale
 
@@ -923,7 +914,7 @@ class BlocklyTest < ActiveSupport::TestCase
         }
       }
     }
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     level = create(
       :level,
@@ -1259,5 +1250,43 @@ class BlocklyTest < ActiveSupport::TestCase
     # Output should use <button></button> instead of <button />
     expected_output = '<div><button id="leftBottomButton"></button><label>Outfit Picker</label></div>'
     assert_equal expected_output, localized_start_html
+  end
+
+  test 'get_localized_property returns property translation when level should be localized' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: 'expected_failure_message_override')
+
+    level.stubs(:should_localize?).returns(true)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).once.returns('expected-blockly-level-property-translation')
+
+    assert_equal 'expected-blockly-level-property-translation', level.get_localized_property('failure_message_override')
+  end
+
+  test 'get_localized_property returns nil when level should not be localized' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: 'expected_failure_message_override')
+
+    level.stubs(:should_localize?).returns(false)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).never
+
+    assert_nil level.get_localized_property('failure_message_override')
+  end
+
+  test 'get_localized_property returns nil when value is nil' do
+    level = Blockly.new(name: 'expected-blockly-level', failure_message_override: nil)
+
+    level.stubs(:should_localize?).returns(true)
+
+    I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_override'], default: nil, smart: true).never
+
+    assert_nil level.get_localized_property('failure_message_override')
+  end
+
+  test 'localized_failure_message_override returns failure_message_override property translation' do
+    level = Blockly.new
+
+    level.expects(:get_localized_property).with('failure_message_override').once.returns('expected_failure_message_override_translation')
+
+    assert_equal 'expected_failure_message_override_translation', level.localized_failure_message_override
   end
 end

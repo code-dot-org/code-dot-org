@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-03-22T22:24:17.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
   "properties": {
     "skin": "gamelab",
     "validation_enabled": "false",
@@ -176,7 +181,7 @@
     },
     "show_debug_watch": "false",
     "encrypted": "false",
-    "encrypted_examples": "DRUcQ+P5eGTJqpLbyIUavUyvzO0Vsv1YoR6tEQBjDvmLAE5znwr6GeO9qnlC\naukT\n",
+    "encrypted_examples": "ipL8K//tY9q9N9JnjRTMFjQk4MVUmK4UCR62yeluwal9NFYuZvlLHbeTZ16N\nM0U+zW808G9DgOpY0FaoJL22Fw==\n",
     "embed": "true",
     "display_name": "Example",
     "mini_rubric": "false",
@@ -200,12 +205,7 @@
     "long_instructions": "# Interactive Card Example\r\n\r\nIn the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-22T22:24:17.000Z",
-  "user_id": 14639,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-22T22:24:17.879+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Interactive Card - Example1_2022\\\"\"],\"cloned_from\":\"CSD U3 - Interactive Card - Example1_2022\"},{\"changed_at\":\"2022-03-22 22:25:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:27:07 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:30:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:32:50 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-22T22:24:17.879+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Interactive Card - Example1_2022\\\"\"],\"cloned_from\":\"CSD U3 - Interactive Card - Example1_2022\"},{\"changed_at\":\"2022-03-22 22:25:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:27:07 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:30:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 22:32:50 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-18 16:44:04 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-18 16:44:28 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-18 16:45:14 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"encrypted_examples\",\"embed\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-18 16:49:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

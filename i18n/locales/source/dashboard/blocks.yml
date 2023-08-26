@@ -1058,6 +1058,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border [DESCRIPTION][0]
       DansBlocks_getMicroscope:
         text: Microscope has [INPUT1][0]
         options:
@@ -2613,6 +2615,8 @@ en:
             new Behavior(wobbling, []): wobbling
             new Behavior(wandering, []): wandering
             new Behavior(patrolling, []): patrolling
+      adaptations_location_picker:
+        text: at:[LOCATION][0]
       adaptations_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       adaptations_spriteBirdSay:
@@ -2784,8 +2788,46 @@ en:
             '"too much"': too much
             '"just right"': just right
             '"too little"': too little
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: at:[LOCATION][0]
+      ecosystems_makeNewSpriteBetween:
+        text: 'make [N][0] new [GROUP][1] between location x: [X][2] y: [Y][3]'
+      ecosystems_makeNumSpritesAtLocation:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites at [LOCATION_GENERATOR][2]
+      ecosystems_makeNumSpritesWithinRange:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites at [RANGE][2]
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:150, y2:250}": Middle
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
+      ecosystems_randomLocationWithinRange:
+        text: x min[X1][0]x max[X2][1]y min[Y1][2]y max[Y2][3]
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "[RANGE][0]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
       storylab_clearHeadings:
         text: clear headings
+      storylab_printText:
+        text: print [TEXT][0]
       storylab_setForegroundEffect2:
         text: do [EFFECT][0] effect
         options:

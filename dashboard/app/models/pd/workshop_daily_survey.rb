@@ -66,11 +66,11 @@ module Pd
     end
 
     def self.get_form_id_for_subjects_and_day(subjects, day)
-      subjects.map do |subject|
+      subjects.filter_map do |subject|
         get_form_id_for_subject_and_day subject, day
       rescue
         nil
-      end.compact
+      end
     end
 
     def self.get_form_id_for_subject_and_day(subject, day)

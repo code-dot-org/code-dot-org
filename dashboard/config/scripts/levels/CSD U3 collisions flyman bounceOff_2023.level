@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:02:25.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -60,10 +65,10 @@
     "free_play": "true",
     "text_mode_at_start": "false",
     "hide_animation_mode": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "# Review Your Game\r\n\r\nTest your game to make sure it has everything it needs.\r\n\r\n# Do This\r\n\r\n* Play your game several times.\r\n* Read over your project guide and check that you have followed your plan.\r\n* Make any last changes.",
+    "long_instructions": "# Review Your Game\r\n\r\nTest your game to make sure it has everything it needs.\r\n\r\n# Do This\r\n\r\n1. Play your game several times.\r\n* Read over your project guide and check that you have followed your plan.\r\n* Make any last changes.",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -98,13 +103,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:02:25.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:25.147+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions flyman bounceOff_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions flyman bounceOff_2022\"},{\"changed_at\":\"2023-03-09 17:52:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:25.147+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions flyman bounceOff_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions flyman bounceOff_2022\"},{\"changed_at\":\"2023-03-09 17:52:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:40:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:56:15 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

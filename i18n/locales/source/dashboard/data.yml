@@ -690,7 +690,7 @@ en:
         csp_applab_parameters: Functions with Parameters
         starquilts_intro_artist: Intro to Star Quilts
         CSA-PL-intro-to-arrays: One-Dimensional (1D) Arrays
-        CSA-PL-1d-arrays-new-values: Entering values in 1D arrays
+        CSA-PL-1d-arrays-new-values: Modifying values in 1D arrays
         CSA-PL-conditionals: Conditional Statements in Java
         CSA-PL-two-way-selection: Two-way selection
         CSA-PL-Printing-in-Java: Printing in Java
@@ -713,7 +713,7 @@ en:
         csa-pl-intro-to-equals-method: Introduction to the .equals() method
         csa-pl-equals-book: Writing the equals() method for the Book class
         csa-multi-select-pl: Multi-selection Statements in Java
-        csc_timecapsule_intro: Time Capsule Introduction
+        csc_timecapsule_intro: Coding a Time Capsule
         PL_Equity_in_CS_Education: Equity in CS Education
         csc_fm_pilot: Function Machines (Pilot)
         csc_fm_pilot_v2: 'Function Machines Intro '
@@ -766,12 +766,12 @@ en:
         csa-example-solution-1: 'Live Coding an Example Solution '
         csd_sprite_properties: Sprite Properties
         csa-pl-documentation: Documentation in Java Lab
-        csc-starquilts-intro: 'CSC: Star Quilts'
-        csc-mapmakers-intro: "CSC: Mapmakers\t"
+        csc-starquilts-intro: Coding a Geometric Star Quilt
+        csc-mapmakers-intro: Coding Interactive Maps
         csa-pl-vocab-pm: Project Management Vocabulary
-        csc-ecosystems-intro: Ecosystems Intro
+        csc-ecosystems-intro: Simulating a Marine Ecosystem
         PL_CSD_MicroBit_Intro: Introduction to the Micro:bit
-        csc_animal_adaptations_intro: Animal Adaptations Intro
+        csc_animal_adaptations_intro: Modeling Animal Adaptations
         csa_two_dimensional_arrays: 'CSA: Two-Dimensional (2D) Arrays'
         csa_working_with_2d_array_elements: 'CSA: Working with 2D Array Elements'
         csa_row_major_traversal: 'CSA: Row-Major Traversal'
@@ -789,6 +789,22 @@ en:
         csa_sorting_algorithms: 'CSA: Sorting Algorithms'
         star_quilts_intro_to_artist: 'Star Quilts: Intro to Artist'
         upload_sprites_backgrounds: Uploading Custom Sprites and Backgrounds
+        PL_CSD_EquityBlindSpotsvid: Bias & Responsibility
+        how-ai-works-llms-full: How Chatbots and Large Language Models Work
+        how-ai-works-creativity-full: Does AI Have Creativity and Imagination?
+        how-ai-works-llms-part1: Chatbots and Large Language Models Part 1
+        how-ai-works-llms-part2: Chatbots and Large Language Models Part 2
+        csc_bookcovers_intro: Coding Book Covers
+        llms-cobranded: 'How AI Works: Chatbots and Large Language Models'
+        generative-ai-cobranded: 'How AI Works: Generative AI'
+        csa-overview: A New Approach to AP Computer Science A
+        what-is-creativity: What is Creativity?
+        poetry-programming: Poetry & Programming
+        push-yourself: Push yourself. Anyone can learn.
+        classic-maze-intro: Classic Maze - Introduction
+        code-break: Take a Code Break
+        blockchain-introd: 'How Blockchain Works: Introduction'
+        ai-ethis: Ethics & AI
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

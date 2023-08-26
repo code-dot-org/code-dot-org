@@ -1,17 +1,5 @@
 ---
-title: CS Connections
-theme: responsive
-set_dir: true
-social:
-  og:title: CS Connections
-  twitter:title: CS Connections
-  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
-  og:image:width: 1200
-  og:image:height: 630
-  twitter:card: summary_large_image
-  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+title: Інтеграція інформатики та з інформатикою
 ---
 
 <style>
@@ -29,55 +17,55 @@ social:
 
 {{ ai_skinny_banner_2023 }}
 
-# Computer Science Connections
+# Інтеграція інформатики
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+Наша новітня навчальна програма встановлює інтеграційні зв'язки між вивченням інформатики та іншими предметами, такими як математика, мови, природничі науки та суспільствознавство. Завдяки інтеграції учні 1-12 класів вивчають свої звичні предмети новими захоплюючими способами!
 
-## Modules
+## Модулі
 
-CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
+Модулі Інтегрованої інформатики - це структурована серія уроків, які інтегрують вивчення інформатики з основними предметами, такими як математика, англійська мова та природничі науки. Ці модулі приведені у відповідність до стандартів з різних предметів і завершуються міжпредметним проєктом.
 
-They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
+Вони ідеально підходять для вчителів, які хочуть включити інформатику в свої плани уроків з інших предметів, а також для вчителів інформатики, які хочуть закріпити те, що учні вивчають з інших предметів.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Мова", duration: "5 годин", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Кодування поезії", right_description: "Поєднайте інформатику та поезію з цією серією уроків.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Переглянути модуль" }}
 
 <aside>
-  <h3><strong>Feedback</strong></h3>
-  <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
+  <h3><strong>Відгук</strong></h3>
+  <p>Це бета-версія нашої нової навчальної програми Інтеграція інформатики. Ми все ще додаємо останні штрихи до цих уроків. Чи є у вас якісь відгуки, якими ви хотіли б поділитися?</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Залишити відгук</button></a>
 </aside>
 
-{{ csc_module, title: "Marine Life Ecosystems (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Science", duration: "4 hours", description: "Restore balance to a marine life ecosystem on the verge of overfishing.", button_text: "Learn more", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
-{{ csc_module, title: "Star Quilts (beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "3-5", subject: "Math", duration: "4 hours", description: "Design a Native American star quilt using rhombus patterns in The Artist.", button_text: "Learn more", url: "https://studio.code.org/s/csc-starquilts-2022" }}
-{{ csc_module, title: "Storytelling (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "3-5", subject: "ELA", duration: "4 hours", description: "Compare and contrast stories from around the world and create your own short story animation.", button_text: "Learn more", url: "https://studio.code.org/s/csc-fables-2022" }}
-{{ csc_module, title: "Time Capsule (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Social Studies", duration: "4 hours", description: "Create an immersive time capsule experience and share your story of now.", button_text: "Learn more", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
+{{ csc_module, title: "Морська екосистема (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Природа", duration: "4 години", description: "Відновіть баланс морської екосистеми на межі надмірного вилову.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
+{{ csc_module, title: "Зіркові кілти (beta)", image: "/images/csc/landing/module_star_quilts.png", grades: "3-5", subject: "Математика", duration: "4 години", description: "Розробіть індіанську зіркову ковдру за допомогою ромбових візерунків у Художнику.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/csc-starquilts-2022" }}
+{{ csc_module, title: "Сторітелінг (beta)", image: "/images/csc/landing/module_storytelling.png", grades: "3-5", subject: "Мова", duration: "4 години", description: "Порівнюйте історії з усього світу та створюйте власну коротку анімацію.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/csc-fables-2022" }}
+{{ csc_module, title: "Капсула часу (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Соціальні науки", duration: "4 години", description: "Створіть захоплюючу капсулу часу та поділіться своєю історією.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
 {{ clearfix }}
 
-## Sample Projects
+## Приклади проєктів
 
-Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+Продовжуйте встановлювати зв'язки між інформатикою та традиційними предметами за допомогою наших міжпредметних проєктів. Вони тривають лише 1-2 навчальні години та ідеально підходять для вчителів, які бажають розробити тематичні проєкти, що вписуються в існуючу навчальну програму.
 
-<em>Tip: These projects require some understanding of computer science basics, so we recommend completing our Hello World Hour of Code activity before getting started!</em>
+<em>Порада: Ці проєкти вимагають певного розуміння основ інформатики, тому перед початком роботи ми рекомендуємо пройти завдання "Година коду "Привіт, світе"!</em>
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "Всі", duration: "1 година", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Привіт, світе!", right_description: "Познайомте учнів зі Спрайт Лабораторією. Завдяки цим новим навичкам учні зможуть створювати проєкти на будь-яку тему, включно з деякими міжпредметними варіантами, наведеними нижче.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "Переглянути план уроку" }}
 
-{{ csc_module, title: "Ecosystems Sample", image: "", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
-{{ csc_module, title: "Life Cycles Sample", grades: "3+", image: "", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
-{{ csc_module, title: "Character Study Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn't physics - this project allows students to use code to build a scene from a story that shows how one character's actions affects the chain of events.", button_text: "Learn more", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "Story Morals Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "Приклад екосистем", image: "", grades: "3+", subject: "Природа", duration: "1-2 години", description: "Використовуючи основні навички кодування, учні створюють інтерактивну модель екосистеми, яка досліджує, як різні тварини, рослини та організми впливають один на одного. Ця модель також може бути адаптована до взаємодії між геосферою, біосферою, гідросферою та/або атмосферою.", button_text: "Дізнатись більше", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Приклад життєвого циклу", grades: "3+", image: "", subject: "Природа", duration: "1-2 години", description: "Перейдіть від яйця через пуголовка до жаби за допомогою цього проекту, у якому учні використовують код для створення моделі наукового циклу, наприклад життєвого циклу жаби чи передачі енергії!", button_text: "Дізнатись більше", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Приклад дослідження персонажа", image: "", grades: "3+", subject: "Мова", duration: "1-2 години", description: "Кожна дія має реакцію! Ні, це не фізика – цей проект дозволяє учням використовувати код для створення сцени з історії, яка показує, як дії одного персонажа впливають на ланцюжок подій.", button_text: "Дізнатись більше", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Приклад моралі історії", image: "", grades: "3+", subject: "Мова", duration: "1-2 години", description: "Що відбувається між \"Одного разу\" and \"Кінець?\" Учні кодують інтерактивний застосунок, який переказує історію та її мораль. Учні можуть застосувати цю навичку до будь-якої історії, казки, книги чи байки.", button_text: "Дізнатись більше", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
-## Quick Activities
+## Швидкі завдання
 
-Our Quick Activities provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
+Наші "Швидкі завдання" - це швидкий і цікавий спосіб встановити зв'язок між інформатикою та іншими предметами. Ці уроки не вимагають попередніх знань з інформатики, тому вони ідеально підходять для будь-якого вчителя, який хоче включити важливі знання 21 століття в традиційний навчальний план або мотивувати учнів вивчати старі предмети новими захоплюючими способами.
 
 
-{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
-{{ csc_module, title: "Counting with Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 hour", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
-{{ csc_module, title: "AI Code of Ethics", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "Learn more", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
-{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ csc_module, title: "Правопис із Бджілкою", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Мова", duration: "1 година", description: "В-Е-С-Е-Л-О! У цьому уроці учні використовують базові навички кодування, щоб вказати Бджілці, де Д-З-И-Ж-Ч-А-Т-И, щоб написати слова у сітці, заповненій літерами.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Рахуємо з Лорел", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Математика", duration: "1 година", description: "Це полювання за скарбами! Учні попрактикуються в рахуванні та додаванні коду за допомогою циклів, щоб допомогти Лорел зібрати дорогоцінні камені в сітці лабіринту.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Етичний код ШІ", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "Мова та гуманітарні предмети", duration: "1 година", description: "Після дослідження потенційних етичних пасток штучного інтелекту (ШІ) учні разом розробляють ресурс Етичний кодекс ШІ", button_text: "Дізнатись більше", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Візуалізація даних", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Математика", duration: "1 година", description: "На цьому уроці учні знайомляться з інструментом Візуалізатор даних у Програмній Лабораторії, а також з двома важливими типами діаграм: гістограмою та стовпчиковою діаграмою. Протягом уроку учні формуватимуть навички використання цього інструменту та читання даних.", button_text: "Дізнатись більше", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
 {{ clearfix }}
 
-<em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>
+<em>Закінчили всі завдання з інтеграції інформатики та/або шукаєте більше варіантів для свого класу? Будь ласка, <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">діліться своїми відгуками</a> та ідеями щодо нових уроків тут!</em>
 
 {{ visit_partial_event_logger }}

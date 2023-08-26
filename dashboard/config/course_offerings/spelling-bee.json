@@ -10,6 +10,11 @@
   "header": "csc",
   "image": "https://images.code.org/83b777315a136ad7f6dcd7d868dc8a0e-CSCLanding_SpellingBeeLesson.png",
   "cs_topic": "programming",
-  "school_subject": "english_language_arts",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Learn sequencing and word magic with buzzing adventure! Guide the bee to spell like a pro with your own series of coding commands.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

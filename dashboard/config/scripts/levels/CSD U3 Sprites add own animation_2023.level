@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-21T00:33:04.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -82,17 +87,10 @@
     "validation_enabled": "false",
     "start_blocks": "// Create character sprite and set animation and location\r\nvar character = createSprite(225, 300);\r\nvar character2 = createSprite(75, 175);\r\n\r\n// Draw background\r\nbackground(\"black\");\r\n\r\n// Draw planets\r\nnoStroke();\r\nfill(\"DarkGrey\");\r\nellipse(50, 300);\r\nfill(\"LightCoral\");\r\nellipse(150, 100);\r\nfill(\"Thistle\");\r\nellipse(250, 50);\r\nfill(\"Aquamarine\");\r\nellipse(300, 200);\r\n\r\n//Draw stars\r\nfill(\"white\");\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\n\r\n// Draw sprite\r\ndrawSprites();\r\n",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "0LWI1e8J4t7hD6/WZ7MmOT0trYPv4n1SxbTXmSpIqkEESt4xIARIZw0pmLvC\nWPhWspDzaszEVaaXi+2o/Fv4jA==\n"
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-21T00:33:04.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T00:33:04.415+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites draw animation_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites draw animation_2023\"},{\"changed_at\":\"2022-09-21 00:35:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:48:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:50:23 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:59:26 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:03:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:03:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:06:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:07:45 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:09:09 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T00:33:04.415+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites draw animation_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites draw animation_2023\"},{\"changed_at\":\"2022-09-21 00:35:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:48:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:50:23 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 00:59:26 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:03:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:03:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:06:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:07:45 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-21 01:09:09 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-10 02:40:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

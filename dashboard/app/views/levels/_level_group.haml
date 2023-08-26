@@ -51,7 +51,7 @@
             = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
 
     - unless @script_level.nil?
-      = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
+      = render partial: 'levels/dialog', locals: {app: app, previous_page_button: page.page_number > 1, next_page_button: page.page_number < @total_page_count}
 
 - content_for(:head) do
   - level_data = data

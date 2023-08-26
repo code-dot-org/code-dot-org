@@ -5,14 +5,40 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import CurriculumCatalog from '../../../../templates/curriculumCatalog/CurriculumCatalog';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(function () {
   const catalogData = getScriptData('catalog');
-  const {curriculaData, isEnglish} = catalogData;
+  const {
+    curriculaData,
+    isEnglish,
+    languageEnglishName,
+    languageNativeName,
+    sections,
+    isSignedOut,
+    isTeacher,
+    isInUS,
+  } = catalogData;
+
+  const store = getStore();
+  sections && store.dispatch(setSections(sections));
+
+  analyticsReporter.sendEvent(EVENTS.CURRICULUM_CATALOG_VISITED_EVENT, {
+    language: languageEnglishName,
+  });
 
   ReactDOM.render(
-    <Provider store={getStore()}>
-      <CurriculumCatalog curriculaData={curriculaData} isEnglish={isEnglish} />
+    <Provider store={store}>
+      <CurriculumCatalog
+        curriculaData={curriculaData}
+        isEnglish={isEnglish}
+        languageNativeName={languageNativeName}
+        isSignedOut={isSignedOut}
+        isTeacher={isTeacher}
+        isInUS={isInUS}
+      />
     </Provider>,
     document.getElementById('curriculum-catalog-container')
   );

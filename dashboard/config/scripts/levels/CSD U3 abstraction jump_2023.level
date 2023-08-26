@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:01:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -68,7 +73,7 @@
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S17_C1\",\r\n  \"callout_text\": \"Look at this if statement\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered1\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"  if (frog.y > 324) {\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S17_C2\",\r\n  \"callout_text\": \"Send the frog back down here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered2\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// send it back down\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 60\r\n    }\r\n   }\r\n  }\r\n }\r\n ]",
-    "long_instructions": "# Player Controls\r\n\r\nThe up arrow should make the player jump.  There are three parts to jumping: jump up when a key is pressed, go down when you're high enough, and don't fall through the ground!\r\n\r\n# Do this\r\n\r\n* Find the code comment `// JUMPING` and read the three comments in that section.\r\n* Add a conditional that checks whether the player has pressed the \"up\" key.\r\n  * If the up key is pressed, use the velocityY property to start the player (frog) sprite moving up.\r\n  * Test your code to see whether the sprite goes up when you press the up arrow.\r\n* Add a conditional that uses the sprite's y property to check whether it is high enough.\r\n  * If it is far enough up the screen, start the sprite moving back down.\r\n  * Test your code to see whether the sprite goes back down when it gets to the top if its jump.\r\n* Add a conditional to check whether the sprite is low enough on the screen to be on the ground.\r\n  * If it is far enough down the screen, stop the sprite.\r\n  * Test to make sure the sprite does not go through the ground at the end of the jump.",
+    "long_instructions": "# Player Controls\r\n\r\nThe up arrow should make the player jump.  There are three parts to jumping: jump up when a key is pressed, go down when you're high enough, and don't fall through the ground!\r\n\r\n# Do This\r\n\r\n1) Find the code comment `// JUMPING` and read the three comments in that section.\r\n* Add a conditional that checks whether the player has pressed the \"up\" key.\r\n  * If the up key is pressed, use the [`velocityY`(#f78183)](/docs/ide/gamelab/expressions/velocityY) property to start the player (frog) sprite moving up.\r\n  * Test your code to see whether the sprite goes up when you press the up arrow.\r\n* Add a conditional that uses the sprite's [`y`(#f78183)](/docs/ide/gamelab/expressions/y) property to check whether it is high enough.\r\n  * If it is far enough up the screen, add code to make the sprite move back down the screen.\r\n  * Test your code to see whether the sprite goes back down when it gets to the top if its jump.\r\n* Add a conditional to check whether the sprite is low enough on the screen to be on the ground.\r\n  * If it is far enough down the screen, add code to stop the sprite.\r\n  * Test to make sure the sprite does not go through the ground at the end of the jump.",
     "project_template_level_name": "CSD U3 abstraction sidescroll template_2023",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
@@ -105,13 +110,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:01:05.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.158+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jump_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jump_2022\"},{\"changed_at\":\"2023-03-09 17:48:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.158+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jump_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jump_2022\"},{\"changed_at\":\"2023-03-09 17:48:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-25 19:25:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-25 19:36:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 16:50:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-15 16:21:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

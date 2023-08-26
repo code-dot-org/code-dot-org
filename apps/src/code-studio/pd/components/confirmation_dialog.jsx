@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class ConfirmationDialog extends React.Component {
   static propTypes = {

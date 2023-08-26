@@ -1,29 +1,45 @@
 # HTTP Cache configuration.
-#
+
 # Provides application-specific cache configuration used by all our various
 # HTTP cache layers.
-#
+
 # Note that this implementation does include some Varnish-specific logic; we no
 # longer use Varnish and so no longer rely on that logic. We could consider
 # removing our support for Varnish and simplifying this implementation.
-#
+
 # `pegasus` and `dashboard` keys each return a Hash in the following format:
-#
-# - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched in-order until the first matching `path` is found. If no `path` matches the request, the `default` behavior is used.
-#   - `path`: Path string to match this behavior against.  A single `*`-wildcard is required, either an extension-wildcard `/*.jpg` or path-wildcard `/api/*`.
-#     - `path` can be a String or an Array. If it is an Array, a separate behavior will be generated for each element.
-#     - Paths match the CloudFront [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern) syntax, with additional restrictions:
+
+# - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched
+#    in-order until the first matching `path` is found. If no `path` matches the
+#    request, the `default` behavior is used.
+#   - `path`: Path string to match this behavior against.  A single `*`-wildcard is
+#      required, either an extension-wildcard `/*.jpg` or path-wildcard `/api/*`.
+#     - `path` can be a String or an Array. If it is an Array, a separate behavior will
+#       be generated for each element.
+#     - Paths match the CloudFront
+#       [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
+#       syntax, with additional restrictions:
 #       - `?` and `&` characters are not allowed.
 #       - Only a single `*` wildcard is allowed at the start or end of the path pattern.
-#   - `headers` (CloudFront-only): Cache objects based on additional HTTP request headers.  To include all headers (which disables caching entirely for the path), pass `['*']`.  To include no additional request headers in the cache key, pass `[]`.
+#   - `headers` (CloudFront-only): Cache objects based on additional HTTP request headers.
+#      To include all headers (which disables caching entirely for the path), pass `['*']`.
+#      To include no additional request headers in the cache key, pass `[]`.
 #     - Note: Objects are already cached based on the `Host` header by default.
-#     - Note: `headers` is currently only used by CloudFront, while Varnish caches objects based on the `Vary` HTTP response header.
+#     - Note: `headers` is currently only used by CloudFront, while Varnish caches objects
+#       based on the `Vary` HTTP response header.
 #   - `query`: (boolean) Forward query strings to the origin. (default `true`)
-#   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all cookies for the path, pass `'none'`.
-#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the specified origin. (Currently either `'dashboard'` or `'pegasus'`)
-#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc` configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its request to `server1-studio.code.org/here/abc`.
-#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly when passed through to Varnish.)
-# - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax as `behaviors` except `path` is not required.
+#   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include
+#     in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all
+#     cookies for the path, pass `'none'`.
+#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
+#      specified origin. (Currently either `'dashboard'` or `'pegasus'`)
+#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc`
+#       configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its
+#       request to `server1-studio.code.org/here/abc`.
+#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly
+#       when passed through to Varnish.)
+# - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax
+#    as `behaviors` except `path` is not required.
 class HttpCache
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze

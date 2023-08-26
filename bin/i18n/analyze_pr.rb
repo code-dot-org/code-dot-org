@@ -28,10 +28,10 @@ end
 def find_issues(query)
   issues = Octokit.search_issues "repo:#{GitHub::REPO} #{query}"
   summaries = issues[:items].map do |item|
-    "##{item[:number]}: #{item[:title]}\n"\
-      "  - State: #{item[:state]}\n" \
-      "  - Created_at: #{item[:created_at]}\n" \
-      "  - Open in browser: #{item[:html_url]}"
+    "##{item[:number]}: #{item[:title]}\n  " \
+      "- State: #{item[:state]}\n  " \
+      "- Created_at: #{item[:created_at]}\n  " \
+      "- Open in browser: #{item[:html_url]}"
   end
 
   "Found #{issues[:total_count]} PR(s) match the search query '#{query}'\n" + summaries.join("\n\n")
@@ -67,10 +67,10 @@ def analyze_pr_commits(pr_number, commit_count)
 
   reports = top_commits.map do |commit|
     top_file = commit[:files].max_by {|f| f[:changes]}
-    "- Commit: #{commit[:message]}\n" \
-      "  - #{commit[:total]} changes (#{commit[:additions]} additions, #{commit[:deletions]} deletions).\n" \
-      "  - #{commit[:file_count]} files changed.\n" \
-      "  - File with the most changes: `#{top_file[:filename]}`, " \
+    "- Commit: #{commit[:message]}\n  " \
+      "- #{commit[:total]} changes (#{commit[:additions]} additions, #{commit[:deletions]} deletions).\n  " \
+      "- #{commit[:file_count]} files changed.\n  " \
+      "- File with the most changes: `#{top_file[:filename]}`, " \
       "#{top_file[:changes]} changes (#{top_file[:additions]} additions, #{top_file[:deletions]} deletions)."
   end
 

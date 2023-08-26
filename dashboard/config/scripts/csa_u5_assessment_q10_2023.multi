@@ -27,3 +27,6 @@ The code does not work as intended. Which of the following arrays can be passed 
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+If we pass the array `{{1, 0}, {1, 0}}` to the `reverse` method, it will return `{{0, 1}, {0, 1}}` instead of the expected result `{{1, 0}, {1, 0}}`. This shows that the method does not correctly reverse the elements.
+MARKDOWN

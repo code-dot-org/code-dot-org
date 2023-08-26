@@ -1,0 +1,25 @@
+name 'SP-VPL-CSD-21-Navigation-Mod2_aiml'
+title 'Navigating this Professional Learning Course'
+description 'description here'
+
+markdown <<MARKDOWN
+# Let's keep learning!
+
+##### You are finished with the section of the professional learning experience focused on getting started with Code.org. **Now it's time to learn more about Teaching the Creating Apps with Devices unit.** 
+
+
+## Choose your path to continue learning
+
+##### **Option A:** Click on the "Continue to next module" button to move directly to the next topic: Preparing to Teach Creating Apps for Devices. 
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-aiml2/lessons/1/levels/1" rel="noopener noreferrer" style="float:right;">Continue to next topic</a>
+
+<div style="clear:both"/>
+
+![](https://images.code.org/03f4f2b127d641ae8bb91b243d6801ed-image-1673472750591.32.09 PM.png)
+
+##### **Option B:** If you would like to continue learning later, click the continue button below to return to your "My Dashboard" page. From here you can return to this professional learning experience at any time buy selecting "Teaching Creating Apps with Devices" in the "My Professional Learning Courses" section of the page. 
+
+
+<div style="clear:both"/>
+MARKDOWN

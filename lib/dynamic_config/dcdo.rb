@@ -44,10 +44,14 @@ class DCDOBase < DynamicConfigBase
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
-      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
-      'teach-ai-launch-2023': DCDO.get('teach-ai-launch-2023', false)
+      'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
+      'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
+      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
+      'family-name-features': DCDO.get('family-name-features', false),
+      cpa_experience: DCDO.get('cpa_experience', false),
+      gender: DCDO.get('gender', false),
     }
   end
 end

@@ -950,3 +950,12 @@ export function isTestEnvironment() {
 export function isProductionEnvironment() {
   return getEnvironment() === Environments.production;
 }
+
+/**
+ * Fetch cookies signed by cloudfront which grant access to restricted content.
+ * @returns {Promise<Response>}
+ * TODO: Reuse this in Dance Party (Dance.js and songs.js)
+ */
+export function fetchSignedCookies() {
+  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+}

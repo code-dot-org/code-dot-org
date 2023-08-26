@@ -1,19 +1,22 @@
 import {BlockTypes} from '../blockTypes';
 import {
   TRIGGER_FIELD,
-  DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
+  DOCS_BASE_URL,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTriggerDefinition,
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
 import musicI18n from '../../locale';
@@ -93,22 +96,37 @@ export const whenRunSimple2 = {
 export const triggeredAtSimple2 = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
-    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1', when: '%2'}),
     args0: [
+      fieldTriggerDefinition,
       {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
+        type: 'field_dropdown',
+        name: FIELD_TRIGGER_START_NAME,
+        options: [
+          [
+            musicI18n.blockly_fieldTriggerStartImmediately(),
+            TriggerStart.IMMEDIATELY,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextBeat(),
+            TriggerStart.NEXT_BEAT,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextMeasure(),
+            TriggerStart.NEXT_MEASURE,
+          ],
+        ],
       },
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
-    extensions: [DYNAMIC_TRIGGER_EXTENSION],
+    helpUrl: DOCS_BASE_URL + 'trigger',
   },
   generator: block =>
     `
-      Sequencer.newSequence(Math.ceil(startPosition), true);
+      Sequencer.newSequence(startPosition, true);
       Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
       Sequencer.playSequential();
     `,
@@ -124,12 +142,12 @@ export const playSoundAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_sample',
   },
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
       block.id
-    }");`,
+    }");\n`,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {
@@ -142,7 +160,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_pattern',
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
@@ -160,7 +178,7 @@ export const playChordAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayChordTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_keys',
   },
   generator: block =>
     `Sequencer.playChord(${JSON.stringify(
@@ -178,7 +196,7 @@ export const playRestAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockRestTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'rest',
   },
   generator: block =>
     `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`,
@@ -213,7 +231,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockSetEffectTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'set_effect',
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
@@ -239,7 +257,7 @@ export const playSoundsTogether = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsTogether(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_together',
   },
   generator: block =>
     ` Sequencer.playTogether();
@@ -265,7 +283,7 @@ export const playSoundsSequential = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsSequentialTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_sequential',
   },
   generator: block =>
     ` Sequencer.playSequential();
@@ -291,7 +309,7 @@ export const playSoundsRandom = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsRandomTooltip(),
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'play_random',
   },
   generator: block => {
     const resultArray = [];
@@ -345,7 +363,7 @@ export const repeatSimple2 = {
     nextStatement: null,
     style: 'loop_blocks',
     tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
-    helpUrl: '',
+    helpUrl: DOCS_BASE_URL + 'repeat',
   },
   generator: block => {
     const repeats = block.getFieldValue('times');

@@ -65,6 +65,10 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -160,6 +164,8 @@ class ScriptLevelsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    @rubric = @script_level.lesson.rubric
+
     present_level
   end
 
@@ -173,6 +179,21 @@ class ScriptLevelsController < ApplicationController
     else
       script.get_script_level_by_id(params[:id])
     end
+  end
+
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.  Note that this can be cached for a relatively
+  # long amount of time, including by the CDN, and does not vary per user.
+  def level_properties
+    authorize! :read, ScriptLevel
+
+    @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+
+    @level = @script_level.level
+
+    render json: @level.summarize_for_lab2_properties
   end
 
   # Get a list of hidden lessons for the current users section
@@ -532,6 +553,9 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
+
+    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
+
     render 'levels/show', formats: [:html]
   end
 

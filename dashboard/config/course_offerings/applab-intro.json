@@ -11,5 +11,10 @@
   "image": "https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro to App Lab.png",
   "cs_topic": "app_design,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Welcome to AppLab! Create your own app in JavaScript using either block-based programming or text.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/wAuYr1IntQs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=wAuYr1IntQs&wmode=transparent",
+  "published_date": "2017-11-27 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

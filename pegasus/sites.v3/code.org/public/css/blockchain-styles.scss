@@ -8,18 +8,8 @@
   background: url('/images/circuit-bg.png') center center no-repeat;
   background-size: cover;
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
   .text-wrapper {
-
-    @media screen and (max-width: $width-md) {
-      width: 60%;
-    }
+    width: 64%;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
@@ -27,28 +17,14 @@
   }
 
   figure {
-
-    @media screen and (max-width: $width-md) {
-      width: 33%;
-    }
+    width: 30%;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
-      margin-top: 2em;
+      margin-top: 2rem;
     }
-  }
 
-  img {
-    @media screen and (max-width: $width-md) {
-      display: block;
-    }
-  }
-}
-
-.video-series {
-
-  @media screen and (max-width: $width-sm) {
-    figure {
+    img {
       width: 100%;
     }
   }

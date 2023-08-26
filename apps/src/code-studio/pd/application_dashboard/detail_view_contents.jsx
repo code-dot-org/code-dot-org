@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Row,
   Col,
@@ -11,6 +12,7 @@ import {
   InputGroup,
   Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
 import {
@@ -19,7 +21,7 @@ import {
   UNMATCHED_PARTNER_LABEL,
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ScholarshipDropdown} from '../components/scholarshipDropdown';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,

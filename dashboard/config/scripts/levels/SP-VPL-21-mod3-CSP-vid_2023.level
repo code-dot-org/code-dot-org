@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-05-30T13:36:05.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_overview_CSP",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 29150,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "\r\n## Consider the following when watching this video:\r\n#### What about CS Principles will be most exciting for my students?\r\n<div>\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-30T13:36:05.797+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod3-CSP-vid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod3-CSP-vid_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -18,7 +17,6 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
-  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',
@@ -392,26 +390,6 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result,
         });
         resolve(result);
-      })
-      .fail((jqXhr, status) => {
-        dispatch({type: EDIT_SECTION_FAILURE});
-        reject(status);
-      });
-  });
-};
-
-export const reloadAfterEditingSection = () => (dispatch, getState) => {
-  const state = getState().teacherSections;
-  const section = state.sectionBeingEdited;
-  return new Promise((resolve, reject) => {
-    submitEditingSection(dispatch, getState)
-      .done(result => {
-        dispatch({
-          type: EDIT_SECTION_SUCCESS,
-          sectionId: section.id,
-          serverSection: result,
-        });
-        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -1148,6 +1126,10 @@ export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
 }
 
+export function sectionUnitName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).courseVersionName;
+}
+
 export function selectedSection(state) {
   const selectedSectionId = getRoot(state).selectedSectionId;
   if (selectedSectionId) {
@@ -1176,54 +1158,6 @@ export function assignedCourseOffering(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
   return courseOfferings[sectionBeingEdited?.courseOfferingId];
-}
-
-function assignedUnit(state) {
-  const {sectionBeingEdited, courseOfferings} = getRoot(state);
-
-  let assignedUnit = null;
-  const courseVersion =
-    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
-      sectionBeingEdited.courseVersionId
-    ];
-
-  if (courseVersion) {
-    if (sectionBeingEdited.unitId) {
-      assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
-    } else if (courseVersion.type === 'Unit') {
-      assignedUnit = Object.values(courseVersion.units)[0];
-    }
-  }
-
-  return assignedUnit;
-}
-
-export function assignedUnitName(state) {
-  const {sectionBeingEdited} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return '';
-  }
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.name : '';
-}
-
-export function assignedUnitLessonExtrasAvailable(state) {
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.lesson_extras_available : false;
-}
-
-export function assignedUnitTextToSpeechEnabled(state) {
-  const {sectionBeingEdited} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return false;
-  }
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.text_to_speech_enabled : false;
-}
-
-export function assignedUnitRequiresVerifiedInstructor(state) {
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.requires_verified_instructor : false;
 }
 
 export function getVisibleSections(state) {
@@ -1301,10 +1235,12 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
+  familyName: serverStudent.family_name,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPicturePath: serverStudent.secret_picture_path,
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
+  userType: serverStudent.user_type,
 });
 
 /**
@@ -1377,17 +1313,6 @@ export const assignmentPaths = (courseOfferings, section) => {
  */
 export function isAddingSection(state) {
   return !!(state.sectionBeingEdited && state.sectionBeingEdited.id < 0);
-}
-
-/**
- * Ask whether the user is currently editing an existing section using the
- * Edit Section dialog.
- */
-export function isEditingSection(state) {
-  return (
-    !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
-    state.showSectionEditDialog
-  );
 }
 
 /**
@@ -1473,6 +1398,7 @@ export const studentShape = PropTypes.shape({
   sectionId: PropTypes.number,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  familyName: PropTypes.string,
   sharingDisabled: PropTypes.bool,
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string,

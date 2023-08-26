@@ -1,0 +1,14 @@
+{
+  "category": "World",
+  "config": {
+    "func": "printText",
+    "docFunc": "gamelab_printText",
+    "blockText": "print {TEXT}",
+    "args": [
+      {
+        "name": "TEXT"
+      }
+    ],
+    "style": "default"
+  }
+}

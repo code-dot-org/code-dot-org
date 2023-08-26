@@ -4,17 +4,28 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "9769d383-38a6-4dff-90ea-a963dcfd8e29",
+          "notice": "Time Capsule Pilot is being deprecated",
+          "details": "We are in the process of fully removing the Time Capsule Pilot content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Time Capsule Pilot content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-2022-timecapsule",
       "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-timecapsule",
-    "serialized_at": "2022-04-27 17:06:22 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2023-06-27 22:24:56 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -864,6 +875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-intro-video-level"
+        ],
         "progression": "Video"
       },
       "bonus": false,

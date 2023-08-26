@@ -1,0 +1,11 @@
+name 'CSD U6 - Design - prototype1_csd-vpl-23'
+title 'Prototype A'
+display_name 'Prototype A'
+description 'Prototype A'
+markdown <<MARKDOWN
+# Prototype A
+
+_"This is a prototype for a traffic control light. It can be used in situations where a traffic light is broken or the power is out somewhere. The controller presses the Stop and Go buttons which light up the different colored lights"_
+
+![](https://images.code.org/abe4d34a23dfa3639954a1949294c67a-image-1679090944337.png)
+MARKDOWN

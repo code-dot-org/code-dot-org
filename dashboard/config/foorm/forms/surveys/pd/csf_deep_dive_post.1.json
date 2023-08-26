@@ -1,6 +1,6 @@
 {
   "published": true,
-  "title": "CS Fundamentals Deep Dive Post Survey",
+  "title": "Code.org K-5 Deep Dive Post Survey",
   "pages": [
     {
       "name": "preamble_page",
@@ -9,7 +9,7 @@
           "type": "html",
           "name": "overview_text",
           "hideNumber": true,
-          "html": "<p>Thank you for spending the day with us at the CS Fundamentals Deep Dive workshop. Your participation in the workshop and responses to this post workshop survey will help Code.org and your facilitator(s) continue to reflect and adjust.</p>\n\n<p>The purpose of this survey is to:</p>\n<ul>\n    <li>Help us understand if the workshop supported your needs and development.</li>\n    <li>Give us ideas about how we might improve the workshop for the future.</li>\n</ul>\n<p>\nYour <strong>honesty and candor</strong> are appreciated. This survey should take about 10 minutes to complete.\n</p>"
+          "html": "<p>Thank you for spending the day with us at Code.org's K-5 Deep Dive workshop. Your participation in the workshop and responses to this post workshop survey will help Code.org and your facilitator(s) continue to reflect and adjust.</p>\n\n<p>The purpose of this survey is to:</p>\n<ul>\n    <li>Help us understand if the workshop supported your needs and development.</li>\n    <li>Give us ideas about how we might improve the workshop for the future.</li>\n</ul>\n<p>\nYour <strong>honesty and candor</strong> are appreciated. This survey should take about 10 minutes to complete.\n</p>"
         }
       ]
     },

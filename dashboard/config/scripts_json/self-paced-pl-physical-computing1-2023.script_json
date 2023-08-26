@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "CSD Self Paced PL",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-17 23:20:26 UTC",
+    "serialized_at": "2023-07-03 15:48:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -316,6 +317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -338,6 +342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_physical-computing"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -360,6 +367,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -382,6 +392,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_physical-computing"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -404,6 +417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -426,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-tour-vid_physical-computing"
+        ],
         "progression": "Tour the Code.org learning platform"
       },
       "bonus": false,
@@ -448,6 +467,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing"
+        ],
         "progression": "Tour the Code.org learning platform"
       },
       "bonus": false,
@@ -470,6 +492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_physical-computing"
+        ],
         "progression": "Set-up a class section"
       },
       "bonus": false,
@@ -492,6 +517,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing"
+        ],
         "progression": "Set-up a class section"
       },
       "bonus": false,
@@ -514,6 +542,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing"
+        ],
         "progression": "Set-up a class section"
       },
       "bonus": false,
@@ -536,6 +567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_physical-computing"
+        ],
         "progression": "Explore the student view"
       },
       "bonus": false,
@@ -558,6 +592,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing"
+        ],
         "progression": "Explore the student view"
       },
       "bonus": false,
@@ -580,6 +617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_physical-computing"
+        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -602,6 +642,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing"
+        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -624,6 +667,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing"
+        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -646,6 +692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -668,6 +717,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -690,6 +742,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -712,6 +767,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -734,6 +792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -756,6 +817,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -778,6 +842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -800,6 +867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -822,6 +892,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -844,6 +917,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -866,6 +942,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -888,6 +967,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -910,6 +992,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

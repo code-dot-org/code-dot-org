@@ -1,15 +1,20 @@
 {
   "key": "devices",
-  "display_name": "Creating Apps for Devices (Circuit Playground)",
+  "display_name": "Creating Apps with Devices (Circuit Playground)",
   "category": "maker",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/a064570e370ae5651c19d7cd50665124-Circuit Playground.png",
   "cs_topic": "art_and_design,app_design,physical_computing,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "In this unit, students use App Lab and Adafruit's Circuit Playground to develop programs that use the same hardware inputs and outputs found in smart devices.",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/3wy9EXKhbtU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=3wy9EXKhbtU&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 401
 }

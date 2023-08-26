@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:14:04.000Z",
   "level_num": "custom",
@@ -27,11 +28,11 @@
       "setProperty": null,
       "setText": null,
       "randomNumber_min_max": null,
-      "on": null,
-      "off": null,
-      "pulse": null,
-      "blink": null,
-      "toggle": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].pulse": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].toggle": null,
       "color": null,
       "intensity": null
     },
@@ -75,14 +76,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/89a9c660849cfcd40de22f9e6f2cdad0-image-1648762877958.8.b-preview.gif)\r\n\r\n<br/>\r\n\r\nExpandable Example\r\n\r\n</div>\r\n\r\n# LED Counter\r\n\r\nWe can create a program that toggles the LEDs one at a time in a circle. This requires using variables to keep track of the LED you want to turn on and off, and an if-statement to loop back to the start when you reach the end of the ring. This program has already been started for you - you need to fill in the missing pieces.\r\n\r\n# Do This\r\n\r\n- Use your variable to toggle the LED ([**Show Me Where**](#triggercallout=toggle))\r\n- Use the counter pattern to update the LED so that the next time the button is pressed, it will update the next LED ([**Show Me Where**](#triggercallout=counter))\r\n\r\n::: details [**Using Variables with LEDs**]\r\n![](https://images.code.org/8a296d5c848b17940d695ad95e8e69eb-image-1646089003459.png)\r\n:::",
     "encrypted_examples": "Tdp/2LM98q6uQMzSF6Dx2URKnjbO+frPSGs3zc0CXG37XDTLgt/fcuWmM4h4\nI9kBWzjph2Xu12vwt95/VPcxvw==\n",
     "parent_level_id": 20541,
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -96,9 +98,8 @@
     "thumbnail_url": "https://images.code.org/89a9c660849cfcd40de22f9e6f2cdad0-image-1648762877958.8.b-preview.gif",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:04.417+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - CA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:04.417+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - CA_2222\"},{\"changed_at\":\"2023-08-15 16:45:19 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:41:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

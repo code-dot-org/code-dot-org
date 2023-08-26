@@ -12,7 +12,6 @@ import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
-import experiments from '@cdo/apps/util/experiments';
 /**
  * Root of the animation editor interface mode for GameLab
  */
@@ -21,8 +20,6 @@ class AnimationTab extends React.Component {
     channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
-    // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
-    hideUploadOption: PropTypes.bool.isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
@@ -49,7 +46,6 @@ class AnimationTab extends React.Component {
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
-      hideUploadOption,
       interfaceMode,
       labType,
       libraryManifest,
@@ -63,8 +59,7 @@ class AnimationTab extends React.Component {
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType !== P5LabType.GAMELAB &&
-      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+      labType !== P5LabType.GAMELAB
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
 
@@ -94,7 +89,6 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={channelId}
             libraryManifest={libraryManifest}
-            hideUploadOption={hideUploadOption}
             hideAnimationNames={hideAnimationNames}
             navigable={!hideCostumes}
             hideBackgrounds={hideBackgrounds}

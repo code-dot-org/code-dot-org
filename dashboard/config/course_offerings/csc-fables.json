@@ -2,8 +2,8 @@
   "key": "csc-fables",
   "display_name": "Storytelling Module",
   "category": "csc",
-  "is_featured": true,
-  "assignable": true,
+  "is_featured": false,
+  "assignable": false,
   "curriculum_type": "Module",
   "marketing_initiative": "CSC",
   "grade_levels": "3,4,5",
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/8a6f12ecc488af8d3eff04aef49c57e9-CSCLanding_StoryMoralsProject.png",
   "cs_topic": "programming",
   "school_subject": "english_language_arts",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

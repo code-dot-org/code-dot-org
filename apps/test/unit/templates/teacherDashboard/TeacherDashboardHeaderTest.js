@@ -94,14 +94,14 @@ describe('TeacherDashboardHeader', () => {
     expect(dropdownLinks.at(1).contains(checkmarkIcon)).to.equal(false);
   });
 
-  it('renders button to edit section details', () => {
+  it('renders button to edit section details in new section setup flow', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
         element.is('Button') &&
-        element.prop('text') === i18n.editSectionDetails()
+        element.prop('text') === i18n.editSectionDetails() &&
+        element.prop('href') === '/sections/3/edit'
     );
     expect(editSectionButton).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
   });
 });

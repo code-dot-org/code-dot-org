@@ -1,0 +1,20 @@
+name 'virtual-pl-csd-summer-day1-async4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Choosing Your First Unit
+<br>
+<img src="https://images.code.org/c12a9ccca218deb4bfc8bc10658ea33f-image-1684267282016.png" alt="An orange speech bubble with a white question mark in it. This icon is used to signal a question for participants." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### **What unit will you teach first to your students? Why? Take 10-15 minutes to reflect on what you've learned about the CS Discoveries units so far.** Consider also:
+
+* #### How long will you have with your students? (A year, semester, etc.)
+* #### What resources will be available to you in your classroom(s)?
+* #### What interests do you think or know your students might have?
+<br>
+
+<img src="https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png" alt="A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### If you'd like to give your eyes a break from looking at the computer, consider looking at the CS Discoveries Syllabus on pages 3-9 of your Resource Packet and jotting down your thoughts in your journal. You can always change your mind about which unit you'll be starting with.
+MARKDOWN

@@ -36,7 +36,6 @@ describe('JavabuilderConnection', () => {
     setIsRunning = sinon.stub();
     setIsTesting = sinon.stub();
     connection = new JavabuilderConnection(
-      null,
       onOutputMessage,
       null,
       null,
@@ -128,7 +127,6 @@ describe('JavabuilderConnection', () => {
         close: closeStub,
       });
       const javabuilderConnection = new JavabuilderConnection(
-        null,
         onOutputMessage,
         null,
         null,
@@ -244,7 +242,6 @@ describe('JavabuilderConnection', () => {
 
     function createJavabuilderConnection(executionType) {
       return new JavabuilderConnection(
-        null,
         onOutputMessage,
         null,
         null,

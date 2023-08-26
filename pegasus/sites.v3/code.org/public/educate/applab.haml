@@ -15,7 +15,7 @@ video_player: true
 .tools-banner
   .tools-img-box
     %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png"), alt: ""}
-  .tools-info{style: "max-width: 688px;"}
+  .tools-info{style: "max-width: 658px;"}
     .tools-title-bar
       %h1.tools-title App Lab
     .tools-description
@@ -26,15 +26,13 @@ video_player: true
 
 .clear
 
-%div{style: "margin-top: 3em;"}
-  = view :maker_skinny_banner
-
 #resources.tile-container-responsive
   = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
   .col-50
     .tutorial-tile
-      = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
+      %div{style: "margin-bottom: -14px"}
+        = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
       .tutorial-info{style: "justify-content: flex-start;"}
         %h2 App Lab in the classroom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
@@ -90,9 +88,9 @@ video_player: true
         %p Course specific professional learning provides hands on experience with the curriculum.
       .pl-button
         %a{href: "/educate/professional-learning"}
-          %button.tutorial-gray Learn more
+          %button Learn more
 
-  %h3
+  %h3.heading-sm{style: "margin-top: 2rem"}
     %a{href: '/csp'} Computer Science Principles
     units that use App Lab
 
@@ -106,7 +104,7 @@ video_player: true
           %img{src: "/educate/csp/images/unit3.png", alt: ""}
           Unit 3
       %td
-        %b.purple Intro to App Design
+        %strong Intro to App Design
         %p Students design their first app while learning both fundamental programming concepts and collaborative software development processes. Students work with partners to develop a simple app that teaches classmates about a topic of personal interest. Throughout the unit, they learn how to use Code.org’s programming environment, App Lab, to design user interfaces and write simple event-driven programs. Along the way, students learn practices like debugging, pair programming, and collecting and responding to feedback, which they will be able to use throughout the course as they build ever more complex projects. The unit concludes with students sharing the apps they develop with their classmates.
     %tr
       %td
@@ -114,7 +112,7 @@ video_player: true
           %img{src: "/educate/csp/images/unit4.png", alt: ""}
           Unit 4
       %td
-        %b.purple Variables, Conditions, and Functions
+        %strong Variables, Conditions, and Functions
         %p Students expand the types of apps they can create as they learn how to store information (variables), make decisions (conditionals), and better organize code (functions). Each programming topic is covered in a specific sequence of lessons that ask students to ‘Explore’ ideas through hands-on activities, ‘Investigate’ these ideas through guided code reading, ‘Practice’ with sample problems, and apply their understanding as they ‘Make’ a one-day scoped project. The entire unit concludes with a three-day open-ended project in which students must build an app that makes a recommendation about any topic they wish.
     %tr
       %td
@@ -122,7 +120,7 @@ video_player: true
           %img{src: "/educate/csp/images/unit5.png", alt: ""}
           Unit 5
       %td
-        %b.purple Lists, Loops, and Traversals
+        %strong Lists, Loops, and Traversals
         %p Students learn to build apps that use and process lists of information. Like the previous unit, students learn the core concepts of lists, loops, and traversals through a series of EIPM lesson sequences. Later in the unit, students are introduced to tools that allow them to import tables of real-world data to help further power the types of apps they can make. At the conclusion of the unit, students complete a week-long project in which they must design an app around a goal of their choosing that uses one of these data sets.
     %tr
       %td
@@ -130,7 +128,7 @@ video_player: true
           %img{src: "/educate/csp/images/unit7.png", alt: ""}
           Unit 7
       %td
-        %b.purple Parameters, Return, and Libraries
+        %strong Parameters, Return, and Libraries
         %p Students learn how to design clean and reusable code that can be shared with a single classmate or the entire world. In the beginning of the unit, students are introduced to the concepts of parameters and return, which allow for students to design functions that implement an algorithm. In the second half of the unit, students learn how to design libraries of functions that can be packaged up and shared with others. The unit concludes with students designing their own small library of functions that can be used by a classmate.
     %tr
       %td
@@ -138,10 +136,10 @@ video_player: true
           %img{src: "/educate/csp/images/unit9.png", alt: ""}
           Unit 9
       %td
-        %b.purple Data
+        %strong Data
         %p Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab, but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
 
-  %h3
+  %h3.heading-sm{style: "margin-top: 2rem"}
     %a{href: '/csd'} Computer Science Discoveries
     units that use App Lab
 
@@ -155,7 +153,7 @@ video_player: true
           %img{src: "/educate/csp/images/thumb_app.png", alt: "", style: "padding-right: 5px;"}
           Unit 4
       %td
-        %b.purple The Design Process
+        %strong The Design Process
         %p In this unit, students are asked to consider and understand the needs of others while developing a solution to a problem through a series of design challenges. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration
     %tr
       %td
@@ -163,14 +161,14 @@ video_player: true
           %img{src: "/images/fit-50/animated-examples/circuitplayground.gif", alt: ""}
           Unit 6
       %td
-        %b.purple Physical Computing
+        %strong Physical Computing
         %p
           In this unit, students develop their programming skills in App Lab while exploring the role of hardware platforms in computing. Students look towards current and “smart” devices to understand the ways in which different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Note: This unit requires access to
           %a{href: "https://code.org/circuitplayground"}
             Adafruit's Circuit Playground
           board.
 
-  %h3
+  %h3.heading-sm{style: "margin-top: 2rem"}
     Flexible Units that use App Lab
 
   %table
@@ -183,7 +181,7 @@ video_player: true
           %img{src: "/images/fill-50x37/maker/maker-graphic.png", alt: ""}
           Unit
       %td
-        %b.purple Creating Apps with Devices
+        %strong Creating Apps with Devices
         %p
           In this Maker unit, students explore the role of physical devices in computing. Using App Lab, students develop programs that utilize the same hardware inputs and outputs that you see in smart devices, looking at how a simple prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
     %tr
@@ -192,7 +190,7 @@ video_player: true
           %img{src: "/images/fit-50/oceans/mobile-ai.png", alt: ""}
           Unit
       %td
-        %b.purple Artificial Intelligence (AI) and Machine Learning (ML)
+        %strong Artificial Intelligence (AI) and Machine Learning (ML)
         %p
           Artificial intelligence (AI) and machine learning (ML) are shaping the world around us. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. In this
           %a{href: CDO.studio_url("/s/aiml?viewAs=Instructor")}
@@ -202,7 +200,7 @@ video_player: true
 
 #videos
   %h2 Video library
-  Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
+  %p{style: "margin-bottom: 2rem"} Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
 
   - cspunit3_videos = []
   - cspunit3_videos << { id: 'turtle', category_title: 'Procedural abstraction and top-down design', caption: 'Program a turtle to move around the screen and draw anything from basic shapes to complex designs.', code: 'i2KHYUhtOlM', download_path: '//videos.code.org/2015/csp/applab/turtle.mp4', studio_stage: '/s/cspunit3/lessons/2/levels/1' }

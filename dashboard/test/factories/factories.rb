@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+require 'policies/child_account'
 
 FactoryBot.define do
   factory :course_offering do
@@ -129,8 +130,14 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
+      trait :with_recent_captcha do
+        last_verified_captcha_at {Time.now.utc}
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
+      end
+      factory :with_recent_captcha_teacher do
+        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -148,6 +155,12 @@ FactoryBot.define do
         after(:create) do |authorized_teacher|
           authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
           authorized_teacher.save
+        end
+      end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
         end
       end
       factory :facilitator do
@@ -353,6 +366,50 @@ FactoryBot.define do
       trait :without_email do
         email {''}
         hashed_email {nil}
+      end
+
+      trait :in_colorado do
+        us_state {'CO'}
+        country_code {'US'}
+      end
+
+      trait :unknown_us_region do
+        us_state {'??'}
+        country_code {'US'}
+      end
+
+      trait :U13 do
+        birthday {Time.zone.today - 12.years}
+      end
+
+      trait :not_U13 do
+        birthday {Time.zone.today - 13.years}
+      end
+
+      trait :with_parent_permission do
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      trait :with_pending_parent_permission do
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      trait :without_parent_permission do
+        child_account_compliance_state {nil}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+        factory :locked_out_child do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          child_account_compliance_state_last_updated {DateTime.now}
+          child_account_compliance_lock_out_date {DateTime.now}
+          trait :expired do
+            child_account_compliance_lock_out_date {7.days.ago}
+          end
+        end
       end
     end
 
@@ -747,6 +804,11 @@ FactoryBot.define do
 
   factory :dance, parent: :level, class: Dancelab do
     game {Game.dance}
+    level_num {'custom'}
+  end
+
+  factory :music, parent: :level, class: Music do
+    game {Game.music}
     level_num {'custom'}
   end
 
@@ -1506,8 +1568,8 @@ FactoryBot.define do
     contact_name {"Contact Name"}
     contact_email {"contact@code.org"}
     group {1}
-    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Time.zone.today - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Time.zone.today + 3.days).strftime("%Y-%m-%d")}
     csd_cost {10}
     csp_cost {12}
     cost_scholarship_information {"Additional scholarship information will be here."}
@@ -1518,13 +1580,13 @@ FactoryBot.define do
           :summer_workshop,
           location_name: "Training building",
           location_address: "3 Smith Street",
-          sessions_from: (Date.current + 3.months)
+          sessions_from: (Time.zone.today + 3.months)
         )
       ]
     end
 
     trait :with_apps_priority_deadline_date do
-      apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
+      apps_priority_deadline_date {(Time.zone.today + 5.days).strftime("%Y-%m-%d")}
     end
   end
 
@@ -1679,5 +1741,60 @@ FactoryBot.define do
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
+  end
+
+  factory :lti_integration do
+    issuer {"issuer"}
+    client_id {"client_id"}
+    platform_name {"platform_name"}
+    auth_redirect_url {"http://test.org/auth"}
+    jwks_url {"jwks_url"}
+    access_token_url {"access_token_url"}
+  end
+
+  factory :lti_user_identity do
+    subject {"subject"}
+    lti_integration {create :lti_integration}
+    user {create :student}
+  end
+
+  factory :lti_deployment do
+    deployment_id {"deployment"}
+    lti_integration {create :lti_integration}
+  end
+
+  factory :parental_permission_request do
+    user {create :young_student, :without_parent_permission}
+    parent_email {"contact@example.domain"}
+    resends_sent {0}
+
+    trait :old do
+      after(:create) do |permission|
+        permission.created_at = permission.created_at - 2.days
+        permission.save
+      end
+    end
+
+    trait :granted do
+      user {create :young_student, :with_parent_permission}
+    end
+  end
+
+  factory :rubric do
+    association :lesson
+    association :level
+  end
+
+  factory :learning_goal do
+    association :rubric
+    position {0}
+    learning_goal {"Test Learning Goal"}
+    ai_enabled {false}
+  end
+
+  factory :learning_goal_evidence_level do
+    association :learning_goal
+    understanding {0}
+    teacher_description {"Description for teacher"}
   end
 end

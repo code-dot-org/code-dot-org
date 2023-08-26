@@ -316,7 +316,9 @@ module LevelsHelper
     end
 
     @app_options =
-      if @level.is_a? Blockly
+      if @level.uses_lab2?
+        {app: 'lab2', channel: view_options[:channel], projectType: @level.project_type}
+      elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
@@ -746,8 +748,8 @@ module LevelsHelper
   def match_answer_as_embedded_blockly(path)
     # '.start_blocks' takes the XML from the start_blocks of the specified level.
     ext = File.extname(path)
-    base_level = File.basename(path, ext)
-    level = Level.find_by(name: base_level)
+    level_name = Policies::LevelFiles.level_name_from_path(path)
+    level = Level.find_by(name: level_name)
     block_type = ext.slice(1..-1)
     options = {
       readonly: true,
@@ -781,8 +783,8 @@ module LevelsHelper
   end
 
   def match_answer_as_iframe(path, width)
-    base_level = File.basename(path, '.level')
-    level = Level.find_by(name: base_level)
+    level_name = Policies::LevelFiles.level_name_from_path(path)
+    level = Level.find_by(name: level_name)
     content_tag(
       :div,
       content_tag(

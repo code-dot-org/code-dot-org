@@ -1,8 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-04-11T14:08:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Post</code> object and a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object with different numbers of likes. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getLikes()</code> method on both objects and print the results.\r\n\r\nWhat is the difference in the output between the two objects?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Post</code> object and a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object with different numbers of likes. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getLikes()</code> method on both objects and print the results.\r\n\r\nWhat do you notice about the output for both objects?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,16 +19,12 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U7L5-L1 Overriding PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U7L5-L1 Overriding PBT_2023"
+    "teacher_markdown": "The `TrendingPost` version of the `getLikes()` method adds `\"[TRENDING]\"` to the number of likes if it is greater than `1000`, while the `Post` version of the `getLikes()` method only returns the number of likes."
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-04-11T14:08:39.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:08:39.896+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L3_2023\"},{\"changed_at\":\"2023-04-11 14:08:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:05:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:08:39.896+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L3_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L3_2023\"},{\"changed_at\":\"2023-04-11 14:08:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:05:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:23:09 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:29:01 +0000\",\"changed\":[\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

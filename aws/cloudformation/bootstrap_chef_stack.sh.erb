@@ -78,7 +78,7 @@ KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 
 <% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
-DB_SECRET_NAME=${DatabaseSecret}
+DB_SECRET_NAME=${DatabaseSecretAdmin}
 DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
 DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
@@ -133,11 +133,6 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
-<% if database && !rack_env?(:production) -%>
-  "cdo-mysql": {
-    "rds_proxy": "${DBProxy.Endpoint}"
-  },
-<% end -%>
 <% if CDO.chef_local_mode -%>
   "omnibus_updater": {
     "version": "$CHEF_VERSION"

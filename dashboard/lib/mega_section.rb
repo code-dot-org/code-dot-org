@@ -196,15 +196,14 @@ class MegaSection
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
   # fake text data.
   def self.tiny_lipsum
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
-    " labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" \
-    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" \
-    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" \
-    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut " \
+    "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco " \
+    "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in " \
+    "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat " \
+    "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
       split(/[.,]/).
       sample(rng.rand(3..6)).
-      map(&:strip).
-      compact.
+      filter_map(&:strip).
       map(&:capitalize).
       join('. ') + '.'
   end

@@ -3,39 +3,71 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-#Cause & Effect
+#Cause & Effect Conditionals 
 
 </div>
 
-#### In the next few levels, you will add three `if__ then __` conditional blocks that check to see how much algae is in the water. Look at the pictures and descriptions below to see the connection between a real marine ecosystem and your coded simulation.
-<br>
+## Next you will add code to check to see how much algae is in the water <br>
+<img src="https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg"  width=50% style="margin-right: 10px; float: right">
+<br> <br>
 
->##If there is too much algae, then the coral becomes sick
->><img src="https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png"  width=200 style="margin-right: 30px; float: left">
-<img src="https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png"  width=300 style="margin-left: 10px; float: right">
-An algae overgrowth happens when there are not enough fish to eat the algae. If the water is full of algae, the coral is suffocated and gets sick.
-<br>
-<br>
-<br>
-<br>
+- First, the computer checks to see if a condition is true or false.
 
+- If it is true, then it will run the blocks inside.
+- If it is false, then it will not do anything.
 
->##If there is too little algae, then fish will leave
->><img src="https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png"  width=200 style="margin-right: 30px; float: left">
-<img src="https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png"  width=200 style="margin-left: 10px;  margin-right: 80px; float: right">
-The fish need algae to eat. They will have to swim to a new area if there is not enough food.
-<br>
-<br>
 <br>
 <br>
 <br>
 
->##If there is just enough algae, then the ecosystem is healthy
->> <img src="https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png"  width=200 style="margin-right: 30px; float: left">
-<img src="https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png"  width=300 style="margin-left: 10px;float: right">
-When there is the right amount of algae, the coral heals and the fish will stay because they have enough to eat.
+## If there is too much algae, then the coral becomes sick
+
+<br>
+
+<img src="https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png"  width=20% style="margin-right: 10px; float: left">
+<img src="https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png"  width=30% style=" margin-right: 10px; float: left">
+
 <br>
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
+***
+
+
+
+## If there is too little algae, then fish will leave
+<img src="https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png"  width=20% style="margin-right: 10px; float: left">
+
+
+<img src="https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png"  width=20% style=" margin-right: 10px; float: left">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+***
+
+
+
+## If there is just enough algae, then the ecosystem is healthy
+
+<img src="https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png"  width=20% style="margin-right: 30px; float: left">
+<img src="https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png"  width=30% style="margin-left: 10px;float: left">
+<br>
+<br>
+<br>
+<br>
+
 MARKDOWN

@@ -11,7 +11,7 @@
     "csd7-2023",
     "csd-post-survey-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -73,6 +73,17 @@
       },
       "seeding_key": {
         "resource.key": "csd_changelog_23-_24"
+      }
+    },
+    {
+      "name": "CSD Course Standards CSTA Alignment",
+      "url": "https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing",
+      "key": "csd_course_standards_csta_alignment",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_course_standards_csta_alignment"
       }
     },
     {

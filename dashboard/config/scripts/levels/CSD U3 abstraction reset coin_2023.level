@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:02:24.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -60,7 +65,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/f4c78598af1ce2fa3d368bcd9498a0d2-image-1585729468198.gif\" style=\"float: right;\">\r\n\r\n# Sprite Interactions\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen, and the obstacles should push the player across the screen.\r\n\r\n# Do This\r\n\r\n* Find the code comment `SPRITE INTERACTIONS` and read the comments in that section.\r\n* Create a conditional that checks whether the player is touching the target, and moves the target to the random place if it's true.\r\n* Create two new collisions that make the two obstacles push the player across the screen.\r\n* Test your code to make sure it works.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/f4c78598af1ce2fa3d368bcd9498a0d2-image-1585729468198.gif\" style=\"float: right;\">\r\n\r\n# Sprite Interactions\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen, and the obstacles should push the player across the screen.\r\n\r\n# Do This\r\n\r\n1. Find the code comment `SPRITE INTERACTIONS` and read the comments in that section.\r\n* Create a conditional that checks whether the player is touching the target, and moves the target to the random place if it's true.\r\n* Create two new collisions that make the two obstacles push the player across the screen.\r\n* Test your code to make sure it works.\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -95,13 +100,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:02:24.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.923+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction reset coin_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction reset coin_2022\"},{\"changed_at\":\"2023-03-09 17:52:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.923+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction reset coin_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction reset coin_2022\"},{\"changed_at\":\"2023-03-09 17:52:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:39:27 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap';
+import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const questionPropType = PropTypes.shape({
   label: PropTypes.string.isRequired,

@@ -27,183 +27,155 @@ const wrapperStyle = {
   justifyContent: 'center',
 };
 
-function wrapped(component) {
-  return <div style={wrapperStyle}>{component}</div>;
-}
+const defaultExport = {
+  name: 'ProgressTableLevelBubble',
+  component: ProgressTableLevelBubble,
+};
 
-function wrapMultiple(components) {
-  return (
-    <div style={{...wrapperStyle, width: null, height: null}}>
-      {components.map(component => component)}
-    </div>
-  );
-}
+const SingleTemplate = args => (
+  <div style={wrapperStyle}>
+    <ProgressTableLevelBubble {...args} />
+  </div>
+);
 
-export default storybook => {
-  storybook
-    .storiesOf('SectionProgress/ProgressTableLevelBubble', module)
-    .addStoryTable(
-      [
-        {
-          name: `locked bubble`,
-          story: () =>
-            wrapped(
-              <ProgressTableLevelBubble
-                levelStatus={LevelStatus.not_tried}
-                levelKind={LevelKind.level}
-                isLocked={true}
-                title={'3'}
-                url={'/foo/bar'}
-              />
-            ),
-        },
-      ]
-        .concat(
-          statuses.map(status => ({
-            name: `regular bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                />
-              ),
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `concept bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isConcept={true}
-                />
-              ),
-          }))
-        )
-        .concat(
-          assessmentStatuses.map(status => ({
-            name: `assessment bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.assessment}
-                  title={'3'}
-                  url={'/foo/bar'}
-                />
-              ),
-          }))
-        )
-        .concat(
-          statuses.slice(1).map(status => ({
-            name: `paired bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isPaired={true}
-                />
-              ),
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `bonus bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isBonus={true}
-                />
-              ),
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `unplugged bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isUnplugged={true}
-                />
-              ),
-          }))
-        )
-        .concat([
-          {
-            name: 'letter bubbles',
-            story: () =>
-              wrapMultiple([
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.perfect}
-                  bubbleSize={BubbleSize.letter}
-                  title={'a'}
-                  url={'/foo/bar'}
-                  key={1}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.attempted}
-                  bubbleSize={BubbleSize.letter}
-                  title={'b'}
-                  url={'/foo/bar'}
-                  key={2}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.not_tried}
-                  bubbleSize={BubbleSize.letter}
-                  title={'c'}
-                  url={'/foo/bar'}
-                  key={3}
-                />,
-              ]),
-          },
-        ])
-        .concat([
-          {
-            name: 'dot bubbles',
-            story: () =>
-              wrapMultiple([
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.perfect}
-                  isConcept={true}
-                  bubbleSize={BubbleSize.dot}
-                  title={'a'}
-                  url={'/foo/bar'}
-                  key={1}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.attempted}
-                  bubbleSize={BubbleSize.dot}
-                  title={'b'}
-                  url={'/foo/bar'}
-                  key={2}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.not_tried}
-                  bubbleSize={BubbleSize.dot}
-                  title={'c'}
-                  url={'/foo/bar'}
-                  key={3}
-                />,
-              ]),
-          },
-        ])
-    );
+const stories = {};
+
+const LockedBubble = SingleTemplate.bind({});
+LockedBubble.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  isLocked: true,
+  title: '3',
+  url: '/foo/bar',
+};
+stories['LockedBubble'] = LockedBubble;
+
+statuses.map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.level,
+    title: '3',
+    url: '/foo/bar',
+  };
+  stories[`BubbleStatus-${status}`] = story;
+});
+
+statuses.map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.level,
+    title: '3',
+    url: '/foo/bar',
+    isConcept: true,
+  };
+  stories[`ConceptBubbleStatus-${status}`] = story;
+});
+
+assessmentStatuses.map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.assessment,
+    title: '3',
+    url: '/foo/bar',
+  };
+  stories[`AssessmentBubbleStatus-${status}`] = story;
+});
+
+statuses.map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.level,
+    title: '3',
+    url: '/foo/bar',
+    isBonus: true,
+  };
+  stories[`BonusBubbleStatus-${status}`] = story;
+});
+
+statuses.slice(1).map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.level,
+    title: '3',
+    url: '/foo/bar',
+    isPaired: true,
+  };
+  stories[`PairedBubbleStatus-${status}`] = story;
+});
+
+statuses.map(status => {
+  const story = SingleTemplate.bind({});
+  story.args = {
+    levelStatus: status,
+    levelKind: LevelKind.level,
+    title: '3',
+    url: '/foo/bar',
+    isUnplugged: true,
+  };
+  stories[`UnpluggedBubbleStatus-${status}`] = story;
+});
+
+const LetterBubbles = () => (
+  <div style={{...wrapperStyle, width: null, height: null}}>
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.perfect}
+      bubbleSize={BubbleSize.letter}
+      title={'a'}
+      url={'/foo/bar'}
+      key={1}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.attempted}
+      bubbleSize={BubbleSize.letter}
+      title={'b'}
+      url={'/foo/bar'}
+      key={2}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.not_tried}
+      bubbleSize={BubbleSize.letter}
+      title={'c'}
+      url={'/foo/bar'}
+      key={3}
+    />
+  </div>
+);
+stories['LetterBubbles'] = LetterBubbles;
+
+const DotBubbles = () => (
+  <div style={{...wrapperStyle, width: null, height: null}}>
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.perfect}
+      isConcept={true}
+      bubbleSize={BubbleSize.dot}
+      title={'a'}
+      url={'/foo/bar'}
+      key={1}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.attempted}
+      bubbleSize={BubbleSize.dot}
+      title={'b'}
+      url={'/foo/bar'}
+      key={2}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.not_tried}
+      bubbleSize={BubbleSize.dot}
+      title={'c'}
+      url={'/foo/bar'}
+      key={3}
+    />
+  </div>
+);
+stories['DotBubbles'] = DotBubbles;
+
+module.exports = {
+  ...stories,
+  default: defaultExport,
 };

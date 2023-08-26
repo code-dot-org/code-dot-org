@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -171,7 +176,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack.\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
+    "long_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n1) First, figure out what the lowest layer in your image is (this should use the [`background`(#4dd0e1)](/docs/ide/gamelab/expressions/background) block) and add it to the very top of the draw loop.\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack.\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\r\n\r\n**Challenge:** Can you use variables or [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) to add some subtle animation to your background layer?",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -200,7 +205,7 @@
     "show_debug_watch": "true",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "rDxA0J74EKa2mTQ7f+YYiavdcqCbs9s58qSqLA5bcc1x6N0HxQhv8mrcQHgV\n9LgB\n",
     "hide_share_and_remix": "false",
@@ -214,17 +219,12 @@
       "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:59:12.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.197+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Background_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Background_2022\"},{\"changed_at\":\"2023-03-09 17:45:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.197+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Background_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Background_2022\"},{\"changed_at\":\"2023-03-09 17:45:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-22 16:41:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-22 17:05:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:43:25 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,0 +1,20 @@
+{
+  "key": "nevada-standards-aligned-third-grade",
+  "display_name": "Nevada Standards Aligned: Beta - CSF Course D",
+  "category": "other",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSF",
+  "grade_levels": "3",
+  "header": "teacher_led",
+  "image": "https://images.code.org/e518ac7363142a718e47c3e53b7b95e1-NevadaBetaCatalogCard.png",
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
+}

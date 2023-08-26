@@ -19,13 +19,9 @@ markdown <<MARKDOWN
 * ##### Create a machine learning model to solve a problem.
 * ##### Create an app that uses their machine learning model.
 
+ <div style="clear:both"/>
 
-
-## **Implementation guidance** 
-
-* ##### The AI and Machine Learning Unit assumes that students are already familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change screens when a button is clicked. <a href="https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview" target="blank" rel="noopener noreferrer">Click here</a> to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
-* ##### This is an optional unit that can be used in place of another CS Discoveries unit - see the <a href="https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information. The unit may also be taught as a standalone unit for teachers who would like to incorporate AI and machine learning into their existing CS curriculum. 
-* ##### You can view the full <a href="https://docs.google.com/document/d/1O7hPugJfy7CgFSwQO5BDqqFYsbklpDiJe7lrNtDqBQc/view" target="blank" rel="noopener noreferrer">Unit Guide</a> for more information about this unit. 
+##### **You can view the full <a href="https://docs.google.com/document/d/1O7hPugJfy7CgFSwQO5BDqqFYsbklpDiJe7lrNtDqBQc/view" target="blank" rel="noopener noreferrer">Unit Guide</a> for more information about this unit.**
 
 
 ## **Suggested time to complete the unit:** 5 weeks 

@@ -45,3 +45,20 @@ public void mystery(int second, double first)
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+Method overloading allows a class to have multiple methods with the same name, but with different parameters. The parameters must differ in the number of parameters, the order of the parameters, or the type of parameters.
+
+Let's consider each option:
+
+I. `public void mystery(int second) { /* implementation not shown */ }`
+
+This method has the same signature as `public void mystery(int first) { /* implementation not shown */ }` in the original class. The parameter names are not considered in method overloading, only their types and order. So, this option will cause a compile-time error.
+
+II. `public void mystery(String first, int second) { /* implementation not shown */ }`
+
+This method has a different parameter type order than the other methods in the class, so it will not cause a compile-time error.
+
+III. `public void mystery(int second, double first) { /* implementation not shown */ }`
+
+This method has the same parameter types as `public void mystery(int first, double second) { /* implementation not shown */ }` in the original class, but the order is reversed. However, the order is not considered different for method overloading when the types are the same. So, this option will cause a compile-time error.
+MARKDOWN

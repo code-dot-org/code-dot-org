@@ -76,6 +76,8 @@ require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
+require 'policies/child_account'
+require 'services/child_account'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -93,6 +95,15 @@ class User < ApplicationRecord
   #     of the data transfer agreement string the user to agreed to, for a given
   #     data_transfer_agreement_source.  This value should be bumped each time
   #     the corresponding user-facing string is updated.
+  #   gender_student_input: The original string input by the user during account creation.
+  #     The normalized single-character gender value is stored in the gender column.
+  #   us_state: A 2 letter code United States state code the user has given us.
+  #   country_code: The country the user was in when they told us their
+  #     us_state.
+  #   child_account_compliance_state: The state of a user's compliance with our
+  #     child account policy.
+  #   child_account_compliance_state_last_updated: The date the user became
+  #     compliant with our child account policy.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -119,6 +130,16 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
+    last_verified_captcha_at
+    gender_student_input
+    gender_teacher_input
+    gender_third_party_input
+    child_account_compliance_state
+    child_account_compliance_state_last_updated
+    child_account_compliance_lock_out_date
+    us_state
+    country_code
+    family_name
   )
 
   attr_accessor(
@@ -137,7 +158,7 @@ class User < ApplicationRecord
     :share_teacher_email_reg_partner_opt_in_radio_choice,
     :data_transfer_agreement_required,
     :raw_token,
-    :child_users
+    :child_users,
   )
 
   # Include default devise modules. Others available are:
@@ -248,6 +269,23 @@ class User < ApplicationRecord
   before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
+
+  validate :validate_us_state, on: :create
+
+  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
+    Services::ChildAccount.lock_out(self)
+  end
+
+  before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
+    self.gender = Policies::Gender.normalize gender_teacher_input
+  end
+
+  before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
+    gender_student_input.strip!
+    self.gender = Policies::Gender.normalize gender_student_input
+  end
+
+  validates :gender_student_input, length: {maximum: 50}
 
   def save_email_preference
     if teacher?
@@ -524,6 +562,19 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :strip_display_family_names
+  def strip_display_family_names
+    self.name = name.strip if name && will_save_change_to_name?
+    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
+  end
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
+
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -743,9 +794,9 @@ class User < ApplicationRecord
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
     unless omniauth_user
-      omniauth_user = create do |user|
-        initialize_new_oauth_user(user, auth, params)
-      end
+      omniauth_user = create
+      initialize_new_oauth_user(omniauth_user, auth, params)
+      omniauth_user.save
       SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
@@ -789,6 +840,8 @@ class User < ApplicationRecord
       user.birthday = nil
       user.age = user_age
     end
+
+    user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
   end
 
@@ -994,6 +1047,12 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    if DCDO.get('family-name-features', false)
+      self.family_name = nil
+    end
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1008,6 +1067,8 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
+
+      self
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -1630,7 +1691,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.
@@ -1726,7 +1787,7 @@ class User < ApplicationRecord
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
-    user_script_data = pl_user_scripts.map do |user_script|
+    user_script_data = pl_user_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1741,7 +1802,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
@@ -1766,7 +1827,7 @@ class User < ApplicationRecord
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
-    user_script_data = user_student_scripts.map do |user_script|
+    user_script_data = user_student_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1781,7 +1842,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
@@ -1807,7 +1868,7 @@ class User < ApplicationRecord
   def section_courses
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:unit_group).compact.uniq
+    all_sections.filter_map(&:unit_group).uniq
   end
 
   def visible_scripts
@@ -2016,10 +2077,12 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
       gender: gender,
+      gender_teacher_input: gender_teacher_input,
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
@@ -2222,7 +2285,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
@@ -2453,7 +2516,7 @@ class User < ApplicationRecord
     !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
 
-  def display_captcha?
+  def display_join_section_captcha?
     # If 24 hours has passed since last reset, return false.
     if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
       return false
@@ -2496,7 +2559,7 @@ class User < ApplicationRecord
   end
 
   def code_review_groups
-    followeds.map(&:code_review_group).compact
+    followeds.filter_map(&:code_review_group)
   end
 
   private def account_age_in_years
@@ -2511,7 +2574,7 @@ class User < ApplicationRecord
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2585,5 +2648,50 @@ class User < ApplicationRecord
   private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
+  end
+
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
+  # Verifies that the serialized attribute "us_state" is a 2 character string
+  # representing a US State or "??" which represents a "N/A" kind of response.
+  private def validate_us_state
+    # tracking a user's US State is currently limited to students.
+    return unless user_type == TYPE_STUDENT
+    # us_state is only a required field if the User lives in the US.
+    return unless %w[US RD].include? country_code
+    # us_state must be selected.
+    if us_state.blank?
+      errors.add(:us_state, :blank)
+      return
+    end
+    # Report an error if an invalid value was submitted (probably tampering).
+    unless User.us_state_dropdown_options.include?(us_state)
+      errors.add(:us_state, :invalid)
+    end
   end
 end

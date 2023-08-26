@@ -28,7 +28,6 @@ class SectionActionDropdown extends Component {
   static propTypes = {
     handleEdit: PropTypes.func,
     sectionData: sortableSectionShape.isRequired,
-    userId: PropTypes.number,
 
     //Provided by redux
     removeSection: PropTypes.func.isRequired,
@@ -106,30 +105,17 @@ class SectionActionDropdown extends Component {
   };
 
   render() {
-    const {sectionData, userId} = this.props;
-    const testingUserId = -1;
+    const {sectionData} = this.props;
 
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          {/* Note that this should be uncommented when
-          ready to launch.  Also, remove line 125 for launch */}
-          {userId % 10 === testingUserId && (
-            <PopUpMenu.Item
-              href={this.editRedirectUrl(sectionData.id)}
-              className="edit-section-details-link"
-            >
-              {i18n.editSectionDetails()}
-            </PopUpMenu.Item>
-          )}
-          {userId % 10 !== testingUserId && (
-            <PopUpMenu.Item
-              onClick={this.onClickEditPopUp}
-              className="edit-section-details-link"
-            >
-              {i18n.editSectionDetails()}
-            </PopUpMenu.Item>
-          )}
+          <PopUpMenu.Item
+            href={this.editRedirectUrl(sectionData.id)}
+            className="edit-section-details-link"
+          >
+            {i18n.editSectionDetails()}
+          </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"

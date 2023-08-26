@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -9,7 +10,9 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import themeValues, {CLASSIC_DROPDOWN_PADDING} from '../themeValues';
-import EnumPropertyRow from './EnumPropertyRow';
+import TextAlignmentPropertyRow, {
+  TEXT_ALIGNMENT_CENTER,
+} from './TextAlignmentPropertyRow';
 import BorderProperties from './BorderProperties';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
@@ -30,53 +33,53 @@ class DropdownProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <OptionsSelectRow
-          desc={'options'}
+          desc={applabMsg.designElementProperty_options()}
           element={element}
           handleChange={this.props.handleChange.bind(this, 'options')}
         />
         <PropertyRow
-          desc={'index'}
+          desc={applabMsg.designElementProperty_index()}
           isNumber
           initialValue={parseInt(element.selectedIndex, 10)}
           handleChange={this.props.handleChange.bind(this, 'index')}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
+          desc={applabMsg.designElementProperty_textColor()}
           initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
@@ -87,15 +90,13 @@ class DropdownProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
-          desc={'font size (px)'}
+          desc={applabMsg.designElementProperty_fontSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'center'}
-          options={['left', 'right', 'center', 'justify']}
+        <TextAlignmentPropertyRow
+          initialValue={element.style.textAlign || TEXT_ALIGNMENT_CENTER}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
@@ -114,7 +115,7 @@ class DropdownProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -150,22 +151,19 @@ class DropdownEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const changeName = 'Change';
-    const changeDesc =
-      'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <EventHeaderRow />
         <EventRow
-          name={changeName}
-          desc={changeDesc}
+          name={applabMsg.designElementEvent_change()}
+          desc={applabMsg.designElement_dropdown_changeEventDesc()}
           handleInsert={this.insertChange}
         />
       </div>

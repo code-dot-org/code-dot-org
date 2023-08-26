@@ -95,14 +95,14 @@ class SlackTest < Minitest::Test
 
   def test_message_slackifies
     Net::HTTP.expects(:post_form).with do |_url, params|
-      "*dashboard* tests failed <https://a-link.to/somewhere|html output>"\
-      "\n_rerun: bundle exec ./runner.rb -c iPhone "\
+      "*dashboard* tests failed <https://a-link.to/somewhere|html output>" \
+      "\n_rerun: bundle exec ./runner.rb -c iPhone " \
       "-f features/applab/sharedApps.feature --html_" ==
         JSON.parse(params[:payload])['text']
     end.returns(stub(code: 200))
-    message_with_all = '<b>dashboard</b> tests failed '\
-      '<a href="https://a-link.to/somewhere">html output</a><br/>'\
-      '<i>rerun: bundle exec ./runner.rb -c iPhone '\
+    message_with_all = '<b>dashboard</b> tests failed ' \
+      '<a href="https://a-link.to/somewhere">html output</a><br/>' \
+      '<i>rerun: bundle exec ./runner.rb -c iPhone ' \
       '-f features/applab/sharedApps.feature --html</i>'
     assert Slack.message(message_with_all, channel: FAKE_CHANNEL)
   end

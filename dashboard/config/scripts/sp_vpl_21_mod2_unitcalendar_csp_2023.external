@@ -1,0 +1,19 @@
+name 'SP-VPL-21-mod2-UnitCalendar-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Modify the unit calendar
+
+#### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
+
+## Steps to modify the unit calendar
+
+##### **Step 1:** Once on the Unit Overview page, click on the blue "View calendar" button. 
+
+##### **Step 2:** Use the dropdown menu to adjust the number of instructional minutes per week.  
+
+<img src="https://images.code.org/82c50f26932b122cbaca6b9b2248a6fe-image-1653432756475.52.27 PM.png" alt="Screenshot of the Unit 1 Overview page demonstrating how to modify the unit calendar." style="float: left; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+MARKDOWN

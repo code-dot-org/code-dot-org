@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 19:53:46 UTC",
+    "serialized_at": "2023-07-04 01:44:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,6 +150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -171,6 +175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2022"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -193,6 +200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -215,6 +225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-AboutCSD_2022"
+        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -237,6 +250,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_2022"
+        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -259,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview_2022"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -281,6 +300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview_2022"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -308,7 +330,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation_2022"
+          "SP-VPL-CSD-21-Navigation_2023"
         ],
         "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
         "lesson_group.key": "lessonGroup-2",
@@ -316,7 +338,7 @@
         "activity_section.key": "357dacea-772d-4b12-84fb-a0ae7f4e59d0"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-Navigation_2022"
+        "SP-VPL-CSD-21-Navigation_2023"
       ]
     }
   ],
@@ -407,9 +429,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-Navigation_2022",
+        "level.key": "SP-VPL-CSD-21-Navigation_2023",
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation_2022"
+          "SP-VPL-CSD-21-Navigation_2023"
         ],
         "lesson.key": "Welcome to \"Teaching CS Discoveries\"",
         "lesson_group.key": "lessonGroup-2",

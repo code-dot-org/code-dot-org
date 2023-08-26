@@ -1,0 +1,150 @@
+---
+title: Computer Science Connections
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/csc-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:curriculum_name_csc)
+      %p{style: "color: white"}
+        =hoc_s(:csc_page_top_desc)
+      %a.link-button.white{href: "#csc-modules"}
+        =hoc_s(:call_to_action_explore_modules)
+    %figure
+      %img{src: "/images/banners/banner-csc-octopus.png", alt: ""}
+    .clear
+
+%section
+  .wrapper
+    %div.col-50{style: "margin: 0.5rem 0 1rem;"}
+      = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
+    .text-wrapper.col-45{style: "float: right;"}
+      %h2=hoc_s(:csc_page_intro_heading)
+      %ul
+        %li=hoc_s(:csc_page_intro_list_01)
+        %li=hoc_s(:csc_page_intro_list_02)
+        %li=hoc_s(:csc_page_intro_list_03)
+        %li=hoc_s(:csc_page_intro_list_04)
+        %li=hoc_s(:csc_page_intro_list_05)
+        %li=hoc_s(:csc_page_intro_list_06)
+      %a.link-button{href: "#csc-modules"}
+        =hoc_s(:call_to_action_explore_modules)
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_3_5), duration: hoc_s(:module_duration_week), level: hoc_s(:module_level_beginner), tools: hoc_s(:csc_page_curriculum_glance_tools), devices: hoc_s(:csc_page_curriculum_glance_devices), professional_learning: hoc_s(:csc_page_curriculum_glance_professional_learning), topics: hoc_s(:csc_page_curriculum_glance_topics), accessibility_features: hoc_s(:csc_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csc_page_curriculum_glance_professional_languages)
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s(:csc_page_quote)
+      %p.no-margin-bottom
+        Tara Vodopich
+        %span •
+        =hoc_s(:teacher_label_csc)
+
+%section#csc-modules
+  .wrapper
+    %h2=hoc_s(:heading_find_a_module)
+    %p=hoc_s(:csc_page_find_a_module_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_english_language_arts)
+          %h3=hoc_s(:module_name_coding_w_poetry)
+          %img{src: "/images/csc-module-coding-w-poetry.png", alt: ""}
+          %p=hoc_s(:module_desc_coding_w_poetry)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/poetry-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_english_language_arts)
+          %h3=hoc_s(:module_name_coding_book_covers)
+          %img{src: "/images/csc-module-coding-book-covers.png", alt: ""}
+          %p=hoc_s(:module_desc_coding_book_covers)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-bookcovers-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_book_covers)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_math)
+          %h3=hoc_s(:module_name_coding_geometric_star_quilt)
+          %img{src: "/images/csc-module-coding-geometric-star-quilt.png", alt: ""}
+          %p=hoc_s(:module_desc_coding_geometric_star_quilt)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-starquilts-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_geometric_star_quilt)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_science)
+          %h3=hoc_s(:module_name_simulating_marine_ecosystem)
+          %img{src: "/images/csc-module-simulating-marine-ecosystem.png", alt: ""}
+          %p=hoc_s(:module_desc_simulating_marine_ecosystem)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-ecosystems-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_simulating_marine_ecosystem)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_science)
+          %h3=hoc_s(:module_name_modeling_animal_adaptations)
+          %img{src: "/images/csc-module-modeling-animal-adaptations.png", alt: ""}
+          %p=hoc_s(:module_desc_modeling_animal_adaptations)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-adaptations-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_modeling_animal_adaptations)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_social_studies)
+          %h3=hoc_s(:module_name_coding_time_capsule)
+          %img{src: "/images/csc-module-coding-time-capsule.png", alt: ""}
+          %p=hoc_s(:module_desc_coding_time_capsule)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-timecapsule-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_time_capsule)}}
+            =hoc_s(:call_to_action_see_module_details)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_subject_social_studies)
+          %h3=hoc_s(:module_name_coding_interactive_maps)
+          %img{src: "/images/csc-module-coding-interactive-maps.png", alt: ""}
+          %p=hoc_s(:module_desc_coding_interactive_maps)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/csc-mappinglandmarks-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_interactive_maps)}}
+            =hoc_s(:call_to_action_see_module_details)
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_professional_learning)
+    %p=hoc_s(:professional_learning_section_desc_self_paced)
+    .action-block.action-block--two-col
+      %img{src: "/images/action-block-self-paced-pl.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %h3.heading-sm
+          =hoc_s(:self_paced_pl_modules_heading)
+        %p=hoc_s(:self_paced_pl_modules_desc)
+        %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023")}
+          =hoc_s(:call_to_action_start_modules)
+
+= view :section_divider_line
+
+%section.no-padding-bottom
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csc
+
+%section
+  .wrapper
+    = view :support_and_questions_section
+
+= view :visit_partial_event_logger

@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-29 16:45:02 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-15 19:34:05 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -47,6 +48,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2023"
       }
     }
@@ -319,6 +332,51 @@
       "seeding_key": {
         "lesson.key": "Mock FRQ Exam – Day 3",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Sandbox: Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2023"
       }
     }
@@ -821,6 +879,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa9-2023"
       }
+    },
+    {
+      "key": "2a137148-70bc-4675-a3d7-91420d725217",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a137148-70bc-4675-a3d7-91420d725217",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "ec89f90b-798e-4d34-a50d-905ec13c8813",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -985,11 +1079,11 @@
       "key": "211360f4-377f-45f7-80dd-2b4e4095adf7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What test-taking and study strategies were the most effective for the end-of-unit multiple-choice assessments we took in this course?*\n\n**Discussion Goal:** Students share strategies they used to prepare for the end-of-unit multiple-choice assessments and how they approached the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss test-taking and study strategies.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What test-taking and study strategies were the most effective for the end-of-unit multiple-choice assessments we took in this course?*\n\n**Discussion Goal:** Students share strategies they used to prepare for the end-of-unit multiple-choice assessments and how they approached the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss study strategies.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss test-taking strategies.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Additional test-taking study strategies you can share with students:\n* Don’t dwell on logic or syntax accuracy for each question.\n* Address every part of the question.\n* Use the Java Quick Reference Guide.\n* Attempt every aspect of the question.\n* Write legibly, clearly, and with good programming style.\n* Write notes and annotate the question in your test booklet."
+            "markdown": "Additional test-taking and study strategies you can share with students:\n* Don’t dwell on logic or syntax accuracy for each question.\n* Address every part of the question.\n* Use the Java Quick Reference Guide.\n* Attempt every aspect of the question.\n* Write legibly, clearly, and with good programming style.\n* Write notes and annotate the question in your test booklet."
           }
         ]
       },
@@ -2674,6 +2768,48 @@
         "activity_section.key": "eedb7b67-9810-4ef8-9cbc-1dd9d2f64b98",
         "lesson_activity.key": "4d6804e3-fcd8-4f2c-82cf-f2749e283322"
       }
+    },
+    {
+      "key": "f7e307df-e93f-405d-977b-bf04b8efc928",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928",
+        "lesson_activity.key": "2a137148-70bc-4675-a3d7-91420d725217"
+      }
+    },
+    {
+      "key": "5d2b2968-ada6-47db-8429-4e6219bbceaa",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa",
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813"
+      }
+    },
+    {
+      "key": "3ac0fac2-6907-4615-9628-9fe4357b2127",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127",
+        "lesson_activity.key": "ec89f90b-798e-4d34-a50d-905ec13c8813"
+      }
+    },
+    {
+      "key": "96db2239-bc4a-422a-b398-350da224ddcf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf",
+        "lesson_activity.key": "11ac2969-7dc6-4c47-9d3f-62a7adb725e8"
+      }
     }
   ],
   "script_levels": [
@@ -2683,6 +2819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Curriculum Videos"
+        ],
         "progression": "CSA Curriculum Videos"
       },
       "bonus": false,
@@ -2698,6 +2837,92 @@
       "level_keys": [
         "CSA Curriculum Videos"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2711,6 +2936,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa9-2023",
         "activity_section.key": "3a7ec511-feb7-4c1d-9023-378b1139df87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "f7e307df-e93f-405d-977b-bf04b8efc928"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "5d2b2968-ada6-47db-8429-4e6219bbceaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3ac0fac2-6907-4615-9628-9fe4357b2127"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2023",
+        "activity_section.key": "96db2239-bc4a-422a-b398-350da224ddcf"
       }
     }
   ],
@@ -2873,6 +3146,18 @@
       }
     },
     {
+      "name": "CSA Unit 9 Slides",
+      "url": "https://docs.google.com/presentation/d/1Lhz4LAKSbeJ1Ef8CJR_GG2u06rQpUa05uBVynYUUXeM/edit?usp=sharing",
+      "key": "csa_unit_9_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_9_slides"
+      }
+    },
+    {
       "name": "Exploring Exam Expectations",
       "url": "https://docs.google.com/document/d/1EvdhrUznF3Vso_egZc569A85oq4l1L9VPLWPtGcFfUo/edit?usp=sharing",
       "key": "exploring_exam_expectations",
@@ -2924,6 +3209,30 @@
       }
     },
     {
+      "name": "FRQ Practice - Day 1",
+      "url": "https://docs.google.com/presentation/d/1AhXt1dMeXTr8K2r45_0YuSoAk_TwgV-1bpbHqlGqwyI/edit?usp=sharing",
+      "key": "frq_practice_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice_-_day_1"
+      }
+    },
+    {
+      "name": "FRQ Practice - Day 2",
+      "url": "https://docs.google.com/presentation/d/17mQTAKW_1GajW913RmpzXevxCh2k-UVicDgsORSO4YM/edit?usp=sharing",
+      "key": "frq_practice_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice_-_day_2"
+      }
+    },
+    {
       "name": "FRQ Practice",
       "url": "https://docs.google.com/document/d/1ImB8WBa225uI1pkckzTnmHrxvmlfqvXljXq1hH75l18/edit#",
       "key": "frq_practice_1",
@@ -2949,6 +3258,18 @@
       }
     },
     {
+      "name": "FRQ Pre-Assessment",
+      "url": "https://docs.google.com/presentation/d/1wi6kNZvTY8B2TwwLh888IRDeYPX9OFbToVIycu6ZLEQ/edit?usp=sharing",
+      "key": "frq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_pre-assessment"
+      }
+    },
+    {
       "name": "FRQ Study Plan",
       "url": "https://docs.google.com/document/u/1/d/1qPWxEK5Vy7DRLl2MVmphshM6JXR42bz0hfm9LH07Mco/edit",
       "key": "frq_study_plan",
@@ -2959,6 +3280,18 @@
       },
       "seeding_key": {
         "resource.key": "frq_study_plan"
+      }
+    },
+    {
+      "name": "FRQ Study Plan",
+      "url": "https://docs.google.com/presentation/d/1uZ1fobCQpJ1KKVDzKJNaHGiQd9GjUmTlxNrUa2KmHhc/edit?usp=sharing",
+      "key": "frq_study_plan_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_study_plan_1"
       }
     },
     {
@@ -3013,6 +3346,30 @@
       }
     },
     {
+      "name": "MCQ Practice - Day 1",
+      "url": "https://docs.google.com/presentation/d/1FJb5vViedO_sH-NH3Iqwq0qRUgdWIAezEDxcapZnqT4/edit?usp=sharing",
+      "key": "mcq_practice_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice_-_day_1"
+      }
+    },
+    {
+      "name": "MCQ Practice - Day 2",
+      "url": "https://docs.google.com/presentation/d/1MA5hnHwLD_gjY4umuFwvszzeMt50drDi-kPeRkoQIIs/edit?usp=sharing",
+      "key": "mcq_practice_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice_-_day_2"
+      }
+    },
+    {
       "name": "MCQ Practice Stations",
       "url": "https://docs.google.com/document/d/13xlh2Ci0CUfds90Inf8fU5Zf3l7kJLoD0u0byoVcJQI/edit",
       "key": "mcq_practice_stations",
@@ -3022,6 +3379,18 @@
       },
       "seeding_key": {
         "resource.key": "mcq_practice_stations"
+      }
+    },
+    {
+      "name": "MCQ Pre-Assessment",
+      "url": "https://docs.google.com/presentation/d/1O3ucv2sT7DdwFXmGQdTdBTJCP-tf9Ty1VZJvrVvc_-8/edit?usp=sharing",
+      "key": "mcq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_pre-assessment"
       }
     },
     {
@@ -3051,15 +3420,99 @@
       }
     },
     {
-      "name": "Unit 9 Presentation",
-      "url": "https://docs.google.com/presentation/d/13ZAGHD1gykIEnhbDbAZdCk-gfcKKrxuxD743lLY0-NA/edit?usp=sharing",
-      "key": "unit_9_presentation",
+      "name": "MCQ Study Plan",
+      "url": "https://docs.google.com/presentation/d/1Dr5QgE3qHxtLVhb-T3pr1yMX9R8_bNSRGKCLG273pmc/edit?usp=sharing",
+      "key": "mcq_study_plan_1",
       "properties": {
         "audience": "Verified Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mcq_study_plan_1"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 1",
+      "url": "https://docs.google.com/presentation/d/1GiMe-xGICiKNsPM86MjX3wfyjSWDWuc0MZOk46x7FrM/edit?usp=sharing",
+      "key": "mock_frq_exam_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_1"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 2",
+      "url": "https://docs.google.com/presentation/d/1t0fGuRSC0VEOzvBDlva--jEI9EebQIPV_zvuz0JgdKU/edit?usp=sharing",
+      "key": "mock_frq_exam_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_2"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 3",
+      "url": "https://docs.google.com/presentation/d/1ajVIVUsuJp8JexO-7tvrptHiNWFecdBeJQr2Oh_5C3g/edit?usp=sharing",
+      "key": "mock_frq_exam_-_day_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_3"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 1",
+      "url": "https://docs.google.com/presentation/d/1O9O-75_Y1ef5ENE8B-BA-916318K51PGRj4kdkluOjg/edit?usp=sharing",
+      "key": "mock_mcq_exam_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_1"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 2",
+      "url": "https://docs.google.com/presentation/d/1yVTiex0bHlczXSVeqxDJF4YX72EQ-HUUoMLYPuLsvkk/edit?usp=sharing",
+      "key": "mock_mcq_exam_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_2"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 3",
+      "url": "https://docs.google.com/presentation/d/1D01ix7dcSd6haUNT9VPBhbJ1AJ0LfogJRYUiOyXtQEg/edit?usp=sharing",
+      "key": "mock_mcq_exam_-_day_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_3"
+      }
+    },
+    {
+      "name": "The AP CSA Exam",
+      "url": "https://docs.google.com/presentation/d/1xECPozWZr3acpq2SnQPfYI_ne1a2vwYuxMakm9yzFAg/edit?usp=sharing",
+      "key": "the_ap_csa_exam",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_ap_csa_exam"
       }
     }
   ],
@@ -3079,13 +3532,19 @@
     {
       "seeding_key": {
         "lesson.key": "FRQ Practice – Day 1",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "frq_practice_-_day_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "FRQ Practice – Day 2",
         "resource.key": "_key_frq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "resource.key": "frq_practice_-_day_2"
       }
     },
     {
@@ -3098,12 +3557,6 @@
       "seeding_key": {
         "lesson.key": "FRQ Practice – Day 2",
         "resource.key": "frq_practice_stations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Practice – Day 2",
-        "resource.key": "unit_9_presentation"
       }
     },
     {
@@ -3127,13 +3580,13 @@
     {
       "seeding_key": {
         "lesson.key": "FRQ Pre-Assessment",
-        "resource.key": "java_quick_reference"
+        "resource.key": "frq_pre-assessment"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "FRQ Pre-Assessment",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "java_quick_reference"
       }
     },
     {
@@ -3145,7 +3598,7 @@
     {
       "seeding_key": {
         "lesson.key": "FRQ Study Plan",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "frq_study_plan_1"
       }
     },
     {
@@ -3163,13 +3616,13 @@
     {
       "seeding_key": {
         "lesson.key": "MCQ Practice – Day 1",
-        "resource.key": "mcq_practice_stations"
+        "resource.key": "mcq_practice_-_day_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "MCQ Practice – Day 1",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mcq_practice_stations"
       }
     },
     {
@@ -3181,7 +3634,7 @@
     {
       "seeding_key": {
         "lesson.key": "MCQ Practice – Day 2",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mcq_practice_-_day_2"
       }
     },
     {
@@ -3205,7 +3658,7 @@
     {
       "seeding_key": {
         "lesson.key": "MCQ Pre-Assessment",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mcq_pre-assessment"
       }
     },
     {
@@ -3223,7 +3676,7 @@
     {
       "seeding_key": {
         "lesson.key": "MCQ Study Plan",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mcq_study_plan_1"
       }
     },
     {
@@ -3253,7 +3706,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock FRQ Exam – Day 1",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_frq_exam_-_day_1"
       }
     },
     {
@@ -3271,7 +3724,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock FRQ Exam – Day 2",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_frq_exam_-_day_2"
       }
     },
     {
@@ -3289,7 +3742,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock FRQ Exam – Day 3",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_frq_exam_-_day_3"
       }
     },
     {
@@ -3313,7 +3766,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock MCQ Exam – Day 1",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_mcq_exam_-_day_1"
       }
     },
     {
@@ -3331,7 +3784,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock MCQ Exam – Day 2",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_mcq_exam_-_day_2"
       }
     },
     {
@@ -3349,7 +3802,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mock MCQ Exam – Day 3",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "mock_mcq_exam_-_day_3"
       }
     },
     {
@@ -3379,7 +3832,7 @@
     {
       "seeding_key": {
         "lesson.key": "The AP CSA Exam",
-        "resource.key": "unit_9_presentation"
+        "resource.key": "the_ap_csa_exam"
       }
     }
   ],
@@ -3387,6 +3840,12 @@
     {
       "seeding_key": {
         "resource.key": "all_resources_7",
+        "script.name": "csa9-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_9_slides",
         "script.name": "csa9-2023"
       }
     }
@@ -3469,6 +3928,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

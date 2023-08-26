@@ -87,6 +87,22 @@ const passwordAccountData = [
     isEditing: false,
     rowType: RowType.STUDENT,
   },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.email,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
+  },
 ];
 
 const wordAccountData = [
@@ -133,6 +149,22 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     rowType: RowType.STUDENT,
+  },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.word,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
   },
 ];
 
@@ -184,6 +216,22 @@ const pictureAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
+  },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.picture,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
   },
 ];
 
